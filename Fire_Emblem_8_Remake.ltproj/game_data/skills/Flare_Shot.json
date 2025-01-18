@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Flare_Shot",
+        "name": "Flare Shot",
+        "desc": "Adds SKL/2 + MAG/2 to attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            48
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('SKL') // 2) + (unit.get_stat('MAG') // 2)"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Turn3Rein",
+        "trigger": "turn_change",
+        "level_nid": "9A",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;4,0",
+            "add_group;Rein2;Rein2;fade;closest"
+        ],
+        "nid": "9A Turn3Rein"
+    }
+]

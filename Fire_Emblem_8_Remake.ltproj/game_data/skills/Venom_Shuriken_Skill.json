@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Venom_Shuriken_Skill",
+        "name": "Venom Shuriken",
+        "desc": "<red>CA: </>+3 Sword range. <green>CD:0 Turns</>\nEffect is always active during EP.\nSword attacks inflict the Venom to enemies on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            29
+        ],
+        "components": [
+            [
+                "eval_max_range",
+                "3"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

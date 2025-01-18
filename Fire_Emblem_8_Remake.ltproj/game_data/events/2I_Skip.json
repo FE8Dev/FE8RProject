@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Skip",
+        "trigger": "level_start",
+        "level_nid": "2I",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;TOVA_Ch_Save;game.game_vars.get(\"_next_level_nid\")",
+            "win_game",
+            "skip_save;t"
+        ],
+        "nid": "2I Skip"
+    }
+]

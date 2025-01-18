@@ -1,0 +1,24 @@
+[
+    {
+        "name": "SelenaTalkDuessel",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Duessel','Selena')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Duessel;Right;Selena;Left",
+            "speak;Duessel;Well met, Selena.",
+            "speak;Selena;General Duessel...|I must offer you my apologies.|I called you a traitor, but I was mistaken.|Your loyalty never wavered, not for an instant.",
+            "speak;Duessel;......;no_talk",
+            "speak;Selena;And yet you must know that I have no intention of withdrawing.|So let us not waste words.|Let us settle this with steel, my friend.",
+            "speak;Duessel;That's how it is to be, then?|One of us dies by the other's hands?",
+            "speak;Selena;Yes. It's the path I've chosen.|I have no regrets.",
+            "speak;Duessel;I see...|Well.|I, too, must follow the path that I have chosen.",
+            "speak;Selena;Very well.",
+            "multi_remove_portrait;Duessel;Selena"
+        ],
+        "nid": "13B SelenaTalkDuessel"
+    }
+]

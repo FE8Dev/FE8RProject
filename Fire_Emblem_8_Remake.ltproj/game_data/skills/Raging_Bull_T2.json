@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Raging_Bull_T2",
+        "name": "Raging Bull",
+        "desc": "+15 Crit.\nAdd unit's weapon weight X2 to Crit damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            43
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "eval_crit_additional",
+                "(unit.get_weapon().weight.value) * 2"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

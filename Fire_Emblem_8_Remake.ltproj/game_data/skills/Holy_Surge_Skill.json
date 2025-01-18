@@ -1,0 +1,18 @@
+[
+    {
+        "nid": "Holy_Surge_Skill",
+        "name": "Holy Surge",
+        "desc": "Add MAG/2 to attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 2"
+            ]
+        ]
+    }
+]

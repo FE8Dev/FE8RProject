@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Rein2",
+        "trigger": "turn_change",
+        "level_nid": "10B",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;16,15",
+            "wait;300",
+            "add_group;Rein2;Rein2;fade;closest"
+        ],
+        "nid": "10B Rein2"
+    }
+]

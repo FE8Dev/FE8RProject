@@ -1,0 +1,106 @@
+[
+    {
+        "nid": "Eruption_Bow",
+        "name": "Eruption Bow",
+        "desc": "A bow that is as beautiful and deadly as an eruption.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "min_range",
+                4
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penelty"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vanessa"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Vanessa\").wexp['Bow'] >= 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Seared_AOE_Splash"
+            ]
+        ]
+    }
+]

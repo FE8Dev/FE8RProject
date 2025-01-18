@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Snake_Curse",
+        "name": "Snake Curse",
+        "desc": "A spell passed down to all Gorgon.\n<green>Skills:</>Slither+\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Magic</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            3,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Demon Surge"
+            ],
+            [
+                "prf_unit",
+                [
+                    "SnakeGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"SnakeGirl\").wexp['Dark'] >= 120 and u(\"SnakeGirl\").wexp['Dark'] < 240"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_5",
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Slither_P"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    }
+]

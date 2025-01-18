@@ -1,0 +1,63 @@
+[
+    {
+        "nid": "Body_Ring_Buff_Appraiser",
+        "name": "Body Ring Buff",
+        "desc": "Gives the proper change to growth rates.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser') or has_skill(unit, 'Appraiser_T3')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        20
+                    ],
+                    [
+                        "STR",
+                        20
+                    ],
+                    [
+                        "MAG",
+                        20
+                    ],
+                    [
+                        "SKL",
+                        20
+                    ],
+                    [
+                        "SPD",
+                        20
+                    ],
+                    [
+                        "LCK",
+                        20
+                    ],
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ],
+                    [
+                        "CON",
+                        80
+                    ]
+                ]
+            ]
+        ]
+    }
+]

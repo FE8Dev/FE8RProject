@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "2",
+        "condition": "check_pair('Eirika','Civ3')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.level_vars['VillageRetalk3'] != True",
+            "add_portrait;Man3;Right;no_block",
+            "add_portrait;Eirika;Left",
+            "expression;Man3;CloseEyes",
+            "speak;Man3;Thank you again for saving us!|We are forever in your debt!",
+            "speak;Eirika;No need for thanks, it was the right thing to do.",
+            "speak;Man3;You bring hope to this old man...|We will remember this good dead.",
+            "happy_chatter;Eirika",
+            "speak;Eirika;He he he!|Why thank you!",
+            "multi_remove_portrait;Man3;Eirika",
+            "give_bexp;500",
+            "level_var;VillageRetalk3;True",
+            "remove_talk;Eirika;Civ3",
+            "else",
+            "trigger_script;Global No_More_Talk",
+            "remove_talk;Eirika;Civ3",
+            "end"
+        ],
+        "nid": "2 Talk_Civ3"
+    }
+]

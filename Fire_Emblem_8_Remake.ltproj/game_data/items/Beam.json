@@ -1,0 +1,138 @@
+[
+    {
+        "nid": "Beam",
+        "name": "Beam",
+        "desc": "Ewan's beginner Light tome. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(Multi-target:3), Spell, +10 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                5
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ewan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Smite"
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Lightning2"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_10"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Ewan\").wexp['Light'] < 240"
+            ]
+        ]
+    }
+]

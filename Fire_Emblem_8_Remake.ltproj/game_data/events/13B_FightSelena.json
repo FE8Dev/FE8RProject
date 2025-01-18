@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightSelena",
+        "trigger": "combat_start",
+        "level_nid": "13B",
+        "condition": "unit.nid == \"Selena\" or unit2.nid == \"Selena\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Selena;Left",
+            "speak;Selena;Fluorspar...|His Majesty gave me this name.|Therefore, I...",
+            "remove_portrait;Selena"
+        ],
+        "nid": "13B FightSelena"
+    }
+]

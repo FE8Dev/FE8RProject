@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Drenching_Waters_Damage_hide",
+        "name": "Drenching Waters",
+        "desc": "Attacks inflict the Drenched status on hit.\nDouble damage and +20 Crit against Drenched enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            20
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "20"
+            ]
+        ]
+    }
+]

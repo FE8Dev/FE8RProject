@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Slayer_T2",
+        "name": "Slayer",
+        "desc": "Light magic and Staves deals 3x damage against Monsters.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            15
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light, Staff')"
+            ],
+            [
+                "item_override",
+                "Slayer"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "House_2",
+        "trigger": "Visit",
+        "level_nid": "7",
+        "condition": "region.nid == 'House_2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;House",
+            "transition;open;500",
+            "add_portrait;Villager Old Woman 1;Left;no_block",
+            "add_portrait;{unit};Right",
+            "speak;Villager Old Woman 1;Prince Ephraim?|Well, gracious me...|I haven't heard anything about him.|But now that you mention it, there was a big commotion a few days back.|I guess the soldiers were chasing somebody, but...|Well, I was so tired, I fell asleep and missed the whole thing.",
+            "multi_remove_portrait;Villager Old Woman 1;{unit}",
+            "transition;close;100",
+            "change_background",
+            "transition;open;100",
+            "give_bexp;500",
+            "has_traded;{unit}",
+            "level_var;House2;True"
+        ],
+        "nid": "7 House_2"
+    }
+]

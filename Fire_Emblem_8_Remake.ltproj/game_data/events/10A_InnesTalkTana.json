@@ -1,0 +1,30 @@
+[
+    {
+        "name": "InnesTalkTana",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Tana','Innes')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Tana;Right;Innes;Left",
+            "#music;50 Comrades;100",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Tana;Brother!",
+            "speak;Innes;Tana?!?|What?|How did...|What are you doing here?",
+            "speak;Tana;I came with Eirika.|Wait here, Brother.|It's my turn to protect you.",
+            "speak;Innes;Stop playing the soldier, Tana.|You will return to the palace at once.",
+            "speak;Tana;I will not!|Eirika, Ephraim, and you are all risking so much...|I can't sit at home and watch!|I have to do something to help.",
+            "speak;Innes;Tana...|...We'll talk about this later.|For now, we join forces with Eirika.",
+            "speak;Tana;Thank you, Brother.",
+            "multi_remove_portrait;Tana;Innes",
+            "change_team;Innes;player",
+            "change_ai;Innes;None",
+            "remove_talk;Tana;Innes",
+            "music_fade_back;100",
+            "has_traded;{unit}"
+        ],
+        "nid": "10A InnesTalkTana"
+    }
+]

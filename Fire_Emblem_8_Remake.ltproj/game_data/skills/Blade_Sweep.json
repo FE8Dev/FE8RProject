@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Blade_Sweep",
+        "name": "Blade Sweep",
+        "desc": "Blades Cleave all around them at 1.2x damage if used by an Infantry or Armored unit. Does not work if unit is below 95% Max HP.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "('Infantry' in unit.tags or 'Armor' in unit.tags) and (unit.get_hp() >= unit.get_max_hp() * 0.95) "
+            ],
+            [
+                "Cleave",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "allowed_weapons",
+                "not has_skill(unit, 'Steal')"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

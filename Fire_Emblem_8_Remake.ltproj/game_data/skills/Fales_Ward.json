@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Fales_Ward",
+        "name": "Fale's Ward",
+        "desc": "Ignores all damage from the next 3 bow attacks. Works 3 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Bow')"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "charges_per_turn",
+                3
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

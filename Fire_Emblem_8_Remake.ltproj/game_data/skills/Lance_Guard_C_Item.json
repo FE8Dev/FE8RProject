@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Lance_Guard_C_Item",
+        "name": "Lance Guard (A)",
+        "desc": "Reduce damage taken by ((SKL/4) + 4).\nStackable with other Lance Guards.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            2,
+            5
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "(unit.get_stat('SKL') // 4) + 4"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

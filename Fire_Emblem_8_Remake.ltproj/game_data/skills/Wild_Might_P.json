@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Wild_Might_P",
+        "name": "Wild Might+",
+        "desc": "+1 STR/CON for each enemy this unit kills.\nAdd CON/2 to damage given.\nMax 20 stacks. Lasts until end of chapter.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            34
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "unit.get_stat('CON') // 2"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Wild_Might_Buff_P"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

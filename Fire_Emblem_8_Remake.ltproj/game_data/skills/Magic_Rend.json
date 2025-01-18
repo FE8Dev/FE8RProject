@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Magic_Rend",
+        "name": "Magic Rend",
+        "desc": "Double damage and +10 Crit against Silenced enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Silence')"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "10"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ]
+        ]
+    }
+]

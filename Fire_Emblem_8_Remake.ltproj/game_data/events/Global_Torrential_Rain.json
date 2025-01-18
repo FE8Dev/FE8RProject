@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Torrential_Rain",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "sound;Thunder1",
+            "sound;Thunder2",
+            "add_weather;rain;{unit}",
+            "add_portrait;Dozla;Right;normal;CloseEyes",
+            "wait;1200",
+            "expression;Dozla;NormalBlink",
+            "happy_chatter;Dozla",
+            "bop_portrait;Dozla",
+            "speak;Dozla;Gwah Ha Ha!|This is just like the good old days!",
+            "remove_skill;Dozla;Torrential_Rain;no_banner",
+            "remove_skill;Dozla;Torrential_Rain_Giver;no_banner",
+            "remove_portrait;Dozla",
+            "give_skill;Dozla;Torrential_Rain_Stop;no_banner",
+            "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
+            "give_skill;{enemy_unit};Torrential_Rain_Global;no_banner",
+            "endf"
+        ],
+        "nid": "Global Torrential_Rain"
+    }
+]

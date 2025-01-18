@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "Mage_Shine_Franz",
+        "name": "Mage Shine",
+        "desc": "A scholar's variation of Shine magic to counter dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +10 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine_Mage"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "reaver",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Franz\").wexp['Anima'] < 180"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_10"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Warmonger_Buff",
+        "name": "Battle Hungry",
+        "desc": "+10 damage given, +5 Hit/Crit.\nMax 10 stacks. Can only gain 1 stack a turn. Take 5 damage at the beginning of each turn for each stack.\nLasts until the end of chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            18
+        ],
+        "components": [
+            [
+                "stack",
+                10
+            ],
+            [
+                "dynamic_damage",
+                "10"
+            ],
+            [
+                "dynamic_accuracy",
+                "5"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "5"
+            ],
+            [
+                "upkeep_damage",
+                5
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

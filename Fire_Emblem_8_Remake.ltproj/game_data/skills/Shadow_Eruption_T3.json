@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "Shadow_Eruption_T3",
+        "name": "Shadow Eruption",
+        "desc": "When initiating combat with a magical weapon, deal 40 damage and inflict Shadow Blight to enemies within 2 spaces of target.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "condition",
+                "item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "post_combat_splash",
+                80
+            ],
+            [
+                "post_combat_splash_aoe",
+                2
+            ],
+            [
+                "savage_statuses",
+                {
+                    "statuses": [
+                        "Shadow_Blight"
+                    ],
+                    "range": 2
+                }
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

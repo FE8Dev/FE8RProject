@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Eternal_Waters_Parent_hide",
+        "name": "Eternal Waters",
+        "desc": "Killing an enemy that is Drenched will turn them to a green, The Drowned Unit.\nOnce per chapter if this unit would die, revive this unit to Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            20
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "give_status_after_hit",
+                "Eternal_Waters_Child"
+            ]
+        ]
+    }
+]

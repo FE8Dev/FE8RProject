@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Spot_Weakness",
+        "name": "Spot Weakness",
+        "desc": "+15 Crit when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ]
+        ]
+    }
+]

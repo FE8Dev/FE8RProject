@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Exemplar_Buff",
+        "name": "Exemplar",
+        "desc": "+3/-3 damage given/taken, +5 Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "'Horse' in unit.tags or 'Lord' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "3"
+            ],
+            [
+                "dynamic_resist",
+                "3"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "5"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

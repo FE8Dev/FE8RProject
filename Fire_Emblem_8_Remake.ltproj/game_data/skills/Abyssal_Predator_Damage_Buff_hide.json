@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Abyssal_Predator_Damage_Buff_hide",
+        "name": "Abyssal Predator",
+        "desc": "<red>CA:</>Harpoons enemy near to unit. This is a free action. <green>CD:2 Turns</>\nUser Gains +20 avoid and Crit when initiating, increases damage by 50% if foe cannot counter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            44
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "not combat_calcs.can_counterattack(unit, unit.get_weapon(), unit2, unit2.get_weapon())"
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ]
+        ]
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "nid": "Ethereal_Maelstrom",
+        "name": "Ethereal Maelstrom",
+        "desc": "<red>CA:</>A magical attack that hits all enemies, inflicts Drenched on hit and reduces their MOV by 2. Cannot Double, Cannot DS. <green>CD:7 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                -20
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "WaterBlast"
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "all_enemies_aoe",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff",
+                    "Ethereal_Maelstrom_MOV_Debuff"
+                ]
+            ]
+        ]
+    }
+]

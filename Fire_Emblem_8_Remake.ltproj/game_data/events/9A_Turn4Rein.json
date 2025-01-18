@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Turn4Rein",
+        "trigger": "turn_change",
+        "level_nid": "9A",
+        "condition": "game.turncount == 4",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;4,0",
+            "add_group;Rein3;Rein3;fade;closest"
+        ],
+        "nid": "9A Turn4Rein"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Pair_Up_Affinity_Ice_Effect",
+        "name": "Affinity Strike (<icon>Ice</>)",
+        "desc": "<red>CA:</>Inflicts Frozen after combat.\nRefresh this unit if unit kills an enemy, but cuts unit's stats by 90%\n",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Pair_Up_Affinity_Ice_Effect_Proc"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

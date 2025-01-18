@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Hunter_P",
+        "name": "Hunter+",
+        "desc": "+60 Avoid/Hit and +1 bonus attack (+2 if unit is fast enough) when unit is initiating attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            19
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "dynamic_avoid",
+                "60"
+            ],
+            [
+                "dynamic_accuracy",
+                "60"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

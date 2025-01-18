@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathGerik",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Gerik'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Gerik;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Gerik;If you live on the battlefield, you know this day will come...",
+            "else",
+            "speak;Gerik;Huh...|I must be losing my touch...Better rest up...",
+            "end",
+            "expression;Gerik;CloseEyes",
+            "remove_portrait;Gerik",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathGerik"
+    }
+]

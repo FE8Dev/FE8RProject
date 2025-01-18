@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Talk_102",
+        "trigger": "on_talk",
+        "level_nid": "6",
+        "condition": "check_pair('Eirika','102')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Woman2;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "expression;Woman2;CloseEyes",
+            "speak;Woman2;.....;no_talk",
+            "speak;Eirika;Are you alright?",
+            "speak;Woman2;Please, just give me a minute...|I was so scared.",
+            "expression;Eirika;HalfCloseEyes",
+            "speak;Eirika;Of course...|My apologies.",
+            "multi_remove_portrait;Woman2;Eirika",
+            "give_bexp;800",
+            "remove_talk;Eirika;102"
+        ],
+        "nid": "6 Talk_102"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Cloaked_Attack",
+        "name": "Cloaked Attack",
+        "desc": "Gain extra Avoid and Hit based on the unit's SPD/2\nwhen initiating the attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_accuracy",
+                "unit.get_stat('SPD') // 2"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SPD') // 2"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "EpilogueA",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "game_var;TOVA_Ch_Save;game.game_vars.get(\"_next_level_nid\")",
+            "wait;500"
+        ],
+        "nid": "EpilogueA Outro"
+    }
+]

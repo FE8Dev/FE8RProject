@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "Creature_CampaignA",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;TOVA_Ch_Save;game.game_vars.get(\"_next_level_nid\")",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "wait;500",
+            "win_game"
+        ],
+        "nid": "Creature_CampaignA Intro"
+    }
+]

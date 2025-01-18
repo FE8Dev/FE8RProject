@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Mobile_Wall",
+        "name": "Mobile Wall",
+        "desc": "Reduces damage from Swords, Axes, Lances, and Bows by half.\nReduces follow up damage by an extra half.\n+2 MOV for 2 turns after taking a hit from those weapons.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Sword', 'Axe', 'Lance', 'Bow')"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "resist_follow_up",
+                0.5
+            ],
+            [
+                "gain_skill_after_combat_on_take_hit",
+                "Mobile_Wall_Buff"
+            ]
+        ]
+    }
+]

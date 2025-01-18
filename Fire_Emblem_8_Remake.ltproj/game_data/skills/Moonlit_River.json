@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Moonlit_River",
+        "name": "Moonlit River",
+        "desc": "Ignores 50% of enemy's RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            20
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') // 2"
+            ]
+        ]
+    }
+]

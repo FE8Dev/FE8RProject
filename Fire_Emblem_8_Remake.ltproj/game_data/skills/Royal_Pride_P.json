@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Royal_Pride_P",
+        "name": "Royal Pride+",
+        "desc": "When defending, gives user +3 bonus attacks when unit's AS >= enemy's AS.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            52
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item)) and mode == 'defense')"
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "dynamic_attacks",
+                "3"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

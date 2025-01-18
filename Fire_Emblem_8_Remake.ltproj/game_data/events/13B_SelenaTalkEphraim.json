@@ -1,0 +1,26 @@
+[
+    {
+        "name": "SelenaTalkEphraim",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Ephraim','Selena')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ephraim;Right;Selena;Left",
+            "speak;Ephraim;Are you Selena?",
+            "speak;Selena;Indeed I am.|And you are Prince Ephraim.",
+            "speak;Ephraim;I know you've spoken with Myrrh.|Withdraw your troops.|You must know the emperor is not rational!",
+            "speak;Selena;Yes, I know.",
+            "speak;Ephraim;Then why?|Why do we still fight?",
+            "speak;Selena;I am a general of the empire.|His Majesty's word is law.",
+            "speak;Ephraim;That's ridiculous.|You know the emperor is deranged, and yet you follow his orders?!|Is that truly loyalty?!",
+            "speak;Selena;Prince Ephraim, you cannot understand.|I know the path I'm given is foolish.|Yet I am a knight, and I have no other.",
+            "speak;Ephraim;Selena, please!|Surrender!|I have no wish to see you die here!",
+            "speak;Selena;Me?|Die?|Prince Ephraim, you misunderstand me.|I have no intention of dying.|Madness though it may be, I will be the one doing the killing today.",
+            "multi_remove_portrait;Ephraim;Selena"
+        ],
+        "nid": "13B SelenaTalkEphraim"
+    }
+]

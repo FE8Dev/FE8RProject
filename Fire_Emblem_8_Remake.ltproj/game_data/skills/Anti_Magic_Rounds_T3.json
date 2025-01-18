@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Anti_Magic_Rounds_T3",
+        "name": "Anti-Magic Rounds",
+        "desc": "Attacks reduces enemy's MAG and RES by 75% for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            33
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Anti_Magic_Rounds_Debuff"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

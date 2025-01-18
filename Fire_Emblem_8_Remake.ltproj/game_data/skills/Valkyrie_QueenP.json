@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Valkyrie_QueenP",
+        "name": "Valkyrie Queen+",
+        "desc": "Mounted Tome wielding and Light tome wielding allies within 5 spaces gain -8 Damage taken, +30 Avoid, and +2 bonus attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "aura",
+                "Valkyrie_Queen_BuffP"
+            ],
+            [
+                "aura_range",
+                5
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "dynamic_resist",
+                "4"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

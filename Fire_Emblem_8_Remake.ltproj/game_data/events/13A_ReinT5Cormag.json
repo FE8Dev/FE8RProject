@@ -1,0 +1,24 @@
+[
+    {
+        "name": "ReinT5Cormag",
+        "trigger": "turn_change",
+        "level_nid": "13A",
+        "condition": "game.turncount == 5",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_group;ReinT5Cormag;0,14;fade;stack",
+            "move_cursor;Cormag",
+            "move_group;ReinT5Cormag;ReinT5Cormag;normal;closest;no_follow",
+            "flicker_cursor;Cormag",
+            "add_portrait;Cormag;Left",
+            "speak;Cormag;Where is she?|Where is she?!|I will avenge my brother!",
+            "remove_portrait;Cormag",
+            "change_ai;Cormag;Pursue",
+            "autolevel_to;Cormag;20",
+            "set_unit_level;Cormag;20"
+        ],
+        "nid": "13A ReinT5Cormag"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Bewitching_Eye",
+        "name": "Bewitching Eye",
+        "desc": "Attacks inflict the Confuse status on hit.\n+15 Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            27
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Confuse"
+            ],
+            [
+                "dynamic_avoid",
+                "15"
+            ]
+        ]
+    }
+]

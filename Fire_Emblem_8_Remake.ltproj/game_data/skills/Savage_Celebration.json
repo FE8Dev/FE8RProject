@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Savage_Celebration",
+        "name": "Savage Celebration",
+        "desc": "After killing an enemy, this unit gains 40% STR/CON/LCK for 2 turns, then unit recovers 30 HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Savage_Celebration_Buff"
+            ],
+            [
+                "heal_on_kill",
+                30
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Quick_Fang_T1",
+        "name": "Quick Fang",
+        "desc": "If this unit's AS is +6 higher than enemy's when initiating combat,\nthis unit gains a bonus attack.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            12
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "combat_calcs.attack_speed(unit, item) > combat_calcs.attack_speed(target, item) + 6 and mode == \"attack\""
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

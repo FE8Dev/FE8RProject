@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Headshot_Art_T3",
+        "name": "Headshot",
+        "desc": "<red>CA:</>A shot to the head that deals 3X damage <green>CD:2 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Headshot_Skill"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

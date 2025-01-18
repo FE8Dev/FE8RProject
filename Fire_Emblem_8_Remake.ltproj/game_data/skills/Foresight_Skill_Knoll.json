@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Foresight_Skill_Knoll",
+        "name": "Future Sight",
+        "desc": "Take no damage from next combat. Lost after next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            22
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "dynamic_resist",
+                "999"
+            ]
+        ]
+    }
+]

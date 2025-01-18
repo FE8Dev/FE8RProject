@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Light_Range_P1_Skill_Light",
+        "name": "Knowledge of Justice (<icon>Light</>)",
+        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

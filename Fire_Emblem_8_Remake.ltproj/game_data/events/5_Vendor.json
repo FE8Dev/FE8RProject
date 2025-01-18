@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Vendor",
+        "trigger": "Vendor",
+        "level_nid": "5",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "music;55- Shops Orchestral Cover;500",
+            "shop;{unit};Heal,Multiheal,Mages_Staff,Vulnerary,Pure Water,Fire,Thunder,Combustion,Ice_Spikes,Wind,Aqua,Dark_Lightning,Flux_Snakes,Shine,Sunbeam,Dancing_Shoes,Cursed_Baton,Instructors_Horn,Emergency_Protocol,Training_Weights;vendor",
+            "transition;Open",
+            "music_fade_back"
+        ],
+        "nid": "5 Vendor"
+    }
+]

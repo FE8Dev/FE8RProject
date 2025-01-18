@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Chains_of_Death_EP_hide",
+        "name": "Chains of Death",
+        "desc": "<red>CA: </>+1 Sword range. <green>CD:0 Turns</>\nEffect is active during EP. Unit deals X2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            43
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "1"
+            ]
+        ]
+    }
+]

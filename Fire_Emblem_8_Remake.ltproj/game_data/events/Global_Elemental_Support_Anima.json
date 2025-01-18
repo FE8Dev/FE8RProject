@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Elemental_Support_Anima",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;FireRNG;game.get_random(1, 2)",
+            "if;game.level_vars['FireRNG'] == 1",
+            "give_skill;{unit2};Seared;no_banner",
+            "else",
+            "end",
+            "level_var;WaterRNG;game.get_random(1, 2)",
+            "if;game.level_vars['WaterRNG'] == 1",
+            "give_skill;{unit2};Drench_Debuff;no_banner",
+            "else",
+            "end",
+            "level_var;ShadowRNG;game.get_random(1, 2)",
+            "if;game.level_vars['ShadowRNG'] == 1",
+            "give_skill;{unit2};Cursed_8;no_banner",
+            "give_skill;{unit2};Shadow_Blight;no_banner",
+            "else",
+            "end",
+            "level_var;IceRNG;game.get_random(1, 2)",
+            "if;game.level_vars['IceRNG'] == 1",
+            "give_skill;{unit2};Frozen;no_banner",
+            "else",
+            "end",
+            "level_var;RockRNG;game.get_random(1, 2)",
+            "if;game.level_vars['RockRNG'] == 1",
+            "give_skill;{unit2};Rock_Punctures;no_banner",
+            "else",
+            "end"
+        ],
+        "nid": "Global Elemental_Support_Anima"
+    }
+]

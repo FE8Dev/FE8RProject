@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightCaellachNormal",
+        "trigger": "combat_start",
+        "level_nid": "15B",
+        "condition": "check_default('Caellach', 'Joshua')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Caellach;Left",
+            "speak;Caellach;You're a stepping-stone...|And I'm moving up.|Don't take it personally.",
+            "remove_portrait;Caellach"
+        ],
+        "nid": "15B FightCaellachNormal"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "name": "DeathLyonE",
+        "trigger": "unit_death",
+        "level_nid": "FinalB1",
+        "condition": "unit.nid == 'LyonE'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Lyon;Left",
+            "speak;Lyon;Where...|Where did I go wrong...",
+            "expression;Lyon;CloseEyes",
+            "remove_portrait;Lyon"
+        ],
+        "nid": "FinalB1 DeathLyonE"
+    }
+]

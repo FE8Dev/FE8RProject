@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Ch.5BaseConvo4",
+        "trigger": "on_base_convo",
+        "level_nid": "5",
+        "condition": "unit == 'Unlikely Friends*'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;Village",
+            "music;42- Laughter Orchestral Cover;500",
+            "transition;open;500",
+            "add_portrait;Ross;Left",
+            "speak;Ross;Wow!|Look at this town!|It's so big!|There are so many shops here!",
+            "multi_add_portrait;Colm;MidRight;Neimi;FarRight",
+            "speak;Colm;Don't get too excited there kid, this isn't that big of a town!",
+            "bop_portrait;Ross",
+            "speak;Ross;Hey!|I'm not a kid!|You don't even look that much older than me!|You're that Colm guy, right?|I heard you've been stealing stuff!",
+            "speak;Neimi;Colm...",
+            "bop_portrait;Colm",
+            "speak;Colm;Hey!|I've been stealing stuff from the bad guys!|No need to get mad at me!|I'm on your team!",
+            "speak;Ross;Oh really?|How can you steal while on the battlefield?",
+            "speak;Colm;That's a great question, friend!|You see, you've got to be quick, smart, and light!",
+            "speak;Ross;Whoa...|Cool!",
+            "speak;Neimi;Boys...|You shouldn't be stealing stuff...",
+            "speak;Colm;It's ok Neimi!|I was going to get you some jerky with the money I'll make from all this stuff!",
+            "speak;Ross;Jerky!|Now you're speaking my language!|Let me get in on that!",
+            "speak;Colm;Ok, you've got a deal!|I'll teach the best tricks I know!",
+            "multi_remove_portrait;Ross;Colm",
+            "bop_portrait;Neimi",
+            "speak;Neimi;Wa-, wait for me!",
+            "remove_portrait;Neimi",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back",
+            "ignore_base_convo;Unlikely Friends*;t"
+        ],
+        "nid": "5 Ch.5BaseConvo4"
+    }
+]

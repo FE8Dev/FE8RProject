@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Remove_Paragon_Ross",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.nid == 'Ross' and unit.level == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_skill;{unit};Paragon;no_banner"
+        ],
+        "nid": "Global Remove_Paragon_Ross"
+    }
+]

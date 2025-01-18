@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "World_Traveler",
+        "name": "World Traveler",
+        "desc": "A sword for one experienced in battles around the world.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>+10 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            26,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Seawalk",
+                    "Torrential_Rain_Giver"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Bolting"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Dozla\").wexp['Sword'] >= 360"
+            ]
+        ]
+    }
+]
