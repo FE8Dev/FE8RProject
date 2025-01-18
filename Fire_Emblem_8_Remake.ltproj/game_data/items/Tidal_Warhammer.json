@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Iron_Warhammer",
-        "name": "Iron Warhammer",
-        "desc": "Basic warhammer.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "nid": "Tidal_Warhammer",
+        "name": "Tidal W.H.",
+        "desc": "A massive hammer for the magically inclined.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Stun</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
-            2,
+            5,
             4
         ],
         "components": [
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                18
+                37
             ],
             [
                 "hit",
-                55
+                105
             ],
             [
                 "weapon_type",
@@ -35,11 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "E"
+                "SS"
             ],
             [
                 "weight",
-                23
+                33
             ],
             [
                 "crit",
@@ -51,7 +51,7 @@
             ],
             [
                 "value",
-                1500
+                2000
             ],
             [
                 "min_range",
@@ -72,8 +72,13 @@
             [
                 "statuses_on_hit",
                 [
-                    "Stun"
+                    "Stun",
+                    "Drench_Debuff"
                 ]
+            ],
+            [
+                "magic",
+                null
             ],
             [
                 "item_tags",
@@ -100,9 +105,17 @@
             [
                 "multi_status_on_equip",
                 [
-                    "War_Blow",
-                    "Blade_Vantage_Effect"
+                    "Blade_Vantage_Effect",
+                    "War_Blow"
                 ]
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

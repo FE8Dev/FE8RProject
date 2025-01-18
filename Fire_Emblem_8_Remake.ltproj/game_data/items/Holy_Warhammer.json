@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Magic_Mallet",
-        "name": "Magic Mallet",
-        "desc": "A heavy mallet made with a magical wood.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + MAG/2",
+        "nid": "Holy_Warhammer",
+        "name": "Holy W.H.",
+        "desc": "A holy warhammer blessed with light.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK/2.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             0,
@@ -27,7 +27,7 @@
             ],
             [
                 "hit",
-                70
+                100
             ],
             [
                 "weapon_type",
@@ -35,7 +35,7 @@
             ],
             [
                 "weapon_rank",
-                "C"
+                "A"
             ],
             [
                 "weight",
@@ -43,7 +43,7 @@
             ],
             [
                 "crit",
-                3
+                13
             ],
             [
                 "wexp",
@@ -85,7 +85,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Frozen"
+                        "Frozen",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -99,7 +100,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_MID"
+                "STR_LCK_MID"
             ],
             [
                 "multi_status_on_equip",

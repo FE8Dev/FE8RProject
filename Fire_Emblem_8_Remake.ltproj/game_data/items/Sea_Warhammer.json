@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Platinum_Warhammer",
-        "name": "Platinum Warhammer",
-        "desc": "Dangerous, rare warhammer.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "nid": "Sea_Warhammer",
+        "name": "Sea W.H.",
+        "desc": "A warhammer favored by pirates.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Stun</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
-            6,
+            4,
             4
         ],
         "components": [
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                34
+                28
             ],
             [
                 "hit",
-                65
+                90
             ],
             [
                 "weapon_type",
@@ -35,7 +35,7 @@
             ],
             [
                 "weapon_rank",
-                "S"
+                "A"
             ],
             [
                 "weight",
@@ -51,7 +51,7 @@
             ],
             [
                 "value",
-                3000
+                1600
             ],
             [
                 "min_range",
@@ -59,10 +59,6 @@
             ],
             [
                 "max_range",
-                1
-            ],
-            [
-                "shove",
                 1
             ],
             [
@@ -76,7 +72,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Stun"
+                    "Stun",
+                    "Drench_Debuff"
                 ]
             ],
             [
@@ -98,11 +95,23 @@
                 }
             ],
             [
+                "shove",
+                1
+            ],
+            [
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
                     "War_Blow"
                 ]
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

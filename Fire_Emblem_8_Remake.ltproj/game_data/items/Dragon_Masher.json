@@ -2,7 +2,7 @@
     {
         "nid": "Dragon_Masher",
         "name": "Dragon Masher",
-        "desc": "A legendary, heavy warhammer made to crush dragons.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>Heavy, but can attack first, STR + DEF/2.",
+        "desc": "A heavy warhammer made to crush bones.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -23,7 +23,7 @@
             ],
             [
                 "damage",
-                60
+                42
             ],
             [
                 "hit",
@@ -35,11 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "X"
+                "SS"
             ],
             [
                 "weight",
-                55
+                40
             ],
             [
                 "crit",
@@ -51,7 +51,7 @@
             ],
             [
                 "value",
-                5000
+                2000
             ],
             [
                 "min_range",
@@ -72,22 +72,18 @@
             [
                 "statuses_on_hit",
                 [
-                    "Stun"
+                    "Stun",
+                    "Rock_Punctures"
                 ]
-            ],
-            [
-                "pre_combat_effect",
-                "Legend"
             ],
             [
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Dragon",
                         "Frozen"
                     ],
                     "effective_multiplier": 3,
-                    "effective_bonus_damage": 32,
+                    "effective_bonus_damage": 5,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
@@ -104,13 +100,19 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_DEF_MID"
+                "STR_DEF_STRONG"
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Wary_Fighter"
+                    "War_Blow",
+                    "Vantage_Plus_Item_Blade",
+                    "Earth_Shield"
                 ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
             ]
         ]
     }

@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Atlas",
-        "name": "Atlas",
-        "desc": "Ultra heavy warhammer of giants.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Very heavy, STR + SKL/2.",
+        "nid": "Purge_Warhammer",
+        "name": "Purge W.H.",
+        "desc": "A warhammer made to purge evil.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
-            8,
+            6,
             4
         ],
         "components": [
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                50
+                34
             ],
             [
                 "hit",
-                80
+                110
             ],
             [
                 "weapon_type",
@@ -35,15 +35,15 @@
             ],
             [
                 "weapon_rank",
-                "SSS"
+                "SS"
             ],
             [
                 "weight",
-                70
+                27
             ],
             [
                 "crit",
-                10
+                20
             ],
             [
                 "wexp",
@@ -51,7 +51,7 @@
             ],
             [
                 "value",
-                5000
+                2000
             ],
             [
                 "min_range",
@@ -59,6 +59,10 @@
             ],
             [
                 "max_range",
+                1
+            ],
+            [
+                "shove",
                 1
             ],
             [
@@ -85,7 +89,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Frozen"
+                        "Frozen",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -94,19 +99,15 @@
                 }
             ],
             [
-                "shove",
-                1
-            ],
-            [
-                "alternate_damage_formula",
-                "STR_SKL_MID"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
                     "War_Blow"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_STRONG"
             ]
         ]
     }

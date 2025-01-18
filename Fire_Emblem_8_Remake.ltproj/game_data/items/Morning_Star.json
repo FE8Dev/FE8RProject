@@ -2,7 +2,7 @@
     {
         "nid": "Morning_Star",
         "name": "Morning Star",
-        "desc": "Heavy warhammer with spikes.\n<green>Skills:</>War Blow\n<violet>Inflicts:</><icon>Stun</><icon>Bleed</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "desc": "Heavy warhammer with spikes used by zealots.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK/2.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                16
+                15
             ],
             [
                 "hit",
-                55
+                90
             ],
             [
                 "weapon_type",
@@ -35,11 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "D"
             ],
             [
                 "weight",
-                17
+                15
             ],
             [
                 "crit",
@@ -51,7 +51,7 @@
             ],
             [
                 "value",
-                2500
+                500
             ],
             [
                 "min_range",
@@ -72,8 +72,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Stun",
-                    "Bleeding"
+                    "Stun"
                 ]
             ],
             [
@@ -86,7 +85,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Frozen"
+                        "Frozen",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -104,6 +104,10 @@
                     "Blade_Vantage_Effect",
                     "War_Blow"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_MID"
             ]
         ]
     }
