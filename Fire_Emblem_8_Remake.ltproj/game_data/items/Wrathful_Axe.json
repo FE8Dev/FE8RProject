@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Wrathful_Axe",
+        "name": "Wrathful Axe",
+        "desc": "An axe that grants great strength at a cost.\n<green>Skills:</>Risky Desperation\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (25)\n<red>Very effective:</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>-30 HP, -15 DEF, STR + CON*3.",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                45
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "status_on_equip",
+                "Risky_Desperation"
+            ],
+            [
+                "Unwieldy",
+                15
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        -30
+                    ]
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_25",
+                    "Seared"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
+            ]
+        ]
+    }
+]

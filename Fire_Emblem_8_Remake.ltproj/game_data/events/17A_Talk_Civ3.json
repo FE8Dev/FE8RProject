@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "17A",
+        "condition": "check_pair('Eirika', '127')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Villager Girl;Left",
+            "speak;Villager Girl;Thank you for saving me, pretty lady!",
+            "speak;Eirika;He he!|You're welcome!",
+            "speak;Villager Girl;I hope I can be as strong and beautiful as you are someday!",
+            "multi_remove_portrait;Eirika;Villager Girl",
+            "give_bexp;5000",
+            "remove_talk;Eirika;127"
+        ],
+        "nid": "17A Talk_Civ3"
+    }
+]

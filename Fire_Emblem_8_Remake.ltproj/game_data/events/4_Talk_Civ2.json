@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "4",
+        "condition": "check_pair('Eirika','Civ2')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "music;42- Laughter Orchestral Cover;500",
+            "add_portrait;Man1;Right;no_block",
+            "add_portrait;Eirika;Left",
+            "speak;Man1;Were you able to knock down that snag?|Hope that tool was able to knock it down.",
+            "speak;Eirika;Thank you, though it is a little perplexing to try to knock down a snag with a warhammer...",
+            "speak;Man1;What do you mean?|Just give it a good whack and knock it clear down!",
+            "speak;Eirika;I suppose, but a warhammer is a litte bit too much for me right now...",
+            "speak;Man1;Hmmmm....|You might have a point there...|Well, give to someone big then!|Ha ha ha!|I had a buddy who used to be a <red>Pirate</> that could use it well!|He also had a buddy who rode <red>dragons</> that could use it well too!",
+            "speak;Eirika;I will probably do that for now.|Maybe someday I can use it, but not right now.",
+            "speak;Man1;Ha ha ha!|Maybe someday!",
+            "multi_remove_portrait;Eirika;Man1",
+            "give_bexp;700",
+            "music_fade_back;500",
+            "remove_talk;Eirika;Civ2"
+        ],
+        "nid": "4 Talk_Civ2"
+    }
+]

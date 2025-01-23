@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Cleave_Turn_Art",
+        "name": "Cleave Turn",
+        "desc": "<red>CA:</>+6 Damage, +10 Crit, +20 Hit and cleaves in an area. <green>CD:2 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Cleave_Turn_Skill"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

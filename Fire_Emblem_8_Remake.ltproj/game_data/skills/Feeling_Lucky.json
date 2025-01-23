@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Feeling_Lucky",
+        "name": "Feeling Lucky",
+        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "give_status_after_hit",
+                "Luck_Plus7"
+            ]
+        ]
+    }
+]

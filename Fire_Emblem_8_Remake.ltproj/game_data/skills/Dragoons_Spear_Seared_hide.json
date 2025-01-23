@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dragoons_Spear_Seared_hide",
+        "name": "Dragoon's Spear",
+        "desc": "<red>CA: </>Increase the range of lances by 2. <green>CD:0 Turns</>\nEffect is always active during EP.\nIf enemy is Seared, attack becomes (AOE:1).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            36
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Seared')"
+            ],
+            [
+                "enemy_oversplash",
+                1
+            ]
+        ]
+    }
+]

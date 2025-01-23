@@ -1,0 +1,121 @@
+[
+    {
+        "nid": "Siegmund",
+        "name": "Siegmund",
+        "desc": "The legendary weapon wielded by Ephraim.          \n<green>Skills:</>Momentum, Lance Guard (SS)\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Armor</><icon>Horse</><icon>Monster</>\n<pink>Misc:</>+10 STR, Ally Desperation (Aura:3)",
+        "icon_nid": "Lance",
+        "icon_index": [
+            0,
+            14
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ephraim"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Momentum_Desperation_Unit",
+                    "Commanders_Sword_Skill"
+                ]
+            ],
+            [
+                "battle_animation_music",
+                "31- Sacred Strength Orchestral Cover"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Horse",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 36,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "has_skill(unit, 'Ephraim_Legend') and not has_skill(unit, 'Ephraim_Ultimate')"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    }
+]

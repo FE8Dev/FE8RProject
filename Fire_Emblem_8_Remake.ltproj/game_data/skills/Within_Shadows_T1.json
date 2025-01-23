@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Within_Shadows_T1",
+        "name": "Within Shadows",
+        "desc": "+40 avoid in Terrain with bonus.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            44
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
+            ],
+            [
+                "avoid",
+                40
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

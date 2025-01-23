@@ -1,0 +1,52 @@
+[
+    {
+        "nid": "Regenerative_Skin_Heal",
+        "name": "Regenerative Skin",
+        "desc": "Heal 30 HP after enemy's attack if the enemy's attack was a follow up.\nHeal 25 HP after combat if an enemy misses you.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "post_combat_healing",
+                25
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

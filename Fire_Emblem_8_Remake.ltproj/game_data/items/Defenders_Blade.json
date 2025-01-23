@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Defenders_Blade",
+        "name": "Defender's Blade",
+        "desc": "A blade for those who Defend Grado until they fall.\n<green>Skills:</>Grado's Wall\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            2,
+            7
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Grados_Wall",
+                    "Grados_Wall_Gain",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Duessel"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Duessel\").wexp['Sword'] < 180"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    }
+]

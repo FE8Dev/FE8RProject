@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Pack_Howl",
+        "name": "Pack Howl",
+        "desc": "+2 MT and +5 Hit for each ally deployed.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "2*len([unit for unit in game.get_all_units() if unit.team in ('player','other')])"
+            ],
+            [
+                "dynamic_accuracy",
+                "5*len([unit for unit in game.get_all_units() if unit.team in ('player','other')])"
+            ]
+        ]
+    }
+]

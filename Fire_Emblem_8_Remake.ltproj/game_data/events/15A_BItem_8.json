@@ -1,0 +1,19 @@
+[
+    {
+        "name": "BItem_8",
+        "trigger": "unit_wait",
+        "level_nid": "15A",
+        "condition": "region.nid == 'BItem8'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(0, 50) <= unit.get_stat('LCK') and unit.team == 'player'",
+            "give_item;{unit};Metis's Tome",
+            "remove_region;BItem8",
+            "else",
+            "end"
+        ],
+        "nid": "15A BItem_8"
+    }
+]

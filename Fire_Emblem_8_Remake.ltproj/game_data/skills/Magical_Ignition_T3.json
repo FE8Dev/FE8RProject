@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "Magical_Ignition_T3",
+        "name": "Magical Ignition",
+        "desc": "+2 Bonus attacks if enemy is inflicted with an elemental debuff.\nRe-apply the status they were afflicted with after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            22
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "has_skill(target, 'Seared')"
+            ],
+            [
+                "dynamic_attacks",
+                "2"
+            ],
+            [
+                "give_status_after_combat",
+                "Seared"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Magical_Ignition_Drench_hide",
+                    "Magical_Ignition_Stun_hide",
+                    "Magical_Ignition_Frozen_hide",
+                    "Magical_Ignition_Shadowblight_hide",
+                    "Magical_Ignition_Rock_hide"
+                ]
+            ]
+        ]
+    }
+]

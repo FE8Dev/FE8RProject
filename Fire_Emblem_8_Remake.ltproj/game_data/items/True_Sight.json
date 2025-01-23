@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "True_Sight",
+        "name": "True Sight",
+        "desc": "Target gets +40 Hit, +10 Crit, and +1 range with Bows, and all magic for 1 turn. <green>CD:1</>\n<pink>Misc:</>This is a Free Action.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "battle_animation_music",
+                "34- Curing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "EyeBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"EyeBoy\").wexp['Staff'] >= 360 and u(\"EyeBoy\").wexp['Staff'] < 420"
+            ],
+            [
+                "battle_cast_anim",
+                "Barrier"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "True_Sight_Hit",
+                    "True_Sight_Range"
+                ]
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "cooldown",
+                1
+            ]
+        ]
+    }
+]

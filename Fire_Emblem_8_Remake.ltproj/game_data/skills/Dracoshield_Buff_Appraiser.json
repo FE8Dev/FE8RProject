@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "Dracoshield_Buff_Appraiser",
+        "name": "Dracoshield Buff",
+        "desc": "Give buff to Dracoshield.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser') or has_skill(unit, 'Appraiser_T3')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "DEF",
+                        120
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ]
+                ]
+            ]
+        ]
+    }
+]

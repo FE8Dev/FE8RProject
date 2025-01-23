@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Vantage_Plus_Item_Blade",
+        "name": "Vantage Plus Item",
+        "desc": "Unit always attack first when attacked.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            7
+        ],
+        "components": [
+            [
+                "vantage",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

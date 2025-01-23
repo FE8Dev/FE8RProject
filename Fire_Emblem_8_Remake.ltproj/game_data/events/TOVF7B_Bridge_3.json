@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Bridge_3",
+        "trigger": "turn_change",
+        "level_nid": "TOVF7B",
+        "condition": "game.turncount == 6",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;9,14",
+            "wait;500",
+            "screen_shake;0;default",
+            "show_layer;Bridge_3;fade",
+            "wait;500",
+            "screen_shake_end"
+        ],
+        "nid": "TOVF7B Bridge_3"
+    }
+]

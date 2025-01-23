@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Fighting_Spirit_hide",
+        "name": "Fighting Spirit",
+        "desc": "Heal 100 HP on killing an enemy.\nGain Vantage when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            14
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "vantage",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Omniscient_Fury_Art",
+        "name": "Omniscient Fury",
+        "desc": "<red>CA:</>Adds unit's MAG/10 to range, Cannot Miss, Add MAG to Crit.<green>CD:2 Turns. Only usable when at Max HP.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "combat_art",
+                "Omniscient_Fury_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Talk_101",
+        "trigger": "on_talk",
+        "level_nid": "6",
+        "condition": "check_pair('Eirika','101')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Man;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "expression;Villager Man;CloseEyes",
+            "speak;Villager Man;I'm saved...|I can't believe it...",
+            "speak;Eirika;How did you end of in this situation?|Did Grado kidnap you?",
+            "speak;Villager Man;Please...|Just leave me alone.|I just want you to go away...",
+            "expression;Eirika;HalfCloseEyes",
+            "speak;Eirika;.....;no_talk",
+            "multi_remove_portrait;Villager Man;Eirika",
+            "give_bexp;800",
+            "remove_talk;Eirika;101"
+        ],
+        "nid": "6 Talk_101"
+    }
+]

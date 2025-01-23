@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Lucky_Dance_T2",
+        "name": "Lucky Dance",
+        "desc": "This unit gets even more avoid based on their LCK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            42
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "unit.get_stat('LCK')"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

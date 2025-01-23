@@ -1,0 +1,93 @@
+[
+    {
+        "nid": "Poison_Dagger_Marisa",
+        "name": "Venom Bite",
+        "desc": "A Venomous knife used by Marisa for more stealthy missions.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</><icon>Venom</>\n<pink>Misc:</>Uses SPD,  +10 Crit damage.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            8,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Bleeding",
+                    "Venomous_Effect_Boss",
+                    "Bleeding_Boss"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_10"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Marisa\").wexp['Sword'] < 180"
+            ]
+        ]
+    }
+]

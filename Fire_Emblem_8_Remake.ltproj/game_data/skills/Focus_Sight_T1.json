@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Focus_Sight_T1",
+        "name": "Focus Sight",
+        "desc": "+6 MAG when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

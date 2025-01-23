@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Blood_Wave",
+        "name": "Blood Wave",
+        "desc": "When below 75% HP, this unit can defend at any range,\nbut take 5 damage after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "recoil",
+                5
+            ],
+            [
+                "distant_counter",
+                null
+            ]
+        ]
+    }
+]

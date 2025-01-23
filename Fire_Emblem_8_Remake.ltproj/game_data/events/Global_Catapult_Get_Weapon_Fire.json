@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Catapult_Get_Weapon_Fire",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.klass =='T3_Catapult' and unit.level == 15",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Fire_Catapult"
+        ],
+        "nid": "Global Catapult_Get_Weapon_Fire"
+    }
+]

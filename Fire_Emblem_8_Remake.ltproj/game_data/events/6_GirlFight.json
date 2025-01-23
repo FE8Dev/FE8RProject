@@ -1,0 +1,17 @@
+[
+    {
+        "name": "GirlFight",
+        "trigger": "combat_start",
+        "level_nid": "6",
+        "condition": "unit.nid == \"103\" or unit2.nid == \"103\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Girl;Right",
+            "speak;Villager Girl;N-Nooooo!",
+            "remove_portrait;Villager Girl"
+        ],
+        "nid": "6 GirlFight"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Waterlog",
+        "name": "Waterlog",
+        "desc": "Ignores 25% of enemy's RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            20
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') // 4"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Fear",
+        "name": "Fear",
+        "desc": "Enemies cannot retaliate against this unit when initiating attack.\nAlso -50 Avoid to enemy, and they take 50% more damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "item_override",
+                "Fear"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Fear_Debuff",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    }
+]

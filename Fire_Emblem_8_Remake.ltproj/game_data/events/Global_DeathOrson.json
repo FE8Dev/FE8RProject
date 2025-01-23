@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathOrson",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Orson'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Orson;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.level.nid == '5x'",
+            "speak;Orson;I can't die yet Monica...I've got to pull out.",
+            "else",
+            "speak;Orson;Monica...",
+            "end",
+            "expression;Orson;CloseEyes",
+            "remove_portrait;Orson",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathOrson"
+    }
+]

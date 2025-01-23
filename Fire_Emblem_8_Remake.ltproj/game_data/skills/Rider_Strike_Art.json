@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Rider_Strike_Art",
+        "name": "Rider Strike",
+        "desc": "<red>CA:</>Deal half damage but cannot be countered, inflicts Spider Combo to enemy on hit (unit takes 25% more damage against Monster weapons). This is a Free Action. <green>CD:1 Turns.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                1
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "combat_art",
+                "Rider_Strike_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

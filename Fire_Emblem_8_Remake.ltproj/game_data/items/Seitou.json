@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Seitou",
+        "name": "Seitou",
+        "desc": "A katana Marisa found one storm.\n<green>Skills:</>Crimson Snow(On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Uses SPD, +3 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Risky_Vantage",
+                    "Crimson_Snow_Giver"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Marisa"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Marisa\").wexp['Sword'] >= 180 and u(\"Marisa\").wexp['Sword'] < 300"
+            ]
+        ]
+    }
+]

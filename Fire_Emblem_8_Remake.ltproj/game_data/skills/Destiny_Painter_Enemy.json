@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Destiny_Painter_Enemy",
+        "name": "Destiny Painter",
+        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            40
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Destiny_Painter_Enemy_Trigger"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

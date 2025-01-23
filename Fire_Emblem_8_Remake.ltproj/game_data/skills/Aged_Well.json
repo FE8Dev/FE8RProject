@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Aged_Well",
+        "name": "Aged Well",
+        "desc": "Gain +4 MAG and RES times the current turn count.\nEffect stops increasing after turn 10.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "MAG",
+                        "game.turncount * 4 if game.turncount <= 10 else 40"
+                    ],
+                    [
+                        "RES",
+                        "game.turncount * 4 if game.turncount <= 10 else 40"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

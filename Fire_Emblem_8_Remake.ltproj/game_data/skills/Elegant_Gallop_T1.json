@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Elegant_Gallop_T1",
+        "name": "Elegant Gallop",
+        "desc": "Unit gains Canto+, also gains +10 Avoid when unit initiates combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            32
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_avoid",
+                "10"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "CantoP_hide"
+                ]
+            ]
+        ]
+    }
+]

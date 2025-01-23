@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Earth_Shield",
+        "name": "Earth Shield",
+        "desc": "If unit's SPD >= enemy's SPD, inflict enemy with Rock Puncture before combat starts.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            22
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Rock_Punctures",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    }
+]

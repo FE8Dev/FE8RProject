@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Reckless_Swinging",
+        "name": "Reckless Swinging",
+        "desc": "Add 1/2 of your missing HP to Crit chance.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "((unit.get_hp() - unit.get_max_hp()) // -1) // 2"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Hungry_For_Blood",
+        "name": "Hungry For Blood",
+        "desc": "Killing an enemy who is below 50% Max HP gives\nthis unit +5 STR/SPD/Crit until end of chapter.\nStacks infinitely.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.get_hp() <= unit2.get_max_hp() // 2"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Hungry_For_Blood_Skill"
+            ]
+        ]
+    }
+]

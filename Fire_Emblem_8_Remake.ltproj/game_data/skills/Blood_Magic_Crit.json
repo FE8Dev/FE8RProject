@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Blood_Magic_Crit",
+        "name": "Blood Magic",
+        "desc": "Next dark magic attack will be a 100% Critical hit.\nLasts for 2 turns or after the next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            37
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "999"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]

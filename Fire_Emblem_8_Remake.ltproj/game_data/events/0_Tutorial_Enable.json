@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Tutorial_Enable",
+        "trigger": "turn_change",
+        "level_nid": "0",
+        "condition": "game.turncount == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;PrologueTimewheel;0",
+            "choice;Tutorial;Enable basic FE tutorials?;Yes,No",
+            "if;game.game_vars['Tutorial'] == 'Yes'",
+            "game_var;Tutorial;True",
+            "add_portrait;Anna;Left",
+            "music;42- Laughter Orchestral Cover",
+            "speak;Anna;Welcome and thank you for playing Fire Emblem 8R!|I am your guide, the beautiful merchant Anna!|I am one of the main mascot characters of the Fire Emblem world!|I will help you understand the basics of gameplay to make sure you are caught up to speed!|You can also use the <red>\"C\"</> anytime while navigating menus to get a description!|I'll also ask if you want tutorials on the new mechanics of FE8R here in minute.|If you don't want those, select no, and go ahead and select either Eirika or Seth and I'll give more information!;;;;6",
+            "remove_portrait;Anna",
+            "choice;TutorialNewMech;Enable FE8R New mechanics tutorial?;Yes,No",
+            "    if;game.game_vars['TutorialNewMech'] == 'Yes'",
+            "    game_var;TutorialNewMech;True",
+            "    add_portrait;Anna;Right",
+            "    speak;Anna;Ok!|I'll also be giving information on the new mechanincs of FE8R as well!|I'll do my best to help you out!;;;;6",
+            "    else",
+            "    game_var;Tutorial;False",
+            "    end",
+            "else",
+            "game_var;Tutorial;False",
+            "choice;TutorialNewMech;Enable FE8R New mechanics tutorial?;Yes,No",
+            "    if;game.game_vars['TutorialNewMech'] == 'Yes'",
+            "    game_var;TutorialNewMech;True",
+            "    music;42- Laughter Orchestral Cover",
+            "    add_portrait;Anna;Right",
+            "    speak;Anna;Welcome and thank you for playing Fire Emblem 8R!|I am your guide, the beautiful merchant Anna!|I will be explaining the new mechanics of FE8R as we go along!|I look forward to guiding you!|Go ahead and select either Eirika or Seth and we can get started!;;;;6",
+            "    else",
+            "    game_var;TutorialNewMech;False",
+            "    end",
+            "end",
+            "remove_portrait;Anna"
+        ],
+        "nid": "0 Tutorial_Enable"
+    }
+]

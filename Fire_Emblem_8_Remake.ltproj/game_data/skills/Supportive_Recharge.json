@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Supportive_Recharge",
+        "name": "Supportive Recharge",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.\nDoes not work with Multiheal staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player' or unit2.team == 'other'"
+            ],
+            [
+                "event_after_combat",
+                "Global Supportive Recharge"
+            ]
+        ]
+    }
+]

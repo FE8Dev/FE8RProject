@@ -1,0 +1,83 @@
+[
+    {
+        "nid": "Wiseman_Staff",
+        "name": "Wiseman's Staff",
+        "desc": "A staff for those who walks the path of wisdom.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Uses STR, cannot Crit, always hits, +5 DEF",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "battle_cast_anim",
+                "Elstone"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Moulder"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Moulder\").wexp['Staff'] >= 120 and u(\"Moulder\").wexp['Staff'] < 240"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

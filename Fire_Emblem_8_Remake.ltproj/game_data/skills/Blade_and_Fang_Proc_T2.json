@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Blade_and_Fang_Proc_T2",
+        "name": "Blade and Fang",
+        "desc": "<red>CA:</>Grants an additional attack and attacks inflict Bleed. <green>CD:2 Turns</>",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            2
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Blade_and_Fang_Skill"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

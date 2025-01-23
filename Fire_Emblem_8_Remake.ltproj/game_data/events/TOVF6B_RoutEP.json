@@ -1,0 +1,16 @@
+[
+    {
+        "name": "RoutEP",
+        "trigger": "phase_change",
+        "level_nid": "TOVF6B",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_bexp;8000",
+            "win_game"
+        ],
+        "nid": "TOVF6B RoutEP"
+    }
+]

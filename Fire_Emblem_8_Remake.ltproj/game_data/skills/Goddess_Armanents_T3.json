@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Goddess_Armanents_T3",
+        "name": "Goddess Armanents",
+        "desc": "+1 bonus attack, +5 AS, and half damage reduction when at full HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            44
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_attack_speed",
+                "5"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

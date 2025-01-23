@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Summon Sword",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.check_dead('SummonSword_' + unit.nid)",
+            "    resurrect;SummonSword_{e:unit.nid}",
+            "    else",
+            "    end",
+            "make_generic;SummonSword_{e:unit.nid};Summoned_Sword;{e:unit.level};player;None;Monster;;Volcano_Sword_Summon",
+            "add_unit;SummonSword_{e:unit.nid};{e:target_pos};warp"
+        ],
+        "nid": "Global Summon Sword"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Charger_PP",
+        "name": "Charger++",
+        "desc": "Add unit's MOV X2 to damage dealt, and Crit when initiating combat. -6 MOV to enemy on hit for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            40
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MOV') * 2"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('MOV') * 2"
+            ],
+            [
+                "give_status_after_hit",
+                "Stomped_PP"
+            ]
+        ]
+    }
+]

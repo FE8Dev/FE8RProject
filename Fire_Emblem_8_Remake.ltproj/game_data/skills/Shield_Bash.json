@@ -1,0 +1,41 @@
+[
+    {
+        "nid": "Shield_Bash",
+        "name": "Shield Sweep",
+        "desc": "Attacks inflict enemies with Stun and gain (AOE:1) range.\nDeal 50 damage and inflict Stun to enemies within 2 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "enemy_oversplash",
+                1
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Stun"
+            ],
+            [
+                "post_combat_splash_aoe",
+                2
+            ],
+            [
+                "post_combat_splash",
+                50
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Stun",
+                    "range": 2
+                }
+            ]
+        ]
+    }
+]

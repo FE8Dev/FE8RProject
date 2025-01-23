@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Eclipse_Art",
+        "name": "Eclipse",
+        "desc": "<red>CA:</>A 5 hit attack attack that deal 1.5X damage. <green>CD:5 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Eclipse_Skill"
+            ],
+            [
+                "build_charge",
+                5
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

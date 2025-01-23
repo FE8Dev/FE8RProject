@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Brutal_Beauty_T3",
+        "name": "Brutal Beauty",
+        "desc": "If unit's STR >= enemy's Str when initiating combat, +50% damage given and +15 Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            46
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.get_stat('STR') >= target.get_stat('STR')"
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

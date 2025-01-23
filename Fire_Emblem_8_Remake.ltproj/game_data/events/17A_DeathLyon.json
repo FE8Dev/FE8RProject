@@ -1,0 +1,18 @@
+[
+    {
+        "name": "DeathLyon",
+        "trigger": "unit_death",
+        "level_nid": "17A",
+        "condition": "unit.nid == 'Lyon'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Lyon Evil;Left",
+            "speak;Lyon Evil;Heh......;;;noir;;white",
+            "expression;Lyon Evil;CloseEyes",
+            "remove_portrait;Lyon Evil"
+        ],
+        "nid": "17A DeathLyon"
+    }
+]

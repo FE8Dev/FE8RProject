@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "Adept_Eye_T1",
+        "name": "Adept Eye",
+        "desc": "+8 DMG and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after dealing a Critical Hit, but lasts only for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('20' , '21', '22')\n"
+            ],
+            [
+                "dynamic_damage",
+                "8"
+            ],
+            [
+                "dynamic_attack_speed",
+                "8"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Adept_Eye_Crit_hide"
+                ]
+            ]
+        ]
+    }
+]

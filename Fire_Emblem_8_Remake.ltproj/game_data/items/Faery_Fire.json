@@ -1,0 +1,91 @@
+[
+    {
+        "nid": "Faery_Fire",
+        "name": "Faery Fire",
+        "desc": "A staff infused with mystical fire.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Fae Curse\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>Cannot Crit, always hits.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "Blue_Fire"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "SnakeGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"SnakeGirl\").wexp['Staff'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Fae_Curse"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Chain_Weapons_Art",
+        "name": "Chain Weapons",
+        "desc": "<red>CA: </>Give +1 Range to Swords, Axes, and Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
+            ],
+            [
+                "combat_art",
+                "Chain_Weapons_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
+            ]
+        ]
+    }
+]

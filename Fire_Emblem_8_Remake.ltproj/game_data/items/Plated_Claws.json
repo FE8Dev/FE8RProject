@@ -1,0 +1,98 @@
+[
+    {
+        "nid": "Plated_Claws",
+        "name": "Plated Claws",
+        "desc": "Claws that have hardened over time.\n<violet>Inflicts:</>Breach (5), Curse (5)\n<pink>Misc:</>+6/+6 DEF/RES on Equip, Add DEF/4 to damage.",
+        "icon_nid": "{Zarg} Monster 11",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "prf_unit",
+                [
+                    "BaelBaby"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BaelBaby\").wexp['Monster'] >= 120 and u(\"BaelBaby\").wexp['Monster'] < 240"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_5",
+                    "Cursed_5"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        6
+                    ],
+                    [
+                        "RES",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Plated_Claws"
+                ]
+            ]
+        ]
+    }
+]

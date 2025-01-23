@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Door_1",
+        "trigger": "Door",
+        "level_nid": "14B",
+        "condition": "region.nid == 'Door_1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Door_1;fade",
+            "add_group;ReinTrigger1;11,18;fade;stack",
+            "move_group;ReinTrigger1;ReinTrigger1;normal;closest;no_follow",
+            "has_traded;{unit}"
+        ],
+        "nid": "14B Door_1"
+    }
+]

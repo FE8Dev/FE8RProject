@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathRennac",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Rennac'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Rennac;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Rennac;Great.|This is just what I needed...",
+            "else",
+            "speak;Rennac;This is way above my pay grade!|I'm out of here!",
+            "end",
+            "expression;Rennac;CloseEyes",
+            "remove_portrait;Rennac",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathRennac"
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Tank_Get_Weapon_Short",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "(unit.klass =='T3_Tank' and unit.level == 5) or (unit.klass =='T3_Tank_Siege' and unit.level == 5)",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Shock_Cannon"
+        ],
+        "nid": "Global Tank_Get_Weapon_Short"
+    }
+]

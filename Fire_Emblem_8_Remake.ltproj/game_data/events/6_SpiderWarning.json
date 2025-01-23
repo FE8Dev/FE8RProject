@@ -1,0 +1,17 @@
+[
+    {
+        "name": "SpiderWarning",
+        "trigger": "turn_change",
+        "level_nid": "6",
+        "condition": "game.turncount == 7 and game.check_alive(104)",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Girl;Right",
+            "speak;Villager Girl;Eeek!|Is a s-s-spider coming?...|Noooo!|Go away!|Please, somebody, help!|HEEEEELLLPPP!",
+            "remove_portrait;Villager Girl"
+        ],
+        "nid": "6 SpiderWarning"
+    }
+]

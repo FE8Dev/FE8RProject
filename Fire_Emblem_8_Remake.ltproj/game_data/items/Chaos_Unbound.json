@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Chaos_Unbound",
+        "name": "Chaos Unbound",
+        "desc": "The ultimate Chaos magic that reduces everthing to ash.\n<orange>Element:</><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Shadowblight</>",
+        "icon_nid": "Dark Tomes Sheet",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                35
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aureola_Dark"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penelty"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eirika"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_15",
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eirika\").wexp['Dark'] >= 360"
+            ]
+        ]
+    }
+]

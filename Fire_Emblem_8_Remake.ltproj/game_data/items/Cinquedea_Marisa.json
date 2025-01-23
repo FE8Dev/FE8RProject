@@ -1,0 +1,99 @@
+[
+    {
+        "nid": "Cinquedea_Marisa",
+        "name": "Cinquedea?",
+        "desc": "A legendary venomous knife? Marisa bought from an Anna.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</><icon>Venom</>\n<pink>Misc:</>Uses SPD, +40 Crit damage.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            7,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Bleeding",
+                    "Venomous_Effect_Boss",
+                    "Bleeding_Boss"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Marisa"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Marisa\").wexp['Sword'] >= 420"
+            ]
+        ]
+    }
+]

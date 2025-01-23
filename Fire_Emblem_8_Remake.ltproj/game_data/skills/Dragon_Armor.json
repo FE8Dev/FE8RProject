@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Dragon_Armor",
+        "name": "Dragon Armor",
+        "desc": "+10 DEF, +15 RES.\nRemove Effective Flying/Dragon Damage",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "negate_tags",
+                [
+                    "Dragon",
+                    "Flying"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    }
+]

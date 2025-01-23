@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Shiver_Sword",
+        "name": "Shiver Sword",
+        "desc": "A sword crafted of reinforced ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, MAG + RES/2, +3 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            9,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                9
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Ice_Horn"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Frozen_AOE_Splash"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_MID"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    }
+]

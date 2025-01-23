@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "Man_of_the_Sea_T1",
+        "name": "Man of the Sea",
+        "desc": "+10 Crit and +20 Avoid if unit's SPD >= enemy's SPD.\nIn water this units gains +6 to all stats, +6 AS, +15 Crit/Hit/Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            51
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_avoid",
+                "20"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Sealegs_hide"
+                ]
+            ]
+        ]
+    }
+]

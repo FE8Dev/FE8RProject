@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Gathering_Storm",
+        "name": "Gathering Storm",
+        "desc": "+2 SPD when unit kills and enemy.\nGrants +2 bonus attacks (+4 if unit doubles) when unit's AS +5 >= enemy's AS.\nMax 10 stacks. Lasts until end of chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            14
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item) + 5))"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

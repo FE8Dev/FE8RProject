@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Pair_Up_Affinity_Anima_Effect",
+        "name": "Affinity Strike (<icon>Anima</>)",
+        "desc": "<red>CA:</>Can inflict random elemental debuffs after combat.\nRefresh this unit if unit kills an enemy, but cuts unit's stats by 90%",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Pair_Up_Affinity_Anima_Effect_Proc"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]
