@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Wishblade_Crit_Buff_hide",
+        "name": "Wishblade",
+        "desc": "Add unit's LCK/4 to Crit chance.\nSummon a sentient sword to fight for you.\nThis is a free action.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('LCK') // 4"
+            ]
+        ]
+    }
+]

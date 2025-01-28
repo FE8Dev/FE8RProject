@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Wrath_Of_The_Valkyries_AuraP",
+        "name": "Wrath Of The Valkyries+",
+        "desc": "Effective damage against Brigands/Pirates, +2 Move, +60 Hit to all Fliers within 5 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            41
+        ],
+        "components": [
+            [
+                "item_override",
+                "Wrath_Of_The_Valkyries"
+            ],
+            [
+                "aura",
+                "Wrath_Of_The_Valkyries_BuffP"
+            ],
+            [
+                "aura_range",
+                5
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

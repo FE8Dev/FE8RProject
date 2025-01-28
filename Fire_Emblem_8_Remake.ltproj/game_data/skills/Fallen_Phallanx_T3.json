@@ -1,0 +1,37 @@
+[
+    {
+        "nid": "Fallen_Phallanx_T3",
+        "name": "Fallen Phallanx",
+        "desc": "Adj. allies Gain +30% STR/MAG.\nThis unit gains 4 STR/MAG for every ally within 2 tiles.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "(4*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ],
+                    [
+                        "MAG",
+                        "(4*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ]
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Fallen_Phallanx_Aura_hide"
+                ]
+            ]
+        ]
+    }
+]

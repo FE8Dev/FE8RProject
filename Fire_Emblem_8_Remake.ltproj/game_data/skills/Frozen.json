@@ -1,0 +1,83 @@
+[
+    {
+        "nid": "Frozen",
+        "name": "Frozen",
+        "desc": "Reduce MOVE and SPD by 25% and Heavy weapons are effective against this unit for 2 turns or after next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            38
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MOV",
+                        0.75
+                    ],
+                    [
+                        "SPD",
+                        0.75
+                    ]
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "has_tags",
+                [
+                    "Frozen"
+                ]
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Allured_Human",
+        "name": "Allured",
+        "desc": "Provoked to attack Lute.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "not 'Monster' in unit.tags and 'Boss' not in unit.tags"
+            ],
+            [
+                "change_ai",
+                "AttackLute"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

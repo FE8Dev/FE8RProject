@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Heavy_Swing_T2",
+        "name": "Heavy Swing",
+        "desc": "Add unit's weapon weight x2 to damage given.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            48
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "(unit.get_weapon().weight.value) * 2"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

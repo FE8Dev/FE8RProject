@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "Shining_Blades_Moulder",
+        "name": "Shining Blades",
+        "desc": "Holy blades that pierce evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses STR, +20 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            8,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "battle_cast_anim",
+                "Shine_Blades"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penelty",
+                    "Crit_Damage_Bonus_20"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Moulder"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Moulder\").wexp['Light'] >= 180 and u(\"Moulder\").wexp['Light'] < 360"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "LRF5B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "chapter_title",
+            "center_cursor;1,21;immediate",
+            "add_tag;123;Boss",
+            "add_region;Chest_1;17,21;1,1;event;unit.can_unlock(region)",
+            "add_region;Chest_2;13,10;1,1;event;unit.can_unlock(region)",
+            "add_region;Chest_3;4,4;1,1;event;unit.can_unlock(region)",
+            "prep;t;54- Combat Preparation Orchestral Cover;Escape;true;TOVorRuinsEscapeB"
+        ],
+        "nid": "LRF5B Intro"
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Seth",
+        "trigger": "on_talk",
+        "level_nid": "Dragons_Gate_Ephraim",
+        "condition": "check_pair('Ephraim', 'Seth')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;ExitDragonsGate;Return to overworld?;Yes,No;backable",
+            "if;game.game_vars['_last_choice'] == 'Yes'",
+            "win_game",
+            "transition;close;500",
+            "music_clear;500",
+            "else",
+            "end"
+        ],
+        "nid": "Dragons_Gate_Ephraim Talk_Seth"
+    }
+]

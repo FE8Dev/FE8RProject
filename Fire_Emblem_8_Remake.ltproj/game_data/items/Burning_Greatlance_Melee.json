@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Burning_Greatlance_Melee",
+        "name": "Burning Greatlance",
+        "desc": "A tree trunk ablaze with mage fire. Uses STR + MAG/2. Attacks RES. Enemies always attack first. Cannot Double. Horse units gain the Calvary Charge Skill. Multi-Item",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                26
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

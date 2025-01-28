@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Charmed",
+        "name": "Charmed",
+        "desc": "Unit cannot do any actions for 5 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            37
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "upkeep_sound",
+                "Silence"
+            ],
+            [
+                "upkeep_animation",
+                "MapFlying"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ]
+        ]
+    }
+]

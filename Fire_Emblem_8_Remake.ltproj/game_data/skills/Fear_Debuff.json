@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Fear_Debuff",
+        "name": "Fear",
+        "desc": "Enemies cannot retaliate against this unit when initiating attack.\nAlso -50 Avoid to enemy, and they take 50% more damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "-50"
+            ],
+            [
+                "resist_multiplier",
+                1.5
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

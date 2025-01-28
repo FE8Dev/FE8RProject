@@ -1,0 +1,27 @@
+[
+    {
+        "name": "T2_Tutorial",
+        "trigger": "turn_change",
+        "level_nid": "2",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['Tutorial'] == True",
+            "speak;Narrator;                    Shopping;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Also keep your eyes out for <red>Armories or Vendors!</>",
+            "remove_portrait;Anna",
+            "flicker_cursor;5,7",
+            "wait;300",
+            "move_cursor;Eirika",
+            "add_portrait;Anna;Left",
+            "speak;Anna;They will have weapons or items available to buy for your army!|They will cost Gold to buy them, so choose carefully!|Each Armory or Vendor has different items for sale, so keep your eye out for a new one.|After you beat the chapter, you can always shop from any Armory and Vendor that was in the chapter from the world map.|So don't be afraid because you'll never lose access to any shops!;;;;6",
+            "remove_portrait;Anna",
+            "else",
+            "end"
+        ],
+        "nid": "2 T2_Tutorial"
+    }
+]

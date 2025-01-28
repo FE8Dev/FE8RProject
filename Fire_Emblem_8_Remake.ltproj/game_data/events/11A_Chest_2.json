@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Chest_2",
+        "trigger": "Chest",
+        "level_nid": "11A",
+        "condition": "region.nid == 'Chest_2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Chest_2",
+            "give_item;{unit};Glacier_Axe",
+            "has_traded;{unit}"
+        ],
+        "nid": "11A Chest_2"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Anathema_Debuff",
+        "name": "Anathema",
+        "desc": "Reduces Crit Avoid by LCK/2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            35
+        ],
+        "components": [
+            [
+                "dynamic_crit_avoid",
+                "unit.get_stat('LCK') // -2"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

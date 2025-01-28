@@ -1,0 +1,20 @@
+[
+    {
+        "name": "TalkTest",
+        "trigger": "on_talk",
+        "level_nid": "DEBUG",
+        "condition": "unit.nid == 'Eirika' and unit2.nid == 'Amelia'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Amelia;Right",
+            "speak;Eirika;Test",
+            "sound;EirikaTest;",
+            "speak;Amelia;Test",
+            "multi_remove_portrait;Eirika;Amelia",
+            "change_team;Amelia;player"
+        ],
+        "nid": "DEBUG TalkTest"
+    }
+]

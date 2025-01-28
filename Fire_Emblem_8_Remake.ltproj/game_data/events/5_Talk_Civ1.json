@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "5",
+        "condition": "check_pair('Eirika','Civ1')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Man1;Left",
+            "speak;Man1;Aw man...|I really wanted to catch that woman dancing before she left...|She was so beautiful...",
+            "speak;Eirika;The dancer that was here?",
+            "bop_portrait;Man1",
+            "speak;Man1;Of course!|She had such a beautiful dance!|I could watch for hours!|Oh....|I pray she comes back again soon...",
+            "speak;Eirika;.....",
+            "multi_remove_portrait;Eirika;Man1",
+            "give_bexp;800",
+            "remove_talk;Eirika;Civ1"
+        ],
+        "nid": "5 Talk_Civ1"
+    }
+]

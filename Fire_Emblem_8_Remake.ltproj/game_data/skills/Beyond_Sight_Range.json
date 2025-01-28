@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Beyond_Sight_Range",
+        "name": "Beyond Sight",
+        "desc": "+50 Hit, +15 Crit, +2 to Bows, and all magic.\nLasts for 1 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow', 'Anima', 'Light', 'Dark', 'Staff'"
+            ],
+            [
+                "eval_max_range",
+                "2"
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    }
+]

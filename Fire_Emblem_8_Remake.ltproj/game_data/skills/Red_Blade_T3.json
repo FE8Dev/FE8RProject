@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Red_Blade_T3",
+        "name": "Red Blade",
+        "desc": "Add unit's SPD + SKL as Bonus Crit damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            47
+        ],
+        "components": [
+            [
+                "eval_crit_additional",
+                "unit.get_stat('SKL') + unit.get_stat('SPD')"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

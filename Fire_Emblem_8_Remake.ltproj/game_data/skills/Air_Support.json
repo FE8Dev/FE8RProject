@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Air_Support",
+        "name": "Air Support",
+        "desc": "Adj. allies heal equal to damage this unit deals in combat.\nAdj. allies also gain +1 MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ally_lifelink",
+                1.0
+            ],
+            [
+                "aura",
+                "Air_Support_Buff"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Disintegrator",
+        "name": "Disintegrator",
+        "desc": "A massive fire beam that combusts enemies into ash.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL, Uncounterable, Splash DMG (50).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                140
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Disintegrator"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_SS"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Neimi\").wexp['Anima'] >= 360"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Triangle_Expert",
+        "name": "Triangle Expert",
+        "desc": "+1 bonus attack when unit has Weapon Triangle Advantage.\nDouble Weapon Triangle effects when initiating attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "(combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0)"
+            ]
+        ]
+    }
+]

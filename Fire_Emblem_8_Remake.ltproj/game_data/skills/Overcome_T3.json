@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Overcome_T3",
+        "name": "Overcome",
+        "desc": "x2 damage if enemy's DEF >= unit's DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            40
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') <= target.get_stat('DEF')"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

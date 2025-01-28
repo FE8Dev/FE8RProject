@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Torchshot_Art",
+        "name": "Torchshot Art",
+        "desc": "Unit lights up the area around them more. \n<red>CA:</>Enemy hit gets -50 Avoid. Inflicts Seared.\nEffective damage against Horse enemies. <green>CD:0 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            48
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Torchshot_Art_Skill"
+            ],
+            [
+                "sight_range_bonus",
+                5
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

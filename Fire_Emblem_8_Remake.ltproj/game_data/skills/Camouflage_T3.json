@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Camouflage_T3",
+        "name": "Camouflage",
+        "desc": "Gain extra Avoid and Dodge based on unit's SKL/2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SKL') // 2"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "unit.get_stat('SKL') // 2"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

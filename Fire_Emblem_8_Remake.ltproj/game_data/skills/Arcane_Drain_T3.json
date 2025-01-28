@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Arcane_Drain_T3",
+        "name": "Arcane Drain",
+        "desc": "+5 to MAG and RES for each kill until end of chapter. Max 5 stacks.\nUnit has a LCK% to Refresh after this unit kills.\nCan trigger up to 5 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            27
+        ],
+        "components": [
+            [
+                "gain_skill_after_kill",
+                "Arcane_Drain_Buff"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Arcane_Drain_Refresh_hide"
+                ]
+            ]
+        ]
+    }
+]

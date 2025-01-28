@@ -1,0 +1,31 @@
+[
+    {
+        "name": "MarisaTalkEwan",
+        "trigger": "on_talk",
+        "level_nid": "12B",
+        "condition": "check_pair('Ewan','Marisa')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ewan;Right;Marisa;Left",
+            "#music;50 Comrades;300",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Ewan;There you are, Marisa.",
+            "speak;Marisa;Ewan?|What are you doing here?",
+            "speak;Ewan;Marisa, the mercenary guild sent you here, didn't they?|They assigned you to fight under Commander Gerik, right?",
+            "speak;Marisa;That's right.|But the chief's not here.",
+            "speak;Ewan;I know.|It was all a mistake.|Your commander's over there, working on another job.|He wants you to join him.",
+            "speak;Marisa;Really?|He said that?",
+            "speak;Ewan;Yep.",
+            "speak;Marisa;I'm on my way.",
+            "speak;Ewan;Hey, wait! Wait!|Take me with you!|This group's headed east, too.|Let's stick with them for now.",
+            "speak;Marisa;Very well.",
+            "multi_remove_portrait;Marisa;Ewan",
+            "change_team;Marisa;player",
+            "music_fade_back;100",
+            "remove_talk;Ewan;Marisa"
+        ],
+        "nid": "12B MarisaTalkEwan"
+    }
+]

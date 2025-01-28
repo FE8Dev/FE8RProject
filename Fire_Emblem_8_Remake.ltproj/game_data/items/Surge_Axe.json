@@ -1,0 +1,93 @@
+[
+    {
+        "nid": "Surge_Axe",
+        "name": "Surge Axe",
+        "desc": "The ultimate thunder throwing axe that moves at blistering speeds.\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</>Breach (15)\n<red>Effective:</><icon>Armor</><icon>Drenched</>",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            40,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Gerik\").wexp['Axe'] >= 360"
+            ]
+        ]
+    }
+]

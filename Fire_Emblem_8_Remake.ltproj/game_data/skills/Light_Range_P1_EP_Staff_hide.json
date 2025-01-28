@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Light_Range_P1_EP_Staff_hide",
+        "name": "Knowledge of Justice (<icon>Staff</>)",
+        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+            ]
+        ]
+    }
+]

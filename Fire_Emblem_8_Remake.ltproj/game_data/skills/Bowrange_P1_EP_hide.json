@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Bowrange_P1_EP_hide",
+        "name": "Bowrange +1",
+        "desc": "<red>CA:</>Increase maximum bow range by 1. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "1"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "Winds_Shard",
+        "name": "Wind's Shard",
+        "desc": "A lance imbued with a small wind gem.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD/3",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_E"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vanessa"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
+            ],
+            [
+                "eval_available",
+                "u(\"Vanessa\").wexp['Lance'] < 120"
+            ]
+        ]
+    }
+]

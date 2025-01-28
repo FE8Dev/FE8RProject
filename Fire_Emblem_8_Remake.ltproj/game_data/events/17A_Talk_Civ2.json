@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "17A",
+        "condition": "check_pair('Eirika', '126')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Woman2;Left",
+            "speak;Woman2;Thank the heavens for your help!|My body couldn't stop trembling!",
+            "speak;Eirika;It's all ok now, you are safe.",
+            "speak;Woman2;I will remember this for the rest of my life!|My grandchildren will know of your valor!",
+            "multi_remove_portrait;Eirika;Woman2",
+            "give_bexp;5000",
+            "remove_talk;Eirika;126"
+        ],
+        "nid": "17A Talk_Civ2"
+    }
+]

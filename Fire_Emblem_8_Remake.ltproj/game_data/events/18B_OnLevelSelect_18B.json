@@ -1,0 +1,25 @@
+[
+    {
+        "name": "OnLevelSelect_18B",
+        "trigger": "level_select",
+        "level_nid": "18B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;22B;2000",
+            "wait;500",
+            "speak;Narrator;The group sets off in search of Grado's elusive Imperial Prince Lyon.|Innes has ordered Frelian troops to aid in the hunt.|The troops return with news that Lyon has moved north.",
+            "add_portrait;Ephraim;Left,Middle;left;NormalBlink;low_priority",
+            "speak;Narrator;The group's search for Lyon leads them to Mt. Neleras, in the heart of Darkling Woods.",
+            "overworld_move_unit;Ephraim_Group;22B",
+            "speak;Narrator;The scorching heat and sulphur stench render the area unfit for human habitation...|Endless numbers of gorgon eggs stud the forbidding landscape.",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "18B OnLevelSelect_18B"
+    }
+]

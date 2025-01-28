@@ -1,0 +1,17 @@
+[
+    {
+        "name": "TiradoFight",
+        "trigger": "combat_start",
+        "level_nid": "8",
+        "condition": "(unit.nid == \"Tirado\" and unit2.team == 'player') or (unit2.nid == \"Tirado\" and unit.team == 'player')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Tirado;Left",
+            "speak;Tirado;Hmm...|My men were unable to finish the job, were they?|It falls on me to show you my own special brand of power.",
+            "remove_portrait;Tirado"
+        ],
+        "nid": "8 TiradoFight"
+    }
+]

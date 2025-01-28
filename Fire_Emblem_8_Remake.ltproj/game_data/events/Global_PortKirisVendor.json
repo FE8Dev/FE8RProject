@@ -1,0 +1,22 @@
+[
+    {
+        "name": "PortKirisVendor",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;55- Shops Orchestral Cover;500",
+            "shop;{eval:game.game_vars.get('_last_choice')};Elwind,Aqua_Triple_Burst,Thunder_Blast,Iceshock,Divine,Sagittae,Glow_Snakes,Smite,Shine_Fire,Shine_Tempest,Fenrir,Foul_Gust,Fused_Dark_Bolt,Bloody_Flux,Petrify,Night_Purge,MultihealP,Torch_Light,Unlock,Gem_Staff,Teachers_Staff,Stun_Staff,Magelight,Magical_Reach_Scroll,Curse_Scroll,Light_Scroll,Heavy_Scroll,Axe_Scroll,Lance_Scroll,Knife_Scroll,Wind_Scroll,Thunder_Scroll,Crossbow_Scroll,Water_Scroll,Ice_Orb,Nature_Orb,Fire_Orb;vendor",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global PortKirisVendor"
+    }
+]

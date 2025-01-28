@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "LRF7A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;len(game.get_enemy_units()) == 0",
+            "sound;Item",
+            "alert;Victory!",
+            "game_var;RuinsFloor8A;True",
+            "level_var;Reward;game.get_random(1, 2)",
+            "if;game.level_vars['Reward'] == 1",
+            "give_item;convoy;Gradivus",
+            "elif;game.level_vars['Reward'] == 2",
+            "give_item;convoy;Grand_Cross",
+            "else",
+            "give_item;convoy;Grand_Cross",
+            "end",
+            "choice;ProceedF5;Proceed to the next floor?;Yes,No",
+            "if;game.game_vars['_last_choice'] == 'Yes'",
+            "game_var;_goto_level;\"LRF8A\"",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "end",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "end",
+            "transition;close;500",
+            "music_clear;500"
+        ],
+        "nid": "LRF7A Outro"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "OnLevelSelect_16A",
+        "trigger": "level_select",
+        "level_nid": "16A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;25;2000",
+            "wait;500",
+            "speak;Narrator;The capital of Renais.|After the twins' absence, seeing their home ruined by war brings them terrible grief.",
+            "add_portrait;Orson Evil;Left,Middle;left;NormalBlink;low_priority",
+            "speak;Narrator;Orson, a former Knight of Renais, has been assigned to guard Castle Renais.|However, he switched allegiances, betraying his oaths of loyalty to his homeland.",
+            "remove_portrait;Orson Evil",
+            "overworld_move_unit;Eirika_Group;25;no_block",
+            "speak;Narrator;Eirika marks her homecoming by vowing to see Renais healed.",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "16A OnLevelSelect_16A"
+    }
+]

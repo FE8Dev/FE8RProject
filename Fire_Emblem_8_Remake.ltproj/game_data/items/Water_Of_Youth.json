@@ -1,0 +1,56 @@
+[
+    {
+        "nid": "Water_Of_Youth",
+        "name": "Water of Youth",
+        "desc": "Resets any unit's LV to 16 if they are above LV 16.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "unit.level > 16"
+            ],
+            [
+                "map_hit_sfx",
+                "None"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "ItemNonCombat"
+                ]
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Water_Of_Youth_Item"
+            ]
+        ]
+    }
+]

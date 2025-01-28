@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Blasphemy_T2",
+        "name": "Blasphemy",
+        "desc": "Dark magic becomes effective damage against Magical units.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            26
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "item_override",
+                "Anti_Magic_Rounds"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

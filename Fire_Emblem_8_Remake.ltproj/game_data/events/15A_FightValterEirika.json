@@ -1,0 +1,24 @@
+[
+    {
+        "name": "FightValterEirika",
+        "trigger": "combat_start",
+        "level_nid": "15A",
+        "condition": "check_pair('Valter', 'Eirika')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Valter;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Valter;Mmm...|I've been waiting for you, Eirika!",
+            "speak;Eirika;Who are you?",
+            "speak;Valter;Have you forgotten?|We met once at Castle Renais.|No?|Look closely, Eirika.|Do you not remember the face of he who will master you?",
+            "speak;Eirika;Wha--!?",
+            "speak;Valter;Yes, resist.|It's much more fun for me that way.|Come, Eirika.|I should like to tame you.",
+            "speak;Eirika;I am here on a mission.|One that I swore to my brother I would fulfill.|I will not be stopped by the likes of you!",
+            "remove_portrait;Valter",
+            "remove_portrait;Eirika"
+        ],
+        "nid": "15A FightValterEirika"
+    }
+]

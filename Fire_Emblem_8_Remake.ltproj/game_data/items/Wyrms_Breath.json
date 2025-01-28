@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Wyrms_Breath",
+        "name": "Wyrm's Breath",
+        "desc": "The breath of a fire dragon leaves scars.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL/2, Uncounterable, Splash DMG (15).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            5,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Flamberge"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_C"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Neimi\").wexp['Anima'] >= 180 and u(\"Neimi\").wexp['Anima'] < 360"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_MID"
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ]
+        ]
+    }
+]

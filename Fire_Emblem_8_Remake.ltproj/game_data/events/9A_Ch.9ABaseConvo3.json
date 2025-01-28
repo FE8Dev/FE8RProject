@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Ch.9ABaseConvo3",
+        "trigger": "on_base_convo",
+        "level_nid": "9A",
+        "condition": "unit == 'New Army**'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;Plains",
+            "#music;Healing",
+            "music;10- Rise Above Orchestral Cover;500",
+            "transition;open;500",
+            "multi_add_portrait;Eirika;Right;Kyle;FarLeft;Forde;MidLeft",
+            "speak;Eirika;Forde, Kyle.|Thank you so much for helping me out on Ephraim's behalf...",
+            "speak;Forde;Don't sweat it Princess!|Prince Ephraim wanted us to help you!|So helping you is helping him!",
+            "speak;Kyle;Correct.|It should ease his mind, knowing that we are with you.",
+            "speak;Eirika;That is good if it keeps him from worrying...|Well, is there anything you two would like to report before we continue onwards?",
+            "speak;Forde;Actually...",
+            "speak;Kyle;We are still unfamiliar with your fighting style...|It may benefit us if we were to get a first hand experience how you fight.",
+            "speak;Eirika;You want to spar with me?",
+            "speak;Forde;Yeah!|Unless you're not up to it?",
+            "speak;Eirika;I will not refuse a challenge!|Alright you two, get your weapons ready!",
+            "speak;Forde;Alright!|Here I come!",
+            "speak;Kyle;She may be more like Ephraim than we thought!",
+            "multi_remove_portrait;Forde;Kyle;Eirika",
+            "sound;Item",
+            "alert;Forde gained some Sword WEXP!",
+            "give_wexp;Forde;Sword;60",
+            "alert;Kyle gained some Axe WEXP!",
+            "give_wexp;Kyle;Axe;60",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back",
+            "increment_support_points;Eirika;Forde;15",
+            "ignore_base_convo;New Army**;t"
+        ],
+        "nid": "9A Ch.9ABaseConvo3"
+    }
+]

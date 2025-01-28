@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Fire_Dragon_Get_Weapon",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.klass =='T3_Fire_Dragon' and unit.level == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_item;{unit};Training_Stone",
+            "give_item;{unit};Fire_Breath"
+        ],
+        "nid": "Global Fire_Dragon_Get_Weapon"
+    }
+]

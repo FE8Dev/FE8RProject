@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Gift_Hammer",
+        "name": "Gift Hammer",
+        "desc": "A hammer L'arachel gave Dozla as a gift for his birthday.\n<green>Skills:</>Hearty Laugh, War Blow\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first.",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            6,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                32
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                27
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Warhammer"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Hearty_Laugh",
+                    "War_Blow"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Dozla"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Dozla\").wexp['Axe'] >= 180 and u(\"Dozla\").wexp['Axe'] < 300"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    }
+]

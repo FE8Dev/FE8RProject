@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "Emberwood_Bow",
+        "name": "Emberwood Bow",
+        "desc": "Neimi's special bow that flares to life with magic.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 + MAG",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penelty"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MAG_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Neimi\").wexp['Bow'] >= 240 and u(\"Neimi\").wexp['Bow'] < 420"
+            ]
+        ]
+    }
+]

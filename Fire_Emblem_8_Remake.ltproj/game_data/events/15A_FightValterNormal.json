@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightValterNormal",
+        "trigger": "combat_start",
+        "level_nid": "15A",
+        "condition": "check_default('Valter', ['Cormag', 'Eirika', 'Ephraim'])",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Valter;Right",
+            "speak;Valter;I've no use for these bloodless minnows...|Give me prey that will sate my bloodlust...|I hunger!",
+            "remove_portrait;Valter"
+        ],
+        "nid": "15A FightValterNormal"
+    }
+]

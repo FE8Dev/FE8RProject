@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Desert_Tiger",
+        "name": "Desert Tiger",
+        "desc": "Once Gerik kills 3 units while this skill is active, summon a sandstorm that debuffs all enemies until end of chapter. Only activates once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Desert_Tiger_Stop')"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "event_after_kill",
+                "Global Desert_Tiger"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

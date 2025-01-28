@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "Soul_Sword",
+        "name": "Soul Sword",
+        "desc": "Neimi's soulful tears combine with this cool flame ablaze.\n<green>Skills:</>Flash Step, Gem Armor+\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<green>Skills:</>Flash Step, Gem Armor\n<pink>Misc:</>Magical, +10 SPD",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Gem_ArmorP"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Sagittae"
+            ],
+            [
+                "eval_available",
+                "u(\"Neimi\").wexp['Sword'] >= 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ]
+        ]
+    }
+]

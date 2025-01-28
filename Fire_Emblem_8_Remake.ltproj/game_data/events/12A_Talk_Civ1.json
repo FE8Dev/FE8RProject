@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "12A",
+        "condition": "check_pair('Eirika', 'Civ1')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Woman1;Left",
+            "speak;Woman1;Thank you for taking care of those monsters...|We are in your debt.",
+            "speak;Eirika;Oh, no need to thank me.|I am just happy everyone is ok.|I don't want to see anyone else hurt...",
+            "speak;Woman1;Oh, what a wonderful young woman you are.|Your kindness will never be forgotten...",
+            "multi_remove_portrait;Eirika;Woman1",
+            "give_bexp;3000",
+            "remove_talk;Eirika;Civ1"
+        ],
+        "nid": "12A Talk_Civ1"
+    }
+]

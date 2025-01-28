@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Camouflage",
+        "name": "Camouflage",
+        "desc": "Gain extra Avoid and Dodge based on unit's SKL/2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SKL') // 2"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "unit.get_stat('SKL') // 2"
+            ]
+        ]
+    }
+]

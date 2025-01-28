@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Eggs1",
+        "trigger": "enemy_turn_change",
+        "level_nid": "18B",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;10,16",
+            "if;game.check_alive('114')",
+            "kill_unit;114",
+            "add_unit;134;7,13;fade",
+            "else",
+            "end",
+            "if;game.check_alive('115')",
+            "kill_unit;115",
+            "add_unit;135;8,17;fade",
+            "else",
+            "end",
+            "if;game.check_alive('116')",
+            "kill_unit;116",
+            "add_unit;136;9,17;fade",
+            "else",
+            "end",
+            "if;game.check_alive('117')",
+            "kill_unit;117",
+            "add_unit;137;8,18;fade",
+            "else",
+            "end",
+            "if;game.check_alive('118')",
+            "kill_unit;118",
+            "add_unit;138;12,18;fade",
+            "else",
+            "end"
+        ],
+        "nid": "18B Eggs1"
+    }
+]

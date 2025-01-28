@@ -1,0 +1,27 @@
+[
+    {
+        "name": "DeathMyrrh",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Myrrh'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;MyrrhD;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;MyrrhD;.....;no_talk",
+            "speak;MyrrhD;I\u2019m so sorry...|I can\u2019t help you any longer.",
+            "else",
+            "speak;MyrrhD;.....;no_talk",
+            "speak;MyrrhD;Ephraim....",
+            "end",
+            "expression;MyrrhD;CloseEyes",
+            "remove_portrait;MyrrhD",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathMyrrh"
+    }
+]

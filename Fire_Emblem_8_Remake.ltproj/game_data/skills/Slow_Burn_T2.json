@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Slow_Burn_T2",
+        "name": "Slow Burn",
+        "desc": "+5 Hit/Avoid for every turn that passes.\nEffect stops increasing after turn 25.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            47
+        ],
+        "components": [
+            [
+                "dynamic_accuracy",
+                "game.turncount * 5 if game.turncount <= 25 else 125"
+            ],
+            [
+                "dynamic_avoid",
+                "game.turncount * 5 if game.turncount <= 25 else 125"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

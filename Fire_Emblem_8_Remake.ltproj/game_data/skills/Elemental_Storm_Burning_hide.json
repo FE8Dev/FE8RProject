@@ -1,0 +1,29 @@
+[
+    {
+        "nid": "Elemental_Storm_Burning_hide",
+        "name": "Elemental Storm",
+        "desc": "X2.5 damage when using Anima magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            32
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Anima'"
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Seared",
+                    "range": 3
+                }
+            ]
+        ]
+    }
+]

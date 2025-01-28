@@ -1,0 +1,26 @@
+[
+    {
+        "name": "OnLevelSelect_20A",
+        "trigger": "level_select",
+        "level_nid": "20A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;20;2000",
+            "wait;500",
+            "speak;Narrator;According to legend, the Sacred Stones have sealed evil away from the world.|Four of the fives stones have been destroyed, leaving only the last stone intact.|The last stone must be protected to stave off the Demon King's restoration.",
+            "add_portrait;Eirika;Left,Middle;left;NormalBlink;low_priority",
+            "speak;Narrator;Eirika and company challenge the demons of Darkling Woods.",
+            "remove_portrait;Eirika",
+            "overworld_move_unit;Eirika_Group;20",
+            "speak;Narrator;According to legend. the original possessors of the Sacred Stones defeated the Demon King in Darkling Woods. His foul blood seeped into the land, corrupting every seed and every root. The once-pristine forest was transformed by the flood of disease and venom. Legend says the Demon King's corpse lies there still, not dead but dreaming. Dreaming of when the last stone is crushed, and he will rise from his bed of rocks and worms and return to the surface. Within Darkling Woods, hideous fiends roam in increasing numbers, as if responding to some unheard call...",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "20A OnLevelSelect_20A"
+    }
+]

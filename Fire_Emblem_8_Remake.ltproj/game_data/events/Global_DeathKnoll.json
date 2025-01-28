@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathKnoll",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Knoll'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Knoll;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Knoll;In this darkness, I will find peace.",
+            "else",
+            "speak;Knoll;Hmm...|I better find a spell that can get me out of this...",
+            "end",
+            "expression;Knoll;CloseEyes",
+            "remove_portrait;Knoll",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathKnoll"
+    }
+]

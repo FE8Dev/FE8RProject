@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Defeat Boss",
+        "trigger": "combat_end",
+        "level_nid": "0",
+        "condition": "game.check_dead(\"Oneill\")",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;game.turncount <= 10",
+            "    give_bexp;200",
+            "    else",
+            "    give_bexp;100",
+            "    end",
+            "transition;close;500",
+            "resurrect;Seth",
+            "separate;Eirika",
+            "clean_up_roaming",
+            "change_roaming;t",
+            "change_roaming_unit;Eirika",
+            "add_unit;Seth;1,1;immediate",
+            "add_region;Item_1;14,8;1,1;event;interrupt_move",
+            "map_anim;Dazzled;14,8;permanent",
+            "add_talk;Eirika;Seth",
+            "reset;Eirika",
+            "reset;Seth",
+            "transition;open;500",
+            "music;09- Distant Roads Orchestral Cover;500",
+            "if;game.game_vars['Tutorial'] == True or game.game_vars['TutorialNewMech'] == True",
+            "speak;Narrator;                   Free Roam;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Welcome to the <red>Free Roam</> portion of FE8R gameplay!|Here you can walk around the battlefield with Eirika at your pleasure!|You can talk to allies after battle, train with them, and maybe find items on the battlefield?|Perhaps you could trigger other things!|You never know what might happen!|This time it looks there is something you can pick up on the map.;;;;6",
+            "flicker_cursor;14,8",
+            "wait;300",
+            "speak;Anna;Or you can talk with Seth to end the chapter.|Alright!|Hope you have fun!;;;;6",
+            "else",
+            "end"
+        ],
+        "nid": "0 Defeat Boss"
+    }
+]

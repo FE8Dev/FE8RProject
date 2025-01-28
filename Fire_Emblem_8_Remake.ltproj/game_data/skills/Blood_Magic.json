@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Blood_Magic",
+        "name": "Blood Magic",
+        "desc": "Kills with any weapon type other than dark will make the next dark magic attack become a 100% Critical hit.\nLasts for 2 turns or after the next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) != 'Dark'"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Blood_Magic_Crit"
+            ]
+        ]
+    }
+]

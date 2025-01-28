@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Storm_Splash",
+        "name": "Storm Splash",
+        "desc": "To make Drenched splash and give Flying/Seared effectiveness.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

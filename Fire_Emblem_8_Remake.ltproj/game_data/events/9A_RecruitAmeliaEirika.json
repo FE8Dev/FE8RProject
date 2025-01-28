@@ -1,0 +1,40 @@
+[
+    {
+        "name": "RecruitAmeliaEirika",
+        "trigger": "on_talk",
+        "level_nid": "9A",
+        "condition": "check_pair('Eirika','Amelia')",
+        "commands": [],
+        "only_once": true,
+        "priority": 30,
+        "_source": [
+            "if;game.level_vars['Training'] != True",
+            "multi_add_portrait;Eirika;Right;Amelia;Left",
+            "#music;50 Comrades;200",
+            "music;50 Comrades;500",
+            "speak;Eirika;Who are you?",
+            "speak;Amelia;What?",
+            "speak;Eirika;Are you from around here?|You should find someplace to hide.|These men are after me.|It's not safe.",
+            "speak;Amelia;But...|But I'm...",
+            "speak;Eirika;Yes?",
+            "speak;Amelia;I'm a Grado soldier.|I'm here to stop the princess of Renais...",
+            "speak;Eirika;Huh?|You're with Grado?",
+            "speak;Amelia;And you're Princess Eirika?|But the commander said Eirika's a cruel and merciless fiend...",
+            "speak;Eirika;What?|No, I'm...|...I don't know what Grado's officers have been telling you, but...|Our two countries are at war, so I suppose they can say what they want.",
+            "speak;Amelia;...Mistress Eirika...|I, uh, I surrender.|I won't fight you.",
+            "speak;Eirika;Huh?",
+            "speak;Amelia;I became a soldier because I admired General Duessel's sense of honor.|But the generals have been very opposed to this war from the beginning...|And now I see you, and you look so sad about all of this.|I don't know what's right anymore.|I'm just a soldier, but I want to decide for myself.|I want to understand the truth myself, to see it with my own eyes.",
+            "speak;Eirika;...I see.|So...does this mean you're coming with us?|I suppose I should ask your name then.",
+            "speak;Amelia;Amelia.|Amelia of Silva.",
+            "multi_remove_portrait;Eirika;Amelia",
+            "change_team;Amelia;player",
+            "change_ai;Amelia;None",
+            "remove_talk;Eirika;Amelia",
+            "remove_talk;Franz;Amelia",
+            "music_fade_back;200",
+            "else",
+            "end"
+        ],
+        "nid": "9A RecruitAmeliaEirika"
+    }
+]

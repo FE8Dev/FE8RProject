@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Door_1",
+        "trigger": "Door",
+        "level_nid": "19B",
+        "condition": "region.nid == 'Door_1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Door_1;fade",
+            "has_traded;{unit}"
+        ],
+        "nid": "19B Door_1"
+    }
+]
