@@ -2,7 +2,7 @@
     {
         "nid": "Ward_Axe",
         "name": "Ward Axe",
-        "desc": "An axe made to fight against those of magical talents. +20 RES",
+        "desc": "An axe made to fight against those of magical talents. <green>CD:3</>\n<violet>Inflicts:</>Breach (5)\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>+20 RES.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             4,
@@ -31,7 +31,7 @@
             ],
             [
                 "damage",
-                17
+                15
             ],
             [
                 "hit",
@@ -81,6 +81,18 @@
                         20
                     ]
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }
