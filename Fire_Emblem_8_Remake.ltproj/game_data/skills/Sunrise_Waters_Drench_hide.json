@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Sunrise_Waters_Drench_hide",
+        "name": "Sunrise Waters",
+        "desc": "+1 bonus attack against Drenched enemies.\nAttacks inflict the Drenched status to enemies on hit while unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "give_status_after_hit",
+                "Drench_Debuff"
+            ]
+        ]
+    }
+]

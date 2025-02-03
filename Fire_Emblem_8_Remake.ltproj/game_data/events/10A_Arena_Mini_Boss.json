@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Arena_Mini_Boss",
+        "trigger": "Challenge",
+        "level_nid": "10A",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;300",
+            "change_background;Arena",
+            "transition;open;300",
+            "music_clear;300",
+            "#music;58 Colosseum Entrance;300",
+            "music;58- Colosseum Entrance Orchestral Cover;500",
+            "add_portrait;Areana Guy;Left,Middle",
+            "speak;Arena Guy;I hate to break the news to you, but we're closed here too.|That scumbag Pablo has extorted everything from us.|You're always welcome to challenge the champ if you want though. ",
+            "choice;ArenaFight;Fight the Arena champion?;Yes,No",
+            "remove_portrait;Areana Guy",
+            "transition;close;300",
+            "change_background",
+            "transition;open;300",
+            "music_fade_back;300",
+            "if;'{v:_last_choice}' == 'Yes'",
+            "    add_unit;169;12,6;fade;stack",
+            "    move_unit;169;12,7;normal;closest",
+            "    else",
+            "    end",
+            "has_traded;{unit}"
+        ],
+        "nid": "10A Arena_Mini_Boss"
+    }
+]

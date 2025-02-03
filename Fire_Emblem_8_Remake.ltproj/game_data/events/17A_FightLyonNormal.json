@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightLyonNormal",
+        "trigger": "combat_start",
+        "level_nid": "17A",
+        "condition": "unit.nid == \"Lyon\" or unit2.nid == \"Lyon\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Lyon Evil;Left",
+            "speak;Lyon Evil;Do you challenge me?|You humans are so inconstant.|You've forgotten what it is to fear me.;;;noir;;white",
+            "remove_portrait;Lyon Evil"
+        ],
+        "nid": "17A FightLyonNormal"
+    }
+]

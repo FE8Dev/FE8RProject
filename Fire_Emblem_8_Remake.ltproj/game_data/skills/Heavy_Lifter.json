@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Heavy_Lifter",
+        "name": "Heavy Lifter",
+        "desc": "Increases Avoid and Hit based on weapon weight x2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_avoid",
+                "(unit.get_weapon().weight.value) * 2"
+            ],
+            [
+                "dynamic_accuracy",
+                "(unit.get_weapon().weight.value) * 2"
+            ]
+        ]
+    }
+]

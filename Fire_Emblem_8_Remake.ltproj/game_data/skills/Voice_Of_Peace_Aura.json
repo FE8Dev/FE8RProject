@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Voice_Of_Peace_Aura",
+        "name": "Voice Of Peace",
+        "desc": "Allies within 2 tiles away recieve less damage based on unit's LCK/4.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.team == 'player' or unit.team == 'enemy'"
+            ],
+            [
+                "aura",
+                "Voice_Of_Peace_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    }
+]

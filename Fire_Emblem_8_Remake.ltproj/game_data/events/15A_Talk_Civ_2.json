@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ_2",
+        "trigger": "on_talk",
+        "level_nid": "15A",
+        "condition": "check_pair('Eirika', 'Civ2')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Man1;Left",
+            "speak;Man1;The fighting is finally over...|Tell me girl...|Did you find anything...|Interesting, in the sand?",
+            "speak;Eirika;Interesting?",
+            "speak;Man1;Yes!|If you find anything, let me know!|I'm looking for something rare...|Oh very rare indeed...|Oh, if I found it...|Oh....",
+            "speak;Eirika;I...See...",
+            "multi_remove_portrait;Eirika;Man1",
+            "give_bexp;5000",
+            "remove_talk;Eirika;Civ2"
+        ],
+        "nid": "15A Talk_Civ_2"
+    }
+]

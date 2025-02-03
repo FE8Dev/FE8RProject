@@ -1,0 +1,22 @@
+[
+    {
+        "name": "SerafewArmory",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;56- Armories Orchestral Cover;500",
+            "shop;{eval:game.game_vars.get('_last_choice')};Steel Sword,Scorch_Sword,Scimitar,Wind Sword,Iron Blade,Steel_Dagger,Steel Lance,Naginata,Flame_Lance,Whale_Tooth,Iron_Greatlance,Steel Axe,Mage_Masher,Fiendcleaver,Iron_Warhammer,Steel Bow,Short Bow,Magic_Bow,Night_Storm;armory",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global SerafewArmory"
+    }
+]

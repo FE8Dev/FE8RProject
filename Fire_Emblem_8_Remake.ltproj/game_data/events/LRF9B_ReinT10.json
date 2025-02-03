@@ -1,0 +1,16 @@
+[
+    {
+        "name": "ReinT10",
+        "trigger": "turn_change",
+        "level_nid": "LRF9B",
+        "condition": "game.turncount == 10",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;0,0",
+            "add_group;ReinT10;ReinT10;fade;closest"
+        ],
+        "nid": "LRF9B ReinT10"
+    }
+]

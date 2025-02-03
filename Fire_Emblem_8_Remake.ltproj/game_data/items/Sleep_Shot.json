@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Sleep_Shot",
+        "name": "Sleep Shot",
+        "desc": "An AOE Sleep attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "status_on_hit",
+                "Sleep"
+            ],
+            [
+                "enemy_blast_aoe",
+                3
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Sleep1"
+            ]
+        ]
+    }
+]

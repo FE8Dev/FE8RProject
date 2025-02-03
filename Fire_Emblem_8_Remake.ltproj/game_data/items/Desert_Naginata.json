@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Desert_Naginata",
+        "name": "Desert Naginata",
+        "desc": "A lance that strikes with steel, sand, and heat.\n<green>Skills:</>Lance Guard (A)\n<orange>Element:</><icon>Earth</><icon>Fire</><violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2, +20 DEF/RES",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_A"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Joshua"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Joshua\").wexp['Lance'] >= 180 and u(\"Joshua\").wexp['Lance'] < 360"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Seared"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

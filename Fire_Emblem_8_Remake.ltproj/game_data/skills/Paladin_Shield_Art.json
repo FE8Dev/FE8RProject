@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Paladin_Shield_Art",
+        "name": "Paladin's Shield",
+        "desc": "<red>CA:</>+30 Hit and add enemy's RES/2 to attack.\nDouble unit's RES during attack. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Paladin_Shield_Skill"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

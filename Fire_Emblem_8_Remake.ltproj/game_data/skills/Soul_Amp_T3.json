@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Soul_Amp_T3",
+        "name": "Soul Amp",
+        "desc": "Gain temporary +20 HP for each kill with Dark/Anima magic until end of chapter.\n+8 damage when using Dark/Anima magic.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            27
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Anima' or item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Soul_Amp_Buff"
+            ],
+            [
+                "dynamic_damage",
+                "8"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

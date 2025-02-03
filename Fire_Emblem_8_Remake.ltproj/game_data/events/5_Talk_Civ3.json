@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "5",
+        "condition": "check_pair('Eirika','Civ3')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;OldMan1;Left",
+            "speak;OldMan1;Ohhh...|Please make sure to read that old book...|My techniques must not be lost...",
+            "speak;Eirika;Oh dear...|I'll be sure to give it a read soon...",
+            "speak;OldMan1;Oh thank you young lass...|That soothes my worrysome heart to hear that...",
+            "multi_remove_portrait;Eirika;OldMan1",
+            "give_bexp;800",
+            "remove_talk;Eirika;Civ3"
+        ],
+        "nid": "5 Talk_Civ3"
+    }
+]

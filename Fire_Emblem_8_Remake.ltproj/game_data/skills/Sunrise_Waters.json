@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Sunrise_Waters",
+        "name": "Sunrise Waters",
+        "desc": "+1 bonus attack against Drenched enemies.\nAttacks inflict the Drenched status to enemies on hit while unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ]
+        ]
+    }
+]

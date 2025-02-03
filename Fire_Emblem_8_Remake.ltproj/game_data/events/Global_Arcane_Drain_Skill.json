@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Arcane_Drain_Skill",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(0, 100) <= unit.get_stat('LCK')",
+            "reset;Tethys",
+            "else",
+            "end"
+        ],
+        "nid": "Global Arcane_Drain_Skill"
+    }
+]

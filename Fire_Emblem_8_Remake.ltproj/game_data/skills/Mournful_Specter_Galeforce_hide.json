@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Mournful_Specter_Galeforce_hide",
+        "name": "Mournful Specter",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons, inflict Curse (8) if using magical weapons.\nUnit gains Galeforce when killing an enemy with both statuses.\nWorks up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Breached_8') and has_skill(target, 'Cursed_8')"
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
+                "upkeep_charge_increase",
+                4
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    }
+]

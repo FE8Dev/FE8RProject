@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Lone_Wolf",
+        "name": "Lone Wolf",
+        "desc": "+1/-1 Damage taken and received.\n+5 crit when unit has no adj. allies.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "condition",
+                "unit_funcs.check_focus(unit, 1) == 0\n"
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "resist",
+                1
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "aura",
+                "None"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "unit"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Floor_2",
+        "trigger": "turn_change",
+        "level_nid": "LRF8A",
+        "condition": "game.turncount == 4",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;1,11",
+            "screen_shake;0",
+            "wait;500",
+            "show_layer;Floor_2;fade",
+            "screen_shake_end"
+        ],
+        "nid": "LRF8A Floor_2"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Spook",
+        "name": "Spook",
+        "desc": "If unit's DEF >= enemy's DEF, enemy cannot counterattack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') >= unit2.get_stat('DEF')"
+            ],
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

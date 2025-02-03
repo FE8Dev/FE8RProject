@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Defiant",
+        "name": "Defiant",
+        "desc": "+15 Avoid/Hit, +5 Damage given when not at maximum HP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() != unit.get_max_hp()"
+            ],
+            [
+                "dynamic_damage",
+                "5"
+            ],
+            [
+                "dynamic_avoid",
+                "15"
+            ],
+            [
+                "dynamic_accuracy",
+                "15"
+            ]
+        ]
+    }
+]

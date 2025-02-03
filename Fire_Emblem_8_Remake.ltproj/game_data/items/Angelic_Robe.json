@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Angelic Robe",
+        "name": "Angelic Robe",
+        "desc": "Accessory that raises maximum HP by 15, boost HP growth rate by 30%, and restore 25% of user's Max HP each turn.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Angelic_Robe_Buff",
+                    "Angelic_Robe_Buff_Appraiser"
+                ]
+            ]
+        ]
+    }
+]

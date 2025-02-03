@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "9A",
+        "condition": "check_pair('Eirika','Civ1')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Man1;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Man1;Did that guy finally leave?|He gave me some money to hide in my house for a while.|I was afraid he was going to mess up my house.",
+            "speak;Eirika;That's quite strange...",
+            "speak;Man1;I agree, but he gave a lot of money...|He seemed really desperate to escape from someone.|There was a beautiful young lady yelling really loudly for some guy...|I wonder?...",
+            "speak;Eirika;Hmm.....",
+            "multi_remove_portrait;Man1;Eirika",
+            "give_bexp;2000",
+            "remove_talk;Eirika;Civ1"
+        ],
+        "nid": "9A Talk_Civ1"
+    }
+]

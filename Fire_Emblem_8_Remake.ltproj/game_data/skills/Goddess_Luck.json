@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Goddess_Luck",
+        "name": "Goddess's Luck",
+        "desc": "Adds Artur's Luck/2 to damage given.\nReduce damage taken by Artur's Luck/2.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "unit.get_stat('LCK') // 2"
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('LCK') // 2"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

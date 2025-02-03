@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Wrath_Of_The_Valkyries_Buff",
+        "name": "Wrath Of The Valkyries",
+        "desc": "Effective damage against Brigands/Pirates, +1 Move, +30 Hit to all Fliers within 5 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            41
+        ],
+        "components": [
+            [
+                "condition",
+                "'Flying' in unit.tags"
+            ],
+            [
+                "item_override",
+                "Wrath_Of_The_Valkyries"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

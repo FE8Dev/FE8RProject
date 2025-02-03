@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Seize",
+        "trigger": "Seize",
+        "level_nid": "5x",
+        "condition": "'Lord' in unit.tags",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "has_finished;{unit}",
+            "resurrect;Orson",
+            "reset;{unit}",
+            "reset;{unit}",
+            "for;PARTY_UNIT;{unit.nid for unit in game.get_units_in_party()}",
+            "separate;{PARTY_UNIT}",
+            "endf",
+            "for;PARTY_UNIT;{unit.nid for unit in game.get_units_in_party()}",
+            "reset;{PARTY_UNIT}",
+            "endf",
+            "clean_up_roaming",
+            "remove_all_enemies",
+            "change_roaming;t",
+            "change_roaming_unit;Ephraim",
+            "add_unit;Ephraim;13,7;immediate;closest",
+            "add_unit;Orson;12,7;immediate;closest",
+            "add_unit;Forde;4,3;immediate;closest",
+            "add_unit;Kyle;14,7;immediate;closest",
+            "add_talk;Ephraim;Orson",
+            "add_talk;Ephraim;Forde",
+            "add_talk;Ephraim;Kyle",
+            "level_var;Training;True",
+            "game_var;TrainingIndicator;0",
+            "music;11- Follow Me! Orchestral Cover;500",
+            "transition;open;500",
+            "remove_region;Drain"
+        ],
+        "nid": "5x Seize"
+    }
+]

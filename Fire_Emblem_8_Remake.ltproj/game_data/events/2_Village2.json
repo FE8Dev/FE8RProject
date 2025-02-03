@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Village2",
+        "trigger": "Visit",
+        "level_nid": "2",
+        "condition": "region.nid == 'Village2'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "change_background;Town",
+            "transition;Open",
+            "add_portrait;Woman2;Right;no_block",
+            "add_portrait;{unit};Left",
+            "speak;Woman2;The most wonderful man rescued me.|He was dressed like a mercenary, but he had an air of elegance about him...|He gave me this elixir.|I'm sure it will help you on the battlefield.",
+            "transition;Close",
+            "show_layer;Village2",
+            "change_background",
+            "transition;Open",
+            "give_item;{unit};Elixir",
+            "give_bexp;200",
+            "has_traded;{unit}",
+            "level_var;Village2;True"
+        ],
+        "nid": "2 Village2"
+    }
+]

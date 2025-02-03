@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Engine_Overclock",
+        "name": "Engine Overclock",
+        "desc": "Your attacks deal x4 damage,\nbut can't move/attack next turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                4.0
+            ],
+            [
+                "gain_skill_after_combat",
+                "Cooldown"
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ]
+        ]
+    }
+]

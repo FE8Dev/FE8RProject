@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Desert_Nova",
+        "name": "Desert Nova",
+        "desc": "A dance symbolizing the beginning of this desert, after a magical war. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Free action, +30 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            6,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Bakuretsu"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_30"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tethys"
+                ]
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Tethys\").wexp['Light'] >= 300 and u(\"Tethys\").wexp['Light'] < 420"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "T3_Tutorial",
+        "trigger": "turn_change",
+        "level_nid": "2",
+        "condition": "game.turncount == 3",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['Tutorial'] == True and game.check_alive(\"Ross\")",
+            "speak;Narrator;                    Trainees;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Ross is a special type of unit.|He is a <red>\"Trainee\"</> unit.",
+            "remove_portrait;Anna",
+            "flicker_cursor;Ross",
+            "wait;300",
+            "move_cursor;Eirika",
+            "add_portrait;Anna;Left",
+            "speak;Anna;They start off very weak, but have great potential!|They promote at level 11 and cannot get BEXP until they promote at that point.|Fortunately, they are quick to level up!|They have a lot of potential promotion paths, so try and see what is fun to you!;;;;6",
+            "remove_portrait;Anna",
+            "else",
+            "end"
+        ],
+        "nid": "2 T3_Tutorial"
+    }
+]

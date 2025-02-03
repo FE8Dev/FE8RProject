@@ -1,0 +1,19 @@
+[
+    {
+        "name": "BItem_9",
+        "trigger": "unit_wait",
+        "level_nid": "15B",
+        "condition": "region.nid == 'BItem9'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(0, 50) <= unit.get_stat('LCK') and unit.team == 'player'",
+            "give_item;{unit};Petrify",
+            "remove_region;BItem9",
+            "else",
+            "end"
+        ],
+        "nid": "15B BItem_9"
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Village2",
+        "trigger": "Visit",
+        "level_nid": "4",
+        "condition": "region.nid == 'Village2'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;Close",
+            "change_background;Town",
+            "transition;Open",
+            "add_portrait;{unit};Left;no_block",
+            "add_portrait;Man1;Right",
+            "speak;Man1;Do you see that old snag to the North of here?|Bet it would make a handy bridge if you could knock it over.|Take a weapon to it and give it a few good whacks. That should do it.|Here, take this and give it a try.{br}It ought to do the trick.",
+            "transition;Close",
+            "show_layer;Village2",
+            "change_background",
+            "transition;Open",
+            "give_item;{unit};Steel_Warhammer",
+            "give_bexp;400",
+            "has_traded;{unit}",
+            "level_var;Village2;True"
+        ],
+        "nid": "4 Village2"
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "BItem_3",
+        "trigger": "unit_wait",
+        "level_nid": "15B",
+        "condition": "region.nid == 'BItem3'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(0, 50) <= unit.get_stat('LCK') and unit.team == 'player'",
+            "give_item;{unit};Silver Blade",
+            "remove_region;BItem3",
+            "else",
+            "end"
+        ],
+        "nid": "15B BItem_3"
+    }
+]

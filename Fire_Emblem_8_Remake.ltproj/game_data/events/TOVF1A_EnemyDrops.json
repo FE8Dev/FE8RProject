@@ -1,0 +1,22 @@
+[
+    {
+        "name": "EnemyDrops",
+        "trigger": "level_start",
+        "level_nid": "TOVF1A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
+            "level_var;Enemy1;game.get_random(1, 20)",
+            "if;game.level_vars['Enemy1'] == 1",
+            "give_item;{enemy_unit};Speedwing_Consumable;no_banner;droppable",
+            "elif;game.level_vars['Enemy1'] == 2",
+            "give_item;{enemy_unit};Angelic_Robe_Consumable;no_banner;droppable",
+            "end",
+            "endf"
+        ],
+        "nid": "TOVF1A EnemyDrops"
+    }
+]

@@ -1,0 +1,53 @@
+[
+    {
+        "nid": "Elixir_Boost",
+        "name": "DEF/RES Boost",
+        "desc": "Gives +7 DEF/+7 RES temporarily. This is a free action. Uses are refreshed between each chapter.",
+        "icon_nid": "Consumable",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "status_on_hit",
+                "RES_DEFP"
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    }
+]

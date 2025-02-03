@@ -1,0 +1,20 @@
+[
+    {
+        "name": "FightVigardeAndDuessel",
+        "trigger": "combat_start",
+        "level_nid": "14B",
+        "condition": "check_pair('Vigarde', 'Duessel')\n",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Duessel;Right;Vigarde Zombie;Left",
+            "s;Vigarde Zombie;.....;no_talk",
+            "s;Duessel;Your Majesty, am I finished?",
+            "s;Vigarde Zombie;.....;no_talk",
+            "s;Duessel;Your Majesty...|It's too late, isn't it?|...Forgive me.",
+            "multi_remove_portrait;Duessel;Vigarde"
+        ],
+        "nid": "14B FightVigardeAndDuessel"
+    }
+]

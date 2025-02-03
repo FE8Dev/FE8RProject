@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "LRF6B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;len(game.get_enemy_units()) == 0",
+            "sound;Item",
+            "alert;Victory!",
+            "game_var;RuinsFloor7B;True",
+            "level_var;Reward;game.get_random(1, 4)",
+            "if;game.level_vars['Reward'] == 1",
+            "give_item;convoy;Urvan",
+            "elif;game.level_vars['Reward'] == 2",
+            "give_item;convoy;Heros_Axe",
+            "elif;game.level_vars['Reward'] == 3",
+            "give_item;convoy;Axe_of_Corruption",
+            "elif;game.level_vars['Reward'] == 4",
+            "give_item;convoy;Smite_of_God_Parent",
+            "else",
+            "give_item;convoy;Smite_of_God_Parent",
+            "end",
+            "choice;ProceedF5;Proceed to the next floor?;Yes,No",
+            "if;game.game_vars['_last_choice'] == 'Yes'",
+            "game_var;_goto_level;\"LRF7B\"",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVB_Ch_Save\")",
+            "end",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVB_Ch_Save\")",
+            "end",
+            "transition;close;500",
+            "music_clear;500"
+        ],
+        "nid": "LRF6B Outro"
+    }
+]

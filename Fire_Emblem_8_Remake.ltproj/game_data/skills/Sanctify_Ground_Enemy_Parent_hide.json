@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Sanctify_Ground_Enemy_Parent_hide",
+        "name": "Sanctify Ground",
+        "desc": "+10/-10 RES to allies/enemies within 3 spaces.\nAllies heal 20% Max HP at beginning of each turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            40
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "aura",
+                "Sanctify_Ground_Enemy_Debuff"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    }
+]

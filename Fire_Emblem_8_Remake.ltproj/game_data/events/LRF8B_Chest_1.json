@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Chest_1",
+        "trigger": "Chest",
+        "level_nid": "LRF8B",
+        "condition": "region.nid == 'Chest_1'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Chest_1;fade",
+            "level_var;Chest1;game.get_random(1, 2)",
+            "if;game.level_vars['Chest1'] == 1",
+            "give_item;{unit};Magefire_Bolganone",
+            "elif;game.level_vars['Chest1'] == 2",
+            "give_item;{unit};Ragnarok_Omega",
+            "else",
+            "give_item;{unit};Ragnarok_Omega",
+            "end",
+            "has_traded;{unit}",
+            "remove_region;Chest_1"
+        ],
+        "nid": "LRF8B Chest_1"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Circle_Swing_Debuffer",
+        "name": "Circle Swing",
+        "desc": "Grants Galeforce when this unit kills and enemy, but reduce STR by 75% for rest of the turn.\nWorks once per turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            39
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Circle_Swing_Debuff"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

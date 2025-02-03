@@ -1,0 +1,56 @@
+[
+    {
+        "nid": "Dead_Grasp_Buff",
+        "name": "Dead_Grasp",
+        "desc": "Unit cannot be counterattacked, and adds unit's Max HP/4 to next attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            35
+        ],
+        "components": [
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_max_hp() // 4"
+            ],
+            [
+                "end_time",
+                1
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

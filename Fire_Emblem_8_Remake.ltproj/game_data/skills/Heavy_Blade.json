@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Heavy_Blade",
+        "name": "Heavy Blade",
+        "desc": "Add weapon weight x3 to crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "(unit.get_weapon().weight.value) * 3"
+            ]
+        ]
+    }
+]

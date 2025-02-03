@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Quick_Burn",
+        "name": "Quick Burn",
+        "desc": "+30 Hit/Avoid, reduced by 1 at the end of every turn.\nEffect is disabled past turn 30.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            47
+        ],
+        "components": [
+            [
+                "dynamic_accuracy",
+                "31 - game.turncount if game.turncount <= 30 else 0"
+            ],
+            [
+                "dynamic_avoid",
+                "31 - game.turncount if game.turncount <= 30 else 0"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

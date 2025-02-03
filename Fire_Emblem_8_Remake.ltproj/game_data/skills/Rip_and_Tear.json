@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Rip_and_Tear",
+        "name": "Rip and Tear",
+        "desc": "When initiating combat, if this unit kills the enemy, this unit gains the Frenzied status.\nSTR/3 added to damage and reduce damage take by 50%, but -25 Avoid.\nLost when unit is hit.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_active_kill",
+                "Rip_and_Tear_Buff"
+            ]
+        ]
+    }
+]

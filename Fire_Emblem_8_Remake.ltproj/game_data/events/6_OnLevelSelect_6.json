@@ -1,0 +1,25 @@
+[
+    {
+        "name": "OnLevelSelect_6",
+        "trigger": "level_select",
+        "level_nid": "6",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;26;2000",
+            "wait;500",
+            "add_portrait;Eirika;Left,Middle;right;NormalBlink;low_priority;no_block",
+            "speak;Narrator;Eirika suppresses her feeling of unease and continues to search for her brother.{br}Passing through Serafew, the group crosses into the Grado Empire.{br}From here forward, there is no doubt that they are walking through hostile territory.;;;narration",
+            "overworld_move_unit;Eirika_Group;26",
+            "speak;Narrator;In hopes of avoiding unnecessary trouble, Eirika and company head for a sparsely populated region of Grado.{br}However, it is too late. Their movements are already being tracked.;;;narration",
+            "remove_portrait;Eirika",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "6 OnLevelSelect_6"
+    }
+]

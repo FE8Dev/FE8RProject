@@ -1,0 +1,22 @@
+[
+    {
+        "name": "DeathEirika",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Eirika'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Eirika;FarRight",
+            "unhappy_chatter;{unit}",
+            "speak;Eirika;Brother... I'm sorry.",
+            "expression;Eirika;CloseEyes",
+            "remove_portrait;Eirika",
+            "remove_unit;Eirika",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathEirika"
+    }
+]

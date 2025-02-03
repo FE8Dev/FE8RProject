@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Multispell_Art_T3",
+        "name": "Multispell",
+        "desc": "<red>CA:</>Attack 5 times at 75% Damage. <green>CD:4 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            32
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Multispell_Skill"
+            ],
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

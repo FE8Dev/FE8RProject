@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Greatlance_Mastery",
+        "name": "G.L. Mastery",
+        "desc": "+2 range to greatlances if used by a Horse or Armored unit during Enemy Phase. Does not work if there is any wall/doors in between unit and enemy, or if unit is below 75% Max HP.",
+        "icon_nid": "Some Greatlances Sheet",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "('Horse' in unit.tags or 'Armor' in unit.tags) and (item_system.weapon_type(unit, item) == 'Lance') and (unit.get_hp() >= unit.get_max_hp() // 1.3333)"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

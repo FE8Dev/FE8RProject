@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Bowrange_P2_Art",
+        "name": "Bowrange +2",
+        "desc": "<red>CA: </>Increase the range of Bows by 2. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "combat_art",
+                "Bowrange_P2_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    }
+]

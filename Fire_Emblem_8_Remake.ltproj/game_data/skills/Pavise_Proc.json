@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Pavise_Proc",
+        "name": "Pavise",
+        "desc": "SKL% Chance to halve damage received from Swords, Lances, Axes, or Bows",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "defense_proc",
+                "Pavise_Skill"
+            ],
+            [
+                "proc_rate",
+                "SKILL_PROC"
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Sword', 'Axe', 'Lance', 'Bow')"
+            ]
+        ]
+    }
+]

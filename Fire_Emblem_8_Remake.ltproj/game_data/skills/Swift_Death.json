@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Swift_Death",
+        "name": "Swift Death",
+        "desc": "+2 MOV.\nGain an additional +2 MOV for 2 turns when this unit Crits.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "subtle_stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "gain_skill_after_crit",
+                "Swift_Death_Buff"
+            ]
+        ]
+    }
+]

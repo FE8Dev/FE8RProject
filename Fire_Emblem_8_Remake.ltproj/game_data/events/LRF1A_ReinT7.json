@@ -1,0 +1,16 @@
+[
+    {
+        "name": "ReinT7",
+        "trigger": "turn_change",
+        "level_nid": "LRF1A",
+        "condition": "game.turncount == 7",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_group;ReinT7;19,14;fade;stack",
+            "move_group;ReinT7;ReinT7;normal;closest"
+        ],
+        "nid": "LRF1A ReinT7"
+    }
+]

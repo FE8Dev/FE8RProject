@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Stone_Weapon",
+        "name": "Stone Weapon",
+        "desc": "Attacks inflict the Rock Puncture status to enemies on hit.\nEnemies already inflicted with Rock Puncture get inflicted with Rock Breach instead.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "(unit2.team == 'enemy' or unit2.team == 'enemy2') and not has_skill(target, 'Rock_Punctures')"
+            ],
+            [
+                "give_status_after_hit",
+                "Rock_Punctures"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,97 @@
+[
+    {
+        "nid": "Silvers_Champion",
+        "name": "Silver Stream",
+        "desc": "Seth's lance infused with holy silver water.\n<green>Skills:</>Silver's Champion, Lance Guard (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Ignores WT.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            25,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                29
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Silvers_Champion"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Seth"
+                ]
+            ],
+            [
+                "ignore_weapon_advantage",
+                null
+            ],
+            [
+                "ignore_weapon_disadvantage",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Seth\").wexp['Lance'] >= 420 and has_skill(unit, 'Seths_Personal')"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ]
+        ]
+    }
+]

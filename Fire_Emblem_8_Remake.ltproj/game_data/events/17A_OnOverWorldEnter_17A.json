@@ -1,0 +1,21 @@
+[
+    {
+        "name": "OnOverWorldEnter_17A",
+        "trigger": "overworld_start",
+        "level_nid": "17A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_overworld_position;Eirika_Group;25;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;23",
+            "reveal_overworld_node;23",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;14;23"
+        ],
+        "nid": "17A OnOverWorldEnter_17A"
+    }
+]

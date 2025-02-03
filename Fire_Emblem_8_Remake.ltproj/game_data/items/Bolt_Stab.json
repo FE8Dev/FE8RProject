@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Bolt_Stab",
+        "name": "Bolt Stab",
+        "desc": "Eirika's thunder infused rapier stabs enemies with thunderbolts.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>STR + MAG, +1 SPD",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            33,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                13
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eirika"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Bolting"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_STRONG"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "eval_available",
+                "u(\"Eirika\").wexp['Anima'] < 300"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Oversoul_T3",
+        "name": "Oversoul",
+        "desc": "Doubles damage given by any non-dark weapon type, but unit takes 20% of damage given.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            45
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) != 'Dark'"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "lifelink",
+                -0.2
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

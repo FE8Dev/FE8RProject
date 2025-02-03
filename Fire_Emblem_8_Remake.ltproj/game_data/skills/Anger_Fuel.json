@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Anger_Fuel",
+        "name": "Anger Fuel",
+        "desc": "Adds 1/2 unit's missing HP to damage, adds unit's Max HP to Hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            42
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1) // 2"
+            ],
+            [
+                "dynamic_accuracy",
+                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Infernal_Sword_Melee",
+        "name": "Infernal Sword",
+        "desc": "A powerful sword bathed in flames of the underworld. Inflicts enemies with Burned/Seared status on hit. Effective against Monsters and Horses. Multi-Item",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                19
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                16
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Burned",
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

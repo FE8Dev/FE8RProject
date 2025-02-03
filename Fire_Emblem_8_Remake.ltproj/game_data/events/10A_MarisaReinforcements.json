@@ -1,0 +1,26 @@
+[
+    {
+        "name": "MarisaReinforcements",
+        "trigger": "turn_change",
+        "level_nid": "10A",
+        "condition": "game.level_vars['MarisaReinforcements'] == True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "move_cursor;2,28",
+            "add_group;MarisaAfterTalkRein1;0,30;fade;stack",
+            "move_group;MarisaAfterTalkRein1;MarisaAfterTalkRein1;normal;closest",
+            "wait;500",
+            "move_cursor;1,7",
+            "add_group;MarisaAfterTalkRein2;0,6;fade;stack",
+            "move_group;MarisaAfterTalkRein2;MarisaAfterTalkRein2;normal;closest",
+            "wait;500",
+            "move_cursor;16,26",
+            "add_group;MarisaAfterTalkRein3;17,30;fade;stack",
+            "move_group;MarisaAfterTalkRein3;MarisaAfterTalkRein3;normal;closest",
+            "wait;500"
+        ],
+        "nid": "10A MarisaReinforcements"
+    }
+]

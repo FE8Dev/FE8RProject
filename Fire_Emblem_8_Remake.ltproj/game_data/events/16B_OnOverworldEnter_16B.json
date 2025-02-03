@@ -1,0 +1,31 @@
+[
+    {
+        "name": "OnOverworldEnter_16B",
+        "trigger": "overworld_start",
+        "level_nid": "16B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_overworld_position;Ephraim_Group;14B",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;25B",
+            "reveal_overworld_node;25B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_node;15B",
+            "reveal_overworld_node;16B",
+            "reveal_overworld_node;17B",
+            "reveal_overworld_node;18B",
+            "reveal_overworld_road;14B;15B",
+            "reveal_overworld_road;15B;16B",
+            "reveal_overworld_road;16B;17B",
+            "reveal_overworld_road;17B;18B",
+            "reveal_overworld_road;18B;0B",
+            "reveal_overworld_road;13B;9B",
+            "reveal_overworld_road;14B;25B"
+        ],
+        "nid": "16B OnOverworldEnter_16B"
+    }
+]

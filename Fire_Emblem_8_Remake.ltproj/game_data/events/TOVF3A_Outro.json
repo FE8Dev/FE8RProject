@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "TOVF3A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;len(game.get_enemy_units()) == 0",
+            "    sound;Item",
+            "    alert;Victory!",
+            "    game_var;TOVFloor4A;True",
+            "    choice;ProceedF1;Proceed to the next floor?;Yes,No",
+            "    if;game.game_vars['_last_choice'] == 'Yes'",
+            "    game_var;_goto_level;\"TOVF4A\"",
+            "    else",
+            "    game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "    end",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "end",
+            "transition;close;500",
+            "music_clear;500"
+        ],
+        "nid": "TOVF3A Outro"
+    }
+]

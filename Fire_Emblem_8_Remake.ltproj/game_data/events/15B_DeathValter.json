@@ -1,0 +1,18 @@
+[
+    {
+        "name": "DeathValter",
+        "trigger": "unit_death",
+        "level_nid": "15B",
+        "condition": "unit.nid == 'Valter'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Valter;Left",
+            "speak;Valter;Urggh...|Gaaaah!",
+            "expression;Valter;CloseEyes",
+            "remove_portrait;Valter"
+        ],
+        "nid": "15B DeathValter"
+    }
+]

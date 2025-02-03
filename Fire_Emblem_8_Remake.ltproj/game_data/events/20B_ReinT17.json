@@ -1,0 +1,17 @@
+[
+    {
+        "name": "ReinT17",
+        "trigger": "turn_change",
+        "level_nid": "20B",
+        "condition": "game.turncount == 17",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "move_cursor;6,17",
+            "add_group;ReinT16;4,16;fade;stack",
+            "move_group;ReinT16;ReinT6;normal;closest;no_follow"
+        ],
+        "nid": "20B ReinT17"
+    }
+]

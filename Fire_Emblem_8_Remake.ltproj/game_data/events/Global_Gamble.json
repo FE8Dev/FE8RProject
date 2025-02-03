@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Gamble",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_random(0, 3) == 2",
+            "give_skill;Joshua;Win;;no_banner",
+            "elif;game.get_random(0, 3) == 3",
+            "give_skill;Joshua;Win;;no_banner",
+            "else",
+            "give_skill;{unit2};Loss;;no_banner",
+            "end"
+        ],
+        "nid": "Global Gamble"
+    }
+]

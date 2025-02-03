@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Colm_Select_Tutorial",
+        "trigger": "unit_select",
+        "level_nid": "3",
+        "condition": "unit.nid == 'Colm'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TutorialNewMech'] == True or game.game_vars['Tutorial'] == 'Yes'",
+            "speak;Narrator;                Magic Key/Chests;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Colm has a special item in his inventory called a <red>Magic Key.</>|It allows him to open chests from afar!|It restores uses between chapters, so don't be afraid to use it!|Also, one thing to note is that <red>units will unpair from their partner if they are paired up when opening a chest.</>|So keep that in mind!;;;;6",
+            "remove_portrait;Anna",
+            "else",
+            "end"
+        ],
+        "nid": "3 Colm_Select_Tutorial"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Breach_Master_T2",
+        "name": "Breach Master",
+        "desc": "Attacks with axes inflict an additional stack of Breach(8) on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Axe')"
+            ],
+            [
+                "give_status_after_hit",
+                "Breached_8"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

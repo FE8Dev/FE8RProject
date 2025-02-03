@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Counter_Point_Giver",
+        "name": "Counter Point",
+        "desc": "Multiply damage by 1.2 and +2 DEF/RES for each stack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy'"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Counter_Point"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

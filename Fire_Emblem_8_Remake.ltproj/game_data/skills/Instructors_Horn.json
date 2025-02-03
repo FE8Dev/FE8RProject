@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Instructors_Horn",
+        "name": "Instructor's Horn",
+        "desc": "For the Instructor's Horn item.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "give_status_after_hit",
+                "Instructors_Horn_Discipline"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

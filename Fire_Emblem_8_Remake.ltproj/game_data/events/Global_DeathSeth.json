@@ -1,0 +1,21 @@
+[
+    {
+        "name": "DeathSeth",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Seth'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover",
+            "add_portrait;Seth;FarRight",
+            "unhappy_chatter;{unit}",
+            "speak;Seth;Urgh...|My apologies. I must withdraw.",
+            "expression;Seth;CloseEyes",
+            "remove_portrait;Seth",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathSeth"
+    }
+]

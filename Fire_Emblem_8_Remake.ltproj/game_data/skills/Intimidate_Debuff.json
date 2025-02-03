@@ -1,0 +1,56 @@
+[
+    {
+        "nid": "Intimidate_Debuff",
+        "name": "Intimidate",
+        "desc": "This unit takes half damage when defending.\nAlso reduce enemies stats by 30%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0.7
+                    ],
+                    [
+                        "MAG",
+                        0.7
+                    ],
+                    [
+                        "SKL",
+                        0.7
+                    ],
+                    [
+                        "SPD",
+                        0.7
+                    ],
+                    [
+                        "LCK",
+                        0.7
+                    ],
+                    [
+                        "DEF",
+                        0.7
+                    ],
+                    [
+                        "RES",
+                        0.7
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

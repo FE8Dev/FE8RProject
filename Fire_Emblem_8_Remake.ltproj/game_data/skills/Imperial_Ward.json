@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Imperial_Ward",
+        "name": "Imperial Ward",
+        "desc": "Reduces damage by 75% and increases Avoid by 75\nwhen attacked from more than 4 tiles away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            22
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "utils.calculate_distance(unit.position, target.position) > 4"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "dynamic_avoid",
+                "75"
+            ]
+        ]
+    }
+]

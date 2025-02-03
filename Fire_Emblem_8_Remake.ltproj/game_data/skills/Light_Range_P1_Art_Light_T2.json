@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Light_Range_P1_Art_Light_T2",
+        "name": "Knowledge of Justice (<icon>Light</>)",
+        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+            ],
+            [
+                "combat_art",
+                "Light_Range_P1_Skill_Light"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Light_Range_P1_EP_Light_hide",
+                    "Light_Range_P1_Art_Staff_hide",
+                    "Light_Range_P1_EP_Staff_hide"
+                ]
+            ]
+        ]
+    }
+]

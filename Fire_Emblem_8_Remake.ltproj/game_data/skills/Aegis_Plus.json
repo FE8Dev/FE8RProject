@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Aegis_Plus",
+        "name": "Aegis Plus",
+        "desc": "Halve all Magic damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            3
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_funcs.is_magic(target, target.get_weapon())"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

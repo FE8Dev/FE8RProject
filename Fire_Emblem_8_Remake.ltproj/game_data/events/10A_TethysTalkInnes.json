@@ -1,0 +1,27 @@
+[
+    {
+        "name": "TethysTalkInnes",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Innes','Tethys')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Innes;Right;Tethys;Left",
+            "#music;50 Comrades",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Innes;Reinforcements have arrived, Tethys.",
+            "speak;Tethys;Really?|Perhaps faith is a good thing.|I've never had much before, but perhaps good things do happen to good people.",
+            "speak;Innes;Faith had nothing to do with this.|Let's go.|We must join them.",
+            "speak;Tethys;What a strange nobleman.",
+            "multi_remove_portrait;Innes;Tethys",
+            "change_team;Tethys;player",
+            "change_ai;Tethys;None",
+            "remove_talk;Innes;Tethys",
+            "music_fade_back;100",
+            "has_traded;{unit}"
+        ],
+        "nid": "10A TethysTalkInnes"
+    }
+]

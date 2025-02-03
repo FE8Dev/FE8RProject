@@ -1,0 +1,17 @@
+[
+    {
+        "name": "ReinT4Warning",
+        "trigger": "turn_change",
+        "level_nid": "3",
+        "condition": "game.turncount == 4",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Bazba;Right",
+            "speak;Bazba;Hmmmm....|They are tougher than I thought.|I might need to unleash the beasts on them...|Better get them ready.",
+            "remove_portrait;Bazba"
+        ],
+        "nid": "3 ReinT4Warning"
+    }
+]

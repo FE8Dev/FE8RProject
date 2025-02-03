@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Pierce_Remove_DEF",
+        "name": "Pierced",
+        "desc": "Remove unit's DEF when attacked.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('RES') * -1 if item_funcs.is_magic(unit, unit.get_weapon()) else unit.get_stat('DEF') * -1"
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    }
+]
