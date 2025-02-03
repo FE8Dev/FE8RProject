@@ -30959,6 +30959,49 @@
         ]
     },
     {
+        "nid": "Wrath_Scroll",
+        "name": "Wrath Scroll",
+        "desc": "Teaches unit Wrath Scroll.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            6
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global DeathEirika"
+            ]
+        ]
+    },
+    {
         "nid": "Fire_Gem",
         "name": "Fire Gem",
         "desc": "Grants the user's weapon the Fire Element for 1 turn on use. This is a free action.\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\nUses restored between chapters.",
@@ -31284,6 +31327,958 @@
             ],
             [
                 "usable",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Angelic_Robe_Consumable",
+        "name": "Angelic Robe",
+        "desc": "Permanently raises HP by 7 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "HP",
+                        7
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Angelic_Robe_Consumable_P",
+        "name": "Angelic Robe+",
+        "desc": "Permanently raises HP by 15 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "HP",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Energy_Ring_Consumable",
+        "name": "Energy Ring",
+        "desc": "Permanently raises Strength/Magic by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "MAG",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Energy_Ring_Consumable_P",
+        "name": "Energy Ring+",
+        "desc": "Permanently raises Strength/Magic by 5 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Secret_Book_Consumable",
+        "name": "Secret Book",
+        "desc": "Permanently raises Skill by 4 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "SKL",
+                        4
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Secret_Book_Consumable_P",
+        "name": "Secret Book+",
+        "desc": "Permanently raises Skill by 10 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "SKL",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Speedwing_Consumable",
+        "name": "Speedwing",
+        "desc": "Permanently raises Speed by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Speedwing_Consumable_P",
+        "name": "Speedwing+",
+        "desc": "Permanently raises Speed by 5 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Goddess_Icon_Consumable",
+        "name": "Goddess Icon",
+        "desc": "Permanently raises Luck by 4 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "LCK",
+                        4
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Goddess_Icon_Consumable_P",
+        "name": "Goddess Icon+",
+        "desc": "Permanently raises Luck by 4 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "LCK",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dragonshield_Consumable",
+        "name": "Dragonshield",
+        "desc": "Permanently raises Defense by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "DEF",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dragonshield_Consumable_P",
+        "name": "Dragonshield+",
+        "desc": "Permanently raises Defense by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Talisman_Consumable",
+        "name": "Talisman",
+        "desc": "Permanently raises Resistance by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "RES",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Talisman_Consumable_P",
+        "name": "Talisman+",
+        "desc": "Permanently raises Resistance by 5 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Body_Ring_Consumable",
+        "name": "Body Ring",
+        "desc": "Permanently raises Constitution by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "CON",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Body_Ring_Consumable_P",
+        "name": "Body Ring+",
+        "desc": "Permanently raises Constitution by 5 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "CON",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Swiftsole_Consumable",
+        "name": "Swiftsole",
+        "desc": "Permanently raises Movement by 1 point.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "value",
+                8000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Swiftsole_Consumable_P",
+        "name": "Swiftsole+",
+        "desc": "Permanently raises Movement by 2 points.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "value",
+                20000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Gem",
+        "name": "Sacred Gem",
+        "desc": "Permanently raises all stats (except MOV) by 3 points.",
+        "icon_nid": "Valuable",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                50000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "permanent_stat_change",
+                [
+                    [
+                        "HP",
+                        3
+                    ],
+                    [
+                        "STR",
+                        3
+                    ],
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "SKL",
+                        3
+                    ],
+                    [
+                        "SPD",
+                        3
+                    ],
+                    [
+                        "LCK",
+                        3
+                    ],
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ],
+                    [
+                        "CON",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "usable_in_base",
                 null
             ]
         ]
