@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Achievements",
+        "trigger": "level_start",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "create_achievement;ch0;Eirika First Kill;Prologue: Kill enemy with Eirika. <red>Reward</>5000 Gold.",
+            "create_record;EirikaKill;False",
+            "",
+            "#if;RECORDS.get('EirikaKill')",
+            "    #give_money;5000",
+            "#end"
+        ],
+        "nid": "Global Achievements"
+    }
+]
