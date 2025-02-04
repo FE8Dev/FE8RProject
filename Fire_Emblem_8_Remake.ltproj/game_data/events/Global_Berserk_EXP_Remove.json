@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Berserk_EXP_Remove",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "has_skill(unit, 'Berserk')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_exp;{unit};-5"
+        ],
+        "nid": "Global Berserk_EXP_Remove"
+    }
+]
