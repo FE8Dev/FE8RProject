@@ -11,7 +11,7 @@
             "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
             "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
             "music;55- Shops Orchestral Cover;500",
-            "shop;{eval:game.game_vars.get('_last_choice')};Volcano,Thoron,Holy_Burst,Aura_Glacier,Unending_Eclipse,Apocalypse,Elsilence,Arcane_Staff;vendor",
+            "shop;{eval:game.game_vars.get('_last_choice')};Beam_Staff,Divine_Staff,Arcane_Burst,Tempest,Glacies,Dire_Thunder,Forblaze,Blood_Luna,Unending_Eclipse,Demon_Specter,Judgement_Fire,Luce;vendor",
             "music_fade_back",
             "game_var;_last_choice;False",
             "else",

@@ -11,7 +11,7 @@
             "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
             "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
             "music;56- Armories Orchestral Cover;500",
-            "shop;{eval:game.game_vars.get('_last_choice')};Brave Sword,Platinum_Sword,Volcano_Sword,Baselard,Kunai,Platinum_Blade,Helix_Blade_Dark,Helix_Blade_Anima,Brave Lance,Platinum_Lance,Grand_Spear,Storm_Spear,Platinum_Greatlance,Darksteel_Scythe_Lance,Brave Axe,Platinum_Axe,Stormbreaker,Berserker_Axe,Platinum_Warhammer,Brave Bow,Platinum_Bow,Yuki_Onna_Bow,Darkwood_Greatbow;armory",
+            "shop;{eval:game.game_vars.get('_last_choice')};Infernal_Sword,Ramuhs_Dagger,Caliburn,Lightbringer,Gradivus,Longinus,Grand_Cross,Wrathful_Axe,Smite_of_God,Demon_Axe,Sacred_Bow;armory",
             "music_fade_back",
             "game_var;_last_choice;False",
             "else",
