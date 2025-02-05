@@ -1,0 +1,18 @@
+[
+    {
+        "name": "DamageAchievement",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;any([record.over_damage >= 10 for record in game.records.damage if game.get_unit(record.dealer).team == 'player']) and not has_achievement('damage')",
+            "    complete_achievement;damage;true;banner",
+            "    give_money;3000",
+            "end"
+        ],
+        "nid": "Global DamageAchievement"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "name": "FirstKillAchievement",
+        "trigger": "combat_end",
+        "level_nid": "0",
+        "condition": "game.check_dead('101') or game.check_dead('102') or game.check_dead('103') or game.check_dead('Oneill') ",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;not has_achievement('firstkill')",
+            "    complete_achievement;firstkill;true;banner",
+            "    give_money;5000",
+            "end"
+        ],
+        "nid": "0 FirstKillAchievement"
+    }
+]

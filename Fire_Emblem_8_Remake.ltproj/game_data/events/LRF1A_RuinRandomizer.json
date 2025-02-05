@@ -1,0 +1,28 @@
+[
+    {
+        "name": "RuinRandomizer",
+        "trigger": "level_start",
+        "level_nid": "LRF1A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#pyev1",
+            "#import random",
+            "",
+            "#for i in range(5):",
+            "#    $move_unit game.get_enemy_units(only_on_field: bool = True)[i].nid (game.get_enemy_units(only_on_field: bool = True)[i].position[0]+random.randint(-1, 1) game.get_enemy_units(only_on_field: bool = True)[i].position[1]+random.randint(-1, 1) \"closest\" 1",
+            "",
+            "",
+            "#items=['Evil Eye', 'Iron Sword', 'Iron Axe']",
+            "#classes=['Gywllgi', 'Maelduin', 'Arch_Mogall']",
+            "",
+            "#for i in range(5):",
+            "#    $make_generic str(i) random.choice(classes) random.randint(3, 9) \"enemy2\" \"Defend\"         ItemList=[random.choice(items)]",
+            "#    $add_unit str(i) \"101\" \"immediate\" \"closest\"",
+            ""
+        ],
+        "nid": "LRF1A RuinRandomizer"
+    }
+]
