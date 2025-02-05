@@ -2,7 +2,7 @@
     {
         "nid": "PreparedP",
         "name": "Prepared+",
-        "desc": "While Kyle has full HP, his attacks can't be countered. Damage taken reduced by 75%.",
+        "desc": "While Kyle has full HP, +40 Hit, 1.5x damage, damage taken reduced by 75%, and his attacks can't be countered.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -22,7 +22,15 @@
                 0.25
             ],
             [
-                "lost_on_endstep",
+                "dynamic_accuracy",
+                "40"
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "lost_on_end_chapter",
                 null
             ]
         ]
