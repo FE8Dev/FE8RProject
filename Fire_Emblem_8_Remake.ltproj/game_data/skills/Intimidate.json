@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Intimidate",
+        "name": "Intimidate",
+        "desc": "This unit takes half damage when defending.\nAlso reduce enemies stats by 30%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Intimidate_Debuff",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    }
+]

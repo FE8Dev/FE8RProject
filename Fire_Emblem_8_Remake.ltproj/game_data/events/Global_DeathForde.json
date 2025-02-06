@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathForde",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Forde'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover",
+            "add_portrait;Forde;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Forde;Ah, Prince Ephraim...|It...|It was fun while it lasted.",
+            "else",
+            "speak;Forde;Gotta pull back...Just my luck...",
+            "end",
+            "expression;Forde;CloseEyes",
+            "remove_portrait;Forde",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathForde"
+    }
+]

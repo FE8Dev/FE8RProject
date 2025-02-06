@@ -1,0 +1,116 @@
+[
+    {
+        "nid": "Shine_Fire",
+        "name": "Shine Fire",
+        "desc": "Ignites a pillar of light and fire from afar. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>LCK + SKL/2, +30 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                1500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                4
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                13
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning_Twist_Fire"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_30"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Seared_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_MID"
+            ],
+            [
+                "cooldown",
+                2
+            ]
+        ]
+    }
+]

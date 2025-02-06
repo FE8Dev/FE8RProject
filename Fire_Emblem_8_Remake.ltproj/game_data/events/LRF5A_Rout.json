@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Rout",
+        "trigger": "unit_wait",
+        "level_nid": "LRF5A",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_bexp;4000",
+            "win_game"
+        ],
+        "nid": "LRF5A Rout"
+    }
+]

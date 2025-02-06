@@ -1,0 +1,15 @@
+[
+    {
+        "name": "GameOver_5",
+        "trigger": "combat_end",
+        "level_nid": "5",
+        "condition": "game.check_dead(\"Eirika\") or game.check_dead(\"Natasha\")",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "trigger_script;Global DeathTimewheel"
+        ],
+        "nid": "5 GameOver_5"
+    }
+]

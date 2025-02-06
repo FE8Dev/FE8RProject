@@ -1,0 +1,103 @@
+[
+    {
+        "nid": "Smoke_Bow",
+        "name": "Smoke Bow",
+        "desc": "A long range bow that covers the user in smoke.\n<green>Skills:</>Smoke Aura\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>+5 SPD.",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Smoke_Aura"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Colm"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Colm\").wexp['Bow'] < 180"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Vicious_Blow",
+        "name": "Vicious Blow",
+        "desc": "Add unit's STR/4 to damage given if unit's STR >= enemy's STR.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('STR') >= target.get_stat('STR')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('STR') // 4"
+            ]
+        ]
+    }
+]

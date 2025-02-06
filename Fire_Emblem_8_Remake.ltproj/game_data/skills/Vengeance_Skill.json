@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Vengeance_Skill",
+        "name": "Vengeance",
+        "desc": "+30 Hit and +5 Damage.\nAlso add missing HP to attack.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1) + 5"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

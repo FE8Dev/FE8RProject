@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightLeonNormal",
+        "trigger": "combat_start",
+        "level_nid": "FinalB1",
+        "condition": "unit.nid == \"LeonE\" or unit2.nid == \"LeonE\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Lyon;Left",
+            "speak;Lyon;I am the Demon King...|I know nothing of human frailty.|I am supreme...",
+            "remove_portrait;Lyon"
+        ],
+        "nid": "FinalB1 FightLeonNormal"
+    }
+]

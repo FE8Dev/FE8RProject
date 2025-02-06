@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Berserkers_Rage",
+        "name": "Berserker's Rage",
+        "desc": "Inflict Berserk on this unit for 5 turns, but also reduce damage by half, doubles damage, and +20 Crit. Cannot be Restored.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            50
+        ],
+        "components": [
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "self_status_on_hit",
+                "Berserkers_Rage_Buff"
+            ]
+        ]
+    }
+]

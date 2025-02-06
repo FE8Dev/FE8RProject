@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Desert_Tiger",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "sound;Wind",
+            "add_weather;sand;{unit}",
+            "add_portrait;Gerik;Right",
+            "speak;Gerik;Alright, let's get to work.|Time to show them why I am the Desert Tiger.",
+            "remove_portrait;Gerik",
+            "remove_skill;Gerik;Desert_Tiger",
+            "give_skill;Gerik;Desert_Tiger_Stop;no_banner",
+            "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
+            "give_skill;{enemy_unit};Desert_Tiger_Global;no_banner",
+            "endf"
+        ],
+        "nid": "Global Desert_Tiger"
+    }
+]

@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Blackscale_Spiral_RES_hide",
+        "name": "Blackscale Spiral",
+        "desc": "Add enemy's MAG x2 to attack.\nDouble RES when during enemy phase.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            32
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        2.0
+                    ]
+                ]
+            ]
+        ]
+    }
+]

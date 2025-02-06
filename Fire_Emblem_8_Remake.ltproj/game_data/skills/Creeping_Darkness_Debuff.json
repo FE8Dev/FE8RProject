@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "Creeping_Darkness_Debuff",
+        "name": "Creeping Darkness",
+        "desc": "-20 Hit/Dodge, -5 STR/MAG/DEF/RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            20
+        ],
+        "components": [
+            [
+                "dynamic_accuracy",
+                "-20"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "-20"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Song_of_Silence",
+        "name": "Song of Silence",
+        "desc": "Attacks inflict the Silence status on enemies when hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Silence"
+            ]
+        ]
+    }
+]

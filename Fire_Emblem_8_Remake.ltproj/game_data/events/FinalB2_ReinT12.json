@@ -1,0 +1,21 @@
+[
+    {
+        "name": "ReinT12",
+        "trigger": "turn_change",
+        "level_nid": "FinalB2",
+        "condition": "game.turncount == 12",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "screen_shake;0",
+            "move_cursor;1,4",
+            "wait;500",
+            "add_group;ReinT12;ReinT12;warp;closest",
+            "wait;500",
+            "move_cursor;21,4",
+            "screen_shake_end"
+        ],
+        "nid": "FinalB2 ReinT12"
+    }
+]

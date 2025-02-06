@@ -1,0 +1,90 @@
+[
+    {
+        "nid": "Judgement_Axe",
+        "name": "Judgement Axe",
+        "desc": "An axe entrusted to Moulder to bring righteous glory.\n<orange>Element:</><icon>Light</><icon>Thunder</>\n<red>Effective:</><icon>Shadowblight</><icon>Armor</><icon>Drenched</>\n<violet>Inflicts:</>Breach (15)",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Moulder"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Moulder\").wexp['Axe'] >= 360"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

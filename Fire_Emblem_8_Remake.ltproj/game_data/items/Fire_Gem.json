@@ -1,0 +1,57 @@
+[
+    {
+        "nid": "Fire_Gem",
+        "name": "Fire Gem",
+        "desc": "Grants the user's weapon the Fire Element for 1 turn on use. This is a free action.\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\nUses restored between chapters.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            27,
+            4
+        ],
+        "components": [
+            [
+                "value",
+                500
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "status_on_hit",
+                "Fire_Gem_Skill"
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "usable",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ]
+        ]
+    }
+]

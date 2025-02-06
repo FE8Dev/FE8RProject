@@ -1,0 +1,27 @@
+[
+    {
+        "name": "House_2",
+        "trigger": "Visit",
+        "level_nid": "10A",
+        "condition": "region.nid == 'House_2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close;500",
+            "change_background;House",
+            "transition;Open;500",
+            "add_portrait;Woman2;Left;no_block",
+            "add_portrait;{unit};Right",
+            "speak;Woman2;Elder Pablo used his fortune to build his own private army.|Now he's using it to wrest control of Carcino from the council's hands...|Please...help Lord Klimt, so that he can help us.",
+            "multi_remove_portrait;{unit};Woman2",
+            "transition;Close;500",
+            "change_background",
+            "transition;Open;500",
+            "give_bexp;800",
+            "has_traded;{unit}",
+            "level_var;House2;True"
+        ],
+        "nid": "10A House_2"
+    }
+]

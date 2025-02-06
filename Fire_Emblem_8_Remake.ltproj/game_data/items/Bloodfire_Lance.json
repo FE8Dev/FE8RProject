@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "Bloodfire_Lance",
+        "name": "Bloodfire Lance",
+        "desc": "A lance of mighty power, but flowing with dark magic. Can Cormag tame this lance?\n<green>Skills:</>In Control/Possestion, Lance Guard (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            8,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "In_Control",
+                    "Possessed"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cormag"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Cormag\").wexp['Lance'] >= 360"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Burned_Boss",
+        "name": "Extremely Burned",
+        "desc": "Take 30 damage each turn and half SKL. Does not work on Bosses below 25% Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "'Boss' in unit.tags and (unit.get_hp() >= unit.get_max_hp() * 0.25)"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_damage",
+                30
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "SKL",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "upkeep_animation",
+                "MapTorch"
+            ],
+            [
+                "upkeep_sound",
+                "FireHit"
+            ]
+        ]
+    }
+]

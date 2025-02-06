@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Insight",
+        "name": "Insight",
+        "desc": "+30 Hit when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ]
+        ]
+    }
+]

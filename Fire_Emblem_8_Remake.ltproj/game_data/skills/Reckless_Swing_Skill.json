@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Reckless_Swing_Skill",
+        "name": "Reckless Swing",
+        "desc": "Add +6 Damage and +15 Crit to attack,\nbut take 15 damage after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            48
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "recoil",
+                15
+            ],
+            [
+                "dynamic_damage",
+                "6"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Lucky_Shot",
+        "name": "Lucky Shot",
+        "desc": "Add SKL x2 and LCK x2 to Crit Damage. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "eval_crit_additional",
+                "(unit.get_stat('SKL') * 2) + (unit.get_stat('LCK') * 2)"
+            ]
+        ]
+    }
+]

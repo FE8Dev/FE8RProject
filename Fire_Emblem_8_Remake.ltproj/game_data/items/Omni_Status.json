@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Omni_Status",
+        "name": "Omni Status",
+        "desc": "Give all Elemental Statuses and Elemental Effectiveness.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            11,
+            5
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Flying",
+                        "Drenched",
+                        "Pirate",
+                        "Shadow",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Rock_Punctures",
+                    "Drench_Debuff",
+                    "Shadow_Blight",
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Guided_Rampage",
+        "name": "Guided Rampage",
+        "desc": "Gains +1 bonus attack (+2 if unit doubles), +50 Hit and +50 Crit Avoid when initiating.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "50"
+            ]
+        ]
+    }
+]

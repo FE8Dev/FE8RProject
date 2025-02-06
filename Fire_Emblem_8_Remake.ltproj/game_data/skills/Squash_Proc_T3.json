@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "Squash_Proc_T3",
+        "name": "Squash",
+        "desc": "+20 Con.\n<red>CA:</>Add Con to attack, also ignore the enemy's DEF and reduces their DEF by half. <green>CD:5 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            45
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Squash_Skill"
+            ],
+            [
+                "build_charge",
+                5
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Squash_CON_Buff_hide"
+                ]
+            ]
+        ]
+    }
+]

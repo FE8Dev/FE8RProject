@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Eternal_Waters",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "has_skill(unit, 'Eternal_Waters_Child') or has_skill(unit2, 'Eternal_Waters_Child')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.team == 'enemy' or unit.team == 'enemy2'",
+            "resurrect;{unit}",
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "change_team;{unit};other",
+            "change_ai;{unit};Pursue",
+            "change_class;{unit};The_Drowned;silent",
+            "give_skill;{unit};Eternal_Waters;no_banner",
+            "give_skill;{unit};Eternal_Waters_Child;no_banner",
+            "give_item;{unit};Lethal Talon;no_banner",
+            "give_item;{unit};Aqua_Triple_Burst;no_banner",
+            "else",
+            "end"
+        ],
+        "nid": "Global Eternal_Waters"
+    }
+]

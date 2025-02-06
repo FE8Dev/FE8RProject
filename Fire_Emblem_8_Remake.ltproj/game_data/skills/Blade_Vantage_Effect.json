@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Blade_Vantage_Effect",
+        "name": "Blade Vantage Effect",
+        "desc": "Give enemies Vantage when attacking with a Blade.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Vantage_Plus_Item_Blade",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

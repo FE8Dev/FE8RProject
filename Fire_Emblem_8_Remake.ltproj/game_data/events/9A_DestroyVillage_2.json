@@ -1,0 +1,22 @@
+[
+    {
+        "name": "DestroyVillage_2",
+        "trigger": "Destructible",
+        "level_nid": "9A",
+        "condition": "region.nid == 'VillageD_2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "flicker_cursor;{position}",
+            "sound;VillageDestroyed",
+            "show_layer;VillageD_2",
+            "remove_region;VillageD_2",
+            "wait;500",
+            "sound;ItemBreak",
+            "alert;The village was attacked!",
+            "wait;500"
+        ],
+        "nid": "9A DestroyVillage_2"
+    }
+]

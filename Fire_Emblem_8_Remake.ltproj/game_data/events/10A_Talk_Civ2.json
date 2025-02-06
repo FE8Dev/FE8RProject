@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Eirika', 'Civ2')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Woman2;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Woman2;Thank you so much for getting rid of Pablo...|Lord Klimt has treated us way better than he ever would...",
+            "speak;Eirika;Klimt does sound nicer...",
+            "speak;Woman2;Indeed...|I'm glad we averted a great disaster...",
+            "multi_remove_portrait;Woman2;Eirika",
+            "give_bexp;2500",
+            "remove_talk;Eirika;Civ2"
+        ],
+        "nid": "10A Talk_Civ2"
+    }
+]

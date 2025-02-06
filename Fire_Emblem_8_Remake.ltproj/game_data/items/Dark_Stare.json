@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Dark_Stare",
+        "name": "Dark Stare",
+        "desc": "A dark spell quickly casted from the eye.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2), Spotted\n<pink>Misc:</>HP absorb (10%), cannot miss, cannot double, cannot DS.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Evil Eye"
+            ],
+            [
+                "prf_unit",
+                [
+                    "EyeBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"EyeBoy\").wexp['Dark'] < 120"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_2",
+                    "Shadow_Blight",
+                    "Spotted"
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "lifelink",
+                0.10000000000000003
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    }
+]

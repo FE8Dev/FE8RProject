@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Chest_3",
+        "trigger": "Chest",
+        "level_nid": "9B",
+        "condition": "region.nid == 'Chest_3'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Chest_3",
+            "give_item;{unit};Bolt_Spear",
+            "has_traded;{unit}"
+        ],
+        "nid": "9B Chest_3"
+    }
+]

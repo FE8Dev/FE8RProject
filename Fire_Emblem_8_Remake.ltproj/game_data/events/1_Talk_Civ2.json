@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "1",
+        "condition": "check_pair('Eirika','Civ2')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Man2;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Man2;It looks like that Rapier of yours proved pretty effective against that knight fellow.",
+            "sound;EirikaYes",
+            "speak;Eirika;Yes, I'm glad I learned how to wield it.|It has been proven to be very useful.",
+            "speak;Man2;I believe it.|Us country folk don't have much use for weapons, but we are lucky.|King Hayden has been good at protecting us.",
+            "speak;Eirika;Indeed, King Hayden is a wonderful man.",
+            "speak;Man2;Yes, now see what else you can do about those Grado guys.",
+            "expression;Eirika;HalfCloseEyes",
+            "speak;Eirika;Grado...",
+            "multi_remove_portrait;Man2;Eirika",
+            "remove_talk;Eirika;Civ2",
+            "give_bexp;500"
+        ],
+        "nid": "1 Talk_Civ2"
+    }
+]

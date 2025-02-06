@@ -1,0 +1,33 @@
+[
+    {
+        "name": "OnLevelSelect_2",
+        "trigger": "level_select",
+        "level_nid": "2",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;5;2000",
+            "wait;500",
+            "add_portrait;Hayden;Left,Middle;low_priority;no_block",
+            "speak;Narrator;King Hayden apologizes for being unable to spare soldiers.;;;narration",
+            "remove_portrait;Hayden",
+            "add_portrait;Vanessa;Left,Middle;right;NormalBlink;low_priority;no_block",
+            "add_portrait;Moulder;Right,Middle;left;NormalBlink;low_priority;no_block",
+            "speak;Narrator;However, he does provide Eirika with a small but trusted party of vassals.;;;narration",
+            "remove_portrait;Vanessa",
+            "remove_portrait;Moulder",
+            "add_portrait;Eirika;Right,Middle;left;NormalBlink;low_priority;no_block",
+            "speak;Narrator;Eirika is grateful for the king's aid.;;;narration",
+            "remove_portrait;Eirika",
+            "speak;Narrator;Chasing rumors of her brother, she sets out for Grado.{br}The group's first stop is the remote village of Ide, which was, until very recently, a part of Renais.{br}Here, Eirika sees the devasation of Renais with her own eyes.;;;narration",
+            "overworld_move_unit;Eirika_Group;5;3",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "2 OnLevelSelect_2"
+    }
+]

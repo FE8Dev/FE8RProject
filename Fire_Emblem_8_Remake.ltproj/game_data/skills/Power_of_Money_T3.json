@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Power_of_Money_T3",
+        "name": "Power of Money",
+        "desc": "Add current Gold/500 to attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "game.get_money() // 500"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

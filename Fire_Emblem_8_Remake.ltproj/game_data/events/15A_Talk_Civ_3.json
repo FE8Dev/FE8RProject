@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ_3",
+        "trigger": "on_talk",
+        "level_nid": "15A",
+        "condition": "check_pair('Eirika', 'Civ3')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Villager Man;Left",
+            "speak;Villager Man;So you beat the Tiger Eye, and the Moonstone...|That's pretty impressive...|You're pretty strong, huh?",
+            "speak;Eirika;I suppose...|Who are you though?|How do you know so much?",
+            "speak;Villager Man;I have my ways.|We of Jehanna have ways of getting information...|But that's a secret.",
+            "speak;Eirika;A secret?|I have a feeling I shouldn't ask more about it though...",
+            "multi_remove_portrait;Eirika;Villager Man",
+            "give_bexp;5000",
+            "remove_talk;Eirika;Civ3"
+        ],
+        "nid": "15A Talk_Civ_3"
+    }
+]

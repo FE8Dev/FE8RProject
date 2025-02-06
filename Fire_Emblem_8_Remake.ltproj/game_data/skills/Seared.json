@@ -1,0 +1,83 @@
+[
+    {
+        "nid": "Seared",
+        "name": "Seared",
+        "desc": "Reduce SKL and STR by 25% and Wind weapons are now effective against this unit for 2 turns or next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            42
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "F",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "F",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0.75
+                    ],
+                    [
+                        "SKL",
+                        0.75
+                    ]
+                ]
+            ]
+        ]
+    }
+]

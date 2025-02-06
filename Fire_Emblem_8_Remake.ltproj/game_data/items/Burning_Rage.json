@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Burning_Rage",
+        "name": "Burning Rage",
+        "desc": "A spell that has turned one red with rage.\n<green>Skills:</>Anger Fuel+\n<orange>Element:</><icon>Dark</><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (15)\n<red>Effective:</><icon>Horse</><icon>Flying</><icon>Seared</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            3,
+            11
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "hit",
+                0
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Eclipse_Red"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Anger_Fuel_P"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "CyclopsBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"CyclopsBoy\").wexp['Dark'] >= 360 and u(\"CyclopsBoy\").wexp['Dark'] < 420"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15",
+                    "Seared"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    }
+]

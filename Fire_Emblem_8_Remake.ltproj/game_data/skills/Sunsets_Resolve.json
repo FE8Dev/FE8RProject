@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Sunsets_Resolve",
+        "name": "Sunset's Resolve",
+        "desc": "While Duessel is below 75% Max HP, boost STR/SPD/SKL/DEF by x1.5. When Duessel's HP goes below 50% Max HP, after the next battle, all allies gain Sunset's Resolve as well until the end of the chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            44
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.5
+                    ],
+                    [
+                        "SPD",
+                        1.5
+                    ],
+                    [
+                        "SKL",
+                        1.5
+                    ],
+                    [
+                        "DEF",
+                        1.5
+                    ]
+                ]
+            ]
+        ]
+    }
+]

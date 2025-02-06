@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "LRF6B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "chapter_title",
+            "center_cursor;9,25;immediate",
+            "add_tag;122;Boss",
+            "add_region;Door_1;16,8;1,3;event;unit.can_unlock(region)",
+            "prep;t;54- Combat Preparation Orchestral Cover;Escape;true;TOVorRuinsEscapeB"
+        ],
+        "nid": "LRF6B Intro"
+    }
+]

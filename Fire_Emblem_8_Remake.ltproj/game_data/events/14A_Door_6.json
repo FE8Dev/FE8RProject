@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Door_6",
+        "trigger": "Door",
+        "level_nid": "14A",
+        "condition": "region.nid == 'Door_6'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Door_6;fade",
+            "has_traded;{unit}"
+        ],
+        "nid": "14A Door_6"
+    }
+]

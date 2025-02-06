@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Explosive_Poison_Crit_T3",
+        "name": "Explosive Venom",
+        "desc": "+40 Crit against enemies inflicted with Venomous.\nAttacks spread Venom to enemies within 3 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            41
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "has_skill(target, 'Venomous_Effect')"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "40"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Explosive_Poison_hide"
+                ]
+            ]
+        ]
+    }
+]

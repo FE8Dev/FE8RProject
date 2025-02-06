@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Staff_Range_P1_EP_hide",
+        "name": "Staff Range +1",
+        "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "1 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+            ]
+        ]
+    }
+]

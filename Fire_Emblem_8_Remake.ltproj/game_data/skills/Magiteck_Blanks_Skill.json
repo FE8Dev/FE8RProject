@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Magiteck_Blanks_Skill",
+        "name": "Magiteck Blanks",
+        "desc": "<red>CA: </>Reduces bows minimum range by 1. <green>CD:0 Turns</>\nEffect is active during EP. Enemy kills increase STR/MAG by 2.\nMax 30 stacks.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            40
+        ],
+        "components": [
+            [
+                "modify_minimum_range",
+                -1
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "DeathPablo",
+        "trigger": "unit_death",
+        "level_nid": "10A",
+        "condition": "unit.nid == 'Pablo'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Pablo;Left",
+            "speak;Pablo;Urrgh...|N-no.|I cannot die when there is such wealth to be had...|Re-retreat!|Mercenaries, to me!",
+            "remove_portrait;Pablo"
+        ],
+        "nid": "10A DeathPablo"
+    }
+]

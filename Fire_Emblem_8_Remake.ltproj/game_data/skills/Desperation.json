@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Desperation",
+        "name": "Desperation",
+        "desc": "When below 75% HP, unit will follow up before the enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "desperation",
+                null
+            ]
+        ]
+    }
+]

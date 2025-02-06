@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Sinister_Eye",
+        "name": "Sinister Eye",
+        "desc": "Gaze of sinister intentions.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (8), Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (20%), cannot miss, cannot double, cannot DS.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            8,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "crit",
+                7
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "battle_cast_anim",
+                "Crimson Eye"
+            ],
+            [
+                "prf_unit",
+                [
+                    "EyeBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"EyeBoy\").wexp['Dark'] >= 240 and u(\"EyeBoy\").wexp['Dark'] < 420"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_8",
+                    "Shadow_Blight",
+                    "Spotted"
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "lifelink",
+                0.2
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ]
+        ]
+    }
+]

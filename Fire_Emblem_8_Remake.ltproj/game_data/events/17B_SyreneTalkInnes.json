@@ -1,0 +1,28 @@
+[
+    {
+        "name": "SyreneTalkInnes",
+        "trigger": "on_talk",
+        "level_nid": "17B",
+        "condition": "check_pair('Innes', 'Syrene')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Innes;Right;Syrene;Left",
+            "#music;50 Comrades;300",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Innes;Syrene!",
+            "speak;Syrene;Prince Innes...is it...|Ah...|It really is you, isn't it, Prince Innes?|Being rescued by you...|It's like a dream...",
+            "speak;Innes;Syrene?|I need a status report.",
+            "speak;Syrene;Oh...|Oh, yes!|Please forgive me!|The Frelian troops we dispatched were ambushed and decimated.|My squad is all that remains.",
+            "speak;Innes;So many dead...|You can rest easy now, Syrene. I'm here.|Victory is assured.|Let's go.",
+            "speak;Syrene;Yes, sir...|Prince Innes.",
+            "multi_remove_portrait;Innes;Syrene",
+            "remove_talk;Innes;Syrene",
+            "change_ai;Syrene;None",
+            "change_team;Syrene;player",
+            "music_fade_back;300"
+        ],
+        "nid": "17B SyreneTalkInnes"
+    }
+]

@@ -1,0 +1,83 @@
+[
+    {
+        "nid": "Valkyrie_Queen",
+        "name": "Valkyrie Queen",
+        "desc": "A spear for those who are meant to dominate battle from above.\n<green>Skills:</>Wrath of the Valkyries+, Lance Guard (SS)",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            26,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                38
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                23
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Syrene"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_X",
+                    "Wrath_Of_The_Valkyries_AuraP"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Syrene\").wexp['Lance'] >= 480"
+            ]
+        ]
+    }
+]

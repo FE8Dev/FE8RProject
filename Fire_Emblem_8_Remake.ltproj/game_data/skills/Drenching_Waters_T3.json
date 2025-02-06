@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Drenching_Waters_T3",
+        "name": "Drenching Waters",
+        "desc": "Attacks inflict the Drenched status on hit.\nDouble damage and +20 Crit against Drenched enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            20
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Drenching_Waters_Damage_hide"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathAmelia",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Amelia'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Amelia;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Amelia;I...|I did well, didn\u2019t I?",
+            "else",
+            "speak;Amelia;Oww...|I tripped a little too hard there...|A little rest will fix this up though.",
+            "end",
+            "expression;Amelia;CloseEyes",
+            "remove_portrait;Amelia",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathAmelia"
+    }
+]

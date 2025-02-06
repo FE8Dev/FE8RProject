@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Smart_Strike_Proc",
+        "name": "Smart Strike",
+        "desc": "<red>CA:</>Add SKL/2 to unit's Attack. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Smart_Strike_Skill"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Cursed_Baton_Curse",
+        "name": "Cursed Baton",
+        "desc": "For the Cursed Baton item.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Cursed_2"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

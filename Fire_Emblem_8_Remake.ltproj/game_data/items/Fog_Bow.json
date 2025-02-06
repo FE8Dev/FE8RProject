@@ -1,0 +1,94 @@
+[
+    {
+        "nid": "Fog_Bow",
+        "name": "Fog Bow",
+        "desc": "A Bow that shrounds the wielder in fog.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + MOV*6, +50 Avoid/Dodge.",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            2,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Fog_Sword_Effect_Strong"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 15,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_MOV_STRONG"
+            ]
+        ]
+    }
+]

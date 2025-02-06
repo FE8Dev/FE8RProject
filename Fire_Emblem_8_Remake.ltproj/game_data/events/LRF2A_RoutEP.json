@@ -1,0 +1,16 @@
+[
+    {
+        "name": "RoutEP",
+        "trigger": "phase_change",
+        "level_nid": "LRF2A",
+        "condition": "len(game.get_enemy_units()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "give_bexp;2500",
+            "win_game"
+        ],
+        "nid": "LRF2A RoutEP"
+    }
+]

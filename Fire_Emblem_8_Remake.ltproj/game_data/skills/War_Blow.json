@@ -1,0 +1,41 @@
+[
+    {
+        "nid": "War_Blow",
+        "name": "War Blow",
+        "desc": "Warhammers deal 20% max HP damage and inflict Stun to enemies within 2 spaces of target if used by a Pirate or Dragon unit. Does not work if unit is not above 95% Max HP.",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            2,
+            4
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "('Pirate' in unit.tags or 'Dragon' in unit.tags) and (unit.get_hp() >= unit.get_max_hp() * 0.95)"
+            ],
+            [
+                "savage_blow_fates",
+                2
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Stun",
+                    "range": 2
+                }
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Intro",
+        "trigger": "level_start",
+        "level_nid": "TOVF6A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "",
+            "center_cursor;19,19;immediate",
+            "add_region;Chest_1;2,18;1,1;event;unit.can_unlock(region)",
+            "add_region;Chest_2;10,1;1,1;event;unit.can_unlock(region)",
+            "add_region;Chest_3;12,1;1,1;event;unit.can_unlock(region)",
+            "add_region;Chest_4;19,1;1,1;event;unit.can_unlock(region)",
+            "prep;t;54- Combat Preparation Orchestral Cover;Escape;true;TOVorRuinsEscapeA"
+        ],
+        "nid": "TOVF6A Intro"
+    }
+]

@@ -1,0 +1,97 @@
+[
+    {
+        "nid": "Storm_Staff",
+        "name": "Storm Staff",
+        "desc": "A staff that summons a mighty storm.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cannot crit, always hits, (Shove:1).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            19,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Frostbite"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "eval_available",
+                "u(\"Artur\").wexp['Staff'] >= 180 and u(\"Artur\").wexp['Staff'] < 360"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Artur"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "shove",
+                1
+            ]
+        ]
+    }
+]

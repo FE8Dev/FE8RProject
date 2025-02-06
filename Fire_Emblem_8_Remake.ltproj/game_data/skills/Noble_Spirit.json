@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Noble_Spirit",
+        "name": "Noble Spirit",
+        "desc": "Add unit's SKL/2 to attack, and unit's SKL to Hit/Avoid when unit is not at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            25
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() != unit.get_max_hp()"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('SKL') // 2"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SKL')"
+            ],
+            [
+                "dynamic_accuracy",
+                "unit.get_stat('SKL')"
+            ]
+        ]
+    }
+]

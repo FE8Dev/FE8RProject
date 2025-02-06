@@ -1,0 +1,15 @@
+[
+    {
+        "name": "GameOver_16A",
+        "trigger": "combat_end",
+        "level_nid": "16A",
+        "condition": "game.check_dead(\"Eirika\") or game.check_dead(\"Ephraim\")",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "trigger_script;Global DeathTimewheel"
+        ],
+        "nid": "16A GameOver_16A"
+    }
+]
