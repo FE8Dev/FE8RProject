@@ -1,0 +1,29 @@
+[
+    {
+        "name": "OnLevelSelect_10B",
+        "trigger": "level_select",
+        "level_nid": "10B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;10B;2000",
+            "wait;500",
+            "add_portrait;Duessel;Right,Middle;right;NormalBlink;low_priority",
+            "speak;Narrator;A former lance instructor to Ephraim, Grado's General Duessel often came to Renais as an emissary of his empire.",
+            "add_portrait;Ephraim;Left,Middle;left;NormalBlink;low_priority",
+            "speak;Narrator;Despite their stations, the two men share similar dispositions and a warm relationship.",
+            "remove_portrait;Duessel",
+            "speak;Narrator;Why has Grado Started this war?|What is the miasma of evil emanating from the country?|Ephraim believes that Duessel can answer these questions.",
+            "remove_portrait;Ephraim",
+            "overworld_move_unit;Ephraim_Group;10B;no_block",
+            "speak;Narrator;It is this belief that propels Ephraim forward into Grado territory.",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "10B OnLevelSelect_10B"
+    }
+]

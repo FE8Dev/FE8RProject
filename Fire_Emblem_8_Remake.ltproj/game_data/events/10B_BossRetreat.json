@@ -1,0 +1,23 @@
+[
+    {
+        "name": "BossRetreat",
+        "trigger": "enemy_turn_change",
+        "level_nid": "10B",
+        "condition": "game.turncount == 9",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Beran",
+            "wait;300",
+            "flicker_cursor;Beran",
+            "add_portrait;Beran;Left",
+            "speak;Beran;Grrr...|They're held on for too long.|If this continues, General Valter will have me-|...Prepare a ship.|We must flee.|Quickly!",
+            "add_portrait;SoldierRed;Right",
+            "speak;SoldierRed;B-but General Valter...|He'll be so angry...",
+            "speak;Beran;We're doomed either way.|General Valter will never forgive our failure here...|And if we stay, we'll be devoured like those other fools...|Our best bet is to give up and escape with our lives.",
+            "multi_remove_portrait;Beran;SoldierRed"
+        ],
+        "nid": "10B BossRetreat"
+    }
+]

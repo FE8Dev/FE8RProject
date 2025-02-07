@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Call_From_The_Grave_Knoll",
+        "name": "Call From The Grave",
+        "desc": "<red>CA:</>Summon 4 phantoms to fight for you. This is a free action. <green>CD:4 Turns</> ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('phantom1_' + unit.nid) and (not game.check_alive('phantom2_' + unit.nid)) and (not game.check_alive('phantom3_' + unit.nid)) and (not game.check_alive('phantom4_' + unit.nid))"
+            ],
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "ability",
+                "Call_From_The_Grave_Knoll"
+            ]
+        ]
+    }
+]

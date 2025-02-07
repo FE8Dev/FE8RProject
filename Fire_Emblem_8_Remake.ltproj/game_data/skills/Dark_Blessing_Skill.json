@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Dark_Blessing_Skill",
+        "name": "Dark Blessing",
+        "desc": "<red>CA: </>+1 range to axes and dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.\nImmune to Negative status effects.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "eval_max_range",
+                "1"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "7",
+        "condition": "check_pair('Eirika','Civ2')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Old Woman 1;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Villager Old Woman 1;I'm so sorry I was asleep.|I wish I was there so I could give you more information...",
+            "speak;Eirika;It's ok...|What's done is done.",
+            "speak;Villager Old Woman 1;If I hear anything else while you're around, I will let you know!",
+            "speak;Eirika;Thank you...|That is much appreciated...",
+            "multi_remove_portrait;Villager Old Woman 1;Eirika",
+            "give_bexp;1500",
+            "remove_talk;Eirika;Civ2"
+        ],
+        "nid": "7 Talk_Civ2"
+    }
+]

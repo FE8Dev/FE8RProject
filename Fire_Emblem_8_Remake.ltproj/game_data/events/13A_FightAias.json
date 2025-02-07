@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightAias",
+        "trigger": "combat_start",
+        "level_nid": "13A",
+        "condition": "unit.nid == \"Aias\" or unit2.nid == \"Aias\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Aias;Left",
+            "speak;Aias;It's not over yet.|Victory still hands in the balance.|Their key is defeating the enemy commander, but...",
+            "remove_portrait;Aias"
+        ],
+        "nid": "13A FightAias"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Transmute_Crit_hide",
+        "name": "Transmute",
+        "desc": "+15 MAG/SPD/RES when this unit is hit by any magical attack.\nMax 5 stacks. Last 2 turns.\nAlso gain this whenever unit Crits.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "gain_skill_after_crit",
+                "Transmute_Buff"
+            ]
+        ]
+    }
+]

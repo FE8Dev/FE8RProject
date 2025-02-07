@@ -1,0 +1,35 @@
+[
+    {
+        "name": "OnOverworldEnter_2",
+        "trigger": "overworld_start",
+        "level_nid": "2",
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;2;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;5",
+            "reveal_overworld_node;5",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;2;5",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;DGA",
+            "reveal_overworld_node;DGA",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;2;DGA",
+            "if;game.game_vars['TutorialNewMech'] == True or game.game_vars['Tutorial'] == 'Yes'",
+            "speak;Narrator;                 World Map;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Welcome to the world map!|Here you can organize your items, give units BEXP, buy some items, etc!|Right now there aren't any shops you can go to, but you'll be able to access them once they become available.|You can give BEXP though!|You will get BEXP from beating the chapters, visiting houses/villages, etc.|It will cost more BEXP the higher level the unit is, so spend wisely!|Also to note, trainee units can't use BEXP until they promote to T1 after level 10.|You can get a trainee unit next chapter, so keep note of that!;;;;6",
+            "remove_portrait;Anna",
+            "else",
+            "end"
+        ],
+        "nid": "2 OnOverworldEnter_2"
+    }
+]

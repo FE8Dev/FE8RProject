@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Seeing_Red",
+        "name": "Seeing Red",
+        "desc": "+5 STR/SPD when this unit is dealt damage by an enemy.\nEffect Stacks.\nMax 5 stacks. Lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            27
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Seeing_Red_Buff"
+            ]
+        ]
+    }
+]

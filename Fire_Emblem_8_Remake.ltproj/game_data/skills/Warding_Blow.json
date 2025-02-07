@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Warding_Blow",
+        "name": "Warding Blow",
+        "desc": "Doubles unit's RES when initiating attacks against an enemy that is equipped with a magical weapon.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack' and item_funcs.is_magic(target, target.get_weapon())"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        2.0
+                    ]
+                ]
+            ]
+        ]
+    }
+]

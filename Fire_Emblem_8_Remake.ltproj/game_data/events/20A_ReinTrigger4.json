@@ -1,0 +1,18 @@
+[
+    {
+        "name": "ReinTrigger4",
+        "trigger": "turn_change",
+        "level_nid": "20A",
+        "condition": "any(game.level.regions.get('Trigger4').contains(unit.position) for unit in game.get_units_in_party())",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "move_cursor;13,7",
+            "add_group;ReinTrigger4;13,7;fade;stack",
+            "move_group;ReinTrigger4;ReinTrigger4;normal;closest;no_follow",
+            ""
+        ],
+        "nid": "20A ReinTrigger4"
+    }
+]

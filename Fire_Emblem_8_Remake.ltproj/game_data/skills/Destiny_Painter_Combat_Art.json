@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Destiny_Painter_Combat_Art",
+        "name": "Destiny Painter",
+        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            40
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_art",
+                "Destiny_Painter_Enemy"
+            ],
+            [
+                "allowed_weapons",
+                "item.nid == 'Painting_Sword' or item.nid == 'Unrefined_Art' or item.nid == 'Pastel_Sword'"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

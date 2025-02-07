@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Strong_Lungs_Land",
+        "name": "Strong Lungs",
+        "desc": "Heal 75% of HP while on water, 10% if on land.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            3
+        ],
+        "components": [
+            [
+                "condition",
+                "not game.tilemap.get_terrain(unit.position) in ('10' , '11', '12')\n"
+            ],
+            [
+                "regeneration",
+                0.1
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    }
+]

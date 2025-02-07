@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathVanessa",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Vanessa'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Vanessa;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Vanessa;Please...|Forgive me...",
+            "else",
+            "speak;Vanessa;Forgive me...|I've got to rest up a bit...",
+            "end",
+            "expression;Vanessa;CloseEyes",
+            "remove_portrait;Vanessa",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathVanessa"
+    }
+]

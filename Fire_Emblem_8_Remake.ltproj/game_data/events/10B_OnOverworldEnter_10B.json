@@ -1,0 +1,22 @@
+[
+    {
+        "name": "OnOverworldEnter_10B",
+        "trigger": "overworld_start",
+        "level_nid": "10B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Ephraim_Group;no_animate",
+            "set_overworld_position;Ephraim_Group;3B;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;10B",
+            "reveal_overworld_node;10B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;3B;10B"
+        ],
+        "nid": "10B OnOverworldEnter_10B"
+    }
+]

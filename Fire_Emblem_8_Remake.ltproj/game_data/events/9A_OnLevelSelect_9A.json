@@ -1,0 +1,29 @@
+[
+    {
+        "name": "OnLevelSelect_9A",
+        "trigger": "level_select",
+        "level_nid": "9A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "wait;500",
+            "move_cursor;18",
+            "wait;500",
+            "speak;Narrator;Eirika chooses to travel by sea to the theocracy of Rausten.|",
+            "overworld_move_unit;Eirika_Group",
+            "speak;Narrator;Her search for a ship leads her to Port Kiris in Carcino.",
+            "add_portrait;Klimt;Right,Middle;right;NormalBlink;low_priority",
+            "add_portrait;Hayden;Left,Middle;left;NormalBlink;low_priority",
+            "speak;Narrator;Carcino is a young nation ruled by a council of merchants, and it is an ally of Frelia.|Carcino council leader Klimt, a staunch opponent of Grado's imperialistic actions, has pledged Carcino's support to Frelia in this conflict.",
+            "multi_remove_portrait;Hayden;Klimt",
+            "add_portrait;Innes;Right,Middle;right;NormalBlink;low_priority",
+            "speak;Narrator;Prince Innes also intends to pass through Carcino on his way to Jehanna.|Eirika believes there is nothing to fear in Carcino, but she is wrong.",
+            "wait;1500",
+            "transition;close;1500",
+            "wait;500"
+        ],
+        "nid": "9A OnLevelSelect_9A"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Poison_Fang",
+        "name": "Poison Fang",
+        "desc": "Attacks inflict Venom x2 on enemies when hit.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Venomous_Effect"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Venomous_Effect_Boss"
+            ]
+        ]
+    }
+]

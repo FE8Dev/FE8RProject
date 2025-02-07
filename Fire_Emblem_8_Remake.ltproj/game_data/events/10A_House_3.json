@@ -1,0 +1,27 @@
+[
+    {
+        "name": "House_3",
+        "trigger": "Visit",
+        "level_nid": "10A",
+        "condition": "region.nid == 'House_3'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close;500",
+            "change_background;House",
+            "transition;Open;500",
+            "add_portrait;Villager Man;Left;no_block",
+            "add_portrait;{unit};Right",
+            "speak;Villager Man;I've heard that Prince Innes of Frelia is a fantastic tactician.|Grado took Renais with no trouble, but Frelia still has yet to fall.|They say it's because Prince Innes has spies reporting every move the empire makes.|At the same time, all enemy spies in Frelia are exposed and executed swiftly.|That means that none of Frelia's secrets are ever reported back to the empire.|I've never met Prince Innes, but he doesn't sound like a man you'd want as an enemy.",
+            "multi_remove_portrait;{unit};Villager Man",
+            "transition;Close;500",
+            "change_background",
+            "transition;Open;500",
+            "give_bexp;800",
+            "has_traded;{unit}",
+            "level_var;House3;True"
+        ],
+        "nid": "10A House_3"
+    }
+]

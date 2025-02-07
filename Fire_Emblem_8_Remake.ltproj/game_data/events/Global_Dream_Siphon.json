@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Dream_Siphon",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "sound;Flux1",
+            "sound;Flux2",
+            "add_weather;dark;{unit}",
+            "add_portrait;Saleh;Right",
+            "speak;Saleh;The ritual is complete.|Now to merge the dream world to our world in this space!",
+            "remove_portrait;Saleh",
+            "remove_skill;Saleh;Dream_Siphon_Main;no_banner",
+            "remove_skill;Saleh;Dream_Siphon_Giver;no_banner",
+            "give_skill;Saleh;Dream_Siphon_Stop;no_banner",
+            "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
+            "give_skill;{enemy_unit};Dream_Siphon_Debuff;no_banner",
+            "endf"
+        ],
+        "nid": "Global Dream_Siphon"
+    }
+]

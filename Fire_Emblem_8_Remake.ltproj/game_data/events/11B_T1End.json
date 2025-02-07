@@ -1,0 +1,23 @@
+[
+    {
+        "name": "T1End",
+        "trigger": "turn_change",
+        "level_nid": "11B",
+        "condition": "game.turncount == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "center_cursor;8,8",
+            "wait;300",
+            "screen_shake;0;default",
+            "hide_layer;Ship_1;fade",
+            "wait;300",
+            "screen_shake_end",
+            "add_portrait;Ephraim;Left",
+            "speak;Ephraim;Those creatures are trying to board!|That's fine-it'll bring 'em within reach of my lance.|Push them back!|Board their ship and seize the blasted thing!",
+            "remove_portrait;Ephraim"
+        ],
+        "nid": "11B T1End"
+    }
+]

@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Lightly_Burned",
+        "name": "Lightly Burned",
+        "desc": "-1 SKL and take 5 damage at the beginning of each turn for each stack. Lasts 5 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "upkeep_damage",
+                5
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFrostbite"
+            ],
+            [
+                "upkeep_animation",
+                "MapTorch"
+            ],
+            [
+                "upkeep_sound",
+                "FireHit"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "stack",
+                999
+            ]
+        ]
+    }
+]

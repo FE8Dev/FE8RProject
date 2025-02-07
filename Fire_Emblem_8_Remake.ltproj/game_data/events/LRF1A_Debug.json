@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Debug",
+        "trigger": "level_start",
+        "level_nid": "LRF1A",
+        "condition": "False",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#pyev1",
+            "import random",
+            "",
+            "enemyunits=game.get_enemy_units()",
+            "",
+            "$make_generic str(1) \"T3_Nomad_Trooper\" 5 \"enemy\"",
+            "",
+            "",
+            "$speak \"Seth\" str(game.get_klass(str(1)))",
+            "",
+            "#positions=[]",
+            "",
+            "#for i in range(len(enemyunits)):",
+            "#    positions.append((enemyunits[i].position[0],enemyunits[].position[1]))",
+            "",
+            ""
+        ],
+        "nid": "LRF1A Debug"
+    }
+]

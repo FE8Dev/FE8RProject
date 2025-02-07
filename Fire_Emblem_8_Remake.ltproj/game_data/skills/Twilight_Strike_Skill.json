@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Twilight_Strike_Skill",
+        "name": "Twilight Strike",
+        "desc": "A Luna and Sol strike combined into one.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            36
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "lifelink",
+                1.0
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')"
+            ]
+        ]
+    }
+]

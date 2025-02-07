@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Holy_RadianceP",
+        "name": "Holy Radiance+",
+        "desc": "Ignore all damage dealt by monsters and Dark magic.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "\"Monster\" in unit2.tags or (target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) == 'Dark'\n)"
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

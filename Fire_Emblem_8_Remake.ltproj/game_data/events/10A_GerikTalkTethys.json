@@ -1,0 +1,37 @@
+[
+    {
+        "name": "GerikTalkTethys",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Tethys','Gerik')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TethysTalk'] != True",
+            "multi_add_portrait;Gerik;Left;Tethys;Right",
+            "#music;50 Comrades",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Tethys;Say, Chief.|I've got good news, and I've got better news.",
+            "speak;Gerik;Eh?|What's the good news?",
+            "speak;Tethys;Within our band of mercenaries...|There are two women enamored of you.",
+            "speak;Gerik;Huh?|What're you talking about?|You a fortune-teller now?|And what's the better news?",
+            "speak;Tethys;Help has arrived.|Looks like we may survive after all.",
+            "multi_remove_portrait;Gerik;Tethys",
+            "change_team;Gerik;player",
+            "change_ai;Gerik;None",
+            "change_team;Tethys;player",
+            "change_ai;Tethys;None",
+            "remove_talk;Tethys;Gerik",
+            "remove_talk;Gerik;Tethys",
+            "music_fade_back;100",
+            "has_traded;{unit}",
+            "game_var;TethysTalk;True",
+            "else",
+            "remove_talk;Gerik;Tethys",
+            "remove_talk;Tethys;Gerik",
+            "end"
+        ],
+        "nid": "10A GerikTalkTethys"
+    }
+]

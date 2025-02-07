@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Veteran_T2",
+        "name": "Veteran",
+        "desc": "Gain +10 Damage, 30 Hit, and 30 Avoid\nwhen unit's SKL is higher than enemy's SKL.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SKL') > unit2.get_stat('SKL')"
+            ],
+            [
+                "dynamic_damage",
+                "10"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Ballista_Get_Weapon_Long",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "(unit.klass =='T2_Ballista' and unit.level == 10) or (unit.klass =='T2_Ballista_Innes' and unit.level == 10) or (unit.klass =='T2_Ballista_Neimi' and unit.level == 10)",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.nid == 'Neimi'",
+            "give_item;{unit};Mag_Long_Ballista",
+            "else",
+            "give_item;{unit};Long Ballista",
+            "end"
+        ],
+        "nid": "Global Ballista_Get_Weapon_Long"
+    }
+]

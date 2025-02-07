@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Ride_of_the_Valkries_Buff",
+        "name": "Ride of the Valkyries",
+        "desc": "+8 Damage, +8 AS, +30 Hit, and +15 Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            52
+        ],
+        "components": [
+            [
+                "condition",
+                "'Mounted' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))"
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "dynamic_damage",
+                "8"
+            ],
+            [
+                "dynamic_attack_speed",
+                "8"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

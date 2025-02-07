@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Village_1",
+        "trigger": "Visit",
+        "level_nid": "9A",
+        "condition": "region.nid == 'Village_1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;300",
+            "change_background;House",
+            "transition;open;300",
+            "add_portrait;{unit};Right;no_block",
+            "add_portrait;Rennac;Left",
+            "speak;Rennac;My, oh my...|It's about time they left.|I'm finally done getting ordered about without getting paid.|Huh?|Oh, don't mind me.|Just talking to myself.|Here, I want you to hold on to this for me.|Don't tell anyone.|Oh, and don't say a word about seeing me to Lady L'Arachel, all right?|Deal?",
+            "transition;Close;300",
+            "change_background",
+            "transition;Open;300",
+            "give_item;{unit};Gust_Dagger",
+            "give_bexp;600",
+            "show_layer;Village_1",
+            "has_traded;{unit}",
+            "game_var;Ch.9_Village_1;True",
+            "level_var;Village1;True"
+        ],
+        "nid": "9A Village_1"
+    }
+]

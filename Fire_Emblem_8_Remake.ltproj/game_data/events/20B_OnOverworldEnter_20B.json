@@ -1,0 +1,33 @@
+[
+    {
+        "name": "OnOverworldEnter_20B",
+        "trigger": "overworld_start",
+        "level_nid": "20B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Ephraim_Group;no_animate",
+            "set_overworld_position;Ephraim_Group;21B;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;20B",
+            "reveal_overworld_node;20B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;21B;20B",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;19B",
+            "reveal_overworld_node;19B",
+            "wait;500",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;24B",
+            "reveal_overworld_node;24B",
+            "sound;Mend",
+            "reveal_overworld_road;21B;24B",
+            "reveal_overworld_road;21B;19B",
+            "reveal_overworld_road;19B;18B"
+        ],
+        "nid": "20B OnOverworldEnter_20B"
+    }
+]

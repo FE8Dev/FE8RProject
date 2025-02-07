@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Rein1",
+        "trigger": "turn_change",
+        "level_nid": "12A",
+        "condition": "any(game.level.regions.get('Rein2').contains(unit.position) for unit in game.get_units_in_party())",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_group;Rein1;Rein1;fade;closest"
+        ],
+        "nid": "12A Rein1"
+    }
+]

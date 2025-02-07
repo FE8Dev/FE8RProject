@@ -1,0 +1,90 @@
+[
+    {
+        "nid": "Vertebrae",
+        "name": "Vertebrae",
+        "desc": "The long spine of a skeleton.\n<green>Skills:</>Lance Guard (E), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</>Targets RES.",
+        "icon_nid": "Untitled",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                1
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_E",
+                    "Spook"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "BoneBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BoneBoy\").wexp['Lance'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_2"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Blinding_Magic_Proc_T2",
+        "name": "Blinding Magic",
+        "desc": "When using any magic, enemies lose -60 Hit when hit for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            21
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')"
+            ],
+            [
+                "give_status_after_hit",
+                "Reduced_Vision"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

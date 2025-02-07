@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "RemoveResist",
+        "name": "RemoveResist",
+        "desc": "Reduce enemy resistance to 0.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "dynamic_resist",
+                "((unit.get_stat('RES') // -1 ) + (unit.get_stat('DEF') // -1 )) // 2"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Tutorial_First_Battle",
+        "trigger": "combat_start",
+        "level_nid": "0",
+        "condition": "check_pair('Eirika','102') or check_pair('Seth','102')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['Tutorial'] == True",
+            "speak;Narrator;               Combat Information;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Ok!|Your first battle!|I believe in you!|I will teach you some things before you get started though !|As you can see, that box to the right of your weapon is very important information!|<red>HIT</> shows what percentage chance you have to hit the enemy with your attack.|<red>DMG</> shows how much damage you will do to the enemy if you hit.|<red>CRIT</> shows what percantage chance you have that your attack will be a Critical Hit.|Critical Hits will do 3 times the normal damage you would deal.;;;;6",
+            "else",
+            "end",
+            "if;game.game_vars['TutorialNewMech'] == True or game.game_vars['Tutorial'] == 'Yes'",
+            "speak;Narrator;     Attack/Defense Stance/Affinity Strike;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;In FE8R, there is the pair up mechanic, along with <red>Attack Stance</>, <red>Defense Stance</>, and the new <red>Affinity Strike!</>|<red>Attack Stance</> will trigger when you have two unpaired units next to each other while attacking or being attacked.|The unit next to the main combat unit will join in the attack and deal half the damage they would normally deal.|The extra damage can help you win the battle!|Though, <red>Attack Stance</> won't happen while the enemy is in <red>Defense Stance</>.|A unit will automatically enter <red>Defense Stance</> while paired up.|While in <red>Defense Stance</>, they will gain 2 points in the gauge seen below that says 0-10.|Once it reaches 10-10, the next source of damage will be completely negated.|A unit in <red>Defense Stance</> will also activate an <red>Affinity Strike!</>|<red>Affinity Strike</> will grant the unit an additional bonus attack, and deal a debuff to the enemy based on the main unit's paired up Affinity!|For example, if Seth was paired up with Eirika, Eirika would give the Light Affinity Strike to Seth!|Here is what each Affinity does for Affinity Strike.|<red>Light</><icon>LightA</> reduces enemies' Hit rate by 60.|<red>Thunder</><icon>Thunder</> stuns an enemy for a turn.|<red>Dark</><icon>DarkA</> gives enemies the Shadowblight and Curse(8) debuff.|<red>Fire</><icon>Fire</>gives enemies the Seared debuff.|<red>Ice</><icon>Ice</> gives enemies the Frozen debuff.|<red>Wind</><icon>Wind</> gives enemies the Breach(8) debuff.|<red>Anima</><icon>Anima</> has a 50% chance to give Seared, Drenched, Shadowblight, and/or Rock Puncture to the enemy!|Paired up enemies only have a 50% chance to proc Affinity Strike.|In Lunatic mode they also have a chance to inflict any of these debuffs from the ones listed above.|You can look up what each Affinty does for Affinity Strike by using the <red>\"C\"</> key on the unit's Affinity in the status menu.|You'll get the hang of it over time, but mastery of these 3 things will help out a lot.;;;;6",
+            "else",
+            "end",
+            "remove_portrait;Anna"
+        ],
+        "nid": "0 Tutorial_First_Battle"
+    }
+]

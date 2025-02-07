@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Yukiryuu_No_Ken",
+        "name": "Yukiryuu No Ken",
+        "desc": "The dragon of ice and snow resided in this sword.\n<green>Skills:</>Crimson Snow(On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Uses SPD, +10 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                19
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Risky_Vantage",
+                    "Crimson_Snow_Giver"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Marisa"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Marisa\").wexp['Sword'] >= 420"
+            ]
+        ]
+    }
+]

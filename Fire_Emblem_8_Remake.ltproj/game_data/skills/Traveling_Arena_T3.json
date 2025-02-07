@@ -1,0 +1,44 @@
+[
+    {
+        "nid": "Traveling_Arena_T3",
+        "name": "Traveling Arena",
+        "desc": "Give both unit and enemies within 3 spaces gain\nBrave effect and double damage.\nIf unit lives and initiated combat, get 100 Gold.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            45
+        ],
+        "components": [
+            [
+                "all_brave",
+                null
+            ],
+            [
+                "aura",
+                "Traveling_Arena_Buff"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Traveling_Arena_Money_Skill_hide"
+                ]
+            ]
+        ]
+    }
+]

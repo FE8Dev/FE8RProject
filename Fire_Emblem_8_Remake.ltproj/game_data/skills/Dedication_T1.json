@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Dedication_T1",
+        "name": "Dedication",
+        "desc": "Gain a x2 Crit boost to Ephraim's second attack if adjacent to an ally.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            52
+        ],
+        "components": [
+            [
+                "condition",
+                "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "pcc_static",
+                2.0
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Dark_Aura_Effect",
+        "name": "Dark Aura",
+        "desc": "-30 Hit/Crit Avoid and -8 STR/MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            20
+        ],
+        "components": [
+            [
+                "dynamic_accuracy",
+                "-30"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "-30"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -8
+                    ],
+                    [
+                        "MAG",
+                        -8
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

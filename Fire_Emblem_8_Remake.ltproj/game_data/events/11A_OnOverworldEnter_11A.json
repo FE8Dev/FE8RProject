@@ -1,0 +1,22 @@
+[
+    {
+        "name": "OnOverworldEnter_11A",
+        "trigger": "overworld_start",
+        "level_nid": "11A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;17;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;16",
+            "reveal_overworld_node;16",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;17;16"
+        ],
+        "nid": "11A OnOverworldEnter_11A"
+    }
+]

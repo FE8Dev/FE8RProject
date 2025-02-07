@@ -1,0 +1,21 @@
+[
+    {
+        "name": "TethysTalkEwan",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Ewan','Tethys')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ewan;Right;Tethys;Left",
+            "speak;Ewan;Ah!|Sister!",
+            "speak;Tethys;Ewan, you've completed the task you were given, haven't you?|This is a dangerous place.|Please, go wait at the inn.|I'll be there to collect you as soon as I'm able.",
+            "speak;Ewan;No way!|I want to fight, too.|I've become friends with Prince Ephraim, you know?|We're going to take out the big, bad evil empire.",
+            "remove_portrait;Ewan",
+            "speak;Tethys;Wait just a minute, Ewan!|Ah!|Ooh, that troublemaker.",
+            "remove_portrait;Tethys"
+        ],
+        "nid": "13B TethysTalkEwan"
+    }
+]

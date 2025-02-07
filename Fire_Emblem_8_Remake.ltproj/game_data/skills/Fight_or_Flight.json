@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Fight_or_Flight",
+        "name": "Fight or Flight",
+        "desc": "+6 damage given when at full HP.\n-6 damage received when not.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "6 if unit.get_hp() == unit.get_max_hp() else 0"
+            ],
+            [
+                "dynamic_resist",
+                "6 if unit.get_hp() != unit.get_max_hp() else 0"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

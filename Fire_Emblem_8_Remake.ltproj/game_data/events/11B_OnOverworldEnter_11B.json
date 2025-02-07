@@ -1,0 +1,22 @@
+[
+    {
+        "name": "OnOverworldEnter_11B",
+        "trigger": "overworld_start",
+        "level_nid": "11B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Ephraim_Group;no_animate",
+            "set_overworld_position;Ephraim_Group;10B",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;11B",
+            "reveal_overworld_node;11B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;10B;11B"
+        ],
+        "nid": "11B OnOverworldEnter_11B"
+    }
+]

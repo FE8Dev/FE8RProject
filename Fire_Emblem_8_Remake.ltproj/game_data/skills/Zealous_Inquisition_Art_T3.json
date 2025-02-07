@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Zealous_Inquisition_Art_T3",
+        "name": "Zealous Inquisition",
+        "desc": "<red>CA:</>An (AOE:3) attack that inflicts Inquisitor's Mark (-50 Crit avoid) to all enemies on hit. <green>CD:3 Turns.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "combat_art",
+                "Zealous_Inquisition_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

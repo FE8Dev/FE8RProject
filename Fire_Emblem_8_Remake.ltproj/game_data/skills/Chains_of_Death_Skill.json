@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Chains_of_Death_Skill",
+        "name": "Chains of Death",
+        "desc": "<red>CA: </>+1 Sword range. <green>CD:0 Turns</>\nEffect is active during EP. Unit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            43
+        ],
+        "components": [
+            [
+                "eval_max_range",
+                "1"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

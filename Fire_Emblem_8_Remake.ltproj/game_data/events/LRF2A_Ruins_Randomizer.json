@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Ruins Randomizer",
+        "trigger": "level_start",
+        "level_nid": "LRF2A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#pyev1",
+            "import random",
+            "",
+            "items=['Evil Eye', 'Iron Sword', 'Iron Axe']",
+            "classes=['Gywllgi', 'Maelduin', 'Arch_Mogall']",
+            "drops=['Speedwing_Consumable','Energy_Ring_Consumable','Angelic_Robe_Consumable']",
+            "pnone=0.9",
+            "enemyunits=game.get_enemy_units()",
+            "#positions=[]",
+            "",
+            "#for i in range(len(enemyunits)):",
+            "#    positions.append((enemyunits[i].position[0],enemyunits[].position[1]))",
+            "",
+            "",
+            "for i in range(len(enemyunits)):",
+            "    $move_unit enemyunits[i].nid (enemyunits[i].position[0]+random.randint(-1,1),enemyunits[i].position[1]+random.randint(-1,1)) \"\" \"closest\" 1",
+            "    $make_generic str(i) random.choice(classes) random.randint(3, 9) \"enemy2\" \"Defend\"         ItemList=[random.choice(items)]",
+            "    $add_unit str(i) enemyunits[i].nid \"immediate\" \"closest\"",
+            "",
+            "    if random.random() < pnone:",
+            "        $give_item str(i) random.choice([None])",
+            "    else: ",
+            "        $give_item str(i) random.choice(drops),droppable no_banner",
+            "        ",
+            "    $remove_unit enemyunits[i].nid \"immediate\""
+        ],
+        "nid": "LRF2A Ruins Randomizer"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "OnOverworldEnter_20A",
+        "trigger": "overworld_start",
+        "level_nid": "20A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;21;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;20",
+            "reveal_overworld_node;20",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;21;20",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;19",
+            "reveal_overworld_node;19",
+            "wait;500",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;24",
+            "reveal_overworld_node;24",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;21;24",
+            "reveal_overworld_road;21;19",
+            "reveal_overworld_road;19;18"
+        ],
+        "nid": "20A OnOverworldEnter_20A"
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Wrath_Of_The_Sea_T3",
+        "name": "Wrath Of The Sea",
+        "desc": "+2 STR/DEF/RES for each Drenched enemy kill.\nStacks infinitely. Lost on end of chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            48
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Wrath_Of_The_Sea_Buff"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "Rampaging_Fang",
+        "name": "Rampaging Fang",
+        "desc": "Fangs that shreds enemies apart.\n<green>Skills:</>Injured Fury+\n<violet>Inflicts:</><icon>Bleed</>X3, Breach (5)\n<pink>Misc:</>Uses SPD.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Doggo"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Doggo\").wexp['Monster'] >= 240 and u(\"Doggo\").wexp['Monster'] < 480"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding",
+                    "Bleeding_Boss",
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding_Boss",
+                    "Bleeding_Boss",
+                    "Breached_5"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Injured_Fury_P",
+                    "Injured_Fury_P_Recoil"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ]
+        ]
+    }
+]

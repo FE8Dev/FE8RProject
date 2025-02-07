@@ -1,0 +1,34 @@
+[
+    {
+        "name": "OnOverworldEnter_16A",
+        "trigger": "overworld_start",
+        "level_nid": "16A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;14;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;25",
+            "reveal_overworld_node;25",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_node;13",
+            "reveal_overworld_node;12",
+            "reveal_overworld_node;11",
+            "reveal_overworld_node;10",
+            "reveal_overworld_node;3",
+            "reveal_overworld_road;14;25",
+            "reveal_overworld_road;25;0",
+            "reveal_overworld_road;14;13",
+            "reveal_overworld_road;13;12",
+            "reveal_overworld_road;12;11",
+            "reveal_overworld_road;11;10",
+            "reveal_overworld_road;10;3",
+            "reveal_overworld_road;13;9"
+        ],
+        "nid": "16A OnOverworldEnter_16A"
+    }
+]

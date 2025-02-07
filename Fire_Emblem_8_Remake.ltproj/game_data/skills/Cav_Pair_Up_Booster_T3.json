@@ -1,0 +1,44 @@
+[
+    {
+        "nid": "Cav_Pair_Up_Booster_T3",
+        "name": "Cav Pair Up T3",
+        "desc": "Gives Paired up unit Cav Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        2
+                    ],
+                    [
+                        "SKL",
+                        3
+                    ],
+                    [
+                        "RES",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "name": "GameOver_10A",
+        "trigger": "combat_end",
+        "level_nid": "10A",
+        "condition": "game.check_dead(\"Eirika\") or game.check_dead(\"Innes\") or game.check_dead(\"Gerik\") or game.check_dead(\"Tethys\")",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "trigger_script;Global DeathTimewheel"
+        ],
+        "nid": "10A GameOver_10A"
+    }
+]

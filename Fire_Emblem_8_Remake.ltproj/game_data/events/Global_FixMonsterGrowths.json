@@ -1,0 +1,40 @@
+[
+    {
+        "name": "FixMonsterGrowths",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.level == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.klass == 'Entombed'",
+            "change_growths;{unit};HP,100,STR,20,MAG,10,SKL,10,SPD,10,DEF,20,RES,10",
+            "",
+            "elif;unit.klass == 'Arch_Mogall'",
+            "change_growths;{unit};HP,5,MAG,15,SKL,10,SPD,10,LCK,5,DEF,10,RES,20",
+            "",
+            "elif;unit.klass == 'Deathgoyle'",
+            "change_growths;{unit};HP,40,STR,15,MAG,10,SKL,10,SPD,10,LCK,5,DEF,15,RES,10",
+            "",
+            "elif;unit.klass == 'Sword_Wight_Player'",
+            "change_growths;{unit};HP,15,STR,10,MAG,10,SKL,10,SPD,15,LCK,5,DEF,20,RES,10",
+            "",
+            "elif;unit.klass == 'Maelduin'",
+            "change_growths;{unit};HP,40,STR,25,MAG,5,SKL,10,SPD,10,LCK,5,DEF,10,RES,5",
+            "",
+            "elif;unit.klass == 'Centaur_Knight'",
+            "change_growths;{unit};HP,40,STR,20,MAG,10,SKL,10,SPD,10,LCK,10,DEF,10,RES,15",
+            "",
+            "elif;unit.klass == 'Gwyllgi'",
+            "change_growths;{unit};HP,20,STR,10,MAG,5,SKL,45,SPD,45,LCK,5,DEF,10,RES,5",
+            "",
+            "elif;unit.klass == 'Elder_Bael'",
+            "change_growths;{unit};HP,30,STR,15,MAG,15,SKL,10,SPD,5,LCK,5,DEF,15,RES,20",
+            "",
+            "else",
+            "end"
+        ],
+        "nid": "Global FixMonsterGrowths"
+    }
+]

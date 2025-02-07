@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Lucky_Blow",
+        "name": "Lucky Blow",
+        "desc": "Unit deals additional damage equal to the unit's LCK/3\nwhen unit initiates attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('LCK') // 3"
+            ]
+        ]
+    }
+]

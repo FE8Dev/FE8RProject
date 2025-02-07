@@ -1,0 +1,116 @@
+[
+    {
+        "nid": "Emblem_Blade",
+        "name": "Emblem Blade",
+        "desc": "A legendary blade that seals the power of enemies.\n<green>Skills:</>Blade Sweep\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES/2, heavy.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                50
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                35
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Emblem_Seal"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_MID"
+            ]
+        ]
+    }
+]

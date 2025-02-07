@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Trigger1",
+        "trigger": "turn_change",
+        "level_nid": "14A",
+        "condition": "any(game.level.regions.get('Trigger1').contains(unit.position) for unit in game.get_units_in_party())",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "move_cursor;2,21",
+            "add_group;ReinTrigger1;ReinTrigger1;fade;closest"
+        ],
+        "nid": "14A Trigger1"
+    }
+]

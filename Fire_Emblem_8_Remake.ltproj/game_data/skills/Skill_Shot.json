@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Skill_Shot",
+        "name": "Skill Shot",
+        "desc": "Adds SKL/3 to attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            28
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('SKL') // 3"
+            ]
+        ]
+    }
+]
