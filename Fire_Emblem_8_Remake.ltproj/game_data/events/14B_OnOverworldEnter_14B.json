@@ -8,6 +8,15 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;1B;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;DGB;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
             "disable_overworld_entity;Ephraim_Group;no_animate",
             "set_overworld_position;Ephraim_Group;12B",
             "sound;RefreshDance",
@@ -15,7 +24,8 @@
             "reveal_overworld_node;13B",
             "wait;500",
             "sound;Mend",
-            "reveal_overworld_road;12B;13B"
+            "reveal_overworld_road;12B;13B",
+            "end"
         ],
         "nid": "14B OnOverworldEnter_14B"
     }

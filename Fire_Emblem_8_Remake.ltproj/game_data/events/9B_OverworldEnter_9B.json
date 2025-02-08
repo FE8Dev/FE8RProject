@@ -8,6 +8,15 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;1B;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;DGB;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
             "disable_overworld_entity;Eirika_Group;no_animate",
             "disable_overworld_entity;Ephraim_Group;no_animate",
             "reveal_overworld_node;2B;immediate",
@@ -50,6 +59,7 @@
             "give_item;convoy;Guiding Ring;Ephraim_Group;no_banner",
             "game_var;ItemFix;True",
             "else",
+            "end",
             "end"
         ],
         "nid": "9B OverworldEnter_9B"

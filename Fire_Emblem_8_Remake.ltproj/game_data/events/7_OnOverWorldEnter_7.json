@@ -8,6 +8,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;DGA;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
             "disable_overworld_entity;Eirika_Group;no_animate",
             "set_overworld_position;Eirika_Group;26;no_animate",
             "sound;RefreshDance",
@@ -15,7 +20,8 @@
             "reveal_overworld_node;9",
             "wait;500",
             "sound;Mend",
-            "reveal_overworld_road;26;9"
+            "reveal_overworld_road;26;9",
+            "end"
         ],
         "nid": "7 OnOverWorldEnter_7"
     }

@@ -8,6 +8,15 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;1;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;DGA;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
             "disable_overworld_entity;Eirika_Group;no_animate",
             "set_overworld_position;Eirika_Group;2;no_animate",
             "center_cursor;2;immediate",
@@ -24,7 +33,8 @@
             "sound;Mend",
             "reveal_overworld_road;0;18",
             "sound;Mend",
-            "reveal_overworld_road;1;DGA"
+            "reveal_overworld_road;1;DGA",
+            "end"
         ],
         "nid": "9A OverworldEnter_9A"
     }
