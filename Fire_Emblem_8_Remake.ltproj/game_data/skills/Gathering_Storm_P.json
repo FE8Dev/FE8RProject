@@ -11,7 +11,7 @@
         "components": [
             [
                 "combat_condition",
-                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item) + 5))"
+                "(combat_calcs.attack_speed(unit, item) >= (combat_calcs.attack_speed(target, item) + 5))"
             ],
             [
                 "dynamic_multiattacks",
