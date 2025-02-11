@@ -9,10 +9,21 @@
         "priority": 20,
         "_source": [
             "win_game",
+            "if;game.level.nid in ('TOVF1B', 'TOVF2B','TOVF3B', 'TOVF4B', 'TOVF5B', 'TOVF6B', 'TOVF7B','TOVF8B')",
             "game_var;TowerExit;True",
-            "game_var;_goto_level;game.game_vars.get(\"TOVB_Ch_Save\")",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
             "transition;close;500",
-            "music_clear;500"
+            "music_clear;500",
+            "elif;game.level.nid in ('LRF1B', 'LRF2B','LRF3B', 'LRF4B', 'LRF5B', 'LRF6B', 'LRF7B','LRF8B','LRF9B','LRF10B')",
+            "game_var;RuinsExit;True",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "transition;close;500",
+            "music_clear;500",
+            "else",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
+            "transition;close;500",
+            "music_clear;500",
+            "end"
         ],
         "nid": "Global TOVorRuinsEscapeB"
     }

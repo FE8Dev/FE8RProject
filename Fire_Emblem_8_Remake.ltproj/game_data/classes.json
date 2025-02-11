@@ -11994,12 +11994,12 @@
             ],
             "Axe": [
                 true,
-                60,
+                120,
                 360
             ],
             "Bow": [
                 true,
-                60,
+                120,
                 360
             ],
             "Staff": [
@@ -28425,6 +28425,180 @@
         "fields": []
     },
     {
+        "nid": "T3_Magic_Tank_Knoll",
+        "name": "Barrier Knight",
+        "desc": "Mounted knights that strive for the ultimate magic defense. <icon>Horse</><icon>Armor</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Great_Knight",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 5,
+            "MAG": 6,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 6,
+            "DEF": 7,
+            "RES": 8,
+            "CON": 12,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -28,
+            "MAG": -56,
+            "SKL": -25,
+            "SPD": -28,
+            "LCK": -21,
+            "DEF": -35,
+            "RES": -53,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 180,
+            "STR": 80,
+            "MAG": 160,
+            "SKL": 70,
+            "SPD": 80,
+            "LCK": 60,
+            "DEF": 100,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 4,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 5,
+            "CON": 3,
+            "MOV": -98
+        },
+        "max_stats": {
+            "HP": 300,
+            "STR": 76,
+            "MAG": 73,
+            "SKL": 71,
+            "SPD": 70,
+            "LCK": 80,
+            "DEF": 75,
+            "RES": 79,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Magic_Wall_Aura"
+            ],
+            [
+                15,
+                "Magical_Ignition_Seared"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Drench_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Stun_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Frozen_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Shadowblight_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Rock_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                300,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                true,
+                300,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                true,
+                60,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dark Knight (M) Sword {Pikmin, Jj09} 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Magic_Tank",
+        "combat_anim_nid": "Barrier_Knight_V3",
+        "fields": []
+    },
+    {
         "nid": "T3_Magic_Tank_Seth",
         "name": "Barrier Knight",
         "desc": "Mounted knights that strive for the ultimate magic defense. <icon>Horse</><icon>Armor</><icon>Magic</>",
@@ -44313,6 +44487,158 @@
         "fields": []
     },
     {
+        "nid": "T3_Marshall_Captain",
+        "name": "Marshall",
+        "desc": "Titans clad in the toughest armor. <icon>Infantry</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Armors",
+        "promotes_from": "General",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 9,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 4,
+            "RES": 1,
+            "CON": 16,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -42,
+            "MAG": 0,
+            "SKL": -35,
+            "SPD": -14,
+            "LCK": -18,
+            "DEF": -49,
+            "RES": -28,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 320,
+            "STR": 115,
+            "MAG": 15,
+            "SKL": 100,
+            "SPD": 45,
+            "LCK": 55,
+            "DEF": 140,
+            "RES": 80,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 5,
+            "RES": 4,
+            "CON": 5,
+            "MOV": -98
+        },
+        "max_stats": {
+            "HP": 300,
+            "STR": 78,
+            "MAG": 60,
+            "SKL": 73,
+            "SPD": 71,
+            "LCK": 80,
+            "DEF": 80,
+            "RES": 80,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Marshall_Law"
+            ],
+            [
+                15,
+                "Tough_as_Nails"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                15,
+                "Tough_as_Nails_Range_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                300,
+                480
+            ],
+            "Axe": [
+                true,
+                60,
+                480
+            ],
+            "Bow": [
+                true,
+                300,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "King (U) T3 Style v1 {Huichelaar, Seal, Der, Mobile21, flasuban}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Marshall",
+        "combat_anim_nid": "T3_Marshall",
+        "fields": []
+    },
+    {
         "nid": "T3_Marshall_Purger",
         "name": "Marshall",
         "desc": "Titans clad in the toughest armor. <icon>Infantry</><icon>Armor</>",
@@ -44560,6 +44886,154 @@
             "Lance": [
                 true,
                 60,
+                480
+            ],
+            "Axe": [
+                true,
+                60,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Baron (U) Lance {St jack}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Black_Knight",
+        "combat_anim_nid": "T3_Black_Knight",
+        "fields": []
+    },
+    {
+        "nid": "T3_Black_Knight_Captain",
+        "name": "Black Knight",
+        "desc": "Knights who clad special black armor, bringing fear to their enemies. <icon>Infantry</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Armors",
+        "promotes_from": "General",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 28,
+            "STR": 10,
+            "MAG": 4,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 1,
+            "CON": 16,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -49,
+            "MAG": -21,
+            "SKL": -28,
+            "SPD": -21,
+            "LCK": -18,
+            "DEF": -32,
+            "RES": -21,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 230,
+            "STR": 140,
+            "MAG": 60,
+            "SKL": 80,
+            "SPD": 60,
+            "LCK": 55,
+            "DEF": 90,
+            "RES": 55,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 5,
+            "MAG": 2,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 5,
+            "MOV": -98
+        },
+        "max_stats": {
+            "HP": 300,
+            "STR": 80,
+            "MAG": 60,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 80,
+            "DEF": 77,
+            "RES": 74,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Goddess_Armanents"
+            ],
+            [
+                15,
+                "Eclipse_Art"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                300,
                 480
             ],
             "Axe": [
@@ -62337,7 +62811,7 @@
         "movement_group": "Mages",
         "promotes_from": "Shaman",
         "turns_into": [
-            "T3_Reaver_Dragon",
+            "T3_Reaver_Dragon_Larachel",
             "T3_Executioner",
             "T3_Necromancer_Knoll"
         ],
@@ -65590,7 +66064,7 @@
         "movement_group": "Pirates",
         "promotes_from": "Pirate_Ross",
         "turns_into": [
-            "T3_Marshall",
+            "T3_Marshall_Captain",
             "T3_Black_Knight",
             "T3_Admiral"
         ],
