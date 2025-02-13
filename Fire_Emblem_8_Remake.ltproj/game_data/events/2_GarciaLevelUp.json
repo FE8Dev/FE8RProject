@@ -1,0 +1,15 @@
+[
+    {
+        "name": "GarciaLevelUp",
+        "trigger": "unit_level_up",
+        "level_nid": "2",
+        "condition": "unit.nid == 'Garcia'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "inc_level_var;GarciaLevel"
+        ],
+        "nid": "2 GarciaLevelUp"
+    }
+]

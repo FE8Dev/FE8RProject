@@ -11,7 +11,13 @@
             "add_portrait;Valter;Left",
             "speak;Valter;Urggh...|Gaaaah!",
             "expression;Valter;CloseEyes",
-            "remove_portrait;Valter"
+            "remove_portrait;Valter",
+            "if;check_pair('Cormag', 'Valter')",
+            "if;not has_achievement('ch15b')",
+            "    complete_achievement;ch15b;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "15B DeathValter"
     }

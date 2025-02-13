@@ -11,7 +11,13 @@
             "add_portrait;Breguet;Left",
             "speak;Breguet;This...|this can't be...|I...",
             "expression;Breguet;CloseEyes",
-            "remove_portrait;Breguet"
+            "remove_portrait;Breguet",
+            "if;check_pair('Franz', 'Breguet')",
+            "if;not has_achievement('ch1b')",
+            "    complete_achievement;ch1b;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "1 DeathBreguet"
     }

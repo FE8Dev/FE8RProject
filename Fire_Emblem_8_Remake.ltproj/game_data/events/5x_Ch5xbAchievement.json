@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch5xbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "5x",
+        "condition": "unit.nid == 'Zonta'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Ephraim', 'Zonta')",
+            "if;not has_achievement('ch5xb')",
+            "    complete_achievement;ch5xb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "5x Ch5xbAchievement"
+    }
+]

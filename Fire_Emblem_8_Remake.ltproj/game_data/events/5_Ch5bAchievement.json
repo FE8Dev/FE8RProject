@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch5bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "5",
+        "condition": "unit.nid == 'Saar'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Natasha', 'Saar')",
+            "if;not has_achievement('ch5b')",
+            "    complete_achievement;ch5b;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "5 Ch5bAchievement"
+    }
+]

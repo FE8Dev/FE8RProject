@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Ch17aAchievement",
+        "trigger": "unit_death",
+        "level_nid": "17B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.team not in ['player','other'] and (unit2.nid == 'Moulder' or unit2.nid == 'Tana' or unit2.nid == 'Syrene' or unit2.nid == 'Innes' or unit2.nid == 'Vanessa' or unit2.nid == 'Gilliam')",
+            "inc_level_var;FreliaKill",
+            "if;game.level_vars['FreliaKill'] == 5 and not has_achievement('ch17a')",
+            "    complete_achievement;ch17a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "17B Ch17aAchievement"
+    }
+]

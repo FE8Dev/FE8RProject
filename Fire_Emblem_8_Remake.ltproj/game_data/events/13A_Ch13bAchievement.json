@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Ch13bAchievement",
+        "trigger": "unit_wait",
+        "level_nid": "13A",
+        "condition": "region.nid == 'TopNWFort'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;{unit};Left",
+            "speak;{unit};The enemy left this fort in a hurry.|Look at all of these weapons they left behind.|Might as well take them with me!",
+            "remove_portrait;{unit}",
+            "if;not has_achievement('ch13b')",
+            "    complete_achievement;ch13b;true;banner",
+            "    give_item;{unit};Lava_Dagger",
+            "    give_item;{unit};Rapture_Staff",
+            "    give_item;{unit};Abyss_Bow",
+            "end"
+        ],
+        "nid": "13A Ch13bAchievement"
+    }
+]

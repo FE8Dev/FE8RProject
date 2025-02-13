@@ -11,7 +11,13 @@
             "add_portrait;Carlyle;Left",
             "speak;Carlyle;Queen Ismaire.|I'm-",
             "expression;Carlyle;CloseEyes",
-            "remove_portrait;Carlyle"
+            "remove_portrait;Carlyle",
+            "if;check_pair('Joshua', 'Carlyle')",
+            "if;not has_achievement('ch14a')",
+            "    complete_achievement;ch14a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "14A DeathCarlyle"
     }

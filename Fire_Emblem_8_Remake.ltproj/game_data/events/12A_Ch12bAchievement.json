@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Ch12bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "12A",
+        "condition": "unit.team not in ['player','other']",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;has_skill('Saleh','Dream_Siphon_Stop') and not has_achievement('ch12b')",
+            "    complete_achievement;ch12b;true;banner",
+            "    give_money;500",
+            "end"
+        ],
+        "nid": "12A Ch12bAchievement"
+    }
+]

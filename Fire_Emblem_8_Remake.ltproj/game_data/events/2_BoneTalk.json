@@ -1,0 +1,17 @@
+[
+    {
+        "name": "BoneTalk",
+        "trigger": "enemy_turn_change",
+        "level_nid": "2",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Bone;Left",
+            "speak;Bone;Dang it! I dropped something onto the plains from that mountain peak!|I'll have to grab it after this battle.",
+            "remove_portrait;Bone"
+        ],
+        "nid": "2 BoneTalk"
+    }
+]
