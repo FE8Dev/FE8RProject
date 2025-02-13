@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Ch8aAchievement",
+        "trigger": "on_talk",
+        "level_nid": "8",
+        "condition": "check_pair('Ephraim', 'Eirika')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.turncount == 2 and not has_achievement('ch8a')",
+            "    complete_achievement;ch8a;true;banner",
+            "    give_money;500",
+            "end"
+        ],
+        "nid": "8 Ch8aAchievement"
+    }
+]

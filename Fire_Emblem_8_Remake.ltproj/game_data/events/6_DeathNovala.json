@@ -10,7 +10,11 @@
         "_source": [
             "add_portrait;Novala;Left",
             "speak;Novala;Aah...|Is this...the end?|No fame?|No...glory--",
-            "expression;Novala;CloseEyes"
+            "expression;Novala;CloseEyes",
+            "if;game.turncount <= 8 and not has_achievement('ch6b')",
+            "    complete_achievement;ch6b;true;banner",
+            "    give_money;500",
+            "end"
         ],
         "nid": "6 DeathNovala"
     }

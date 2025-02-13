@@ -11,7 +11,13 @@
             "add_portrait;Caellach;Left",
             "speak;Caellach;Bla-Blast...|A bit more, and...a crown...|would have been...mine...",
             "expression;Caellach;CloseEyes",
-            "remove_portrait;Caellach"
+            "remove_portrait;Caellach",
+            "if;check_pair('Joshua', 'Caellach')",
+            "if;not has_achievement('ch15a')",
+            "    complete_achievement;ch15a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "15B DeathCaellach"
     }

@@ -62,7 +62,11 @@
             "reset;Kyle",
             "reset;Forde",
             "reset;Orson",
-            "remove_region;Drain"
+            "remove_region;Drain",
+            "if;not has_achievement('ch5x')",
+            "    complete_achievement;ch5x;true;banner",
+            "    give_money;500",
+            "end"
         ],
         "nid": "5x Drain"
     }

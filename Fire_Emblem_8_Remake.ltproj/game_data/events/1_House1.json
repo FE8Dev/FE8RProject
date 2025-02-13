@@ -19,7 +19,11 @@
             "transition;Open",
             "give_bexp;100",
             "has_traded;{unit}",
-            "level_var;House1;True"
+            "level_var;House1;True",
+            "if;not has_achievement('ch1a')",
+            "    complete_achievement;ch1a;true;banner",
+            "    give_money;500",
+            "end"
         ],
         "nid": "1 House1"
     }

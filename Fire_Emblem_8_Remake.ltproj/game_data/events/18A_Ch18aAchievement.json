@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch18aAchievement",
+        "trigger": "unit_death",
+        "level_nid": "18A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "inc_level_var;GorgonEgg",
+            "if;game.level_vars['GorgonEgg'] == 10 and not has_achievement('ch18a')",
+            "    complete_achievement;ch18a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "18A Ch18aAchievement"
+    }
+]

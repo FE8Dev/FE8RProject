@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Ch11aAchievement",
+        "trigger": "unit_death",
+        "level_nid": "11A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.team not in ['player','other'] and unit2.nid == 'Larachel'",
+            "inc_level_var;LarachelKill",
+            "if;game.level_vars['LarachelKill'] == 5 and not has_achievement('ch11a')",
+            "    complete_achievement;ch11a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "11A Ch11aAchievement"
+    }
+]

@@ -8,6 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.turncount <= 2 and not has_achievement('ch20a')",
+            "    complete_achievement;ch20a;true;banner",
+            "    give_money;500",
+            "end",
             "if;game.turncount <= 16",
             "    give_bexp;15000",
             "    else",

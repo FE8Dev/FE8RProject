@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch10bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "10A",
+        "condition": "unit.nid == \"169\"",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Gerik', '169')",
+            "if;not has_achievement('ch10b')",
+            "    complete_achievement;ch10b;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "10A Ch10bAchievement"
+    }
+]
