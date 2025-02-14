@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch11BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "11B",
+        "condition": "unit.nid == '151'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Dozla', 'Selena')",
+            "if;not has_achievement('ch11Bb')",
+            "    complete_achievement;ch11Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "11B Ch11BbAchievement"
+    }
+]

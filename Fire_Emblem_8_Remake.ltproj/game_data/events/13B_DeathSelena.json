@@ -11,7 +11,13 @@
             "add_portrait;Selena;Left",
             "speak;Selena;I am so...very tired...|Now I, too...will...",
             "expression;Selena;CloseEyes",
-            "remove_portrait;Selena"
+            "remove_portrait;Selena",
+            "if;check_pair('Duessel', 'Selena')",
+            "if;not has_achievement('ch13Ba')",
+            "    complete_achievement;ch13Ba;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "13B DeathSelena"
     }

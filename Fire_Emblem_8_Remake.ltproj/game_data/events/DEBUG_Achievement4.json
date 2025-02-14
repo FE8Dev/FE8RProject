@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Achievement4",
+        "trigger": "unit_death",
+        "level_nid": "DEBUG",
+        "condition": "unit.nid == '104'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Gerik', '104') and game.get_unit('Gerik').traveler == 'Marisa'",
+            "if;not has_achievement('ch13Bb')",
+            "    complete_achievement;ch13Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "DEBUG Achievement4"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Ch12BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "12B",
+        "condition": "unit.nid == '167'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.turncount <= 7 and not has_achievement('ch12Ba')",
+            "    complete_achievement;ch12Ba;true;banner",
+            "    give_money;500",
+            "end"
+        ],
+        "nid": "12B Ch12BbAchievement"
+    }
+]

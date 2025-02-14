@@ -8,6 +8,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.level_vars['Turnwheel'] == 0 and game.level_vars['UnitDeath'] == 0 and not has_achievement('ch11Ba')",
+            "    complete_achievement;ch11Ba;true;banner",
+            "    give_money;500",
+            "end",
+            "end",
             "if;game.turncount <= 16",
             "    give_bexp;2200",
             "    else",
