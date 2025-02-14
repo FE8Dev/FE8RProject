@@ -10,12 +10,7 @@
         "_source": [
             "if;len(game.get_enemy_units()) == 0",
             "sound;Item",
-            "alert;Congrats! You have cleared the tower! Here is a reward for your bravery!",
-            "if;game.game_vars['OmniOrb'] != True",
-            "give_item;Eirika;Omni_Orb",
-            "game_var;OmniOrb;True",
-            "else",
-            "end",
+            "alert;Congrats! You have cleared the tower!",
             "game_var;TowerExit;True",
             "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")",
             "else",

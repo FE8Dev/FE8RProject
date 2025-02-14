@@ -10,7 +10,7 @@
         "_source": [
             "if;any([record.over_damage >= 500 for record in game.records.damage if game.get_unit(record.dealer).team == 'player']) and not has_achievement('damage2')",
             "    complete_achievement;damage2;true;banner",
-            "    give_money;500",
+            "    give_money;8000",
             "end"
         ],
         "nid": "Global Damage2Achievement"
