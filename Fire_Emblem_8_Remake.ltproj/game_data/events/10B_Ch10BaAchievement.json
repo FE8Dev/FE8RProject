@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Ch10BaAchievement",
+        "trigger": "unit_wait",
+        "level_nid": "10B",
+        "condition": "region.nid == 'AbandonedFort'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Cormag;Left",
+            "speak;Cormag;This fort hasn't been used for a long time.|Maybe I can make use of this weapon.",
+            "remove_portrait;Cormag",
+            "if;not has_achievement('ch10Ba')",
+            "    complete_achievement;ch10Ba;true;banner",
+            "    give_item;Cormag;Wrath_Axe",
+            "end"
+        ],
+        "nid": "10B Ch10BaAchievement"
+    }
+]

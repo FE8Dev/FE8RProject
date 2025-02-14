@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Achievement3",
+        "trigger": "combat_end",
+        "level_nid": "DEBUG",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Amelia','Gheb')",
+            "if;not has_achievement('ch9Ba')",
+            "    complete_achievement;ch9Ba;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "DEBUG Achievement3"
+    }
+]

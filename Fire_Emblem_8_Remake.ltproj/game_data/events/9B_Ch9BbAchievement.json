@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch9BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "9B",
+        "condition": "unit.nid == '143'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Tana', '143')",
+            "if;not has_achievement('ch9ba')",
+            "    complete_achievement;ch9Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "9B Ch9BbAchievement"
+    }
+]

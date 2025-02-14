@@ -1,0 +1,19 @@
+[
+    {
+        "name": "LizardzerkerSlayerAchievement",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.klass == 'T3_Lizardzerker'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "inc_game_var;LizardSlayer",
+            "if; game.game_vars['LizardSlayer'] == 20 and not has_achievement('lizardslayer')",
+            "    complete_achievement;lizardslayer;true;banner",
+            "    give_money;500",
+            "end"
+        ],
+        "nid": "Global LizardzerkerSlayerAchievement"
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch13BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "13B",
+        "condition": "unit.nid == \"123\"",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Gerik', '123') and game.get_unit('Gerik').traveler == 'Marisa'",
+            "if;not has_achievement('ch13Bb')",
+            "    complete_achievement;ch13Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "13B Ch13BbAchievement"
+    }
+]
