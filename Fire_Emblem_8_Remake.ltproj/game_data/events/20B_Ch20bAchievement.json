@@ -1,19 +1,15 @@
 [
     {
         "name": "Ch20bAchievement",
-        "trigger": "unit_wait",
+        "trigger": "unit_death",
         "level_nid": "20B",
-        "condition": "region.nid == 'Underbelly'",
+        "condition": "unit.nid == \"261\"",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "add_portrait;{unit};Left",
-            "speak;{unit};What a deep cave.|I wonder what's in here?",
-            "remove_portrait;{unit}",
             "if;not has_achievement('ch20b')",
             "    complete_achievement;ch20b;true;banner",
-            "    give_item;{unit};Geyser_Lance",
             "end"
         ],
         "nid": "20B Ch20bAchievement"

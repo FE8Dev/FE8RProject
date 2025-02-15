@@ -1,0 +1,26 @@
+[
+    {
+        "name": "House1",
+        "trigger": "Visit",
+        "level_nid": "20B",
+        "condition": "region.nid == \"House1\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;House",
+            "transition;open;500",
+            "add_portrait;OldMan1;Left;no_block",
+            "add_portrait;{unit};Right",
+            "speak;OldMan1;Oh my, what a surprise to see other folks in these sacred lands.|I don't get many visitors these days since the woods have been infested with monsters.|Well, I do have an interesting rumor to share with you.|There have been strange sounds coming from a <red>cave hidden behind a mountain range to the north</>.|It's almost as if the earth itself is bracing itself for another holy crusade.|Perhaps you may find something of value in that cave?|You'd best prepare yourself thoroughly, however.|I wish you good luck in your upcoming battle.|Oh, how do I know about that?|Let's just say I'm rooting for your success.",
+            "multi_remove_portrait;OldMan1;{unit}",
+            "transition;close;100",
+            "change_background",
+            "transition;open;100",
+            "has_traded;{unit}",
+            "level_var;House1;True"
+        ],
+        "nid": "20B House1"
+    }
+]
