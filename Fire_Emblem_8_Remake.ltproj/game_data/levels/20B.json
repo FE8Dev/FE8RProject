@@ -4418,6 +4418,27 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": false
+            },
+            {
+                "nid": "261",
+                "variant": null,
+                "level": 30,
+                "klass": "Twinhead",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Cataclysm",
+                        true
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
             }
         ],
         "regions": [
@@ -4797,7 +4818,7 @@
             },
             {
                 "nid": "Underbelly",
-                "region_type": "normal",
+                "region_type": "event",
                 "position": [
                     27,
                     2
@@ -4806,10 +4827,27 @@
                     1,
                     1
                 ],
-                "sub_nid": null,
+                "sub_nid": "Visit",
                 "condition": "True",
                 "time_left": null,
-                "only_once": false,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "House1",
+                "region_type": "event",
+                "position": [
+                    24,
+                    16
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
                 "interrupt_move": false
             }
         ],
@@ -5037,6 +5075,11 @@
                 "positions": {}
             }
         ],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     }
 ]
