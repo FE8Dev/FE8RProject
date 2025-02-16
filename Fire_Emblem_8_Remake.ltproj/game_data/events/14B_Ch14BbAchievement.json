@@ -3,14 +3,35 @@
         "name": "Ch14BbAchievement",
         "trigger": "combat_end",
         "level_nid": "14B",
-        "condition": "unit.nid == 'Vigarde'",
+        "condition": "unit.nid == 'Vigarde' or unit2.nid =='Vigarde'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.level_vars['AmeliaV'] == 1 and game.level_vars['CormagV'] == 1 and game.level_vars['DuesselV'] == 1 and game.level_vars['NatashaV'] == 1 and not has_achievement('ch14Bb')",
+            "if;check_pair('Amelia','Vigarde')",
+            "if;not has_achievement('ch14Bb')",
             "    complete_achievement;ch14Bb;true;banner",
+<<<<<<< HEAD
             "    give_item;convoy;Swiftsole_Consumable",
+=======
+            "    give_money;500",
+            "end",
+            "elif;check_pair('Cormag','Vigarde')",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "elif;check_pair('Duessel','Vigarde')",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "elif;check_pair('Natasha','Vigarde')",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
+>>>>>>> 053669c20ce4f2d31141db9dee023730b125ce8c
             "end"
         ],
         "nid": "14B Ch14BbAchievement"

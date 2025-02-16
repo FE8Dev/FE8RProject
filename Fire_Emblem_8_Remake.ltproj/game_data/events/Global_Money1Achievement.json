@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Money1Achievement",
+        "trigger": "level_start",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "if;game.get_money() >= 20000 and not has_achievement('money1')",
+            "    complete_achievement;money1;true;banner",
+            "    give_money;3000",
+            "end"
+        ],
+        "nid": "Global Money1Achievement"
+    }
+]

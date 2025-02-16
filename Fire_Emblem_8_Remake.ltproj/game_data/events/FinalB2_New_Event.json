@@ -1,0 +1,20 @@
+[
+    {
+        "name": "New Event",
+        "trigger": null,
+        "level_nid": "FinalB2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;(check_pair('Eirika', 'Formortiis') or check_pair('Ephraim', 'Formortiis')) and (game.get_unit('Ephraim').traveler == 'Eirika' or game.get_unit('Eirika').traveler == 'Ephraim')",
+            "if;not has_achievement('final2a')",
+            "    complete_achievement;final2a;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
+        ],
+        "nid": "FinalB2 New Event"
+    }
+]

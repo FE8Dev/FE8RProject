@@ -1,11 +1,11 @@
 [
     {
         "name": "Ch10BaAchievement",
-        "trigger": "unit_wait",
+        "trigger": "Visit",
         "level_nid": "10B",
-        "condition": "region.nid == 'AbandonedFort'",
+        "condition": "region.nid == 'SecretFort'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "if;unit.nid == 'Cormag'",
@@ -14,11 +14,17 @@
             "remove_portrait;Cormag",
             "if;not has_achievement('ch10Ba')",
             "    complete_achievement;ch10Ba;true;banner",
+<<<<<<< HEAD
             "    give_item;Cormag;Fenrir_Spear",
             "end",
             "remove_region;AbandonedFort",
             "else",
             "end"
+=======
+            "    give_item;Cormag;Wrath_Axe",
+            "end",
+            "has_traded;Cormag"
+>>>>>>> 053669c20ce4f2d31141db9dee023730b125ce8c
         ],
         "nid": "10B Ch10BaAchievement"
     }
