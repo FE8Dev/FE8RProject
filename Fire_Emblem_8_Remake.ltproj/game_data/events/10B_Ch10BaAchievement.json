@@ -1,11 +1,11 @@
 [
     {
         "name": "Ch10BaAchievement",
-        "trigger": "unit_wait",
+        "trigger": "Visit",
         "level_nid": "10B",
-        "condition": "region.nid == 'AbandonedFort'",
+        "condition": "region.nid == 'SecretFort'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "add_portrait;Cormag;Left",
@@ -14,7 +14,8 @@
             "if;not has_achievement('ch10Ba')",
             "    complete_achievement;ch10Ba;true;banner",
             "    give_item;Cormag;Wrath_Axe",
-            "end"
+            "end",
+            "has_traded;Cormag"
         ],
         "nid": "10B Ch10BaAchievement"
     }
