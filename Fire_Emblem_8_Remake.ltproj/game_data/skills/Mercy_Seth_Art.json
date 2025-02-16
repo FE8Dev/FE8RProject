@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Mercy_Seth_Skill",
+        "nid": "Mercy_Seth_Art",
         "name": "Mercy",
-        "desc": "Enemies are left at 1 HP and cannot be killed by unit or Attack Stance partner.",
+        "desc": "<red>CA:</>Enemies are left at 1 HP and cannot be killed by unit or Attack Stance partner. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -10,8 +10,12 @@
         ],
         "components": [
             [
-                "TrueMiracle",
-                null
+                "combat_art",
+                "Mercy_Seth_Giver"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
             ],
             [
                 "lost_on_end_combat2",

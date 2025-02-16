@@ -9,10 +9,10 @@
         "priority": 30,
         "_source": [
             "lvar;feats;[]",
-            "for;feat_skills;range(5)",
+            "for;feat_skills;range(10)",
             "  lvar;feats;{v:feats} + [game.get_random_choice([s.nid for s in DB.skills if s.components.get('copysafe') and s.nid not in [x.nid for x in u('MyUnit').skills] and s.nid not in v(\"feats\") and \"_T1\" not in s.nid and \"_T2\" not in s.nid])]",
             "endf",
-            "choice;skill_gain;Choose a Feat for {e:u('MyUnit').name};{v:feats};Dimensions=5,1;EntryType=type_skill;expression",
+            "choice;skill_gain;Choose a Feat for {e:u('MyUnit').name};{v:feats};Dimensions=5,2;EntryType=type_skill;expression",
             "give_skill;{e:u('MyUnit')};{v:skill_gain}",
             "for;skills;[s for s in get_skill(unit,'{v:skill_gain}').copysafe.value]",
             "        give_skill;{unit};{skills};no_banner",

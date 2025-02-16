@@ -8,9 +8,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;any([record.over_damage >= 500 for record in game.records.damage if game.get_unit(record.dealer).team == 'player']) and not has_achievement('damage4')",
+            "if;any([record.over_damage >= 2000 for record in game.records.damage if game.get_unit(record.dealer).team == 'player']) and not has_achievement('damage4')",
             "    complete_achievement;damage4;true;banner",
-            "    give_money;500",
+            "    give_money;50000",
             "end"
         ],
         "nid": "Global Damage4Achievement"
