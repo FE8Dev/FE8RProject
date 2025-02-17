@@ -1,7 +1,7 @@
 [
     {
         "name": "Money1Achievement",
-        "trigger": "level_start",
+        "trigger": "level_end",
         "level_nid": null,
         "condition": "True",
         "commands": [],
@@ -10,7 +10,7 @@
         "_source": [
             "if;game.get_money() >= 20000 and not has_achievement('money1')",
             "    complete_achievement;money1;true;banner",
-            "    give_money;3000",
+            "    give_item;convoy;Dark_Staff",
             "end"
         ],
         "nid": "Global Money1Achievement"
