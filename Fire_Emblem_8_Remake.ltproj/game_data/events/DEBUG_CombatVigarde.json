@@ -1,21 +1,34 @@
 [
     {
         "name": "CombatVigarde",
-        "trigger": "combat_end",
+        "trigger": "combat_start",
         "level_nid": "DEBUG",
-        "condition": "unit.nid == 'Vigarde'",
+        "condition": "unit.nid == \"Vigarde\" or unit2.nid == \"Vigarde\"",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "if;check_pair('Amelia','Vigarde')",
-            "level_var;AmeliaV;1",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
             "elif;check_pair('Cormag','Vigarde')",
-            "level_var;CormagV;1",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
             "elif;check_pair('Duessel','Vigarde')",
-            "level_var;DuesselV;1",
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
             "elif;check_pair('Natasha','Vigarde')",
-            "level_var;NatashaV;1"
+            "if;not has_achievement('ch14Bb')",
+            "    complete_achievement;ch14Bb;true;banner",
+            "    give_money;500",
+            "end",
+            "end"
         ],
         "nid": "DEBUG CombatVigarde"
     }

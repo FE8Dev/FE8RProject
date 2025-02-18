@@ -1,0 +1,19 @@
+[
+    {
+        "name": "CombatVigarde_2",
+        "trigger": "combat_start",
+        "level_nid": "DEBUG",
+        "condition": "unit.nid == \"Vigarde\" or unit2.nid == \"Vigarde\"",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;check_pair('Cormag','Vigarde')",
+            "level_var;CormagV;1",
+            "",
+            "end",
+            ""
+        ],
+        "nid": "DEBUG CombatVigarde_2"
+    }
+]

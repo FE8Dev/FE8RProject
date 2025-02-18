@@ -1,16 +1,17 @@
 [
     {
         "name": "Nightmare",
-        "trigger": "combat_end",
+        "trigger": "phase_change",
         "level_nid": "DEBUG",
-        "condition": "True",
+        "condition": "unit2.nid == \"Eirika\" or unit.nid == \"Eirika\"",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "for;SleepUnits;[u for u in game.get_player_units() if has_skill(u, 'Sleep')]",
-            "    inc_level_var;Nightmare",
-            "endf"
+            "if;has_skill(\"Eirika\", 'Sleep') and not has_achievement('final2b')",
+            "    complete_achievement;final2b;true;banner",
+            "    give_money;500",
+            "end"
         ],
         "nid": "DEBUG Nightmare"
     }

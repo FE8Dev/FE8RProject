@@ -1,16 +1,20 @@
 [
     {
         "name": "F2bAchievement",
-        "trigger": "level_start",
+        "trigger": "unit_death",
         "level_nid": "FinalA2",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.level_vars['Nightmare'] == 10 and not has_achievement('final2b')",
+            "if;unit.team not in ['player','other'] ",
+            "inc_level_var;HordeKill",
+            "if;game.level_vars['HordeKill'] == 10 and not has_achievement('final2b')",
             "    complete_achievement;final2b;true;banner",
             "    give_money;30000",
+            "    give_money;500",
+            "end",
             "end"
         ],
         "nid": "FinalA2 F2bAchievement"
