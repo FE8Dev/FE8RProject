@@ -2,7 +2,7 @@
     {
         "nid": "Ramuhs_Dagger",
         "name": "Ramuh's Dagger",
-        "desc": "The knife of a legendary lightning deity that struck down dragons.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Thunder</> <violet>Inflicts:</><icon>Bleed</>\n<red>Very effective:</><icon>Armor</><icon>Drenched</><icon>Dragon</>\n<pink>Misc:</>Uses SPD, MAG at range, +50 Crit damage,<icon>Steal</>.",
+        "desc": "The knife of a legendary lightning deity that struck down dragons.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Thunder</> <violet>Inflicts:</><icon>Bleed</>\n<red>Very effective:</><icon>Armor</><icon>Drenched</><icon>Dragon</>\n<pink>Misc:</>Uses SPD, MAG + MOV*5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('MOV')*5))}</>), +50 Crit damage,<icon>Steal</>.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             8,
@@ -82,7 +82,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "MAG_MOV_STRONG"
             ],
             [
                 "magic_at_range",

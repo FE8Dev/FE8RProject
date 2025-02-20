@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "_Sunsets_Resolve_Allies_Plus_1",
+        "name": "Sunset's Resolve+",
+        "desc": "While this unit's HP is below 75% Max HP, boost STR/SPD/SKL/DEF by x2.0.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            44
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        2.0
+                    ],
+                    [
+                        "SPD",
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2.0
+                    ],
+                    [
+                        "DEF",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

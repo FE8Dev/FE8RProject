@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "_Fatal_Touch_1",
+        "name": "Fatal Touch",
+        "desc": "The touch of Death, any scratch can be the end. Skill/2% chance to instantly kill an enemy. The unit is cursed with -10 of SKL.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            17
+        ],
+        "components": [
+            [
+                "proc_rate",
+                "SKILL_PROC_D2"
+            ],
+            [
+                "fatal_damage",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Critical"
+            ],
+            [
+                "dynamic_damage",
+                "999"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        -10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

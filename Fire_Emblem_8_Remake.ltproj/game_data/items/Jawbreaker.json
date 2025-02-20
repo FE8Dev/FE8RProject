@@ -2,7 +2,7 @@
     {
         "nid": "Jawbreaker",
         "name": "Jawbreaker",
-        "desc": "Ultra heavy warhammer of giants.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2.",
+        "desc": "Ultra heavy warhammer of giants.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,

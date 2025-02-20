@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "_Heavy_Blade_Eirika_1",
+        "name": "Heavy Blade",
+        "desc": "Give the effect of heavy weapon a the attacks of the user and double the damage. The attack add weapon weight X3 to crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "(unit.get_weapon().weight.value) * 3"
+            ],
+            [
+                "proc_turn_skill",
+                "Heavy_Scroll_Skill"
+            ]
+        ]
+    }
+]

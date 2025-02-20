@@ -2,7 +2,7 @@
     {
         "nid": "Earth_Staff",
         "name": "Earth Staff",
-        "desc": "A staff that shoots rocks from its gem.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + DEF/2.",
+        "desc": "A staff that shoots rocks from its gem.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + DEF/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             7,
@@ -31,7 +31,7 @@
             ],
             [
                 "damage",
-                4
+                6
             ],
             [
                 "weight",

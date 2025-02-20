@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "_Berzerk_1",
+        "name": "Berzerk",
+        "desc": "The rabies consuming a the user, while HP=<50% otorgue the effect Berzerk, incremented in 1.25 the STR, SKL, SPD and otorgue Distant counter, reduce in 0,75 the DEF/RES, LCK. take 5% of damage given as recoil.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            52
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp()//2"
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "lifelink",
+                -0.05
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.25
+                    ],
+                    [
+                        "SKL",
+                        1.25
+                    ],
+                    [
+                        "SPD",
+                        1.25
+                    ],
+                    [
+                        "LCK",
+                        0.75
+                    ],
+                    [
+                        "DEF",
+                        0.75
+                    ],
+                    [
+                        "RES",
+                        0.75
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

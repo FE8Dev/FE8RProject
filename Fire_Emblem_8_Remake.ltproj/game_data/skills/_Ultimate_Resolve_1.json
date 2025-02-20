@@ -1,0 +1,63 @@
+[
+    {
+        "nid": "_Ultimate_Resolve_1",
+        "name": "Ultimate Resolve",
+        "desc": "Boost all stats by 1.75 when below 50% Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 2"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.75
+                    ],
+                    [
+                        "MAG",
+                        1.75
+                    ],
+                    [
+                        "SKL",
+                        1.75
+                    ],
+                    [
+                        "SPD",
+                        1.75
+                    ],
+                    [
+                        "LCK",
+                        1.75
+                    ],
+                    [
+                        "DEF",
+                        1.75
+                    ],
+                    [
+                        "RES",
+                        1.75
+                    ],
+                    [
+                        "CON",
+                        1.75
+                    ],
+                    [
+                        "MOV",
+                        1.75
+                    ]
+                ]
+            ]
+        ]
+    }
+]

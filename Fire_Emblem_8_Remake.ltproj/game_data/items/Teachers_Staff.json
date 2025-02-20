@@ -2,7 +2,7 @@
     {
         "nid": "Teachers_Staff",
         "name": "Teacher's Staff",
-        "desc": "A staff given to mages who become teachers.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG + STR/2.",
+        "desc": "A staff given to mages who become teachers.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>).",
         "icon_nid": "{Seal} (SacredWar) Staff 6",
         "icon_index": [
             0,

@@ -1,0 +1,48 @@
+[
+    {
+        "nid": "_Energy_Ring_Buff_Appraiser_1",
+        "name": "Energy Ring Buff",
+        "desc": "Give buff to Energy Ring.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "STR",
+                        75
+                    ],
+                    [
+                        "MAG",
+                        75
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        25
+                    ],
+                    [
+                        "MAG",
+                        25
+                    ]
+                ]
+            ]
+        ]
+    }
+]

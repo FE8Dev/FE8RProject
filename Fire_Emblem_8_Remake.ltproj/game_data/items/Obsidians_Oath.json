@@ -2,11 +2,11 @@
     {
         "nid": "Obsidians_Oath",
         "name": "Obsidian's Oath",
-        "desc": "Duessel's ultimate blade.\n<green>Skills:</>Grado's Wall+\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF.",
-        "icon_nid": "Swords Sheet",
+        "desc": "Duessel's ultimate blade.\n<green>Skills:</>Grado's Wall+, Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF.",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            3,
-            3
+            0,
+            2
         ],
         "components": [
             [
@@ -104,7 +104,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Duessel\").wexp['Sword'] >= 360"
+                "u(\"Duessel\").wexp['Sword'] >= 360 and u(\"Duessel\").wexp['Sword'] < 480"
             ],
             [
                 "wexp",

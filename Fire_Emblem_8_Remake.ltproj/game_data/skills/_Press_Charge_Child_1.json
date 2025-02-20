@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "_Press_Charge_Child_1",
+        "name": "Press Charge",
+        "desc": "Gain +additional attack and +20 Hit and Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            52
+        ],
+        "components": [
+            [
+                "hit",
+                20
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

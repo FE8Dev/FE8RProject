@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "_Hero_Crest_Buff_Appraiser_1",
+        "name": "Hero Crest Buff",
+        "desc": "Gives the proper change to growth rates.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        75
+                    ],
+                    [
+                        "SKL",
+                        50
+                    ],
+                    [
+                        "SPD",
+                        25
+                    ],
+                    [
+                        "LCK",
+                        75
+                    ]
+                ]
+            ]
+        ]
+    }
+]

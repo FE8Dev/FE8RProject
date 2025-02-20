@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "_Mana_Strike_Proc_1",
+        "name": "Mana Strike",
+        "desc": "<red>CA:</>+30 Hit, and add Unit's MAG/2 onto the attack. <green>CD:2 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Mana_Strike_Skill"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

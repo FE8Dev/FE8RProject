@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Sylvania",
+        "name": "Sylvania",
+        "desc": "A bow for Neimi made by forest faires.\n<green>Skills:</>Hawkeye <orange>Element:</></><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Infantry</><icon>Dragon</><icon>Horse</>\n<pink>Misc:</>STR + SKL + MAG",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Infantry",
+                        "Dragon",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Hawkeye"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MAG_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Neimi\").wexp['Bow'] >= 480"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

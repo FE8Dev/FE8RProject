@@ -2,7 +2,7 @@
     {
         "nid": "Gale_Blade",
         "name": "Gale Blade",
-        "desc": "A heavy blade that hits enemies with a strong wind.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses SPD, targets SPD instead of DEF.",
+        "desc": "A heavy blade that hits enemies with a strong wind.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD instead of DEF.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -106,7 +106,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_SKL_MID"
             ],
             [
                 "alternate_resist_formula",

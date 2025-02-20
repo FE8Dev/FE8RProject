@@ -2,7 +2,7 @@
     {
         "nid": "Water_Axe",
         "name": "Water Axe",
-        "desc": "An axe that can drown mages.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>, Breach (2)\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>STR + SKL/2, targets STR.",
+        "desc": "An axe that can drown mages.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>, Breach (2)\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), targets STR.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             1,

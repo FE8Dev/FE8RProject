@@ -3,10 +3,10 @@
         "nid": "Excel_Sword",
         "name": "Excel Sword",
         "desc": "Franz exerts all of his magical talent into this sword.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG, targets RES, +10 SPD",
-        "icon_nid": "Swords Sheet",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            3,
-            6
+            0,
+            1
         ],
         "components": [
             [
@@ -106,7 +106,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Franz\").wexp['Sword'] >= 420"
+                "u(\"Franz\").wexp['Sword'] >= 420 and u(\"Franz\").wexp['Sword'] < 480"
             ]
         ]
     }

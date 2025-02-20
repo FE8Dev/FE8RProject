@@ -3,10 +3,10 @@
         "nid": "Wings_Of_Duty",
         "name": "Wings Of Duty",
         "desc": "A lance entrusted to Vanessa for her loyalty to Frelia.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD",
-        "icon_nid": "Lances Sheet",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            4,
-            3
+            3,
+            0
         ],
         "components": [
             [
@@ -88,7 +88,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] >= 420"
+                "u(\"Vanessa\").wexp['Lance'] >= 420 and u(\"Vanessa\").wexp['Lance'] < 480"
             ]
         ]
     }

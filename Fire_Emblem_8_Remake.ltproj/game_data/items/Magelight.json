@@ -2,7 +2,7 @@
     {
         "nid": "Magelight",
         "name": "Magelight",
-        "desc": "Light magic converted to a staff for mages.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Always hit, cannot crit, LCK + MAG/2.",
+        "desc": "Light magic converted to a staff for mages. <green>CD:3</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Always hit, cannot crit, LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             3,
@@ -80,6 +80,10 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_MID"
+            ],
+            [
+                "cooldown",
+                3
             ]
         ]
     }

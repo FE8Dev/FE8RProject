@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "_Arcane_Power_1",
+        "name": "Arcane Power",
+        "desc": "The attacks ignore the Res of enemies and strike in aoe 3.\nThe damage increases in Mag x3 but at the end of each attack receives 10% of damage as recoil.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "enemy_oversplash",
+                3
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "attack_pre_proc",
+                "Pierce_Skill"
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('MAG') * 3)"
+            ],
+            [
+                "lifelink",
+                -0.1
+            ]
+        ]
+    }
+]

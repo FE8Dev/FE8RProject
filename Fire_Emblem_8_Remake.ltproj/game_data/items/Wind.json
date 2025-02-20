@@ -2,7 +2,7 @@
     {
         "nid": "Wind",
         "name": "Wind",
-        "desc": "Basic wind magic. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, MAG + SPD/2, Splash DMG (5)",
+        "desc": "Basic wind magic. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Splash DMG (5)",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             3,

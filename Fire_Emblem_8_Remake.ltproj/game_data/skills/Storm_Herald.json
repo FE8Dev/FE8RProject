@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Storm_Herald",
+        "name": "Storm Herald",
+        "desc": "Unit ignores terrain, and gains +5 AS.\nEnemies within 5 spaces become Drenched.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "dynamic_attack_speed",
+                "5"
+            ],
+            [
+                "ignore_terrain",
+                null
+            ],
+            [
+                "aura",
+                "Drench_Debuff"
+            ],
+            [
+                "aura_range",
+                5
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    }
+]

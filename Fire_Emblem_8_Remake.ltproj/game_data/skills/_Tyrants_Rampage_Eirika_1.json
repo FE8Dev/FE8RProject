@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "_Tyrants_Rampage_Eirika_1",
+        "name": "Tyrant's Rampage",
+        "desc": "Boost damage given by 2.5X, but take 15% of damage given as recoil.\nIf would take lethal damage, survive and restore HP to full.\nWorks once per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                1
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= 0"
+            ],
+            [
+                "full_miracle",
+                null
+            ]
+        ]
+    }
+]

@@ -3,10 +3,10 @@
         "nid": "Desert_Tiger",
         "name": "Desert Tiger",
         "desc": "A blade that guarantees victory to those who wield it.\n<green>Skills:</>Money Blow+, Desert Tiger(On kill), Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
-        "icon_nid": "Swords Sheet",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            2,
-            6
+            37,
+            1
         ],
         "components": [
             [
@@ -100,7 +100,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Gerik\").wexp['Sword'] >= 420"
+                "u(\"Gerik\").wexp['Sword'] >= 420 and u(\"Gerik\").wexp['Sword'] < 480"
             ],
             [
                 "wexp",

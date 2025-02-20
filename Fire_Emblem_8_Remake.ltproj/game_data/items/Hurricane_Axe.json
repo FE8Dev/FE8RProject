@@ -2,7 +2,7 @@
     {
         "nid": "Hurricane_Axe",
         "name": "Hurricane Axe",
-        "desc": "An axe charged with the power of a mighty storm. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (8)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2, +40 Avoid/Dodge.",
+        "desc": "An axe charged with the power of a mighty storm. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (8)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), +40 Avoid/Dodge.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,

@@ -2,7 +2,7 @@
     {
         "nid": "Lance_of_Fog",
         "name": "Lance of Fog",
-        "desc": "A lance for masters of wind and fog.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + SKL, +50 Avoid/Dodge.",
+        "desc": "A lance for masters of wind and fog. <green>CD:1</>\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +50 Avoid/Dodge.",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             0,
@@ -27,7 +27,7 @@
             ],
             [
                 "max_range",
-                1
+                3
             ],
             [
                 "damage",
@@ -66,11 +66,15 @@
             ],
             [
                 "battle_cast_anim",
-                "Javelin"
+                "Tempest"
             ],
             [
                 "alternate_damage_formula",
                 "SPD_SKL_STRONG"
+            ],
+            [
+                "cooldown",
+                1
             ]
         ]
     }

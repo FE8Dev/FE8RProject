@@ -926,6 +926,7 @@ class StartCooldown(ItemComponent):
     desc = "Item will be on cooldown at the beginning of the chapter. Place underneath Cooldown component."
     tag = ItemTags.USES
 
+
     def init(self, item):
         item.data['cooldown'] = item.data['starting_cooldown']
 

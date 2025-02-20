@@ -2,7 +2,7 @@
     {
         "nid": "Night_Sky",
         "name": "Night Sky",
-        "desc": "A staff of the evening star.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>Always hits, cannot Crit, MAG + CON*3.",
+        "desc": "A staff of the evening star. <green>CD:2</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>Always hits, cannot Crit, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             8,
@@ -27,7 +27,7 @@
             ],
             [
                 "max_range",
-                6
+                7
             ],
             [
                 "damage",
@@ -79,6 +79,10 @@
             [
                 "alternate_damage_formula",
                 "MAG_CON_STRONG"
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     }

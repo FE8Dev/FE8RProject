@@ -5,8 +5,8 @@
         "desc": "A deadly, heavy blade warped by Garcia's past.\n<green>Skills:</>Blade Sweep, Enrage\n<violet>Inflicts:</><icon>Confuse</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
         "icon_nid": "Swords Sheet",
         "icon_index": [
-            1,
-            0
+            6,
+            5
         ],
         "components": [
             [
@@ -105,7 +105,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Garcia\").wexp['Sword'] >= 360"
+                "u(\"Garcia\").wexp['Sword'] >= 360 and u(\"Garcia\").wexp['Sword'] < 480"
             ],
             [
                 "wexp",

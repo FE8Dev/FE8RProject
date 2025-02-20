@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Arts_Death",
+        "name": "Art's Death",
+        "desc": "A sword that paints a tragic end.\n<green>Skills:</>Destiny Painter+/Ender, Flash Step <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR +SKL+MAG.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                22
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_25"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Destiny_Painter_DisplayP",
+                    "Destiny_Painter_Combat_ArtP",
+                    "Destiny_Ender"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Forde"
+                ]
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MAG_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Forde\").wexp['Sword'] >= 480 "
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    }
+]

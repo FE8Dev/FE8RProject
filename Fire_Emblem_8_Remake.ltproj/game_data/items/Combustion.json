@@ -2,7 +2,7 @@
     {
         "nid": "Combustion",
         "name": "Combustion",
-        "desc": "A burst of fire that pushes an enemy back.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON*2, Splash DMG (5)",
+        "desc": "A burst of fire that pushes an enemy back.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')))}</>), Splash DMG (5)",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             7,
@@ -119,7 +119,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_CON_MID"
+                "MAG_CON_WEAK"
             ]
         ]
     }

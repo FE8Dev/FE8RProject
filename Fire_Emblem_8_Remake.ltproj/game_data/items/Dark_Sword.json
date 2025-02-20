@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Sword",
         "name": "Dark Sword",
-        "desc": "A normal looking sword that is charged with dark energy.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2)\n<pink>Misc:</>STR + CON*2, +1 SPD.",
+        "desc": "A normal looking sword that is charged with dark energy.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2)\n<pink>Misc:</>STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>), +1 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             8,
@@ -77,7 +77,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_CON_MID"
+                "STR_CON_WEAK"
             ],
             [
                 "self_status_on_hit",

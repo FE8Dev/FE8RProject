@@ -2,7 +2,7 @@
     {
         "nid": "Light_Bow",
         "name": "Light Bow",
-        "desc": "A magical bow that fires arrows made of pure energy.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</>\n<pink>Misc:</>Magical, LCK + MAG/2, Brave.",
+        "desc": "A magical bow that fires arrows made of pure energy.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</>\n<pink>Misc:</>Magical, LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>), Brave.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             15,
@@ -27,11 +27,11 @@
             ],
             [
                 "max_range",
-                4
+                3
             ],
             [
                 "damage",
-                2
+                4
             ],
             [
                 "hit",

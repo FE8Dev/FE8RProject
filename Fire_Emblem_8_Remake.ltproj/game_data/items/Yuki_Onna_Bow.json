@@ -2,7 +2,7 @@
     {
         "nid": "Yuki_Onna_Bow",
         "name": "Yuki-Onna Bow",
-        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical.",
+        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -93,6 +93,14 @@
             [
                 "self_status_on_hit",
                 "Frozen_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "RES_SPD_STRONG"
+            ],
+            [
+                "damage_formula_override",
+                "MAGIC_DEFENSE"
             ]
         ]
     }

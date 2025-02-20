@@ -2,7 +2,7 @@
     {
         "nid": "Wing_Axe",
         "name": "Wing Axe",
-        "desc": "An axe that specializes in clipping wings with wind. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SPD/2, +30 Avoid/Dodge.",
+        "desc": "An axe that specializes in clipping wings with wind. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), +30 Avoid/Dodge.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,

@@ -2,7 +2,7 @@
     {
         "nid": "Waterfall_Lance",
         "name": "Waterfall Lance",
-        "desc": "As powerful as a waterfall. <green>CD:1</>\n<green>Skills:</>Seawalk, Lance Guard (SS) <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3) <pink>Misc:</>(Line attack:5), SKL + MAG, cannot double.",
+        "desc": "As powerful as a waterfall. <green>CD:1</>\n<green>Skills:</>Seawalk, Lance Guard (SS) <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3) <pink>Misc:</>(Line attack:5), SKL + MAG (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')))}</>), cannot DS.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             3,
@@ -91,12 +91,12 @@
                 null
             ],
             [
-                "no_double",
-                null
-            ],
-            [
                 "cooldown",
                 1
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     }

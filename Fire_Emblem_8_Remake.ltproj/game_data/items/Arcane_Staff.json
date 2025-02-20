@@ -2,7 +2,7 @@
     {
         "nid": "Arcane_Staff",
         "name": "Arcane Staff",
-        "desc": "A staff for top ranked mages.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG + STR.",
+        "desc": "A staff for top ranked mages.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             5,
@@ -27,11 +27,11 @@
             ],
             [
                 "max_range",
-                2
+                3
             ],
             [
                 "damage",
-                14
+                17
             ],
             [
                 "weight",

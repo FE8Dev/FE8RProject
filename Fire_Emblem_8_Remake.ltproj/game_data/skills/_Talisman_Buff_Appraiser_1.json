@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "_Talisman_Buff_Appraiser_1",
+        "name": "Talisman Buff",
+        "desc": "Give buff to Talisman.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "RES",
+                        150
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        25
+                    ]
+                ]
+            ]
+        ]
+    }
+]

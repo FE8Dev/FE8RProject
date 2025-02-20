@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "_Goddess_Armanents_1",
+        "name": "Goddess Armanents",
+        "desc": "+1 extra attack, +5 AS.At full HP half damage reduction and pierces the 50% of defense enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "dynamic_attack_speed",
+                "5"
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    }
+]

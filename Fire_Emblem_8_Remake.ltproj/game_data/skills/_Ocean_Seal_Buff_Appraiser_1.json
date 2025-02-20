@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "_Ocean_Seal_Buff_Appraiser_1",
+        "name": "Ocean Seal Buff",
+        "desc": "Gives the proper change to growth rates.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            19
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        125
+                    ],
+                    [
+                        "STR",
+                        75
+                    ],
+                    [
+                        "SPD",
+                        50
+                    ],
+                    [
+                        "LCK",
+                        40
+                    ]
+                ]
+            ]
+        ]
+    }
+]

@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Axe",
         "name": "Ice Axe",
-        "desc": "An axe made with some magical snow. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1), Breach (2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + SKL/2.",
+        "desc": "An axe made with some magical snow. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1), Breach (2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + SKL/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,

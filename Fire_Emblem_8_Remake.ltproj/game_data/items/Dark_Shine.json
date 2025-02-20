@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Shine",
         "name": "Dark Shine",
-        "desc": "A Dark tome conceived by a corrupt, low rank priest. <green>CD:2</>\n<orange>Element:</><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2.",
+        "desc": "A Dark tome conceived by a corrupt, low rank priest. <green>CD:2</>\n<orange>Element:</><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             1,

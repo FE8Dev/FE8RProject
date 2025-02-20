@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Rage_Storm",
+        "name": "Rage Storm",
+        "desc": "A heavy blade sullied by blood.\n<green>Skills:</>Blade Sweep, Heavy Force, Enrage\n<violet>Inflicts:</><icon>Confuse</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                48
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                50
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garcia"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Heavy_Force",
+                    "Enrage"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Garcia\").wexp['Sword'] >= 480"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Confuse"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ]
+        ]
+    }
+]

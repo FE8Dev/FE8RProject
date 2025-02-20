@@ -2,7 +2,7 @@
     {
         "nid": "Divine_Staff",
         "name": "Divine Staff",
-        "desc": "A staff containing the lost magic of an archbishop. Always hits. Cannot Crit.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>Always hits, cannot crit, LCK + MAG.",
+        "desc": "A staff containing the lost magic of an archbishop. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>Always hits, cannot crit, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             6,
@@ -27,7 +27,7 @@
             ],
             [
                 "max_range",
-                6
+                7
             ],
             [
                 "damage",
@@ -85,6 +85,10 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_STRONG"
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     }

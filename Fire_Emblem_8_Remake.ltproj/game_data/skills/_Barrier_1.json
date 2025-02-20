@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "_Barrier_1",
+        "name": "Barrier",
+        "desc": "+10 DEF/RES to unit and all allies within 3 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Barrier_Aura"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

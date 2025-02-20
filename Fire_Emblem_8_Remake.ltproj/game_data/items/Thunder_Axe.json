@@ -2,7 +2,7 @@
     {
         "nid": "Thunder_Axe",
         "name": "Thunder Axe",
-        "desc": "An axed imbued with a thunder gem. <green>CD:2</>\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Magical, MAG + MOV*4.",
+        "desc": "An axed imbued with a thunder gem. <green>CD:2</>\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Magical, MAG + MOV*2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('MOV')*2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -96,7 +96,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_MOV_MID_ALT"
+                "MAG_MOV_WEAK_ALT"
             ]
         ]
     }

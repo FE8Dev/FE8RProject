@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Queen",
         "name": "Ice Queen",
-        "desc": "Tana can be cruel when it comes to punishments.\n<orange>Element:</><icon>Ice</><icon>Wind</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>MAG + SKL, cannot miss.",
+        "desc": "Tana can be cruel when it comes to punishments.\n<orange>Element:</><icon>Ice</><icon>Wind</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</><icon>Seared</>\n<pink>Misc:</>MAG + SKL, cannot miss.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             8,
@@ -57,7 +57,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Flying"
+                        "Flying",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -83,7 +84,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Tana\").wexp['Bow'] >= 360"
+                "u(\"Tana\").wexp['Bow'] >= 360 and u(\"Tana\").wexp['Bow'] < 480"
             ],
             [
                 "statuses_on_hit",

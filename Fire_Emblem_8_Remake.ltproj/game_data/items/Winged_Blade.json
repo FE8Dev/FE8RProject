@@ -2,7 +2,7 @@
     {
         "nid": "Winged_Blade",
         "name": "Winged Blade",
-        "desc": "An unorthodox blade used by swift warriors.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses SPD, targets SPD instead of DEF.",
+        "desc": "An unorthodox blade used by swift warriors.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD instead of DEF.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             8,
@@ -75,7 +75,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_SKL_MID"
             ],
             [
                 "item_tags",

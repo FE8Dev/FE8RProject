@@ -3,15 +3,13 @@
         "name": "Ch2aAchievement",
         "trigger": "unit_level_up",
         "level_nid": "2",
-        "condition": "unit.nid == 'Ross' or unit.nid == 'Garcia'",
+        "condition": "unit.nid == 'Ross' and unit.level == 5",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.level_vars['RossLevel'] >= 2 and game.level_vars['GarciaLevel'] >= 2",
-            "    complete_achievement;ch2a;true;banner",
-            "    give_item;convoy;Instructors_Horn",
-            "end"
+            "complete_achievement;ch2a;t;banner",
+            "give_item;convoy;Instructors_Horn"
         ],
         "nid": "2 Ch2aAchievement"
     }

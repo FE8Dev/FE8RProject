@@ -1,0 +1,119 @@
+[
+    {
+        "nid": "Mitologic_Breath",
+        "name": "Mitologic Breath",
+        "desc": "Said to be the origin of breath techniques.\n<violet>Inflicts:</><icon>Silence</>\n<red>Effective:</><icon>Magic</><icon>Silence</></><icon>Dragon</></><icon>Monster</>\n<pink>Misc:</>Magical.",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                40
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Solaris"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "transform",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic",
+                        "Silence",
+                        "Monster",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Silence"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tethys"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "T3_Arcane_Dragon"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tethys\").wexp['Monster'] >= 480"
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    }
+]
