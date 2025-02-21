@@ -1,0 +1,118 @@
+[
+    {
+        "nid": "Helix_Blade_Anima",
+        "name": "Helix Blade (A)",
+        "desc": "A heavy blade twisted with blue and mage fire.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</><red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), heavy, Splash DMG (60).",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                24
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Twist_Fire"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_SS"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_STRONG"
+            ],
+            [
+                "value",
+                2000
+            ]
+        ]
+    }
+]

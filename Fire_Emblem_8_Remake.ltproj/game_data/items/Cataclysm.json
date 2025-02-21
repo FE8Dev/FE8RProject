@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Cataclysm",
+        "name": "Cataclysm",
+        "desc": "<nconvo>A divine axe imbued with the destructive power of the earth.\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Monster</><icon>Armor</><icon>Horse</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3), Breach (25)\n<pink>Misc:</>DEF + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>), DEF+20, CON+10.</>",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                38
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "value",
+                10000
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Breached_25"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_STRONG"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "CON",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Monster",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

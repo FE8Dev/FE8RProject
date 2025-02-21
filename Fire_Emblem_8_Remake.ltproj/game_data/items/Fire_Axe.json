@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Fire_Axe",
+        "name": "Fire Axe",
+        "desc": "A axe imbued with a curse of fire.\n<green>Skills:</>Risky Desperation <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (2) <red>effective:</><icon>Horse</>\n<pink>Misc:</>-15 HP, -5 DEF, STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "status_on_equip",
+                "Risky_Desperation"
+            ],
+            [
+                "Unwieldy",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        -15
+                    ]
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_5",
+                    "Seared"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_WEAK"
+            ]
+        ]
+    }
+]

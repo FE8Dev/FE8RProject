@@ -1,0 +1,119 @@
+[
+    {
+        "nid": "Demon_Greatlance",
+        "name": "Demon G.L.",
+        "desc": "Greatlance of demons.\n<green>Skills:</>Lance Guard (A), G.L. Mastery<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                44
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                33
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_STRONG"
+            ]
+        ]
+    }
+]

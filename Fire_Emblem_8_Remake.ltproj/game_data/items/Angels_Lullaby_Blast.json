@@ -1,0 +1,135 @@
+[
+    {
+        "nid": "Angels_Lullaby_Blast",
+        "name": "Angel's Lullaby (<icon>Blast</>)",
+        "desc": "Sleep magic so strong, even an elephant will fall asleep. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</><icon>Sleep</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE:4), Splash DMG (50), cannot DS.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            11,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Excalibur"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_SS"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Sleep"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Saleh"
+                ]
+            ],
+            [
+                "enemy_blast_aoe",
+                4
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Wind"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Saleh\").wexp['Anima'] >= 420"
+            ],
+            [
+                "exp",
+                3
+            ]
+        ]
+    }
+]

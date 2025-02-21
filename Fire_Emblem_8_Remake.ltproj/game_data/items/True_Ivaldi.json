@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "True_Ivaldi",
+        "name": "True Ivaldi",
+        "desc": "The pure light of Ivaldi, Beacon of Rausten.\n<green>Skills:</>Valkyrie Queen+, Dark Seal.\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>+50 Crit damage.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            31,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Ivaldi"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_50",
+                    "Dark_Seal",
+                    "Valkyrie_QueenP"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Larachel"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Larachel\").wexp['Light'] >= 480 "
+            ],
+            [
+                "level_exp",
+                null
+            ]
+        ]
+    }
+]

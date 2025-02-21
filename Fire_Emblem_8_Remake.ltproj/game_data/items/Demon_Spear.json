@@ -1,0 +1,91 @@
+[
+    {
+        "nid": "Demon_Spear",
+        "name": "Demon Spear",
+        "desc": "A spear infused with the soul of a demon. <green>CD:1</>\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            6,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Apocalypse"
+            ],
+            [
+                "cooldown",
+                1
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_STRONG"
+            ]
+        ]
+    }
+]

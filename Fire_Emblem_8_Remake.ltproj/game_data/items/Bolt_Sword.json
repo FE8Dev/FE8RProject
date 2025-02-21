@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Bolt_Sword",
+        "name": "Bolt Sword",
+        "desc": "A sword made from thunderbolts of dark clouds. <green>CD:1</>\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Magical, MAG + MOV*5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('MOV')*5))}</>), +10 SPD.",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Dire_Thunder"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "cooldown",
+                1
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_MOV_STRONG"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

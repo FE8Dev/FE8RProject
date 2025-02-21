@@ -1,0 +1,85 @@
+[
+    {
+        "nid": "Stone_Axe",
+        "name": "Stone Axe",
+        "desc": "An axe made of stone.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3), Breach (2)\n<pink>Misc:</>DEF + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            35,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Breached_2"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_WEAK"
+            ]
+        ]
+    }
+]

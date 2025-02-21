@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Aura_Glacier_Artur",
+        "name": "Aura Glacier",
+        "desc": "Purges all evil with an explosion of holy ice.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>+40 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aura_Glacier"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Pirate",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Artur"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Artur\").wexp['Light'] >= 420 and u(\"Artur\").wexp['Light'] < 480"
+            ],
+            [
+                "self_status_on_hit",
+                "Frozen_AOE_Splash"
+            ]
+        ]
+    }
+]

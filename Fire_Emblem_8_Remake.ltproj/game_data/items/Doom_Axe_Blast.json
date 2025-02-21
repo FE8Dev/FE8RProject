@@ -1,0 +1,117 @@
+[
+    {
+        "nid": "Doom_Axe_Blast",
+        "name": "Doom Axe (<icon>Blast</>)",
+        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5), Breach (15)\n<pink>Misc:</>(AOE Blast:5), cannot DS.",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "battle_cast_anim",
+                "Bakuretsu"
+            ],
+            [
+                "enemy_blast_aoe",
+                5
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "FireHit"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Fireball"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15",
+                    "Seared"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garcia"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Sear_ExplosionP"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Garcia\").wexp['Axe'] >= 420"
+            ],
+            [
+                "exp",
+                3
+            ]
+        ]
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "Raze_Sword",
+        "name": "Raze Sword",
+        "desc": "A sword that razes all evil.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>), targets LCK, +10 SPD.",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            6,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "alternate_resist_formula",
+                "CRIT_AVOID"
+            ]
+        ]
+    }
+]

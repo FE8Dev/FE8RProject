@@ -1,0 +1,94 @@
+[
+    {
+        "nid": "Regal_Lance",
+        "name": "Regal River",
+        "desc": "A water lance given to Seth for his service.\n<green>Skills:</>Silver's Champion, Mercy, Lance Guard (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Ignores Weapon Triangle.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_A",
+                    "Silvers_Champion",
+                    "Mercy_Seth_Art"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Seth"
+                ]
+            ],
+            [
+                "ignore_weapon_advantage",
+                null
+            ],
+            [
+                "ignore_weapon_disadvantage",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Seth\").wexp['Lance'] < 420 and has_skill(unit, 'Seths_Personal')"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ]
+        ]
+    }
+]

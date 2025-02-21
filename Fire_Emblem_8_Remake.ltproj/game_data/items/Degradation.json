@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Degradation",
+        "name": "Degradation",
+        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                27
+            ],
+            [
+                "crit",
+                32
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garcia"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Enrage_Item"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Garcia\").wexp['Sword'] >= 180 and u(\"Garcia\").wexp['Sword'] < 360"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    }
+]

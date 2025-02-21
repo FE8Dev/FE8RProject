@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Dead_Grasp_1",
+        "name": "Dead Grasp",
+        "desc": "Teleports enemy to unit, then unit cannot be counterattacked, and adds unit's Max HP/4 to next attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            35
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "store_unit",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Dead_Grasp_Buff"
+            ]
+        ]
+    }
+]

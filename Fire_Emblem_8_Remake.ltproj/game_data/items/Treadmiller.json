@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Treadmiller",
+        "name": "Treadmiller",
+        "desc": "Restores HP equal to user's MAG + MOV. <green>CD:3</>\n<pink>Misc:</>(Multi-target:2), Give +2 MOV, Canto+ to ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "HorseyGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"HorseyGirl\").wexp['Staff'] >= 240 and u(\"HorseyGirl\").wexp['Staff'] < 420"
+            ],
+            [
+                "status_on_hit",
+                "Joyous_Sprint"
+            ],
+            [
+                "battle_cast_anim",
+                "Recover"
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ]
+        ]
+    }
+]

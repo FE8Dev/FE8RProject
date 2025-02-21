@@ -1,0 +1,116 @@
+[
+    {
+        "nid": "Shielder_Lance",
+        "name": "Shielder G.L.",
+        "desc": "A heavy lance made for those who specialize in defense.\n<green>Skills:</>Lance Guard (A), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            5,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                26
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                27
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery",
+                    "Arcane_Barrier_Item"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_RES_MID"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

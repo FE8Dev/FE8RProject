@@ -1,0 +1,81 @@
+[
+    {
+        "nid": "Lance_of_Fog",
+        "name": "Lance of Fog",
+        "desc": "A lance for masters of wind and fog. <green>CD:1</>\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +50 Avoid/Dodge.",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Fog_Sword_Effect_Strong"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Tempest"
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
+            ],
+            [
+                "cooldown",
+                1
+            ]
+        ]
+    }
+]

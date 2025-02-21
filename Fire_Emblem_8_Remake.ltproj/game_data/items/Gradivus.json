@@ -1,0 +1,119 @@
+[
+    {
+        "nid": "Gradivus",
+        "name": "Gradivus",
+        "desc": "The lance of a mysterious warrior with an enigmatic past.\n<green>Skills:</>Lance Guard (X), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                48
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                13
+            ],
+            [
+                "weight",
+                36
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_X",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_RES_STRONG"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "value",
+                3000
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Stun"
+                ]
+            ]
+        ]
+    }
+]

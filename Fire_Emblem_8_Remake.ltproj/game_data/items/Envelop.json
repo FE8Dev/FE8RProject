@@ -1,0 +1,138 @@
+[
+    {
+        "nid": "Envelop",
+        "name": "Envelop",
+        "desc": "Ewan's advanced Light tome. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(Multi-target:3), Spell, +40 Crit damage.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            6,
+            4
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                5
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ewan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Smite"
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Lightning2"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Ewan\").wexp['Light'] >= 420"
+            ]
+        ]
+    }
+]
