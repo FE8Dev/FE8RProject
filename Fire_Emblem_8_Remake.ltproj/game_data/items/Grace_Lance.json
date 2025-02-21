@@ -2,7 +2,7 @@
     {
         "nid": "Grace_Lance",
         "name": "Grace Lance",
-        "desc": "An elegant lance that brings most of one's luck.\n<green>Skills:</>Goddess's Luck, Lance Guard (E)",
+        "desc": "An elegant lance that brings most of one's luck.\n<green>Skills:</>Goddess's Luck, Lance Guard (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             13,
@@ -73,6 +73,18 @@
             [
                 "eval_available",
                 "u(\"Artur\").wexp['Lance'] < 180"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

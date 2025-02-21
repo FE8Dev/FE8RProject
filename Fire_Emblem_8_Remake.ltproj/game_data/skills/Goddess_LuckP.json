@@ -2,7 +2,7 @@
     {
         "nid": "Goddess_LuckP",
         "name": "Goddess's Luck+",
-        "desc": "Adds Artur's Luck to damage given.\nReduce damage taken by Artur's Luck.\n+(Luck/20) bonus attacks.",
+        "desc": "Adds Artur's LCK to damage given.\nReduce damage taken by Artur's LCK.\n+(LCK/20) bonus attacks.",
         "icon_nid": "Boosters",
         "icon_index": [
             0,
@@ -16,6 +16,10 @@
             [
                 "dynamic_resist",
                 "unit.get_stat('LCK')"
+            ],
+            [
+                "dynamic_attacks",
+                "unit.get_stat('LCK') // 20"
             ],
             [
                 "lost_on_endstep",

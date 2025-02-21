@@ -2,7 +2,7 @@
     {
         "nid": "Magma_Bow",
         "name": "Magma Bow",
-        "desc": "This bow flows with strange magma...\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES/2",
+        "desc": "This bow flows with strange magma...\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//2))}</>)",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             0,

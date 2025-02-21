@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Gem_ArmorEPP",
+        "name": "Gem Armor+",
+        "desc": "Boosts DEF/RES by 16.\nReduces Damage taken by 75% when defending.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            22
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ]
+        ]
+    }
+]

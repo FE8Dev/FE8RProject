@@ -2,7 +2,7 @@
     {
         "nid": "Royal_Naginata",
         "name": "Royal Naginata",
-        "desc": "A lance made for the king of the desert.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Earth</><icon>Fire</><violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + SKL, +25 DEF/RES",
+        "desc": "A lance made for the king of the desert.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Earth</><icon>Fire</><violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SLK')))}</>), +30 DEF/RES",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             1,
@@ -82,11 +82,11 @@
                 [
                     [
                         "DEF",
-                        25
+                        30
                     ],
                     [
                         "RES",
-                        25
+                        30
                     ]
                 ]
             ],

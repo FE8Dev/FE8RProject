@@ -2,7 +2,7 @@
     {
         "nid": "Heros_Tomahawk",
         "name": "Hero's Tomahawk",
-        "desc": "The ultimate throwable axe for a hero.\n<violet>Inflicts:</>Breach (15)\n<pink>Misc:</>Brave",
+        "desc": "The ultimate throwable axe for a hero.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Breach (15)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Brave",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -84,6 +84,18 @@
                 [
                     "Lightweight"
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

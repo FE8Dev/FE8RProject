@@ -2,7 +2,7 @@
     {
         "nid": "Runeguard_Claws",
         "name": "Runeguard Claws",
-        "desc": "Claws enchanted with protection magic.\n<violet>Inflicts:</>Breach (8), Curse (8)\n<pink>Misc:</>+9/+9 DEF/RES on Equip, +DEF/4, +RES/4 to damage.",
+        "desc": "Claws enchanted with protection magic.\n<violet>Inflicts:</>Breach (8), Curse (8)\n<pink>Misc:</>+9/+9 DEF/RES on Equip, DEF/4 + RES/4  (<red>{e:(unit.get_stat('DEF')//4) + (unit.get_stat('RES')//4)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,

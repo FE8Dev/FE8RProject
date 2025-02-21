@@ -2,7 +2,7 @@
     {
         "nid": "Pulse_Axe",
         "name": "Pulse Axe",
-        "desc": "An axe charged with explosive thunder magic.\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG/2.",
+        "desc": "An axe charged with explosive thunder magic.\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,

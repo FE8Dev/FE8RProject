@@ -2,7 +2,7 @@
     {
         "nid": "Goddess_Lance",
         "name": "Goddess Lance",
-        "desc": "A beautiful lance blessed by a dancing Goddess.\n<green>Skills:</>Goddess's Luck+, Lance Guard (SS)",
+        "desc": "A beautiful lance blessed by a dancing Goddess.\n<green>Skills:</>Goddess's Luck+, Lance Guard (SS)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             34,
@@ -73,6 +73,18 @@
             [
                 "eval_available",
                 "u(\"Artur\").wexp['Lance'] >= 360"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

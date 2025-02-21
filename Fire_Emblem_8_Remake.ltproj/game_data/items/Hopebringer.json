@@ -2,7 +2,7 @@
     {
         "nid": "Hopebringer",
         "name": "Hopebringer",
-        "desc": "The axe of the simbol of hope. \n<green>Skills:</>Hope Herald\n<violet>Inflicts:</>Breach (25)\n<pink>Misc:</>Brave",
+        "desc": "The axe of the simbol of hope. \n<green>Skills:</>Hope Herald\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Breach (25)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Brave",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             5,
@@ -85,6 +85,18 @@
                     "Lightweight",
                     "Hope_Herald"
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }
