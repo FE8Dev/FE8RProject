@@ -2,7 +2,7 @@
     {
         "nid": "Silver_Club",
         "name": "Silver Club",
-        "desc": "The ultimate club for those most blunt.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (15)",
+        "desc": "The ultimate club for those most blunt.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (15)\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -78,6 +78,10 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

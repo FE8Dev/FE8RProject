@@ -8,10 +8,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.level_vars['Turnwheel'] == 0 and game.level_vars['UnitDeath'] == 0 and not has_achievement('ch11Ba')",
-            "    complete_achievement;ch11Ba;true;banner",
-            "    give_item;convoy;Helix_Blade_Dark",
-            "end",
+            "if;game.level_vars['Turnwheel'] == 0 and game.level_vars['UnitDeath'] == 0",
+            "complete_achievement;ch11Ba;true;banner",
+            "give_item;convoy;Helix_Blade_Dark",
             "end",
             "if;game.turncount <= 16",
             "    give_bexp;2200",

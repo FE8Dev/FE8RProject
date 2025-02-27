@@ -2,7 +2,7 @@
     {
         "nid": "Chastiefol",
         "name": "Chastiefol",
-        "desc": "A lance known by Frelian royalty.\n<green>Skills:</>Lance Guard (X)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR+MAG+SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG') + (unit.get_stat('SKL'))))}</>), Absorb HP (25%)",
+        "desc": "A lance known by Frelian royalty.\n<green>Skills:</>Lance Guard (X)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>), Absorb HP (25%).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             4,
@@ -84,7 +84,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "STR_SPD_STRONG"
             ],
             [
                 "lifelink",

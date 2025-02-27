@@ -3,15 +3,13 @@
         "name": "F1aAchievement",
         "trigger": "combat_end",
         "level_nid": "FinalA1",
-        "condition": "True",
+        "condition": "game.level_vars['BoneZone'] >= 30",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.level_vars['BoneZone'] == 30 and not has_achievement('final1a')",
-            "    complete_achievement;final1a;true;banner",
-            "    give_item;convoy;Gradivus",
-            "end"
+            "complete_achievement;final1a;true;banner",
+            "give_item;convoy;Gradivus"
         ],
         "nid": "FinalA1 F1aAchievement"
     }

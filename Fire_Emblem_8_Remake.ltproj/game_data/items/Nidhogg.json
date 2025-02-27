@@ -2,7 +2,7 @@
     {
         "nid": "Nidhogg",
         "name": "Nidhogg",
-        "desc": "Legendary bow of Frelia.\n<red>Very Effective:</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>+5 LCK.",
+        "desc": "Legendary bow of Frelia.\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Flying</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SKL/2 + LCK/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SKL')//2 + unit.get_stat('LCK')//2))}</>), +5 STR, +5 LCK.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -42,10 +42,6 @@
                 7
             ],
             [
-                "status_on_equip",
-                "Luck +5"
-            ],
-            [
                 "crit",
                 0
             ],
@@ -70,7 +66,8 @@
                 {
                     "effective_tags": [
                         "Monster",
-                        "Flying"
+                        "Flying",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 40,
@@ -83,6 +80,23 @@
                 [
                     "Bow_and_Light_Range_Penalty"
                 ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "LCK",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_LCK_MID"
             ]
         ]
     }

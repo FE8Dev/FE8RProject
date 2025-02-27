@@ -2,7 +2,7 @@
     {
         "nid": "Elwind",
         "name": "Elwind",
-        "desc": "Intermediate wind magic. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Splash DMG (15)",
+        "desc": "Intermediate wind magic. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), no WEXP gain, Splash DMG (15)",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             1,
@@ -71,7 +71,7 @@
             ],
             [
                 "wexp",
-                1
+                0
             ],
             [
                 "battle_cast_anim",
@@ -112,6 +112,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "start_cooldown",
                 null
             ]
         ]

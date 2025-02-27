@@ -2,7 +2,7 @@
     {
         "nid": "Nova_Axe_Ephraim",
         "name": "Nova Axe",
-        "desc": "An axe that emits incredible heat.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (15)\n<red>Effective:</><icon>Horse</>",
+        "desc": "An axe that emits incredible heat.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,
@@ -96,6 +96,10 @@
             [
                 "eval_available",
                 "u(\"Ephraim\").wexp['Axe'] >= 360"
+            ],
+            [
+                "brave",
+                null
             ]
         ]
     }

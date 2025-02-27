@@ -2,7 +2,7 @@
     {
         "nid": "Scorch_Axe",
         "name": "Scorch Axe",
-        "desc": "An axe that scorches the battlefield.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (5)\n<red>Effective:</><icon>Horse</>",
+        "desc": "An axe that scorches the battlefield.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (5)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -96,6 +96,10 @@
             [
                 "eval_available",
                 "u(\"Ephraim\").wexp['Axe'] >= 180 and u(\"Ephraim\").wexp['Axe'] < 360"
+            ],
+            [
+                "brave",
+                null
             ]
         ]
     }

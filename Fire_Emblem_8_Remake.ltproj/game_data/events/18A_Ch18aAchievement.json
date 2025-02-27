@@ -3,17 +3,13 @@
         "name": "Ch18aAchievement",
         "trigger": "unit_death",
         "level_nid": "18A",
-        "condition": "unit.klass == \"Gorgon_Egg_White\"",
+        "condition": "unit.klass == \"Gorgon_Egg_White\" and game.level_vars['GorgonEgg'] == 10",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "inc_level_var;GorgonEgg",
-            "if;game.level_vars['GorgonEgg'] == 10 and not has_achievement('ch18a')",
-            "    complete_achievement;ch18a;true;banner",
-            "    give_bexp;20000",
-            "end",
-            "end"
+            "complete_achievement;ch18a;true;banner",
+            "give_bexp;20000"
         ],
         "nid": "18A Ch18aAchievement"
     }

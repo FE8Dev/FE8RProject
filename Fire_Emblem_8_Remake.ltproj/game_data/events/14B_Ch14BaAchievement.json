@@ -5,13 +5,11 @@
         "level_nid": "14B",
         "condition": "has_item(\"White Gem\", nid=\"Rennac\")",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('ch14Ba')",
-            "    complete_achievement;ch14Ba;true;banner",
-            "    give_item;convoy;Zap_Dagger",
-            "end"
+            "complete_achievement;ch14Ba;true;banner",
+            "give_item;convoy;Zap_Dagger"
         ],
         "nid": "14B Ch14BaAchievement"
     }

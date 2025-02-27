@@ -2,7 +2,7 @@
     {
         "nid": "Mourning_Blade",
         "name": "Mourning Blade",
-        "desc": "A blade of darkness and regret.\n<green>Skills:</>Blade Sweep.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, targets RES.",
+        "desc": "A blade of darkness and regret.\n<green>Skills:</>Blade Sweep.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -111,6 +111,10 @@
                     "Cursed_2",
                     "Crippled"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_WEAK"
             ],
             [
                 "alternate_resist_formula",

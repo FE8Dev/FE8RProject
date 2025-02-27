@@ -2,7 +2,7 @@
     {
         "nid": "Prideful_Might",
         "name": "Prideful Might",
-        "desc": "The light of pride is blinding.\n<green>Skills:</>Wild Might+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Heavy.",
+        "desc": "The light of pride is blinding.\n<green>Skills:</>Wild Might+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -105,6 +105,10 @@
             [
                 "magic",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_STRONG"
             ]
         ]
     }

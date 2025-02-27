@@ -2,7 +2,7 @@
     {
         "nid": "Kaboomle_Staff",
         "name": "Kaboomle Staff",
-        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil.\n<pink>Misc:</>Cannot miss, can't crit.",
+        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             2,
@@ -82,6 +82,18 @@
             [
                 "eval_available",
                 "u(\"Larachel\").wexp['Staff'] >= 300 and u(\"Larachel\").wexp['Staff'] < 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

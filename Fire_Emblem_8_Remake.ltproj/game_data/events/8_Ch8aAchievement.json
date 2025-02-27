@@ -3,15 +3,13 @@
         "name": "Ch8aAchievement",
         "trigger": "on_talk",
         "level_nid": "8",
-        "condition": "check_pair('Ephraim', 'Eirika')",
+        "condition": "check_pair('Ephraim', 'Eirika') and game.turncount == 2",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.turncount == 2 and not has_achievement('ch8a')",
-            "    complete_achievement;ch8a;true;banner",
-            "    give_item;convoy;Talisman_Consumable",
-            "end"
+            "complete_achievement;ch8a;true;banner",
+            "give_item;convoy;Talisman_Consumable"
         ],
         "nid": "8 Ch8aAchievement"
     }

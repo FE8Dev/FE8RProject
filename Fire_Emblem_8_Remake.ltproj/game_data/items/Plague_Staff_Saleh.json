@@ -2,7 +2,7 @@
     {
         "nid": "Plague_Staff_Saleh",
         "name": "Plague Staff",
-        "desc": "A staff said to cause plagues during wartimes. <green>Start CD:3</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>Hits all enemies, this is a free action, always hits, cannot DS.",
+        "desc": "A staff said to cause plagues during wartimes. <green>CD:3</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>(Multi-target:6), this is a free action, always hits, no WEXP gain, cannot DS.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             4,
@@ -81,10 +81,6 @@
                 ]
             ],
             [
-                "all_enemies_aoe",
-                null
-            ],
-            [
                 "prf_unit",
                 [
                     "Saleh"
@@ -104,6 +100,18 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "multi_target",
+                6
+            ],
+            [
+                "allow_less_than_max_targets",
                 null
             ]
         ]

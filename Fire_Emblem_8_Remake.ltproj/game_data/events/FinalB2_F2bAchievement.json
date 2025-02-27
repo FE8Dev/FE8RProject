@@ -3,18 +3,13 @@
         "name": "F2bAchievement",
         "trigger": "unit_death",
         "level_nid": "FinalB2",
-        "condition": "True",
+        "condition": "game.level_vars['HordeKill'] == 10",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;unit.team not in ['player','other'] ",
-            "inc_level_var;HordeKill",
-            "if;game.level_vars['HordeKill'] == 10 and not has_achievement('final2b')",
-            "    complete_achievement;final2b;true;banner",
-            "    give_money;500",
-            "end",
-            "end"
+            "complete_achievement;final2b;true;banner",
+            "give_money;30000"
         ],
         "nid": "FinalB2 F2bAchievement"
     }

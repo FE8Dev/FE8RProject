@@ -15,17 +15,15 @@
             "add_portrait;Cormag;Left",
             "speak;Cormag;This fort hasn't been used for a long time.|Let's see if there's anything useful around.|Hmm, there's some rusted shields and swords over there.|Rotted bows and arrows over there.|Aha, looks like they left behind this nice spear.",
             "remove_portrait;Cormag",
-            "if;not has_achievement('ch10Ba')",
-            "    complete_achievement;ch10Ba;true;banner",
-            "    give_item;Cormag;Fenrir_Spear",
-            "end",
+            "complete_achievement;ch10Ba;true;banner",
+            "give_item;Cormag;Fenrir_Spear",
             "remove_region;AbandonedFort",
-            "else",
-            "end",
             "transition;close;100",
             "change_background",
             "transition;open;100",
-            "has_traded;Cormag"
+            "has_traded;Cormag",
+            "else",
+            "end"
         ],
         "nid": "10B Ch10BaAchievement"
     }

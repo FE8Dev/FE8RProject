@@ -2,7 +2,7 @@
     {
         "nid": "Leg_Chopper",
         "name": "Leg Chopper",
-        "desc": "An axe used to cut down infantry.\n<red>Effective:</><icon>Infantry</>\n<violet>Inflicts:</>Breach (2)",
+        "desc": "An axe used to cut down infantry.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (2)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             36,
@@ -27,11 +27,11 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
-                80
+                90
             ],
             [
                 "crit",
@@ -86,6 +86,16 @@
             [
                 "eval_available",
                 "u(\"Duessel\").wexp['Axe'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_MID"
             ]
         ]
     }

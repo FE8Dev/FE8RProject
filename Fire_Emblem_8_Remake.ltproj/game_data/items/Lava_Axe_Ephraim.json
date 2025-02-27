@@ -2,7 +2,7 @@
     {
         "nid": "Lava_Axe_Ephraim",
         "name": "Lava Axe",
-        "desc": "An axe that still is hot from the forge.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (5)\n<red>Effective:</><icon>Horse</>",
+        "desc": "An axe that still is hot from the forge.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (5)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             5,
@@ -96,6 +96,10 @@
             [
                 "eval_available",
                 "u(\"Ephraim\").wexp['Axe'] < 180"
+            ],
+            [
+                "brave",
+                null
             ]
         ]
     }

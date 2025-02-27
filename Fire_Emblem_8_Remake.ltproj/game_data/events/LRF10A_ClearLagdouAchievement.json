@@ -5,14 +5,12 @@
         "level_nid": "LRF10A",
         "condition": "True",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('lagdouclear')",
-            "    complete_achievement;lagdouclear;true;banner",
-            "    give_item;convoy;Omni_Orb",
-            "    give_item;convoy;Sacred_Gem",
-            "end"
+            "complete_achievement;lagdouclear;true;banner",
+            "give_item;convoy;Omni_Orb",
+            "give_item;convoy;Sacred_Gem"
         ],
         "nid": "LRF10A ClearLagdouAchievement"
     }

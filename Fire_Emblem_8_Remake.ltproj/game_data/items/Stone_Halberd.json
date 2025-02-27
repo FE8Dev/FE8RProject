@@ -2,7 +2,7 @@
     {
         "nid": "Stone_Halberd",
         "name": "Stone Halberd",
-        "desc": "An unorthodox Gargoyle lance.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (2)\n<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Reaver.",
+        "desc": "An unorthodox Gargoyle lance.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (2)\n<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Reaver, DEF + CON*1.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -95,6 +95,10 @@
                     "Rock_Punctures",
                     "Breached_2"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_MID"
             ]
         ]
     }

@@ -3,17 +3,14 @@
         "name": "F2aAchievement",
         "trigger": "unit_death",
         "level_nid": "FinalB2",
-        "condition": "unit.nid == 'Formortiis'",
+        "condition": "unit.nid == 'Formortiis' and (check_pair('Eirika', 'Formortiis') or check_pair('Ephraim', 'Formortiis')) and (game.get_unit('Ephraim').traveler == 'Eirika' or game.get_unit('Eirika').traveler == 'Ephraim')",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;(check_pair('Eirika', 'Formortiis') or check_pair('Ephraim', 'Formortiis')) and (game.get_unit('Ephraim').traveler == 'Eirika' or game.get_unit('Eirika').traveler == 'Ephraim')",
-            "if;not has_achievement('final2a')",
-            "    complete_achievement;final2a;true;banner",
-            "    give_money;500",
-            "end",
-            "end"
+            "complete_achievement;final2a;true;banner",
+            "give_item;convoy;Lightbringer",
+            "give_item;convoy;Grand_Cross"
         ],
         "nid": "FinalB2 F2aAchievement"
     }

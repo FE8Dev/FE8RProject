@@ -3,15 +3,13 @@
         "name": "Money1Achievement",
         "trigger": "level_end",
         "level_nid": null,
-        "condition": "True",
+        "condition": "game.get_money() >= 20000",
         "commands": [],
         "only_once": true,
-        "priority": 20,
+        "priority": 10,
         "_source": [
-            "if;game.get_money() >= 20000 and not has_achievement('money1')",
-            "    complete_achievement;money1;true;banner",
-            "    give_item;convoy;Dark_Staff",
-            "end"
+            "complete_achievement;money1;true;banner",
+            "give_item;convoy;Dark_Staff"
         ],
         "nid": "Global Money1Achievement"
     }

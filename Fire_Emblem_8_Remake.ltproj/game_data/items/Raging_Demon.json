@@ -2,7 +2,7 @@
     {
         "nid": "Raging_Demon",
         "name": "Raging Demon",
-        "desc": "A rage filled warhammer that vaporizes enemies.\n<green>Skills:</>War Blow, Charger+++\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, Shove (5)",
+        "desc": "A rage filled warhammer that vaporizes enemies.\n<green>Skills:</>War Blow, Charger+++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</></><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (5)",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -64,7 +64,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Stun"
+                    "Stun",
+                    "Seared"
                 ]
             ],
             [
@@ -78,7 +79,8 @@
                 {
                     "effective_tags": [
                         "Frozen",
-                        "Armor"
+                        "Armor",
+                        "Horse"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,

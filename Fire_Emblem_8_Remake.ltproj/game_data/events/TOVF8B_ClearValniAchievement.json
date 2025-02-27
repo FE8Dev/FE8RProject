@@ -5,13 +5,11 @@
         "level_nid": "TOVF8B",
         "condition": "True",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('valniclear')",
-            "    complete_achievement;valniclear;true;banner",
-            "    give_item;convoy;Omni_Orb",
-            "end"
+            "complete_achievement;valniclear;true;banner",
+            "give_item;convoy;Omni_Orb"
         ],
         "nid": "TOVF8B ClearValniAchievement"
     }

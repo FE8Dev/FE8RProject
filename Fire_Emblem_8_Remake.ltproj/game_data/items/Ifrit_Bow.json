@@ -2,7 +2,7 @@
     {
         "nid": "Ifrit_Bow",
         "name": "Ifrit Bow",
-        "desc": "A bow said to contain the soul of the God of Fire.\n<green>Skills:</>Fire's Rampage\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Ablaze\n<red>Effective:</><icon>Flying</><icon>Horse</>",
+        "desc": "A bow said to contain the soul of the God of Fire.\n<green>Skills:</>Fire's Rampage\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Ablaze\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>Half damage inflicted on miss.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             2,
@@ -90,6 +90,10 @@
             [
                 "eval_available",
                 "u(\"Ross\").wexp['Bow'] >= 360"
+            ],
+            [
+                "damage_on_miss",
+                0.5
             ]
         ]
     }

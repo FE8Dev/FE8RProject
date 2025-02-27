@@ -11,7 +11,7 @@
             "add_portrait;Riev;Left",
             "speak;Riev;Heh heh heh...|No!|No!|It's been so long.|I got carried away.|I'd best stop and withdraw for now.|Follow me.|Come to Darkling Woods...|The Demon King awaits your pleasure...",
             "remove_portrait;Riev",
-            "if;game.turncount <= 6 and not has_achievement('ch19a')",
+            "if;game.turncount <= 6",
             "    complete_achievement;ch19a;true;banner",
             "    give_money;30000",
             "end"

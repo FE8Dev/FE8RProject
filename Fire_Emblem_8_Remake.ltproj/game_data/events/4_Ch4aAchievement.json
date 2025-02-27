@@ -3,18 +3,13 @@
         "name": "Ch4aAchievement",
         "trigger": "unit_death",
         "level_nid": "4",
-        "condition": "True",
+        "condition": "game.level_vars['LuteKill'] == 3",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;unit.team not in ['player','other'] and unit2.nid == 'Lute'",
-            "inc_level_var;LuteKill",
-            "if;game.level_vars['LuteKill'] == 3 and not has_achievement('ch4a')",
-            "    complete_achievement;ch4a;true;banner",
-            "    give_item;Lute;Flux_Snakes",
-            "end",
-            "end"
+            "complete_achievement;ch4a;true;banner",
+            "give_item;Lute;Flux_Snakes"
         ],
         "nid": "4 Ch4aAchievement"
     }

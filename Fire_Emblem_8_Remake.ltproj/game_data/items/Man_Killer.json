@@ -2,7 +2,7 @@
     {
         "nid": "Man_Killer",
         "name": "Man Killer",
-        "desc": "An axe that has stopped many soldiers.\n<red>Effective:</><icon>Infantry</>\n<violet>Inflicts:</>Breach (5)",
+        "desc": "An axe that drowns enemies in their own blood.\n<orange>Element:</><icon>Earth</><icon>Water</>\n<violet>Inflicts:</><icon>Rock</><icon>Drenched</>(AOE:3), Breach (5)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             39,
@@ -27,11 +27,11 @@
             ],
             [
                 "damage",
-                13
+                17
             ],
             [
                 "hit",
-                85
+                95
             ],
             [
                 "crit",
@@ -86,6 +86,21 @@
             [
                 "eval_available",
                 "u(\"Duessel\").wexp['Axe'] >= 180 and u(\"Duessel\").wexp['Axe'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_MID"
             ]
         ]
     }

@@ -81,7 +81,8 @@
                 "statuses_on_hit",
                 [
                     "Cursed_15",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Seared"
                 ]
             ],
             [
@@ -92,7 +93,19 @@
             ],
             [
                 "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 360"
+                "u(\"Lute\").wexp['Dark'] >= 360  and u(\"Lute\").wexp['Dark'] < 480"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

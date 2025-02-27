@@ -5,7 +5,7 @@
         "level_nid": "9A",
         "condition": "region.nid == 'TanaFishing'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "add_portrait;Tana;Left",
@@ -14,10 +14,8 @@
             "bop_portrait;Tana",
             "s;Tana;Oh! It looks like I got a bite!|What a catch!",
             "remove_portrait;Tana",
-            "if;not has_achievement('ch9a')",
-            "    complete_achievement;ch9a;true;banner",
-            "    give_item;Tana;Master_Scroll",
-            "end"
+            "complete_achievement;ch9a;true;banner",
+            "give_item;Tana;Master_Scroll"
         ],
         "nid": "9A Ch9aAchievement"
     }

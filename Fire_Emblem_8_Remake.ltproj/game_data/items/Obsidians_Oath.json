@@ -2,7 +2,7 @@
     {
         "nid": "Obsidians_Oath",
         "name": "Obsidian's Oath",
-        "desc": "Duessel's ultimate blade.\n<green>Skills:</>Grado's Wall+, Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF.",
+        "desc": "Duessel's own crafted blade.\n<green>Skills:</>Grado's Wall+, Blade Sweep\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             0,
@@ -109,6 +109,12 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
             ]
         ]
     }

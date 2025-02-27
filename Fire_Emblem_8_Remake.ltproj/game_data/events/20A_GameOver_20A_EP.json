@@ -1,0 +1,15 @@
+[
+    {
+        "name": "GameOver_20A_EP",
+        "trigger": "unit_wait",
+        "level_nid": "20A",
+        "condition": "game.check_dead(\"Eirika\") or game.check_dead(\"Ephraim\")",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "trigger_script;Global DeathTimewheel"
+        ],
+        "nid": "20A GameOver_20A_EP"
+    }
+]

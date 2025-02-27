@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Edification_Buff_Plus",
+        "name": "Edification Buff+",
+        "desc": "+10% DEF, +10 Avoid for each stack.\nMax 10 stacks.\nLasts until end of chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            42
+        ],
+        "components": [
+            [
+                "stack",
+                10
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        1.1
+                    ]
+                ]
+            ],
+            [
+                "dynamic_avoid",
+                "10"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

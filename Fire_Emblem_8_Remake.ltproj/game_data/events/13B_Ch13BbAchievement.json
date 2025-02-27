@@ -3,17 +3,13 @@
         "name": "Ch13BbAchievement",
         "trigger": "unit_death",
         "level_nid": "13B",
-        "condition": "unit.nid == \"123\"",
+        "condition": "unit.nid == \"123\" and check_pair('Gerik', '123') and game.get_unit('Gerik').traveler == 'Marisa'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;check_pair('Gerik', '123') and game.get_unit('Gerik').traveler == 'Marisa'",
-            "if;not has_achievement('ch13Bb')",
-            "    complete_achievement;ch13Bb;true;banner",
-            "    increment_support_points;Gerik;Marisa;50",
-            "end",
-            "end"
+            "complete_achievement;ch13Bb;true;banner",
+            "increment_support_points;Gerik;Marisa;50"
         ],
         "nid": "13B Ch13BbAchievement"
     }

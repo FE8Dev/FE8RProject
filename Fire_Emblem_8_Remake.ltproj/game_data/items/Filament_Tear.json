@@ -1,0 +1,106 @@
+[
+    {
+        "nid": "Filament_Tear",
+        "name": "Filament Tear",
+        "desc": "To tear the sky and rend the heavens.\n<green>Skills:</>Lance Guard (X), Edification+ <orange>Element:</><icon>Earth</></><icon>Dark</>\n<violet>Inflicts:</><icon>Rock</>, Breach (25) <red>Effective:</><icon>Armor</><icon>Flying</>\n<pink>Misc:</>Reaver, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "02-26-25",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                17
+            ],
+            [
+                "weight",
+                35
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_X",
+                    "Edification_Plus"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "GargoyleGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"GargoyleGirl\").wexp['Lance'] >= 480"
+            ],
+            [
+                "reaver",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Breached_25"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_STRONG"
+            ]
+        ]
+    }
+]

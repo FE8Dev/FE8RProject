@@ -2,7 +2,7 @@
     {
         "nid": "Goddess_Armanents",
         "name": "Goddess Armanents",
-        "desc": "+1 extra attack, +5 AS, and half damage reduction when at full HP.",
+        "desc": "+1 extra attack, +5 AS, ignore half of enemy's DEF or RES, and half damage reduction when at full HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -18,12 +18,20 @@
                 "unit.get_hp() == unit.get_max_hp()"
             ],
             [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
                 "dynamic_attack_speed",
                 "5"
             ],
             [
                 "resist_multiplier",
                 0.5
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES')//2 if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')//2"
             ]
         ]
     }

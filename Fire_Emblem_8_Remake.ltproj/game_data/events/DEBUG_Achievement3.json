@@ -5,11 +5,10 @@
         "level_nid": "DEBUG",
         "condition": "True",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "if;check_pair('Amelia','Gheb')",
-            "if;not has_achievement('ch9Ba')",
             "    complete_achievement;ch9Ba;true;banner",
             "    give_money;500",
             "end",

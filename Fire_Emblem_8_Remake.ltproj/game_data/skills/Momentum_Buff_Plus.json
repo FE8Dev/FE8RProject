@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Momentum_Buff_Plus",
+        "name": "Momentum+",
+        "desc": "+2 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain Desperation if below 75% Max HP.\nMax 999 stacks. Lost on end of chapter.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            9
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "2"
+            ],
+            [
+                "dynamic_accuracy",
+                "2"
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "aura",
+                "Momentum_Desperation_Unit"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    }
+]

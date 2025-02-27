@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Ch12aAchievement_Tracker",
+        "trigger": "combat_end",
+        "level_nid": "12A",
+        "condition": "unit.nid == 'Ewan' or unit2.nid == 'Ewan'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;(unit.team not in ['player','other'] and unit2.nid == 'Ewan') or (unit.team not in ['player','other'] and unit.nid == 'Ewan')",
+            "inc_level_var;EwanBattle",
+            "else",
+            "end"
+        ],
+        "nid": "12A Ch12aAchievement_Tracker"
+    }
+]

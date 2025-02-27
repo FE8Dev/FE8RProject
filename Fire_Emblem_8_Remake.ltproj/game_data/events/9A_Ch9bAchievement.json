@@ -1,17 +1,15 @@
 [
     {
         "name": "Ch9bAchievement",
-        "trigger": "level_start",
+        "trigger": "unit_wait",
         "level_nid": "9A",
-        "condition": "True",
+        "condition": "game.game_vars['Ch.9_Village_1'] == True and game.game_vars['Ch.9_Village_2'] == True and game.turncount <= 8",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.game_vars['Ch.9_Village_1'] == True and game.game_vars['Ch.9_Village_2'] == True and game.turncount <= 8 and not has_achievement('ch9b')",
-            "    complete_achievement;ch9b;true;banner",
-            "    give_item;convoy;Speedwing_Consumable",
-            "end"
+            "complete_achievement;ch9b;true;banner",
+            "give_item;convoy;Speedwing_Consumable"
         ],
         "nid": "9A Ch9bAchievement"
     }

@@ -1,19 +1,17 @@
 [
     {
         "name": "Ch12aAchievement",
-        "trigger": "unit_death",
+        "trigger": "combat_end",
         "level_nid": "12A",
-        "condition": "unit.team not in ['player','other'] and unit2.nid == 'Ewan'",
+        "condition": "game.level_vars['EwanBattle'] == 3",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('ch12a')",
-            "    complete_achievement;ch12a;true;banner",
-            "    give_item;convoy;Energy_Ring_Consumable_P",
-            "    give_item;convoy;Dragonshield_Consumable_P",
-            "    give_item;convoy;Talisman_Consumable_P",
-            "end"
+            "complete_achievement;ch12a;true;banner",
+            "give_item;convoy;Energy_Ring_Consumable_P",
+            "give_item;convoy;Dragonshield_Consumable_P",
+            "give_item;convoy;Talisman_Consumable_P"
         ],
         "nid": "12A Ch12aAchievement"
     }

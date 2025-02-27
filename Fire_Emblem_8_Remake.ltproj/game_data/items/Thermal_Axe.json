@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Thermal_Axe",
+        "name": "Thermal Axe",
+        "desc": "An axe that balances ones state of mind.\n<green>Skills:</>Steam Flow\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>,Breach (8)\n<red>Effective:</><icon>Horse</>",
+        "icon_nid": "Cormag Axes",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "status_on_hit",
+                "Breached_8"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "Unwieldy",
+                12
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Steam_Flow"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cormag"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cormag\").wexp['Axe'] >= 300 and u(\"Cormag\").wexp['Axe'] < 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Drench_Debuff"
+                ]
+            ]
+        ]
+    }
+]

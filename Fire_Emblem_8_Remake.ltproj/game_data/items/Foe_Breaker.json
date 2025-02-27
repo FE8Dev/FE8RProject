@@ -2,7 +2,7 @@
     {
         "nid": "Foe_Breaker",
         "name": "Foe Breaker",
-        "desc": "A greatbow designed to hunt horses.\n<violet>Inflicts:</>Breach (15)\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</>Heavy, add unit's STR/2 to damage (<red>{e:(unit.get_stat('STR')//2)}</>).",
+        "desc": "A greatbow designed to hunt horses.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</>Heavy, add unit's STR/2 to damage (<red>{e:(unit.get_stat('STR')//2)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -86,7 +86,7 @@
             ],
             [
                 "eval_available",
-                "u(\"HorseyBoy\").wexp['Bow'] >= 360"
+                "u(\"HorseyBoy\").wexp['Bow'] >= 360 and u(\"HorseyBoy\").wexp['Bow'] < 480"
             ],
             [
                 "wexp",
@@ -95,7 +95,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Breached_15"
+                    "Breached_15",
+                    "Rock_Punctures"
                 ]
             ],
             [

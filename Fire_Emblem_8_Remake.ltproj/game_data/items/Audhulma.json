@@ -2,7 +2,7 @@
     {
         "nid": "Audhulma",
         "name": "Audhulma",
-        "desc": "Legendary sword of Jehanna.\n<green>Skills:</>Flash Step\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>+5 RES, +5 SPD.",
+        "desc": "Legendary sword of Jehanna.\n<green>Skills:</>Risky Vantage, Flash Step <orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Monster</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2))}</>)+5 RES, +5 SPD.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -73,7 +73,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step",
+                    "Risky_Vantage"
                 ]
             ],
             [
@@ -84,13 +85,19 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster"
+                        "Monster",
+                        "Seared",
+                        "Flying"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 40,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
             ]
         ]
     }

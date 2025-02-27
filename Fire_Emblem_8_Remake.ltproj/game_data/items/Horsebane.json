@@ -2,7 +2,7 @@
     {
         "nid": "Horsebane",
         "name": "Horsebane",
-        "desc": "A greatbow designed to hunt horses.\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</>Heavy.",
+        "desc": "A greatbow designed to hunt horses.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</>Heavy.",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -102,6 +102,12 @@
             [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
             ]
         ]
     }

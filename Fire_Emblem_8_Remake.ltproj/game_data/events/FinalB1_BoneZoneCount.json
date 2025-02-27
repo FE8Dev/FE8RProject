@@ -3,13 +3,12 @@
         "name": "BoneZoneCount",
         "trigger": "unit_death",
         "level_nid": "FinalB1",
-        "condition": "unit.klass == \"Skull_King\"",
+        "condition": "unit.klass == \"Skull_King\" or unit.klass == \"Spectar\" or unit.klass == \"Legion\"",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "inc_game_var;BoneZone",
-            ""
+            "inc_game_var;BoneZone"
         ],
         "nid": "FinalB1 BoneZoneCount"
     }

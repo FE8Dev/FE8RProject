@@ -2,7 +2,7 @@
     {
         "nid": "Titanic",
         "name": "Titanic",
-        "desc": "A club which creates magical sparks.\n<green>Skills:</>War Blow, Circle Swing+\n<violet>Inflicts:</><icon>Stun</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2 + MAG/2 (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG')//2)}</>).",
+        "desc": "A club which creates magical sparks.\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2 + MAG/2 (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG')//2)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -65,7 +65,8 @@
                 "statuses_on_hit",
                 [
                     "Stun",
-                    "Breached_15"
+                    "Breached_15",
+                    "Rock_Punctures"
                 ]
             ],
             [

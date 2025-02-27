@@ -2,7 +2,7 @@
     {
         "nid": "Torch_Bow_Ross",
         "name": "Torch Bow",
-        "desc": "A bow that makes it hard for enemies to hide.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Litten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>",
+        "desc": "A bow that makes it hard for enemies to hide.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Litten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>Half damage inflicted on miss.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -93,6 +93,10 @@
             [
                 "eval_available",
                 "u(\"Ross\").wexp['Bow'] < 180"
+            ],
+            [
+                "damage_on_miss",
+                0.5
             ]
         ]
     }

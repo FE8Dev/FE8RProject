@@ -2,7 +2,7 @@
     {
         "nid": "Dull_Obsidian",
         "name": "Dull Obsidian",
-        "desc": "Duessel's trusty lance that has been through many battles.\n<green>Skills:</>Lance Guard (E)",
+        "desc": "Duessel's trusty lance that has been through many battles.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             20,
@@ -72,6 +72,12 @@
             [
                 "eval_available",
                 "u(\"Duessel\").wexp['Lance'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
             ]
         ]
     }

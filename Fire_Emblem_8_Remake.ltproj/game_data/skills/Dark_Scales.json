@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Scales",
         "name": "Dark Scales",
-        "desc": "Reduce damage this unit takes by 75%.",
+        "desc": "Reduce damage this unit takes by half. Unit is immune to negative statuses.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -15,7 +15,11 @@
             ],
             [
                 "resist_multiplier",
-                0.75
+                0.5
+            ],
+            [
+                "immune_status",
+                null
             ]
         ]
     }

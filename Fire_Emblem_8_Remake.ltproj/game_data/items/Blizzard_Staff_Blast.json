@@ -2,7 +2,7 @@
     {
         "nid": "Blizzard_Staff_Blast",
         "name": "Blizzard Staff (<icon>Blast</>)",
-        "desc": "A staff used to create small blizzards. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:3), cannot crit, always hits, cannot DS.",
+        "desc": "A staff used to create small blizzards. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:3), cannot crit, always hits, cannot DS, no WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             0,
@@ -114,6 +114,14 @@
             [
                 "exp",
                 3
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "wexp",
+                0
             ]
         ]
     }

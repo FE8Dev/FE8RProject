@@ -2,7 +2,7 @@
     {
         "nid": "Hotwood_Bow",
         "name": "Hotwood Bow",
-        "desc": "A bow that feels hot to the touch.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Litten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>",
+        "desc": "A bow that feels hot to the touch.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Litten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>Half damage inflicted on miss.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             9,
@@ -89,6 +89,10 @@
             [
                 "eval_available",
                 "u(\"Ross\").wexp['Bow'] >= 180 and u(\"Ross\").wexp['Bow'] < 360"
+            ],
+            [
+                "damage_on_miss",
+                0.5
             ]
         ]
     }

@@ -1,0 +1,142 @@
+[
+    {
+        "nid": "Black_Thunder_Breath",
+        "name": "Black Thunder Breath",
+        "desc": "Powerful dark lightning.\n<orange>Element:</><icon>Thunder</><icon>Dark</> <violet>Inflicts:</>Stun<icon></></>Shadowblight<icon>, Cursed (15)\n<red>Effective:</><icon>Armor</><icon>Drenched</><icon>Dragon</>\n<pink>Misc:</>Magical, +20 SPD, cannot counter, cannot be countered, (Multi-Target:2).",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Thoron"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Drenched",
+                        "Armor",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stunned",
+                    "Cursed_15",
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Amelia"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Amelia\").wexp['Monster'] >= 420"
+            ],
+            [
+                "cannot_counter",
+                null
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    68,
+                    68,
+                    68
+                ]
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Thunder"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ]
+        ]
+    }
+]

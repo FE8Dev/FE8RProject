@@ -2,7 +2,7 @@
     {
         "nid": "Gleipnir",
         "name": "Gleipnir",
-        "desc": "Legendary dark magic of Grado.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (8)\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>+5 SKL.",
+        "desc": "Legendary dark magic of Grado.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (8)\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>MAG//2 + CON*1.5 + SKL//2 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + unit.get_stat('CON')*1.5)),+5 SKL, +5 CON.",
         "icon_nid": "Dark",
         "icon_index": [
             0,
@@ -95,6 +95,23 @@
             [
                 "self_status_on_hit",
                 "Shadowblight_AOE_Splash"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "CON",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_MID"
             ]
         ]
     }

@@ -2,13 +2,17 @@
     {
         "nid": "Resistance +5",
         "name": "Resistance +5",
-        "desc": "Grants RES +5.",
+        "desc": "Grants RES +5 for 2 turns.",
         "icon_nid": "Skills",
         "icon_index": [
             9,
             9
         ],
         "components": [
+            [
+                "hidden",
+                null
+            ],
             [
                 "stat_change",
                 [
@@ -17,6 +21,10 @@
                         5
                     ]
                 ]
+            ],
+            [
+                "time",
+                2
             ]
         ]
     }

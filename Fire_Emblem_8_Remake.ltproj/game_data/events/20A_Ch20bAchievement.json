@@ -5,12 +5,10 @@
         "level_nid": "20A",
         "condition": "unit.nid == \"259\"",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('ch20b')",
-            "    complete_achievement;ch20b;true;banner",
-            "end"
+            "complete_achievement;ch20b;true;banner"
         ],
         "nid": "20A Ch20bAchievement"
     }

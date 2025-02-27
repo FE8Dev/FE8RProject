@@ -2,7 +2,7 @@
     {
         "nid": "Massive_Lance",
         "name": "Massive Lance",
-        "desc": "A massive lance with great reach that requires prodigious strength to wield.\n<green>Skills:</>World's Strongest, Lance Guard (E) <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A massive lance with great reach that requires prodigious strength to wield.\n<green>Skills:</>World's Strongest, Lance Guard (E) <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             0,
@@ -114,6 +114,10 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_MID"
             ]
         ]
     }

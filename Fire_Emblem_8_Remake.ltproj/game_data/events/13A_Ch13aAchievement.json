@@ -5,13 +5,11 @@
         "level_nid": "13A",
         "condition": "game.check_dead('Pablo') and game.check_dead('Aias') ",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('ch13a')",
-            "    complete_achievement;ch13a;true;banner",
-            "    give_item;convoy;Angelic_Robe_Consumable_P",
-            "end"
+            "complete_achievement;ch13a;true;banner",
+            "give_item;convoy;Angelic_Robe_Consumable_P"
         ],
         "nid": "13A Ch13aAchievement"
     }

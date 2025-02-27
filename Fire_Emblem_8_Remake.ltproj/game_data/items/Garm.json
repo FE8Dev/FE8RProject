@@ -2,7 +2,7 @@
     {
         "nid": "Garm",
         "name": "Garm",
-        "desc": "Legendary axe of Grado.\n<violet>Inflicts:</>Breach (8)\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>+5 SPD.",
+        "desc": "Legendary axe of Grado.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Breach (8)\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>DEF/2 + SPD/2 + SKL/2, +5 SPD, +5 SKL.",
         "icon_nid": "Axe",
         "icon_index": [
             0,
@@ -42,10 +42,6 @@
                 13
             ],
             [
-                "status_on_equip",
-                "Speed +5"
-            ],
-            [
                 "crit",
                 0
             ],
@@ -62,10 +58,6 @@
                 2
             ],
             [
-                "status_on_hit",
-                "Breached_8"
-            ],
-            [
                 "pre_combat_effect",
                 "Legend"
             ],
@@ -77,13 +69,39 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster"
+                        "Monster",
+                        "Infantry"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 40,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8",
+                    "Breached_8"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SPD_SKL_MID"
             ]
         ]
     }

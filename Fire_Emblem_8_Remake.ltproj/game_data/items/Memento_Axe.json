@@ -2,7 +2,7 @@
     {
         "nid": "Memento_Axe",
         "name": "Memento Axe",
-        "desc": "A well made axe given to Cormag by Glen.\n<violet>Inflicts:</>Breach (2)",
+        "desc": "A well made axe given to Cormag by Glen.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (2)\n<red>Effective:</><icon>Horse</>",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             5,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                10
+                13
             ],
             [
                 "hit",
@@ -70,6 +70,24 @@
             [
                 "eval_available",
                 "u(\"Cormag\").wexp['Axe'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

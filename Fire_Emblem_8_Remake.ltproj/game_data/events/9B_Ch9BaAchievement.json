@@ -5,10 +5,10 @@
         "level_nid": "9B",
         "condition": "check_pair('Amelia', 'Gheb')",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;not has_achievement('ch9Ba')",
+            "if;game.check_alive(\"Amelia\")",
             "    complete_achievement;ch9Ba;true;banner",
             "    give_exp;Amelia;100",
             "    give_exp;Amelia;100",

@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Void_Breath",
+        "name": "Void Breath",
+        "desc": "A powerful breath from the Abyss, converting the magic in power.\n<violet>Inflicts:</><icon>Silence</>\n<red>Effective:</><icon>Magic</><icon>Monster</>\n<pink>Misc:</>Magical, HP Absorb (50%).",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "battle_cast_anim",
+                "Nirvana"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Silence"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ross"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Ross\").wexp['Monster'] >= 420"
+            ],
+            [
+                "lifelink",
+                0.5
+            ]
+        ]
+    }
+]

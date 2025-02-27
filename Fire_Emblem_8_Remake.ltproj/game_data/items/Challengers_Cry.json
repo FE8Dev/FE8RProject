@@ -2,7 +2,7 @@
     {
         "nid": "Challengers_Cry",
         "name": "Challenger's Cry",
-        "desc": "The challenge goes far and beyond.\n<green>Skills:</>Invitation++.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>Heavy.",
+        "desc": "The challenge goes far and beyond.\n<green>Skills:</>Invitation++.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>Heavy, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -101,6 +101,10 @@
             [
                 "magic",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_STRONG"
             ]
         ]
     }

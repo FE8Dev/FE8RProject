@@ -2,7 +2,7 @@
     {
         "nid": "Monolith",
         "name": "Monolith",
-        "desc": "A massive halberd that crushes armor.\n<green>Skills:</>Lance Guard (SS), Edification <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (15) <red>Effective:</><icon>Armor</>\n<pink>Misc:</>Reaver, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "A massive halberd that crushes armor.\n<green>Skills:</>Lance Guard (SS), Edification <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (15) <red>Effective:</><icon>Armor</>\n<pink>Misc:</>Reaver, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -99,7 +99,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_DEF_MID"
+                "DEF_CON_STRONG"
             ]
         ]
     }

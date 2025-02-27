@@ -3,15 +3,13 @@
         "name": "Money4Achievement",
         "trigger": "level_end",
         "level_nid": null,
-        "condition": "True",
+        "condition": "game.get_money() >= 200000",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
-            "if;game.get_money() >= 200000 and not has_achievement('money4')",
-            "    complete_achievement;money4;true;banner",
-            "    give_item;convoy;Demon_Axe",
-            "end"
+            "complete_achievement;money4;true;banner",
+            "give_item;convoy;Demon_Axe"
         ],
         "nid": "Global Money4Achievement"
     }

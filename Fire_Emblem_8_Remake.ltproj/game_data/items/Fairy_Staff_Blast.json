@@ -2,7 +2,7 @@
     {
         "nid": "Fairy_Staff_Blast",
         "name": "Fairy Staff (<icon>Blast</>)",
-        "desc": "Brings down snow said to be brought by fairies. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:3), cannot crit, always hits, cannot DS.",
+        "desc": "Brings down snow said to be brought by fairies. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:3), cannot crit, always hits, cannot DS, no WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             1,
@@ -114,6 +114,14 @@
             [
                 "exp",
                 3
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "wexp",
+                0
             ]
         ]
     }

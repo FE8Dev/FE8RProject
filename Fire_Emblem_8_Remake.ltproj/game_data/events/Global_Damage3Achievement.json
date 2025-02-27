@@ -3,15 +3,13 @@
         "name": "Damage3Achievement",
         "trigger": "combat_end",
         "level_nid": null,
-        "condition": "True",
+        "condition": "any([record.over_damage >= 1000 for record in game.records.damage if game.get_unit(record.dealer).team == 'player'])",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;any([record.over_damage >= 1000 for record in game.records.damage if game.get_unit(record.dealer).team == 'player']) and not has_achievement('damage3')",
-            "    complete_achievement;damage3;true;banner",
-            "    give_money;20000",
-            "end"
+            "complete_achievement;damage3;true;banner",
+            "give_money;20000"
         ],
         "nid": "Global Damage3Achievement"
     }

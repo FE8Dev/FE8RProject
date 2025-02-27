@@ -2,7 +2,7 @@
     {
         "nid": "Hailstorm",
         "name": "Hailstorm",
-        "desc": "High speed water and ice that brings one to their knees. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><violet>Inflicts:</><icon>Drenched</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE Blast:3), Splash Damage(30), cannot DS, always hits.",
+        "desc": "High speed water and ice that brings one to their knees. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><violet>Inflicts:</><icon>Drenched</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE Blast:3), Splash Damage(30), cannot DS, no WEXP gain, always hits.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -51,7 +51,7 @@
             ],
             [
                 "wexp",
-                2
+                0
             ],
             [
                 "battle_cast_anim",
@@ -94,8 +94,7 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Pirate",
-                        "Drenched"
+                        "Pirate"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -122,6 +121,10 @@
             [
                 "cooldown",
                 2
+            ],
+            [
+                "start_cooldown",
+                null
             ]
         ]
     }

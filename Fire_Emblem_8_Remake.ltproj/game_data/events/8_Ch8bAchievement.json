@@ -3,16 +3,14 @@
         "name": "Ch8bAchievement",
         "trigger": "combat_end",
         "level_nid": "8",
-        "condition": "unit2.nid == \"101\" or unit.nid == '101'",
+        "condition": "(unit2.nid == \"101\" and has_skill('101','Frozen')) or (unit.nid == '101' and has_skill('101','Frozen'))",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;has_skill('101','Frozen') and not has_achievement('ch8b')",
-            "    update_achievement;ch8b;Pirate Popsicle;Ch.8: Inflict Frozen on the Berserker.",
-            "    complete_achievement;ch8b;true;banner",
-            "    give_item;convoy;Frozen_Staff",
-            "end"
+            "update_achievement;ch8b;Pirate Popsicle;Ch.8: Inflict Frozen on the Berserker.",
+            "complete_achievement;ch8b;true;banner",
+            "give_item;convoy;Frozen_Staff"
         ],
         "nid": "8 Ch8bAchievement"
     }

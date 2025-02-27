@@ -2,7 +2,7 @@
     {
         "nid": "True_Vidofnir",
         "name": "True Vidofnir",
-        "desc": "The true form the legendary lance of Frelia.\n<green>Skills:</>Lance Guard (X) \n<orange>Element:<icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Very Effective:</><icon>Monster</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
+        "desc": "The true form the legendary lance of Frelia.\n<green>Skills:</>Lance Guard (X) \n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Very Effective:</><icon>Monster</>\n<pink>Misc:</>Magical, MAG + DEF + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG') + unit.get_stat('RES')))}</>), +20 DEF, +20 RES.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -82,10 +82,6 @@
                 }
             ],
             [
-                "alternate_damage_formula",
-                "STR_MAG_STRONG"
-            ],
-            [
                 "eval_available",
                 "u(\"Tana\").wexp['Lance'] >= 480"
             ],
@@ -102,6 +98,23 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_DEF_RES_STRONG"
             ],
             [
                 "alternate_resist_formula",

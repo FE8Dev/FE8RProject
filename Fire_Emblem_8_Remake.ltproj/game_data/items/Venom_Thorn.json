@@ -2,7 +2,7 @@
     {
         "nid": "Venom_Thorn",
         "name": "Venom Thorn",
-        "desc": "A staff said to cause plagues during wartimes. <green>Start CD:3</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Venom</><icon>Rock</>\n<pink>Misc:</>Hits all enemies, Brave, this is a free action, always hits, cannot DS.",
+        "desc": "A beautiful flower said to grow on corpses. <green>CD:3</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Venom</>x2<icon>Rock</>\n<pink>Misc:</>(Multi-target:8), Brave, this is a free action, always hits, no WEXP gain, cannot DS.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             9,
@@ -73,13 +73,11 @@
                 "statuses_on_hit",
                 [
                     "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
                     "Venomous_Effect_Boss",
                     "Rock_Punctures"
                 ]
-            ],
-            [
-                "all_enemies_aoe",
-                null
             ],
             [
                 "prf_unit",
@@ -109,6 +107,22 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "multi_target",
+                8
+            ],
+            [
+                "allow_less_than_max_targets",
                 null
             ]
         ]

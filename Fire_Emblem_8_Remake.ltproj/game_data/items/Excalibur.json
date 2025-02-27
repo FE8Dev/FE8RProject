@@ -2,7 +2,7 @@
     {
         "nid": "Excalibur",
         "name": "Excalibur",
-        "desc": "Legendary wind magic of Jehanna.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</><icon>Monster</>\n<pink>Misc:</>Splash DMG (30), +5 SPD.",
+        "desc": "Legendary wind magic of Jehanna.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</><icon>Monster</>\n<pink>Misc:</>MAG/2 + SKL/2 + SPD/2 (<red>{e:(unit.get_stat('SPD')//2 + unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2))}</>), Splash DMG (30), +5 SPD, +MAG.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -58,12 +58,6 @@
                 2
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Speed +5"
-                ]
-            ],
-            [
                 "battle_cast_anim",
                 "Excalibur"
             ],
@@ -92,6 +86,23 @@
             [
                 "self_status_on_hit",
                 "AnimaSplash_A"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_MID"
             ]
         ]
     }

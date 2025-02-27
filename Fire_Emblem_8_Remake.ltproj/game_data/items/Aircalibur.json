@@ -2,7 +2,7 @@
     {
         "nid": "Aircalibur",
         "name": "Aircalibur",
-        "desc": "Advanced wind magic.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:4), cannot DS, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Splash DMG (30).",
+        "desc": "Advanced wind magic. Starts on CD.  <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:4), cannot DS, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), no WEXP gain, Splash DMG (30).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             2,
@@ -71,7 +71,7 @@
             ],
             [
                 "wexp",
-                1
+                0
             ],
             [
                 "battle_cast_anim",
@@ -108,6 +108,14 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "start_cooldown",
                 null
             ]
         ]

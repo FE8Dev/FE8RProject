@@ -3,16 +3,13 @@
         "name": "Ch12bAchievement",
         "trigger": "unit_death",
         "level_nid": "12A",
-        "condition": "unit.team not in ['player','other']",
+        "condition": "unit.team not in ['player','other'] and has_skill('Saleh','Dream_Siphon_Stop') or unit2.team not in ['player','other'] and has_skill('Saleh','Dream_Siphon_Stop')",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
-            "if;has_skill('Saleh','Dream_Siphon_Stop') and not has_achievement('ch12b')",
-            "    complete_achievement;ch12b;true;banner",
-            "    give_item;convoy;Curse_Scroll",
-            "    give_bexp;5000",
-            "end"
+            "give_item;convoy;Curse_Scroll",
+            "give_bexp;5000"
         ],
         "nid": "12A Ch12bAchievement"
     }

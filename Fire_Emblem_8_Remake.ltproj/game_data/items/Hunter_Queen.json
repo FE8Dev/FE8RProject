@@ -2,7 +2,7 @@
     {
         "nid": "Hunter_Queen",
         "name": "Hunter Queen",
-        "desc": "A lance for one who lives for the hunt.\n<green>Skills:</>Lance Guard (SS), Hunter++\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>X4\n<pink>Misc:</>MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>).",
+        "desc": "A lance for one who lives for the hunt.\n<green>Skills:</>Lance Guard (SS), Hunter++\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>x4\n<pink>Misc:</>MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -72,7 +72,7 @@
             ],
             [
                 "eval_available",
-                "u(\"SnakeGirl\").wexp['Lance'] >= 420"
+                "u(\"SnakeGirl\").wexp['Lance'] >= 420 and u(\"SnakeGirl\").wexp['Lance'] < 480"
             ],
             [
                 "statuses_on_hit",

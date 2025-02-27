@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "True_Excalibur",
+        "name": "True Excalibur",
+        "desc": "The true form of the legendary wind magic of Jehanna.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</><icon>Monster</>\n<pink>Misc:</>MAG + SKL + SPD (<red>{e:(unit.get_stat('SPD') + unit.get_stat('MAG') + unit.get_stat('SKL')))}</>), Splash DMG (60), +20 SPD, +20 MAG.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            41,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Excalibur"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Seared",
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 40,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_X"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        20
+                    ],
+                    [
+                        "MAG",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_STRONG"
+            ]
+        ]
+    }
+]
