@@ -57,6 +57,7 @@
             "if;game.get_unit('Cormag').team == 'player'",
             "add_unit;Cormag;9,12;immediate;closest",
             "else",
+            "kill_unit;Cormag;immediate",
             "end",
             "make_generic;Civ1;Citizen;1;other;None",
             "make_generic;Civ2;Citizen;1;other;None",

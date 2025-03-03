@@ -8,7 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_exp;{unit};-5"
+            "if;unit.team == 'player'",
+            "set_exp;{unit};0",
+            "else",
+            "end"
         ],
         "nid": "Global Berserk_EXP_Remove"
     }
