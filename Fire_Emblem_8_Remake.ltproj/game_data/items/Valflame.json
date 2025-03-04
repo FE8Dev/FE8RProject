@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Forblaze",
-        "name": "Forblaze",
-        "desc": "A legendary tome used by a powerful Archsage.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>), Splash DMG (70).",
+        "nid": "Valflame",
+        "name": "Valflame",
+        "desc": "An emperor's divine flame once used to execute a traitor in a distant continent.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</>Heavy, +10 MAG/DEF/RES, MAG + DEF+ RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF') + (unit.get_stat('RES')))}</>), Splash DMG (70).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             1,
@@ -31,19 +31,19 @@
             ],
             [
                 "damage",
-                27
+                30
             ],
             [
                 "hit",
-                100
+                115
             ],
             [
                 "crit",
-                5
+                15
             ],
             [
                 "weight",
-                28
+                23
             ],
             [
                 "level_exp",
@@ -109,20 +109,39 @@
                 ]
             ],
             [
-                "brave",
-                null
-            ],
-            [
-                "cannot_counter",
-                null
-            ],
-            [
-                "cannot_be_countered",
-                null
-            ],
-            [
                 "alternate_damage_formula",
-                "MAG_STR_STRONG"
+                "MAG_DEF_RES_STRONG"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect"
+                ]
             ]
         ]
     }
