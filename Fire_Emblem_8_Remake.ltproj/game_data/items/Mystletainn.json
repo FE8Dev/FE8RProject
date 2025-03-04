@@ -2,7 +2,7 @@
     {
         "nid": "Mystletainn",
         "name": "Mystletainn",
-        "desc": "A legendary sword that has aged...\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + SKL/2, +10 SPD/RES/SKL.",
+        "desc": "A legendary sword that has aged...\n<red>Very effective:</><icon>Magic</>\n<green>Skills:</>Flash Step\n<pink>Misc:</>SKL + RES (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('RES')))}</>), +20 SKL, +10 RES.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             0,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                18
+                30
             ],
             [
                 "hit",
@@ -39,7 +39,7 @@
             ],
             [
                 "weight",
-                4
+                24
             ],
             [
                 "level_exp",
@@ -51,7 +51,7 @@
             ],
             [
                 "weapon_rank",
-                "SSS"
+                "X"
             ],
             [
                 "multi_status_on_equip",
@@ -63,12 +63,8 @@
                 "stat_change",
                 [
                     [
-                        "SPD",
-                        10
-                    ],
-                    [
                         "SKL",
-                        10
+                        20
                     ],
                     [
                         "RES",
@@ -86,7 +82,19 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MID"
+                "RES_SKL_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

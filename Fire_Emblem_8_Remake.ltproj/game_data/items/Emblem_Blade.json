@@ -2,7 +2,7 @@
     {
         "nid": "Emblem_Blade",
         "name": "Emblem Blade",
-        "desc": "A legendary blade that seals the power of enemies.\n<green>Skills:</>Blade Sweep\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES/2, heavy.",
+        "desc": "A legendary blade that seals the power of enemies.\n<green>Skills:</>Blade Sweep\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), heavy.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -109,7 +109,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_RES_MID"
+                "STR_RES_STRONG"
             ]
         ]
     }
