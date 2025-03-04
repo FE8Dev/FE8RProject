@@ -2,7 +2,7 @@
     {
         "nid": "Light_Staff",
         "name": "Light Staff",
-        "desc": "A staff infused with light magic. <green>CD:3</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Always hit, cannot crit, LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "A staff infused with light magic. Starts on CD. <green>CD:3</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Always hit, cannot crit, LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             0,
@@ -84,6 +84,10 @@
             [
                 "cooldown",
                 3
+            ],
+            [
+                "start_cooldown",
+                null
             ]
         ]
     }
