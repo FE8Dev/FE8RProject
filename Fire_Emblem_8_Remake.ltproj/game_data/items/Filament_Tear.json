@@ -2,7 +2,7 @@
     {
         "nid": "Filament_Tear",
         "name": "Filament Tear",
-        "desc": "To tear the sky and rend the heavens.\n<green>Skills:</>Lance Guard (X), Edification+ <orange>Element:</><icon>Earth</></><icon>Dark</>\n<violet>Inflicts:</><icon>Rock</>, Breach (25) <red>Effective:</><icon>Armor</><icon>Flying</>\n<pink>Misc:</>Reaver, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "To tear the sky and rend the heavens.\n<green>Skills:</>Lance Guard (X), Edification+ <orange>Element:</><icon>Earth</></><icon>Dark</>\n<violet>Inflicts:</><icon>Rock</>, Breach (25) <red>Effective:</><icon>Armor</><icon>Infantry</><icon>Flying</>\n<pink>Misc:</>Reaver, cleave AOE attack, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "02-26-25",
         "icon_index": [
             1,
@@ -68,7 +68,9 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Armor"
+                        "Armor",
+                        "Infantry",
+                        "Flying"
                     ],
                     "effective_multiplier": 3.0,
                     "effective_bonus_damage": 5,

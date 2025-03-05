@@ -1,0 +1,55 @@
+[
+    {
+        "nid": "Frozen_AOE3_Splash",
+        "name": "Frozen AOE3 Splash",
+        "desc": "Gives Ice weapons 3 AOE debuff splash.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Frozen",
+                    "range": 3
+                }
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]
