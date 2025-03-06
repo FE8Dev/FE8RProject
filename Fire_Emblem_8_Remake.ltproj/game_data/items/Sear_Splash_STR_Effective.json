@@ -1,26 +1,33 @@
 [
     {
-        "nid": "Zephyr_Wind",
-        "name": "Zephyr_Wind",
-        "desc": "Grants very effective against Seared/Flying.",
+        "nid": "Sear_Splash_STR_Effective",
+        "name": "Sear Splash STR Effective",
+        "desc": "For Sear Splash STR.",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
-            7
+            4
         ],
         "components": [
+            [
+                "self_status_on_hit",
+                "Seared_AOE4_Splash"
+            ],
             [
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster",
-                        "Shadow"
+                        "Horse"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 32,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "brave",
+                null
             ]
         ]
     }

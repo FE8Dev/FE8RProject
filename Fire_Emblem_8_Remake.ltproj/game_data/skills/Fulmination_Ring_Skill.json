@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Fulmination_Ring_Skill",
+        "name": "Fulmination Ring Skill",
+        "desc": "For the Fulmination Ring item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "item_override",
+                "Fulmination_Thunder"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Armor' in unit2.tags or 'Drenched' in unit2.tags) else 1"
+            ]
+        ]
+    }
+]
