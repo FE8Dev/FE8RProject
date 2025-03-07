@@ -2,7 +2,7 @@
     {
         "nid": "Seitou",
         "name": "Seitou",
-        "desc": "A katana Marisa found after one storm.\n<green>Skills:</>Crimson Snow(On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Uses SPD, +3 SPD.",
+        "desc": "A katana Marisa found after one storm.\n<green>Skills:</>Crimson Snow (On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Uses SPD, +3 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             4,
@@ -105,6 +105,12 @@
             [
                 "eval_available",
                 "u(\"Marisa\").wexp['Sword'] >= 180 and u(\"Marisa\").wexp['Sword'] < 300"
+            ],
+            [
+                "item_tags",
+                [
+                    "Ice"
+                ]
             ]
         ]
     }
