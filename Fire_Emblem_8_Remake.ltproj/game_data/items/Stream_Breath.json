@@ -2,7 +2,7 @@
     {
         "nid": "Stream_Breath",
         "name": "Stream Breath",
-        "desc": "The fog engulfs all those who tread too close.\n<orange>Element:</><icon>Water</></><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>x4\n<red>Effective:</></><icon>Flying</>\n<pink>Misc:</>+50 Avoid/Dodge",
+        "desc": "The fog engulfs all those who tread too close.\n<orange>Element:</><icon>Water</></><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>x4\n<red>Effective:</></><icon>Flying</></><icon>Seared</><icon>Infantry</>\n<pink>Misc:</>+50 Avoid/Dodge",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             1,
@@ -77,20 +77,6 @@
                 ]
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Infantry",
-                        "Flying",
-                        "Seared"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
                 "weapon_type",
                 "Monster"
             ],
@@ -111,6 +97,20 @@
             [
                 "eval_available",
                 "u(\"Dozla\").wexp['Monster'] >= 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared",
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

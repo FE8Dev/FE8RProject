@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Cornered_Beast_Lure",
+        "name": "Cornered Beast",
+        "desc": "Unit is more likely to attack Doggo.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            37
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "'Boss' not in unit.tags"
+            ],
+            [
+                "change_ai",
+                "AttackDoggo"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]
