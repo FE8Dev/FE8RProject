@@ -2,7 +2,7 @@
     {
         "nid": "Bloodfire_Lance",
         "name": "Bloodfire Lance",
-        "desc": "A lance of mighty power, but flowing with dark magic. Can Cormag tame this lance?\n<green>Skills:</>In Control/Possestion, Lance Guard (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG",
+        "desc": "A lance of mighty power, but flowing with dark magic. Can Cormag tame this lance?\n<green>Skills:</>In Control/Possesion, Lance Guard (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             8,
@@ -96,6 +96,12 @@
             [
                 "eval_available",
                 "u(\"Cormag\").wexp['Lance'] >= 360 and u(\"Cormag\").wexp['Lance'] < 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
             ]
         ]
     }

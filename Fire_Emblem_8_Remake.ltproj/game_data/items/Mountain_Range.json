@@ -2,7 +2,7 @@
     {
         "nid": "Mountain_Range",
         "name": "Mountain Range",
-        "desc": "A long halberd with many jagged edges.\n<green>Skills:</>Lance Guard (A), Edification\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Reaver, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A long halberd with many jagged edges.\n<green>Skills:</>Lance Guard (A), Edification\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Reaver, cleave AOE attack, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -68,7 +68,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Armor"
+                        "Armor",
+                        "Infantry"
                     ],
                     "effective_multiplier": 3.0,
                     "effective_bonus_damage": 5,
@@ -100,6 +101,16 @@
             [
                 "alternate_damage_formula",
                 "DEF_CON_STRONG"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
             ]
         ]
     }

@@ -1,0 +1,75 @@
+[
+    {
+        "nid": "Quantum_Cube",
+        "name": "Quantum Cube",
+        "desc": "For the Quantum Cube item.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "upkeep_event",
+                "Global Quantum_Cube"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "STR",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "MAG",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "SKL",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "SPD",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "LCK",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "DEF",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "RES",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "CON",
+                        "random.randint(1,20)"
+                    ],
+                    [
+                        "MOV",
+                        "random.randint(1,5)"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "lost_on_upkeep",
+                null
+            ]
+        ]
+    }
+]

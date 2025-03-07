@@ -1,12 +1,12 @@
 [
     {
-        "nid": "Cacoon_Blade",
-        "name": "Cocoon Blade",
-        "desc": "A blade covered in draining webs.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, HP absorb (25%).",
-        "icon_nid": "New Monsters",
+        "nid": "Caladbolg",
+        "name": "Caladbolg",
+        "desc": "A bow of great power, wielded by those worthy.\n<green>Skills:</>Thunder God's Wrath++\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Infantry</><icon>Frozen</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Heavy, never misses.",
+        "icon_nid": "Bows Sheet",
         "icon_index": [
-            5,
-            1
+            0,
+            2
         ],
         "components": [
             [
@@ -23,58 +23,44 @@
             ],
             [
                 "damage",
-                34
-            ],
-            [
-                "hit",
-                90
+                40
             ],
             [
                 "weapon_type",
-                "Sword"
+                "Bow"
             ],
             [
                 "weapon_rank",
-                "SS"
+                "X"
             ],
             [
                 "weight",
-                18
+                55
             ],
             [
                 "crit",
-                12
+                15
             ],
             [
                 "min_range",
-                1
+                3
             ],
             [
                 "max_range",
-                1
+                7
             ],
             [
-                "shove",
-                1
-            ],
-            [
-                "battle_cast_anim",
-                "Arrow"
-            ],
-            [
-                "no_double",
+                "ignore_line_of_sight",
                 null
-            ],
-            [
-                "item_tags",
-                [
-                    "Blade"
-                ]
             ],
             [
                 "effective_damage",
                 {
                     "effective_tags": [
+                        "Infantry",
+                        "Armor",
+                        "Flying",
+                        "Drenched",
                         "Frozen"
                     ],
                     "effective_multiplier": 3,
@@ -84,37 +70,35 @@
                 }
             ],
             [
-                "multi_status_on_equip",
+                "prf_unit",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Gilliam"
                 ]
             ],
             [
-                "prf_unit",
+                "multi_status_on_equip",
                 [
-                    "BaelBaby"
+                    "Blade_Vantage_Effect",
+                    "Thunder_Gods_Wrath_PP"
                 ]
             ],
             [
                 "eval_available",
-                "u(\"BaelBaby\").wexp['Sword'] >= 360 and u(\"BaelBaby\").wexp['Sword'] < 420"
+                "u(\"Gilliam\").wexp['Bow'] >= 480"
             ],
             [
-                "wexp",
-                3
+                "no_double",
+                null
             ],
             [
-                "statuses_on_hit",
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
                 [
-                    "Webbed",
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Thunder"
                 ]
-            ],
-            [
-                "lifelink",
-                0.25
             ]
         ]
     }

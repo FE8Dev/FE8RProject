@@ -2,7 +2,7 @@
     {
         "nid": "Glacies",
         "name": "Glacies",
-        "desc": "The most powerful ice spell.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Splash DMG (50), MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
+        "desc": "One of the most powerful ice spell.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Splash DMG (50), MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             4,
@@ -106,6 +106,12 @@
             [
                 "alternate_damage_formula",
                 "MAG_RES_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Ice"
+                ]
             ]
         ]
     }
