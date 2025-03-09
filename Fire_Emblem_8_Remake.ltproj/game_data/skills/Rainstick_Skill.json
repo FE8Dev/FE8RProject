@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Rainstick_Skill",
+        "name": "Rainstick Skill",
+        "desc": "For the Rainstick item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Water' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "0.5 if ( 'Water' in target.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "RES",
+                        "20 if ('Water' in unit.get_weapon().tags) else 0"
+                    ]
+                ]
+            ],
+            [
+                "dynamic_crit_avoid",
+                "30 if ('Water' in unit.get_weapon().tags) else 0"
+            ],
+            [
+                "eval_regeneration",
+                "40 if ('Water' in unit.get_weapon().tags) else 0"
+            ]
+        ]
+    }
+]

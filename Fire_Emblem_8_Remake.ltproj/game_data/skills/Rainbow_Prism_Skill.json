@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Rainbow_Prism_Skill",
+        "name": "Rainbow Prism Skill",
+        "desc": "For the Rainbow Prism item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Light' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "0.5 if ( 'Light' in target.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "LCK",
+                        "50 if ('Light' in unit.get_weapon().tags) else 0"
+                    ]
+                ]
+            ],
+            [
+                "witch_warp",
+                null
+            ]
+        ]
+    }
+]
