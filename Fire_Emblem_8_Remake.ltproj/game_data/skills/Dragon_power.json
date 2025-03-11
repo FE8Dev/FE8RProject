@@ -1,58 +1,58 @@
 [
     {
-        "nid": "_Dragon_Supremacy_1",
-        "name": "Dragon Supremacy",
-        "desc": "Increases the HP in 30, increases the stats in 15.",
-        "icon_nid": "SkillIcons",
+        "nid": "Dragon_power",
+        "name": "Dragon Power",
+        "desc": "+8 to most stats.\n+8 DEF/RES for 2 turns whenever this unit is hit in combat.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
         "icon_index": [
             5,
-            10
+            49
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "stat_change",
                 [
                     [
-                        "HP",
-                        30
-                    ],
-                    [
                         "STR",
-                        15
+                        8
                     ],
                     [
                         "MAG",
-                        15
+                        8
                     ],
                     [
                         "SKL",
-                        15
+                        8
                     ],
                     [
                         "SPD",
-                        15
+                        8
                     ],
                     [
                         "LCK",
-                        15
+                        8
                     ],
                     [
                         "DEF",
-                        15
+                        8
                     ],
                     [
                         "RES",
-                        15
+                        8
                     ],
                     [
                         "CON",
-                        15
-                    ],
-                    [
-                        "MOV",
-                        2
+                        8
                     ]
                 ]
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Toughen_Scales_Child"
             ]
         ]
     }

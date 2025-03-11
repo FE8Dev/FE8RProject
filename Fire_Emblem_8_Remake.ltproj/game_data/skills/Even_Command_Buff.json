@@ -1,8 +1,8 @@
 [
     {
         "nid": "Even_Command_Buff",
-        "name": "Even Command",
-        "desc": "Unit adds STR/3 to Magical attacks on Even numbered turns.",
+        "name": "Even Tempo+",
+        "desc": "Unit adds STR/3 to Magical attacks on Even numbered turns.\nDouble units WEXP gain during Even numbered turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -20,6 +20,10 @@
             [
                 "dynamic_damage",
                 "unit.get_stat('STR') // 3"
+            ],
+            [
+                "wexp_multiplier",
+                2.0
             ]
         ]
     }
