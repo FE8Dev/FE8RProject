@@ -35,8 +35,8 @@
                 "True if ('Dark' in unit.get_weapon().tags and unit.get_hp() > unit.stats['HP']*0.5 ) else False"
             ],
             [
-                "eval_post_combat_damage",
-                "unit.stats['HP']*0.2 if ('Dark' in unit.get_weapon().tags) else 0"
+                "eval_recoil_percent",
+                "0.2 if ( 'Dark' in unit.get_weapon().tags) else 0"
             ]
         ]
     }

@@ -1366,3 +1366,36 @@ class PostCombatHealing(SkillComponent):
             end_health = unit.get_hp() + self.value
             action.do(action.SetHP(unit, end_health))
             action.do(action.TriggerCharge(unit, self.skill))
+			
+class RecoilPercent(SkillComponent):
+    nid = 'recoil_percent'
+    desc = "Unit takes non-lethal MaxHP percent damage after combat with an enemy"
+    tag = SkillTags.COMBAT2
+
+    expose = ComponentType.Float
+    value = 0
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            end_health = int(unit.get_hp() -
+                             (unit.get_max_hp() * self.value))
+            action.do(action.SetHP(unit, max(1, end_health)))
+            action.do(action.TriggerCharge(unit, self.skill))
+
+class EvalRecoilPercent(SkillComponent):
+    nid = 'eval_recoil_percent'
+    desc = "Unit takes non-lethal MaxHP percent damage after combat with an enemy solved using evaluate"
+    tag = SkillTags.COMBAT2
+
+    expose = ComponentType.String
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            from app.engine import evaluate
+            try:
+                end_health = int(unit.get_hp() - (unit.get_max_hp() * evaluate.evaluate(self.value, unit, local_args={'item': item})))
+                action.do(action.SetHP(unit, max(1, end_health)))
+                action.do(action.TriggerCharge(unit, self.skill))
+            except Exception as e:
+                logging.error("Couldn't evaluate %s conditional (%s)", self.value, e)
+                end_health = int(unit.get_hp())
