@@ -2,7 +2,7 @@
     {
         "nid": "Mystletainn",
         "name": "Mystletainn",
-        "desc": "A legendary sword that has aged...\n<red>Very effective:</><icon>Magic</>\n<green>Skills:</>Flash Step\n<pink>Misc:</>SKL + RES (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('RES')))}</>), +20 SKL, +10 RES.",
+        "desc": "A legendary sword that thirsts for blood...\n<orange>Element:</><icon>Dark</>\n<red>Very effective:</><icon>Magic</>\n<green>Skills:</>Flash Step, Mystletainn's Revelry\n<pink>Misc:</>SKL + RES (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('RES')))}</>), +20 SKL, +10 RES, +50 Crit damage.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             0,
@@ -56,7 +56,9 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step",
+                    "Crit_Damage_Bonus_50",
+                    "MystletainnsRevelry"
                 ]
             ],
             [
@@ -88,13 +90,20 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Magic"
+                        "Monster",
+                        "Infantry"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 32,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
             ]
         ]
     }

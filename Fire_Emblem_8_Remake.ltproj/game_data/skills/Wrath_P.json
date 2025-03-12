@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Wrath_P",
+        "name": "Wrath+",
+        "desc": "+50 Crit when unit is below 95% Max HP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() * 0.95"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "50"
+            ]
+        ]
+    }
+]

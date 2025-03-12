@@ -1,0 +1,63 @@
+[
+    {
+        "nid": "Quantum_Elixir",
+        "name": "Quantum Elixir",
+        "desc": "Increases a random stat by 1~4 for 3 turns. Also grants a buff that lasts for 2 turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "unit.get_field(\"Quantum_HP\", 0)"
+                    ],
+                    [
+                        "STR",
+                        "unit.get_field(\"Quantum_STR\", 0)"
+                    ],
+                    [
+                        "MAG",
+                        "unit.get_field(\"Quantum_MAG\", 0)"
+                    ],
+                    [
+                        "SKL",
+                        "unit.get_field(\"Quantum_SKL\", 0)"
+                    ],
+                    [
+                        "SPD",
+                        "unit.get_field(\"Quantum_SPD\", 0)"
+                    ],
+                    [
+                        "LCK",
+                        "unit.get_field(\"Quantum_LCK\", 0)"
+                    ],
+                    [
+                        "DEF",
+                        "unit.get_field(\"Quantum_DEF\", 0)"
+                    ],
+                    [
+                        "RES",
+                        "unit.get_field(\"Quantum_RES\", 0)"
+                    ],
+                    [
+                        "CON",
+                        "unit.get_field(\"Quantum_CON\", 0)"
+                    ],
+                    [
+                        "MOV",
+                        "unit.get_field(\"Quantum_MOV\", 0)"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    }
+]

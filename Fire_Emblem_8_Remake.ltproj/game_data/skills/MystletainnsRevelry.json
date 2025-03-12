@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "MystletainnsRevelry",
+        "name": "Mystletainn's Revelry",
+        "desc": "Criticals do x5 damage, and grants a stackable +5 STR after each critical until the end of the chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
+            ],
+            [
+                "gain_skill_after_crit",
+                "MystletainnsRevelry_Buff"
+            ]
+        ]
+    }
+]
