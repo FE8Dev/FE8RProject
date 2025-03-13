@@ -2,7 +2,7 @@
     {
         "nid": "Yewfelle",
         "name": "Yewfelle",
-        "desc": "A legendary bow that empowers the wielder with holy power. Effective against Monsters.\n<red>Very effective:</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>Grants Lifelink (x0.25), +15 STR/SPD, STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A legendary bow that empowers the wielder with holy power.\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>Grants Lifelink (x0.25), +15 STR/SPD, STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -108,6 +108,12 @@
             [
                 "alternate_damage_formula",
                 "STR_SPD_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
             ]
         ]
     }
