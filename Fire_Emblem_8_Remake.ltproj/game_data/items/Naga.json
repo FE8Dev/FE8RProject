@@ -2,7 +2,7 @@
     {
         "nid": "Naga",
         "name": "Naga",
-        "desc": "A legendary light tome use to slay the Dark Dragon.\n<orange>Element:</><icon>Light</><violet>Inflicts:</>Reduced Vision\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</> <pink>Misc:</>+20 MAG/SKL/SPD/LCK/DEF/RES, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +50 Crit damage.",
+        "desc": "<nconvo>A legendary light tome used to slay the Dark Dragon.\n<orange>Element:</><icon>Light</><violet> Inflicts:</>Reduced Vision\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</><icon>Dark</> <pink>Misc:</>+20 MAG/SKL/SPD/LCK/DEF/RES, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +50 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             8,
@@ -15,7 +15,7 @@
             ],
             [
                 "value",
-                5000
+                10000
             ],
             [
                 "target_enemy",
@@ -86,7 +86,8 @@
                     "effective_tags": [
                         "Monster",
                         "Shadow",
-                        "Dragon"
+                        "Dragon",
+                        "Dark"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 32,

@@ -1,0 +1,75 @@
+[
+    {
+        "nid": "Valkyrie_Staff_Buff",
+        "name": "Valkyrie Staff Buff",
+        "desc": " Grants 30% HP Renewal and +25 Hit/Avo, buffs all stats by +10 (MOV by +2), and provides immunity to negative statuses (also cancels existing negative statuses) for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            52
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.30000000000000004
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ],
+                    [
+                        "CON",
+                        10
+                    ],
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "dynamic_accuracy",
+                "25"
+            ],
+            [
+                "dynamic_avoid",
+                "25"
+            ]
+        ]
+    }
+]

@@ -1,12 +1,12 @@
 [
     {
-        "nid": "Earth_Gae_Bolg",
-        "name": "Earth Gae Bolg",
-        "desc": "A legendary cursed spear once brandished by a holy crusader.\n<orange>Element:</><icon>Earth</>\n<green>Skills:</>Lance Guard (X), Vantage+, Wrath+.\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +20 STR, +10 DEF.",
-        "icon_nid": "Lances Sheet",
+        "nid": "Helswath",
+        "name": "Helswath",
+        "desc": "A legendary axe once wielded by a holy crusader.\n<orange>Element:</><icon>Water</>\n<red>Very effective:</><icon>Monster</><icon>Armor</>\n<green>Skills:</>Distant Counter.\n<violet>Inflicts:</>Breach (40).\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR') + (unit.get_stat('RES')))}</>), +20 DEF, +10 RES.",
+        "icon_nid": "Axes Sheet",
         "icon_index": [
-            7,
-            0
+            0,
+            2
         ],
         "components": [
             [
@@ -35,15 +35,15 @@
             ],
             [
                 "hit",
-                100
+                105
             ],
             [
                 "crit",
-                15
+                10
             ],
             [
                 "weight",
-                22
+                32
             ],
             [
                 "level_exp",
@@ -51,7 +51,7 @@
             ],
             [
                 "weapon_type",
-                "Lance"
+                "Axe"
             ],
             [
                 "weapon_rank",
@@ -67,35 +67,30 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_DEF_STRONG"
+                "STR_DEF_RES_STRONG"
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Vantage_Plus_Item",
-                    "Wrath_P",
-                    "Lance_Guard_X"
+                    "Breached_40",
+                    "Distant_Counter"
                 ]
             ],
             [
                 "item_tags",
                 [
-                    "Earth"
+                    "Water"
                 ]
-            ],
-            [
-                "status_on_hit",
-                "Rock_Punctures"
             ],
             [
                 "stat_change",
                 [
                     [
-                        "STR",
+                        "DEF",
                         20
                     ],
                     [
-                        "DEF",
+                        "RES",
                         10
                     ]
                 ]
@@ -103,6 +98,19 @@
             [
                 "pre_combat_effect",
                 "Legend"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }
