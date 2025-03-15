@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Faery_Hex",
-        "name": "Faery Hex",
-        "desc": "A deadly weapon of the faeries.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Fae Curse\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>(AOE:1), cannot Crit, always hits.",
+        "nid": "Faerie_Rancor",
+        "name": "Faerie Rancor",
+        "desc": "A staff said to be used by the Faery Queen.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Fae Curse+\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>(AOE:2), cannot Crit, always hits.",
         "icon_nid": "New Monsters",
         "icon_index": [
-            0,
+            1,
             10
         ],
         "components": [
@@ -23,15 +23,15 @@
             ],
             [
                 "max_range",
-                5
+                6
             ],
             [
                 "damage",
-                18
+                25
             ],
             [
                 "weight",
-                14
+                18
             ],
             [
                 "level_exp",
@@ -43,11 +43,11 @@
             ],
             [
                 "weapon_rank",
-                "SS"
+                "SSS"
             ],
             [
                 "battle_cast_anim",
-                "Twist_Fire"
+                "Bolganone_Mage"
             ],
             [
                 "ignore_line_of_sight",
@@ -61,12 +61,12 @@
             ],
             [
                 "eval_available",
-                "u(\"SnakeGirl\").wexp['Staff'] >= 360 and u(\"SnakeGirl\").wexp['Staff'] < 420"
+                "u(\"SnakeGirl\").wexp['Staff'] >= 420"
             ],
             [
                 "statuses_on_hit",
                 [
-                    "Fae_Curse"
+                    "Fae_Curse_P"
                 ]
             ],
             [
@@ -84,7 +84,7 @@
             ],
             [
                 "enemy_blast_aoe",
-                1
+                2
             ],
             [
                 "map_hit_add_blend",
