@@ -2,7 +2,7 @@
     {
         "nid": "Killer Lance",
         "name": "Killer Lance",
-        "desc": "A lance with a high crit rate.\n<green>Skills:</>Lance Guard (C)",
+        "desc": "A lance that transfers momentum to its lethality. <green>CD: 1</>\n<green>Skills:</>Lance Guard (C), Impaling Charge.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -31,7 +31,7 @@
             ],
             [
                 "damage",
-                9
+                10
             ],
             [
                 "hit",
@@ -39,11 +39,11 @@
             ],
             [
                 "crit",
-                30
+                10
             ],
             [
                 "weight",
-                11
+                12
             ],
             [
                 "level_exp",
@@ -55,7 +55,7 @@
             ],
             [
                 "weapon_rank",
-                "C"
+                "B"
             ],
             [
                 "warning",
@@ -66,12 +66,15 @@
                 1
             ],
             [
-                "status_on_equip",
-                "Lance_Guard_C"
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Impaling_Charge"
+                ]
             ],
             [
                 "cooldown",
-                2
+                1
             ],
             [
                 "battle_cast_anim",
