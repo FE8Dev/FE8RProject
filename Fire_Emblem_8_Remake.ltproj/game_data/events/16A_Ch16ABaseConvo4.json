@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch16ABaseConvo4",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "16A",
-        "condition": "True",
+        "condition": "unit == 'Minds Unbroken**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -77,12 +77,13 @@
             "speak;Moulder;I would be most grateful for your instruction, Master Saleh.|Together, we shall protect our comrades from these insidious attacks.",
             "remove_portrait;Moulder",
             "remove_portrait;Saleh",
+            "give_item;Moulder;Barrier_Plus",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Minds Unbroken*;t"
+            "ignore_base_convo;Minds Unbroken**;t"
         ],
         "nid": "16A Ch16ABaseConvo4"
     }

@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch15ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "15A",
-        "condition": "True",
+        "condition": "unit == 'Healer's Oath**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -88,12 +88,14 @@
             "speak;Moulder;<green>Guide our hands in the coming trial...</>|<green>Let no ally fall while we still draw breath...</>",
             "remove_portrait;Natasha",
             "remove_portrait;Moulder",
+            "give_skill;Natasha;Healers_Oath",
+            "give_skill;Moulder;Healers_Oath",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Natasha;Moulder;15",
-            "ignore_base_convo;Healer's Oath*;t"
+            "ignore_base_convo;Healer's Oath**;t"
         ],
         "nid": "15A Ch15ABaseConvo5"
     }

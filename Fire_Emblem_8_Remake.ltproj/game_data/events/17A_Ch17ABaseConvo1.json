@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch17ABaseConvo1",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "17A",
-        "condition": "True",
+        "condition": "unit == 'Monster Studies**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -54,12 +54,13 @@
             "expression;Lute;Smile",
             "speak;Lute;This will make an excellent addition to my monograph on maritime monstrosities.|I wonder if the transformation affects their cognitive functions...|So many variables to explore.",
             "remove_portrait;Lute",
+            "give_item;Dozla;Avalanche_Axe",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Monster Studies*;t"
+            "ignore_base_convo;Monster Studies**;t"
         ],
         "nid": "17A Ch17ABaseConvo1"
     }

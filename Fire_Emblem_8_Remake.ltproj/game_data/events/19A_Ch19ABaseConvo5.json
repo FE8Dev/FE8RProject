@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch19ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "19A",
-        "condition": "True",
+        "condition": "unit == 'Sacred and Elder**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -70,12 +70,14 @@
             "speak;Knoll;And may the wisdom of the ancients bring you clarity, Natasha.",
             "remove_portrait;Natasha",
             "remove_portrait;Knoll",
+            "give_item;Natasha;Misleading_Light",
+            "give_item;Knoll;Aura_Glacier",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Natasha;Knoll;30",
-            "ignore_base_convo;Sacred and Elder*;t"
+            "ignore_base_convo;Sacred and Elder**;t"
         ],
         "nid": "19A Ch19ABaseConvo5"
     }

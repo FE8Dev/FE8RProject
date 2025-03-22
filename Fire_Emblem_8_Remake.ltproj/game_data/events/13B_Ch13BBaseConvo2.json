@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch13BBaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "13B",
-        "condition": "True",
+        "condition": "unit == 'Muddy Treasure*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -78,6 +78,10 @@
             "change_background",
             "transition;open;500",
             "increment_support_points;Marisa;Ewan;10",
+            "if;game.check_alive(\"Joshua\")",
+            "add_base_convo;Marsh Treasure**",
+            "else",
+            "end",
             "ignore_base_convo;Muddy Treasure*;t"
         ],
         "nid": "13B Ch13BBaseConvo2"

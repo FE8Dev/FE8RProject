@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch18ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "18A",
-        "condition": "True",
+        "condition": "unit == 'Volcano Heat*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -20,13 +20,14 @@
             "speak;Marisa;...;no_talk",
             "expression;Artur;Smile",
             "speak;Artur;Good thing I can use my ice magic to cool down a bit.",
-            "expression;Marisa;NoSmile",
-            "wait;500",
+            "",
+            "wait;300",
+            "bop_portrait;Artur",
             "sound;Fimbulvetr2",
             "speak;Artur;Ah, much better!|A little snow goes a long way in this heat.",
             "",
             "speak;Marisa;That's a useful ability to have.",
-            "speak;Artur;Thank you, Marisa!|It's one of the benefits of studying light magic.",
+            "speak;Artur;Thank you, Marisa!|It's one of the benefits of my study of light magic.",
             "speak;Marisa;...;no_talk",
             "",
             "speak;Artur;You look warm as well.|Would you like me to cool you down too?",
@@ -44,7 +45,6 @@
             "change_background",
             "transition;open;500",
             "music_fade_back",
-            "",
             "ignore_base_convo;Volcano Heat*;t"
         ],
         "nid": "18A Ch18ABaseConvo5"

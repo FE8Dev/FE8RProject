@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch20ABaseConvo4",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "20A",
-        "condition": "True",
+        "condition": "unit == 'Honor Among Thieves**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -47,12 +47,12 @@
             "speak;Rennac;Don't remind me.|But this is different.|The head priest actually put a curse on whoever stole it.",
             "expression;Colm;HalfCloseEyes",
             "speak;Colm;A curse?|Is that why you've been looking over your shoulder more than usual?",
-            "speak;Rennac;I've been thinking...|We've stolen from merchants, nobles, even military supplies.|But sacred relics?|Are we just common criminals now?",
+            "speak;Rennac;I've been thinking...|We've stolen from merchants, nobles, even military supplies.|But valued relics?|Are we just common criminals now?",
             "expression;Colm;NoSmile",
             "bop_portrait;Colm",
             "speak;Colm;I've been wondering the same thing lately.|Neimi keeps asking where all my \"gifts\" come from.|I'm running out of excuses.",
-            "speak;Rennac;It used to be about surviving.|Then it became about skill.|Now I'm stealing cursed daggers from temples and I don't even know why.",
-            "speak;Colm;Maybe we should return some of this stuff.|Starting with that dagger before it turns your hair white or something.",
+            "speak;Rennac;It used to be about surviving.|Then it became about skill.|Now I'm stealing cursed swords from temples and I don't even know why.",
+            "speak;Colm;Maybe we should return some of this stuff.|Starting with that sword before it turns your hair white or something.",
             "bop_portrait;Rennac",
             "speak;Rennac;sighs|Perhaps you're right.|Though I doubt the priests will welcome me with open arms.",
             "speak;Colm;We could always leave it on their altar in the dead of night.|We're good at that part, at least.",
@@ -61,12 +61,14 @@
             "expression;Colm;Smile",
             "speak;Colm;Let's not get carried away.|Maybe just... steal from people who deserve it?",
             "speak;Rennac;Now that's a compromise I can live with.",
+            "multi_remove_portrait;Colm;Rennac",
+            "give_item;Rennac;Demon_Sword",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Colm;Rennac;15",
-            "ignore_base_convo;Honor Among Thieves*;t"
+            "ignore_base_convo;Honor Among Thieves**;t"
         ],
         "nid": "20A Ch20ABaseConvo4"
     }

@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.13ABaseConvo1",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "13A",
-        "condition": "True",
+        "condition": "unit == 'Mysteries of Magvel***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -50,12 +50,14 @@
             "speak;Lute;Yes, I would find that valuable.|I'll prepare my cataloguing materials immediately.|This will undoubtedly be the most significant magical research undertaken in centuries.|And I'll be the one to complete it.",
             "remove_portrait;Lute",
             "remove_portrait;Saleh",
+            "give_item;Lute;Secret_Book_Consumable",
+            "give_item;Saleh;Secret_Book_Consumable",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Mysteries of Magvel*;t"
+            "ignore_base_convo;Mysteries of Magvel***;t"
         ],
         "nid": "13A Ch.13ABaseConvo1"
     }

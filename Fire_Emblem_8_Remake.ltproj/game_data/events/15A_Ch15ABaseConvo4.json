@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch15ABaseConvo4",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "15A",
-        "condition": "True",
+        "condition": "unit == 'Brothers in Arms**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -64,12 +64,14 @@
             "speak;Garcia;RAAAAAAHHH!|FOR RENAIS!",
             "remove_portrait;Seth",
             "remove_portrait;Garcia",
+            "give_skill;Seth;Veteran_Charge",
+            "give_skill;Garcia;Veteran_Charge",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Seth;Garcia;30",
-            "ignore_base_convo;Brothers in Arms*;t"
+            "ignore_base_convo;Brothers in Arms**;t"
         ],
         "nid": "15A Ch15ABaseConvo4"
     }

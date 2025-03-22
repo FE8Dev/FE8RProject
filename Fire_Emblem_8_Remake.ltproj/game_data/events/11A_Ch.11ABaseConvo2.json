@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.11ABaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "11A",
-        "condition": "False",
+        "condition": "unit == 'Arachnid Insights*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -40,7 +40,7 @@
             "change_background",
             "transition;open;500",
             "music_fade_back",
-            "ignore_base_convo;Arachnid Insights**;t"
+            "ignore_base_convo;Arachnid Insights*;t"
         ],
         "nid": "11A Ch.11ABaseConvo2"
     }

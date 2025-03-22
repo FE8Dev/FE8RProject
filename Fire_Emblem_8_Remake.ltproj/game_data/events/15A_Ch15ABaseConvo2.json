@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch15ABaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "15A",
-        "condition": "True",
+        "condition": "unit == 'Path of Vengeance*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -96,7 +96,7 @@
             "change_background",
             "transition;open;500",
             "music_fade_back",
-            "ignore_base_convo;Path of Vengeance;t"
+            "ignore_base_convo;Path of Vengeance*;t"
         ],
         "nid": "15A Ch15ABaseConvo2"
     }

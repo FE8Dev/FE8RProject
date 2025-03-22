@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch16ABaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "16A",
-        "condition": "True",
+        "condition": "unit == 'Homecoming**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -68,12 +68,14 @@
             "speak;Forde;For Renais!|And for those meat pies!",
             "move_portrait;Kyle;OffscreenLeft",
             "move_portrait;Forde;OffscreenLeft",
+            "give_skill;Kyle;Homeland_Pride",
+            "give_skill;Forde;Homeland_Pride",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Kyle;Forde;30",
-            "ignore_base_convo;Homecoming*;t"
+            "ignore_base_convo;Homecoming**;t"
         ],
         "nid": "16A Ch16ABaseConvo2"
     }

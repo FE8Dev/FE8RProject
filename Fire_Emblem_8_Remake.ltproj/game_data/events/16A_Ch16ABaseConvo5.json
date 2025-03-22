@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch16ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "16A",
-        "condition": "True",
+        "condition": "unit == 'Divine Judgment**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -43,12 +43,13 @@
             "move_portrait;Larachel;MidLeft",
             "speak;Larachel;Fear not, citizens of Renais!|Your salvation is at hand!|The darkness shall soon be lifted from your fair kingdom!",
             "remove_portrait;Larachel",
+            "give_item;Larachel;Goddess_Bomb",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Divine Judgment;t"
+            "ignore_base_convo;Divine Judgment**;t"
         ],
         "nid": "16A Ch16ABaseConvo5"
     }

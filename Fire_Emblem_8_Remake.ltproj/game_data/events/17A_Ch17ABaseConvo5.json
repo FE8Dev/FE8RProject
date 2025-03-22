@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch17ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "17A",
-        "condition": "True",
+        "condition": "unit == 'Magic Friends*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -108,7 +108,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Magic Friends;t"
+            "ignore_base_convo;Magic Friends*;t"
         ],
         "nid": "17A Ch17ABaseConvo5"
     }

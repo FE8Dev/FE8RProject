@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch18ABaseConvo1",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "18A",
-        "condition": "True",
+        "condition": "unit == 'Frelian Knights***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -103,6 +103,7 @@
             "speak;Vanessa;For Frelia!",
             "",
             "speak;Tana;For Frelia!",
+            "give_item;convoy;Fales_Pendant",
             "transition;close;500",
             "change_background",
             "transition;open;500",
@@ -110,7 +111,7 @@
             "increment_support_points;Tana;Vanessa;10",
             "increment_support_points;Tana;Syrene;10",
             "increment_support_points;Vanessa;Syrene;10",
-            "ignore_base_convo;Frelian Knights;t"
+            "ignore_base_convo;Frelian Knights***;t"
         ],
         "nid": "18A Ch18ABaseConvo1"
     }

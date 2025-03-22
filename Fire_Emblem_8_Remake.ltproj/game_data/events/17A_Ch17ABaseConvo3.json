@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch17ABaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "17A",
-        "condition": "True",
+        "condition": "unit == 'Dancing Lessons***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -92,12 +92,14 @@
             "bop_portrait;Tethys",
             "",
             "speak;Tethys;That's the spirit!|Now, let's try a spin...",
+            "multi_remove_portrait;Tethys;Amelia",
+            "give_item;Amelia;Swiftsole_Consumable",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Dancing Lessons;t"
+            "ignore_base_convo;Dancing Lessons***;t"
         ],
         "nid": "17A Ch17ABaseConvo3"
     }

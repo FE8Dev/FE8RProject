@@ -3,7 +3,7 @@
         "name": "Ch14ABaseConvo2",
         "trigger": "on_base_convo",
         "level_nid": "14A",
-        "condition": "False",
+        "condition": "unit == Desert Challenge***",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -86,12 +86,13 @@
             "speak;Dozla;Gwah ha ha!|Keep trying, lad!|We've got many more miles of desert ahead of us!|Plenty of time to solve the mystery!",
             "remove_portrait;Ross",
             "remove_portrait;Dozla",
+            "give_item;Ross;Watercross_Axe",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Desert Challenge*;t"
+            "ignore_base_convo;Desert Challenge***;t"
         ],
         "nid": "14A Ch14ABaseConvo2"
     }

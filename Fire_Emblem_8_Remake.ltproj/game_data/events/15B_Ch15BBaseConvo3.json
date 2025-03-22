@@ -1,14 +1,14 @@
 [
     {
         "name": "Ch15BBaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "15B",
-        "condition": "True",
+        "condition": "unit == 'Desert Treasures*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "|transition;close;500",
+            "transition;close;500",
             "change_background;Desert",
             "#music;09 Distant Roads",
             "music;12- Determination Orchestral Cover",

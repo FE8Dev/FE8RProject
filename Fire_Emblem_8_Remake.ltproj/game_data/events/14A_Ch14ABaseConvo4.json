@@ -3,7 +3,7 @@
         "name": "Ch14ABaseConvo4",
         "trigger": "on_base_convo",
         "level_nid": "14A",
-        "condition": "False",
+        "condition": "unit == 'Desert Knowledge***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -60,7 +60,7 @@
             "bop_portrait;Lute",
             "speak;Lute;Wait here a moment.",
             "move_portrait;Lute;OffscreenLeft",
-            "expression;Ewan;Confused",
+            "expression;Ewan;NoSmile",
             "speak;Ewan;Huh? Where is she going?",
             "move_portrait;Lute;MidLeft",
             "",
@@ -93,7 +93,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Desert Knowledge;t"
+            "ignore_base_convo;Desert Knowledge***;t"
         ],
         "nid": "14A Ch14ABaseConvo4"
     }

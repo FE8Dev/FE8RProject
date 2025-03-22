@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.11ABaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "11A",
-        "condition": "False",
+        "condition": "unit == 'Armored Heart***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -43,16 +43,17 @@
             "speak;Gilliam;Her...dedication to duty is admirable.",
             "speak;Tethys;That's a beginning!|Now, flowers wouldn't hurt either.",
             "speak;Gilliam;Flowers...|I know nothing of such things.",
-            "speak;Tethys;Trust me.|A simple wildflower picked with thought means more than the finest roses bought without care.",
-            "speak;Gilliam;I...see.|I think I might know where to find some flowers.|There should be some in the field nearby.|I can grab some on my patrol route.",
+            "speak;Tethys;Trust me.|A simple wildflower picked with thought means more than the finest roses bought without care.|A wing of a beautiful bird, so show how you feel.|If she is right for you, she will appreciate what you give her.",
+            "speak;Gilliam;I...see.|I think I might know where to find some flowers.|I think I can find some wings too nearby.|There should be some in the field nearby.|I can grab some on my patrol route.",
             "speak;Tethys;Back to the patrol, then?|Tell me how it goes, won't you?",
             "speak;Gilliam;...maybe.",
             "multi_remove_portrait;Gilliam;Tethys",
+            "give_item;Gilliam;Speedwing_Consumable_P",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
-            "ignore_base_convo;Armored Heart**;t"
+            "ignore_base_convo;Armored Heart***;t"
         ],
         "nid": "11A Ch.11ABaseConvo3"
     }

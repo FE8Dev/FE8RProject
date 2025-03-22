@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch18ABaseConvo4",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "18A",
-        "condition": "True",
+        "condition": "unit == 'Mountains of Neleras*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -78,7 +78,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Mountains of Neleras;t"
+            "ignore_base_convo;Mountains of Neleras*;t"
         ],
         "nid": "18A Ch18ABaseConvo4"
     }

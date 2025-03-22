@@ -15,7 +15,7 @@
             ],
             [
                 "combat_condition",
-                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+                "(unit.team == 'player' and unit2.team == 'enemy') or (unit.team == 'player' and unit2.team == 'enemy2') or (unit.team == 'enemy2' and unit2.team == 'player')"
             ],
             [
                 "give_status_after_hit",

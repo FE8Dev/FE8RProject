@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.11ABaseConvo4",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "11A",
-        "condition": "False",
+        "condition": "unit == 'Veterans' Tales*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -48,7 +48,7 @@
             "change_background",
             "transition;open;500",
             "music_fade_back",
-            "ignore_base_convo;Veterans' Tales**;t"
+            "ignore_base_convo;Veterans' Tales*;t"
         ],
         "nid": "11A Ch.11ABaseConvo4"
     }

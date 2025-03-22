@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch19ABaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "19A",
-        "condition": "True",
+        "condition": "unit == 'Trial of Strength***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -77,12 +77,14 @@
             "remove_portrait;Duessel",
             "remove_portrait;Garcia",
             "remove_portrait;Dozla",
+            "give_item;convoy;Body_Ring_Consumable_P",
+            "give_item;convoy;Energy_Ring_Consumable_P",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Trial of Strength*;t"
+            "ignore_base_convo;Trial of Strength***;t"
         ],
         "nid": "19A Ch19ABaseConvo2"
     }

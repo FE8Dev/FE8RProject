@@ -3,7 +3,7 @@
         "name": "Ch14ABaseConvo3",
         "trigger": "on_base_convo",
         "level_nid": "14A",
-        "condition": "False",
+        "condition": "unit == 'Desert Race**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -96,7 +96,7 @@
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Colm;Marisa;20",
-            "ignore_base_convo;Desert Race;t"
+            "ignore_base_convo;Desert Race**;t"
         ],
         "nid": "14A Ch14ABaseConvo3"
     }

@@ -3,7 +3,7 @@
         "name": "Ch14ABaseConvo5",
         "trigger": "on_base_convo",
         "level_nid": "14A",
-        "condition": "False",
+        "condition": "unit == 'Desert Sightseeing*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -93,7 +93,7 @@
             "speak;Vanessa;Yes, we shouldn't linger too long.|The others will be expecting us back soon.",
             "bop_portrait;Tana",
             "expression;Tana;Smile",
-            "speak;Tana;Just a little longer...|I want to remember this moment.",
+            "speak;Tana;Just a little longer...|I want to remember this moment with my friend...",
             "remove_portrait;Tana",
             "remove_portrait;Vanessa",
             "transition;close;500",
@@ -101,7 +101,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Desert Sightseeing;t"
+            "ignore_base_convo;Desert Sightseeing*;t"
         ],
         "nid": "14A Ch14ABaseConvo5"
     }

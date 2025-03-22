@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.13ABaseConvo5",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "13A",
-        "condition": "True",
+        "condition": "unit == 'Hunters' Bond**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -97,12 +97,14 @@
             "speak;Neimi;Right!|I have my skinning knife right here.",
             "remove_portrait;Neimi",
             "remove_portrait;Marisa",
+            "give_exp;Marisa;100",
+            "give_exp;Neimi;100",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Hunters' Bond*;t"
+            "ignore_base_convo;Hunters' Bond**;t"
         ],
         "nid": "13A Ch.13ABaseConvo5"
     }

@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch16ABaseConvo1",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "16A",
-        "condition": "True",
+        "condition": "unit == 'New Paths***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -63,12 +63,15 @@
             "speak;Knoll;Perhaps indeed, General.|Perhaps indeed.",
             "remove_portrait;Duessel",
             "remove_portrait;Knoll",
+            "alert;Duessel's MAG and MAG growths went up!",
+            "change_stats;Duessel;MAG,8",
+            "change_growths;Duessel;MAG,30",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Duessel;Knoll;20",
-            "ignore_base_convo;New Paths*;t"
+            "ignore_base_convo;New Paths***;t"
         ],
         "nid": "16A Ch16ABaseConvo1"
     }

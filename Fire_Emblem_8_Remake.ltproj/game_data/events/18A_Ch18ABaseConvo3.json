@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch18ABaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "18A",
-        "condition": "True",
+        "condition": "unit == 'Volcanic Research**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -94,7 +94,7 @@
             "transition;open;500",
             "music_fade_back",
             "increment_support_points;Lute;Knoll;30",
-            "ignore_base_convo;Volcanic Research;t"
+            "ignore_base_convo;Volcanic Research**;t"
         ],
         "nid": "18A Ch18ABaseConvo3"
     }

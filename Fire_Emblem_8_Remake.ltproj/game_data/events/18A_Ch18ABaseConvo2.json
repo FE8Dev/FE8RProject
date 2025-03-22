@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch18ABaseConvo2",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "18A",
-        "condition": "True",
+        "condition": "unit == 'Ancient Secrets*'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -81,7 +81,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Ancient Secrets;t"
+            "ignore_base_convo;Ancient Secrets*;t"
         ],
         "nid": "18A Ch18ABaseConvo2"
     }

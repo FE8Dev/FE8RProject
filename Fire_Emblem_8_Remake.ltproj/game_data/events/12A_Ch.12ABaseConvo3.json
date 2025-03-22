@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch.12ABaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "12A",
-        "condition": "True",
+        "condition": "unit == 'Healing Harmony***'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -62,7 +62,7 @@
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Healing Harmony*;t"
+            "ignore_base_convo;Healing Harmony***;t"
         ],
         "nid": "12A Ch.12ABaseConvo3"
     }

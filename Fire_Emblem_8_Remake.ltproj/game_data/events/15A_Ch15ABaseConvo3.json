@@ -1,9 +1,9 @@
 [
     {
         "name": "Ch15ABaseConvo3",
-        "trigger": null,
+        "trigger": "on_base_convo",
         "level_nid": "15A",
-        "condition": "True",
+        "condition": "unit == 'Desert Treasures**'",
         "commands": [],
         "only_once": false,
         "priority": 20,
@@ -58,12 +58,13 @@
             "speak;Rennac;With this spell, I'll find twice the treasure in half the time!|My merchant will be impressed when I return with ancient relics!|...Though perhaps I'll neglect to mention how I acquired them.",
             "remove_portrait;Rennac",
             "remove_portrait;Saleh",
+            "give_skill;Rennac;Temp_Acrobat",
             "transition;close;500",
             "change_background",
             "transition;open;500",
             "music_fade_back",
             "",
-            "ignore_base_convo;Desert Treasures*;t"
+            "ignore_base_convo;Desert Treasures**;t"
         ],
         "nid": "15A Ch15ABaseConvo3"
     }
