@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Retribution",
+        "name": "Retribution",
+        "desc": "Attacks always crit if your HP% is less than enemy's HP%.\nEnemy can't be at full HP for this skill to work.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            28
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "((unit.get_hp()*100) // unit.get_max_hp()) < ((target.get_hp()*100) // target.get_max_hp()) and target.get_hp() < target.get_max_hp()"
+            ],
+            [
+                "crit",
+                420
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]
