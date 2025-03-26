@@ -11,7 +11,7 @@
             "if;game.game_vars['Tutorial'] == True",
             "speak;Narrator;           Basic Win/Loss conditions;center;;narration_top",
             "add_portrait;Anna;Right",
-            "speak;Anna;Now, if you were paying attention to the story, you will know that our main Heroine is <red>Eirika</>.|We will be referring her to as our <red>\"Lord\"</> from now on.|<red>\"Lord\"</> is the common term used in FE for the main hero/heroine.|<red>If your Lord's HP is reduced to 0, that's game over for you!</>|You will then have to start the chapter over!|You will want to do your best to keep your Lord alive!|Now to win, you must complete the goal of each chapter.|In this case, it is to defeat or <red>\"Rout\"</> all the enemies on the map.;;;;6",
+            "speak;Anna;Now, I hope you were paying attention to the story!|If you were, you'd know our trusty hero is <red>Eirika</>.|We will be referring her to as our <red>\"Lord\"</> from now on.|<red>\"Lord\"</> is the common term used for the main character in Fire Emblem games!|They tend to be royals, so... it tracks.|<red>If your Lord's HP is reduced to 0, you're done for!</>|You will then have to start the chapter over!|You'll want to do your best to keep your Lord alive!|Now, to win, you must complete the goal of each chapter.|In this case, it is to defeat or <red>\"Rout\"</> all the enemies on the map.;;;;6",
             "remove_portrait;Anna",
             "flicker_cursor;8,6",
             "wait;300",
@@ -25,7 +25,7 @@
             "if;game.game_vars['TutorialNewMech'] == True or game.game_vars['Tutorial'] == 'Yes'",
             "speak;Narrator;                  Timewheel;center;;narration_top",
             "add_portrait;Anna;Right",
-            "speak;Anna;In this version of FE8, if you get unlucky and Eirika dies, there is still hope!|You have a timewheel with 3 charges that you can use!|Though, for this chapter I'll cut you a deal and give you unlimited charges!|So feel free to use it as much as you like!|A charge will be used automatically if Eirika dies and you can turn back time to continue the game.|You can also use the timewheel during your turn anytime you want if want to change fate.|If Eirika dies while you have no charges, then it's game over though!|Since this is the Prologue though, I'll let Eirika come back as many times as needed.|But do your best to keep her alive!;;;;6",
+            "speak;Anna;In this version of FE8, if you get unlucky and Eirika dies, there is still hope!|You have a timewheel with 3 charges that you can use!|Though, for this chapter, I'll cut you a deal and give you unlimited charges!|So feel free to use it as much as you like!|Oh, I should explain what it is, shouldn't I?|When you activate your timewheel...|It lets you freely turn back time!|You can go back to any point during the previous turns.|When Eirika dies, it'll activate automatically, too!|So, you can swoop right in, and fix your error!|If Eirika dies while you have no charges, though...|Game over!|However, this IS the prologue.|So, y'know, unlimited charges!|But don't get too spoiled...|It's a good idea to keep Eirika safe regardless!;;;;6",
             "remove_portrait;Anna",
             "else",
             "end"
