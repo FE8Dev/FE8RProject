@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Formshift_Wyvern",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.get_unit('{unit}').klass == 'T2_Wyvern_Amelia_First'",
+            "change_class;{unit};T2_Wyvern_Monster_Form_Amelia_Second;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Monster_Form_Amelia_First'",
+            "change_class;{unit};T2_Wyvern_Amelia_First;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Amelia_Second'",
+            "change_class;{unit};T2_Wyvern_Monster_Form_Amelia_Second;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Monster_Form_Amelia_Second'",
+            "change_class;{unit};T2_Wyvern_Amelia_Second;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Cormag_First'",
+            "change_class;{unit};T2_Wyvern_Monster_Form_Cormag_Second;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Monster_Form_Cormag_First'",
+            "change_class;{unit};T2_Wyvern_Cormag_First;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Cormag_Second'",
+            "change_class;{unit};T2_Wyvern_Monster_Form_Cormag_Second;silent",
+            "",
+            "elif;game.get_unit('{unit}').klass == 'T2_Wyvern_Monster_Form_Cormag_Second'",
+            "change_class;{unit};T2_Wyvern_Cormag_Second;silent",
+            "",
+            "else",
+            "",
+            "end"
+        ],
+        "nid": "Global Formshift_Wyvern"
+    }
+]
