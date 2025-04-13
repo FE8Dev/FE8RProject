@@ -10,8 +10,11 @@ from app.engine.game_state import game
 from app.engine.objects.unit import UnitObject
 from app.utilities import utils, static_random
 from app.engine.movement import movement_funcs
+from app.engine import config as cf
+from app.data.resources.resources import RESOURCES
+from app.engine.sound import get_sound_thread
 import app.engine.combat.playback as pb
-import logging
+import random, logging
 
 
 
@@ -1069,3 +1072,48 @@ class AddedCritDamage(ItemComponent):
 
     def added_crit_damage(self, unit, item):
         return self.value
+
+class MapAttackVoice(ItemComponent):
+    nid = 'map_attack_voice'
+    desc = "When item is used the character plays a random attack voice clip."
+    tag = ItemTags.AESTHETIC
+
+    author = 'Beccarte'
+
+    def on_hit(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
+        #Determine whether to play a voice clip depending on game options.
+        if unit and cf.SETTINGS['combat_voices']:
+            #Get the unit's list of attack voice clips.
+            sound_list = RESOURCES.sfx.keys()
+            sound_name = unit.nid + 'Attack'
+            unit_sounds = [i for i in sound_list if sound_name in i]
+            #Randomly determine which voice clip to play.
+            if len(unit_sounds) > 0:
+                sound = sound_name + str(random.randint(1, len(unit_sounds)))
+                get_sound_thread().play_sfx(sound)
+
+    def on_miss(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
+        #Determine whether to play a voice clip depending on game options.
+        if unit and cf.SETTINGS['combat_voices']:
+            #Get the unit's list of attack voice clips.
+            sound_list = RESOURCES.sfx.keys()
+            sound_name = unit.nid + 'Attack'
+            unit_sounds = [i for i in sound_list if sound_name in i]
+            #Randomly determine which voice clip to play.
+            if len(unit_sounds) > 0:
+                sound = sound_name + str(random.randint(1, len(unit_sounds)))
+                get_sound_thread().play_sfx(sound)
+
+class RestoreNoRestriction(ItemComponent):
+    nid = 'restore_no_restriction'
+    desc = "Item removes all negative statuses from target on hit. Can be used on targets with no status."
+    tag = ItemTags.UTILITY
+
+    def _can_be_restored(self, status):
+        return status.negative
+
+    def on_hit(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
+        for skill in target.all_skills[:]:
+            if self._can_be_restored(skill):
+                actions.append(action.RemoveSkill(target, skill))
+                playback.append(pb.RestoreHit(unit, item, target))

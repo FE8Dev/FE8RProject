@@ -2,7 +2,7 @@
     {
         "nid": "Inferno",
         "name": "Inferno",
-        "desc": "Ewan's advanced Anima tome. <green>CD:2</>\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(Multi-target:3), Splash DMG (50), cannot DS, Spell.",
+        "desc": "Ewan's advanced Anima tome. <green>CD:2</>\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(Multi-target:3), Splash DMG (50%), cannot DS, Spell.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             24,
@@ -130,6 +130,12 @@
             [
                 "weapon",
                 null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seared_AOE_Splash"
+                ]
             ]
         ]
     }

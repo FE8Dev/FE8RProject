@@ -2,7 +2,7 @@
     {
         "nid": "Bomb_Burst",
         "name": "Bomb Burst",
-        "desc": "An AOE Fireball attack.",
+        "desc": "An AOE Fireball attack.\nUses MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -84,6 +84,10 @@
             [
                 "status_on_hit",
                 "Seared"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
             ]
         ]
     }

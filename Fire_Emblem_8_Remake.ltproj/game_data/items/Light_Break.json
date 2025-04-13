@@ -2,7 +2,7 @@
     {
         "nid": "Light_Break",
         "name": "Light Break",
-        "desc": "A Light magic attack that hits 4 different enemies. Cannot DS.",
+        "desc": "<red>CA:</>A Light magic attack that hits 4 different enemies. Cannot DS. <green>CD:4 Turns</>\nUses LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -88,6 +88,10 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_STRONG"
             ]
         ]
     }

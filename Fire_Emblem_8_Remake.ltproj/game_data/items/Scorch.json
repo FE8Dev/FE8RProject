@@ -2,7 +2,7 @@
     {
         "nid": "Scorch",
         "name": "Scorch",
-        "desc": "Ewan's intermediate Anima tome. <green>CD:2</>\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(Multi-target:3), Splash DMG (30), cannot DS, Spell.",
+        "desc": "Ewan's intermediate Anima tome. <green>CD:2</>\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(Multi-target:3), Splash DMG (40%), cannot DS, Spell.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             22,
@@ -142,6 +142,12 @@
             [
                 "weapon",
                 null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seared_AOE_Splash"
+                ]
             ]
         ]
     }

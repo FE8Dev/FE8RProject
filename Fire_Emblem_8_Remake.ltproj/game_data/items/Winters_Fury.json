@@ -2,7 +2,7 @@
     {
         "nid": "Winters_Fury",
         "name": "Winter's Fury",
-        "desc": "A blizzard blowing at midnight.\n<orange>Element:</><icon>Wind</><icon>Ice</><icon>Dark</>\n<violet>Inflicts:</><icon>Frozen</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Pirate</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Shove (6), Splash DMG (50).",
+        "desc": "A blizzard blowing at midnight.\n<orange>Element:</><icon>Wind</><icon>Ice</>(AOE:1)<icon>Dark</>(AOE:2)\n<violet>Inflicts:</><icon>Frozen</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Pirate</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Shove (6), Splash DMG (50%).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -111,6 +111,13 @@
                     "Wind",
                     "Ice",
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Frozen_AOE_Splash",
+                    "Shadowblight_AOE_Splash"
                 ]
             ]
         ]

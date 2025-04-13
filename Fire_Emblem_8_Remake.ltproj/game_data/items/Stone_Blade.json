@@ -2,7 +2,7 @@
     {
         "nid": "Stone_Blade",
         "name": "Stone Blade",
-        "desc": "A heavy blade covered in stone.\n<green>Skills:</>Blade Sweep, Earth Shield\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "A heavy blade covered in stone.\n<green>Skills:</>Blade Sweep, Earth Shield\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             3,
@@ -108,7 +108,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_DEF_MID"
+                "STR_DEF_WEAK"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Savage_Rites_T3",
         "name": "Savage Rites",
-        "desc": "Gain bonus damage/Crit/Hit based on unit's missing HP.\nUnit takes 5 points of damage after each combat.",
+        "desc": "Gain bonus damage/Crit/Hit based on unit's missing HP/3.\nUnit takes 40 points of non-lethal damage after each combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -11,19 +11,19 @@
         "components": [
             [
                 "dynamic_damage",
-                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+                "((unit.get_hp() - unit.get_max_hp()) // -3)"
             ],
             [
                 "dynamic_crit_accuracy",
-                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+                "((unit.get_hp() - unit.get_max_hp()) // -3)"
             ],
             [
                 "dynamic_accuracy",
-                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+                "((unit.get_hp() - unit.get_max_hp()) // -3)"
             ],
             [
                 "recoil",
-                5
+                40
             ],
             [
                 "feat",

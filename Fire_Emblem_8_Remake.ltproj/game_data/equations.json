@@ -232,6 +232,10 @@
         "expression": "STR + LCK//2"
     },
     {
+        "nid": "STR_LCK_WEAK",
+        "expression": "STR + LCK//3"
+    },
+    {
         "nid": "STR_LCK_STRONG",
         "expression": "STR + LCK"
     },
@@ -674,5 +678,33 @@
     {
         "nid": "STR_DEF_RES_STRONG",
         "expression": "STR + DEF + RES"
+    },
+    {
+        "nid": "STR_MAG_MOV_MID",
+        "expression": "STR + MAG//2 + MOV*3"
+    },
+    {
+        "nid": "STR_MAG_MOV_STRONG",
+        "expression": "STR + MAG + MOV*5"
+    },
+    {
+        "nid": "STR_SKL_CON_MID",
+        "expression": "STR + SKL//2 + CON*1.5"
+    },
+    {
+        "nid": "STR_SKL_CON_STRONG",
+        "expression": "STR + SKL + CON*2.5"
+    },
+    {
+        "nid": "STR_MAG_MAX",
+        "expression": "max(STR, MAG)"
+    },
+    {
+        "nid": "DEF_RES_MIN",
+        "expression": "min(DEF, RES)"
+    },
+    {
+        "nid": "DEF_SPD_MIN",
+        "expression": "min(DEF, SPD)"
     }
 ]

@@ -2,7 +2,7 @@
     {
         "nid": "Trampling_Shadow",
         "name": "Trampling Shadow",
-        "desc": "<red>CA:</>5 space magical line attack that uses unit's MAG+STR/2. \nInflicts Breach/Cursed (15) on enemies hit. Cannot Double, Cannot DS. This is a Free Action. <green>CD:3 Turns.",
+        "desc": "<red>CA:</>5 space magical line attack that uses unit's MAG+STR (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>). \nInflicts Breach/Cursed (15) on enemies hit. Cannot Double, Cannot DS. This is a Free Action. <green>CD:3 Turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -75,7 +75,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_STR_MID"
+                "MAG_STR_STRONG"
             ],
             [
                 "statuses_on_hit",

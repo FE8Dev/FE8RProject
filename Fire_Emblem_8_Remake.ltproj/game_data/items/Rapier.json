@@ -2,7 +2,7 @@
     {
         "nid": "Rapier",
         "name": "Aegis Rapier",
-        "desc": "A special rapier that allows Eirika to nimbly expose weak points.\n<green>Skills:</>Vantage+, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Magic at range, +1 SPD.",
+        "desc": "A special rapier that allows Eirika to nimbly expose weak points.\n<green>Skills:</>Vantage+, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses stronger of STR or MAG, targets weaker of DEF or RES, +1 SPD.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -56,10 +56,6 @@
                 ]
             ],
             [
-                "magic_at_range",
-                null
-            ],
-            [
                 "battle_cast_anim",
                 "Thunder"
             ],
@@ -67,7 +63,8 @@
                 "multi_status_on_equip",
                 [
                     "Vantage_Plus_Item",
-                    "Flash_Step"
+                    "Flash_Step",
+                    "Raiper_Eirika_Animation"
                 ]
             ],
             [
@@ -106,6 +103,14 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MAX"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Magic_Blast",
         "name": "Magic Blast",
-        "desc": "An AOE Magic Blast attack.",
+        "desc": "An AOE Magic Blast attack.\nUses MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             5,
@@ -72,6 +72,10 @@
             [
                 "crit",
                 0
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_STRONG"
             ]
         ]
     }

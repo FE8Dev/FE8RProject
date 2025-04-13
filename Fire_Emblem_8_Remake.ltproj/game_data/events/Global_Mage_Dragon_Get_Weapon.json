@@ -3,9 +3,9 @@
         "name": "Mage_Dragon_Get_Weapon",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.klass =='T3_Mage_Dragon' and unit.level == 1",
+        "condition": "unit.klass =='T3_Mage_Dragon_Monster_Cormag_First' and unit.level == 1 and unit.nid == 'MyUnit'",
         "commands": [],
-        "only_once": false,
+        "only_once": true,
         "priority": 20,
         "_source": [
             "remove_item;{unit};Training_Stone",

@@ -2,7 +2,7 @@
     {
         "nid": "Grand_Sieglinde",
         "name": "Grand Sieglinde",
-        "desc": "Eirika's ultimate weapon. Infused with ancient thunder magic.\n<green>Skills:</>Vantage++, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Very effective:</><icon>Drenched</><icon>Armor</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>Magic at range, +10 STR/MAG, +15 SPD.",
+        "desc": "Eirika's ultimate weapon. Infused with ancient thunder magic.\n<green>Skills:</>Vantage++, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Very effective:</><icon>Drenched</><icon>Armor</><icon>Monster</><icon>Horse</> <pink>Misc:</>Targets weaker of DEF or RES, STR + MAG + MOV*5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG') + unit.get_stat('MOV')*5)}</>), +10 STR/MAG, +15 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             0,
@@ -54,10 +54,6 @@
                 [
                     "Eirika"
                 ]
-            ],
-            [
-                "magic_at_range",
-                null
             ],
             [
                 "battle_cast_anim",
@@ -127,6 +123,14 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MOV_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
             ]
         ]
     }

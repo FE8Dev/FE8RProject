@@ -2,7 +2,7 @@
     {
         "nid": "Holy_Flare",
         "name": "Holy Flare",
-        "desc": "Attack all enemies between unit and the target. Cannot DS. Cannot Double.",
+        "desc": "Attack all enemies between unit and the target. Cannot DS. Cannot Double. <green>CD:2 Turns</>\nUses MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -92,6 +92,10 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_MAG_STRONG"
             ]
         ]
     }

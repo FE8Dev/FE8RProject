@@ -2,7 +2,7 @@
     {
         "nid": "Aegis_Stab",
         "name": "Aegis Stab",
-        "desc": "A powerful magical lunge that deals damage to all units between the unit and the target. Cannot Double. Cannot DS.",
+        "desc": "A powerful magical lunge that deals damage to all units between the unit and the target. Cannot Double. Cannot DS.\nUses MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -76,6 +76,10 @@
             [
                 "crit",
                 10
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_STRONG"
             ]
         ]
     }

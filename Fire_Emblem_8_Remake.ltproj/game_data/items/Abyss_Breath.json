@@ -2,7 +2,7 @@
     {
         "nid": "Abyss_Breath",
         "name": "Abyss Breath",
-        "desc": "A powerful breath from the Abyss.\n<violet>Inflicts:</><icon>Silence</>\n<red>Effective:</><icon>Magic</><icon>Monster</>\n<pink>Misc:</>Magical.",
+        "desc": "A powerful breath from the Abyss.\n<violet>Inflicts:</><icon>Silence</>\n<red>Effective:</><icon>Magic</><icon>Monster</>\n<pink>Misc:</>Magical.\n<pink>Misc:</>MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             4,
@@ -99,6 +99,10 @@
             [
                 "weapon_rank",
                 "E"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_STRONG"
             ]
         ]
     }

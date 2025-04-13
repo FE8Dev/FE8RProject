@@ -2,7 +2,7 @@
     {
         "nid": "Charge",
         "name": "Charge",
-        "desc": "Attack all enemies between unit and the target. Cannot Double. Cannot DS.",
+        "desc": "<red>CA:</>Attack all enemies between unit and the target. Cannot Double, cannot DS. <green>CD:3 Turns</>\nUses STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -68,6 +68,10 @@
             [
                 "crit",
                 0
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
             ]
         ]
     }

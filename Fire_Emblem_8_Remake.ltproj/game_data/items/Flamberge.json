@@ -2,7 +2,7 @@
     {
         "nid": "Flamberge",
         "name": "Flamberge",
-        "desc": "Unleashes the breath of a dragon upon enemies.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>), Splash DMG (30).",
+        "desc": "Unleashes the breath of a dragon upon enemies.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>), Splash DMG (40%).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             3,
@@ -123,6 +123,12 @@
                 "item_tags",
                 [
                     "Fire"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seared_AOE_Splash"
                 ]
             ]
         ]

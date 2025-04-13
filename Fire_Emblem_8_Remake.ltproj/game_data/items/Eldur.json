@@ -2,7 +2,7 @@
     {
         "nid": "Eldur",
         "name": "Eldur",
-        "desc": "A lance that leads to victory.\n<green>Skills:</>Momentum (On active kill), Lance Guard (C), Command Charge\n<red>Effective:</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Ally Desperation (Aura:3).",
+        "desc": "A lance that leads to victory.\n<green>Skills:</>Momentum (On active kill), Lance Guard (C), Command Charge \n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Armor</><icon>Horse</> \n<pink>Misc:</>Targets weaker of DEF or SPD, Ally Desperation (Aura:3).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             1,
@@ -92,6 +92,10 @@
             [
                 "eval_available",
                 "u(\"Ephraim\").wexp['Lance'] >= 120 and u(\"Ephraim\").wexp['Lance'] < 240"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_SPD_MIN"
             ]
         ]
     }

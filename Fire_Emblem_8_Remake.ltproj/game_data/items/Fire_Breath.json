@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Breath",
         "name": "Fire Breath",
-        "desc": "The fiery breath of a powerful dragon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>",
+        "desc": "The fiery breath of a powerful dragon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             6,
@@ -31,7 +31,7 @@
             ],
             [
                 "hit",
-                90
+                105
             ],
             [
                 "crit",
@@ -94,6 +94,10 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
             ]
         ]
     }

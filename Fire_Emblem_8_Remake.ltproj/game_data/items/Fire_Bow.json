@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Bow",
         "name": "Fire Bow",
-        "desc": "A bow imbued with a fire gem.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), targets RES.",
+        "desc": "A bow imbued with a fire gem.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), targets RES.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             3,
@@ -100,7 +100,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MID"
+                "STR_SKL_WEAK"
             ],
             [
                 "alternate_resist_formula",

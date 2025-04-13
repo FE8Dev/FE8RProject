@@ -2,7 +2,7 @@
     {
         "nid": "Log",
         "name": "Log",
-        "desc": "A massive log that knocks the wind out of enemies.\n<green>Skills:</>Lance Guard (E), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
+        "desc": "A massive log that knocks the wind out of enemies.\n<green>Skills:</>Lance Guard (E), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES/3 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//3))}</>).",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             4,
@@ -109,7 +109,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "DEF_RES_MID"
+                "DEF_RES_WEAK"
             ]
         ]
     }

@@ -1399,3 +1399,98 @@ class EvalRecoilPercent(SkillComponent):
             except Exception as e:
                 logging.error("Couldn't evaluate %s conditional (%s)", self.value, e)
                 end_health = int(unit.get_hp())
+
+class SavageBlowFates10P(SkillComponent):
+    nid = 'savage_blow_fates_Ten_Per'
+    desc = 'Deals 10% Current HP damage to enemies within the given number of spaces from target.'
+    tag = SkillTags.CUSTOM
+
+    expose = ComponentType.Int
+    value = 0
+    author = 'Lord_Tweed'
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            r = set(range(self.value+1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            for loc in locations:
+                target2 = game.board.get_unit(loc)
+                if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
+                    end_health = target2.get_hp() - (int(target2.get_hp() * .1))
+                    action.do(action.SetHP(target2, max(1, end_health)))
+
+class SavageBlowFates30P(SkillComponent):
+    nid = 'savage_blow_fates_Thirty_Per'
+    desc = 'Deals 30% Current HP damage to enemies within the given number of spaces from target.'
+    tag = SkillTags.CUSTOM
+
+    expose = ComponentType.Int
+    value = 0
+    author = 'Lord_Tweed'
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            r = set(range(self.value+1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            for loc in locations:
+                target2 = game.board.get_unit(loc)
+                if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
+                    end_health = target2.get_hp() - (int(target2.get_hp() * .3))
+                    action.do(action.SetHP(target2, max(1, end_health)))
+
+class SavageBlowFates40P(SkillComponent):
+    nid = 'savage_blow_fates_Forty_Per'
+    desc = 'Deals 40% Current HP damage to enemies within the given number of spaces from target.'
+    tag = SkillTags.CUSTOM
+
+    expose = ComponentType.Int
+    value = 0
+    author = 'Lord_Tweed'
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            r = set(range(self.value+1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            for loc in locations:
+                target2 = game.board.get_unit(loc)
+                if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
+                    end_health = target2.get_hp() - (int(target2.get_hp() * .4))
+                    action.do(action.SetHP(target2, max(1, end_health)))
+
+class SavageBlowFates50P(SkillComponent):
+    nid = 'savage_blow_fates_Fifty_Per'
+    desc = 'Deals 50% Current HP damage to enemies within the given number of spaces from target.'
+    tag = SkillTags.CUSTOM
+
+    expose = ComponentType.Int
+    value = 0
+    author = 'Lord_Tweed'
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            r = set(range(self.value+1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            for loc in locations:
+                target2 = game.board.get_unit(loc)
+                if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
+                    end_health = target2.get_hp() - (int(target2.get_hp() * .5))
+                    action.do(action.SetHP(target2, max(1, end_health)))
+
+class SavageBlowFates60P(SkillComponent):
+    nid = 'savage_blow_fates_Sixty_Per'
+    desc = 'Deals 60% Current HP damage to enemies within the given number of spaces from target.'
+    tag = SkillTags.CUSTOM
+
+    expose = ComponentType.Int
+    value = 0
+    author = 'Lord_Tweed'
+
+    def end_combat(self, playback, unit, item, target, item2, mode):
+        if target and skill_system.check_enemy(unit, target):
+            r = set(range(self.value+1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            for loc in locations:
+                target2 = game.board.get_unit(loc)
+                if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
+                    end_health = target2.get_hp() - (int(target2.get_hp() * .6))
+                    action.do(action.SetHP(target2, max(1, end_health)))

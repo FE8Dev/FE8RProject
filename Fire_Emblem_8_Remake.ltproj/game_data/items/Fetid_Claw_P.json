@@ -1,0 +1,83 @@
+[
+    {
+        "nid": "Fetid_Claw_P",
+        "name": "Fetid Claw+",
+        "desc": "Powerful claws.\n<violet>Inflicts:</><icon>Venom</><icon>Bleed</>\n<pink>Misc:</>STR + HP/5. (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
+                    "Bleeding",
+                    "Bleeding_Boss"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_WEAK"
+            ]
+        ]
+    }
+]

@@ -2,7 +2,7 @@
     {
         "nid": "Icy_Grasp",
         "name": "Icy Grasp",
-        "desc": "A tomb of ice and sand. <green>CD:5</>\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Stone</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:2), cannot miss, cannot double, cannot DS, Splash DMG (50).",
+        "desc": "A tomb of ice and sand. <green>CD:5</>\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Stone</>(AOE:3)<icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:2), cannot miss, cannot double, cannot DS, Splash DMG (50%).",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -143,6 +143,13 @@
                 [
                     "Earth",
                     "Ice"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Frozen_AOE_Splash",
+                    "Rock_AOE_Splash"
                 ]
             ]
         ]

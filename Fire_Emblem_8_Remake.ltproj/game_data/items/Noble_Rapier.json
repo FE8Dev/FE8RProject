@@ -2,7 +2,7 @@
     {
         "nid": "Noble_Rapier",
         "name": "Noble Rapier",
-        "desc": "A rapier popular with famous nobles.\n<green>Skills:</>Vantage+, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Magic at range, +5 SPD.",
+        "desc": "A rapier popular with famous nobles.\n<green>Skills:</>Vantage+, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses stronger of STR or MAG, targets weaker of DEF or RES, +5 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             21,
@@ -50,18 +50,15 @@
                 "Sword"
             ],
             [
-                "magic_at_range",
-                null
-            ],
-            [
                 "battle_cast_anim",
-                "Thoron"
+                "Dire_Thunder"
             ],
             [
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Vantage_Plus_Item"
+                    "Vantage_Plus_Item",
+                    "Raiper_Eirika_Animation"
                 ]
             ],
             [
@@ -110,6 +107,14 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MAX"
             ]
         ]
     }

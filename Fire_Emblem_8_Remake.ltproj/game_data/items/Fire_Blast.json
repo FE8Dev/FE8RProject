@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Blast",
         "name": "Fire Blast",
-        "desc": "An AOE Fire Blast attack.",
+        "desc": "An AOE Fire Blast attack.\nUses STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -80,6 +80,10 @@
                     "Seared",
                     "Burned_Boss"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Impale",
         "name": "Impale",
-        "desc": "Attack an enemy up to 5 times and push them back 5 tiles. Cannot DS.",
+        "desc": "<red>CA:</>Attack an enemy up to 5 times and push them back 5 tiles. Cannot DS. <green>CD:4 Turns</>\nUses SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -80,6 +80,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
             ]
         ]
     }

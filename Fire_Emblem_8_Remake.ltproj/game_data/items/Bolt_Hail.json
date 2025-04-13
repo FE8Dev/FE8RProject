@@ -2,7 +2,7 @@
     {
         "nid": "Bolt_Hail",
         "name": "Bolt Hail",
-        "desc": "A hailstorm with bolts of wrath infused with water and ice. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(AOE Blast:4), Splash Damage(50), cannot DS, no WEXP gain, always hits.",
+        "desc": "A hailstorm with bolts of wrath infused with water and ice. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>(AOE:3)<icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(AOE Blast:4), Splash Damage(50%), cannot DS, no WEXP gain, always hits.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -134,6 +134,13 @@
                     "Ice",
                     "Water",
                     "Thunder"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Frozen_AOE_Splash",
+                    "Water_AOE_Splash"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Bow",
         "name": "Ice Bow",
-        "desc": "A bow imbued with an ice gem.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>RES + SPD/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A bow imbued with an ice gem.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>RES + SPD/3 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             0,
@@ -88,7 +88,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "RES_SPD_MID"
+                "RES_SPD_WEAK"
             ],
             [
                 "ignore_line_of_sight",

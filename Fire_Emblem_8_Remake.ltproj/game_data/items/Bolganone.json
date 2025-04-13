@@ -2,7 +2,7 @@
     {
         "nid": "Bolganone",
         "name": "Bolganone",
-        "desc": "This tome creates a massive ball of fire.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>), Splash DMG (30).",
+        "desc": "This tome creates a massive ball of fire.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>), Splash DMG (40%).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             6,
@@ -110,7 +110,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect"
+                    "Blade_Vantage_Effect",
+                    "Seared_AOE_Splash"
                 ]
             ],
             [

@@ -2,7 +2,7 @@
     {
         "nid": "Flame_Sweep",
         "name": "Flame Sweep",
-        "desc": "Summons a wall of flame.\n<orange>Element:</><icon>Fire</><violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>), Splash DMG (5).",
+        "desc": "Summons a wall of flame.\n<orange>Element:</><icon>Fire</><violet>Inflicts:</><icon>Seared</>(AOE:2) \n<red>Effective:</><icon>Horse</> <pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//3))}</>), Splash DMG (20%).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             9,
@@ -113,7 +113,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_STR_MID"
+                "MAG_STR_WEAK"
             ],
             [
                 "item_tags",
@@ -124,6 +124,12 @@
             [
                 "brave",
                 null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seared_AOE_Splash"
+                ]
             ]
         ]
     }

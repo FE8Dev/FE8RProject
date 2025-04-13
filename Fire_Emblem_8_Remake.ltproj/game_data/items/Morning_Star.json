@@ -2,7 +2,7 @@
     {
         "nid": "Morning_Star",
         "name": "Morning Star",
-        "desc": "Heavy warhammer with spikes used by zealots.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>).",
+        "desc": "Heavy warhammer with spikes used by zealots.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -108,7 +108,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_LCK_MID"
+                "STR_LCK_WEAK"
             ]
         ]
     }

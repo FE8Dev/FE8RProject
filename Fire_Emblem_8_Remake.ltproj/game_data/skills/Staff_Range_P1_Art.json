@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Staff'"
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) not in ('Anima', 'Light', 'Dark', 'Sword', 'Lance', 'Axe', 'Bow', 'Monster')"
             ],
             [
                 "combat_art",
@@ -23,7 +23,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Staff'"
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) not in ('Anima', 'Light', 'Dark', 'Sword', 'Lance', 'Axe', 'Bow', 'Monster')"
             ]
         ]
     }
