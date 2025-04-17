@@ -2,7 +2,7 @@
     {
         "nid": "Einherjar",
         "name": "Einherjar",
-        "desc": "A lance to honor the dead.\n<green>Skills:</>Momentum (On active kill), Lance Guard (A), Command Charge \n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Armor</><icon>Horse</> \n<pink>Misc:</>Targets weaker of DEF or SPD, Ally Desperation (Aura:3).",
+        "desc": "A lance to honor the dead.\n<green>Skills:</>Momentum (On active kill), Lance Guard (A), Command Charge  <orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Armor</><icon>Horse</>  <pink>Misc:</>Targets weaker of DEF or SPD, Ally Desperation (Aura:3).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             19,
@@ -66,7 +66,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Javelin"
+                "BlueExplosion"
             ],
             [
                 "ignore_line_of_sight",
@@ -96,6 +96,16 @@
             [
                 "alternate_resist_formula",
                 "DEF_SPD_MIN"
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
             ]
         ]
     }

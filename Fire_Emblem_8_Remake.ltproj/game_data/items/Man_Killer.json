@@ -2,7 +2,7 @@
     {
         "nid": "Man_Killer",
         "name": "Man Killer",
-        "desc": "An axe that drowns enemies in their own blood.\n<orange>Element:</><icon>Earth</><icon>Water</>\n<violet>Inflicts:</><icon>Rock</><icon>Drenched</>(AOE:3), Breach (5)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "An axe that drowns enemies in their own blood.\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Earth</><icon>Water</>\n<violet>Inflicts:</><icon>Rock</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             39,
@@ -107,6 +107,12 @@
                 [
                     "Earth",
                     "Water"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
                 ]
             ]
         ]

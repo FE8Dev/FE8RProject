@@ -2,7 +2,7 @@
     {
         "nid": "Reginleif",
         "name": "Reginleif",
-        "desc": "Ephraim's special lance that helps him even the odds.\n<green>Skills:</>Momentum (On active kill), Lance Guard (E)\n<orange>Element:</><icon>Fire</> <red>Effective:</>\n<icon>Armor</><icon>Horse</> <violet>Inflicts:</><icon>Seared</>\n<pink>Misc:</>Targets weaker of DEF or SPD, Ally Desperation (Aura:3).",
+        "desc": "Ephraim's special lance that helps him even the odds.\n<green>Skills:</>Momentum (On active kill), Lance Guard (E) <orange>Element:</><icon>Fire</> <red>Effective:</>\n<icon>Armor</><icon>Horse</> <violet>Inflicts:</><icon>Seared</> <pink>Misc:</>Targets weaker of DEF or SPD, Ally Desperation (Aura:3).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -95,6 +95,16 @@
             [
                 "alternate_resist_formula",
                 "DEF_SPD_MIN"
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
             ]
         ]
     }

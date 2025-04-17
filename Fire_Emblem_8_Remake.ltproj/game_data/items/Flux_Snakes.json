@@ -2,7 +2,7 @@
     {
         "nid": "Flux_Snakes",
         "name": "Flux Snakes",
-        "desc": "A flux tome that summons snakes from the abyss. <green>CD:2</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Venom</>x2, Cursed (2)\n<pink>Misc:</>(Multi-target:4), MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), cannot DS.",
+        "desc": "A flux tome that summons snakes from the abyss. <green>CD:2</>\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>x2\n<pink>Misc:</>(Multi-target:4), MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), cannot DS.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             5,
@@ -91,9 +91,7 @@
                     "Cursed_2",
                     "Shadow_Blight",
                     "Venomous_Effect",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss"
+                    "Venomous_Effect"
                 ]
             ],
             [
@@ -120,6 +118,12 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_E"
                 ]
             ]
         ]

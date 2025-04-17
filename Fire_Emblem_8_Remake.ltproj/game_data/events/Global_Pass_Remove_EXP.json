@@ -8,7 +8,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            ""
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest"
         ],
         "nid": "Global Pass_Remove_EXP"
     }

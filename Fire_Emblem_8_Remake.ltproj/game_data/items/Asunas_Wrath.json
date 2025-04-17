@@ -2,7 +2,7 @@
     {
         "nid": "Asunas_Wrath",
         "name": "Asuna's Wrath",
-        "desc": "The wrath of one with nothing to lose.\n<green>Skills:</>Vengeance\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Ross -8 DEF.",
+        "desc": "The wrath of one with nothing to lose.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Ross -8 DEF, costs 20 HP to use per cast.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             2,
@@ -98,12 +98,6 @@
                 8
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Vengeance_Skill_Item"
-                ]
-            ],
-            [
                 "prf_unit",
                 [
                     "Ross"
@@ -118,6 +112,16 @@
                 [
                     "Fire",
                     "Dark"
+                ]
+            ],
+            [
+                "hp_cost",
+                20
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_SS"
                 ]
             ]
         ]

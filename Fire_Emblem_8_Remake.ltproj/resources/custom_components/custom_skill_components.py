@@ -12,6 +12,7 @@ from app.utilities import utils, static_random
 from app.engine.combat import playback as pb
 from app.utilities.enums import Strike
 import logging
+import random
 
 class DoNothing(SkillComponent):
     nid = 'do_nothing'
@@ -32,13 +33,33 @@ class SavageBlowFates(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .2))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.2)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
 
 class LostOnTakeHit(SkillComponent):
     nid = 'lost_on_take_hit'
@@ -436,9 +457,9 @@ class PermanentDamage(SkillComponent):
         action.do(action.ApplyStatChanges(unit, stat_changes, False))
         action.do(action.ChangeField(unit, key='Undeath_Current_HP', value=unit.get_max_hp()))
 
-class EvalUpkeepDamage(SkillComponent):
-    nid = 'eval_upkeep_damage'
-    desc = "Unit takes damage at upkeep based on eval"
+class EvalUpkeepDamageNonFatal(SkillComponent):
+    nid = 'eval_upkeep_damage_non_fatal'
+    desc = "Unit takes damage at upkeep based on eval. Doesn't kill player units and bosses."
     tag = SkillTags.CUSTOM
 
     expose = ComponentType.String
@@ -463,10 +484,27 @@ class EvalUpkeepDamage(SkillComponent):
     def on_upkeep(self, actions, playback, unit):
         from app.engine import evaluate
         try:
-            hp_change = -int(evaluate.evaluate(self.value, unit))
+            raw_damage = int(evaluate.evaluate(self.value, unit))
         except:
             logging.error("Couldn't evaluate %s conditional" % self.value)
-            hp_change = 0
+            return
+
+        # Determine if unit is protected from death
+        is_protected = unit.team == 'player' or 'Boss' in unit.tags
+
+        # Default hp_change is full negative damage
+        hp_change = -raw_damage
+
+        # Apply non-lethal cap if protected
+        if is_protected and raw_damage > 0:
+            max_damage = unit.get_hp() - 1
+            effective_damage = min(raw_damage, max_damage)
+            if effective_damage <= 0:
+                return  # Skip if nothing to apply
+            hp_change = -effective_damage
+
+        # Let other enemies die — full damage applies if not protected
+
         actions.append(action.ChangeHP(unit, hp_change))
         actions.append(action.TriggerCharge(unit, self.skill))
         self._playback_processing(playback, unit, hp_change)
@@ -1401,7 +1439,7 @@ class EvalRecoilPercent(SkillComponent):
                 end_health = int(unit.get_hp())
 
 class SavageBlowFates10P(SkillComponent):
-    nid = 'savage_blow_fates_Ten_Per'
+    nid = 'savage_blow_fates_ten_per'
     desc = 'Deals 10% Current HP damage to enemies within the given number of spaces from target.'
     tag = SkillTags.CUSTOM
 
@@ -1411,13 +1449,33 @@ class SavageBlowFates10P(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .1))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.1)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
 
 class SavageBlowFates30P(SkillComponent):
     nid = 'savage_blow_fates_Thirty_Per'
@@ -1430,13 +1488,33 @@ class SavageBlowFates30P(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .3))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.3)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
 
 class SavageBlowFates40P(SkillComponent):
     nid = 'savage_blow_fates_Forty_Per'
@@ -1449,13 +1527,33 @@ class SavageBlowFates40P(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .4))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.4)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
 
 class SavageBlowFates50P(SkillComponent):
     nid = 'savage_blow_fates_Fifty_Per'
@@ -1468,13 +1566,33 @@ class SavageBlowFates50P(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .5))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.5)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
 
 class SavageBlowFates60P(SkillComponent):
     nid = 'savage_blow_fates_Sixty_Per'
@@ -1487,10 +1605,77 @@ class SavageBlowFates60P(SkillComponent):
 
     def end_combat(self, playback, unit, item, target, item2, mode):
         if target and skill_system.check_enemy(unit, target):
-            r = set(range(self.value+1))
+            r = set(range(self.value + 1))
             locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
             for loc in locations:
                 target2 = game.board.get_unit(loc)
                 if target2 and target2 is not target and skill_system.check_enemy(unit, target2):
-                    end_health = target2.get_hp() - (int(target2.get_hp() * .6))
-                    action.do(action.SetHP(target2, max(1, end_health)))
+                    original_hp = target2.get_hp()
+
+                    # Calculate 10% damage
+                    damage = int(original_hp * 0.6)
+
+                    if unit.team == 'player':
+                        damage = max(1, damage)
+                        final_hp = max(0, original_hp - damage)
+                    else:
+                        if original_hp > 1:
+                            damage = max(1, min(damage, original_hp - 1))
+                            final_hp = original_hp - damage
+                        else:
+                            damage = 0
+                            final_hp = original_hp
+
+                    if damage > 0:
+                        action.do(action.SetHP(target2, final_hp))
+
+                        # Lex Talionis-specific death trigger
+                        if final_hp == 0:
+                            action.do(action.Die(target2))
+
+class UpkeepDamageNonFatal(SkillComponent):
+    nid = 'upkeep_damage_nonfatal'
+    desc = "Unit takes damage at upkeep. Doesn't kill player units or bosses."
+    tag = SkillTags.STATUS
+
+    expose = ComponentType.Int
+    value = 5
+
+    def _playback_processing(self, playback, unit, hp_change):
+        # Playback
+        if hp_change < 0:
+            playback.append(pb.HitSound('Attack Hit ' + str(random.randint(1, 5))))
+            playback.append(pb.UnitTintAdd(unit, (255, 255, 255)))
+            playback.append(pb.DamageNumbers(unit, self.value))
+        elif hp_change > 0:
+            playback.append(pb.HitSound('MapHeal'))
+            if hp_change >= 30:
+                name = 'MapBigHealTrans'
+            elif hp_change >= 15:
+                name = 'MapMediumHealTrans'
+            else:
+                name = 'MapSmallHealTrans'
+            playback.append(pb.CastAnim(name))
+            playback.append(pb.DamageNumbers(unit, self.value))
+
+    def on_upkeep(self, actions, playback, unit):
+        # Determine whether the unit is protected from death
+        is_protected = unit.team == 'player' or 'Boss' in unit.tags
+
+        # Default HP change is full damage
+        hp_change = -self.value
+
+        # Apply non-lethal logic only to protected units
+        if is_protected:
+            max_damage = unit.get_hp() - 1
+            effective_damage = min(self.value, max_damage)
+            if effective_damage <= 0:
+                return  # No damage to apply
+            hp_change = -effective_damage
+
+        # Other units take full damage — can die from this
+
+        actions.append(action.ChangeHP(unit, hp_change))
+        actions.append(action.TriggerCharge(unit, self.skill))
+        self._playback_processing(playback, unit, hp_change)
+        skill_system.after_take_strike(actions, playback, unit, None, None, None, 'defense', (0, 0), Strike.HIT)

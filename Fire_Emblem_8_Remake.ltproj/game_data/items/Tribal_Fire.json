@@ -2,7 +2,7 @@
     {
         "nid": "Tribal_Fire",
         "name": "Tribal Fire",
-        "desc": "The pains of losing one's village manifested.\n<green>Skills:</>Vengeance\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Ross -8 DEF.",
+        "desc": "The pains of losing one's village manifested.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Ross -8 DEF, costs 5 HP to use per cast.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             22,
@@ -104,12 +104,6 @@
                 ]
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Vengeance_Skill_Item"
-                ]
-            ],
-            [
                 "eval_available",
                 "u(\"Ross\").wexp['Dark'] < 180"
             ],
@@ -118,6 +112,16 @@
                 [
                     "Fire",
                     "Dark"
+                ]
+            ],
+            [
+                "hp_cost",
+                5
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_E"
                 ]
             ]
         ]

@@ -11815,8 +11815,8 @@
             "SKL": 70,
             "SPD": 69,
             "LCK": 70,
-            "DEF": 6,
-            "RES": 4,
+            "DEF": 64,
+            "RES": 66,
             "CON": 50,
             "MOV": 30
         },
@@ -11971,8 +11971,8 @@
             "SKL": 70,
             "SPD": 69,
             "LCK": 70,
-            "DEF": 6,
-            "RES": 4,
+            "DEF": 64,
+            "RES": 66,
             "CON": 50,
             "MOV": 30
         },
@@ -12127,8 +12127,8 @@
             "SKL": 70,
             "SPD": 69,
             "LCK": 70,
-            "DEF": 6,
-            "RES": 4,
+            "DEF": 64,
+            "RES": 66,
             "CON": 50,
             "MOV": 30
         },
@@ -25979,7 +25979,7 @@
         "movement_group": "Light Cav",
         "promotes_from": "T1_Axe_Cav",
         "turns_into": [
-            "T3_Silver_Knight_Anima_Light",
+            "T3_Silver_Knight_Anima_Light_Seth",
             "T3_Holy_Guardian",
             "T3_Sacred_Rider"
         ],
@@ -27319,6 +27319,159 @@
             "Light": [
                 true,
                 60,
+                480
+            ],
+            "Anima": [
+                true,
+                60,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Paladin (F) SALVAGED Bow {VelvetKitsune, Sir_Dadou, RobertFPY}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Ephraim_T3_Lance_Lord",
+        "combat_anim_nid": "T3_Silver_Knight",
+        "fields": []
+    },
+    {
+        "nid": "T3_Silver_Knight_Anima_Light_Seth",
+        "name": "Silver Knight",
+        "desc": "Knights of the highest discipline. <icon>Horse</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Paladin",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 28,
+            "STR": 7,
+            "MAG": 3,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 13,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -39,
+            "MAG": -28,
+            "SKL": -39,
+            "SPD": -39,
+            "LCK": -14,
+            "DEF": -25,
+            "RES": -28,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 140,
+            "STR": 80,
+            "MAG": 120,
+            "SKL": 120,
+            "SPD": 120,
+            "LCK": 40,
+            "DEF": 65,
+            "RES": 90,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 96,
+            "MAG": 90,
+            "SKL": 97,
+            "SPD": 93,
+            "LCK": 100,
+            "DEF": 96,
+            "RES": 95,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Imbue"
+            ],
+            [
+                15,
+                "Quick_Strike"
+            ],
+            [
+                1,
+                "Cav_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                60,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
                 480
             ],
             "Anima": [
@@ -47938,7 +48091,7 @@
             "Axe": [
                 true,
                 300,
-                300
+                480
             ],
             "Bow": [
                 true,
@@ -47946,8 +48099,8 @@
                 480
             ],
             "Staff": [
-                true,
-                300,
+                false,
+                0,
                 480
             ],
             "Light": [
@@ -47961,8 +48114,8 @@
                 300
             ],
             "Dark": [
-                false,
-                0,
+                true,
+                300,
                 480
             ],
             "Default": [
@@ -54501,14 +54654,14 @@
         },
         "max_stats": {
             "HP": 880,
-            "STR": 80,
-            "MAG": 60,
-            "SKL": 70,
-            "SPD": 80,
-            "LCK": 80,
-            "DEF": 70,
-            "RES": 69,
-            "CON": 40,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 90,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 90,
+            "CON": 60,
             "MOV": 15
         },
         "learned_skills": [
@@ -67192,7 +67345,7 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 27,
+            "HP": 19,
             "STR": 6,
             "MAG": 1,
             "SKL": 2,
@@ -67204,19 +67357,19 @@
             "MOV": 7
         },
         "growths": {
-            "HP": 60,
-            "STR": 50,
-            "MAG": 5,
-            "SKL": 15,
-            "SPD": 35,
+            "HP": 40,
+            "STR": 30,
+            "MAG": 50,
+            "SKL": 40,
+            "SPD": 45,
             "LCK": 50,
-            "DEF": 60,
-            "RES": 15,
+            "DEF": 15,
+            "RES": 45,
             "CON": 0,
             "MOV": 0
         },
         "growth_bonus": {
-            "HP": 15,
+            "HP": 10,
             "STR": 10,
             "MAG": 15,
             "SKL": 10,
@@ -68054,7 +68207,7 @@
             ],
             [
                 1,
-                "Elemental_Ward"
+                "Imperial_Ward_Unbroken"
             ]
         ],
         "wexp_gain": {
@@ -73628,6 +73781,1561 @@
         ],
         "map_sprite_nid": "Marshall (U) Capeless Sword {Nuramon}-stand",
         "combat_anim_nid": "Bulwark_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Ancient_Legend",
+        "name": "Ancient Legend",
+        "desc": "An old swordmaster hermit that it dominates the secrets more darkest of the sword.",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Swordmaster_D",
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 21,
+            "STR": 5,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 9,
+            "LCK": 4,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 8,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -30,
+            "MAG": -45,
+            "SKL": -20,
+            "SPD": -20,
+            "LCK": -10,
+            "DEF": -15,
+            "RES": -15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 50,
+            "STR": 65,
+            "MAG": 40,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 75,
+            "DEF": 50,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 10,
+            "STR": 5,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 5,
+            "MOV": 1
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 98,
+            "MAG": 92,
+            "SKL": 95,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 92,
+            "RES": 90,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Myrmidon_Pair_Up_T3_hide"
+            ],
+            [
+                1,
+                "Crit_P20"
+            ],
+            [
+                5,
+                "Ancient_Tecnique"
+            ],
+            [
+                15,
+                "Dark_Legacy"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Swordmaster (M) Sword {IS}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "_Mercenary (M) Beta {IS}-stand-stand",
+        "combat_anim_nid": "Ancient_Legend",
+        "fields": []
+    },
+    {
+        "nid": "Armed_Herald",
+        "name": "Armed Herald",
+        "desc": "Heroes with powerful abilities, don't possess parallel when seizing edge weapons.",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Hero_D",
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 8,
+            "MAG": 3,
+            "SKL": 8,
+            "SPD": 8,
+            "LCK": 6,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 13,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -20,
+            "MAG": -34,
+            "SKL": -20,
+            "SPD": -20,
+            "LCK": -29,
+            "DEF": -30,
+            "RES": -30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 70,
+            "MAG": 30,
+            "SKL": 70,
+            "SPD": 80,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 20,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 4,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 2,
+            "MOV": 1
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 98,
+            "MAG": 80,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 92,
+            "RES": 92,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Mercenary_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Combat_Thirst"
+            ],
+            [
+                15,
+                "Death_Machine"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                true,
+                60,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Vanguard (M) Sword&Axe {flasuban}_1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "_Master of Arms (M) {Archerbias}-stand-stand",
+        "combat_anim_nid": "Armed_Herald",
+        "fields": []
+    },
+    {
+        "nid": "Hero_D",
+        "name": "Hero",
+        "desc": "An experienced fighter. Fights foes with blade and skill. <icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Mercenary_D",
+        "turns_into": [
+            "T3_Vanguard",
+            "T3_Sentinal_Hero",
+            "Armed_Herald"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 37,
+            "STR": 12,
+            "MAG": 2,
+            "SKL": 10,
+            "SPD": 9,
+            "LCK": 0,
+            "DEF": 8,
+            "RES": 3,
+            "CON": 11,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 20,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 20,
+            "STR": 10,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 15,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 3,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 65,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 66,
+            "LCK": 70,
+            "DEF": 65,
+            "RES": 64,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Triangle_Expert"
+            ],
+            [
+                15,
+                "Heroic_Stance_Art"
+            ],
+            [
+                1,
+                "Mercenary_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Triangle_Expert_WT_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                120,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                2,
+                60,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Vanguard",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Hero",
+        "combat_anim_nid": "Hero_V2",
+        "fields": []
+    },
+    {
+        "nid": "Myrmidon_D",
+        "name": "Myrmidon",
+        "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": "Squire_D",
+        "turns_into": [
+            "Assassin_Male",
+            "T2_Wolf_Knight",
+            "Swordmaster_D"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 9,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 2,
+            "CON": 8,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 15,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 5,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 5,
+            "DEF": 5,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 5
+        },
+        "promotion": {
+            "HP": 1,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 1,
+            "CON": 1,
+            "MOV": -98,
+            "RES": 1
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                5,
+                "Reckless_Swing_Art"
+            ],
+            [
+                15,
+                "Desperation"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Myrmidon",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Myrmidon",
+        "combat_anim_nid": "Myrmidon",
+        "fields": []
+    },
+    {
+        "nid": "Mystical_Blade",
+        "name": "Mystical Blade",
+        "desc": "A skilled user of blade with hand touch the space. <icon>Infantry</><icon>Steal</>",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Rogue_D",
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 2,
+            "MAG": 3,
+            "SKL": 15,
+            "SPD": 18,
+            "LCK": 8,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 8,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": -45,
+            "STR": -25,
+            "MAG": 0,
+            "SKL": -35,
+            "SPD": -35,
+            "LCK": -35,
+            "DEF": -15,
+            "RES": -15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 30,
+            "MAG": 15,
+            "SKL": 80,
+            "SPD": 80,
+            "LCK": 65,
+            "DEF": 45,
+            "RES": 45,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 3,
+            "MAG": 2,
+            "SKL": 8,
+            "SPD": 8,
+            "LCK": 8,
+            "DEF": 4,
+            "RES": 3,
+            "CON": 4,
+            "MOV": 1
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 80,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 92,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Crit_P20"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Sword_Ace"
+            ],
+            [
+                15,
+                "Space_Slash_Art"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Assassin",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "_Swordmaster (M) Izark {Yangfly Master}-stand-stand",
+        "combat_anim_nid": "Mystic_Blade",
+        "fields": []
+    },
+    {
+        "nid": "Rogue_D",
+        "name": "Rogue",
+        "desc": "A skilled thief that can open doors and chests with ease. <icon>Infantry</><icon>Steal</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Thief_D",
+        "turns_into": [
+            "T3_Trickster",
+            "T3_Dual_Blade_Rouge",
+            "Mystical_Blade"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 26,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 12,
+            "SPD": 14,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 4,
+            "CON": 8,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 25,
+            "STR": 15,
+            "MAG": 0,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 25,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 15,
+            "SKL": 10,
+            "SPD": 15,
+            "LCK": 15,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 1,
+            "MAG": 5,
+            "SKL": 1,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 1,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 64,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 65,
+            "LCK": 70,
+            "DEF": 60,
+            "RES": 60,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                5,
+                "Treasure_Hunter"
+            ],
+            [
+                15,
+                "Sight_P"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Treasure_Hunter_Buff_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Assassin",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Rogue",
+        "combat_anim_nid": "RogueV2",
+        "fields": []
+    },
+    {
+        "nid": "Squire_D",
+        "name": "Squire",
+        "desc": "A recruit with big dreams of power.<icon>Infantry</>",
+        "tier": 0,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Myrmidon_D",
+            "Thief_D",
+            "Mercenary_D"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 10,
+        "bases": {
+            "HP": 16,
+            "STR": 4,
+            "MAG": 0,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 6,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 10,
+            "STR": 20,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 50,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Paragon"
+            ],
+            [
+                1,
+                "Mercenary_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Mercenary",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Villager (M) v2 Sword {HyperGammaSpaces}-stand",
+        "combat_anim_nid": "Squire",
+        "fields": []
+    },
+    {
+        "nid": "Swordmaster_D",
+        "name": "Swordmaster",
+        "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Myrmidon_D",
+        "turns_into": [
+            "T3_Male_Dread_Fighter",
+            "T3_Joshua_Trueblade",
+            "Ancient_Legend"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 32,
+            "STR": 6,
+            "MAG": 4,
+            "SKL": 12,
+            "SPD": 12,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 10,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 64,
+            "MAG": 62,
+            "SKL": 69,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 62,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Swordmasters_Dance"
+            ],
+            [
+                15,
+                "Astra_Art"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Swordmaster",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Swordmaster",
+        "combat_anim_nid": "Swordmaster",
+        "fields": []
+    },
+    {
+        "nid": "Thief_D",
+        "name": "Thief",
+        "desc": "Expert in stealth and subterfuge. Possess weak attacks but many other skills. <icon>Infantry</><icon>Steal</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": "Squire_D",
+        "turns_into": [
+            "Assassin_Male",
+            "T2_Brigand_Rider",
+            "Rogue_D"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 1,
+            "SPD": 9,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 0,
+            "CON": 6,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 30,
+            "MAG": 5,
+            "SKL": 45,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 15,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 5,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 15,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 1,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -99
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                5,
+                "Within_Shadows"
+            ],
+            [
+                15,
+                "Pass"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Thief",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Thief",
+        "combat_anim_nid": "Thief_V3",
+        "fields": []
+    },
+    {
+        "nid": "Mercenary_D",
+        "name": "Mercenary",
+        "desc": "Professional soldiers for hire. Well-balanced, with superior abilities all around. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": "Squire_D",
+        "turns_into": [
+            "Ranger",
+            "Chief",
+            "Hero_D"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 8,
+            "SPD": 8,
+            "LCK": 0,
+            "DEF": 4,
+            "RES": 0,
+            "CON": 9,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 20,
+            "SKL": 40,
+            "SPD": 32,
+            "LCK": 30,
+            "DEF": 18,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 15,
+            "SPD": 10,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 3,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 3,
+            "MOV": -98
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Defiant"
+            ],
+            [
+                15,
+                "Bounty"
+            ],
+            [
+                1,
+                "Mercenary_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Mercenary",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Mercenary",
+        "combat_anim_nid": "Mercenary_V2",
         "fields": []
     }
 ]

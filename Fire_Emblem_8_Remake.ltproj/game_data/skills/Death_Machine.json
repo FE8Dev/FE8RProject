@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Death_Machine",
+        "name": "Death Machine",
+        "desc": "Unit has a LCK + SPD/2% chance to grant Galeforce when unit kills an enemy at Max HP.\n+2 to unit's STR, SKL, SPD and LCK whenever this unit kills an enemy at Max HP.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_hp() == target.get_max_hp()"
+            ],
+            [
+                "proc_rate",
+                "LCK_SPD_MID"
+            ],
+            [
+                "attack_pre_proc",
+                "Death_Machine_Proc"
+            ],
+            [
+                "drain_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                3
+            ],
+            [
+                "gain_skill_after_kill",
+                "Death_Machine_Buff"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

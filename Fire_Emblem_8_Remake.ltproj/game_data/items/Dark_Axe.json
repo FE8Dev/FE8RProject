@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Axe",
         "name": "Dark Axe",
-        "desc": "An axe infused with dark magic.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2), Breach (2)\n<pink>Misc:</>Magical, MAG + CON (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')))}</>).",
+        "desc": "An axe infused with dark magic.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2)\n<pink>Misc:</>Magical, MAG + CON (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             4,
@@ -105,6 +105,12 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

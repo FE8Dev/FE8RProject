@@ -2,7 +2,7 @@
     {
         "nid": "Helswath",
         "name": "Helswath",
-        "desc": "A legendary axe once wielded by a holy crusader.\n<orange>Element:</><icon>Water</>\n<red>Very effective:</><icon>Monster</><icon>Armor</>\n<green>Skills:</>Distant Counter.\n<violet>Inflicts:</>Breach (40).\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR') + (unit.get_stat('RES')))}</>), +20 DEF, +10 RES.",
+        "desc": "A legendary axe once wielded by a holy crusader.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Water</>\n<red>Very effective:</><icon>Monster</><icon>Armor</>\n<green>Skills:</>Distant Counter.\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR') + (unit.get_stat('RES')))}</>), +20 DEF, +10 RES.",
         "icon_nid": "New Holy Weapons 03-30-25",
         "icon_index": [
             7,
@@ -72,8 +72,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Breached_40",
-                    "Distant_Counter"
+                    "Distant_Counter",
+                    "Power_Chop_X"
                 ]
             ],
             [
@@ -111,6 +111,10 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
             ]
         ]
     }

@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Yamato",
+        "name": "Yamato",
+        "desc": "A katana imbued with the power of space.\n<green>Skills:</>Flash Slash <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Infantry</><icon>Monster</><icon>Dark</><icon>Armor</>\n<pink>Misc:</>Uses SPD.",
+        "icon_nid": "Davius Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                28
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "hit",
+                140
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry",
+                        "Armor",
+                        "Dark",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "prf_class",
+                [
+                    "Mystical_Blade"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Slash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ]
+        ]
+    }
+]

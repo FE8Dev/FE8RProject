@@ -2,7 +2,7 @@
     {
         "nid": "Stone_Axe",
         "name": "Stone Axe",
-        "desc": "An axe made of stone.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3), Breach (2)\n<pink>Misc:</>DEF + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
+        "desc": "An axe made of stone.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>DEF + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             35,
@@ -84,6 +84,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

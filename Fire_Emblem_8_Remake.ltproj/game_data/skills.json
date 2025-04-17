@@ -4308,7 +4308,7 @@
     {
         "nid": "Imperial_Ward",
         "name": "Imperial Ward",
-        "desc": "Reduces damage by 75% and increases Avoid by 75\nwhen attacked from more than 4 tiles away.",
+        "desc": "Reduces all damage taken by 25%, unless hit with an elemental combo, then unit takes 50% more damage for 1 turn.\nCombos (<icon>Wind</> after <icon>Fire</>, <icon>Thunder</> after <icon>Water</> <icon>Light</> after <icon>Dark</>, <red>Heavy</> after <icon>Ice</>)\nReduces all damage taken by 75% and increases Avoid by 75 when attacked from more than 4 tiles away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -4326,6 +4326,74 @@
             [
                 "dynamic_avoid",
                 "75"
+            ]
+        ]
+    },
+    {
+        "nid": "Imperial_Ward_Unbroken",
+        "name": "Imperial Ward",
+        "desc": "Reduces all damage taken by 25%, unless hit with an elemental combo, then unit takes 50% more damage for 1 turn.\nCombos (<icon>Wind</> after <icon>Fire</>, <icon>Thunder</> after <icon>Water</> <icon>Light</> after <icon>Dark</>, <red>Heavy</> after <icon>Ice</>)\nReduces all damage taken by 75% and increases Avoid by 75 when attacked from more than 4 tiles away.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            22
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not has_skill(unit, 'Broken')"
+            ],
+            [
+                "resist_multiplier",
+                0.75
+            ]
+        ]
+    },
+    {
+        "nid": "Imperial_Ward_Broke_Giver",
+        "name": "Imperial Ward",
+        "desc": "Reduces damage taken by 75% unless damage is an elemental combo.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            22
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "(has_skill(unit, 'Frozen') and ('Blade' in unit2.tags or 'Warhammer' in unit2.tags or 'Greatlance' in unit2.tags)) or (has_skill(unit, 'Seared') and 'Wind' in target.get_weapon().tags) or (has_skill(unit, 'Shadowblight') and 'Light' in target.get_weapon().tags) or (has_skill(unit, 'Drench_Debuff') and 'Thunder' in target.get_weapon().tags)"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Broken"
+            ]
+        ]
+    },
+    {
+        "nid": "Broken",
+        "name": "Broken",
+        "desc": "Increase damage taken by 50% for 1 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            38
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                1.5
+            ],
+            [
+                "time",
+                1
             ]
         ]
     },
@@ -4758,10 +4826,10 @@
         "nid": "Twin_Strike",
         "name": "Twin Strike",
         "desc": "Gives unit a bonus attack when he has 5+ AS advantage over enemy's AS and wielding a lance.",
-        "icon_nid": "Swords Sheet",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            1
+            9,
+            28
         ],
         "components": [
             [
@@ -5915,7 +5983,7 @@
     {
         "nid": "Dark_Seeker",
         "name": "Dark Seeker",
-        "desc": "+5 Crit and damage increases by HP/7 when using Dark Magic.",
+        "desc": "+5 Crit and damage increases by unit's Max HP/7 when using Dark Magic.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -7312,10 +7380,6 @@
                 "Bleeding"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
-            ],
-            [
                 "dynamic_attacks",
                 "1"
             ]
@@ -8487,10 +8551,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ]
         ]
     },
@@ -8515,10 +8575,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ]
         ]
     },
@@ -9136,7 +9192,7 @@
     },
     {
         "nid": "Torchshot_Art_Effect",
-        "name": "Litten up",
+        "name": "Lighten up",
         "desc": "-50 Avoid for 3 turns.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -9549,18 +9605,11 @@
                 "Venomous_Effect"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
-            ],
-            [
                 "give_statuses_on_take_hit",
                 [
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss"
+                    "Venomous_Effect"
                 ]
             ]
         ]
@@ -9662,10 +9711,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ]
         ]
     },
@@ -12879,10 +12924,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ],
             [
                 "dynamic_multiattacks",
@@ -16645,10 +16686,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ]
         ]
     },
@@ -16710,10 +16747,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ]
         ]
     },
@@ -22160,10 +22193,6 @@
                 "Bleeding"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
-            ],
-            [
                 "lifelink",
                 0.25
             ]
@@ -22451,7 +22480,7 @@
     },
     {
         "nid": "Gaia_Absorbtion_Heal",
-        "name": "Regenerative Skin",
+        "name": "Gaia Absorbtion",
         "desc": "Unit gains 25% HP Absorbtion on damage dealt.\nHeal 40 HP after combat if an enemy misses you.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -25305,7 +25334,7 @@
                 null
             ],
             [
-                "end_time",
+                "time",
                 1
             ]
         ]
@@ -25866,7 +25895,7 @@
         "components": [
             [
                 "savage_blow_fates",
-                0
+                3
             ],
             [
                 "lost_on_end_combat2",
@@ -29101,10 +29130,6 @@
                 "Bleeding"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
-            ],
-            [
                 "lost_on_end_chapter",
                 null
             ]
@@ -29131,10 +29156,6 @@
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
             ],
             [
                 "lost_on_end_chapter",
@@ -29223,7 +29244,51 @@
                 [
                     [
                         "SPD",
-                        6
+                        3.0
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "CON",
+                        0.6
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Thief_Bag_P",
+        "name": "Thief Bag+",
+        "desc": "For the Thief Bag item.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            33,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10.0
                     ]
                 ]
             ],
@@ -30327,10 +30392,7 @@
                 [
                     "Bleeding",
                     "Bleeding",
-                    "Bleeding",
-                    "Bleeding_Boss",
-                    "Bleeding_Boss",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -31255,6 +31317,231 @@
             [
                 "lost_on_endstep",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_E",
+        "name": "Power Chop (E)",
+        "desc": "Attacks add 10% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.1"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_C",
+        "name": "Power Chop (C)",
+        "desc": "Attacks add 20% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.2"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_A",
+        "name": "Power Chop (A)",
+        "desc": "Attacks add 30% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 8.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.3"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_SS",
+        "name": "Power Chop (SS)",
+        "desc": "Attacks add 40% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 15.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.4"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_X",
+        "name": "Power Chop (X)",
+        "desc": "Attacks add 50% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 25.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.5"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Ancient_Pact_E",
+        "name": "Ancient Pact (E)",
+        "desc": "Add unit's missing HP/5 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -5)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Ancient_Pact_C",
+        "name": "Ancient Pact (C)",
+        "desc": "Add unit's missing HP/4 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -4)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Ancient_Pact_A",
+        "name": "Ancient Pact (A)",
+        "desc": "Add unit's missing HP/3 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 8.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -3)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Ancient_Pact_SS",
+        "name": "Ancient Pact (SS)",
+        "desc": "Add unit's missing HP/2 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 15.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -2)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Ancient_Pact_X",
+        "name": "Ancient Pact (X)",
+        "desc": "Add unit's missing HP to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 25.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
             ]
         ]
     },
@@ -32370,22 +32657,6 @@
         ]
     },
     {
-        "nid": "Elemental_Ward",
-        "name": "Elemental Ward",
-        "desc": "Reduces damage taken by 75% unless damage is an elemental combo.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            41
-        ],
-        "components": [
-            [
-                "dynamic_resist_multiplier",
-                "1 if (has_skill(unit, 'Frozen') and ('Blade' in unit2.tags or 'Warhammer' in unit2.tags or 'Greatlance' in unit2.tags)) or (has_skill(unit, 'Seared') and 'Wind' in target.get_weapon().tags) or (has_skill(unit, 'Shadowblight') and 'Light' in target.get_weapon().tags) or (has_skill(unit, 'Drench_Debuff') and 'Thunder' in target.get_weapon().tags) else 0.25"
-            ]
-        ]
-    },
-    {
         "nid": "Poisoned",
         "name": "Poisoned",
         "desc": "Unit takes 5 damage at the beginning of each turn.",
@@ -32747,7 +33018,7 @@
     {
         "nid": "Venomous_Effect",
         "name": "Venom",
-        "desc": "-1 to most stats and unit takes 5 points of damage each turn for each stack for 5 turns. No effect on bosses below 25% Max HP.",
+        "desc": "-1 to most stats and unit takes 10 points of damage each turn for each stack for 5 turns.\nDamage does not kill Player units or Bosses.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -32755,24 +33026,12 @@
         ],
         "components": [
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "'Boss' not in unit.tags"
-            ],
-            [
                 "negative",
                 null
             ],
             [
                 "stack",
                 999
-            ],
-            [
-                "upkeep_damage",
-                5
             ],
             [
                 "time",
@@ -32789,10 +33048,6 @@
                     85,
                     255
                 ]
-            ],
-            [
-                "fatal_damage",
-                null
             ],
             [
                 "upkeep_sound",
@@ -32838,6 +33093,10 @@
                         -1
                     ]
                 ]
+            ],
+            [
+                "upkeep_damage_nonfatal",
+                10
             ]
         ]
     },
@@ -33768,21 +34027,13 @@
     {
         "nid": "Bleeding",
         "name": "Bleeding",
-        "desc": "Reduce SPD by 1 and an additonal 10% of afflicted unit's SPD. Afflicted unit takes 7% Max HP Damage at the beginning of each turn for each stack. No effect on bosses below 25% Max HP.\nMax 5 stacks.\nLasts 2 turns.",
+        "desc": "Reduce SPD by 1 and an additonal 10% of afflicted unit's SPD. Afflicted unit takes 7% Max HP Damage at the beginning of each turn for each stack. \nDamage does not kill Player units or Bosses. Max 5 stacks. Lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
             37
         ],
         "components": [
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "'Boss' not in unit.tags"
-            ],
             [
                 "negative",
                 null
@@ -33816,14 +34067,6 @@
                 2
             ],
             [
-                "eval_upkeep_damage",
-                "unit.get_stat('HP') * 0.07"
-            ],
-            [
-                "fatal_damage",
-                null
-            ],
-            [
                 "stat_multiplier",
                 [
                     [
@@ -33840,6 +34083,10 @@
                         -1
                     ]
                 ]
+            ],
+            [
+                "eval_upkeep_damage_non_fatal",
+                "unit.get_max_hp() * 0.07"
             ]
         ]
     },
@@ -33896,10 +34143,6 @@
             [
                 "time",
                 2
-            ],
-            [
-                "eval_upkeep_damage",
-                "unit.get_stat('HP') * 0.07"
             ],
             [
                 "stat_multiplier",
@@ -42382,6 +42625,365 @@
         ]
     },
     {
+        "nid": "Ancient_Tecnique",
+        "name": "Ancient Tecnique",
+        "desc": "+1 bonus attack when unit has Weapon Triangle Advantage.\nDouble Weapon Triangle effects when initiating attacks.\nUnit is immune to Negative status. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_attack_speed",
+                "10"
+            ],
+            [
+                "copysafe",
+                [
+                    "Triangle_Expert",
+                    "Triangle_Expert_WT_hide"
+                ]
+            ],
+            [
+                "immune_status",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Combat_Thirst",
+        "name": "Combat Thirst",
+        "desc": "+100 Hit and 1.5x Damage, but -50 of Avoid, -70% DEF and RES.\nUnit gains Vantage+ for a turn when unit kill an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Vantage_Plus_Item_Temp"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.3
+                    ],
+                    [
+                        "RES",
+                        0.3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Legacy",
+        "name": "Dark Legacy",
+        "desc": "Attacks inflict Shadowblight Plus.\nx3 Damage and inflict Fear to adjacent enemies.\nDecrease Unit's LCK, SPD, and HP by 40%",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Shadow_Blight_P"
+            ],
+            [
+                "damage_multiplier",
+                3.0
+            ],
+            [
+                "aura",
+                "Fear_Debuff"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.6
+                    ],
+                    [
+                        "SPD",
+                        0.6
+                    ],
+                    [
+                        "LCK",
+                        0.6
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Machine",
+        "name": "Death Machine",
+        "desc": "Unit has a LCK + SPD/2% chance to grant Galeforce when unit kills an enemy at Max HP.\n+2 to unit's STR, SKL, SPD and LCK whenever this unit kills an enemy at Max HP.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_hp() == target.get_max_hp()"
+            ],
+            [
+                "proc_rate",
+                "LCK_SPD_MID"
+            ],
+            [
+                "attack_pre_proc",
+                "Death_Machine_Proc"
+            ],
+            [
+                "drain_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                3
+            ],
+            [
+                "gain_skill_after_kill",
+                "Death_Machine_Buff"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Machine_Proc",
+        "name": "Death Machine",
+        "desc": "Grants galeforce Killing enemies at Max HP,up to 3 times for turn, with a probability of LCK+SPD/2 of being activated.Increases in 2 the STR,SKL,SPD and LCK when killing a enemie unit.Max 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Machine_Buff",
+        "name": "Death Machine",
+        "desc": "+2 to unit's STR, SKL, SPD and LCK whenever this unit kills an enemy at Max HP.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "SPD",
+                        2
+                    ],
+                    [
+                        "LCK",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Space_Slash_Art",
+        "name": "Space Slash",
+        "desc": "<red>CA:</>+10 range attack that pierces enemy's DEF.\nCannot miss. <green>CD:6 Turns</>\n ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                6
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "combat_art",
+                "Space_Slash"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "cannot_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Space_Slash",
+        "name": "Space Slash",
+        "desc": "A cut that the attack range +10,Pierces the enemy DEF. Never Miss.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "modify_maximum_range",
+                10
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF')"
+            ],
+            [
+                "dynamic_accuracy",
+                "999"
+            ],
+            [
+                "cannot_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sword_Ace",
+        "name": "Sword Ace",
+        "desc": "The user can counterattack to any range, and +5 to unit's SPD, MAG and STR whenever this unit Crits.\nMax 10 stacks. \nLast 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_crit",
+                "Sword_Ace_Buff"
+            ],
+            [
+                "distant_counter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sword_Ace_Buff",
+        "name": "Sword Ace",
+        "desc": "+5 to unit's SPD, MAG and STR whenever this unit Crits.\nMax 10 stacks. \nLast 2 turns.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stack",
+                10
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
         "nid": "Eloquent_Form_T1",
         "name": "Eloquent Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
@@ -42444,7 +43046,7 @@
     {
         "nid": "Dedication_T1",
         "name": "Dedication",
-        "desc": "Gain a x2 Crit boost to Ephraim's second attack if adjacent to an ally.",
+        "desc": "Gain a x2 Crit boost to unit's second attack if adjacent to an ally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -45049,10 +45651,6 @@
                 "Venomous_Effect"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
-            ],
-            [
                 "feat",
                 null
             ],
@@ -45606,10 +46204,6 @@
                 "Venomous_Effect"
             ],
             [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
-            ],
-            [
                 "feat",
                 null
             ],
@@ -45692,10 +46286,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ],
             [
                 "feat",
@@ -47042,7 +47632,7 @@
     },
     {
         "nid": "Gaia_Absorbtion_T2",
-        "name": "Gaia_Absorbtion",
+        "name": "Gaia Absorbtion",
         "desc": "Unit gains 30% HP Absorbtion for a turn when unit strikes an enemy.\nHeal 40 HP after combat if an enemy misses you.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -48299,10 +48889,6 @@
             [
                 "give_status_after_hit",
                 "Venomous_Effect"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Venomous_Effect_Boss"
             ],
             [
                 "dynamic_multiattacks",

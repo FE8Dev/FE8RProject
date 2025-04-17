@@ -2,7 +2,7 @@
     {
         "nid": "Mephiles",
         "name": "Mephiles",
-        "desc": "The vile breath of a zombie snake. <green>CD:2</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Venom</>x4<icon>Bleed</>x2, Curse (8)\n<pink>Misc:</>(Multi-target:4), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), cannot DS.",
+        "desc": "The vile breath of a zombie snake. <green>CD:2</>\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>x4<icon>Bleed</>x2\n<pink>Misc:</>(Multi-target:4), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), cannot DS.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             1,
@@ -90,14 +90,8 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Shadow_Blight",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
                     "Bleeding",
-                    "Bleeding",
-                    "Bleeding_Boss",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -124,6 +118,12 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_SS"
                 ]
             ]
         ]

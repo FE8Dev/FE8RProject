@@ -2,7 +2,7 @@
     {
         "nid": "Axe_of_Fog",
         "name": "Axe of Fog",
-        "desc": "An axe that covers the wielder in fog. <green>CD:1</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (15)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>), +50 Avoid/Dodge.",
+        "desc": "An axe that covers the wielder in fog. <green>CD:1</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>), +50 Avoid/Dodge.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             1,
@@ -98,6 +98,12 @@
                 "item_tags",
                 [
                     "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
                 ]
             ]
         ]

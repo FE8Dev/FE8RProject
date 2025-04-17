@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Power_Chop_SS",
+        "name": "Power Chop (SS)",
+        "desc": "Attacks add 40% of enemy's current HP to attacks.\nAttacks also reduce enemy's DEF by 15.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            23
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.4"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

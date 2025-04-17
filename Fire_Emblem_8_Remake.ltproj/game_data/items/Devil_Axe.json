@@ -2,7 +2,7 @@
     {
         "nid": "Devil Axe",
         "name": "Devil Axe",
-        "desc": "An axe used by devils.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5), Breach (5)\n<pink>Misc:</>Magical, MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "An axe used by devils.\n<green>Skills:</>Power Chop (B)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)\n<pink>Misc:</>Magical, MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Axe",
         "icon_index": [
             0,
@@ -93,6 +93,12 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
                 ]
             ]
         ]

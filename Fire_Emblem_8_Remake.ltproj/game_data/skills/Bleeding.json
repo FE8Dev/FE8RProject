@@ -2,21 +2,13 @@
     {
         "nid": "Bleeding",
         "name": "Bleeding",
-        "desc": "Reduce SPD by 1 and an additonal 10% of afflicted unit's SPD. Afflicted unit takes 7% Max HP Damage at the beginning of each turn for each stack. No effect on bosses below 25% Max HP.\nMax 5 stacks.\nLasts 2 turns.",
+        "desc": "Reduce SPD by 1 and an additonal 10% of afflicted unit's SPD. Afflicted unit takes 7% Max HP Damage at the beginning of each turn for each stack. \nDamage does not kill Player units or Bosses. Max 5 stacks. Lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
             37
         ],
         "components": [
-            [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "'Boss' not in unit.tags"
-            ],
             [
                 "negative",
                 null
@@ -50,14 +42,6 @@
                 2
             ],
             [
-                "eval_upkeep_damage",
-                "unit.get_stat('HP') * 0.07"
-            ],
-            [
-                "fatal_damage",
-                null
-            ],
-            [
                 "stat_multiplier",
                 [
                     [
@@ -74,6 +58,10 @@
                         -1
                     ]
                 ]
+            ],
+            [
+                "eval_upkeep_damage_non_fatal",
+                "unit.get_max_hp() * 0.07"
             ]
         ]
     }

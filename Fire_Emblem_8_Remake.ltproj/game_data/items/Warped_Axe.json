@@ -2,7 +2,7 @@
     {
         "nid": "Warped_Axe",
         "name": "Warped Axe",
-        "desc": "A twisted throwing axe.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>x2, Breach (2)\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>).",
+        "desc": "A twisted throwing axe.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>x2\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             6,
@@ -88,8 +88,6 @@
                 [
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
                     "Rock_Punctures"
                 ]
             ],
@@ -97,6 +95,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

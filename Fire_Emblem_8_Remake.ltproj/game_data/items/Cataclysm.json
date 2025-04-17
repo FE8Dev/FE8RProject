@@ -2,7 +2,7 @@
     {
         "nid": "Cataclysm",
         "name": "Cataclysm",
-        "desc": "A divine axe imbued with the destructive power of the earth.\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Monster</><icon>Armor</><icon>Horse</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3), Breach (25)\n<pink>Misc:</>DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>), DEF+20, CON+10.",
+        "desc": "A divine axe imbued with the destructive power of the earth.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Monster</><icon>Armor</><icon>Horse</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>), DEF+20, CON+10.",
         "icon_nid": "Consumables",
         "icon_index": [
             9,
@@ -111,6 +111,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_X"
                 ]
             ]
         ]

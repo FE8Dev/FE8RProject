@@ -2,7 +2,7 @@
     {
         "nid": "Abyss_Axe_Shop",
         "name": "Abyss Axe",
-        "desc": "An axe found from the darkest abyss.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15), Breach (15)\n<pink>Misc:</>Magical, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "An axe found from the darkest abyss.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>Magical, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,
@@ -85,6 +85,12 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
                 ]
             ]
         ]

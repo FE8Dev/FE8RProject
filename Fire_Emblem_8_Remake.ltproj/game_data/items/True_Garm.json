@@ -2,7 +2,7 @@
     {
         "nid": "True_Garm",
         "name": "True Garm",
-        "desc": "The true form of the legendary axe of Grado.\n<orange>Element:</><icon>Dark</><icon>Earth</><icon>Water</> <red>Very effective:</><icon>Monster</><icon>Infantry</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Rock</><icon>Drenched</>(AOE:3), Curse (25), Breach (25)\n<pink>Misc:</>DEF + SPD + SKL (<red>{e:(unit.get_stat('DEF') + unit.get_stat('SKL') + unit.get_stat('SPD')))}</>), +20 SPD, +20 SKL.",
+        "desc": "The true form of the legendary axe of Grado.\n<green>Skills:</>Power Chop (X) <orange>Element:</><icon>Dark</><icon>Earth</><icon>Water</> <red>Very effective:</><icon>Monster</><icon>Infantry</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Rock</><icon>Drenched</>(AOE:3), Curse (25) <pink>Misc:</>DEF + SPD + SKL (<red>{e:(unit.get_stat('DEF') + unit.get_stat('SKL') + unit.get_stat('SPD')))}</>), +20 SPD, +20 SKL.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             3,
@@ -120,6 +120,12 @@
                 "prf_unit",
                 [
                     "Duessel"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_X"
                 ]
             ]
         ]

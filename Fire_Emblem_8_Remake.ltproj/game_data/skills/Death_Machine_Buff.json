@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Death_Machine_Buff",
+        "name": "Death Machine",
+        "desc": "+2 to unit's STR, SKL, SPD and LCK whenever this unit kills an enemy at Max HP.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "SPD",
+                        2
+                    ],
+                    [
+                        "LCK",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

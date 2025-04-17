@@ -2,7 +2,7 @@
     {
         "nid": "Swift_Axe",
         "name": "Swift Axe",
-        "desc": "A Lightweight axe made for Joshua.\n<violet>Inflicts:</><icon>Bleed</>x2, Breach (2)\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A Lightweight axe made for Joshua.\n<green>Skills:</>Power Chop (E)\n<violet>Inflicts:</><icon>Bleed</>x2\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             6,
@@ -83,9 +83,13 @@
                 "statuses_on_hit",
                 [
                     "Bleeding",
-                    "Bleeding",
-                    "Bleeding_Boss",
-                    "Bleeding_Boss"
+                    "Bleeding"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

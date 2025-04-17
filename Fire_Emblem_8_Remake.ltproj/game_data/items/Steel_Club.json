@@ -2,7 +2,7 @@
     {
         "nid": "Steel_Club",
         "name": "Steel Club",
-        "desc": "A reinforced club that's as blunt as Marisa.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (5)\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A reinforced club that's as blunt as Marisa.\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2)\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             3,
@@ -87,6 +87,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
                 ]
             ]
         ]

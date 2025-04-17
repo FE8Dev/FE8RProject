@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "Combat_Thirst",
+        "name": "Combat Thirst",
+        "desc": "+100 Hit and 1.5x Damage, but -50 of Avoid, -70% DEF and RES.\nUnit gains Vantage+ for a turn when unit kill an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Vantage_Plus_Item_Temp"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.3
+                    ],
+                    [
+                        "RES",
+                        0.3
+                    ]
+                ]
+            ]
+        ]
+    }
+]

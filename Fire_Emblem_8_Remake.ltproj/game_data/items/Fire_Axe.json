@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Axe",
         "name": "Fire Axe",
-        "desc": "A axe imbued with a curse of fire.\n<green>Skills:</>Risky Desperation <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Breach (2) <red>effective:</><icon>Horse</>\n<pink>Misc:</>-15 HP, -5 DEF, STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
+        "desc": "A axe imbued with a curse of fire.\n<green>Skills:</>Risky Desperation, Power Chop (E) <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>effective:</><icon>Horse</>\n<pink>Misc:</>-15 HP, -5 DEF, STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             3,
@@ -109,6 +109,12 @@
                 "item_tags",
                 [
                     "Fire"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Serpent_Axe",
         "name": "Serpent Axe",
-        "desc": "A throwable axe that looks like a serpent.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>x3, Breach (5)\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A throwable axe that looks like a serpent.\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>x3\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -90,9 +90,6 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
                     "Rock_Punctures"
                 ]
             ],
@@ -100,6 +97,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
                 ]
             ]
         ]

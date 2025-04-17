@@ -2,7 +2,7 @@
     {
         "nid": "Wing_Axe",
         "name": "Wing Axe",
-        "desc": "An axe that specializes in clipping wings with wind. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</>Breach (2)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>), +30 Avoid/Dodge.",
+        "desc": "An axe that specializes in clipping wings with wind. <green>CD:2</>\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>), +30 Avoid/Dodge.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -89,7 +89,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Fog_Sword_Effect_Weak"
+                    "Fog_Sword_Effect_Weak",
+                    "Power_Chop_E"
                 ]
             ],
             [

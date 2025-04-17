@@ -2,7 +2,7 @@
     {
         "nid": "Iron_Club",
         "name": "Iron Club",
-        "desc": "A club commonly used in another land.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (2)\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A club commonly used in another land.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2)\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             2,
@@ -87,6 +87,12 @@
                 "item_tags",
                 [
                     "Earth"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
                 ]
             ]
         ]

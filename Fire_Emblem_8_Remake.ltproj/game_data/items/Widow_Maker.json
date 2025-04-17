@@ -2,7 +2,7 @@
     {
         "nid": "Widow_Maker",
         "name": "Widow Maker",
-        "desc": "Many women have become widows because of this weapon.\n<orange>Element:</><icon>Earth</><icon>Water</>\n<violet>Inflicts:</><icon>Rock</><icon>Drenched</>(AOE:3), Breach (15)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
+        "desc": "Many women have become widows because of this weapon.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</><icon>Water</>\n<violet>Inflicts:</><icon>Rock</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             2,
@@ -107,6 +107,12 @@
                 [
                     "Earth",
                     "Water"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
                 ]
             ]
         ]

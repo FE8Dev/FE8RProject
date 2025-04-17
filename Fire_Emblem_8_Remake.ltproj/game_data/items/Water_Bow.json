@@ -2,7 +2,7 @@
     {
         "nid": "Water_Bow",
         "name": "Water Bow",
-        "desc": "A bow infused with water magic.\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>), Brave.",
+        "desc": "A bow infused with water magic.\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             4,
@@ -105,10 +105,6 @@
             [
                 "alternate_damage_formula",
                 "SKL_MAG_MID"
-            ],
-            [
-                "brave",
-                null
             ],
             [
                 "item_tags",
