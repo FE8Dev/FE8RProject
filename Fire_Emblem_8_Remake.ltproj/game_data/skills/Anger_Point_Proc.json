@@ -1,14 +1,18 @@
 [
     {
-        "nid": "Vengeance_Item_Proc",
-        "name": "Vengeance",
-        "desc": "<red>CA:</>+10 Hit and +4 Damage.\nAlso add missing HP to attack. <green>CD:3 Turns</>",
+        "nid": "Anger_Point_Proc",
+        "name": "Anger Point",
+        "desc": "<red>CA:</>+25 Crit and add missing HP as Bonus Crit damage. <green>CD:3 Turns</>",
         "icon_nid": "Skills",
         "icon_index": [
             8,
             7
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "combat_art",
                 "Anger_Point_Skill"

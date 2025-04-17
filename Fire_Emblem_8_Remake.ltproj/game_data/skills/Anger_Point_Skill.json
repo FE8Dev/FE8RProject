@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Vengeance_Skill",
-        "name": "Vengeance",
-        "desc": "+30 Hit and +5 Damage.\nAlso add missing HP to attack.",
+        "nid": "Anger_Point_Skill",
+        "name": "Anger Point",
+        "desc": "+25 Crit and add missing HP to Bonus Crit damage.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -18,12 +18,12 @@
                 null
             ],
             [
-                "dynamic_damage",
+                "eval_crit_additional",
                 "((unit.get_hp() - unit.get_max_hp()) // -1) + 5"
             ],
             [
-                "dynamic_accuracy",
-                "30"
+                "dynamic_crit_accuracy",
+                "25"
             ],
             [
                 "lost_on_end_combat2",

@@ -2,7 +2,7 @@
     {
         "nid": "Soul_Amp",
         "name": "Soul Amp",
-        "desc": "Gain temporary +20 HP for each kill with Dark/Anima magic until end of chapter.\n+8 damage when using Dark/Anima magic.\nMax 5 stacks.",
+        "desc": "Gain temporary +20 HP for each kill with Dark/Anima magic until end of chapter.\n+8 damage when using Dark/Anima magic, but unit loses 10% Max HP each combat.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -24,6 +24,10 @@
             [
                 "dynamic_damage",
                 "8"
+            ],
+            [
+                "recoil_percent",
+                0.1
             ]
         ]
     }
