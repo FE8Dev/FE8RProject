@@ -2,7 +2,7 @@
     {
         "nid": "Killer_Dagger",
         "name": "Killer Dagger",
-        "desc": "A deadly dagger.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD, +20 Crit damage requires Steal skill.",
+        "desc": "A dagger made to start conflict. <green>CD: 1</>\n<green>Skills:</>Quick Knife, Aggressor\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD, +10 Crit damage requires Steal skill.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             6,
@@ -31,7 +31,7 @@
             ],
             [
                 "damage",
-                5
+                1
             ],
             [
                 "hit",
@@ -39,7 +39,7 @@
             ],
             [
                 "crit",
-                30
+                15
             ],
             [
                 "weight",
@@ -59,11 +59,15 @@
             ],
             [
                 "cooldown",
-                3
+                1
             ],
             [
-                "status_on_equip",
-                "Quick_Knife"
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_10",
+                    "Quick_Knife",
+                    "Aggressor"
+                ]
             ],
             [
                 "battle_cast_anim",
@@ -88,12 +92,6 @@
                 "prf_tags",
                 [
                     "Thief"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Crit_Damage_Bonus_20"
                 ]
             ]
         ]

@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Aggressor",
+        "name": "Aggressor",
+        "desc": "Attacks always crit against enemies at 100% HP",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            51
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_hp() >= target.get_max_hp()"
+            ],
+            [
+                "crit",
+                420
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]
