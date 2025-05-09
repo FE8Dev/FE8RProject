@@ -32607,6 +32607,55 @@
         ]
     },
     {
+        "nid": "Aggressor",
+        "name": "Aggressor",
+        "desc": "Attacks always crit against enemies at 100% HP",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            51
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_hp() >= target.get_max_hp()"
+            ],
+            [
+                "crit",
+                420
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Ghostly_Alliance",
+        "name": "Ghostly Alliance",
+        "desc": "This unit and paired up units gain an additional attack (2 additional attacks if unit doubles).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            50
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "pairup_bonus",
+                "Ghostly_Alliance"
+            ]
+        ]
+    },
+    {
         "nid": "Poisoned",
         "name": "Poisoned",
         "desc": "Unit takes 5 damage at the beginning of each turn.",
