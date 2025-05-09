@@ -1,12 +1,12 @@
 [
     {
-        "nid": "Killer_Dagger",
-        "name": "Killer Dagger",
-        "desc": "A dagger made to start conflict. <green>CD: 1</>\n<green>Skills:</>Quick Knife, Aggressor\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD, +10 Crit damage requires Steal skill.",
-        "icon_nid": "Swords Sheet",
+        "nid": "Ghostly_Dagger",
+        "name": "Ghostly_Dagger",
+        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Magical, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            6,
-            3
+            1,
+            2
         ],
         "components": [
             [
@@ -15,7 +15,7 @@
             ],
             [
                 "value",
-                1000
+                6000
             ],
             [
                 "target_enemy",
@@ -31,11 +31,11 @@
             ],
             [
                 "damage",
-                1
+                10
             ],
             [
                 "hit",
-                85
+                115
             ],
             [
                 "crit",
@@ -43,7 +43,7 @@
             ],
             [
                 "weight",
-                8
+                7
             ],
             [
                 "level_exp",
@@ -55,29 +55,16 @@
             ],
             [
                 "weapon_rank",
-                "C"
-            ],
-            [
-                "cooldown",
-                1
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Crit_Damage_Bonus_10",
-                    "Quick_Knife",
-                    "Aggressor"
-                ]
+                "X"
             ],
             [
                 "battle_cast_anim",
-                "Arrow"
+                "Crimson Eye"
             ],
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -85,13 +72,30 @@
                 null
             ],
             [
+                "magic",
+                null
+            ],
+            [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "MAG_SPD_STRONG"
             ],
             [
                 "prf_tags",
                 [
                     "Thief"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40",
+                    "Ghostly_Alliance"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
                 ]
             ]
         ]
