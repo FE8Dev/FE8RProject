@@ -1,8 +1,8 @@
 [
     {
         "nid": "Pair_Up_Affinity_Generic_Effect",
-        "name": "Affinity Strike (Random)",
-        "desc": "50% chance to gain a bonus attack, and inflicts a random Affinity Support debuff after combat. (Debuff Lunatic Mode only)",
+        "name": "Affinity Strike (Enemy)",
+        "desc": "Paired up enemies deal 50% more damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -10,24 +10,8 @@
         ],
         "components": [
             [
-                "hidden_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "unit.team == 'enemy' or unit.team == 'enemy2'"
-            ],
-            [
-                "attack_pre_proc",
-                "Pair_Up_Affinity_Generic_Proc"
-            ],
-            [
-                "defense_pre_proc",
-                "Pair_Up_Affinity_Generic_Proc"
-            ],
-            [
-                "proc_rate",
-                "Affinity_Strke_Enemy"
+                "damage_multiplier",
+                1.5
             ]
         ]
     }

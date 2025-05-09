@@ -1,0 +1,87 @@
+[
+    {
+        "nid": "Nest_Bird",
+        "name": "Nest Bird",
+        "desc": "A sharpened woodcutter\u2019s axe given purpose for war.\n<green>Skills:</>Power Chop (C), Speed Swing\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>).",
+        "icon_nid": "Cacura Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Speed_Swing",
+                    "Power_Chop_C"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cucara\").wexp['Axe'] >= 120 and u(\"Cucara\").wexp['Axe'] < 240"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_8"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cucara"
+                ]
+            ]
+        ]
+    }
+]

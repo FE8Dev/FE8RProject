@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Speed_Swing",
+        "name": "Speed Swing",
+        "desc": "If unit's STR >= to enemy's STR, unit gains +1 Bonus attacks (+2 if doubling).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            39
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('STR') >= target.get_stat('STR')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ]
+        ]
+    }
+]

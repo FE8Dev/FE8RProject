@@ -1117,3 +1117,26 @@ class RestoreNoRestriction(ItemComponent):
             if self._can_be_restored(skill):
                 actions.append(action.RemoveSkill(target, skill))
                 playback.append(pb.RestoreHit(unit, item, target))
+
+class MultiDescSkill(ItemComponent):
+    nid = 'multi_desc_skill'
+    desc = "Define a list of Skill NIDs whose info boxes should be attached to this skill's multi desc info box."
+    tag = ItemTags.UTILITY
+    author = 'Eretein'
+    
+    expose = (ComponentType.List, ComponentType.Skill)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]
+
+class MultiDescItem(ItemComponent):
+    nid = 'multi_desc_item'
+    desc = "Define a list of Item NIDs whose info boxes should be attached to this skill's multi desc info box."
+    tag = ItemTags.UTILITY
+    
+    author = "Eretein"
+    
+    expose = (ComponentType.List, ComponentType.Item)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]

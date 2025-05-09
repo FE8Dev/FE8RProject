@@ -1,0 +1,49 @@
+[
+    {
+        "nid": "Trainee_Seed",
+        "name": "Trainee Seed",
+        "desc": "Levels up a T0 unit and slightly raises weapon rank.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            40,
+            4
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                800
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "uses",
+                1
+            ],
+            [
+                "eval_target_restrict_2",
+                "DB.classes.get('{e:game.get_unit('{unit}').klass}').tier == 0"
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Trainee_Seed"
+            ],
+            [
+                "usable_in_base",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Innes_Bond_Support_Effect",
+        "name": "Innes's Bond Support",
+        "desc": "Innes's support gives extra defense, accuracy, defense speed, avoid, and crit avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit.nid in ['Gilliam', 'Moulder', 'Syrene']"
+            ],
+            [
+                "dynamic_resist",
+                "6"
+            ],
+            [
+                "dynamic_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_avoid",
+                "10"
+            ],
+            [
+                "dynamic_defense_speed",
+                "6"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "10"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "SpiritBody",
+        "name": "SpiritBody",
+        "desc": "Reduce damage taken by 75%, but unit is weak to monster slaying weapons for 2 turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Sword', 'Axe', 'Lance', 'Bow', 'Monster')"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "has_tags",
+                [
+                    "Monster"
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    }
+]

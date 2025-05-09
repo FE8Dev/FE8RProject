@@ -4,12 +4,24 @@
         "expression": "HP"
     },
     {
+        "nid": "ASSIST_DMG_DIV",
+        "expression": "1 if unit.get_skill(\"Vagabond\") else 2"
+    },
+    {
         "nid": "MOVEMENT",
         "expression": "MOV"
     },
     {
         "nid": "ATTACK_SPEED",
         "expression": "SPD"
+    },
+    {
+        "nid": "ATTACK_SPEED_1P5",
+        "expression": "SPD*1.5"
+    },
+    {
+        "nid": "ATTACK_SPEED_HALF",
+        "expression": "SPD//2"
     },
     {
         "nid": "DEFENSE_SPEED",
@@ -696,6 +708,10 @@
         "expression": "STR + SKL + CON*2.5"
     },
     {
+        "nid": "MAG_LCK_MID",
+        "expression": "MAG + LCK//2"
+    },
+    {
         "nid": "STR_MAG_MAX",
         "expression": "max(STR, MAG)"
     },
@@ -706,5 +722,21 @@
     {
         "nid": "DEF_SPD_MIN",
         "expression": "min(DEF, SPD)"
+    },
+    {
+        "nid": "RES_SPD_MIN",
+        "expression": "min(RES, SPD)"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_WEAK",
+        "expression": "MAG/2 + SPD/4"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_MID",
+        "expression": "MAG/2 + SPD/3"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_STRONG",
+        "expression": "MAG + SPD/2"
     }
 ]

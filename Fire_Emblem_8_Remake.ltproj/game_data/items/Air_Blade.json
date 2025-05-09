@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Air_Blade",
+        "name": "Air Blade",
+        "desc": "Arno's innate wind magic. Weak, but incredibly swift. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Brave, targets foe's SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            20
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "WindWave"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Arno\").wexp['Lance'] < 240"
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "weapon_type_exempt",
+                "Anima"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_MID"
+            ]
+        ]
+    }
+]

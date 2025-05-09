@@ -2,7 +2,7 @@
     {
         "nid": "Beam",
         "name": "Beam",
-        "desc": "Ewan's beginner Light tome. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(Multi-target:3), Spell, +10 Crit damage.",
+        "desc": "Ewan's beginner Light tome.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), (Multi-target:3), +10 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             4,
@@ -116,10 +116,6 @@
                 }
             ],
             [
-                "cooldown",
-                2
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_10"
@@ -138,6 +134,10 @@
             [
                 "weapon",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_MAG_STRONG"
             ]
         ]
     }

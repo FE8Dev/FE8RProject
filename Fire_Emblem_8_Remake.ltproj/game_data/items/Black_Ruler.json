@@ -2,7 +2,7 @@
     {
         "nid": "Black_Ruler",
         "name": "Black Ruler",
-        "desc": "Katanna empowered for the dark. Designed for an old master.\n<green>Skills:</>Flash Step, <red>Very Effective:</><icon>Infantry</>\n<pink>Misc:</>STR + SKL + SPD (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('SPD'))}</>).",
+        "desc": "Katanna empowered for the dark. Designed for an old master.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<red>Very Effective:</><icon>Infantry</>\n<pink>Misc:</>STR + SKL + SPD (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('SPD'))}</>).",
         "icon_nid": "Davius Weapons",
         "icon_index": [
             0,
@@ -56,7 +56,9 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step",
+                    "Heroic_Will",
+                    "Scalatin_Work"
                 ]
             ],
             [

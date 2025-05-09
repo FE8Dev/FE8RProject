@@ -3,7 +3,7 @@
         "name": "Reset_Turn_Selection",
         "trigger": "turn_change",
         "level_nid": null,
-        "condition": "True",
+        "condition": "game.turncount % 2 ==1",
         "commands": [],
         "only_once": false,
         "priority": 20,

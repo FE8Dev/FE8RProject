@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Carbide_Claws",
+        "name": "Carbide Claws",
+        "desc": "Claws that have hardened over time.\n<violet>Inflicts:</>Breach (5), Curse (5)\n<pink>Misc:</>+6/+6 DEF/RES on Equip, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "{Zarg} Monster 11",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Scintilla"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Scintilla\").wexp['Monster'] >= 120 and u(\"Scintilla\").wexp['Monster'] < 240"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_5",
+                    "Cursed_5"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        6
+                    ],
+                    [
+                        "RES",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_MID"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Cthonic_Hunger",
+        "name": "Cthonic Hunger",
+        "desc": "Attacks restore HP = 50% of damage dealt. The attacks of allies within 3 spaces restore HP = 20% of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "aura",
+                "Cthonic_Hunger_Buff"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "lifelink",
+                0.5
+            ]
+        ]
+    }
+]

@@ -2,7 +2,7 @@
     {
         "nid": "Morgan",
         "name": "Morgan",
-        "desc": "A sword buried in epoch of peace,with blood recupering the glory.\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + SKL + MAG, (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('MAG'))}</>), +15 SPD.",
+        "desc": "A sword buried in epoch of peace,with blood recupering the glory.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + SKL + MAG, (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('MAG'))}</>), +15 SPD.",
         "icon_nid": "Davius Weapons",
         "icon_index": [
             0,
@@ -93,6 +93,14 @@
                 "item_tags",
                 [
                     "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Heroic_Will",
+                    "Scalatin_Work"
                 ]
             ]
         ]

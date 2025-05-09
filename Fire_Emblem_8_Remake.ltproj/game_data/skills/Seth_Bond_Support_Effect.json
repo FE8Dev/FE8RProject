@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Seth_Bond_Support_Effect",
+        "name": "Seth's Bond Support",
+        "desc": "Seth's support gives extra might, defense, accuracy, avoid, and crit avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit.nid in ['Ephraim', 'Kyle', 'Forde']"
+            ],
+            [
+                "dynamic_damage",
+                "6"
+            ],
+            [
+                "dynamic_resist",
+                "6"
+            ],
+            [
+                "dynamic_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_avoid",
+                "10"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "10"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

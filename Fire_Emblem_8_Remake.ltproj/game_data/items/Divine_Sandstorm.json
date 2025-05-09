@@ -1,0 +1,100 @@
+[
+    {
+        "nid": "Divine_Sandstorm",
+        "name": "Divine Sandstorm",
+        "desc": "Arno's full might, channeled into a tempest unrivalled. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Brave, targets foe's SPD/2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                77
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Tempest"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Arno\").wexp['Lance'] >= 420"
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED_HALF"
+            ],
+            [
+                "weapon_type_exempt",
+                "Anima"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ]
+        ]
+    }
+]

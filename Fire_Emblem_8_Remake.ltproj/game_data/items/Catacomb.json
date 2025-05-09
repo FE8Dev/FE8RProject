@@ -2,7 +2,7 @@
     {
         "nid": "Catacomb",
         "name": "Catacomb",
-        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +13 DEF, +5 RES, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets RES, +13 DEF, +5 RES, +10 SPD.",
         "icon_nid": "02-26-25",
         "icon_index": [
             0,
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                32
+                16
             ],
             [
                 "hit",
-                105
+                120
             ],
             [
                 "weapon_type",
@@ -39,7 +39,7 @@
             ],
             [
                 "weight",
-                25
+                16
             ],
             [
                 "crit",
@@ -54,41 +54,19 @@
                 1
             ],
             [
-                "shove",
-                1
-            ],
-            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
-                "no_double",
-                null
-            ],
-            [
                 "item_tags",
                 [
-                    "Blade",
                     "Dark"
                 ]
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Frozen"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep",
+                    "Flash_Step",
                     "Aggravator"
                 ]
             ],
@@ -103,10 +81,6 @@
                 "u(\"BoneBoy\").wexp['Sword'] >= 420 and u(\"BoneBoy\").wexp['Sword']  < 480"
             ],
             [
-                "wexp",
-                3
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
@@ -116,7 +90,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_MID"
+                "STR_MAG_STRONG"
             ],
             [
                 "alternate_resist_formula",
@@ -132,6 +106,10 @@
                     [
                         "RES",
                         5
+                    ],
+                    [
+                        "SPD",
+                        10
                     ]
                 ]
             ]

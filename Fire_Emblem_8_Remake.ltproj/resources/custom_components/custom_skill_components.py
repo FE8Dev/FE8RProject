@@ -1679,3 +1679,26 @@ class UpkeepDamageNonFatal(SkillComponent):
         actions.append(action.TriggerCharge(unit, self.skill))
         self._playback_processing(playback, unit, hp_change)
         skill_system.after_take_strike(actions, playback, unit, None, None, None, 'defense', (0, 0), Strike.HIT)
+
+class MultiDescSkill(SkillComponent):
+    nid = 'multi_desc_skill'
+    desc = "Define a list of Skill NIDs whose info boxes should be attached to this skill's multi desc info box."
+    tag = SkillTags.ADVANCED
+    author = 'Eretein'
+    
+    expose = (ComponentType.List, ComponentType.Skill)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]
+
+class MultiDescItem(SkillComponent):
+    nid = 'multi_desc_item'
+    desc = "Define a list of Item NIDs whose info boxes should be attached to this skill's multi desc info box."
+    tag = SkillTags.ADVANCED
+    
+    author = "Eretein"
+    
+    expose = (ComponentType.List, ComponentType.Item)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]
