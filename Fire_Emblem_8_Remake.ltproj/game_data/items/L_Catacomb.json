@@ -1,0 +1,140 @@
+[
+    {
+        "nid": "L_Catacomb",
+        "name": "Catacomb",
+        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +13 DEF, +5 RES, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "icon_nid": "02-26-25",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                32
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Dark"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Aggravator"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Lindsey"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Lindsey\").wexp['Sword'] >= 420 and u(\"Lindsey\").wexp['Sword']  < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15",
+                    "Crippled_P"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        13
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    }
+]

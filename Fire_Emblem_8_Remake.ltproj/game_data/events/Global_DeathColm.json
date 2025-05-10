@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathColm",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Colm'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Colm;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Colm;To think of it...|Me...|In this place...|Neimi...",
+            "else",
+            "speak;Colm;Drat!...Better hide before Neimi sees me...",
+            "end",
+            "expression;Colm;CloseEyes",
+            "remove_portrait;Colm",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathColm"
+    }
+]

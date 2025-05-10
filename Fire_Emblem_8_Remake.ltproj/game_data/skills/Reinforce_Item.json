@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Reinforce_Item",
+        "name": "Reinforce",
+        "desc": "Summon 4 Falcon Knight allies to help in battle. This is a free action.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            50
+        ],
+        "components": [
+            [
+                "condition",
+                "not game.check_alive('Falcon1_' + unit.nid) and not game.check_alive('Falcon2_' + unit.nid) and not game.check_alive('Falcon3_' + unit.nid) and not game.check_alive('Falcon4_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Reinforce"
+            ],
+            [
+                "build_charge",
+                4
+            ]
+        ]
+    }
+]

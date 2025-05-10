@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Cleave_Armor_T2",
+        "name": "Cleave Armor",
+        "desc": "Attacks reduce enemy's DEF by 10 on hit for a turn.\nMax 3 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            25
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Cleave_Armor_Debuff"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

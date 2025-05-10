@@ -1,0 +1,118 @@
+[
+    {
+        "nid": "Gale_Blade",
+        "name": "Gale Blade",
+        "desc": "A heavy blade that hits enemies with a strong wind.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, SPD + SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//3))}</>), targets SPD instead of DEF.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            3,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "crit",
+                7
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Shaver"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
+            ]
+        ]
+    }
+]

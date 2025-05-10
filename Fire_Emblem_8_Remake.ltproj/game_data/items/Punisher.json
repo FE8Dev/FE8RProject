@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Punisher",
+        "name": "Punisher",
+        "desc": "This ancient sword somehow has taken a liking to Kyle.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>+3 SPD, +20 Bonus Crit Damage.",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            6,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Crit_Damage_Bonus_20"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kyle"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kyle\").wexp['Sword'] >= 180 and u(\"Kyle\").wexp['Sword'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ]
+        ]
+    }
+]

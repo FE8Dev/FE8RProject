@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Money3Achievement",
+        "trigger": "level_end",
+        "level_nid": null,
+        "condition": "game.get_money() >= 100000",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;money3;true;banner",
+            "give_item;convoy;Ruination"
+        ],
+        "nid": "Global Money3Achievement"
+    }
+]

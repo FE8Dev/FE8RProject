@@ -1,0 +1,121 @@
+[
+    {
+        "nid": "Varatha",
+        "name": "Varatha",
+        "desc": "An otherworldly lance of darkness. Arno swears she's wielded it before.\n<green>Skills:</>Lance Guard (X), Cyclonic Downdraft, Cthonic Hunger\n<orange>Element:</><icon>Wind</> </><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Very Effective:</><icon>Flying</><icon>Seared</><icon></><icon>Monster</>\n<pink>Misc:</>Uses Speed*1.5 (<red>{e:(unit.get_stat('SPD')*1.5)}</>), targets lower of RES or SPD, grants +10 SPD, and +77 Avoid/Dodge.",
+        "icon_nid": "Varatha_1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "weight",
+                23
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Avo_Ddg_77",
+                    "Lance_Guard_X",
+                    "Cthonic_Hunger",
+                    "Cyclonic_Downdraft"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Tempest"
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED_1P5"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Wind"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Arno\").wexp['Lance'] >= 480"
+            ],
+            [
+                "alternate_resist_formula",
+                "RES_SPD_MIN"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

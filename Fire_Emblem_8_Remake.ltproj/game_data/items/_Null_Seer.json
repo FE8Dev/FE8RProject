@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "_Null_Seer",
+        "name": "Herald of the Void",
+        "desc": "Reduces everything to nothing, not even death itself can resist this spell.<CD:12>\n<green>Skills:</>True Death<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Cannot miss, cannot DS, can't crit.",
+        "icon_nid": "{Zarg} Staff 17",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                42
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Shine"
+            ],
+            [
+                "status_on_equip",
+                "_True_Death"
+            ],
+            [
+                "cooldown",
+                12
+            ],
+            [
+                "prf_unit",
+                [
+                    "_Azuth"
+                ]
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"_Azuth\").wexp['Staff'] >= 480"
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    }
+]

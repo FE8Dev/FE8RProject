@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Ch7aAchievement",
+        "trigger": "unit_wait",
+        "level_nid": "7",
+        "condition": "region.nid == 'SubmergedTreasure'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;{unit};Left",
+            "speak;{unit};Oh, what's that sparkling item?|Why was this so deep in the lake?",
+            "remove_portrait;{unit}",
+            "complete_achievement;ch7a;true;banner",
+            "give_item;{unit};Geyser_Lance",
+            "remove_map_anim;Dazzled;4,4"
+        ],
+        "nid": "7 Ch7aAchievement"
+    }
+]

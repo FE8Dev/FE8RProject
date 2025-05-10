@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "_Dark_Wisdom",
+        "name": "Dark Wisdom",
+        "desc": "The user gains a charge whenever they kill an enemy, while charged, they gain 10% more weapon xp and gain +1 MAG, stacks infinitely.\nLoses one charge per turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "upkeep_charge_increase",
+                -1
+            ],
+            [
+                "wexp_multiplier",
+                1.1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    }
+]

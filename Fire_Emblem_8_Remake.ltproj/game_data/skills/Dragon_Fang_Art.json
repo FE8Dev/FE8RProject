@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Dragon_Fang_Art",
+        "name": "Dragon Fang",
+        "desc": "<red>CA:</>+30 Hit and x2 damage. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Dragon_Fang_Skill"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

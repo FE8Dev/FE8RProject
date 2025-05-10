@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Admiral_Pride",
+        "name": "Admiral Pride",
+        "desc": "The sword of the Almirant, ruler of the seas and the herald of Storm.\n<green>Skills:</>Seawalk, Flash Step, Storm Herald, Torrential Rain (on kill).\n<orange>Element:</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Pirate</>\n<pink>Misc:</>+15 SPD.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            7,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                21
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                35
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Seawalk",
+                    "Storm_Herald",
+                    "Torrential_Rain_Giver"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Thoron"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Dozla"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Dozla\").wexp['Sword'] >= 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Thunder"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Shadow_Cloak_Skill",
+        "name": "Shadow Cloak Skill",
+        "desc": "For the Shadow Cloak item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Dark' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "0.5 if ( 'Dark' in target.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "MAG",
+                        "20 if ('Dark' in unit.get_weapon().tags) else 0"
+                    ]
+                ]
+            ],
+            [
+                "eval_galeforce",
+                "'Dark' in unit.get_weapon().tags and unit.get_hp() >= unit.get_max_hp() // 2"
+            ],
+            [
+                "eval_recoil_percent",
+                "0.4 if ( 'Dark' in unit.get_weapon().tags) else 0"
+            ]
+        ]
+    }
+]

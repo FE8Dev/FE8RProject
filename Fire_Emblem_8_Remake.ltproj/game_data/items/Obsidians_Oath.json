@@ -1,0 +1,122 @@
+[
+    {
+        "nid": "Obsidians_Oath",
+        "name": "Obsidian's Oath",
+        "desc": "Duessel's own crafted blade.\n<green>Skills:</>Grado's Wall+, Blade Sweep\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Earth"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Duessel"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Grados_WallP",
+                    "Grados_Wall_GainP",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Duessel\").wexp['Sword'] >= 360 and u(\"Duessel\").wexp['Sword'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Hunter",
+        "name": "Hunter",
+        "desc": "+50 Avoid/Hit when unit is initiating attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            19
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

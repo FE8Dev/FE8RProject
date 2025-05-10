@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ_1",
+        "trigger": "on_talk",
+        "level_nid": "15A",
+        "condition": "check_pair('Eirika', 'Civ1')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Villager Old Woman 1;Left",
+            "speak;Villager Old Woman 1;So, it's finally over...|What will become of Jehanna?...",
+            "speak;Eirika;The army of Renais will not let Jehanna collapse.|We will help with rebuilding.",
+            "speak;Villager Old Woman 1;Oh, praise the heavens...|We may not be doomed after all...|",
+            "speak;Eirika;It will be ok, Jehanna will be restored...",
+            "multi_remove_portrait;Eirika;Villager Old Woman 1",
+            "give_bexp;5000",
+            "remove_talk;Eirika;Civ1"
+        ],
+        "nid": "15A Talk_Civ_1"
+    }
+]

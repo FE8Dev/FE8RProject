@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Talk_MyUnit",
+        "trigger": "on_talk",
+        "level_nid": "Dragons_Gate_Ephraim",
+        "condition": "check_pair('Ephraim', 'MyUnit')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ephraim;Right;MyUnit;Left",
+            "speak;Ephraim;...What on earth?...|How did she do this? You look just like a real human!",
+            "speak;MyUnit;My name is {v:MyUnitName}.|Thank you for bringing me to life!|I will serve you with all my might!",
+            "speak;Ephraim;I guess the Annas know their stuff, when it comes to weird soldiers.|Regardless, welcome aboard!",
+            "multi_remove_portrait;Ephraim;MyUnit",
+            "remove_talk;Ephraim;MyUnit"
+        ],
+        "nid": "Dragons_Gate_Ephraim Talk_MyUnit"
+    }
+]

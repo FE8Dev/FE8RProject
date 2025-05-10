@@ -1,0 +1,107 @@
+[
+    {
+        "nid": "Holy_Tempest",
+        "name": "Holy Tempest",
+        "desc": "A beautiful wind lance infused with Natasha's light.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Wind</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                8
+            ],
+            [
+                "max_range",
+                8
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                14
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Lance'] >= 180 and u(\"Natasha\").wexp['Lance'] < 360"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

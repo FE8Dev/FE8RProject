@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Odd_Tempo_Item",
+        "name": "Odd Tempo",
+        "desc": "Unit adds MAG/3 to Physical Weapons attacks on Odd numbered turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            47
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "combat_condition",
+                "game.turncount % 2 == 1 and not item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 3"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "GerikTalkMarisa",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Marisa','Gerik')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Marisa;Right;Gerik;Left",
+            "speak;Marisa;Chief.",
+            "speak;Gerik;Oh, Marisa!|So Ewan found you after all, eh?|Sorry for the trouble.|Appears the guild made an error.|Blast it all.|I should have double-checked everything myself.",
+            "speak;Marisa;No worries.|I'm with you now.",
+            "speak;Gerik;Have you taken any wounds?|They send you all the way to Taizel, after all.|What ill luck that was...",
+            "speak;Marisa;I'm fine.|I'll fight at your side.",
+            "speak;Gerik;Ah, that's comforting.|We've been hired to guard a Prince Ephraim.|Before we do, though, we'd better take care of these enemy troops, huh?|Let's move, Marisa.",
+            "speak;Marisa;Understood.",
+            "multi_remove_portrait;Marisa;Gerik",
+            ""
+        ],
+        "nid": "13B GerikTalkMarisa"
+    }
+]

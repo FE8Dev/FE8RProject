@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Explosives",
+        "trigger": "Explosives",
+        "level_nid": "14A",
+        "condition": "region.nid == \"Explosives\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;{unit};Right",
+            "speak;{unit};Ok!|I found the hidden explosives!|Everyone take cover!",
+            "remove_portrait;{unit}",
+            "end",
+            "transition;close;500",
+            "sound;Wall Destroy",
+            "show_layer;Wall_2;fade",
+            "complete_achievement;ch14b;true;banner",
+            "give_item;convoy;Master_Scroll",
+            "has_traded;{unit}"
+        ],
+        "nid": "14A Explosives"
+    }
+]

@@ -1,0 +1,117 @@
+[
+    {
+        "nid": "Desert_Climax",
+        "name": "Desert Climax",
+        "desc": "A dance symbolizing the end of those who fall victim to the desert. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Free action, +40 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aureola"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tethys"
+                ]
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Tethys\").wexp['Light'] >= 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

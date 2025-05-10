@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Murasame",
+        "name": "Murasame",
+        "desc": "A cursed katana that is both lethal and solitary. The victim is condemned to a painful death.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</>Uses SPD, +50 Crit damage.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            6,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Marisa"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_50"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Marisa\").wexp['Sword'] >= 480"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding"
+                ]
+            ]
+        ]
+    }
+]

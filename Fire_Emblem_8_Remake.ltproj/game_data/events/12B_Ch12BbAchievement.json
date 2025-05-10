@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch12BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "12B",
+        "condition": "unit.nid == '167' and game.turncount <= 7",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch12Bb;true;banner",
+            "give_item;convoy;Gust_Dagger"
+        ],
+        "nid": "12B Ch12BbAchievement"
+    }
+]

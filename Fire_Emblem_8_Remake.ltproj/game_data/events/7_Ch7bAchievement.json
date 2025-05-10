@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Ch7bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "7",
+        "condition": "unit.nid == '119' and game.level_vars['BallistaCount'] <= 2",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch7b;true;banner",
+            "give_item;convoy;Body_Ring_Consumable",
+            "give_item;convoy;Goddess_Icon_Consumable"
+        ],
+        "nid": "7 Ch7bAchievement"
+    }
+]

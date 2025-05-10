@@ -1,0 +1,38 @@
+[
+    {
+        "name": "RecruitAmeliaFranz",
+        "trigger": "on_talk",
+        "level_nid": "9A",
+        "condition": "check_pair('Franz','Amelia')",
+        "commands": [],
+        "only_once": true,
+        "priority": 30,
+        "_source": [
+            "multi_add_portrait;Franz;Right;Amelia;Left",
+            "#music;50 Comrades;200",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Franz;Oh, who are you?",
+            "speak;Amelia;What?|What?",
+            "speak;Franz;Are you one of the locals?|This is a dangerous spot.|You should hide.|Here, come with me.",
+            "speak;Amelia;But...|But I'm...",
+            "speak;Franz;I'm Franz, a Knight of Renais.|What's your name?|What are you doing here?",
+            "speak;Amelia;I-I'm Amelia.|I'm...|Actually, I'm a Grado soldier.|I'm supposed to be fighting you.",
+            "speak;Franz;Really?|So, uh, you're my enemy?",
+            "speak;Amelia;...I guess...|Are you...|Are you going to make me your prisoner?!",
+            "speak;Franz;No!|No, I wouldn't do that.|But...this is a problem.",
+            "speak;Amelia;What should we do?",
+            "speak;Franz;First of all, you must listen to me and do as I say.|We'll talk to Princess Eirika later.",
+            "speak;Amelia;What?|NO!|My commander told me Eirika's a cruel and merciless fiend who-",
+            "speak;Franz;Oh, that's utter nonsense.|I've never heard the princess utter an unkind word to anyone.|I understand why you're frightened.|You think we're the enemy.|But if you'd only trust me...|Will you come with me?",
+            "speak;Amelia;Mm...|Well, all right.|I'll trust you, Franz.",
+            "multi_remove_portrait;Franz;Amelia",
+            "change_team;Amelia;player",
+            "change_ai;Amelia;None",
+            "remove_talk;Franz;Amelia",
+            "remove_talk;Eirika;Amelia",
+            "music_fade_back;100",
+            "add_lore;Amelia"
+        ],
+        "nid": "9A RecruitAmeliaFranz"
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "nid": "Thunder_Claw_P",
+        "name": "Thunder Claw+",
+        "desc": "Claws that pierce armor.\n<orange>Element:</><icon>Thunder</>\n<violet>Inflicts:</><icon>Venom</>x4<icon>Bleed</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

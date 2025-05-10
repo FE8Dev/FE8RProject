@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "CycloneShield",
+        "name": "Cyclone Shield",
+        "desc": "Unit is immune to all ranged attacks. Lasts for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            34
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.position and (utils.calculate_distance(unit.position, unit2.position) >= 2)"
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]

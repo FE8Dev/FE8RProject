@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch9BbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "9B",
+        "condition": "unit.nid == '143' and check_pair('Tana', '143')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch9Bb;true;banner",
+            "give_item;convoy;Master_Scroll"
+        ],
+        "nid": "9B Ch9BbAchievement"
+    }
+]

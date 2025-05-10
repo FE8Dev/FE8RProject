@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Mana_Strike_Skill",
+        "name": "Mana Strike",
+        "desc": "<red>CA:</>+30 Hit, and add Unit's MAG/2 onto the attack. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            47
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 2"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ]
+        ]
+    }
+]

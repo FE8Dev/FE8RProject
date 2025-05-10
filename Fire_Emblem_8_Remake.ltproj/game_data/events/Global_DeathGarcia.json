@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathGarcia",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Garcia'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Garcia;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Garcia;I have no regrets.|This was always my fate.",
+            "else",
+            "speak;Garcia;This isn't where it ends for me yet.|Got to fight another day.",
+            "end",
+            "expression;Garcia;CloseEyes",
+            "remove_portrait;Garcia",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathGarcia"
+    }
+]

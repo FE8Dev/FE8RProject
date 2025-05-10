@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Shield_Aura_Aura",
+        "name": "Shield Aura",
+        "desc": "Reduce the damage of allies taken based on their DEF/3.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "(unit.get_stat('DEF') // 3)"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

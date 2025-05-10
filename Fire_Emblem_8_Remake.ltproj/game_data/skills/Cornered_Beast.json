@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Cornered_Beast",
+        "name": "Cornered Beast",
+        "desc": "Unit is more likely to be targeted by enemies within 8 spaces when unit is below 75% Max HP.\n+60 Avoid while below 75% Max HP. +60 bonus Avoid for each tile of space between unit and enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            37
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "dynamic_avoid",
+                "(utils.calculate_distance(unit.position, target.position) *60)"
+            ],
+            [
+                "aura",
+                "Cornered_Beast_Lure"
+            ],
+            [
+                "aura_range",
+                8
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    }
+]

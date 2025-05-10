@@ -1,0 +1,111 @@
+[
+    {
+        "nid": "Armor_Ripper",
+        "name": "Armor Ripper",
+        "desc": "A unique heavy blade that rips off enemies' armor.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            18,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                19
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gilliam"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Gilliam\").wexp['Sword'] >= 180 and u(\"Gilliam\").wexp['Sword'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_5",
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

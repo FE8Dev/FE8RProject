@@ -1,0 +1,136 @@
+[
+    {
+        "nid": "L_Sepulchre",
+        "name": "Sepulchre",
+        "desc": "A monument of what was.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            8,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Dark"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Aggravator"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Lindsey"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Lindsey\").wexp['Sword'] >= 240 and u(\"Lindsey\").wexp['Sword']  < 420"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8",
+                    "Crippled_P"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

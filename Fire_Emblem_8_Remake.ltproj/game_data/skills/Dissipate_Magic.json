@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dissipate_Magic",
+        "name": "Dissipate Magic",
+        "desc": "Add enemy's RES to damage.\nAttacks gain effectiveness against Magic units.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES')"
+            ],
+            [
+                "item_override",
+                "Anti_Magic_Rounds"
+            ]
+        ]
+    }
+]

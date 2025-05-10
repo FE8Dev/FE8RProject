@@ -1,0 +1,2562 @@
+[
+    {
+        "nid": "12B",
+        "name": "Ch. 12: Landing at Taizel",
+        "tilemap": "Chapter 12B",
+        "bg_tilemap": null,
+        "party": "Ephraim_Group",
+        "music": {
+            "player_phase": "12- Determination Orchestral Cover",
+            "enemy_phase": "20- Assault Orchestral Cover",
+            "player_battle": "25- Attack Orchestral Cover",
+            "enemy_battle": "26- Defense Orchestral Cover",
+            "boss_battle": "27- The Battle Must Be Won Orchestral Cover",
+            "enemy2_phase": "20- Assault Orchestral Cover",
+            "other_phase": "15- Binding Vow Orchestral Cover",
+            "enemy2_battle": "26- Defense Orchestral Cover",
+            "other_battle": "25- Attack Orchestral Cover"
+        },
+        "objective": {
+            "simple": "Defeat Boss",
+            "win": "Defeat Boss",
+            "loss": "Ephraim Dies"
+        },
+        "roam": false,
+        "roam_unit": null,
+        "go_to_overworld": false,
+        "should_record": true,
+        "tags": [],
+        "units": [
+            {
+                "nid": "Ewan",
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Saleh",
+                "team": "other",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Ephraim",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Seth",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Myrrh",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "101",
+                "variant": null,
+                "level": 1,
+                "klass": "Soldier",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Iron Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Caellach",
+                "team": "enemy",
+                "ai": "Guard",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    1
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "102",
+                "variant": null,
+                "level": 20,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Ebony_Greatlance_Shop",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "103",
+                "variant": null,
+                "level": 20,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Ebony_Greatlance_Shop",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    2
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "104",
+                "variant": null,
+                "level": 20,
+                "klass": "Cyclops",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Cursed_Axe",
+                        false
+                    ],
+                    [
+                        "Jagged_Axe",
+                        true
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "105",
+                "variant": null,
+                "level": 15,
+                "klass": "Entombed",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "106",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Lakeburst_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "107",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Geyser_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "108",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Lakeburst_Sword",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "109",
+                "variant": null,
+                "level": 15,
+                "klass": "Bow_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Marisa",
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    3
+                ],
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "110",
+                "variant": null,
+                "level": 15,
+                "klass": "Paladin",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Crusaders_Blade",
+                        false
+                    ],
+                    [
+                        "Bolt_Spear",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "111",
+                "variant": null,
+                "level": 15,
+                "klass": "Paladin",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Crusaders_Blade",
+                        false
+                    ],
+                    [
+                        "Bolt_Spear",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    14
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "112",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    15
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "113",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    5,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "169",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "170",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "171",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "114",
+                "variant": null,
+                "level": 15,
+                "klass": "Great_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Burning_Greatlance_Shop",
+                        false
+                    ],
+                    [
+                        "Holy_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "115",
+                "variant": null,
+                "level": 15,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    6,
+                    12
+                ],
+                "starting_traveler": "174",
+                "generic": true
+            },
+            {
+                "nid": "174",
+                "variant": null,
+                "level": 15,
+                "klass": "Bishop_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Water_Burst",
+                        false
+                    ],
+                    [
+                        "Shine_Fire",
+                        false
+                    ],
+                    [
+                        "Physic",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Heal_or_Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "175",
+                "variant": null,
+                "level": 15,
+                "klass": "Bishop_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Physic",
+                        false
+                    ],
+                    [
+                        "Water_Burst",
+                        false
+                    ],
+                    [
+                        "Shine_Fire",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Heal_or_Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "116",
+                "variant": null,
+                "level": 15,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    12
+                ],
+                "starting_traveler": "175",
+                "generic": true
+            },
+            {
+                "nid": "117",
+                "variant": null,
+                "level": 20,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Abyss_Bow",
+                        true
+                    ],
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    26
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "118",
+                "variant": null,
+                "level": 15,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "151",
+                "variant": null,
+                "level": 15,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "153",
+                "variant": null,
+                "level": 15,
+                "klass": "Sniper_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arc_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "119",
+                "variant": null,
+                "level": 15,
+                "klass": "Sage_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arcane_Staff",
+                        false
+                    ],
+                    [
+                        "Bolganone",
+                        true
+                    ],
+                    [
+                        "Flamberge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    3,
+                    8
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "120",
+                "variant": null,
+                "level": 15,
+                "klass": "Sage_Male",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arcane_Staff",
+                        false
+                    ],
+                    [
+                        "Flamberge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    8,
+                    7
+                ],
+                "starting_traveler": "172",
+                "generic": true
+            },
+            {
+                "nid": "121",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Male_Light_Sage_Moulder",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arcane_Staff",
+                        false
+                    ],
+                    [
+                        "Shine_Fire",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    9,
+                    7
+                ],
+                "starting_traveler": "173",
+                "generic": true
+            },
+            {
+                "nid": "122",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Male_Light_Sage_Moulder",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Arcane_Staff",
+                        false
+                    ],
+                    [
+                        "Shine_Fire",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "123",
+                "variant": null,
+                "level": 15,
+                "klass": "Mage Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Mist_Sword",
+                        false
+                    ],
+                    [
+                        "Flamberge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    9
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "124",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Explosion",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "125",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Explosion",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    12,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "134",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Explosion",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "172",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ],
+                    [
+                        "Flamberge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "173",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flamberge",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "135",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Explosion",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    1,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "145",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Druid",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Flamberge",
+                        false
+                    ],
+                    [
+                        "Fused_Dark_Bolt",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    14,
+                    13
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "126",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Dark_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Night_Purge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    23
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "127",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Dark_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Night_Purge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    19,
+                    24
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "128",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Dark_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Night_Purge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    16,
+                    5
+                ],
+                "starting_traveler": "170",
+                "generic": true
+            },
+            {
+                "nid": "129",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Dark_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Hallucinogens",
+                        false
+                    ],
+                    [
+                        "Night_Purge",
+                        true
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    17,
+                    5
+                ],
+                "starting_traveler": "169",
+                "generic": true
+            },
+            {
+                "nid": "130",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Dark_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Night_Purge",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    5
+                ],
+                "starting_traveler": "171",
+                "generic": true
+            },
+            {
+                "nid": "131",
+                "variant": null,
+                "level": 15,
+                "klass": "Hero",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Winged_Blade",
+                        false
+                    ],
+                    [
+                        "Wrath_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    13,
+                    4
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "132",
+                "variant": null,
+                "level": 15,
+                "klass": "Hero",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Winged_Blade",
+                        false
+                    ],
+                    [
+                        "Wrath_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    20,
+                    12
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "154",
+                "variant": null,
+                "level": 15,
+                "klass": "Hero",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Winged_Blade",
+                        false
+                    ],
+                    [
+                        "Wrath_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "152",
+                "variant": null,
+                "level": 15,
+                "klass": "Hero",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Winged_Blade",
+                        false
+                    ],
+                    [
+                        "Wrath_Axe",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "133",
+                "variant": null,
+                "level": 15,
+                "klass": "Ranger",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Broken_Helix",
+                        false
+                    ],
+                    [
+                        "Gale_Bow",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    3,
+                    10
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "136",
+                "variant": null,
+                "level": 15,
+                "klass": "Gwyllgi",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Hellfang",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "137",
+                "variant": null,
+                "level": 15,
+                "klass": "Gwyllgi",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Hellfang",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "138",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "166",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "165",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "164",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "163",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "162",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "161",
+                "variant": null,
+                "level": 15,
+                "klass": "Sword_Wight",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Blue_Fire_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Defend",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "139",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Lizard_Pirate",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Sea_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "PursueVillage",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    21
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "140",
+                "variant": null,
+                "level": 15,
+                "klass": "T2_Lizard_Pirate",
+                "faction": "Bandit",
+                "starting_items": [
+                    [
+                        "Sea_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "PursueVillage",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    22
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "141",
+                "variant": null,
+                "level": 15,
+                "klass": "Warrior",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Jagged_Axe",
+                        false
+                    ],
+                    [
+                        "Aqua_Burst",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    25
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "142",
+                "variant": null,
+                "level": 15,
+                "klass": "Warrior",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Jagged_Axe",
+                        false
+                    ],
+                    [
+                        "Aqua_Burst",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    18,
+                    26
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "143",
+                "variant": null,
+                "level": 15,
+                "klass": "Warrior",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Jagged_Axe",
+                        false
+                    ],
+                    [
+                        "Aqua_Burst",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": "None",
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "144",
+                "variant": null,
+                "level": 15,
+                "klass": "Warrior",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Jagged_Axe",
+                        false
+                    ],
+                    [
+                        "Aqua_Burst",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "146",
+                "variant": null,
+                "level": 15,
+                "klass": "Deathgoyle",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Mist_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "148",
+                "variant": null,
+                "level": 15,
+                "klass": "Deathgoyle",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Mist_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "147",
+                "variant": null,
+                "level": 15,
+                "klass": "Deathgoyle",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Mist_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "149",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "150",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "155",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "156",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "157",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "158",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "159",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "160",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "167",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "168",
+                "variant": null,
+                "level": 15,
+                "klass": "Elder_Bael",
+                "faction": "Monster",
+                "starting_items": [
+                    [
+                        "Poison Claw",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy2",
+                "ai": "Pursue",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "Riev",
+                "team": "enemy",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "176",
+                "variant": null,
+                "level": 20,
+                "klass": "T2_Wolf_Knight",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Regal_Blade",
+                        true
+                    ],
+                    [
+                        "Reinforced_Scythe_Lance",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": true
+            }
+        ],
+        "regions": [
+            {
+                "nid": "Formation",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    19
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation2",
+                "region_type": "formation",
+                "position": [
+                    5,
+                    20
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation3",
+                "region_type": "formation",
+                "position": [
+                    7,
+                    20
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation4",
+                "region_type": "formation",
+                "position": [
+                    5,
+                    21
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation5",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    22
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation6",
+                "region_type": "formation",
+                "position": [
+                    5,
+                    23
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation7",
+                "region_type": "formation",
+                "position": [
+                    6,
+                    24
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation8",
+                "region_type": "formation",
+                "position": [
+                    5,
+                    25
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation9",
+                "region_type": "formation",
+                "position": [
+                    7,
+                    25
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation10",
+                "region_type": "formation",
+                "position": [
+                    8,
+                    22
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation11",
+                "region_type": "formation",
+                "position": [
+                    8,
+                    24
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": null,
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Inn",
+                "region_type": "event",
+                "position": [
+                    6,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Village_1",
+                "region_type": "event",
+                "position": [
+                    5,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Visit",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "VillageD_1",
+                "region_type": "event",
+                "position": [
+                    5,
+                    5
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Destructible",
+                "condition": "unit.team == 'enemy'",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Vendor",
+                "region_type": "event",
+                "position": [
+                    4,
+                    1
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Vendor",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Arena",
+                "region_type": "event",
+                "position": [
+                    7,
+                    1
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "Challenge",
+                "condition": "True",
+                "time_left": null,
+                "only_once": true,
+                "interrupt_move": false
+            }
+        ],
+        "unit_groups": [
+            {
+                "nid": "CinaA",
+                "units": [
+                    "Ephraim",
+                    "Seth",
+                    "Myrrh",
+                    "101"
+                ],
+                "positions": {
+                    "Ephraim": [
+                        6,
+                        19
+                    ],
+                    "Seth": [
+                        7,
+                        19
+                    ],
+                    "Myrrh": [
+                        5,
+                        20
+                    ],
+                    "101": [
+                        13,
+                        18
+                    ]
+                }
+            },
+            {
+                "nid": "CinaEwan",
+                "units": [
+                    "Ewan",
+                    "Saleh"
+                ],
+                "positions": {
+                    "Saleh": [
+                        5,
+                        10
+                    ],
+                    "Ewan": [
+                        4,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "CinaCaell",
+                "units": [
+                    "Caellach",
+                    "102",
+                    "103"
+                ],
+                "positions": {}
+            },
+            {
+                "nid": "CinaBoss",
+                "units": [
+                    "104",
+                    "105",
+                    "106",
+                    "107",
+                    "108",
+                    "109",
+                    "136",
+                    "137",
+                    "138",
+                    "167",
+                    "168"
+                ],
+                "positions": {
+                    "104": [
+                        17,
+                        2
+                    ],
+                    "105": [
+                        18,
+                        1
+                    ],
+                    "106": [
+                        15,
+                        1
+                    ],
+                    "107": [
+                        19,
+                        3
+                    ],
+                    "108": [
+                        20,
+                        4
+                    ],
+                    "109": [
+                        12,
+                        2
+                    ],
+                    "136": [
+                        3,
+                        3
+                    ],
+                    "137": [
+                        9,
+                        4
+                    ],
+                    "138": [
+                        6,
+                        2
+                    ],
+                    "146": [
+                        3,
+                        26
+                    ],
+                    "167": [
+                        18,
+                        10
+                    ],
+                    "168": [
+                        19,
+                        9
+                    ]
+                }
+            },
+            {
+                "nid": "EnemyGroup",
+                "units": [
+                    "Marisa",
+                    "110",
+                    "111",
+                    "112",
+                    "113",
+                    "114",
+                    "115",
+                    "116",
+                    "117",
+                    "118",
+                    "119",
+                    "120",
+                    "121",
+                    "122",
+                    "123",
+                    "124",
+                    "125",
+                    "134",
+                    "135",
+                    "145",
+                    "126",
+                    "127",
+                    "128",
+                    "129",
+                    "130",
+                    "131",
+                    "132",
+                    "133",
+                    "139",
+                    "140",
+                    "141",
+                    "142",
+                    "Caellach",
+                    "102",
+                    "103",
+                    "143",
+                    "144"
+                ],
+                "positions": {}
+            },
+            {
+                "nid": "ReinT3",
+                "units": [
+                    "151",
+                    "152"
+                ],
+                "positions": {
+                    "151": [
+                        20,
+                        23
+                    ],
+                    "152": [
+                        20,
+                        21
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT4",
+                "units": [
+                    "153",
+                    "154",
+                    "155"
+                ],
+                "positions": {
+                    "153": [
+                        20,
+                        23
+                    ],
+                    "154": [
+                        20,
+                        21
+                    ],
+                    "155": [
+                        0,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT5",
+                "units": [
+                    "156",
+                    "157"
+                ],
+                "positions": {
+                    "156": [
+                        0,
+                        10
+                    ],
+                    "157": [
+                        20,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT6",
+                "units": [
+                    "158",
+                    "159"
+                ],
+                "positions": {
+                    "158": [
+                        0,
+                        10
+                    ],
+                    "159": [
+                        20,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT7",
+                "units": [
+                    "160"
+                ],
+                "positions": {
+                    "160": [
+                        20,
+                        10
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT8",
+                "units": [
+                    "161",
+                    "162"
+                ],
+                "positions": {
+                    "161": [
+                        16,
+                        0
+                    ],
+                    "162": [
+                        18,
+                        0
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT9",
+                "units": [
+                    "163",
+                    "164"
+                ],
+                "positions": {
+                    "163": [
+                        16,
+                        0
+                    ],
+                    "164": [
+                        18,
+                        0
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT10",
+                "units": [
+                    "165",
+                    "166"
+                ],
+                "positions": {
+                    "165": [
+                        16,
+                        0
+                    ],
+                    "166": [
+                        18,
+                        0
+                    ]
+                }
+            },
+            {
+                "nid": "ReinT2",
+                "units": [
+                    "146",
+                    "147",
+                    "148"
+                ],
+                "positions": {
+                    "146": [
+                        3,
+                        27
+                    ],
+                    "147": [
+                        4,
+                        29
+                    ],
+                    "148": [
+                        1,
+                        29
+                    ]
+                }
+            }
+        ],
+        "ai_groups": []
+    }
+]

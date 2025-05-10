@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Sleep_Shot_Art_T2",
+        "name": "Sleep Shot",
+        "desc": "<red>CA:</>+6 Damage, +50 Hit and inflicts enemy with Sleep after hit. <green>CD:4 Turns</>",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            9
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Sleep_Shot_Skill"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

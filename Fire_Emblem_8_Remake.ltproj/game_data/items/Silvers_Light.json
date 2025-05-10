@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Silvers_Light",
+        "name": "Silver's Light",
+        "desc": "Seth's own silver variant of light magic.\n<green>Skills:</>Silver's Champion\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+10 Crit damage.",
+        "icon_nid": "Light Tomes Sheet",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine_Silver"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Silvers_Champion",
+                    "Crit_Damage_Bonus_10"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Seth"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Seth\").wexp['Light'] < 180"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

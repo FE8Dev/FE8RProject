@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Fire_Blast",
+        "name": "Fire Blast",
+        "desc": "<red>CA:</>A 5 range AOE fire attack that gives the Extremely Burned status to all enemies hit. Effective damage against Horses. <green>CD:4 Turns</>\nUses STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Fire_Blast"
+            ],
+            [
+                "build_charge",
+                4
+            ]
+        ]
+    }
+]

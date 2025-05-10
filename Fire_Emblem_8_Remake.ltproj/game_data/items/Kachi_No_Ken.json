@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Kachi_No_Ken",
+        "name": "Kachi No Ken",
+        "desc": "Death or Victory is a fun game for the gambling God.\n<green>Skills:</>Risky Vantage, Flash Step, Gamble+\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>LCK + STR (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('STR')))}</>), +10 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Risky_Vantage",
+                    "Gamble_EventP"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Joshua"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_STR_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Joshua\").wexp['Sword'] >= 360"
+            ]
+        ]
+    }
+]

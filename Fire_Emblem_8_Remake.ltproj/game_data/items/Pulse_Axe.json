@@ -1,0 +1,127 @@
+[
+    {
+        "nid": "Pulse_Axe",
+        "name": "Pulse Axe",
+        "desc": "An axe charged with explosive thunder magic.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "Levin Sword"
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Bolting2"
+            ],
+            [
+                "map_cast_sfx",
+                "Bolting1"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_2"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Amelia"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Amelia\").wexp['Axe'] < 180"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
+                ]
+            ]
+        ]
+    }
+]

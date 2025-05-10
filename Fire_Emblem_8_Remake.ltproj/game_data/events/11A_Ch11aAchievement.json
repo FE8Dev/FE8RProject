@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch11aAchievement",
+        "trigger": "unit_death",
+        "level_nid": "11A",
+        "condition": "game.level_vars['LarachelKill'] == 5",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch11a;true;banner",
+            "give_item;convoy;Magelight"
+        ],
+        "nid": "11A Ch11aAchievement"
+    }
+]

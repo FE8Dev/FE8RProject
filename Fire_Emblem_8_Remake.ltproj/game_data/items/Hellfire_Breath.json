@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Hellfire_Breath",
+        "name": "Hellfire Breath",
+        "desc": "Dragon's fire said to come from Hell itself.\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Seared</><icon>Shadowblight</>, Cursed (15)\n<red>very effective:</><icon>Horse</><icon>Infantry</>",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                45
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Flamberge"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cormag"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cormag\").wexp['Monster'] >= 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

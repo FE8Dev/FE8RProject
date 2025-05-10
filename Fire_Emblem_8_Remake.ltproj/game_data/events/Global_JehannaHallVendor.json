@@ -1,0 +1,22 @@
+[
+    {
+        "name": "JehannaHallVendor",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;55- Shops Orchestral Cover;500",
+            "shop;{eval:game.game_vars.get('_last_choice')};Warp,Rescue,Physic,MultihealP,Unlock,Elixir,Thief_Bag_P;vendor",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global JehannaHallVendor"
+    }
+]

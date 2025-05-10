@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Reduced_Vision",
+        "name": "Reduced Vision",
+        "desc": "Reduce enemies Hit by unit's Internal LV x2 for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            33
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "dynamic_accuracy",
+                "(unit.get_internal_level()) * -2"
+            ],
+            [
+                "unit_anim",
+                "Dazzled"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    255,
+                    127
+                ]
+            ]
+        ]
+    }
+]

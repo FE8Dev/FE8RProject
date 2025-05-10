@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathCucara",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Cucara'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Cucara;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Cucara;Wait!|No!|I\u2019m sorry everyone...|I let down...|our Roach Gang...",
+            "else",
+            "speak;Cucara;Wait!|No!|I\u2019m sorry everyone...|I let down...|our Roach Gang...",
+            "end",
+            "expression;Cucara;CloseEyes",
+            "remove_portrait;Cucara",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathCucara"
+    }
+]

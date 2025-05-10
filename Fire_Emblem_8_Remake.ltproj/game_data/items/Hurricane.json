@@ -1,0 +1,134 @@
+[
+    {
+        "nid": "Hurricane",
+        "name": "Hurricane",
+        "desc": "Tana summons a Hurricane to blow an enemy away. <green>CD:6</>\n<orange>Element:</><icon>Wind</>\n<violet>Inflicts:</><icon>Confuse</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Warps enemy (not bosses), Splash Damage (30%).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Tempest"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_C"
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "sequence_item",
+                [
+                    "Tornado_Warp_1",
+                    "Tornado_Warp_2"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Confuse"
+                ]
+            ],
+            [
+                "cooldown",
+                6
+            ],
+            [
+                "map_cast_sfx",
+                "Aircalibur"
+            ],
+            [
+                "map_target_cast_anim",
+                "AOE_Blizzard"
+            ],
+            [
+                "eval_available",
+                "u(\"Tana\").wexp['Anima'] >= 180 and u(\"Tana\").wexp['Anima'] < 360"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

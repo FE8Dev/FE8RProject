@@ -1,0 +1,19 @@
+[
+    {
+        "name": "GirlDeath",
+        "trigger": "unit_death",
+        "level_nid": "6",
+        "condition": "unit.nid == '103'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Girl;Right",
+            "speak;Villager Girl;Ahh...",
+            "expression;Villager Girl;CloseEyes",
+            "remove_portrait;Villager Girl",
+            "game_var;CivilliansDead;1"
+        ],
+        "nid": "6 GirlDeath"
+    }
+]

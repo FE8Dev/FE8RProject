@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "_Death_Adveniment",
+        "name": "Death Adveniment",
+        "desc": "Death claims all life, few escape its grasp. Starts on CD.<CD:8>\n<green>Skills:</>Grasp Heart<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Cannot miss, cannot DS, can't crit.",
+        "icon_nid": "{Beansy} Abort",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 2"
+            ],
+            [
+                "map_cast_sfx",
+                "Shine"
+            ],
+            [
+                "status_on_equip",
+                "_Grab_Heart"
+            ],
+            [
+                "cooldown",
+                8
+            ],
+            [
+                "prf_unit",
+                [
+                    "_Azuth"
+                ]
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"_Azuth\").wexp['Staff'] >= 360"
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    }
+]

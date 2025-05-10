@@ -1,0 +1,119 @@
+[
+    {
+        "nid": "Hysteria_Garcia",
+        "name": "Hysteria",
+        "desc": "A deadly, heavy blade warped by Garcia's past.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Confuse</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            6,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                40
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                35
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Dark"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Confuse",
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garcia"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Enrage_Item"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Garcia\").wexp['Sword'] >= 360 and u(\"Garcia\").wexp['Sword'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    }
+]

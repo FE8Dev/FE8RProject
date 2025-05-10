@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Venom_Shuriken_EP_hide",
+        "name": "Venom Shuriken",
+        "desc": "<red>CA: </>+3 Sword range. <green>CD:0 Turns</>\nEffect is always active during EP.\nSword attacks inflict the Venom to enemies on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "3"
+            ],
+            [
+                "item_override",
+                "Kunai_Effect"
+            ],
+            [
+                "give_status_after_hit",
+                "Venomous_Effect"
+            ]
+        ]
+    }
+]

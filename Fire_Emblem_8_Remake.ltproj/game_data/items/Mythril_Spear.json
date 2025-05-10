@@ -1,0 +1,106 @@
+[
+    {
+        "nid": "Mythril_Spear",
+        "name": "Mythril Spear",
+        "desc": "A mythical spear forged exclusively for Syrene.\n<green>Skills:</>Wrath of the Valkyries+, Lance Guard (SS)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            8,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                29
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                21
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Syrene"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Wrath_Of_The_Valkyries_AuraP"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Syrene\").wexp['Lance'] >= 420 and u(\"Syrene\").wexp['Lance'] < 480"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

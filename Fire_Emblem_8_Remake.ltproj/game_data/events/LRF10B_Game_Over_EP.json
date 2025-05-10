@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Game_Over_EP",
+        "trigger": "unit_wait",
+        "level_nid": "LRF10B",
+        "condition": "game.check_dead(\"Eirika\") or game.check_dead(\"Ephraim\") or len(game.get_units_in_party()) == 0",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "trigger_script;Global DeathTimewheel"
+        ],
+        "nid": "LRF10B Game_Over_EP"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightPablo",
+        "trigger": "combat_start",
+        "level_nid": "13A",
+        "condition": "unit.nid == \"Pablo\" or unit2.nid == \"Pablo\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Pablo;Left",
+            "speak;Pablo;Grrr...|I've got more money then you've ever seen.|What say you?|Join me, and take a seat of power at my side.",
+            "remove_portrait;Pablo"
+        ],
+        "nid": "13A FightPablo"
+    }
+]

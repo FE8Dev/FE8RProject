@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Dark_Seal",
+        "name": "Dark Seal",
+        "desc": "Attacks inflict Silence and Seal after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            43
+        ],
+        "components": [
+            [
+                "give_statuses_after_combat",
+                [
+                    "Silence",
+                    "Sealed"
+                ]
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Summon_Deathgoyle",
+        "name": "Summon",
+        "desc": "Summon two Deathgoyle units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "condition",
+                "not game.check_alive('deathgoyle_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_Deathgoyle"
+            ]
+        ]
+    }
+]

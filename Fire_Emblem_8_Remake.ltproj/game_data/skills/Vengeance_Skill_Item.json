@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Vengeance_Skill_Item",
+        "name": "Vengeance",
+        "desc": "Add missing HP to attack.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1)"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

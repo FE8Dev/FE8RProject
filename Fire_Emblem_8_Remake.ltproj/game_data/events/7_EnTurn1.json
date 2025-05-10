@@ -1,0 +1,19 @@
+[
+    {
+        "name": "EnTurn1",
+        "trigger": "enemy_turn_change",
+        "level_nid": "7",
+        "condition": "game.turncount == 1",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Murray",
+            "flicker_cursor;Murray",
+            "wait;500",
+            "add_portrait;Murray;Left",
+            "speak;Murray;We're under attack!|Rouse yourselves!|General Valter's adjutant, Lord Tirado, has charged us with defending the castle!|Show them the might of Murray's Brigade!|Don't let anyone near the castle!"
+        ],
+        "nid": "7 EnTurn1"
+    }
+]

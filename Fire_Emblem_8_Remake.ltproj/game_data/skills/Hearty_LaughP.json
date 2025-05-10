@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Hearty_LaughP",
+        "name": "Hearty Laugh+",
+        "desc": "Adds Dozla's STR to Crit damage and Hit for each ally within 2 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "eval_crit_additional",
+                "(unit.get_stat('STR'))*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2])"
+            ],
+            [
+                "dynamic_accuracy",
+                "(unit.get_stat('STR'))*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2])"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

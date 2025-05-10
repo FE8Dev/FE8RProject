@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "Long_Throw_Art_T2",
+        "name": "Long Throw",
+        "desc": "<red>CA: </>+1 Lance Range. +40 Crit damage when using Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            7
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Lance'"
+            ],
+            [
+                "combat_art",
+                "Long_Throw_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance'"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Long_Throw_EP_hide"
+                ]
+            ]
+        ]
+    }
+]

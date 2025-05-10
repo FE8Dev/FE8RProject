@@ -1,0 +1,147 @@
+[
+    {
+        "nid": "Blitz_Axe_Blast",
+        "name": "Blitz Axe (<icon>Blast</>)",
+        "desc": "An explosive axe made for the Thunder General. Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), no WEXP gain, cannot DS, (AOE Blast:3)",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            8,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Dire_Thunder"
+            ],
+            [
+                "enemy_blast_aoe",
+                3
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Bolting2"
+            ],
+            [
+                "map_cast_sfx",
+                "Bolting1"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Amelia"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Amelia\").wexp['Axe'] >= 360"
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
+                ]
+            ]
+        ]
+    }
+]

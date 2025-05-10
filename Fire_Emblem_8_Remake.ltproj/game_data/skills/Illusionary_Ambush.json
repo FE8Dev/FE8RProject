@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Illusionary_Ambush",
+        "name": "Illusionary Ambush",
+        "desc": "Gives this unit Desperation.\nAdd this unit's Avoid/5 to attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "((unit.get_stat('SPD') * 2) + unit.get_stat('LCK')) // 5"
+            ],
+            [
+                "desperation",
+                null
+            ]
+        ]
+    }
+]

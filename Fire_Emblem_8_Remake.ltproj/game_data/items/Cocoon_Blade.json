@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Cocoon_Blade",
+        "name": "Cocoon Blade",
+        "desc": "Hardened silk covers this blade.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, HP absorb (25%).",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            5,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                34
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "BaelBaby"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BaelBaby\").wexp['Sword'] >= 360 and u(\"BaelBaby\").wexp['Sword'] < 420"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Webbed",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "lifelink",
+                0.25
+            ]
+        ]
+    }
+]

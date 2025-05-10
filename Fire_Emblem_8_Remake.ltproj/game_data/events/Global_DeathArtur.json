@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathArtur",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Artur'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Artur;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Artur;The rest...|is up to you.",
+            "else",
+            "speak;Artur;I feel a little faint...|I'm gonna fall back and rest for a while.",
+            "end",
+            "expression;Artur;CloseEyes",
+            "remove_portrait;Artur",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathArtur"
+    }
+]

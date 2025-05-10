@@ -1,0 +1,90 @@
+[
+    {
+        "nid": "Furious_Fang",
+        "name": "Furious Fang",
+        "desc": "Red fangs of a Hellhound.\n<green>Skills:</>Injured Fury, Cornered Beast\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Doggo"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Doggo\").wexp['Monster'] < 120"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Injured_Fury",
+                    "Injured_Fury_Recoil",
+                    "Cornered_Beast"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ]
+        ]
+    }
+]

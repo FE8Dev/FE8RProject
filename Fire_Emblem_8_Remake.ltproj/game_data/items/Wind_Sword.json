@@ -1,0 +1,121 @@
+[
+    {
+        "nid": "Wind Sword",
+        "name": "Wind Sword",
+        "desc": "A magical sword infused with the power of wind. <green>CD:2</>\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Magical, MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>), +30 Avoid/Dodge, +1 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            20
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "crit",
+                7
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Wind"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fog_Sword_Effect_Weak",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_WEAK"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

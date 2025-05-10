@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Savage_Blow_T3",
+        "name": "Savage Strike",
+        "desc": "Add MAG/2 to initiating attacks.\nEnemy is dealt 50% of their max HP after initiating combat.\nEnemies within 3 spaces are dealt 20% of their max HP as damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            37
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 2"
+            ],
+            [
+                "post_combat_damage_percent",
+                0.5
+            ],
+            [
+                "savage_blow_fates",
+                3
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

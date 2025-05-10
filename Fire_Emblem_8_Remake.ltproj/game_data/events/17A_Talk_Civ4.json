@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ4",
+        "trigger": "on_talk",
+        "level_nid": "17A",
+        "condition": "check_pair('Eirika', '128')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Eirika;Right;Villager Girl;Left",
+            "expression;Villager Girl;CloseEyes",
+            "speak;Villager Girl;Wahhhhhh!!!|I was so scared!!!",
+            "speak;Eirika;It's ok little one...|You are safe now...",
+            "speak;Villager Girl;Wahhhhh!!!",
+            "multi_remove_portrait;Eirika;Villager Girl",
+            "give_bexp;5000",
+            "remove_talk;Eirika;128"
+        ],
+        "nid": "17A Talk_Civ4"
+    }
+]

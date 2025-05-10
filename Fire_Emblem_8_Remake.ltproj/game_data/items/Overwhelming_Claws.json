@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Overwhelming_Claws",
+        "name": "Overwhelming Claws",
+        "desc": "The weight of what is lost is overwhelming.\n<green>Skills:</>Vicious Blow+\n<violet>Inflicts:</><icon>Venom</>x5<icon>Bleed</>x4\n<pink>Misc:</>STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "prf_unit",
+                [
+                    "ZombieBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"ZombieBoy\").wexp['Monster'] >= 480"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vicious_Blow_P"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_STRONG"
+            ]
+        ]
+    }
+]

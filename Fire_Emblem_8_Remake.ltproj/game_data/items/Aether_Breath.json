@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Aether_Breath",
+        "name": "Aether Breath",
+        "desc": "A strange breath that siphons magic.\n<violet>Inflicts:</><icon>Silence</>\n<red>Effective:</><icon>Magic</><icon>Monster</>\n<pink>Misc:</>Magical, HP Absorb (25%).",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "status_on_hit",
+                "Silence"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "battle_cast_anim",
+                "Nirvana"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ross"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Ross\").wexp['Monster'] >= 360 and u(\"Ross\").wexp['Monster'] < 420"
+            ],
+            [
+                "lifelink",
+                0.25
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                0
+            ]
+        ]
+    }
+]

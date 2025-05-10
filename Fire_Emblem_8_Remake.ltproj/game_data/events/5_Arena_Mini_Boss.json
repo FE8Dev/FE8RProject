@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Arena_Mini_Boss",
+        "trigger": "Challenge",
+        "level_nid": "5",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;300",
+            "change_background;Arena",
+            "transition;open;300",
+            "#music;58 Colosseum Entrance;300",
+            "music;58- Colosseum Entrance Orchestral Cover;500",
+            "add_portrait;Areana Guy;Left,Middle",
+            "speak;Arena Guy;Sorry, pal, the Arena is closed for the time being.|Some idiot won too much, and we're broke.|If you're itching for a fight, though... I can get the champ for ya?|He'll take a fight outside the Arena with you.|What do you say?",
+            "choice;ArenaFight;Fight the Arena champion?;Yes,No",
+            "remove_portrait;Areana Guy",
+            "transition;close;300",
+            "change_background",
+            "transition;open;300",
+            "music_fade_back;300",
+            "if;'{v:_last_choice}' == 'Yes'",
+            "    give_skill;127;SleepI;no_banner",
+            "    add_unit;127;12,7;fade;closest",
+            "    move_unit;127;12,7;normal;closest",
+            "    else",
+            "    end",
+            "has_traded;{unit}"
+        ],
+        "nid": "5 Arena_Mini_Boss"
+    }
+]

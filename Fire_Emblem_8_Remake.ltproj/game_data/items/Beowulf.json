@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Beowulf",
+        "name": "Beowulf",
+        "desc": "A lance said to belong to an old hero.\n<green>Skills:</>Momentum (On active kill), Lance Guard (SS), Command Charge, High Morale (Aura:3)  <orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Armor</><icon>Horse</> <pink>Misc:</>Targets weaker of DEF or SPD.",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                19
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ephraim"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Momentum_Skill",
+                    "Commanders_Sword_Skill",
+                    "High_Morale"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Twist_Fire"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "eval_available",
+                "u(\"Ephraim\").wexp['Lance'] >= 360 and not has_skill(unit, 'Ephraim_Legend')"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_SPD_MIN"
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

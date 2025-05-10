@@ -1,0 +1,129 @@
+[
+    {
+        "nid": "Ivaldi",
+        "name": "Ivaldi",
+        "desc": "Legendary light magic of Rausten.\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>LCK/2 + MAG/2 + DEF/2 (<red>{e:(unit.get_stat('LCK')//2 + unit.get_stat('MAG')//2 + unit.get_stat('DEF')//2))}</>), +5 LCK, +5 DEF, +30 Crit damage.",
+        "icon_nid": "Light",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "value",
+                900
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Ivaldi"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 40,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_30"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ],
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_DEF_MID"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "name": "MarisaTalkGerik",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Gerik','Marisa')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Gerik;Right;Marisa;Left",
+            "#music;50 Comrades;100",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Gerik;Is that you, Marisa?",
+            "speak;Marisa;Chief.",
+            "speak;Gerik;What a mess...|Looks like the guild bungled.|They're usually diligent about making sure this sort of thing doesn't happen.|But here we are, two people of the same troop, working for opposite sides.",
+            "speak;Marisa;What should we do?",
+            "speak;Gerik;Aye, well, that's a good question...|As a mercenary, your loyalty should always lie with the person paying your wages.|You decide.|We can cross blade if you want, but I'd rather you retreat.|'Course, if you betray your employer, you'll soil your sterling name.",
+            "speak;Marisa;C'mon, Chief.|What would YOU like me to do?",
+            "speak;Gerik;Well, that's easy.|I'd like you to come over and join my side.",
+            "speak;Marisa;Right.|Done.",
+            "speak;Gerik;Ho-hold on...|Is that it?|Just like that?|You know what this will do to your reputation, right?",
+            "speak;Marisa;Uh-huh.",
+            "multi_remove_portrait;Gerik;Marisa",
+            "change_team;Marisa;player",
+            "change_ai;Marisa;None",
+            "remove_talk;Gerik;Marisa",
+            "music_fade_back;100",
+            "level_var;MarisaReinforcements;True",
+            "has_traded;{unit}"
+        ],
+        "nid": "10A MarisaTalkGerik"
+    }
+]

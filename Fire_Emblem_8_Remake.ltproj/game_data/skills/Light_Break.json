@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Light_Break",
+        "name": "Light Break",
+        "desc": "<red>CA:</>A Light magic attack that hits 4 different enemies. Cannot DS. <green>CD:4 Turns</>\nUses LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Light_Break"
+            ],
+            [
+                "build_charge",
+                4
+            ]
+        ]
+    }
+]

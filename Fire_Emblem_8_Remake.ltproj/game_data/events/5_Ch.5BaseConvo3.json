@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Ch.5BaseConvo3",
+        "trigger": "on_base_convo",
+        "level_nid": "5",
+        "condition": "unit == 'Shopping**'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;Town",
+            "music;56- Armories Orchestral Cover",
+            "transition;open;500",
+            "multi_add_portrait;Garcia;Left;Vanessa;Right",
+            "speak;Garcia;Looking for a new weapon there, Vanessa?",
+            "speak;Vanessa;Oh, yes.|I've looked at a couple of stores, but I'm not sure what I should buy...",
+            "speak;Garcia;You are a Pegasus Knight, right?|You're most familiar with a lance, then, correct?",
+            "speak;Vanessa;Correct, it is the weapon I feel the most comfortable with.",
+            "speak;Garcia;So you probably have the hardest time against axe fighters, then.|If that's the case, you should try this.",
+            "bop_portrait;Vanessa",
+            "speak;Vanessa;An Axereaver!|Where did you find this?!",
+            "speak;Garcia;Let's just say, in my line of work...|You tend to get a lot of experience, haggling with armories.|Either way, I think this should help you get an edge against axes.",
+            "speak;Vanessa;Thank you, General Garcia!|I appreciate it!",
+            "speak;Garcia;Please, just call me Garcia.|No need to be formal with me.",
+            "speak;Vanessa;Are you sure?",
+            "speak;Garcia;Yes, now go ahead and take that lance.|I'll take care of things here.",
+            "speak;Vanessa;Thank you!|You have my respect Gene-, er, Garcia!",
+            "speak;Garcia;Ha ha ha!|You're very welcome!",
+            "multi_remove_portrait;Garcia;Vanessa",
+            "give_item;Vanessa;Axereaver",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back",
+            "ignore_base_convo;Shopping**;t"
+        ],
+        "nid": "5 Ch.5BaseConvo3"
+    }
+]

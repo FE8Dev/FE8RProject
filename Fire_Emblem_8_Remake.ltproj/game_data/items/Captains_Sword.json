@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Captains_Sword",
+        "name": "Captain's Sword",
+        "desc": "A sword Dozla got from the captain of the ship he served on.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>+3 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Seawalk",
+                    "Torrential_Rain_Giver"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Vertical_Light_Blast"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Dozla\").wexp['Sword'] >= 180 and u(\"Dozla\").wexp['Sword'] < 360"
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

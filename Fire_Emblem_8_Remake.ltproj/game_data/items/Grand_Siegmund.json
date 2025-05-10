@@ -1,0 +1,132 @@
+[
+    {
+        "nid": "Grand_Siegmund",
+        "name": "Grand Siegmund",
+        "desc": "Ephraim's ultimate weapon. Infused with ancient fire magic.\n<green>Skills:</>Momentum++ (On active kill), Commands Charge, Lance Guard (X), High Morale (Aura:3) <orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Armor</><icon>Horse</><icon>Monster</> <pink>Misc:</>Targets weaker of DEF or SPD, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>), +15 STR.",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            7,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                33
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                23
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_X",
+                    "Momentum_Skill_PP",
+                    "High_Morale",
+                    "Commanders_Sword_Skill"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Bolganone"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 36,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ephraim"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "battle_animation_music",
+                "31- Sacred Strength Orchestral Cover"
+            ],
+            [
+                "eval_available",
+                "has_skill(unit, 'Ephraim_Ultimate')"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_SPD_MIN"
+            ]
+        ]
+    }
+]

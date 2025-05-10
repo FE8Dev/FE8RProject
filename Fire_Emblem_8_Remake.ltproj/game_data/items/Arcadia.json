@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Arcadia",
+        "name": "Arcadia",
+        "desc": "The name of a hidden paradise where magic can thrive.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +40 Crit damage.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            37,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine_Mage_Tempest"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "reaver",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Franz\").wexp['Anima'] >= 360"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

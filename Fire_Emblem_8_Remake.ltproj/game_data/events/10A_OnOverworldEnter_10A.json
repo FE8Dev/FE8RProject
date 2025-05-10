@@ -1,0 +1,32 @@
+[
+    {
+        "name": "OnOverworldEnter_10A",
+        "trigger": "overworld_start",
+        "level_nid": "10A",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;1;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;DGA;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;18;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;17",
+            "reveal_overworld_node;17",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;18;17",
+            "end"
+        ],
+        "nid": "10A OnOverworldEnter_10A"
+    }
+]

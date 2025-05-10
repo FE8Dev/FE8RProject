@@ -1,0 +1,25 @@
+[
+    {
+        "name": "MyUnitFeats_T3_1st",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "has_skill('MyUnit', 'MyUnit_T3_1st') and unit.level == 5 and unit.nid == 'MyUnit'",
+        "commands": [],
+        "only_once": true,
+        "priority": 30,
+        "_source": [
+            "lvar;feats;[]",
+            "for;feat_skills;range(10)",
+            "  lvar;feats;{v:feats} + [game.get_random_choice([s.nid for s in DB.skills if s.components.get('copysafe') and s.nid not in [x.nid for x in u('MyUnit').skills] and s.nid not in v(\"feats\") and \"_T1\" not in s.nid and \"_T2\" not in s.nid])]",
+            "endf",
+            "choice;skill_gain;Choose a Feat for {e:u('MyUnit').name};{v:feats};Dimensions=5,2;EntryType=type_skill;expression",
+            "give_skill;{e:u('MyUnit')};{v:skill_gain}",
+            "for;skills;[s for s in get_skill(unit,'{v:skill_gain}').copysafe.value]",
+            "        give_skill;{unit};{skills};no_banner",
+            "endf",
+            "remove_skill;MyUnit;MyUnit_T3_1st;no_banner",
+            "give_skill;MyUnit;MyUnit_T3_2nd;no_banner"
+        ],
+        "nid": "Global MyUnitFeats_T3_1st"
+    }
+]

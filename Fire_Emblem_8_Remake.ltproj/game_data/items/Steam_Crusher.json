@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Steam_Crusher",
+        "name": "Steam Crusher",
+        "desc": "Steam can be both relaxing and deadly.\n<green>Skills:</>Steam Flow, Power Chop (SS)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>,Breach (15)\n<red>Effective:</><icon>Horse</>",
+        "icon_nid": "Cormag Axes",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                33
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "Unwieldy",
+                16
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Steam_Flow",
+                    "Power_Chop_SS"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cormag"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cormag\").wexp['Axe'] >= 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Water"
+                ]
+            ]
+        ]
+    }
+]

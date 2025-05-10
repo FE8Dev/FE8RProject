@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Runecarbide_Claws",
+        "name": "Rune Carbide Claws",
+        "desc": "Claws enchanted with protection magic.\n<violet>Inflicts:</>Breach (8), Curse (8)\n<pink>Misc:</>+9/+9 DEF/RES on Equip, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                9
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Scintilla"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Scintilla\").wexp['Monster'] >= 240 and u(\"Scintilla\").wexp['Monster'] < 480"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_8",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        9
+                    ],
+                    [
+                        "RES",
+                        9
+                    ]
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ]
+        ]
+    }
+]

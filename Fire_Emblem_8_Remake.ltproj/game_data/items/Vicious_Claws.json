@@ -1,0 +1,89 @@
+[
+    {
+        "nid": "Vicious_Claws",
+        "name": "Vicious Claws",
+        "desc": "Dirty claws that aren't too sharp.\n<green>Skills:</>Vicious Blow\n<violet>Inflicts:</><icon>Venom</><icon>Bleed</>\n<pink>Misc:</>STR + HP/5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            3,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "ZombieBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"ZombieBoy\").wexp['Monster'] < 120"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vicious_Blow"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_WEAK"
+            ]
+        ]
+    }
+]

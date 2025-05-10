@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch10bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "10A",
+        "condition": "unit.nid == \"169\" and check_pair('Gerik', '169')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch10b;true;banner",
+            "give_item;convoy;Winged_Blade"
+        ],
+        "nid": "10A Ch10bAchievement"
+    }
+]

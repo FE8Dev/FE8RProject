@@ -1,0 +1,22 @@
+[
+    {
+        "name": "BethroenVendor",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;55- Shops Orchestral Cover;500",
+            "shop;{eval:game.game_vars.get('_last_choice')};Mend,Teachers_Staff,Boomburst,Water_Burst,Bolt_Staff,Frozen_Staff,Rapture_Staff,Magelight,Abyss_Staff,Explosion,Elwind,Aqua_Triple_Burst,Frostbite,Big_Bolt,Flamberge,Bloody_Flux,Fused_Dark_Bolt,Hallucinogens,Corruption_Orb,Night_Purge,Solaris,Life_Burst,Shine_Fire,Smite,Crusade_of_Water,Magical_Reach_Scroll,Curse_Scroll,Light_Scroll,Blade_Scroll,Axe_Scroll,Lance_Scroll,Knife_Scroll,Wind_Scroll,Thunder_Scroll,Crossbow_Scroll,Water_Scroll,Ice_Orb,Nature_Orb,Fire_Orb;vendor",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global BethroenVendor"
+    }
+]

@@ -1,0 +1,116 @@
+[
+    {
+        "nid": "Tiger_King",
+        "name": "Tiger King",
+        "desc": "A Heavy blade forged for an ancient hero.\n<green>Skills:</>Money Blow+, Desert Tiger(On kill), Blade Sweep, One Man Army\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>Heavy",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            35,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                55
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                45
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Earth"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Dragon",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "One_Man_Army",
+                    "Money_BlowP",
+                    "Desert_Tiger_Giver"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Gerik\").wexp['Sword'] >= 480 "
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

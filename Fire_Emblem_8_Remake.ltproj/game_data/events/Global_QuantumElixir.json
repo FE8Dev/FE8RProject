@@ -1,0 +1,29 @@
+[
+    {
+        "name": "QuantumElixir",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "set_unit_field;{unit};{e: game.get_random_choice(['Quantum_HP','Quantum_STR','Quantum_MAG','Quantum_SKL','Quantum_SPD','Quantum_LCK','Quantum_DEF','Quantum_RES','Quantum_CON','Quantum_MOV'])};game.get_random(1,4)",
+            "",
+            "game_var;QuantumElixir;game.get_random(1,5)",
+            "",
+            "if;{v:QuantumElixir}==1",
+            "    give_skill;{unit};Fillas_Might",
+            "elif;{v:QuantumElixir}==2",
+            "    give_skill;{unit};Sets_Litany",
+            "elif;{v:QuantumElixir}==4",
+            "    give_skill;{unit};Thors_Ire",
+            "elif;{v:QuantumElixir}==3",
+            "    give_skill;{unit};Ninis_Grace",
+            "elif;{v:QuantumElixir}==5",
+            "    give_skill;{unit};Hit_15Q",
+            "end"
+        ],
+        "nid": "Global QuantumElixir"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "DeathOrson",
+        "trigger": "unit_death",
+        "level_nid": "16B",
+        "condition": "unit.nid == 'Orson_Evil'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Orson Evil;Left",
+            "speak;Orson Evil;Monica...",
+            "expression;Orson Evil;CloseEyes",
+            "remove_portrait;Orson Evil",
+            "if;check_pair('Orson_Evil', ['Doggo','BaelBaby','ZombieBoy','EyeBoy','GargoyleGirl','BoneBoy','HorseyBoy','HorseyGirl', 'SnakeGirl','CyclopsBoy'])",
+            "    complete_achievement;ch16a;true;banner",
+            "    give_item;convoy;Misleading_Light",
+            "end"
+        ],
+        "nid": "16B DeathOrson"
+    }
+]

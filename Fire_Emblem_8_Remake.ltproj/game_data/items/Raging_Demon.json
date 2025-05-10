@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Raging_Demon",
+        "name": "Raging Demon",
+        "desc": "A rage filled warhammer that vaporizes enemies.\n<green>Skills:</>War Blow, Charger+++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</></><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (5)",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                42
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Seared"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Warhammer",
+                    "Fire"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Armor",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "War_Blow",
+                    "Charger_PPP",
+                    "Blade_Vantage_Effect"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "HorseyBoy"
+                ]
+            ],
+            [
+                "shove",
+                5
+            ],
+            [
+                "eval_available",
+                "u(\"HorseyBoy\").wexp['Axe'] >= 420"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    }
+]

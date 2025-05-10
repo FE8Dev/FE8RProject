@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Scorn_Of_The_Slain",
+        "name": "Scorn Of The Slain",
+        "desc": "When initiating, if unit's DEF >= Enemy's DEF, ignore 50% of enemy's DEF, gain +1 bonus attack (+2 if unit doubles), and +25 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.get_stat('DEF') >= target.get_stat('DEF')"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        25
+                    ]
+                ]
+            ]
+        ]
+    }
+]

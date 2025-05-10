@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Inferno_Spear",
+        "name": "Inferno Spear",
+        "desc": "A magical lance tempered inside a volcano. <green>CD:1</>\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2), <red>Effective:</><icon>Horse</>\n<pink>Misc:</>Magical, MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Volcano"
+            ],
+            [
+                "cooldown",
+                1
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "self_status_on_hit",
+                "Seared_AOE_Splash"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

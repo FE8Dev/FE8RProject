@@ -1,0 +1,22 @@
+[
+    {
+        "name": "FightValterEphraim",
+        "trigger": "combat_start",
+        "level_nid": "15A",
+        "condition": "check_pair('Valter', 'Ephraim')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Valter;Left;no_block",
+            "add_portrait;Ephraim;Right",
+            "speak;Valter;Hello again, Ephraim.|I let you flee once, but this time, there's no escape.",
+            "speak;Ephraim;Escape?|I'm not going anywhere.|I came here for you.|I came to defeat you.",
+            "speak;Valter;What's this?|A scurrying little mouse that roars like a lion?|Are you saying this time will be different than last?|Will you finally provide me with some amusement?",
+            "speak;Ephraim;I'll do far more than that.|I'll provide you with a messy end to your sorry life.",
+            "remove_portrait;Valter",
+            "remove_portrait;Ephraim"
+        ],
+        "nid": "15A FightValterEphraim"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "House_2",
+        "trigger": "Visit",
+        "level_nid": "15A",
+        "condition": "region.nid == 'House_2'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;House",
+            "transition;open;500",
+            "add_portrait;{unit};Right",
+            "add_portrait;Villager Man;Left",
+            "speak;Villager Man;All the highest generals in Grado's army receive titles named after gemstones.|The emperor currently has six gemstones fighting in his service.|Caellach, the Tiger Eye, commands the forces fighting here.|The Moonstone, Valter, is taking part in this battle as well.|Glen, also known as the Sunstone, died in the mountains of Carcino.|Selena Fluorspar was killed in western Grado.|Duessel, whom they call Obsidian, is missing in action...|The Blood Beryl, whose real name is Riev, has also gone missing.|Hm?|How do I know all this?|I know I may look young and naive, but this is my job.|I'm here to pass this information along to help you out.|And it's good information, too, so don't waste it.",
+            "multi_remove_portrait;{unit};Villager Man",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "give_bexp;1000",
+            "has_traded;{unit}"
+        ],
+        "nid": "15A House_2"
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch2aAchievement",
+        "trigger": "unit_level_up",
+        "level_nid": "2",
+        "condition": "unit.nid == 'Ross' and unit.level == 5",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch2a;t;banner",
+            "give_item;convoy;Instructors_Horn"
+        ],
+        "nid": "2 Ch2aAchievement"
+    }
+]

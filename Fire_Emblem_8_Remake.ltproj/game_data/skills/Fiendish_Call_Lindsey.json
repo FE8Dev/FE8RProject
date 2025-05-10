@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Fiendish_Call_Lindsey",
+        "name": "Fiendish Call ",
+        "desc": "<red>CA:</>Summon 3 succubi to fight for you. This is a free action. <green>CD:4 Turns</> ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('Succubus1_' + unit.nid) and (not game.check_alive('Succubus2_' + unit.nid)) and (not game.check_alive('Succubus3_' + unit.nid)) "
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "ability",
+                "Fiendish_Call_Lindsey"
+            ]
+        ]
+    }
+]

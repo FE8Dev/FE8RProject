@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Chest_4",
+        "trigger": "Chest",
+        "level_nid": "19B",
+        "condition": "region.nid == 'Chest_4'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Chest_4;fade",
+            "give_item;{unit};Runesword",
+            "has_traded;{unit}"
+        ],
+        "nid": "19B Chest_4"
+    }
+]

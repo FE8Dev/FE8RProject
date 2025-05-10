@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Invitation_PP",
+        "name": "Invitation++",
+        "desc": "Enemies hit by this unit while skill is active will be more likely to attack this unit for a turn. -40 Crit avoid to enemy.\nWhen defending, reduce damage taken by unit's CON * 2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "lost_on_endstep",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "HorseyBoyProvoke"
+                ]
+            ],
+            [
+                "give_status_after_hit",
+                "Invited_PP"
+            ]
+        ]
+    }
+]

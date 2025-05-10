@@ -1,0 +1,24 @@
+[
+    {
+        "name": "DeathTimewheel",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['_current_turnwheel_uses'] != 0",
+            "    transition;close;500",
+            "    change_background;BlackBackground",
+            "    transition;open;500",
+            "    speak;;The timewheel spins.|The Divine ones give you another chance.;;;cinematic",
+            "    change_background",
+            "    activate_turnwheel",
+            "else",
+            "    lose_game",
+            "end"
+        ],
+        "nid": "Global DeathTimewheel"
+    }
+]

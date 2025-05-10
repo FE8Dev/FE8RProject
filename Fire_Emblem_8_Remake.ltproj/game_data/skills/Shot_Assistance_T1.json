@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Shot_Assistance_T1",
+        "name": "Shot Assistance",
+        "desc": "+5 Crit for each adj. ally by this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            48
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

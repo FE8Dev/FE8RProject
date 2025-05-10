@@ -1,0 +1,23 @@
+[
+    {
+        "name": "DeathValter",
+        "trigger": "unit_death",
+        "level_nid": "15A",
+        "condition": "unit.nid == 'Valter'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Valter;Left",
+            "speak;Valter;Urggh...|Gaaaah!",
+            "expression;Valter;CloseEyes",
+            "remove_portrait;Valter",
+            "if;check_pair('Cormag', 'Valter')",
+            "    complete_achievement;ch15b;true;banner",
+            "    give_item;Cormag;Master_Scroll",
+            "    give_item;Cormag;Demon_Spear",
+            "end"
+        ],
+        "nid": "15A DeathValter"
+    }
+]

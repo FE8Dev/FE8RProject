@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Lance_Guard_A",
+        "name": "Lance Guard (A)",
+        "desc": "Reduce damage taken by ((SKL/4) + 10) (<red>{e: (unit.get_stat('SKL')//4)+10}</>).",
+        "icon_nid": "Lance",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "(unit.get_stat('SKL') // 4) + 10"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

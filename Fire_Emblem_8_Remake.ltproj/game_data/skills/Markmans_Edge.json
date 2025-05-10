@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Markmans_Edge",
+        "name": "Marksman's Edge",
+        "desc": "Converts extra hit% into crit%",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            48
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_accuracy_with_current_weapon() >= (target.get_avoid_with_current_weapon() + 100)"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_accuracy_with_current_weapon() - (target.get_avoid_with_current_weapon() + 100)"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

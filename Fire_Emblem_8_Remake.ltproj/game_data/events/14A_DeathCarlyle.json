@@ -1,0 +1,22 @@
+[
+    {
+        "name": "DeathCarlyle",
+        "trigger": "unit_death",
+        "level_nid": "14A",
+        "condition": "unit.nid == 'Carlyle'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Carlyle;Left",
+            "speak;Carlyle;Queen Ismaire.|I'm-",
+            "expression;Carlyle;CloseEyes",
+            "remove_portrait;Carlyle",
+            "if;check_pair('Joshua', 'Carlyle')",
+            "    complete_achievement;ch14a;true;banner",
+            "    give_item;convoy;Kame_no_Katana",
+            "end"
+        ],
+        "nid": "14A DeathCarlyle"
+    }
+]

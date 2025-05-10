@@ -1,0 +1,16 @@
+[
+    {
+        "name": "F1aAchievement",
+        "trigger": "combat_end",
+        "level_nid": "FinalB1",
+        "condition": "game.level_vars['BoneZone'] >= 30",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;final1a;true;banner",
+            "give_item;convoy;Gradivus"
+        ],
+        "nid": "FinalB1 F1aAchievement"
+    }
+]

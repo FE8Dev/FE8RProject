@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Laced_Weapon_Skill",
+        "name": "Laced Weapon",
+        "desc": "Attacks have a chance to inflict the Stun and Shadowblight status on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            30
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Stun"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Shadow_Blight"
+            ]
+        ]
+    }
+]

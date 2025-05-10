@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Abyss_Ring_Skill",
+        "name": "Abyss Ring Skill",
+        "desc": "For the Abyss Ring item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "item_override",
+                "Abyss_Dark"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Monster' in unit2.tags or 'Shadow' in unit2.tags) else 1"
+            ]
+        ]
+    }
+]

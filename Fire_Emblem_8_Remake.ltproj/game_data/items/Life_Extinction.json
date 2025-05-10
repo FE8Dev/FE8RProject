@@ -1,0 +1,124 @@
+[
+    {
+        "nid": "Life_Extinction",
+        "name": "Life Extinction",
+        "desc": "The taboo spell of great destruction. <green>1 use per chapter. Starts on CD, CD:6.</>\n<orange>Element:</><icon>Dark</><violet>Inflicts:</>Curse (25)\n<pink>Misc:</>Global, cannot DS, cannot Crit, cannot Double, cannot Sleep, no WEXP.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            8,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": true,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "damage",
+                70
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weight",
+                50
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Naglfar"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_25",
+                    "Another_Sleep_Immunity"
+                ]
+            ],
+            [
+                "all_enemies_aoe",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Saleh"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Saleh\").wexp['Dark'] >= 480"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "map_hit_sfx",
+                "Naglfar"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "cooldown",
+                6
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

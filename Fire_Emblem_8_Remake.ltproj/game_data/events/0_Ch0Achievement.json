@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Ch0Achievement",
+        "trigger": "combat_end",
+        "level_nid": "0",
+        "condition": "game.check_dead('101') or game.check_dead('102') or game.check_dead('103') or game.check_dead('Oneill') ",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch0a;true;banner",
+            "give_money;500",
+            "enable_fog_of_war;f"
+        ],
+        "nid": "0 Ch0Achievement"
+    }
+]

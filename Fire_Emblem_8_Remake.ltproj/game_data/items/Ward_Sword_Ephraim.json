@@ -1,0 +1,103 @@
+[
+    {
+        "nid": "Ward_Sword_Ephraim",
+        "name": "Ward Sword",
+        "desc": "A sword that counters mages.\n<green>Skills:</>Flash Step\n<red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>+1 SPD, +20 RES.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ephraim"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Ephraim\").wexp['Sword'] < 180"
+            ]
+        ]
+    }
+]

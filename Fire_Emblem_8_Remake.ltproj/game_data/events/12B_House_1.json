@@ -1,0 +1,35 @@
+[
+    {
+        "name": "House_1",
+        "trigger": "Visit",
+        "level_nid": "12B",
+        "condition": "region.nid == 'Village_1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;House",
+            "transition;open;500",
+            "add_portrait;{unit};Right",
+            "add_portrait;Ewan;Left",
+            "music_clear;100",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Ewan;Er, hello.|My name's Ewan.|I'm training to be a sage.|I need to find a woman by the name of Marisa.|I don't know where she's gone.|If you'll help me find her, I'll gladly travel with you.|I'm a useful guy to know.|In a pinch, I can use the magic I've learned so far.|So what do you say?|Do we have a deal?",
+            "multi_remove_portrait;Ewan;{unit}",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back;100",
+            "show_layer;Village_1;fade",
+            "change_team;Ewan;player",
+            "add_unit;Ewan;5,6;fade;closest;south",
+            "autolevel_to;Ewan;9",
+            "add_talk;Ewan;Marisa",
+            "give_bexp;1000",
+            "has_traded;{unit}",
+            "add_lore;Ewan"
+        ],
+        "nid": "12B House_1"
+    }
+]

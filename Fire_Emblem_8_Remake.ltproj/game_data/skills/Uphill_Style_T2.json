@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Uphill_Style_T2",
+        "name": "Uphill Style",
+        "desc": "Attacks with swords get a bonus attack when initiating combat, but reduce DEF by 30%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            47
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.7
+                    ]
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

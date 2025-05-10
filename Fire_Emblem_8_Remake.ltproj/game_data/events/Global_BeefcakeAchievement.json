@@ -1,0 +1,16 @@
+[
+    {
+        "name": "BeefcakeAchievement",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "unit.get_stat('HP')>300 and unit.team == 'player'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;beefcake;true;banner",
+            "give_item;convoy;Body_Ring_Consumable_P"
+        ],
+        "nid": "Global BeefcakeAchievement"
+    }
+]

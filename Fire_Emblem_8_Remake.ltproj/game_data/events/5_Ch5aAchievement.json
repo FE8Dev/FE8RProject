@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch5aAchievement",
+        "trigger": "unit_death",
+        "level_nid": "5",
+        "condition": "unit.nid == '127' and check_pair('Joshua', '127')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch5a;true;banner",
+            "give_money;2000"
+        ],
+        "nid": "5 Ch5aAchievement"
+    }
+]

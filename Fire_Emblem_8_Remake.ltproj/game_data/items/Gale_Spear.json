@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Gale_Spear",
+        "name": "Gale Spear",
+        "desc": "A lance imbued with a large wind gem.\n<green>Skills:</>Lance Guard (A)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            5,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                7
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_A"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vanessa"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Vanessa\").wexp['Lance'] >= 240 and u(\"Vanessa\").wexp['Lance'] < 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

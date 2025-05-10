@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Ch8bAchievement",
+        "trigger": "unit_wait",
+        "level_nid": "8",
+        "condition": "has_skill('33', 'Frozen')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch8b;true;banner",
+            "update_achievement;ch8b;Pirate Popsicle;Ch.8: Inflict Frozen on the Berserker.",
+            "give_item;convoy;Frozen_Staff"
+        ],
+        "nid": "8 Ch8bAchievement"
+    }
+]

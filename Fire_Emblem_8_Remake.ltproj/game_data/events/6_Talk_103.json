@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Talk_103",
+        "trigger": "on_talk",
+        "level_nid": "6",
+        "condition": "check_pair('Eirika','103')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Girl;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "expression;Villager Girl;CloseEyes",
+            "speak;Villager Girl;WAHHHHHH!!! 'sob'",
+            "speak;Eirika;It's ok little one, everything will be ok...",
+            "speak;Villager Girl;WAHHHHHHHHHHH!!!! 'sob'",
+            "expression;Eirika;HalfCloseEyes",
+            "speak;Eirika;.....;no_talk",
+            "multi_remove_portrait;Villager Girl;Eirika",
+            "give_bexp;800",
+            "remove_talk;Eirika;103"
+        ],
+        "nid": "6 Talk_103"
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Zonta Fight",
+        "trigger": "combat_start",
+        "level_nid": "5x",
+        "condition": "unit.nid == \"Zonta\" or unit2.nid == \"Zonta\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Zonta;Left",
+            "speak;Zonta;Do you truly think you can take us with those numbers?|Imbecile!|You'll learn the error of your ways.",
+            "remove_portrait;Zonta"
+        ],
+        "nid": "5x Zonta Fight"
+    }
+]

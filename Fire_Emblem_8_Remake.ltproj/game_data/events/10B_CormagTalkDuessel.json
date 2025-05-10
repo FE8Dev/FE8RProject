@@ -1,0 +1,39 @@
+[
+    {
+        "name": "CormagTalkDuessel",
+        "trigger": "on_talk",
+        "level_nid": "10B",
+        "condition": "check_pair('Duessel','Cormag')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Duessel;Right;Cormag;Left",
+            "#music;50 Comrades;300",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Duessel;Is that you, Cormag?",
+            "speak;Cormag;Sir Duessel...|You have abandoned your country and your lord.|I must take your life.",
+            "speak;Duessel;I know.|I'm ready now.|I have no duty anymore.|But you, Cormag.|You're a soldier of the empire.|Follow your orders and fulfill your mission.|I'm ready.",
+            "speak;Cormag;......;no_talk",
+            "speak;Duessel;Cormag!",
+            "speak;Cormag;To be honest, I'm confused.|Must you truly die?|Is your crime really deserving of death?|I know my brother could have settled this, but...|I've come here to stop you, and yet I find that I cannot.",
+            "speak;Duessel;......;no_talk",
+            "speak;Cormag;You see, I couldn't believe you would ever truly turn traitor.|And now I stand here, looking at you, Duessel of the Imperial Three.|And you do not have the eyes of a traitor.",
+            "speak;Duessel;......;no_talk",
+            "speak;Cormag;No.|I cannot turn my lance on you, the empire's faithful son.|General Duessel...|Until this matter is sorted, you travel under my protection.",
+            "speak;Duessel;Cormag...|Forgive me...",
+            "multi_remove_portrait;Duessel;Cormag",
+            "music_fade_back;100",
+            "change_ai;Cormag;None",
+            "change_team;Cormag;player",
+            "change_ai;Cormag;None",
+            "remove_talk;Duessel;Cormag",
+            "level_var;CormagTalk;True",
+            "if;DB.classes.get('{e:game.get_unit('Cormag').klass}').tier == 1",
+            "promote;Cormag",
+            "else",
+            "end"
+        ],
+        "nid": "10B CormagTalkDuessel"
+    }
+]

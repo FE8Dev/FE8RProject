@@ -1,0 +1,99 @@
+[
+    {
+        "nid": "Grand_Cross",
+        "name": "Grand Cross",
+        "desc": "A divine lance that smites evil with righteous fury. Multi-Item\n<green>Skills:</>Lance Guard (X)\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>LCK + SLK (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                32
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "weight",
+                23
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_X"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_STRONG"
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

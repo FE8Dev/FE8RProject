@@ -1,0 +1,98 @@
+[
+    {
+        "nid": "Light_Break",
+        "name": "Light Break",
+        "desc": "<red>CA:</>A Light magic attack that hits 4 different enemies. Cannot DS. <green>CD:4 Turns</>\nUses LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            45
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "multi_target",
+                4
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Shine"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_STRONG"
+            ]
+        ]
+    }
+]

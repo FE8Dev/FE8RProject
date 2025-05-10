@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Heatrock_Bow",
+        "name": "Heatrock Bow",
+        "desc": "A rare bow made from a heated rock with strange properties.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//2))}</>).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            9,
+            7
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                4
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vanessa"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Vanessa\").wexp['Bow'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Seared_AOE_Splash"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth",
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

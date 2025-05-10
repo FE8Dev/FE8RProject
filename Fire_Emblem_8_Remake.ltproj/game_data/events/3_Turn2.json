@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Turn2",
+        "trigger": "other_turn_change",
+        "level_nid": "3",
+        "condition": "game.turncount == 1",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "remove_unit;Placeholder;immediate",
+            "move_cursor;0,5",
+            "add_unit;Colm;0,5",
+            "flicker_cursor;Colm",
+            "add_portrait;Colm;Left",
+            "speak;Colm;And here we go!|Ha! And not a soul saw me. These bandits are easy picking.|I guess I might as well start with these chests here.",
+            "remove_portrait;Colm",
+            "move_unit;Colm;2,4",
+            "if;game.game_vars['TutorialNewMech'] == True or game.game_vars['Tutorial'] == 'Yes'",
+            "speak;Narrator;       Thieves/Steal/Locktouch/Daggers;center;;narration_top",
+            "add_portrait;Anna;Left",
+            "speak;Anna;Let me introduce you to thieves and the mechanics that are involved around them!|Thieves are able to open doors and chests without the need of door/chest keys thanks to the <red>Steal</> skill!|They can also steal items and even weapons if they are faster than the unit they are stealing from!|This also means the same to enemy thieves so be careful!|Though thieves aren't the only ones that can steal!|Any class that has the <icon>Steal</> icon in their class description will automatically be able to steal once in that class.|Once a unit can steal, they will be able to steal no matter what class they are in after that!|Even if they promote into a class that doesn't have the <icon>Steal</> icon!|So don't be afraid when promoting your units!|Though be careful, units can't steal if they have a heavy weapon equipped!|Units with the Steal skill and that can use swords can also use <red>Daggers!</>|Daggers can attack multiple times and cause an enemy to <red>Bleed!</><icon>Bleed</>|Enemies with a stack of Bleed<icon>Bleed</> will take 7% of their Max HP as damage for each stack at the beginning of their phase.|They will also have reduced SKL and SPD as well!|Daggers also deal bonus Crit damage!|Use them to whittle down tough enemies down to nothing!;;;;6",
+            "remove_portrait;Anna",
+            "else",
+            "end"
+        ],
+        "nid": "3 Turn2"
+    }
+]

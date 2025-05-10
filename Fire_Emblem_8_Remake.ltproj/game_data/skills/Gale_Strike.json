@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Gale_Strike",
+        "name": "Gale Strike",
+        "desc": "Unit may act again after killing an enemy with 75% Max HP or less.\nWorks 3 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_hp() <= target.get_max_hp() // 1.333"
+            ],
+            [
+                "galeforce",
+                null
+            ],
+            [
+                "drain_charge",
+                3
+            ]
+        ]
+    }
+]

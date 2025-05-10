@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch3aAchievementCheck",
+        "trigger": "combat_end",
+        "level_nid": "3",
+        "condition": "game.check_dead(\"Bazba\") and (unit.nid == 'Neimi' or unit2.nid == 'Neimi')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch3a;true;banner",
+            "give_item;convoy;Secret_Book_Consumable"
+        ],
+        "nid": "3 Ch3aAchievementCheck"
+    }
+]

@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Ebony_Greatlance_Shop",
+        "name": "Ebony G.L.",
+        "desc": "Full of darkness.\n<green>Skills:</>Lance Guard (A), G.L. Mastery<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (8) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + CON*1.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*1.5))}</>).",
+        "icon_nid": "Some Greatlances Sheet",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                34
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                26
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_A",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance",
+                    "Dark"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "value",
+                1600
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_MID"
+            ]
+        ]
+    }
+]

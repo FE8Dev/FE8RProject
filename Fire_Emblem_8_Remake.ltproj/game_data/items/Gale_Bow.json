@@ -1,0 +1,100 @@
+[
+    {
+        "nid": "Gale_Bow",
+        "name": "Gale Bow",
+        "desc": "A bow that is the bane of all fliers.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + MOV*3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*3))}</>), +40 Avoid/Dodge.",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Fog_Sword_Effect_Mid"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3.0,
+                    "effective_bonus_damage": 15,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_MOV_MID"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

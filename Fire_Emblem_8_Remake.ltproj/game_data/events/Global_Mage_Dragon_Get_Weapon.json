@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Mage_Dragon_Get_Weapon",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.klass =='T3_Mage_Dragon_Monster_Cormag_First' and unit.level == 1 and unit.nid == 'MyUnit'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "remove_item;{unit};Training_Stone",
+            "give_item;{unit};Magic_Breath"
+        ],
+        "nid": "Global Mage_Dragon_Get_Weapon"
+    }
+]

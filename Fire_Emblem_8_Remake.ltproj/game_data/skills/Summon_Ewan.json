@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Summon_Ewan",
+        "name": "Summon",
+        "desc": "Summons a dark phantom to aid you. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('phantom_' + unit.nid)"
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "ability",
+                "Summon_Ewan"
+            ]
+        ]
+    }
+]

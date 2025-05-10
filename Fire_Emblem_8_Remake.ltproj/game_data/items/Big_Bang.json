@@ -1,0 +1,106 @@
+[
+    {
+        "nid": "Big_Bang",
+        "name": "Big Bang",
+        "desc": "An explosion so powerful, L'arachel might make her own universe with it.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "FireBall"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Meteor"
+            ],
+            [
+                "battle_cast_anim",
+                "Royal_Nova"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Larachel"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Larachel\").wexp['Staff'] >= 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

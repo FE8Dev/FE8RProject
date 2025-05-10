@@ -1,0 +1,100 @@
+[
+    {
+        "nid": "Bone_Shackle",
+        "name": "Bone Shackle",
+        "desc": "A lance that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "icon_nid": "Untitled",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Spook"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "BoneBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BoneBoy\").wexp['Lance'] >= 180 and u(\"BoneBoy\").wexp['Lance']  < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_5"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

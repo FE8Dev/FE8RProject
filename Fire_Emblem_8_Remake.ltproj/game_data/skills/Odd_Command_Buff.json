@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Odd_Command_Buff",
+        "name": "Odd Tempo+",
+        "desc": "Unit adds MAG/3 to Physical Weapons attacks on Odd numbered turns.\nDouble units WEXP gain during Even numbered turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            47
+        ],
+        "components": [
+            [
+                "condition",
+                "game.turncount % 2 == 1 and not item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 3"
+            ],
+            [
+                "wexp_multiplier",
+                2.0
+            ]
+        ]
+    }
+]

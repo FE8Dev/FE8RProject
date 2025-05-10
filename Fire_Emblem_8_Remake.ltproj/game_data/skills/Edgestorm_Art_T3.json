@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Edgestorm_Art_T3",
+        "name": "Edgestorm",
+        "desc": "<red>CA:</>A Cleave attack with a Brave effect.\nUnit gains Vantage for 1 turn. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Edgestorm_Skill"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

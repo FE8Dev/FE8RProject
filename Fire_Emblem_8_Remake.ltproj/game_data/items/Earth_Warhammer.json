@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Earth_Warhammer",
+        "name": "Earth W.H.",
+        "desc": "A warhammer imbued with an earth gem.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            2,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                65
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "weight",
+                23
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Warhammer",
+                    "Earth"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "War_Blow",
+                    "Blade_Vantage_Effect",
+                    "Earth_Shield"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
+            ]
+        ]
+    }
+]

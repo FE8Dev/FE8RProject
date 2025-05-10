@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Power_Axe",
+        "name": "Power Axe",
+        "desc": "A throwing axe charged with Gerik's inner Lightning power.\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "status_on_hit",
+                "Breached_5"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Gerik\").wexp['Axe'] >= 180 and u(\"Gerik\").wexp['Axe'] < 360"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,17 @@
+[
+    {
+        "name": "FightBeran",
+        "trigger": "combat_start",
+        "level_nid": "10B",
+        "condition": "unit.nid == \"Beran\" or unit2.nid == \"Beran\"",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Beran;Left",
+            "speak;Beran;Prince Ephraim of Renais...|The Obsidian Duessel...|Two incredible trophies.|Who could ask for more?",
+            "remove_portrait;Beran"
+        ],
+        "nid": "10B FightBeran"
+    }
+]

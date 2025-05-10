@@ -1,0 +1,85 @@
+[
+    {
+        "nid": "Gilded_Claw",
+        "name": "Gilded Claw",
+        "desc": "The most powerful claws.\n<violet>Inflicts:</><icon>Venom</>x5<icon>Bleed</>\n<pink>Misc:</>STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                28
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_STRONG"
+            ]
+        ]
+    }
+]

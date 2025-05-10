@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Water_Dragon_Get_Weapon",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "unit.klass =='T3_Water_Dragon_Monster_First' and unit.level == 1 and unit.nid == 'MyUnit'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "give_item;{unit};Sea_Breath"
+        ],
+        "nid": "Global Water_Dragon_Get_Weapon"
+    }
+]

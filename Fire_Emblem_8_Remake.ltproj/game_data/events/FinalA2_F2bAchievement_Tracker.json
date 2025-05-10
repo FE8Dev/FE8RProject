@@ -1,0 +1,17 @@
+[
+    {
+        "name": "F2bAchievement_Tracker",
+        "trigger": "unit_death",
+        "level_nid": "FinalA2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 10,
+        "_source": [
+            "if;unit.team not in ['player','other'] or unit2.team not in ['player','other'] ",
+            "inc_level_var;HordeKill",
+            "end"
+        ],
+        "nid": "FinalA2 F2bAchievement_Tracker"
+    }
+]

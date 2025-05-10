@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Lionheart",
+        "name": "Lionheart",
+        "desc": "This sword has changed to match Kyle's affinity.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Rock</>(AOE:2)\n<pink>Misc:</>+10 SPD, +40 Bonus Crit Damage.",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            7,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Crit_Damage_Bonus_40"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kyle"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kyle\").wexp['Sword'] >= 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Frozen"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ]
+        ]
+    }
+]

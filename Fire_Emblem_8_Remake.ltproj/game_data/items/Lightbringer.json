@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Lightbringer",
+        "name": "Lightbringer",
+        "desc": "A divine sword that smites evil with righteous fury.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>), targets LCK, +15 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            2,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "CRIT_AVOID"
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

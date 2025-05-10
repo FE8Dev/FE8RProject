@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Radiant_Gaze",
+        "name": "Radiant Gaze",
+        "desc": "A fantastic light that hurts to see.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+40 Avoid on Equip.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "prf_unit",
+                [
+                    "EyeBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"EyeBoy\").wexp['Light'] >= 180 and u(\"EyeBoy\").wexp['Light'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Bright_Burst"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blinding_Gaze"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

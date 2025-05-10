@@ -1,0 +1,37 @@
+[
+    {
+        "name": "House_1Saleh",
+        "trigger": "Visit",
+        "level_nid": "12A",
+        "condition": "region.nid == 'House_1' and unit.nid == 'Saleh'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;House2",
+            "transition;open;500",
+            "add_portrait;Saleh;Right",
+            "add_portrait;Ewan;Left",
+            "#music;50 Comrades;100",
+            "music;50- Comrades Orchestral Cover;500",
+            "speak;Saleh;Ewan...|You're safe.",
+            "speak;Ewan;Oh, Teacher!|It's you!|You probably had to fight a ton of creatures to get here!|You're the best!|I hope I can study with you forever.",
+            "speak;Saleh;I've told you before...|My mission is my life.|If you wish to learn magic, you'd be better served by another.",
+            "speak;Ewan;No way.|I wanna be just like you.|Why would I go study somewhere else?|Wait...|You've gotta go out on a mission again, don't you!|Take me with you!|I've practiced a lot.|I can already use all the magic you taught me!",
+            "speak;Saleh;......;no_talk",
+            "speak;Saleh;Well, you seem quite adamant.|All right.|You may accompany me.|I think being with me might be safer than remaining on your own.",
+            "speak;Ewan;Yahoo!",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back;100",
+            "change_team;Ewan;player",
+            "add_unit;Ewan;5,11;fade;closest;north",
+            "autolevel_to;Ewan;9",
+            "give_bexp;1000",
+            "has_traded;{unit}"
+        ],
+        "nid": "12A House_1Saleh"
+    }
+]

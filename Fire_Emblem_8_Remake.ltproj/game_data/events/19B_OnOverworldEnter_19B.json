@@ -1,0 +1,32 @@
+[
+    {
+        "name": "OnOverworldEnter_19B",
+        "trigger": "overworld_start",
+        "level_nid": "19B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;1B;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;DGB;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
+            "disable_overworld_entity;Ephraim_Group;no_animate",
+            "set_overworld_position;Ephraim_Group;22B;no_animate",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;21B",
+            "reveal_overworld_node;21B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_road;22B;21B",
+            "end"
+        ],
+        "nid": "19B OnOverworldEnter_19B"
+    }
+]

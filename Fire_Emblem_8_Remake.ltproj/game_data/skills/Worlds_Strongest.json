@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Worlds_Strongest",
+        "name": "World's Strongest",
+        "desc": "+3 range during Enemy Phase.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            50
+        ],
+        "components": [
+            [
+                "condition",
+                "(item_system.weapon_type(unit, item) == 'Lance')"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "modify_maximum_range",
+                3
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

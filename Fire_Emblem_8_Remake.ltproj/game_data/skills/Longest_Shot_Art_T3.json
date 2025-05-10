@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Longest_Shot_Art_T3",
+        "name": "Longest Shot",
+        "desc": "<red>CA:</>+6 Range, unit gains Crit equal to STR. <green>CD:3 Turns, useable only with Bows.</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            29
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "combat_art",
+                "Longest_Shot_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

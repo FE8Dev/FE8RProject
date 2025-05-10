@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Overworld",
+        "trigger": "overworld_start",
+        "level_nid": "Creature_CampaignA2",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;1;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;DGA;no_animate",
+            "    game_var;DGExit;False",
+            "elif;game.game_vars['RuinsExit'] == True",
+            "    disable_overworld_entity;Eirika_Group;no_animate",
+            "    set_overworld_position;Eirika_Group;24;no_animate",
+            "    game_var;RuinsExit;False",
+            "else;",
+            "disable_overworld_entity;Eirika_Group;no_animate",
+            "set_overworld_position;Eirika_Group;21;no_animate",
+            "end"
+        ],
+        "nid": "Creature_CampaignA2 Overworld"
+    }
+]

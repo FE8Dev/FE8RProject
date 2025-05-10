@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Frigid_Icicle_Skill",
+        "name": "Frigid Icicle Skill",
+        "desc": "For the Frigid Icicle item.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Ice' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "0.5 if ( 'Ice' in target.get_weapon().tags) else 1"
+            ],
+            [
+                "eval_crit_additional",
+                "30 if ('Ice' in unit.get_weapon().tags) else 0"
+            ],
+            [
+                "eval_crit",
+                "30 if ('Ice' in unit.get_weapon().tags) else 0"
+            ]
+        ]
+    }
+]

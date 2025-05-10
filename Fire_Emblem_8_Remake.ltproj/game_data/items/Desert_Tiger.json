@@ -1,0 +1,118 @@
+[
+    {
+        "nid": "Desert_Tiger",
+        "name": "Desert Tiger",
+        "desc": "A blade that guarantees victory to those who wield it.\n<green>Skills:</>Money Blow+, Desert Tiger(On kill), Blade Sweep\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            37,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                42
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Earth"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Money_BlowP",
+                    "Desert_Tiger_Giver",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Gerik\").wexp['Sword'] >= 420 and u(\"Gerik\").wexp['Sword'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ]
+        ]
+    }
+]

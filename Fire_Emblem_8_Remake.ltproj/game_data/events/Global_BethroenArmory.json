@@ -1,0 +1,22 @@
+[
+    {
+        "name": "BethroenArmory",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
+            "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
+            "music;56- Armories Orchestral Cover;500",
+            "shop;{eval:game.game_vars.get('_last_choice')};Lava_Dagger,Broken_Helix,Heat_Sword,Gust_Dagger,Winged_Blade,Mist_Sword,Lakeburst_Sword,Shock_Dagger,Shock_Blade,Storm_Sword,Shiver_Sword,Gaia_Blade,Paladins_Blade,Holy_Sword_Shop,Broken_Helix_Dark,Nightingale,Blue_Fire_Lance,Airburst_Greatlance,Mist_Lance,Geyser_Lance,Bolt_Spear,Glacier_Lance,Shielder_Lance,Abraxas,Seraphim_Lance,Ebony_Greatlance_Shop,Fenrir_Spear,Wrath_Axe,Hurricane_Axe,Sea_Warhammer,Flowing_Axe,Bolt_Axe,Glacier_Axe,Jawbreaker,Jagged_Axe,Holy_Warhammer,Sol_Axe,Devil Axe,Abyss_Axe_Shop,Twist_Bow,Gale_Bow,Aqua_Burst,Arc_Bow,Glacier_Bow,Stone_Edge,Shine_Bow,Abyss_Bow;armory",
+            "music_fade_back",
+            "game_var;_last_choice;False",
+            "else",
+            "end"
+        ],
+        "nid": "Global BethroenArmory"
+    }
+]

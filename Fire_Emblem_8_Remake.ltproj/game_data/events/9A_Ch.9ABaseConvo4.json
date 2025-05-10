@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Ch.9ABaseConvo4",
+        "trigger": "on_base_convo",
+        "level_nid": "9A",
+        "condition": "unit == 'Frelian Reunion**'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;Town4",
+            "#music;Healing",
+            "music;10- Rise Above Orchestral Cover;500",
+            "transition;open;500",
+            "add_portrait;Vanessa;MidRight;no_block;mirror",
+            "multi_add_portrait;Tana;FarRight;Moulder;FarLeft;Gilliam;MidLeft",
+            "bop_portrait;Vanessa",
+            "speak;Vanessa;Princess Tana!|You're here!",
+            "speak;Tana;Vanessa!|Gilliam!|Father Moulder!|I'm so happy to see you're all okay!",
+            "expression;Tana;CloseEyes",
+            "speak;Tana;I was so worried...",
+            "speak;Moulder;Be at peace, Princess.|We cannot fall yet... Not with the duty your father has left us.",
+            "speak;Gilliam;Moulder is right.|We wouldn't want to make you sad, either.",
+            "expression;Tana;HalfCloseEyes",
+            "speak;Tana;Awwww....|You guys are the best!|I'm going to cry...",
+            "speak;Vanessa;Don't cry, princess!|How about we all have a good old Frelian feast together?|That should raise our spirits!",
+            "speak;Moulder;What a wonderful idea!",
+            "speak;Gilliam;Now I can get behind that.",
+            "speak;Tana;Fabulous!|This will be a joyous occasion!",
+            "multi_remove_portrait;Tana;Vanessa;Moulder;Gilliam",
+            "increment_support_points;Tana;Vanessa;15",
+            "increment_support_points;Moulder;Gilliam;15",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back",
+            "ignore_base_convo;Frelian Reunion**;t"
+        ],
+        "nid": "9A Ch.9ABaseConvo4"
+    }
+]

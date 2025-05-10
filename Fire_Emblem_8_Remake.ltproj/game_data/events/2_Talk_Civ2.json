@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "2",
+        "condition": "check_pair('Eirika','Civ2')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.level_vars['VillageRetalk2'] != True",
+            "music;42- Laughter Orchestral Cover;500",
+            "add_portrait;Woman2;Right;no_block",
+            "add_portrait;Eirika;Left",
+            "expression;Woman2;CloseEyes",
+            "speak;Woman2;Ohhh, if only I could see that man again...",
+            "speak;Eirika;That man?|If I may, what did this man look like?",
+            "expression;Woman2;OpenEyes",
+            "bop_portrait;Woman2",
+            "speak;Woman2;Oh, he had the most beautiful red hair!|And such a stylish hat!|It looked so rough, but so regal!",
+            "speak;Eirika;I see...",
+            "speak;Woman2;Oh, only if we had an arena here...|He said he was looking for one.|Said something about needing some money to pay off a debt.",
+            "speak;Eirika;A debt?",
+            "speak;Woman2;Yeah, said the elixir he gave me was gonna pay it off.|But he told me to give to someone else in need instead.",
+            "speak;Eirika;Huh, that's weird...",
+            "speak;Woman2;Ohhhh, I want to see him again!|Please come back soon!",
+            "speak;Eirika;.....;no_talk",
+            "multi_remove_portrait;Woman2;Eirika",
+            "give_bexp;500",
+            "level_var;VillageRetalk2;True",
+            "music_fade_back;500",
+            "remove_talk;Eirika;Civ2",
+            "else",
+            "trigger_script;Global No_More_Talk",
+            "remove_talk;Eirika;Civ2",
+            "end"
+        ],
+        "nid": "2 Talk_Civ2"
+    }
+]

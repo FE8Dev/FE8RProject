@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Charred_Axe",
+        "name": "Charred Axe",
+        "desc": "An old axe that sends sparks in an area.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)",
+        "icon_nid": "Axes Sheet",
+        "icon_index": [
+            7,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_2",
+                    "Seared"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garcia"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Sear_Explosion",
+                    "Power_Chop_E"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Garcia\").wexp['Axe'] < 120"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

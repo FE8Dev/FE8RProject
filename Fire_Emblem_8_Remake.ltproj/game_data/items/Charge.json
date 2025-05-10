@@ -1,0 +1,82 @@
+[
+    {
+        "nid": "Charge",
+        "name": "Charge",
+        "desc": "<red>CA:</>Attack all enemies between unit and the target. Cannot Double, cannot DS. <green>CD:3 Turns</>\nUses STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            41
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "map_cast_anim",
+                "CritSpark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "Foot Step"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ]
+        ]
+    }
+]

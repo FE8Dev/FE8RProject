@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Dragon_power",
+        "name": "Dragon Power",
+        "desc": "+8 to most stats.\n+8 DEF/RES for 2 turns whenever this unit is hit in combat.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        8
+                    ],
+                    [
+                        "MAG",
+                        8
+                    ],
+                    [
+                        "SKL",
+                        8
+                    ],
+                    [
+                        "SPD",
+                        8
+                    ],
+                    [
+                        "LCK",
+                        8
+                    ],
+                    [
+                        "DEF",
+                        8
+                    ],
+                    [
+                        "RES",
+                        8
+                    ],
+                    [
+                        "CON",
+                        8
+                    ]
+                ]
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Toughen_Scales_Child"
+            ]
+        ]
+    }
+]

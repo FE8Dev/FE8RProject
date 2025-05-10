@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Chest_3",
+        "trigger": "Chest",
+        "level_nid": "TOVF6A",
+        "condition": "region.nid == 'Chest_3'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;traveler;game.get_unit('{unit}').traveler",
+            "separate;{unit}",
+            "add_unit;{v:traveler};{unit};fade;closest",
+            "unlock;{unit}",
+            "sound;Unlock",
+            "show_layer;Chest_3;fade",
+            "level_var;Chest3;game.get_random(1, 6)",
+            "if;game.level_vars['Chest3'] == 1",
+            "give_item;{unit};Terraform_Blade",
+            "elif;game.level_vars['Chest3'] == 2",
+            "give_item;{unit};Burning_Greatlance_Shop",
+            "elif;game.level_vars['Chest3'] == 3",
+            "give_item;{unit};Gaia_Axe",
+            "elif;game.level_vars['Chest3'] == 4",
+            "give_item;{unit};Dragon_Masher",
+            "elif;game.level_vars['Chest3'] == 5",
+            "give_item;{unit};Darkwood_Greatbow",
+            "elif;game.level_vars['Chest3'] == 6",
+            "give_item;{unit};Tremor_Staff",
+            "end",
+            "has_traded;{unit}",
+            "remove_region;Chest_3"
+        ],
+        "nid": "TOVF6A Chest_3"
+    }
+]

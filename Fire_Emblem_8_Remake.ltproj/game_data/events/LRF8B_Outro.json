@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "LRF8B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;len(game.get_enemy_units()) == 0",
+            "sound;Item",
+            "alert;Victory!",
+            "game_var;RuinsFloor9B;True",
+            "level_var;Reward;game.get_random(1, 4)",
+            "if;game.level_vars['Reward'] == 1",
+            "give_item;convoy;Mystletainn",
+            "elif;game.level_vars['Reward'] == 2",
+            "give_item;convoy;Blazefury_Melee",
+            "elif;game.level_vars['Reward'] == 3",
+            "give_item;convoy;Lightbringer",
+            "elif;game.level_vars['Reward'] == 4",
+            "give_item;convoy;Infernal_Sword",
+            "else",
+            "give_item;convoy;Lightbringer_Parent",
+            "end",
+            "choice;ProceedF5;Proceed to the next floor?;Yes,No",
+            "if;game.game_vars['_last_choice'] == 'Yes'",
+            "game_var;_goto_level;\"LRF9B\"",
+            "else",
+            "game_var;RuinsExit;True",
+            "game_var;_goto_level;game.game_vars.get(\"TOVB_Ch_Save\")",
+            "end",
+            "else",
+            "game_var;RuinsExit;True",
+            "game_var;_goto_level;game.game_vars.get(\"TOVB_Ch_Save\")",
+            "end",
+            "transition;close;500",
+            "music_clear;500"
+        ],
+        "nid": "LRF8B Outro"
+    }
+]

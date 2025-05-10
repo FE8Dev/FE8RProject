@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch5bAchievement",
+        "trigger": "unit_death",
+        "level_nid": "5",
+        "condition": "unit.nid == 'Saar' and check_pair('Natasha', 'Saar')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch5b;true;banner",
+            "give_item;convoy;Angelic_Robe_Consumable"
+        ],
+        "nid": "5 Ch5bAchievement"
+    }
+]

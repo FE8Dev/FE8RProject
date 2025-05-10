@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Angelic_Retribution_Art",
+        "name": "Angelic Retribution",
+        "desc": "<red>CA:</>A 10 hit barrage at 75% damage. <green>CD:5 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Angelic_Retribution_Skill"
+            ],
+            [
+                "build_charge",
+                5
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

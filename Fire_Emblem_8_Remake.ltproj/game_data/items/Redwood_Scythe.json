@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Redwood_Scythe",
+        "name": "Redwood Scythe",
+        "desc": "A scythe reinforced with mysterious Redwood...\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SLK')))}</>).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            2,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Forde"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Forde\").wexp['Lance'] >= 180 and u(\"Forde\").wexp['Lance'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
+            ]
+        ]
+    }
+]

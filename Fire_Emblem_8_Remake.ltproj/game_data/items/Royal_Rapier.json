@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Royal_Rapier",
+        "name": "Royal Rapier",
+        "desc": "A beautiful rapier made for royalty.\n<green>Skills:</>Vantage+, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses stronger of STR or MAG, targets weaker of DEF or RES, +10 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            35,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "battle_cast_anim",
+                "Bolting"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Vantage_Plus_Item"
+                ]
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eirika"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eirika\").wexp['Sword'] >= 360 and not has_skill(unit, 'Eirika_Legend')"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MAX"
+            ]
+        ]
+    }
+]

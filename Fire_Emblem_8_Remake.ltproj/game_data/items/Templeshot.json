@@ -1,0 +1,133 @@
+[
+    {
+        "nid": "Templeshot",
+        "name": "Templeshot",
+        "desc": "A bow that can bring down temples.\n<orange>Element:</><icon>Earth</><icon>Dark</>\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)<icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>Heavy, STR*2 + MAG(<red>{e:(unit.get_stat('STR')*2 + (unit.get_stat('MAG')))}</>).",
+        "icon_nid": "02-26-25",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                52
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                60
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Armor",
+                        "Infantry",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "CyclopsBoy"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"CyclopsBoy\").wexp['Bow'] >= 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Blade_Vantage_Effect"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Shadow_Blight",
+                    "Cursed_25"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DOUBLE_MAG_STRONG"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth",
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

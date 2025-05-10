@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Ch.10ABaseConvo1",
+        "trigger": "on_base_convo",
+        "level_nid": "10A",
+        "condition": "unit == 'Of Grado*'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "transition;close;500",
+            "change_background;Tavern",
+            "#music;09 Distant Roads",
+            "music;33- Healing Orchestral Cover",
+            "transition;open;500",
+            "multi_add_portrait;Natasha;Right;Amelia;Left",
+            "speak;Amelia;Excuse me?|You're Natasha, right?",
+            "speak;Natasha;Yes, I am Natasha.|Is there something I can do for you?",
+            "speak;Amelia;Yes, my name is Amelia.|Princess Eirika informed me that you're from Grado, too!",
+            "bop_portrait;Natasha",
+            "speak;Natasha;Oh!|You're from Grado too?!|Oh, how wonderful it is, to have another woman from Grado here!",
+            "speak;Amelia;Yay!|Everyone here has been so kind so far, but it's nice to have someone from home!|What part of Grado are you from?",
+            "speak;Natasha;I'm from Serafew, actually!|Although, I've served as a cleric in the Imperial Temple for the longest time...",
+            "speak;Amelia;Wow, you worked up there?...|No wonder you have such pretty robes!|Every time I've dropped by, I've always been helped by clerics like you!|So I've gotta thank you, really!",
+            "speak;Natasha;Oh! You're quite welcome, Amelia!|We worked so hard there to help the people...|...Before...",
+            "speak;Amelia;...Before what?",
+            "speak;Natasha;...Never you mind.|Your gratitude is appreciated, regardless!",
+            "bop_portrait;Amelia",
+            "speak;Amelia;Oh!|I just had a wonderful idea!|Why don't I cook us up a Grado dinner?|A little taste of home!",
+            "speak;Natasha;Goodness, are you certain?|It's awfully kind of you, but I feel as though I should handle it...",
+            "speak;Amelia;Well, I'm from up in the mountains! I can surprise you!|And I think you deserve to be treated, for being so nice!|...Though, it'd be lovely to cook with you...|So, hey, let's do it! Yeah!",
+            "speak;Natasha;He he! You're far too kind, Amelia. It would be lovely indeed...",
+            "multi_remove_portrait;Natasha;Amelia",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "music_fade_back",
+            "ignore_base_convo;Of Grado*;t"
+        ],
+        "nid": "10A Ch.10ABaseConvo1"
+    }
+]

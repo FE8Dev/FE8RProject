@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Even_Command_Aura",
+        "name": "Even Command",
+        "desc": "Adj. allies gain Even Tempo+.\nUnit gains +5 Hit/Avoid for every adj. ally.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Even_Command_Buff"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "dynamic_accuracy",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "dynamic_avoid",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ]
+        ]
+    }
+]

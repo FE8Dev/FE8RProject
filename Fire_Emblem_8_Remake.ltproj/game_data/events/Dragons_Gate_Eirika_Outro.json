@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Outro",
+        "trigger": "level_end",
+        "level_nid": "Dragons_Gate_Eirika",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;DGExit;True",
+            "game_var;_goto_level;game.game_vars.get(\"TOVA_Ch_Save\")"
+        ],
+        "nid": "Dragons_Gate_Eirika Outro"
+    }
+]

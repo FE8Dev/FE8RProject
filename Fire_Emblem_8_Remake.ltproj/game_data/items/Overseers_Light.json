@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Overseers_Light",
+        "name": "Overseer's Light",
+        "desc": "Light from one that sees all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+80 Avoid on Equip.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            2,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "EyeBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"EyeBoy\").wexp['Light'] >= 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aura_Silver"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Overseers_Light"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

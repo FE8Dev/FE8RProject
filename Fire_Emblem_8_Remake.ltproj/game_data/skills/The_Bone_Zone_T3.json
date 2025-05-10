@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "The_Bone_Zone_T3",
+        "name": "The Bone Zone",
+        "desc": "+1 bonus attack for every 5 allies and or enemies within 5 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            26
+        ],
+        "components": [
+            [
+                "feat",
+                null
+            ],
+            [
+                "dynamic_attacks",
+                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 5])) // 5"
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

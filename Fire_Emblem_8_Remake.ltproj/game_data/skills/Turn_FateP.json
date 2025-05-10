@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Turn_FateP",
+        "name": "Turn Fate+",
+        "desc": "Increase Knoll's Hit/Avoid/Crit avoid by (Enemy's LCK - Knoll's LCK) * 4. If Knoll kills an enemy with this spell, gain one use of Future Sight for the next combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            19
+        ],
+        "components": [
+            [
+                "dynamic_accuracy",
+                "((unit2.get_stat('LCK')) - (unit.get_stat('LCK'))) * 4"
+            ],
+            [
+                "dynamic_avoid",
+                "((unit2.get_stat('LCK')) - (unit.get_stat('LCK'))) * 4"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "((unit2.get_stat('LCK')) - (unit.get_stat('LCK'))) * 4"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

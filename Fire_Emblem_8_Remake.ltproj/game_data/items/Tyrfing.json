@@ -1,0 +1,117 @@
+[
+    {
+        "nid": "Tyrfing",
+        "name": "Tyrfing",
+        "desc": "A holy sword that once reunited a fragmented continent.\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Dark</><icon>Monster</>\n<green>Skills:</>Flash Step, Baldr's Blessing.\n<pink>Misc:</>SKL + SPD + RES (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SKL') + (unit.get_stat('RES')))}</>), +10 SKL, +10 SPD, +20 RES.",
+        "icon_nid": "New Holy Weapons 03-30-25",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Baldrs_Blessing"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "RES",
+                        20
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_RES_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Dark"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "value",
+                10000
+            ]
+        ]
+    }
+]

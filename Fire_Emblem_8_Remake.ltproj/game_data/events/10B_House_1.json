@@ -1,0 +1,26 @@
+[
+    {
+        "name": "House_1",
+        "trigger": "Visit",
+        "level_nid": "10B",
+        "condition": "region.nid == 'House_1'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "transition;Close;500",
+            "change_background;House",
+            "transition;Open;500",
+            "add_portrait;{unit};Right;no_block",
+            "add_portrait;Villager Man;Left",
+            "speak;Villager Man;A strange man passed through here sometime back.|He said something about looking for a girl with indigo hair...|I asked if she was his girl, but he said she wasn't.|I hope he's found her by now.",
+            "multi_remove_portrait;Villager Man;{unit}",
+            "transition;close;500",
+            "change_background",
+            "transition;open;500",
+            "give_bexp;800",
+            "has_traded;{unit}"
+        ],
+        "nid": "10B House_1"
+    }
+]

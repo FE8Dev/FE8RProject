@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Ch17bAchievement_Tracker",
+        "trigger": "unit_death",
+        "level_nid": "17B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;(unit.team not in ['player','other'] and (unit2.nid == 'Moulder' or unit2.nid == 'Tana' or unit2.nid == 'Syrene' or unit2.nid == 'Innes' or unit2.nid == 'Vanessa' or unit2.nid == 'Gilliam')) or (unit2.team not in ['player','other'] and (unit.nid == 'Moulder' or unit.nid == 'Tana' or unit.nid == 'Syrene' or unit.nid == 'Innes' or unit.nid == 'Vanessa' or unit.nid == 'Gilliam'))",
+            "inc_level_var;FreliaKill",
+            "end"
+        ],
+        "nid": "17B Ch17bAchievement_Tracker"
+    }
+]

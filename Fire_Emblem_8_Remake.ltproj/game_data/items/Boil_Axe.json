@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Boil_Axe",
+        "name": "Boil Axe",
+        "desc": "Cormag's rage combined with calm, mysterious water.\n<green>Skills:</>Steam Flow, Power Chop (C)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>",
+        "icon_nid": "Cormag Axes",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "status_on_hit",
+                "Breached_5"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "Unwieldy",
+                8
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Steam_Flow",
+                    "Power_Chop_C"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cormag"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cormag\").wexp['Axe'] >= 180 and u(\"Cormag\").wexp['Axe'] < 300"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Water"
+                ]
+            ]
+        ]
+    }
+]

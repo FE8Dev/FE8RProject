@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Angelic_Robe_Buff_Appraiser",
+        "name": "Angelic Robe Buff",
+        "desc": "Give buff to Angelic Robe.",
+        "icon_nid": "Boosters",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(unit, 'Appraiser') or has_skill(unit, 'Appraiser_T3')"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        150
+                    ]
+                ]
+            ],
+            [
+                "regeneration",
+                1.0
+            ]
+        ]
+    }
+]

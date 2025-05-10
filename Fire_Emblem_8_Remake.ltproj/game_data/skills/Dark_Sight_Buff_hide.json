@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dark_Sight_Buff_hide",
+        "name": "Dark Sight",
+        "desc": "+2 to Dark range.\nAttacks ignore enemy's RES when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES')"
+            ]
+        ]
+    }
+]

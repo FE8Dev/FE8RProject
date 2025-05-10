@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Destiny_Ender",
+        "name": "Destiny Ender",
+        "desc": "Use this to kill any green unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "eval_target_restrict_2",
+                "unit2.team == 'other'"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "event_after_combat_on_hit",
+                "Global Destiny_Ender"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Prevent_Steal_Crash"
+            ]
+        ]
+    }
+]

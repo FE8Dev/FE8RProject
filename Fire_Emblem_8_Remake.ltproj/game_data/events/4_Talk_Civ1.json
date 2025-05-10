@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "4",
+        "condition": "check_pair('Eirika','Civ1')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "music;42- Laughter Orchestral Cover;500",
+            "add_portrait;OldMan1;Right;no_block",
+            "add_portrait;Eirika;Left",
+            "speak;OldMan1;...So our little Lute is finally leaving, huh?",
+            "speak;Eirika;Yes, she seems to want to go with Artur on our journey.|Her knowledge should hopefully be an asset to us.",
+            "bop_portrait;OldMan1",
+            "speak;OldMan1;Of course she will be!|She is a genius, after all!|She was raised in the village of the most magically gifted in all Magvel!",
+            "speak;Eirika;I see...|Well we look forward to her efforts.",
+            "bop_portrait;OldMan1",
+            "speak;OldMan1;Good!|As the most gifted old man in this village, I can't recommend her enough!|She will save Magvel in her sleep!",
+            "speak;Eirika;...Ok?|Well, thank you, and I will excuse myself now...",
+            "remove_portrait;Eirika",
+            "bop_portrait;OldMan1",
+            "speak;OldMan1;Go Lute!|Show the world your knowledge!|You are the smartest!!!",
+            "remove_portrait;OldMan1",
+            "give_bexp;700",
+            "music_fade_back;500",
+            "remove_talk;Eirika;Civ1"
+        ],
+        "nid": "4 Talk_Civ1"
+    }
+]

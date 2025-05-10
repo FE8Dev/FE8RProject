@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Mercy_Glimmer",
+        "name": "Mercy Glimmer",
+        "desc": "Special light magic that grant mercy.\n<green>Skills:</>Mercy\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            8
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "HorseyGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"HorseyGirl\").wexp['Light'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Smite"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

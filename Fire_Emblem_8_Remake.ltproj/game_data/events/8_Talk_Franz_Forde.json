@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Talk_Franz_Forde",
+        "trigger": "on_talk",
+        "level_nid": "8",
+        "condition": "unit.nid == 'Franz' and unit2.nid == 'Forde'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Franz;Right;Forde;Left",
+            "speak;Franz;Brother!",
+            "speak;Forde;Ha!|Franz!|How've you been?",
+            "speak;Franz;I should ask you!|We'd heard you were captured by Grado's men.|I was worried.",
+            "speak;Forde;Worried?|I ride with Prince Ephraim, little brother.|Death will have a tough time catching anyone who rides with our prince!|But it's not like we've avoided trouble altogether, that's for sure.|Hm?|Say, have you grown taller on me?",
+            "speak;Franz;I have.|I've also finished my training.|I'm now a sworn Knight of Renais.|You just watch-I'm going to be on par with General Seth one day!",
+            "speak;Forde;You want to be like the general, eh?|...What about me?",
+            "speak;Franz;Oh I...|I still want to be like you, too, Brother!",
+            "multi_remove_portrait;Franz;Forde",
+            "remove_talk;Franz;Forde"
+        ],
+        "nid": "8 Talk_Franz_Forde"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "10A",
+        "condition": "check_pair('Eirika', 'Civ3')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Villager Man;Left;no_block",
+            "add_portrait;Eirika;Right",
+            "speak;Villager Man;You saved that Prince Innes, didn't you?|He would be a valuable asset to your army.|That is, if you were worth his time to begin with.|Now, get out of here!|I've got a lot of work to do!",
+            "bop_portrait;Villager Man",
+            "speak;Eirika;A-aah! Sorry...",
+            "multi_remove_portrait;Villager Man;Eirika",
+            "give_bexp;2500",
+            "remove_talk;Eirika;Civ3"
+        ],
+        "nid": "10A Talk_Civ3"
+    }
+]

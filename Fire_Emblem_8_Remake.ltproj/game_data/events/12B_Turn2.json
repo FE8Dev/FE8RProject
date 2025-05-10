@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Turn2",
+        "trigger": "turn_change",
+        "level_nid": "12B",
+        "condition": "game.turncount == 2",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "center_cursor;Caellach",
+            "add_unit;Riev;17,0;warp;closest",
+            "flicker_cursor;Riev",
+            "wait;200",
+            "multi_add_portrait;Riev;Right;Caellach;Left",
+            "speak;Riev;Heh heh heh...|Caellach.|Interesting.|What are you doing here?|You were ordered to loose your dogs of war on Jehanna, were you not?",
+            "speak;Caellach;Keep silent, you decrepit fool.|I told you, Jehanna's under control.|My plan is in full effect.|All we need do now is wait.|You see, Jehanna is an overripe fruit.|It's being devoured by worms from within.|We can pluck it anytime we wish.",
+            "speak;Riev;Heh heh heh...|Oh, how your plans seem to have gone awry.|Even now, Eirika makes her way toward Jehanna.|Your perfect fruit has turned to rot while you did nothing.|It's time.|You will return to the capital with me.",
+            "speak;Caellach;What?!|Are you truly serious, you old goat?|Glen...|No, it's that black-hearted Valter...|What's he playing at now?",
+            "speak;Riev;There's no call for that sort of talk.|That one has his uses after all.|You can leave the defeat of Ephraim to your subordinates.|Oh yes, and you can use the troops I brought with me as well.|It will, no doubt, be an interesting battle.|Heh heh heh...|Let's go now, Caellach.|You wouldn't want to hurt a certain someone's feelings, would you?",
+            "speak;Caellach;Bah.|What else can I do?",
+            "multi_remove_portrait;Caellach;Riev",
+            "remove_unit;Riev;warp",
+            "move_group;CinaCaell;17,0;normal;stack",
+            "remove_group;CinaCaell;fade",
+            "add_group;CinaBoss;17,0;fade;stack",
+            "add_tag;104;Boss",
+            "move_group;CinaBoss;CinaBoss;normal;closest",
+            "add_group;ReinT2;2,30;fade;stack",
+            "move_group;ReinT2;ReinT2;normal;closest"
+        ],
+        "nid": "12B Turn2"
+    }
+]

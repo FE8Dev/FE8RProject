@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Magical_Ignition_Seared",
+        "name": "Magical Ignition",
+        "desc": "+2 Bonus attacks if enemy is inflicted with an elemental debuff.\nRe-apply the status they were afflicted with after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Seared')"
+            ],
+            [
+                "give_status_after_combat",
+                "Seared"
+            ],
+            [
+                "dynamic_attacks",
+                "2"
+            ]
+        ]
+    }
+]

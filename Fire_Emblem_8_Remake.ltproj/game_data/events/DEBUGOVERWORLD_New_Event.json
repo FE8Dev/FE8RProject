@@ -1,0 +1,27 @@
+[
+    {
+        "name": "New Event",
+        "trigger": "level_start",
+        "level_nid": "DEBUGOVERWORLD",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "overworld_cinematic;WM_Eirika",
+            "",
+            "reveal_overworld_node;0;immediate",
+            "reveal_overworld_node;1;immediate",
+            "reveal_overworld_node;2;immediate",
+            "reveal_overworld_node;18;immediate",
+            "reveal_overworld_node;25;immediate",
+            "reveal_overworld_road;0;1;immediate",
+            "reveal_overworld_road;0;2;immediate",
+            "reveal_overworld_road;0;18;immediate",
+            "reveal_overworld_road;0;25;immediate",
+            "set_overworld_position;Eirika_Group;0;no_animate",
+            "win_game"
+        ],
+        "nid": "DEBUGOVERWORLD New Event"
+    }
+]

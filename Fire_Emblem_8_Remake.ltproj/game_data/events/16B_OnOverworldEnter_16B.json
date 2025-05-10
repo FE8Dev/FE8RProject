@@ -1,0 +1,43 @@
+[
+    {
+        "name": "OnOverworldEnter_16B",
+        "trigger": "overworld_start",
+        "level_nid": "16B",
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.game_vars['TowerExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;1B;no_animate",
+            "    game_var;TowerExit;False",
+            "elif;game.game_vars['DGExit'] == True",
+            "    disable_overworld_entity;Ephraim_Group;no_animate",
+            "    set_overworld_position;Ephraim_Group;DGB;no_animate",
+            "    game_var;DGExit;False",
+            "else;",
+            "disable_overworld_entity;Ephraim_Group;no_animate",
+            "set_overworld_position;Ephraim_Group;14B",
+            "sound;RefreshDance",
+            "map_anim;AOE_Mend;25B",
+            "reveal_overworld_node;25B",
+            "wait;500",
+            "sound;Mend",
+            "reveal_overworld_node;15B",
+            "reveal_overworld_node;16B",
+            "reveal_overworld_node;17B",
+            "reveal_overworld_node;18B",
+            "reveal_overworld_road;14B;15B",
+            "reveal_overworld_road;15B;16B",
+            "reveal_overworld_road;16B;17B",
+            "reveal_overworld_road;17B;18B",
+            "reveal_overworld_road;18B;0B",
+            "reveal_overworld_road;13B;9B",
+            "reveal_overworld_road;14B;25B",
+            "reveal_overworld_road;3B;2B",
+            "end"
+        ],
+        "nid": "16B OnOverworldEnter_16B"
+    }
+]

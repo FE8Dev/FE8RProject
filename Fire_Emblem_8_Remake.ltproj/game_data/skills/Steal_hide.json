@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "Steal_hide",
+        "name": "Steal",
+        "desc": "Can steal items from enemies with lower speed.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            7,
+            10
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, \"Blade_Vantage_Effect\")"
+            ],
+            [
+                "ability",
+                "Steal"
+            ],
+            [
+                "sight_range_bonus",
+                3
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "steal_icon",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "Thief"
+                ]
+            ]
+        ]
+    }
+]

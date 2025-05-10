@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Refined_Obsidian",
+        "name": "Refined Obsidian",
+        "desc": "A lance given to Grado's highest ranking generals with mighty valor.\n<green>Skills:</>Sunset's Resolve, Lance Guard (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            8,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Sunsets_Resolve",
+                    "Sunsets_Resolve_Sunset_Proc"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Duessel"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Duessel\").wexp['Lance'] >= 180 and u(\"Duessel\").wexp['Lance'] < 300"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "_True_Death",
+        "name": " True Death",
+        "desc": "<red>CA:</>Negate the DEF and RES of the enemies, The attack never miss and +1 bonus attack (+2 if unit doubles).<green>CD:12 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "_True_Death_Skill"
+            ],
+            [
+                "build_charge",
+                12
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

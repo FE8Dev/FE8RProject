@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Torch_Bow_Ross",
+        "name": "Torch Bow",
+        "desc": "A bow that makes it hard for enemies to hide.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Lighten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>Half damage inflicted on miss.",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Torchshot_Art_Effect",
+                    "Seared"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Improve_Fog_Sight"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Ross"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Ross\").wexp['Bow'] < 180"
+            ],
+            [
+                "damage_on_miss",
+                0.5
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

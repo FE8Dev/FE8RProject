@@ -1,0 +1,124 @@
+[
+    {
+        "nid": "Yewfelle",
+        "name": "Yewfelle",
+        "desc": "A legendary bow that empowers the wielder with holy power.\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>Brave, grants Lifelink (x0.25), +15 STR/SPD, STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty"
+                ]
+            ],
+            [
+                "value",
+                10000
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        15
+                    ],
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "lifelink",
+                0.25
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "brave",
+                null
+            ]
+        ]
+    }
+]

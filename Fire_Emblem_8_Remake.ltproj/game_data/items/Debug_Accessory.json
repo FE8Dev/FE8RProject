@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Debug_Accessory",
+        "name": "Scarlet Rose",
+        "desc": "A rose from another world, it contains the powers of 2 sisters...\n<blue>On Equip:</>+100 SKL, SPD and MOV, Flying, damage given/taken +250/-Infinit, immune to negative status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        100
+                    ],
+                    [
+                        "SKL",
+                        100
+                    ],
+                    [
+                        "MOV",
+                        100
+                    ]
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Airwalk",
+                    "Debug_Accessory_Buff"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Shivas_Domain_Skill",
+        "name": "Shiva's Domain Skill",
+        "desc": "For the Shiva's Domain item.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            8,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Frozen"
+            ],
+            [
+                "item_override",
+                "Frozen_Splash_Effective_Plus"
+            ]
+        ]
+    }
+]

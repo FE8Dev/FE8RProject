@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Together_We_Stand",
+        "name": "Together We Stand",
+        "desc": "Restores HP equal to half of user's Max HP.\n<pink>Misc:</>(Multi-target:3), +10 STR/MAG to ally after heal.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            5,
+            3
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "LICH_HEAL_WEAK"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "ZombieBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"ZombieBoy\").wexp['Staff'] >= 420"
+            ],
+            [
+                "status_on_hit",
+                "Together_We_Stand"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Recover"
+            ],
+            [
+                "map_cast_anim",
+                "MapBigHealTrans"
+            ],
+            [
+                "map_cast_sfx",
+                "Heal1"
+            ],
+            [
+                "map_hit_sfx",
+                "Heal2"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,100 @@
+[
+    {
+        "nid": "Novel_Bloom",
+        "name": "Novel Bloom",
+        "desc": "A simple village axe that has experienced struggle and gotten sharper.\n<green>Skills:</>Power Chop (A), Improved Speed Swing\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Cacura Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Speed_Swing",
+                    "Power_Chop_A"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Cucara\").wexp['Axe'] >= 240 and u(\"Cucara\").wexp['Axe'] < 420"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Cucara"
+                ]
+            ]
+        ]
+    }
+]

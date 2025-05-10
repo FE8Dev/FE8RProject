@@ -1,0 +1,98 @@
+[
+    {
+        "nid": "Judgement",
+        "name": "Judgement",
+        "desc": "<red>CA:</>A Light magic attack that hits 6 different enemies. Cannot DS.  <green>CD:4 Turns</>\nUses SKL + LCK (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('LCK')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            15
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "multi_target",
+                6
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Shine"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_STRONG"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Trampling_Shadow",
+        "name": "Trampling Shadow",
+        "desc": "<red>CA:</>5 space magical line attack that uses unit's MAG+STR (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>). \nInflicts Breach/Cursed (15) on enemies hit. Cannot Double, Cannot DS. This is a Free Action. <green>CD:3 Turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            25
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "enemy_line_aoe",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "map_cast_anim",
+                "CritSpark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "Foot Step"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_STR_STRONG"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    }
+]

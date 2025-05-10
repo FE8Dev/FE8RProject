@@ -1,0 +1,117 @@
+[
+    {
+        "nid": "True_Audhulma",
+        "name": "True Audhulma",
+        "desc": "True form of legendary sword of Jehanna. \n<green>Skills:</>Risky Vantage, Flash Slash <orange>Element:</><icon>Wind</>\n<red>Very Effective:</><icon>Monster</></><icon>Flying</></><icon>Infantry</><icon>Seared</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES')))}</>), +20 SPD, +20 RES.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            8,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                60
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Tempest"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Slash",
+                    "Risky_Vantage"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Flying",
+                        "Infantry",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 32,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Joshua"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Joshua\").wexp['Sword'] >= 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

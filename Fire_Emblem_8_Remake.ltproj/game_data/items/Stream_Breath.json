@@ -1,0 +1,124 @@
+[
+    {
+        "nid": "Stream_Breath",
+        "name": "Stream Breath",
+        "desc": "The fog engulfs all those who tread too close.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>x4\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Infantry</>\n<pink>Misc:</>+50 Avoid/Dodge",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Dark_Breath"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Fog_Sword_Effect_Strong"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "prf_unit",
+                [
+                    "Dozla"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Dozla\").wexp['Monster'] >= 420"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared",
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

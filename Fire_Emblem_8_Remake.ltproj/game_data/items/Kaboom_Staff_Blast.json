@@ -1,0 +1,130 @@
+[
+    {
+        "nid": "Kaboom_Staff_Blast",
+        "name": "Kaboom Staff (<icon>Blast</>)",
+        "desc": "L'arachel unleashes a flashier explosion against evil. Start on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, can't crit, no WEXP gain.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            8,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "enemy_blast_aoe",
+                3
+            ],
+            [
+                "cooldown",
+                4
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "FireBall"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Meteor"
+            ],
+            [
+                "battle_cast_anim",
+                "Bakuretsu"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Larachel"
+                ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Larachel\").wexp['Staff'] >= 180 and u(\"Larachel\").wexp['Staff'] < 300"
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

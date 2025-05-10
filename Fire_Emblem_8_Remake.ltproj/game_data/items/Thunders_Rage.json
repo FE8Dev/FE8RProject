@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Thunders_Rage",
+        "name": "Thunder's Rage",
+        "desc": "Gilliam's ultimate siege bow, blessed by the thunder god.\n<green>Skills:</>Thunder God's Wrath++\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Heavy.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                33
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                41
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Armor",
+                        "Drenched",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Thunder_Gods_Wrath_PP"
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gilliam"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Gilliam\").wexp['Bow'] >= 360 and u(\"Gilliam\").wexp['Bow'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

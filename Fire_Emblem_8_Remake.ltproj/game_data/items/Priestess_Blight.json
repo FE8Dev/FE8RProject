@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Priestess_Blight",
+        "name": "Priestess Blight",
+        "desc": "The final resort to redeem someone.\n<green>Skills:</>Mercy\n<orange>Element:</><icon>Light</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Seared</><icon>Shadowblight</>, Reduced Vision, Curse (15)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                200
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                80
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "HorseyGirl"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"HorseyGirl\").wexp['Light'] >= 420"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision",
+                    "Seared",
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aureola_Dark"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Fire",
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

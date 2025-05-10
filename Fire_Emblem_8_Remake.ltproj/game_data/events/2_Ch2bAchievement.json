@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Ch2bAchievement",
+        "trigger": "unit_wait",
+        "level_nid": "2",
+        "condition": "region.nid == 'VanessaTile'",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Vanessa;Left",
+            "speak;Vanessa;Huh? There seems to be something on the ground there.|Looks like one of those bandits dropped it.",
+            "remove_portrait;Vanessa",
+            "update_achievement;ch2b;Vanessa's Find;Ch.2: Visit the southeast plains tile with Vanessa.",
+            "complete_achievement;ch2b;true;banner",
+            "give_item;Vanessa;Wind_Scroll",
+            "remove_map_anim;Dazzled;14,14;overlay"
+        ],
+        "nid": "2 Ch2bAchievement"
+    }
+]

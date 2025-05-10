@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Sage_Breath",
+        "name": "Sage Breath",
+        "desc": "The breath of one who found one's true self.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Moze Weapons",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Solaris"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "prf_unit",
+                [
+                    "Moze"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Moze\").wexp['Monster'] >= 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
+            ]
+        ]
+    }
+]

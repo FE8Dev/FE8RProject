@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ch5xbAchievement",
+        "trigger": "unit_death",
+        "level_nid": "5x",
+        "condition": "unit.nid == 'Zonta' and check_pair('Ephraim', 'Zonta')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;ch5xb;true;banner",
+            "give_item;Ephraim;Fire_Orb"
+        ],
+        "nid": "5x Ch5xbAchievement"
+    }
+]

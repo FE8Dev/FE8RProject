@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Money4Achievement",
+        "trigger": "level_end",
+        "level_nid": null,
+        "condition": "game.get_money() >= 200000",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "complete_achievement;money4;true;banner",
+            "give_item;convoy;Demon_Axe"
+        ],
+        "nid": "Global Money4Achievement"
+    }
+]

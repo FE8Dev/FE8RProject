@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Ancient_Pact_C",
+        "name": "Ancient Pact (C)",
+        "desc": "Add unit's missing HP/4 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 5.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            45
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -4)"
+            ],
+            [
+                "gain_on_strike",
+                "Shadowblight_AOE_Splash"
+            ]
+        ]
+    }
+]

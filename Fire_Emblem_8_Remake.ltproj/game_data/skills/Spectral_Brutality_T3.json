@@ -1,0 +1,33 @@
+[
+    {
+        "nid": "Spectral_Brutality_T3",
+        "name": "Spectral Brutality",
+        "desc": "Attacks inflict Breached (8) when using physical weapons, inflict Curse (8) if using magical weapons.\nIf enemy has either status effect, add unit's MAG/2 to attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            23
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "not item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "give_status_after_hit",
+                "Breached_8"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Spectral_Brutality_Magic_hide",
+                    "Spectral_Brutality_Boost_hide"
+                ]
+            ]
+        ]
+    }
+]

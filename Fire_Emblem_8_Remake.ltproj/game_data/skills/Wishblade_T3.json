@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Wishblade_T3",
+        "name": "Wishblade",
+        "desc": "Add unit's LCK/4 to Crit chance.\nSummon a sentient sword to fight for you.\nThis is a free action.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            46
+        ],
+        "components": [
+            [
+                "ability",
+                "Summon_Sword"
+            ],
+            [
+                "condition",
+                "not game.check_alive('SummonSword_' + unit.nid)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Wishblade_Crit_Buff_hide"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "_True_Death_Skill",
+        "name": " True Death skill",
+        "desc": "A strike that Luna into unit's Attacks.The attack never miss and +1 bonus attack (+2 if unit doubles).",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')"
+            ],
+            [
+                "hit",
+                999
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

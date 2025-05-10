@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Airburst_Greatlance",
+        "name": "Airburst G.L.",
+        "desc": "A greatlance that bursts the air itself.\n<green>Skills:</>Lance Guard (C), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD.",
+        "icon_nid": "Lances Sheet",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                11
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Wind"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Greatlance",
+                    "Wind"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
+            ]
+        ]
+    }
+]
