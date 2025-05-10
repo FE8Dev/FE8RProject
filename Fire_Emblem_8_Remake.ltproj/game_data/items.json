@@ -5163,107 +5163,6 @@
         ]
     },
     {
-        "nid": "Ghostly_Dagger",
-        "name": "Ghostly_Dagger",
-        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Magical, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
-        "icon_nid": "New X rank stuff",
-        "icon_index": [
-            1,
-            2
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "value",
-                6000
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                115
-            ],
-            [
-                "crit",
-                15
-            ],
-            [
-                "weight",
-                7
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "weapon_rank",
-                "X"
-            ],
-            [
-                "battle_cast_anim",
-                "Crimson Eye"
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Bleeding"
-                ]
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "alternate_damage_formula",
-                "MAG_SPD_STRONG"
-            ],
-            [
-                "prf_tags",
-                [
-                    "Thief"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Crit_Damage_Bonus_40",
-                    "Ghostly_Alliance"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ]
-        ]
-    },
-    {
         "nid": "Broken_Helix_Dark",
         "name": "Broken Helix (D)",
         "desc": "An incomplete blade of darkness.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*1.5))}</>), Heavy.",
@@ -58892,10 +58791,6 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_MAX"
-            ],
-            [
-                "wexp",
-                2
             ]
         ]
     },
@@ -65972,10 +65867,6 @@
                 [
                     "Wind"
                 ]
-            ],
-            [
-                "wexp",
-                2
             ]
         ]
     },
@@ -71450,7 +71341,7 @@
             ],
             [
                 "wexp",
-                3
+                2
             ]
         ]
     },
@@ -109831,7 +109722,7 @@
     {
         "nid": "Dark_Stare",
         "name": "Dark Stare",
-        "desc": "A dark spell quickly casted from the eye.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>HP absorb (10%), cannot miss, cannot DS.",
+        "desc": "A dark spell quickly casted from the eye.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>HP absorb (10%), cannot miss, cannot double, cannot DS.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -109909,6 +109800,10 @@
                 ]
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "lifelink",
                 0.10000000000000003
             ],
@@ -109941,7 +109836,7 @@
     {
         "nid": "Shadow_Gaze",
         "name": "Shadow Gaze",
-        "desc": "Blink between spells.\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (15%), cannot miss, cannot DS.",
+        "desc": "Blink between spells.\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (15%), cannot miss, cannot double, cannot DS.",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -110019,6 +109914,10 @@
                 ]
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "lifelink",
                 0.15
             ],
@@ -110059,7 +109958,7 @@
     {
         "nid": "Sinister_Eye",
         "name": "Sinister Eye",
-        "desc": "Gaze of sinister intentions.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (20%), cannot miss, cannot DS.",
+        "desc": "Gaze of sinister intentions.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (20%), cannot miss, cannot double, cannot DS.",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -110137,6 +110036,10 @@
                 ]
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "lifelink",
                 0.2
             ],
@@ -110177,7 +110080,7 @@
     {
         "nid": "Abyssal_Eye",
         "name": "Abyssal Eye",
-        "desc": "Pupils that are as deep as the Abyss.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (30%), cannot miss, cannot DS.",
+        "desc": "Pupils that are as deep as the Abyss.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Spotted\n<pink>Misc:</>(Multi-target:2), HP absorb (30%), cannot miss, cannot double, cannot DS.",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -110230,7 +110133,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Fenrir"
+                "Crimson Eye"
             ],
             [
                 "prf_unit",
@@ -110253,6 +110156,10 @@
                     "Shadow_Blight",
                     "Spotted"
                 ]
+            ],
+            [
+                "no_double",
+                null
             ],
             [
                 "lifelink",
@@ -110295,7 +110202,7 @@
     {
         "nid": "Oracle_Eye",
         "name": "Oracle Eye",
-        "desc": "Eyes of a demi-god of wisdom. Seeing all fates.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (25), Spotted\n<pink>Misc:</>(Multi-target:5), HP absorb (75%), cannot miss, cannot DS.",
+        "desc": "Eyes of a demi-god of wisdom. Seeing all fates.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (25), Spotted\n<pink>Misc:</>(Multi-target:5), HP absorb (75%), cannot miss, cannot double, cannot DS.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -110348,7 +110255,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Gespenst"
+                "Crimson Eye"
             ],
             [
                 "prf_unit",
@@ -110371,6 +110278,10 @@
                     "Shadow_Blight",
                     "Spotted"
                 ]
+            ],
+            [
+                "no_double",
+                null
             ],
             [
                 "lifelink",
@@ -110407,7 +110318,7 @@
     {
         "nid": "Blinding_Gaze",
         "name": "Blinding Gaze",
-        "desc": "A gaze that blinds those who look.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+20 Avoid on Equip, Brave.",
+        "desc": "A gaze that blinds those who look.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+20 Avoid on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -110513,17 +110424,13 @@
                 [
                     "Light"
                 ]
-            ],
-            [
-                "brave",
-                null
             ]
         ]
     },
     {
         "nid": "Radiant_Gaze",
         "name": "Radiant Gaze",
-        "desc": "A fantastic light that hurts to see.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+40 Avoid on Equip, Brave.",
+        "desc": "A fantastic light that hurts to see.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+40 Avoid on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             1,
@@ -110629,17 +110536,13 @@
                 [
                     "Light"
                 ]
-            ],
-            [
-                "brave",
-                null
             ]
         ]
     },
     {
         "nid": "Overseers_Light",
         "name": "Overseer's Light",
-        "desc": "Light from one that sees all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+80 Avoid on Equip, Brave.",
+        "desc": "Light from one that sees all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+80 Avoid on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -110745,10 +110648,6 @@
                 [
                     "Light"
                 ]
-            ],
-            [
-                "brave",
-                null
             ]
         ]
     },
@@ -112538,14 +112437,14 @@
             [
                 "multi_item",
                 [
-                    "Mourning_Sword",
-                    "Funeral_Sword",
+                    "Mourning_Blade",
+                    "Funeral_Blade",
                     "Sepulchre",
                     "Catacomb",
                     "Eternal_Rest",
                     "Vertebrae",
                     "Bone_Shackle",
-                    "Abyssal_Bone",
+                    "Bone_Pillar",
                     "Burial",
                     "Gravebound",
                     "Mass_Burial",
@@ -112567,227 +112466,12 @@
         ]
     },
     {
-        "nid": "Mourning_Sword",
-        "name": "Mourning Sword",
-        "desc": "A blade of darkness and regret.\n<green>Skills:</>Flash Step.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES, +1 SPD.",
+        "nid": "Mourning_Blade",
+        "name": "Mourning Blade",
+        "desc": "A blade of darkness and regret.\n<green>Skills:</>Blade Sweep.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                6
-            ],
-            [
-                "hit",
-                85
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "weapon_rank",
-                "E"
-            ],
-            [
-                "weight",
-                6
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "battle_cast_anim",
-                "Arrow"
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Flash_Step"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "BoneBoy"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"BoneBoy\").wexp['Sword'] < 120"
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Shadow_Blight",
-                    "Cursed_2",
-                    "Crippled"
-                ]
-            ],
-            [
-                "alternate_damage_formula",
-                "STR_MAG_WEAK"
-            ],
-            [
-                "alternate_resist_formula",
-                "MAGIC_DEFENSE"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        1
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Funeral_Sword",
-        "name": "Funeral Sword",
-        "desc": "A funeral that brings out the worst of people.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (5), Crippled\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES, +3 SPD.",
-        "icon_nid": "New Monsters",
-        "icon_index": [
-            7,
-            5
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "weight",
-                9
-            ],
-            [
-                "crit",
-                7
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "battle_cast_anim",
-                "Arrow"
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Flash_Step",
-                    "Aggravator"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "BoneBoy"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"BoneBoy\").wexp['Sword'] >= 120 and u(\"BoneBoy\").wexp['Sword']  < 240"
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Shadow_Blight",
-                    "Cursed_5",
-                    "Crippled"
-                ]
-            ],
-            [
-                "alternate_damage_formula",
-                "STR_MAG_WEAK"
-            ],
-            [
-                "alternate_resist_formula",
-                "MAGIC_DEFENSE"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        3
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Sepulchre",
-        "name": "Sepulchre",
-        "desc": "A monument of what was.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES, +10 DEF, +5 SPD.",
-        "icon_nid": "New Monsters",
-        "icon_index": [
-            8,
             5
         ],
         "components": [
@@ -112809,7 +112493,7 @@
             ],
             [
                 "hit",
-                105
+                70
             ],
             [
                 "weapon_type",
@@ -112817,15 +112501,15 @@
             ],
             [
                 "weapon_rank",
-                "A"
+                "E"
             ],
             [
                 "weight",
-                12
+                10
             ],
             [
                 "crit",
-                10
+                5
             ],
             [
                 "min_range",
@@ -112836,20 +112520,41 @@
                 1
             ],
             [
+                "shove",
+                1
+            ],
+            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "item_tags",
                 [
+                    "Blade",
                     "Dark"
                 ]
             ],
             [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Aggravator"
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
                 ]
             ],
             [
@@ -112860,47 +112565,38 @@
             ],
             [
                 "eval_available",
-                "u(\"BoneBoy\").wexp['Sword'] >= 240 and u(\"BoneBoy\").wexp['Sword']  < 420"
+                "u(\"BoneBoy\").wexp['Sword'] < 120"
+            ],
+            [
+                "wexp",
+                3
             ],
             [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Cursed_8",
-                    "Crippled_P"
+                    "Cursed_2",
+                    "Crippled"
                 ]
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_MID"
+                "STR_MAG_WEAK"
             ],
             [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        10
-                    ],
-                    [
-                        "SPD",
-                        5
-                    ]
-                ]
             ]
         ]
     },
     {
-        "nid": "Catacomb",
-        "name": "Catacomb",
-        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets RES, +13 DEF, +5 RES, +10 SPD.",
-        "icon_nid": "02-26-25",
+        "nid": "Funeral_Blade",
+        "name": "Funeral Blade",
+        "desc": "A funeral that brings out the worst of people.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (5), Crippled\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "icon_nid": "New Monsters",
         "icon_index": [
-            0,
-            0
+            7,
+            5
         ],
         "components": [
             [
@@ -112921,7 +112617,7 @@
             ],
             [
                 "hit",
-                120
+                80
             ],
             [
                 "weapon_type",
@@ -112929,15 +112625,15 @@
             ],
             [
                 "weapon_rank",
-                "SSS"
+                "C"
             ],
             [
                 "weight",
-                16
+                13
             ],
             [
                 "crit",
-                15
+                7
             ],
             [
                 "min_range",
@@ -112948,19 +112644,41 @@
                 1
             ],
             [
+                "shove",
+                1
+            ],
+            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "item_tags",
                 [
+                    "Blade",
                     "Dark"
                 ]
             ],
             [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
                     "Aggravator"
                 ]
             ],
@@ -112972,50 +112690,37 @@
             ],
             [
                 "eval_available",
-                "u(\"BoneBoy\").wexp['Sword'] >= 420 and u(\"BoneBoy\").wexp['Sword']  < 480"
+                "u(\"BoneBoy\").wexp['Sword'] >= 120 and u(\"BoneBoy\").wexp['Sword']  < 240"
+            ],
+            [
+                "wexp",
+                3
             ],
             [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Cursed_15",
-                    "Crippled_P"
+                    "Cursed_5",
+                    "Crippled"
                 ]
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_STRONG"
+                "STR_MAG_WEAK"
             ],
             [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        13
-                    ],
-                    [
-                        "RES",
-                        5
-                    ],
-                    [
-                        "SPD",
-                        10
-                    ]
-                ]
             ]
         ]
     },
     {
-        "nid": "Eternal_Rest",
-        "name": "Eternal Rest",
-        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<pink>Misc:</>STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES, +20 DEF, +12 RES, +15 SPD.",
+        "nid": "Sepulchre",
+        "name": "Sepulchre",
+        "desc": "A monument of what was.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
-            9,
+            8,
             5
         ],
         "components": [
@@ -113037,7 +112742,279 @@
             ],
             [
                 "hit",
-                135
+                90
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Dark"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Aggravator"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "BoneBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BoneBoy\").wexp['Sword'] >= 240 and u(\"BoneBoy\").wexp['Sword']  < 420"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8",
+                    "Crippled_P"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Catacomb",
+        "name": "Catacomb",
+        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +13 DEF, +5 RES, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "icon_nid": "02-26-25",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                32
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Dark"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
+                    "Aggravator"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "BoneBoy"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"BoneBoy\").wexp['Sword'] >= 420 and u(\"BoneBoy\").wexp['Sword']  < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15",
+                    "Crippled_P"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        13
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Eternal_Rest",
+        "name": "Eternal Rest",
+        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +20 DEF, +12RES, STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                40
+            ],
+            [
+                "hit",
+                120
             ],
             [
                 "weapon_type",
@@ -113049,7 +113026,7 @@
             ],
             [
                 "weight",
-                23
+                40
             ],
             [
                 "crit",
@@ -113064,19 +113041,40 @@
                 1
             ],
             [
+                "shove",
+                1
+            ],
+            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
+                "no_double",
+                null
+            ],
+            [
                 "item_tags",
                 [
-                    "Dark"
+                    "Blade"
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep",
                     "Aggravator"
                 ]
             ],
@@ -113089,6 +113087,10 @@
             [
                 "eval_available",
                 "u(\"BoneBoy\").wexp['Sword'] >= 420"
+            ],
+            [
+                "wexp",
+                3
             ],
             [
                 "statuses_on_hit",
@@ -113116,10 +113118,6 @@
                     [
                         "RES",
                         12
-                    ],
-                    [
-                        "SPD",
-                        15
                     ]
                 ]
             ]
@@ -113128,7 +113126,7 @@
     {
         "nid": "Vertebrae",
         "name": "Vertebrae",
-        "desc": "The long spine of a skeleton that makes a weird scythe, but also protects.\n<green>Skills:</>Lance Guard (E), Spook <orange>Element:</><icon>Dark</> \n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2) <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "The long spine of a skeleton.\n<green>Skills:</>Lance Guard (E), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</> STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
         "icon_nid": "Untitled",
         "icon_index": [
             0,
@@ -113182,8 +113180,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Spook",
-                    "Lance_Guard_E"
+                    "Lance_Guard_E",
+                    "Spook"
                 ]
             ],
             [
@@ -113220,29 +113218,13 @@
                 [
                     "Dark"
                 ]
-            ],
-            [
-                "enemy_cleave_aoe",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Infantry"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
             ]
         ]
     },
     {
         "nid": "Bone_Shackle",
         "name": "Bone Shackle",
-        "desc": "A scythe that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "desc": "A lance that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
         "icon_nid": "Untitled",
         "icon_index": [
             1,
@@ -113296,8 +113278,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Spook",
-                    "Lance_Guard_C"
+                    "Lance_Guard_C",
+                    "Spook"
                 ]
             ],
             [
@@ -113334,33 +113316,17 @@
                 [
                     "Dark"
                 ]
-            ],
-            [
-                "enemy_cleave_aoe",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Infantry"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
             ]
         ]
     },
     {
-        "nid": "Abyssal_Bone",
-        "name": "Abyssal Bone",
-        "desc": "A horrific scythe of bones from the abyss.\n<green>Skills:</>Lance Guard (SS), Spook <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets RES.",
-        "icon_nid": "Lances Sheet",
+        "nid": "Bone_Pillar",
+        "name": "Bone Pillar",
+        "desc": "A horrific pillar of bones.\n<green>Skills:</>Lance Guard (A), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets RES.",
+        "icon_nid": "Untitled",
         "icon_index": [
-            3,
-            4
+            2,
+            0
         ],
         "components": [
             [
@@ -113452,22 +113418,6 @@
                 [
                     "Dark"
                 ]
-            ],
-            [
-                "enemy_cleave_aoe",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Infantry"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
             ]
         ]
     },
@@ -127383,7 +127333,7 @@
     {
         "nid": "Bart_Anima_E",
         "name": "Sand Bite",
-        "desc": "Basic sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (20%), +5 SPD, MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>).",
+        "desc": "Basic sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</></><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (20%), +5 SPD, MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -127486,7 +127436,7 @@
     {
         "nid": "Bart_Anima_C",
         "name": "Bursting Bite",
-        "desc": "Intermediate sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (30%), +10 SPD, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "Intermediate sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</></><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (30%), +10 SPD, MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             15,
@@ -127589,7 +127539,7 @@
     {
         "nid": "Bart_Anima_A",
         "name": "Snake Burst",
-        "desc": "Advanced sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (40%), +15 SPD, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
+        "desc": "Advanced sand magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</></><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (40%), +15 SPD, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             16,
@@ -127692,7 +127642,7 @@
     {
         "nid": "Bart_Anima_SSS",
         "name": "Gaia Snake",
-        "desc": "Summon a demonic snake guardian to attack.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (50%), +30 SPD, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
+        "desc": "Summon a demonic snake guardian to attack.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</></><icon>skill_icons 2, 20</>\n<pink>Misc:</>+1 Bonus attack, Splash DMG (50%), +30 SPD, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             19,
@@ -133369,973 +133319,6 @@
             [
                 "value",
                 7000
-            ]
-        ]
-    },
-    {
-        "nid": "_Azuth_Arsenal",
-        "name": "Azuth Arsenal",
-        "desc": "Azuth's personal spells, erased from history by divine beings.\n<red>Proficiency:</><icon>Dark</><icon>Staff</>",
-        "icon_nid": "Dark Tomes Sheet",
-        "icon_index": [
-            8,
-            2
-        ],
-        "components": [
-            [
-                "multi_item_hides_unavailable",
-                null
-            ],
-            [
-                "multi_item",
-                [
-                    "_First_Page",
-                    "_Lost_Word",
-                    "_Dark_Grimoire",
-                    "_Dark_True",
-                    "_DarkHold",
-                    "_Nazarick_Order",
-                    "_Death_Adveniment",
-                    "_Null_Seer"
-                ]
-            ],
-            [
-                "unstealable",
-                null
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "_First_Page",
-        "name": "First Page",
-        "desc": "A tome for new aprentices in the dark arts.\n<green>Skills:</>Ancient Pact (E), Low Damage Reduction\n<orange>Element:</><icon>Dark</>",
-        "icon_nid": "Dark Tomes Sheet",
-        "icon_index": [
-            6,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                5
-            ],
-            [
-                "hit",
-                70
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                8
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "E"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "FluxRune_Red"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Cursed_2",
-                    "Shadow_Blight"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Ancient_Pact_E",
-                    "_Low_Reduction"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Dark'] < 120"
-            ]
-        ]
-    },
-    {
-        "nid": "_Lost_Word",
-        "name": "Lost Word",
-        "desc": "Ancients words of power, forsaken by the passage time.\n<green>Skills:</>Ancient Pact (C), Medium Damage Reduction\n<orange>Element:</><icon>Dark</>",
-        "icon_nid": "Dark Tomes Sheet",
-        "icon_index": [
-            8,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                14
-            ],
-            [
-                "hit",
-                80
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                12
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "C"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "FluxSlime_Red"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Cursed_5",
-                    "Shadow_Blight"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Ancient_Pact_C",
-                    "_Medium_Reduction"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"Azuth\").wexp['Dark'] >= 120 and u(\"_Azuth\").wexp['Dark']< 240"
-            ]
-        ]
-    },
-    {
-        "nid": "_Dark_Grimoire",
-        "name": "Dark Grimoire",
-        "desc": "A tome for a mage fully immersed into the study of dark magic.\n<green>Skills:</>Ancient Pact (A), High Reduction\n<orange>Element:</><icon>Dark</>",
-        "icon_nid": "Dark Tomes Sheet",
-        "icon_index": [
-            9,
-            1
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                19
-            ],
-            [
-                "hit",
-                95
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                15
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "FluxRune_Red"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Cursed_8",
-                    "Shadow_Blight"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Ancient_Pact_A",
-                    "_High_Reduction"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Dark'] >= 240 and u(\"_Azuth\").wexp['Dark'] < 360"
-            ]
-        ]
-    },
-    {
-        "nid": "_Dark_True",
-        "name": "True Dark",
-        "desc": "The true form of magic inside of a world of darkness.\n<green>Skills:</>Ancient Pact (SS), Magnum Reduction\n<orange>Element:</><icon>Dark</>",
-        "icon_nid": "{Beansy} Brynhildr",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                2
-            ],
-            [
-                "damage",
-                23
-            ],
-            [
-                "hit",
-                105
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                16
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "SS"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "FluxRune_Red"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Cursed_15",
-                    "Shadow_Blight"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Ancient_Pact_SS",
-                    "_Magnum_Reduction"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Dark'] >= 360 and u(\"_Azuth\").wexp['Dark'] < 480"
-            ]
-        ]
-    },
-    {
-        "nid": "_DarkHold",
-        "name": "All Black",
-        "desc": "The maximum expression of black magic, condemned to destruccion by the divines.\n<green>Skills:</>Ancient Pact (X), Damage Void\n<orange>Element:</><icon>Dark</>",
-        "icon_nid": "{Seal} (SacredWar) Dark 6",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                35
-            ],
-            [
-                "hit",
-                120
-            ],
-            [
-                "crit",
-                0
-            ],
-            [
-                "weight",
-                20
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Dark"
-            ],
-            [
-                "weapon_rank",
-                "X"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    72,
-                    0,
-                    65
-                ]
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "battle_cast_anim",
-                "Luna_Red"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "statuses_on_hit",
-                [
-                    "Cursed_25",
-                    "Shadow_Blight"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Ancient_Pact_X",
-                    "_Damage_Void"
-                ]
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Dark"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Dark'] >= 480"
-            ]
-        ]
-    },
-    {
-        "nid": "_Nazarick_Order",
-        "name": "Nazarick Order",
-        "desc": "A staff of status, privilege exclusive of the stronger magus.\n<green>Skills:</>Dark Wisdom<pink>Misc:</>Cannot miss, cannot DS, can't crit.",
-        "icon_nid": "Staffs Sheet",
-        "icon_index": [
-            6,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "weapon_type",
-                "Staff"
-            ],
-            [
-                "weapon_rank",
-                "A"
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                4
-            ],
-            [
-                "damage",
-                10
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "map_hit_sfx",
-                "Attack Hit 1"
-            ],
-            [
-                "map_cast_sfx",
-                "Shine"
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "wexp",
-                1
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "status_on_equip",
-                "_Dark_Wisdom"
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Armor"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
-                "damage_formula_override",
-                "ZERO"
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Staff'] >= 240"
-            ],
-            [
-                "resist_formula_override",
-                "ZERO"
-            ]
-        ]
-    },
-    {
-        "nid": "_Death_Adveniment",
-        "name": "Death Adveniment",
-        "desc": "Death claims all life, few escape its grasp. Starts on CD.<CD:8>\n<green>Skills:</>Grasp Heart<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Cannot miss, cannot DS, can't crit.",
-        "icon_nid": "{Beansy} Abort",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "weapon_type",
-                "Staff"
-            ],
-            [
-                "weapon_rank",
-                "SS"
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                5
-            ],
-            [
-                "damage",
-                30
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "map_hit_sfx",
-                "Attack Hit 2"
-            ],
-            [
-                "map_cast_sfx",
-                "Shine"
-            ],
-            [
-                "status_on_equip",
-                "_Grab_Heart"
-            ],
-            [
-                "cooldown",
-                8
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "wexp",
-                1
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Armor"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Staff'] >= 360"
-            ],
-            [
-                "start_cooldown",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "_Null_Seer",
-        "name": "Herald of the Void",
-        "desc": "Reduces everything to nothing, not even death itself can resist this spell.<CD:12>\n<green>Skills:</>True Death<red>Effective:</><icon>Armor</>\n<pink>Misc:</>Cannot miss, cannot DS, can't crit.",
-        "icon_nid": "{Zarg} Staff 17",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "weapon_type",
-                "Staff"
-            ],
-            [
-                "weapon_rank",
-                "X"
-            ],
-            [
-                "exp",
-                15
-            ],
-            [
-                "magic",
-                null
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                6
-            ],
-            [
-                "damage",
-                42
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    255,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "map_hit_sfx",
-                "Attack Hit 1"
-            ],
-            [
-                "map_cast_sfx",
-                "Shine"
-            ],
-            [
-                "status_on_equip",
-                "_True_Death"
-            ],
-            [
-                "cooldown",
-                12
-            ],
-            [
-                "prf_unit",
-                [
-                    "_Azuth"
-                ]
-            ],
-            [
-                "wexp",
-                1
-            ],
-            [
-                "no_double",
-                null
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Armor"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
-                "eval_available",
-                "u(\"_Azuth\").wexp['Staff'] >= 480"
-            ],
-            [
-                "start_cooldown",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "_Summon_ElderLich",
-        "name": "Summon",
-        "desc": "Summons an elder lich. This is a free action.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            9,
-            0
-        ],
-        "components": [
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                1
-            ],
-            [
-                "target_tile",
-                null
-            ],
-            [
-                "spell",
-                null
-            ],
-            [
-                "empty_tile_target_restrict",
-                null
-            ],
-            [
-                "event_on_hit",
-                "Global Summon Elder Lich"
-            ],
-            [
-                "map_cast_sfx",
-                "None"
-            ],
-            [
-                "no_map_hp_display",
-                null
-            ],
-            [
-                "map_hit_sub_blend",
-                [
-                    0,
-                    0,
-                    0
-                ]
-            ],
-            [
-                "traversable_tile_target_restrict",
-                null
-            ],
-            [
-                "menu_after_combat",
-                null
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
             ]
         ]
     },
@@ -153716,7 +152699,7 @@
     {
         "nid": "Killer_Dagger",
         "name": "Killer Dagger",
-        "desc": "A dagger made to start conflict. <green>CD: 1</>\n<green>Skills:</>Quick Knife, Aggressor\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD, +10 Crit damage requires Steal skill.",
+        "desc": "A deadly dagger.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD, +20 Crit damage requires Steal skill.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             6,
@@ -153745,7 +152728,7 @@
             ],
             [
                 "damage",
-                1
+                5
             ],
             [
                 "hit",
@@ -153753,7 +152736,7 @@
             ],
             [
                 "crit",
-                15
+                30
             ],
             [
                 "weight",
@@ -153773,15 +152756,11 @@
             ],
             [
                 "cooldown",
-                1
+                3
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Crit_Damage_Bonus_10",
-                    "Quick_Knife",
-                    "Aggressor"
-                ]
+                "status_on_equip",
+                "Quick_Knife"
             ],
             [
                 "battle_cast_anim",
@@ -153806,6 +152785,12 @@
                 "prf_tags",
                 [
                     "Thief"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_20"
                 ]
             ]
         ]
