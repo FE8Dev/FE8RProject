@@ -14,15 +14,15 @@
 
 
 
-##To do  high priority on top
+##To do - high priority on top
 
 
-fix chapter 18
+*fix chapter 18
 
-fix azuth weapon animations, they hang the game
+*fix azuth weapon animations, they hang the game
 
 
 
-make duplicate weapon for his summons
+*make duplicate weapon for his summons
 
 
