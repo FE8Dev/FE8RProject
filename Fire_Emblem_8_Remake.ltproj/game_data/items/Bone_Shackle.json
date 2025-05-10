@@ -2,7 +2,7 @@
     {
         "nid": "Bone_Shackle",
         "name": "Bone Shackle",
-        "desc": "A lance that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "desc": "A scythe that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
         "icon_nid": "Untitled",
         "icon_index": [
             1,
@@ -56,8 +56,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Lance_Guard_C",
-                    "Spook"
+                    "Spook",
+                    "Lance_Guard_C"
                 ]
             ],
             [
@@ -94,6 +94,22 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Damage_Void",
+        "name": "Damage Void",
+        "desc": "The user reduces the damage they receive by 50% and is immune to negative status effects.\nNegate the damage from enemies below lvl 25.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "resist_status",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Damage_Void_Child"
+                ]
+            ]
+        ]
+    }
+]

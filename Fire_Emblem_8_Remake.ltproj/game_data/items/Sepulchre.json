@@ -2,7 +2,7 @@
     {
         "nid": "Sepulchre",
         "name": "Sepulchre",
-        "desc": "A monument of what was.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "A monument of what was.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES, +10 DEF, +5 SPD.",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                22
+                13
             ],
             [
                 "hit",
-                90
+                105
             ],
             [
                 "weapon_type",
@@ -39,7 +39,7 @@
             ],
             [
                 "weight",
-                18
+                12
             ],
             [
                 "crit",
@@ -54,41 +54,19 @@
                 1
             ],
             [
-                "shove",
-                1
-            ],
-            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
-                "no_double",
-                null
-            ],
-            [
                 "item_tags",
                 [
-                    "Blade",
                     "Dark"
                 ]
             ],
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Frozen"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ],
-            [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep",
+                    "Flash_Step",
                     "Aggravator"
                 ]
             ],
@@ -103,10 +81,6 @@
                 "u(\"BoneBoy\").wexp['Sword'] >= 240 and u(\"BoneBoy\").wexp['Sword']  < 420"
             ],
             [
-                "wexp",
-                3
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
@@ -116,7 +90,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_WEAK"
+                "STR_MAG_MID"
             ],
             [
                 "alternate_resist_formula",
@@ -128,6 +102,10 @@
                     [
                         "DEF",
                         10
+                    ],
+                    [
+                        "SPD",
+                        5
                     ]
                 ]
             ]

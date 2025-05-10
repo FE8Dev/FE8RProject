@@ -2,7 +2,7 @@
     {
         "nid": "Eternal_Rest",
         "name": "Eternal Rest",
-        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +20 DEF, +12RES, STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES.",
+        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<pink>Misc:</>STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES, +20 DEF, +12 RES, +15 SPD.",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                40
+                22
             ],
             [
                 "hit",
-                120
+                135
             ],
             [
                 "weapon_type",
@@ -39,7 +39,7 @@
             ],
             [
                 "weight",
-                40
+                23
             ],
             [
                 "crit",
@@ -54,40 +54,19 @@
                 1
             ],
             [
-                "shove",
-                1
-            ],
-            [
                 "battle_cast_anim",
                 "Arrow"
             ],
             [
-                "no_double",
-                null
-            ],
-            [
                 "item_tags",
                 [
-                    "Blade"
+                    "Dark"
                 ]
-            ],
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Frozen"
-                    ],
-                    "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep",
+                    "Flash_Step",
                     "Aggravator"
                 ]
             ],
@@ -100,10 +79,6 @@
             [
                 "eval_available",
                 "u(\"BoneBoy\").wexp['Sword'] >= 420"
-            ],
-            [
-                "wexp",
-                3
             ],
             [
                 "statuses_on_hit",
@@ -131,6 +106,10 @@
                     [
                         "RES",
                         12
+                    ],
+                    [
+                        "SPD",
+                        15
                     ]
                 ]
             ]
