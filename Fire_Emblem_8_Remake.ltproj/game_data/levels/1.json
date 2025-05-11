@@ -54,32 +54,6 @@
                 "generic": false
             },
             {
-                "nid": "Gilliam",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": null,
-                "starting_position": [
-                    6,
-                    1
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
-                "nid": "Franz",
-                "team": "player",
-                "ai": "None",
-                "roam_ai": null,
-                "ai_group": null,
-                "starting_position": [
-                    5,
-                    1
-                ],
-                "starting_traveler": null,
-                "generic": false
-            },
-            {
                 "nid": "Breguet",
                 "team": "enemy",
                 "ai": "Guard",
@@ -381,6 +355,26 @@
                 "starting_position": null,
                 "starting_traveler": null,
                 "generic": true
+            },
+            {
+                "nid": "Franz",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
+            },
+            {
+                "nid": "Gilliam",
+                "team": "player",
+                "ai": "None",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": null,
+                "starting_traveler": null,
+                "generic": false
             }
         ],
         "regions": [
@@ -451,6 +445,40 @@
                 "time_left": null,
                 "only_once": false,
                 "interrupt_move": false
+            },
+            {
+                "nid": "Formation1",
+                "region_type": "formation",
+                "position": [
+                    13,
+                    9
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
+            },
+            {
+                "nid": "Formation2",
+                "region_type": "formation",
+                "position": [
+                    14,
+                    8
+                ],
+                "size": [
+                    1,
+                    1
+                ],
+                "sub_nid": "",
+                "condition": "True",
+                "time_left": null,
+                "only_once": false,
+                "interrupt_move": false
             }
         ],
         "unit_groups": [
@@ -499,10 +527,19 @@
             {
                 "nid": "Rein",
                 "units": [
-                    "Gilliam",
-                    "Franz"
+                    "Franz",
+                    "Gilliam"
                 ],
-                "positions": {}
+                "positions": {
+                    "Franz": [
+                        5,
+                        1
+                    ],
+                    "Gilliam": [
+                        6,
+                        1
+                    ]
+                }
             },
             {
                 "nid": "EnemyRein",

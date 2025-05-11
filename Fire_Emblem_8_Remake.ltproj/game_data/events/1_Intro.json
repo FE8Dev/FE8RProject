@@ -8,6 +8,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "change_team;Franz;other",
             "add_talk;Eirika;Franz",
             "add_talk;Seth;Franz",
             "remove_group;Enemy1;immediate",
@@ -133,7 +134,17 @@
             "sound;EirikaYes",
             "speak;Eirika;Of course, Seth.|Come on!|Let's go!",
             "remove_portrait;Seth;no_block",
-            "remove_portrait;Eirika"
+            "remove_portrait;Eirika",
+            "change_team;Franz;other",
+            "change_team;Gilliam;other",
+            "if;game.game_vars['PrologueDGOption'] == True",
+            "prep;t",
+            "change_team;Franz;player",
+            "change_team;Gilliam;player",
+            "else",
+            "change_team;Franz;player",
+            "change_team;Gilliam;player",
+            "end"
         ],
         "nid": "1 Intro"
     }
