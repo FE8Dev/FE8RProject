@@ -17,12 +17,12 @@
 ##To do - high priority on top
 
 
-*fix chapter 18
+*fix harpy??
 
-*fix azuth weapon animations, they hang the game
+*add new trainees
 
 
 
-*make duplicate weapon for his summons
+*make duplicate weapon for azuth summons
 
 
