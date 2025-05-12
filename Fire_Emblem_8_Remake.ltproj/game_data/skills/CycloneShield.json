@@ -2,7 +2,7 @@
     {
         "nid": "CycloneShield",
         "name": "Cyclone Shield",
-        "desc": "Unit is immune to all ranged attacks. Lasts for 2 turns.",
+        "desc": "Unit is immune to all ranged attacks from beyond 2 tiles away.\nLasts for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -10,16 +10,16 @@
         ],
         "components": [
             [
-                "condition",
-                "unit.position and (utils.calculate_distance(unit.position, unit2.position) >= 2)"
-            ],
-            [
                 "ignore_damage",
                 null
             ],
             [
                 "time",
                 2
+            ],
+            [
+                "combat_condition",
+                "unit.position and (utils.calculate_distance(unit.position, unit2.position) >= 2)"
             ]
         ]
     }
