@@ -78207,7 +78207,7 @@
     },
     {
         "nid": "Dark_Manakete_First",
-        "name": "Fire Shifter",
+        "name": "Dark Shifter",
         "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Fliers",
@@ -78246,7 +78246,7 @@
         "growth_bonus": {
             "HP": 290,
             "STR": 150,
-            "MAG": 10,
+            "MAG": 100,
             "SKL": 75,
             "SPD": 75,
             "LCK": 75,
@@ -78258,7 +78258,7 @@
         "promotion": {
             "HP": 3,
             "STR": 4,
-            "MAG": 0,
+            "MAG": 2,
             "SKL": 3,
             "SPD": 3,
             "LCK": 3,
@@ -78368,7 +78368,7 @@
     },
     {
         "nid": "Dark_Manakete_Second",
-        "name": "Fire Shifter",
+        "name": "Dark Shifter",
         "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Fliers",
@@ -78407,7 +78407,7 @@
         "growth_bonus": {
             "HP": 290,
             "STR": 150,
-            "MAG": 10,
+            "MAG": 100,
             "SKL": 75,
             "SPD": 75,
             "LCK": 75,
@@ -78529,7 +78529,7 @@
     },
     {
         "nid": "Dark_Manakete_Human_First",
-        "name": "Fire Shifter",
+        "name": "Dark Shifter",
         "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
@@ -78568,7 +78568,7 @@
         "growth_bonus": {
             "HP": 290,
             "STR": 150,
-            "MAG": 10,
+            "MAG": 100,
             "SKL": 75,
             "SPD": 75,
             "LCK": 75,
@@ -78690,7 +78690,7 @@
     },
     {
         "nid": "Dark_Manakete_Human_Second",
-        "name": "Fire Shifter",
+        "name": "Dark Shifter",
         "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
@@ -78729,7 +78729,7 @@
         "growth_bonus": {
             "HP": 290,
             "STR": 150,
-            "MAG": 10,
+            "MAG": 100,
             "SKL": 75,
             "SPD": 75,
             "LCK": 75,
@@ -78796,7 +78796,7 @@
             ],
             "Lance": [
                 true,
-                60,
+                0,
                 480
             ],
             "Axe": [
@@ -82103,7 +82103,7 @@
             0
         ],
         "map_sprite_nid": "Druid (F) {IS}-stand",
-        "combat_anim_nid": null,
+        "combat_anim_nid": "Evoker",
         "fields": []
     },
     {
@@ -84150,16 +84150,16 @@
         "fields": []
     },
     {
-        "nid": "_Shaman_Azuth",
+        "nid": "Shaman_Azuth",
         "name": "Shaman",
         "desc": "Impulsive mages with a tenous grasp on their magic. <icon>Infantry</><icon>Magic</>",
         "tier": 1,
         "movement_group": "Mages",
         "promotes_from": null,
         "turns_into": [
-            "_T2_Druid_Azuth",
-            "_T2_Necromant_Azuth",
-            "_T2_Summoner_Azuth"
+            "T2_Druid_Azuth",
+            "T2_Necromant_Azuth",
+            "T2_Summoner_Azuth"
         ],
         "tags": [
             "AutoPromote",
@@ -84299,16 +84299,16 @@
             0
         ],
         "map_sprite_nid": "Shaman",
-        "combat_anim_nid": "Shaman",
+        "combat_anim_nid": "Necromant",
         "fields": []
     },
     {
-        "nid": "_T2_Druid_Azuth",
+        "nid": "T2_Druid_Azuth",
         "name": "Druid",
         "desc": "Experienced users of the dark arts. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Mages",
-        "promotes_from": "_Shaman_Azuth",
+        "promotes_from": "Shaman_Azuth",
         "turns_into": [
             "T3_Reaver_Dragon_Anima",
             "T3_Male_Archsage",
@@ -84427,7 +84427,7 @@
             ],
             "Anima": [
                 true,
-                60,
+                120,
                 360
             ],
             "Dark": [
@@ -84456,16 +84456,16 @@
         "fields": []
     },
     {
-        "nid": "_T2_Necromant_Azuth",
+        "nid": "T2_Necromant_Azuth",
         "name": "Necromant",
         "desc": "Darker magic fuels the spells of these mages. they are deeply inside a path of no return. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Mages",
-        "promotes_from": "_Shaman_Azuth",
+        "promotes_from": "Shaman_Azuth",
         "turns_into": [
-            "_T3_Dark_Druid_Azuth",
-            "_T3_Necromancer_Azuth",
-            "_T3_Overdeath_Azuth"
+            "T3_Dark_Druid_Azuth",
+            "T3_Necromancer_Azuth",
+            "T3_Overdeath_Azuth"
         ],
         "tags": [
             "AutoPromote",
@@ -84540,11 +84540,11 @@
             ],
             [
                 5,
-                "_Soul_Taint"
+                "Soul_Taint"
             ],
             [
                 15,
-                "_Soul_use"
+                "Soul_Use"
             ]
         ],
         "wexp_gain": {
@@ -84570,7 +84570,7 @@
             ],
             "Staff": [
                 true,
-                180,
+                120,
                 360
             ],
             "Light": [
@@ -84585,7 +84585,7 @@
             ],
             "Dark": [
                 true,
-                120,
+                60,
                 360
             ],
             "Default": [
@@ -84609,16 +84609,16 @@
         "fields": []
     },
     {
-        "nid": "_T2_Summoner_Azuth",
+        "nid": "T2_Summoner_Azuth",
         "name": "Summoner",
         "desc": "Phantoms answer the call of these weilders of Dark Magic. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Mages",
-        "promotes_from": "_Shaman_Azuth",
+        "promotes_from": "Shaman_Azuth",
         "turns_into": [
             "T3_Reaver_Dragon_Anima",
             "T3_Executioner_Ewan",
-            "T3_Necromancer_Ewan"
+            "T3_Necromancer_Azuth"
         ],
         "tags": [
             "AutoPromote",
@@ -84737,7 +84737,7 @@
             ],
             "Anima": [
                 true,
-                60,
+                120,
                 360
             ],
             "Dark": [
@@ -84766,12 +84766,12 @@
         "fields": []
     },
     {
-        "nid": "_T3_Dark_Druid_Azuth",
+        "nid": "T3_Dark_Druid_Azuth",
         "name": "Dark Druid",
         "desc": "Those who have mastered the Dark arts to the finest degree. <icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
-        "promotes_from": "_T2_Necromant_Azuth",
+        "promotes_from": "T2_Necromant_Azuth",
         "turns_into": [],
         "tags": [
             "Infantry",
@@ -84918,12 +84918,12 @@
         "fields": []
     },
     {
-        "nid": "_T3_Necromancer_Azuth",
+        "nid": "T3_Necromancer_Azuth",
         "name": "Necromancer",
         "desc": "High ranking summoners who have mastered the craft. <icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
-        "promotes_from": "_T2_Necromant_Azuth",
+        "promotes_from": "T2_Necromant_Azuth",
         "turns_into": [],
         "tags": [
             "Infantry",
@@ -85070,12 +85070,12 @@
         "fields": []
     },
     {
-        "nid": "_T3_Overdeath_Azuth",
+        "nid": "T3_Overdeath_Azuth",
         "name": "Overdeath",
         "desc": "Master Mages with complete dominion over necromancy, controling death with one hand and darkness with the other.<icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
-        "promotes_from": "_T2_Necromant_Azuth",
+        "promotes_from": "T2_Necromant_Azuth",
         "turns_into": [],
         "tags": [
             "Infantry",
@@ -85149,11 +85149,11 @@
             ],
             [
                 1,
-                "_Summon_Elder_Lich"
+                "Summon_Elder_Lich"
             ],
             [
                 5,
-                "_Pressence_Supreme"
+                "Pressence_Supreme"
             ],
             [
                 15,
@@ -85183,7 +85183,7 @@
             ],
             "Staff": [
                 true,
-                120,
+                60,
                 480
             ],
             "Light": [
@@ -85198,7 +85198,7 @@
             ],
             "Dark": [
                 true,
-                120,
+                60,
                 480
             ],
             "Default": [
