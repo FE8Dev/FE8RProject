@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Suppression_Fire",
+        "name": "Suppression Fire",
+        "desc": "<red>CA:</>The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses.<green>CD:6 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Suppression_Fire"
+            ],
+            [
+                "build_charge",
+                6
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

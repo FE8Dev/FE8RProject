@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Hunter_Mark",
+        "name": "Hunter Mark",
+        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Hunter_Mark_Debuff"
+            ],
+            [
+                "gain_skill_after_attack",
+                "Hunter_Mark_Buff"
+            ]
+        ]
+    }
+]

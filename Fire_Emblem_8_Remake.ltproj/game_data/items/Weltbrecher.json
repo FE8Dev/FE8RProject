@@ -1,0 +1,93 @@
+[
+    {
+        "nid": "Weltbrecher",
+        "name": "Weltbrecher",
+        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<green>Skills:</>Prey Wounded++\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                42
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Prey_Wounded_Plus_Plus"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"_Alex\").wexp['Bow'] >= 480"
+            ]
+        ]
+    }
+]

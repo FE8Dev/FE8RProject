@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Heavy_Shot",
+        "name": "Heavy Shot",
+        "desc": "The user's attack is increased by 75% and ignores 50% of the enemy's defense when attack. The user loses 25 hits for each square of distance between it and the target.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.75
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')// 2"
+            ],
+            [
+                "dynamic_accuracy",
+                "-25*(utils.calculate_distance(unit.position, target.position))"
+            ]
+        ]
+    }
+]

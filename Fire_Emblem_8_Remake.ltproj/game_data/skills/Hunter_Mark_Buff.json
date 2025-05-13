@@ -1,0 +1,40 @@
+[
+    {
+        "nid": "Hunter_Mark_Buff",
+        "name": " Hunter Mark",
+        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "hit",
+                15
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]
