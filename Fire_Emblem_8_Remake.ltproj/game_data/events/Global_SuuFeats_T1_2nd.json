@@ -1,0 +1,25 @@
+[
+    {
+        "name": "SuuFeats_T1_2nd",
+        "trigger": "unit_level_up",
+        "level_nid": null,
+        "condition": "has_skill('Suu', 'Suu_T1_2nd') and unit.level == 15 and unit.nid == 'Suu'",
+        "commands": [],
+        "only_once": true,
+        "priority": 30,
+        "_source": [
+            "lvar;feats;[]",
+            "for;feat_skills;range(10)",
+            "  lvar;feats;{v:feats} + [game.get_random_choice([s.nid for s in DB.skills if s.components.get('copysafe') and s.nid not in [x.nid for x in u('Suu').skills] and s.nid not in v(\"feats\") and \"_T2\" not in s.nid and \"_T3\" not in s.nid])]",
+            "endf",
+            "choice;skill_gain;Choose a Feat for {e:u('Suu').name};{v:feats};Dimensions=5,2;EntryType=type_skill;expression",
+            "give_skill;{e:u('Suu')};{v:skill_gain}",
+            "for;skills;[s for s in get_skill(unit,'{v:skill_gain}').copysafe.value]",
+            "        give_skill;{unit};{skills};no_banner",
+            "endf",
+            "remove_skill;Suu;Suu_T1_2nd;no_banner",
+            "give_skill;Suu;Suu_T2_1st;no_banner"
+        ],
+        "nid": "Global SuuFeats_T1_2nd"
+    }
+]

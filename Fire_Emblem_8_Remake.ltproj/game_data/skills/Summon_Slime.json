@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Summon_Slime",
+        "name": "Summon",
+        "desc": "Summon two Slimes units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('Slime1_' + unit.nid) and not game.check_alive('Slime2_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_Slime"
+            ]
+        ]
+    }
+]

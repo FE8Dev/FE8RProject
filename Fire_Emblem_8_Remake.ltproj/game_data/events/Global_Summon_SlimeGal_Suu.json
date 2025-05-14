@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Summon SlimeGal_Suu",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.check_dead('SlimeGal1_' + unit.nid) and game.check_dead('SlimeGal2_' + unit.nid)",
+            "    resurrect;SlimeGal1_{e:unit.nid}",
+            "    resurrect;SlimeGal2_{e:unit.nid}",
+            "else",
+            "end",
+            "make_generic;SlimeGal1_{e:unit.nid};SlimeGal_Summon;{e:unit.level};player;None;;;Water_Burst_S,Aqua_Triple_Burst_S,Acid_Ball_S",
+            "add_unit;SlimeGal1_{e:unit.nid};{position};warp;closest",
+            "make_generic;SlimeGal2_{e:unit.nid};SlimeGal_Summon;{e:unit.level};player;None;;;Water_Burst_S,Aqua_Triple_Burst_S,Acid_Ball_S",
+            "add_unit;SlimeGal2_{e:unit.nid};{position};warp;closest",
+            "wait;200"
+        ],
+        "nid": "Global Summon SlimeGal_Suu"
+    }
+]

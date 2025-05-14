@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Faith_T1",
+        "name": "Faith",
+        "desc": "+5 Crit and damage increases by LCK/3 when using Light Magic.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            8
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, item) == 'Light'"
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('LCK') // 3"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

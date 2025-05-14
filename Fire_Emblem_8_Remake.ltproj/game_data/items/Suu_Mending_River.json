@@ -1,0 +1,84 @@
+[
+    {
+        "nid": "Suu_Mending_River",
+        "name": "Mending River",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 120 and u(\"Suu\").wexp['Staff'] < 240"
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Mend"
+            ]
+        ]
+    }
+]

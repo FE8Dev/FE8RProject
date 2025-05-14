@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Slime_Proliferation_Suu",
+        "name": "Slime Proliferation Suu",
+        "desc": "<red>CA:</>Summon 2 Slime Gals to fight for you. This is a free action. <green>CD:4 Turns</> ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('SlimeGal1_' + unit.nid) and (not game.check_alive('SlimeGal2_' + unit.nid))  "
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "ability",
+                "Slime_Proliferation_Suu"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ]
+        ]
+    }
+]
