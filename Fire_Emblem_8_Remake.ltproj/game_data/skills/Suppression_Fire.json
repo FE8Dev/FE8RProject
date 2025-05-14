@@ -2,7 +2,7 @@
     {
         "nid": "Suppression_Fire",
         "name": "Suppression Fire",
-        "desc": "<red>CA:</>The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses.<green>CD:6 Turns</>",
+        "desc": "<red>CA:</>Deals 50% current hp damage to enemies within 2 tiles of the target. <green>CD:6 Turns</>",
         "icon_nid": "SkillIcons",
         "icon_index": [
             1,
@@ -24,6 +24,10 @@
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ]
         ]
     }

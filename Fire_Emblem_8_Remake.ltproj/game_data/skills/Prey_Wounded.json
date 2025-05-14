@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Prey_Wounded",
+        "name": "Wounded Prey",
+        "desc": "Enemies hit by the user decreases crit avoid by 20% and damage by 20%.\nLasts two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff"
+            ]
+        ]
+    }
+]
