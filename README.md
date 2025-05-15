@@ -13,9 +13,7 @@
 
 ##To do - high priority on top
 
-*Add an iron bow to alexander inventory(his first prf is S)
 
-*Add Alexander weapon skills(Wounded Prey) and Suppresive Fire CA(item)
 
 *add new trainees
 
