@@ -2,7 +2,7 @@
     {
         "nid": "Shining_Aura",
         "name": "Shining Aura",
-        "desc": "An aura that links life forces together and attacks.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), HP Absorb (40%), +40 Crit damage.",
+        "desc": "An aura that links life forces together and attacks.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), HP Absorb (40%), +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             5,
@@ -99,7 +99,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_STRONG"
+                "MAG_LCK_STRONG"
             ],
             [
                 "item_tags",

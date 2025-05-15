@@ -2,7 +2,7 @@
     {
         "nid": "Shine_Fire",
         "name": "Shine Fire",
-        "desc": "Ignites a pillar of light and fire from afar. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>LCK + SKL/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')//2))}</>), +30 Crit damage.",
+        "desc": "Ignites a pillar of light and fire from afar. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>), +30 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             1,
@@ -105,7 +105,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_SKL_MID"
+                "MAG_STR_MID"
             ],
             [
                 "cooldown",

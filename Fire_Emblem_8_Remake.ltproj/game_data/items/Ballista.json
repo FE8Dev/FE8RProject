@@ -2,7 +2,7 @@
     {
         "nid": "Ballista",
         "name": "Ballista",
-        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -96,6 +96,10 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
             ]
         ]
     }

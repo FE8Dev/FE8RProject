@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Suppression_Fire_Proc",
+        "name": " Suppression Fire",
+        "desc": "The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses. ",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "enemy_oversplash",
+                2
+            ],
+            [
+                "dynamic_attacks",
+                "unit.get_stat('SKL') //30"
+            ]
+        ]
+    }
+]

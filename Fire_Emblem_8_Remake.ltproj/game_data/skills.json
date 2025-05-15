@@ -221,6 +221,10 @@
         ],
         "components": [
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "drain_charge",
                 1
             ],
@@ -336,6 +340,10 @@
             1
         ],
         "components": [
+            [
+                "Endstep_charge_increase",
+                1
+            ],
             [
                 "drain_charge",
                 1
@@ -456,6 +464,10 @@
         ],
         "components": [
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "drain_charge",
                 1
             ],
@@ -571,6 +583,10 @@
             5
         ],
         "components": [
+            [
+                "Endstep_charge_increase",
+                1
+            ],
             [
                 "drain_charge",
                 1
@@ -688,6 +704,10 @@
         ],
         "components": [
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "drain_charge",
                 1
             ],
@@ -803,6 +823,10 @@
             8
         ],
         "components": [
+            [
+                "Endstep_charge_increase",
+                1
+            ],
             [
                 "drain_charge",
                 1
@@ -3934,6 +3958,10 @@
             [
                 "galeforce",
                 null
+            ],
+            [
+                "Endstep_charge_increase",
+                5
             ],
             [
                 "drain_charge",
@@ -15453,7 +15481,7 @@
                 "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima', 'Staff'"
             ],
             [
-                "enemy_oversplash",
+                "smart_oversplash",
                 2
             ]
         ]
@@ -16308,6 +16336,10 @@
                 "target.get_hp() != target.get_max_hp()"
             ],
             [
+                "Endstep_charge_increase",
+                3
+            ],
+            [
                 "drain_charge",
                 3
             ],
@@ -16547,6 +16579,10 @@
             [
                 "galeforce",
                 null
+            ],
+            [
+                "Endstep_charge_increase",
+                2
             ],
             [
                 "drain_charge",
@@ -18712,7 +18748,7 @@
         ],
         "components": [
             [
-                "class_skill",
+                "hidden",
                 null
             ],
             [
@@ -21220,6 +21256,10 @@
             [
                 "combat_condition",
                 "has_skill(target, 'Breached_8') and has_skill(target, 'Cursed_8')"
+            ],
+            [
+                "Endstep_charge_increase",
+                4
             ],
             [
                 "drain_charge",
@@ -44982,12 +45022,12 @@
         ],
         "components": [
             [
-                "combat_condition",
-                "unit.get_internal_level() < 41"
-            ],
-            [
                 "hidden",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit.get_internal_level() < 41"
             ],
             [
                 "ignore_damage",
@@ -45049,6 +45089,10 @@
             [
                 "build_charge",
                 8
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "allowed_weapons",
@@ -45189,6 +45233,35 @@
             [
                 "savage_blow_fates",
                 5
+            ]
+        ]
+    },
+    {
+        "nid": "Double_Maximization",
+        "name": "Double Maximization",
+        "desc": "Double unit's MAG and all attacks become Multi-Target:2 (This is a temporary skill).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MAG",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "item_override",
+                "_Multishot_2"
             ]
         ]
     },
@@ -45363,6 +45436,360 @@
                     "lost_on_enemy": true,
                     "lost_on_splash": true
                 }
+            ]
+        ]
+    },
+    {
+        "nid": "Head_Collector",
+        "name": "Head Collector",
+        "desc": "Increases critical damage multiplier from x3 to x5, user gains galeforce up to three times per turn when kill a enemy unit.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
+            ],
+            [
+                "galeforce",
+                null
+            ],
+            [
+                "drain_charge",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Heavy_Shot",
+        "name": "Heavy Shot",
+        "desc": "The user's attack is increased by 75% and ignores 50% of the enemy's defense when attacking. The user loses 25 hits for each square of distance between it and the target.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.75
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES')//2 if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')// 2"
+            ],
+            [
+                "dynamic_accuracy",
+                "-25*(utils.calculate_distance(unit.position, target.position))"
+            ]
+        ]
+    },
+    {
+        "nid": "Hunter_Mark",
+        "name": "Hunter Mark",
+        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Hunter_Mark_Debuff"
+            ],
+            [
+                "gain_skill_after_attack",
+                "Hunter_Mark_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Hunter_Mark_Buff",
+        "name": " Hunter Mark",
+        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "hit",
+                15
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Hunter_Mark_Debuff",
+        "name": "Hunter Mark Debuff",
+        "desc": "Decreases the MOV in 1 and the SPD in 5 for two turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            6
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        -1
+                    ],
+                    [
+                        "MOV",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Single_Strike",
+        "name": "Single Strike",
+        "desc": "Neither the user nor the enemy can make more than one attack.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "cannot_double",
+                null
+            ],
+            [
+                "dynamic_defense_speed",
+                "999"
+            ]
+        ]
+    },
+    {
+        "nid": "Suppression_Fire",
+        "name": "Suppression Fire",
+        "desc": "<red>CA:</>The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses.<green>CD:6 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Suppression_Fire"
+            ],
+            [
+                "build_charge",
+                6
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Slime_Proliferation_Suu",
+        "name": "Slime Proliferation Suu",
+        "desc": "<red>CA:</>Summon 2 Slime Gals to fight for you. This is a free action. <green>CD:4 Turns</> ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('SlimeGal1_' + unit.nid) and (not game.check_alive('SlimeGal2_' + unit.nid))  "
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "ability",
+                "Slime_Proliferation_Suu"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_Slime",
+        "name": "Summon",
+        "desc": "Summon two Slimes units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('Slime1_' + unit.nid) and not game.check_alive('Slime2_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_Slime"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T1_1st",
+        "name": "Suu T1 1st",
+        "desc": "To give Suu the T1 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T1_2nd",
+        "name": "Suu T1 2nd",
+        "desc": "To give Suu the T1 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T2_1st",
+        "name": "Suu T2 1st",
+        "desc": "To give Suu the T2 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T2_2nd",
+        "name": "Suu T2 2nd",
+        "desc": "To give Suu the T2 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T3_1st",
+        "name": "Suu T3 1st",
+        "desc": "To give Suu the T3 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_T3_2nd",
+        "name": "Suu T3 2nd",
+        "desc": "To give Suu the T3 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -46821,6 +47248,42 @@
             [
                 "event_after_combat",
                 "Global Supportive Recharge"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Faith_T1",
+        "name": "Faith",
+        "desc": "+5 Crit and damage increases by LCK/3 when using Light Magic.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            8
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, item) == 'Light'"
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('LCK') // 3"
+            ],
+            [
+                "class_skill",
+                null
             ],
             [
                 "feat",
@@ -50348,10 +50811,6 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -50650,10 +51109,6 @@
             40
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Bow'"
@@ -52780,11 +53235,7 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima'"
-            ],
-            [
-                "enemy_oversplash",
-                2
+                "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima', 'Staff'"
             ],
             [
                 "feat",
@@ -52793,6 +53244,10 @@
             [
                 "copysafe",
                 []
+            ],
+            [
+                "smart_oversplash",
+                2
             ]
         ]
     },
@@ -53065,10 +53520,6 @@
             43
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Sword'"
@@ -58378,6 +58829,162 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded",
+        "name": "Prey Wounded",
+        "desc": "Enemies hit by the user decreases crit avoid by 20% and damage by 20%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff",
+        "name": "Prey Wounded Debuff",
+        "desc": "Decreases crit avoid by 20% and damage by 20%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                -20
+            ],
+            [
+                "resist_multiplier",
+                -0.8
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff_Plus",
+        "name": "Prey Wounded Debuff+",
+        "desc": "Decreases crit avoid by 25% and damage by 25%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            35
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                -25
+            ],
+            [
+                "resist_multiplier",
+                -0.75
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff_Plus_Plus",
+        "name": "Prey Wounded Debuff++",
+        "desc": "Decreases crit avoid by 30% and damage by 30%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "crit_avoid",
+                -30
+            ],
+            [
+                "resist_multiplier",
+                -0.7000000000000001
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Plus",
+        "name": "Prey Wounded+",
+        "desc": "Enemies hit by the user decreases crit avoid by 25% and damage by 25%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff_Plus"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Plus_Plus",
+        "name": "Prey Wounded++",
+        "desc": "Enemies hit by the user decreases crit avoid by 30% and damage by 30%.For two turns.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff_Plus_Plus"
+            ]
+        ]
+    },
+    {
+        "nid": "Suppression_Fire_Proc",
+        "name": " Suppression Fire",
+        "desc": "The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses. ",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "enemy_oversplash",
+                2
+            ],
+            [
+                "dynamic_attacks",
+                "unit.get_stat('SKL') //30"
             ]
         ]
     }

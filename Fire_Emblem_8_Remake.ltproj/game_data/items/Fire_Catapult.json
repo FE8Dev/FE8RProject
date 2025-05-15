@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Catapult",
         "name": "Fire Catapult",
-        "desc": "A burning long-range siege weapon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared(AOE:2)</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>(AOE Blast:3)",
+        "desc": "A burning long-range siege weapon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared(AOE:2)</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>), (AOE Blast:3).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             8,
@@ -107,6 +107,10 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     }

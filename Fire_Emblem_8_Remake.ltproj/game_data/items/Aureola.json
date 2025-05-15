@@ -2,7 +2,7 @@
     {
         "nid": "Aureola",
         "name": "Aureola",
-        "desc": "A legendary light tome that blinds evil with a dazzling light.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +40 Crit damage.",
+        "desc": "A legendary light tome that blinds evil with a dazzling light.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             8,
@@ -102,7 +102,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_STRONG"
+                "MAG_SPD_STRONG"
             ],
             [
                 "item_tags",

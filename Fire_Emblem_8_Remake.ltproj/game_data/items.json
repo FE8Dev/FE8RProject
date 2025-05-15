@@ -24987,7 +24987,7 @@
     {
         "nid": "Holy_Nosferatu",
         "name": "Holy Nosferatu",
-        "desc": "A Nosferatu that has been purged of darkness and is used by righteous wielders.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//3))}</>), HP Absorb (20%), +20 Crit damage.",
+        "desc": "A Nosferatu that has been purged of darkness and is used by righteous wielders.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>), HP Absorb (20%), +20 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             2,
@@ -25083,7 +25083,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_WEAK"
+                "MAG_LCK_WEAK"
             ],
             [
                 "item_tags",
@@ -25096,7 +25096,7 @@
     {
         "nid": "Life_Burst",
         "name": "Life Burst",
-        "desc": "Burst one's inner life energy to drain foes.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>), HP Absorb (30%), +30 Crit damage.",
+        "desc": "Burst one's inner life energy to drain foes.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), HP Absorb (30%), +30 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             0,
@@ -25192,7 +25192,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_MID"
+                "MAG_LCK_MID"
             ],
             [
                 "item_tags",
@@ -25205,7 +25205,7 @@
     {
         "nid": "Shining_Aura",
         "name": "Shining Aura",
-        "desc": "An aura that links life forces together and attacks.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), HP Absorb (40%), +40 Crit damage.",
+        "desc": "An aura that links life forces together and attacks.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), HP Absorb (40%), +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             5,
@@ -25302,7 +25302,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_STRONG"
+                "MAG_LCK_STRONG"
             ],
             [
                 "item_tags",
@@ -25315,7 +25315,7 @@
     {
         "nid": "Judgment_Fire",
         "name": "Judgment Fire",
-        "desc": "The ultimate light tome that cleanses the soul of evil with holy fire.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), HP Absorb (50%), +50 Crit damage.",
+        "desc": "The ultimate light tome that cleanses the soul of evil with holy fire.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), +50 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             1,
@@ -25427,7 +25427,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_STRONG"
+                "STR_MAG_STRONG"
             ],
             [
                 "item_tags",
@@ -25441,7 +25441,7 @@
     {
         "nid": "Sagittae",
         "name": "Sagittae",
-        "desc": "A barrage of burning holy arrows launched from a distance. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>LCK + SKL/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')//3))}</>), +20 Crit damage.",
+        "desc": "A barrage of burning holy arrows launched from a distance. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>MAG + STR/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//3))}</>), +20 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             7,
@@ -25542,7 +25542,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_SKL_WEAK"
+                "MAG_STR_WEAK"
             ],
             [
                 "statuses_on_hit",
@@ -25562,7 +25562,7 @@
     {
         "nid": "Shine_Fire",
         "name": "Shine Fire",
-        "desc": "Ignites a pillar of light and fire from afar. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>LCK + SKL/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')//2))}</>), +30 Crit damage.",
+        "desc": "Ignites a pillar of light and fire from afar. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>), +30 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             1,
@@ -25665,7 +25665,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_SKL_MID"
+                "MAG_STR_MID"
             ],
             [
                 "cooldown",
@@ -25683,7 +25683,7 @@
     {
         "nid": "Goddess_Bomb",
         "name": "Goddess Bomb",
-        "desc": "A holy explosion of righteousness and fury. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>LCK + SKL (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>), +40 Crit damage.",
+        "desc": "A holy explosion of righteousness and fury. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<pink>Misc:</>MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>), +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             0,
@@ -25786,7 +25786,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_SKL_STRONG"
+                "MAG_STR_STRONG"
             ],
             [
                 "cooldown",
@@ -25804,7 +25804,7 @@
     {
         "nid": "Luce",
         "name": "Luce",
-        "desc": "A legendary light tome that burns evil with a bright light. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>LCK + SKL (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>), +50 Crit damage.",
+        "desc": "A legendary light tome that burns evil with a bright light. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>), +50 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             4,
@@ -25912,7 +25912,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_SKL_STRONG"
+                "MAG_STR_STRONG"
             ],
             [
                 "cooldown",
@@ -26819,7 +26819,7 @@
     {
         "nid": "Sunbeam",
         "name": "Sunbeam",
-        "desc": "A bright light that blinds enemies.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//3))}</>), +10 Crit damage.",
+        "desc": "A bright light that blinds enemies.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>), +10 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             4,
@@ -26917,7 +26917,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_WEAK"
+                "MAG_SPD_WEAK"
             ],
             [
                 "item_tags",
@@ -26930,7 +26930,7 @@
     {
         "nid": "Solaris",
         "name": "Solaris",
-        "desc": "Unleashes the breath of a Divine dragon that blinds all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>), +20 Crit damage.",
+        "desc": "Unleashes the breath of a Divine dragon that blinds all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), +20 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             6,
@@ -27036,7 +27036,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_MID"
+                "MAG_SPD_MID"
             ],
             [
                 "item_tags",
@@ -27049,7 +27049,7 @@
     {
         "nid": "Aureola",
         "name": "Aureola",
-        "desc": "A legendary light tome that blinds evil with a dazzling light.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +40 Crit damage.",
+        "desc": "A legendary light tome that blinds evil with a dazzling light.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             8,
@@ -27149,7 +27149,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "LCK_MAG_STRONG"
+                "MAG_SPD_STRONG"
             ],
             [
                 "item_tags",
@@ -41217,7 +41217,7 @@
     {
         "nid": "Platinum_Ballista",
         "name": "Platinum Ballista",
-        "desc": "A powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "A powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -41311,13 +41311,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Mag_Platinum_Ballista",
         "name": "M. Plat. Ballista",
-        "desc": "A magical, powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, Magical.",
+        "desc": "A magical, powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, MAG + SKL + CON*2.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -41411,13 +41415,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Mighty_Ballista",
         "name": "Mighty Ballista",
-        "desc": "The most powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "The most powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             9,
@@ -41511,13 +41519,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Catapult",
         "name": "Catapult",
-        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>(AOE Blast:3)",
+        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>), (AOE Blast:3).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             7,
@@ -41605,13 +41617,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Fire_Catapult",
         "name": "Fire Catapult",
-        "desc": "A burning long-range siege weapon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared(AOE:2)</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>(AOE Blast:3)",
+        "desc": "A burning long-range siege weapon.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared(AOE:2)</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>), (AOE Blast:3).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             8,
@@ -41716,13 +41732,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Long_Cannon",
         "name": "Long Cannon",
-        "desc": "A powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</><icon>Armor</>",
+        "desc": "A powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<pink>Misc:</>Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             1,
@@ -41808,13 +41828,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Short_Cannon",
         "name": "Short Cannon",
-        "desc": "A powerful short-range siege weapon.\n<red>Effective:</><icon>Flying</><icon>Armor</>",
+        "desc": "A powerful short-range siege weapon.\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<pink>Misc:</>Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             2,
@@ -41900,13 +41924,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Shock_Cannon",
         "name": "Shock Cannon",
-        "desc": "A powerful short-range magical siege weapon.\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Magical.",
+        "desc": "A powerful short-range magical siege weapon.\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Siege, MAG + SKL + CON*2.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             0,
@@ -42003,6 +42031,10 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
             ]
         ]
     },
@@ -50219,7 +50251,7 @@
     {
         "nid": "Ballista",
         "name": "Ballista",
-        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50313,13 +50345,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Magic_Ballista",
         "name": "Magic Ballista",
-        "desc": "A magical long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, Magical.",
+        "desc": "A magical long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, MAG + SKL + CON*1.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50417,13 +50453,17 @@
             [
                 "magic",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Long Ballista",
         "name": "Long Ballista",
-        "desc": "A very long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "A very long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50517,13 +50557,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Mag_Long_Ballista",
         "name": "M. Long Ballista",
-        "desc": "A magical, very long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, Magical.",
+        "desc": "A magical, very long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, MAG + SKL + CON*1.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50621,13 +50665,17 @@
             [
                 "magic",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Killer Ballista",
         "name": "Killer Ballista",
-        "desc": "A deadly long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege.",
+        "desc": "A deadly long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50721,13 +50769,17 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
             ]
         ]
     },
     {
         "nid": "Mag_Killer_Ballista",
         "name": "M. Killer Ballista",
-        "desc": "A magical, deadly long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, Magical.",
+        "desc": "A magical, deadly long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, MAG + SKL + CON*1.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>).",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -50825,6 +50877,10 @@
             [
                 "magic",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_MID"
             ]
         ]
     },
@@ -53066,7 +53122,7 @@
     {
         "nid": "Purge",
         "name": "Purge",
-        "desc": "Siege Light magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Siege, +20 Crit damage.",
+        "desc": "Siege Light magic.  <green>CD:3</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Siege, +20 Crit damage.",
         "icon_nid": "Light",
         "icon_index": [
             0,
@@ -53741,7 +53797,7 @@
     {
         "nid": "Bolting",
         "name": "Bolting",
-        "desc": "Long range thunder magic.\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Siege, splash DMG (15).",
+        "desc": "Long range thunder magic.  <green>CD:3</>\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Siege, splash DMG (15).",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -54388,7 +54444,7 @@
     {
         "nid": "Eclipse",
         "name": "Eclipse",
-        "desc": "Blocking the sun brings an omen.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)\n<pink>Misc:</>Siege, half HP on hit.",
+        "desc": "Blocking the sun brings an omen.  <green>CD:3</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)\n<pink>Misc:</>Siege, half HP on hit.",
         "icon_nid": "Dark",
         "icon_index": [
             0,
@@ -60923,7 +60979,7 @@
     {
         "nid": "Siegmund",
         "name": "Siegmund",
-        "desc": "The Sacred Twin fire lance wielded by Ephraim.          \n<green>Skills:</>Momentum+ (On active kill), Commands Charge, Lance Guard (SS), High Morale (Aura:3) <orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Armor</><icon>Horse</><icon>Monster</> <pink>Misc:</>Targets weaker of DEF or SPD, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>), +10 STR.",
+        "desc": "The Sacred Twin fire lance wielded by Ephraim.          \n<green>Skills:</>Momentum+ (On active kill), Commands Charge, Lance Guard (SS), High Morale (Aura:3) <orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Very effective:</><icon>Armor</><icon>Horse</><icon>Monster</> <pink>Misc:</>Targets weaker of DEF or SPD, STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>), +10 STR.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -135001,6 +135057,2695 @@
         ]
     },
     {
+        "nid": "Alexander_Arsenal",
+        "name": "Alexander Arsenal",
+        "desc": "Alexander's personal crossbow, forged for the hunt of every prey.\n<red>Proficiency:</><icon>Dark</><icon>Staff</>",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Erster_Schuss",
+                    "Sturmpiercer",
+                    "Hollenstolz",
+                    "Weltbrecher"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Erster_Schuss",
+        "name": "Erster Schuss",
+        "desc": "A crossbow created by Alexander at the beginning of his hunt.\n<green>Skills:</>Wounded Prey\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL/2\n",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Prey_Wounded"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_STR_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Alex\").wexp['Bow'] >= 300 and u(\"Alex\").wexp['Bow'] < 420"
+            ]
+        ]
+    },
+    {
+        "nid": "Sturmpiercer",
+        "name": "Sturmpiercer",
+        "desc": "Crossbow forged to emulate the power of the wind. Easily pierces everything in its path\n<green>Skills:</>Wounded Prey+\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON/2",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Prey_Wounded_Plus"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Alex\").wexp['Bow'] >= 420 and u(\"Alex\").wexp['Bow'] < 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Weltbrecher",
+        "name": "Weltbrecher",
+        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<green>Skills:</>Wounded Prey++\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                42
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Prey_Wounded_Plus_Plus"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"_Alex\").wexp['Bow'] >= 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Hollenstolz",
+        "name": "Hollenstolz",
+        "desc": "A crossbow dedicated to inspiring fear of flying targets. Alexander's latest creation.\n<green>Skills:</>Wounded Prey++\n<red>Effective:</><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>STR + SKL+CON\n",
+        "icon_nid": "Alexander Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Alexander"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Prey_Wounded_Plus_Plus"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"_Alex\").wexp['Bow'] >= 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Slime_Arsenal",
+        "name": "Slime Arsenal",
+        "desc": "Arsenal of a Slime.\n<red>Prof:</><icon>Staff</><icon>Sword</><icon>Anima</><icon>Light</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Suu_Healing_Stream",
+                    "Suu_Mending_River",
+                    "Suu_Sea_of_Life",
+                    "Suu_Well_of_Eternity",
+                    "Suu_Rain_Staff",
+                    "Suu_Storm_Staff",
+                    "Suu_Typhoon_Staff",
+                    "Suu_Aqua",
+                    "Suu_Aqua_Triple_Burst",
+                    "Suu_Geyser_Blasts",
+                    "Suu_Charybdis",
+                    "Suu_Slime_Shot",
+                    "Suu_Acid_Ball",
+                    "Suu_Ooze_Burst",
+                    "Suu_Aymr"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Rain_Staff",
+        "name": "Rain Staff",
+        "desc": "A staff that can summon rain from quite the distance.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Cannot crit, always hits.",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] < 180"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Healing_Stream",
+        "name": "Healing Stream",
+        "desc": "Restores HP equal user's MAG/2 + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            7
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_WEAK"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] < 120"
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Mending_River",
+        "name": "Mending River",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 120 and u(\"Suu\").wexp['Staff'] < 240"
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Mend"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Storm_Staff",
+        "name": "Storm Staff",
+        "desc": "A staff that summons a mighty storm.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cannot crit, always hits, (Shove:1).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            19,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Frostbite"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 180 and u(\"Suu\").wexp['Staff'] < 360"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Sea_of_Life",
+        "name": "Sea of Life",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>(Multi-target:2), Gives +7 DEF/+7 RES temporarily to ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 240 and u(\"Suu\").wexp['Staff'] < 420"
+            ],
+            [
+                "status_on_hit",
+                "RES_DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Recover"
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Typhoon_Staff",
+        "name": "Typhoon Staff",
+        "desc": "A staff said to flood entire valleys.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cannot crit, always hits, (Shove:1).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Triple_Burst"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 360"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Well_of_Eternity",
+        "name": "Well of Eternity",
+        "desc": "Restores HP equal user's MAG + MOV X2.\n<pink>Misc:</>(Multi-target:3), Gives +7 DEF/+7 RES temporarily to ally for 1 turn and restores them.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            2,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                8
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_STRONG"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Staff'] >= 420"
+            ],
+            [
+                "status_on_hit",
+                "RES_DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Latona"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "MapBigHealTrans"
+            ],
+            [
+                "restore",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Aqua",
+        "name": "Aqua",
+        "desc": "Basic water magic. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (20%), cannot DS, MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), (Multi-target:2).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                2
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seawalk",
+                    "Drench",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_E"
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "WaterBlast"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_WEAK"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Anima'] < 120"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Aqua_Triple_Burst",
+        "name": "Triple Burst",
+        "desc": "A triple blast of high speed water. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), (Multi-target:3).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            4,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Triple_Burst"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seawalk",
+                    "Drench",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_C"
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "WaterBlast"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_MID"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Anima'] >= 120 and u(\"Suu\").wexp['Anima'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Charybdis",
+        "name": "Charybdis",
+        "desc": "A spell that invokes the whirlpools of the mythical sea monster. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (60%), cannot DS, MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), (Multi-target:6).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            8,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                26
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "BlueExplosionSpell"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seawalk",
+                    "Drench",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_X"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "WaterBlast"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
+            ],
+            [
+                "multi_target",
+                6
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Anima'] >= 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Geyser_Blasts",
+        "name": "Geyser Blasts",
+        "desc": "A spell that summons multiple geysers. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (50%), cannot DS, MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), (Multi-target:4).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            8,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                9
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seawalk",
+                    "Drench",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_SS"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "value",
+                2000
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "WaterBlast"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
+            ],
+            [
+                "multi_target",
+                4
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Anima'] >= 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Slime_Shot",
+        "name": "Slime Shot",
+        "desc": "A liquid ball shot out of the monster...Don't ask what is in it.\n<violet>Inflicts:</><icon>Venom</>",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Monster'] < 120"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Acid_Ball",
+        "name": "Acid Ball",
+        "desc": "A slimeball covered in deadly acid.\n<violet>Inflicts:</><icon>Venom</>x2",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Monster'] >= 120 and u(\"Suu\").wexp['Monster'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Ooze_Burst",
+        "name": "Ooze Burst",
+        "desc": "A viscous burst covered in unknown substance.\n<violet>Inflicts:</><icon>Venom</>x4.",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Suu\").wexp['Monster'] >= 360 "
+            ]
+        ]
+    },
+    {
+        "nid": "Suu_Aymr",
+        "name": "Aymr",
+        "desc": "A deadly axe Selkie bought from a shady Anna...\n<green>Skills:</>Power Chop (SS)\n<green>Skills:</>Galeforce\n<red>Effective:</><icon>Dragon</>",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            8,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                37
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Suu"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Galeforce_Item",
+                    "Power_Chop_SS"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_Slime",
+        "name": "Summon",
+        "desc": "Summons two Slimes to fight for you. This is a free action. Gain 10 EXP from their actions.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "event_on_hit",
+                "Global Summon Slime"
+            ],
+            [
+                "map_cast_sfx",
+                "None"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "traversable_tile_target_restrict",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Prevent_Steal_Crash"
+            ]
+        ]
+    },
+    {
+        "nid": "Slime_Proliferation_Suu",
+        "name": "Slime Proliferation",
+        "desc": "Summons 2 Slime Gals to fight for you. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "event_on_hit",
+                "Global Summon SlimeGal_Suu"
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "None"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "self_status_on_hit",
+                "Prevent_Steal_Crash"
+            ],
+            [
+                "max_range",
+                0
+            ],
+            [
+                "min_range",
+                0
+            ]
+        ]
+    },
+    {
+        "nid": "Heal_S",
+        "name": "Heal",
+        "desc": "Restores (User's MAG + 10) HP.\n<pink>Misc:</>Support classes only.",
+        "icon_nid": "Staff",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "value",
+                600
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "HEAL"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Water_Staff_S",
+        "name": "Water Staff",
+        "desc": "A tricky staff that can summon water. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "D"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_WEAK"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Water_Burst_S",
+        "name": "Water Burst",
+        "desc": "Shoots out streams of water. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>).",
+        "icon_nid": "New Generic Weapons 01-17-25",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Triple_Burst"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_MID"
+            ],
+            [
+                "self_status_on_hit",
+                "Water_AOE_Splash"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Aqua_Triple_Burst_S",
+        "name": "Triple Burst",
+        "desc": "A triple blast of high speed water. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), (Multi-target:3).",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            4,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Triple_Burst"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Seawalk",
+                    "Drench",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_C"
+            ],
+            [
+                "value",
+                1200
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "map_hit_sfx",
+                "WaterBlast"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_MID"
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "locked",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Acid_Ball_S",
+        "name": "Acid Ball ",
+        "desc": "A furball covered in deadly acid.\n<violet>Inflicts:</><icon>Venom</>x2",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "locked",
+                null
+            ],
+            [
+                "wexp",
+                0
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Sol_Activate",
         "name": "Sol",
         "desc": "Display the animation",
@@ -149002,7 +151747,7 @@
     {
         "nid": "Wave_Staff",
         "name": "Wave Staff",
-        "desc": "A staff made for long range sieges.\n<pink>Misc:</>Always hits, cannot crit.",
+        "desc": "A staff made for long range sieges. <green>CD:3</>\n<pink>Misc:</>Always hits, cannot crit.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             6,
@@ -155433,6 +158178,30 @@
             ],
             [
                 "menu_after_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "_Multishot_2",
+        "name": "Multishot",
+        "desc": "Unit can attack up to 2 targets per combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            37
+        ],
+        "components": [
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
                 null
             ]
         ]

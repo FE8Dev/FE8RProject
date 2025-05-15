@@ -2,7 +2,7 @@
     {
         "nid": "Mag_Platinum_Ballista",
         "name": "M. Plat. Ballista",
-        "desc": "A magical, powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, Magical.",
+        "desc": "A magical, powerful long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Siege, MAG + SKL + CON*2.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -96,6 +96,10 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
             ]
         ]
     }
