@@ -2,8 +2,8 @@
     {
         "nid": "Doctor_Natasha",
         "name": "Doctor",
-        "desc": "plague doctor animation",
-        "tier": 1,
+        "desc": "",
+        "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Surgeon_Natasha",
         "turns_into": [],
@@ -74,7 +74,20 @@
             "CON": 60,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Man_Killer"
+            ],
+            [
+                15,
+                "Pleasant_Companion"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -132,8 +145,8 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "Necromancer (F) Plague Doctor {DATonDemand, Unknown}-stand",
+        "combat_anim_nid": "Plague_Doctor",
         "fields": []
     }
 ]
