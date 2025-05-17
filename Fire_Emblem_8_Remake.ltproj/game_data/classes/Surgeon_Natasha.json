@@ -2,7 +2,7 @@
     {
         "nid": "Surgeon_Natasha",
         "name": "Surgeon",
-        "desc": "dark fencer animation",
+        "desc": "dark fencer animatio",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Medic_Natasha",
@@ -77,7 +77,20 @@
             "CON": 50,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Class Skills"
+            ],
+            [
+                15,
+                "Pierce_Skill"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -135,8 +148,8 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "T2_Female_Light_Sage",
+        "combat_anim_nid": "Tactician_Robin",
         "fields": []
     }
 ]
