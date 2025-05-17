@@ -5163,6 +5163,107 @@
         ]
     },
     {
+        "nid": "Ghostly_Dagger",
+        "name": "Ghostly_Dagger",
+        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Magical, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                6000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Crimson Eye"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40",
+                    "Ghostly_Alliance"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Broken_Helix_Dark",
         "name": "Broken Helix (D)",
         "desc": "An incomplete blade of darkness.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*1.5))}</>), Heavy.",
@@ -124767,6 +124868,10 @@
                     "Drench_Debuff",
                     "Restrained"
                 ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
             ]
         ]
     },
@@ -158911,5 +159016,82 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Red_Cross",
+        "name": "Red Cross",
+        "desc": "A badge for those that pledge to do no harm, most of the time.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Mercy_Seth_Skill"
+                ]
+            ],
+            [
+                "value",
+                500
+            ]
+        ]
+    },
+    {
+        "nid": "Dagger_Natasha",
+        "name": "Dagger Natasha",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Dagger_Natasha_1",
+        "name": "Dagger Natasha",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Dagger_Natasha_2",
+        "name": "Dagger Natasha",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Dagger_Natasha_3",
+        "name": "Dagger Natasha",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Dagger_Natasha_4",
+        "name": "Dagger Natasha",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     }
 ]

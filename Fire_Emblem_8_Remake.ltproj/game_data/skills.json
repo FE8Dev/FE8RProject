@@ -32647,6 +32647,26 @@
         ]
     },
     {
+        "nid": "Ghostly_Alliance",
+        "name": "Ghostly Alliance",
+        "desc": "This unit and paired up units gain an additional attack (2 additional attacks if unit doubles).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            50
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "pairup_bonus",
+                "Ghostly_Alliance"
+            ]
+        ]
+    },
+    {
         "nid": "Poisoned",
         "name": "Poisoned",
         "desc": "Unit takes 5 damage at the beginning of each turn.",
@@ -40059,7 +40079,7 @@
     {
         "nid": "Injured_Fury_Recoil",
         "name": "Injured Fury",
-        "desc": "If unit is below 75% Max HP, Quick Fang gains an additional bonus attack.\nUnit takes 5 recoil damage after attack if HP is above 75% Max HP.",
+        "desc": "If unit is below 75% Max HP, Quick Fang gains an additional bonus attack.\nUnit takes 10% of Max HP as non-lethal recoil damage after attack if HP is above 75% Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -40075,8 +40095,8 @@
                 "(unit.get_hp() >= unit.get_max_hp() // 1.3333)"
             ],
             [
-                "recoil",
-                5
+                "recoil_percent",
+                0.1
             ]
         ]
     },
@@ -40107,7 +40127,7 @@
     {
         "nid": "Injured_Fury_P_Recoil",
         "name": "Injured Fury+",
-        "desc": "If unit is below 75% Max HP, Quick Fang gains +3 additional bonus attacks.\nUnit takes 15 recoil damage after attack if HP is above 75% Max HP.",
+        "desc": "If unit is below 75% Max HP, Quick Fang gains +3 additional bonus attacks.\nUnit takes takes 25% of Max HP as non-letha recoil damage after attack if HP is above 75% Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -40123,8 +40143,8 @@
                 "(unit.get_hp() >= unit.get_max_hp() // 1.3333)"
             ],
             [
-                "recoil",
-                15
+                "recoil_percent",
+                0.25
             ]
         ]
     },
@@ -40157,6 +40177,10 @@
             [
                 "aura_target",
                 "enemy"
+            ],
+            [
+                "modify_ai_priority",
+                10.0
             ]
         ]
     },
@@ -40189,6 +40213,10 @@
             [
                 "aura_target",
                 "enemy"
+            ],
+            [
+                "modify_ai_priority",
+                10.0
             ]
         ]
     },
@@ -59067,5 +59095,38 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Anihilation",
+        "name": "Anihilation",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Wonderdrug",
+        "name": "Wonderdrug",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Aim_For_The_Throat",
+        "name": "Aim For The Throat",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     }
 ]

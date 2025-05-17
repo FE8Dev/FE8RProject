@@ -1,16 +1,14 @@
 [
     {
         "name": "Ch4aAchievement_Tracker",
-        "trigger": "unit_death",
+        "trigger": "combat_end",
         "level_nid": "4",
-        "condition": "True",
+        "condition": "unit.nid == 'Lute' or unit2.nid == 'Lute'",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;(unit.team not in ['player','other'] and unit2.nid == 'Lute') or (unit2.team not in ['player','other'] and unit.nid == 'Lute')",
-            "inc_level_var;LuteKill",
-            "end"
+            "inc_level_var;LuteStrike"
         ],
         "nid": "4 Ch4aAchievement_Tracker"
     }

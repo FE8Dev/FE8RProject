@@ -86917,7 +86917,7 @@
     {
         "nid": "Initiate_Natasha",
         "name": "Initiate",
-        "desc": "sister animation",
+        "desc": "",
         "tier": 0,
         "movement_group": "Mages",
         "promotes_from": null,
@@ -86993,7 +86993,20 @@
             "CON": 40,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Paragon"
+            ],
+            [
+                1,
+                "Super_Trainee"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 false,
@@ -87051,14 +87064,14 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "Monk (F) {Teraspark}-stand",
+        "combat_anim_nid": "ClericFemale",
         "fields": []
     },
     {
         "nid": "Medic_Natasha",
         "name": "Medic",
-        "desc": "bishop + dagger animation",
+        "desc": "",
         "tier": 1,
         "movement_group": "Light Foot",
         "promotes_from": "Initiate_Natasha",
@@ -87133,7 +87146,20 @@
             "CON": 40,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_hide"
+            ],
+            [
+                5,
+                "Class Skills"
+            ],
+            [
+                15,
+                "Class Skills_1"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -87191,14 +87217,14 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "BishopFemale",
+        "combat_anim_nid": "Bishop_Dagger",
         "fields": []
     },
     {
         "nid": "Surgeon_Natasha",
         "name": "Surgeon",
-        "desc": "dark fencer animation",
+        "desc": "dark fencer animatio",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Medic_Natasha",
@@ -87273,7 +87299,20 @@
             "CON": 50,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Class Skills"
+            ],
+            [
+                15,
+                "Pierce_Skill"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -87331,15 +87370,15 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "T2_Female_Light_Sage",
+        "combat_anim_nid": "Tactician_Robin",
         "fields": []
     },
     {
         "nid": "Doctor_Natasha",
         "name": "Doctor",
-        "desc": "plague doctor animation",
-        "tier": 1,
+        "desc": "",
+        "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Surgeon_Natasha",
         "turns_into": [],
@@ -87410,7 +87449,20 @@
             "CON": 60,
             "MOV": 15
         },
-        "learned_skills": [],
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Man_Killer"
+            ],
+            [
+                15,
+                "Pleasant_Companion"
+            ]
+        ],
         "wexp_gain": {
             "Sword": [
                 true,
@@ -87468,8 +87520,454 @@
             0,
             0
         ],
-        "map_sprite_nid": null,
-        "combat_anim_nid": null,
+        "map_sprite_nid": "Necromancer (F) Plague Doctor {DATonDemand, Unknown}-stand",
+        "combat_anim_nid": "Plague_Doctor",
+        "fields": []
+    },
+    {
+        "nid": "Diana_T1_Outlaw",
+        "name": "Outlaw",
+        "desc": "",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 17,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 35,
+            "SKL": 45,
+            "SPD": 45,
+            "LCK": 70,
+            "DEF": 25,
+            "RES": 25,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                1,
+                240
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Thief (F) Bow {Alice}-stand",
+        "combat_anim_nid": "Thief_Female_Bow",
+        "fields": []
+    },
+    {
+        "nid": "Diana_T2_Hunter",
+        "name": "Hunter",
+        "desc": "",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 17,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 35,
+            "SKL": 45,
+            "SPD": 45,
+            "LCK": 70,
+            "DEF": 25,
+            "RES": 25,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 66,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 60,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                31,
+                360
+            ],
+            "Staff": [
+                true,
+                60,
+                360
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "SniperFemale",
+        "combat_anim_nid": "Adventurer",
+        "fields": []
+    },
+    {
+        "nid": "Diana_T3_Adventurer",
+        "name": "Adventurer",
+        "desc": "",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 21,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 17,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 35,
+            "SKL": 45,
+            "SPD": 45,
+            "LCK": 70,
+            "DEF": 25,
+            "RES": 25,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 96,
+            "MAG": 95,
+            "SKL": 96,
+            "SPD": 97,
+            "LCK": 100,
+            "DEF": 95,
+            "RES": 96,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                120,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                60,
+                300
+            ],
+            "Staff": [
+                true,
+                60,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Trickster (F) {StreetHero, Sable Mage}-stand",
+        "combat_anim_nid": "T3_Phantom_Lord",
         "fields": []
     }
 ]
