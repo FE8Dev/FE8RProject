@@ -1,29 +1,29 @@
 [
     {
         "nid": "Prey_Wounded_Debuff",
-        "name": "Prey Wounded Debuff",
-        "desc": "Decreases crit avoid by 20% and damage by 20%.For two turns.",
-        "icon_nid": "SkillIcons",
+        "name": "Wounded",
+        "desc": "+20% damage taken, -20% damage given, and -20 Crit Avoid, lasts 2 turns.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            35
+            2,
+            43
         ],
         "components": [
             [
-                "crit_avoid",
-                -20
+                "dynamic_crit_avoid",
+                "-20"
             ],
             [
                 "resist_multiplier",
-                -0.8
-            ],
-            [
-                "time",
-                2
+                1.2
             ],
             [
                 "damage_multiplier",
                 0.8
+            ],
+            [
+                "time",
+                2
             ]
         ]
     }

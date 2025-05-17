@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Stiletto_Heel_Debuff",
+        "name": "Stiletto Heel",
+        "desc": "For the Stiletto Heel item.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            10,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_accuracy",
+                "0 if attack_info[0] == 0 else -70"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "0 if attack_info[0] == 0 else -20"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

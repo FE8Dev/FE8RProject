@@ -2,7 +2,7 @@
     {
         "nid": "Soul_Taint",
         "name": "Soul Taint",
-        "desc": "Apply any enemies hit the effects of Drenched, Poisoned and Seared.",
+        "desc": "Attacks inflict the Drenched, Poisoned and Seared to enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -12,6 +12,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_statuses_after_combat",

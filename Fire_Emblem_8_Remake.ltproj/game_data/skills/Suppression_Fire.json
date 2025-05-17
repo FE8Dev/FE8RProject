@@ -2,11 +2,11 @@
     {
         "nid": "Suppression_Fire",
         "name": "Suppression Fire",
-        "desc": "<red>CA:</>Deals 50% current hp damage to enemies within 2 tiles of the target. <green>CD:6 Turns</>",
-        "icon_nid": "SkillIcons",
+        "desc": "<red>CA:</>An AOE:2 attack, +1 bonus attack for every 30 SKL this unit has. <green>CD:6 Turns</>",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            6
+            6,
+            48
         ],
         "components": [
             [
@@ -18,16 +18,16 @@
                 "Suppression_Fire"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 6
             ],
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
-            ],
-            [
-                "Endstep_charge_increase",
-                1
             ]
         ]
     }

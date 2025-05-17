@@ -9496,7 +9496,7 @@
     {
         "nid": "Bloodrush",
         "name": "Bloodrush",
-        "desc": "Heal 1/4 of the damage this unit inflicts. When unit is above 75% Max HP, +8 STR/SPD, and +15 Hit.",
+        "desc": "Heal 25% of the damage this unit inflicts. When unit is above 75% Max HP, +8 STR/SPD, and +15 Hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -9516,7 +9516,7 @@
     {
         "nid": "Bloodrush_Buff_hide",
         "name": "Bloodrush",
-        "desc": "Heal 1/4 of the damage this unit inflicts. When unit is above 75% Max HP, +8 STR/SPD, and +15 Hit.",
+        "desc": "Heal 25% of the damage this unit inflicts. When unit is above 75% Max HP, +8 STR/SPD, and +15 Hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -29049,7 +29049,7 @@
                 [
                     [
                         "MAG",
-                        "25"
+                        25
                     ]
                 ]
             ],
@@ -44377,7 +44377,7 @@
     {
         "nid": "Cthonic_Hunger",
         "name": "Cthonic Hunger",
-        "desc": "Attacks restore HP = 50% of damage dealt. The attacks of allies within 3 spaces restore HP = 20% of damage dealt.",
+        "desc": "Attacks restore HP = 20% of damage dealt. Allies within 3 spaces restore HP = 20% of their damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -44421,7 +44421,7 @@
     {
         "nid": "Cyclonic_Downdraft",
         "name": "Cyclonic Downdraft",
-        "desc": "+10 Spd and +45 Hit/Avo/Ddg to all allies within 3 spaces.",
+        "desc": "+10 SPD and +45 Hit/Avoid/Dodge to all allies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -44445,7 +44445,7 @@
     {
         "nid": "Cyclonic_Downdraft_Buff",
         "name": "Cyclonic Downdraft",
-        "desc": "+10 Spd and +45 Hit/Avo/Ddg.",
+        "desc": "+10 SPD and +45 Hit/Avoid/Dodge.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -44478,7 +44478,7 @@
     {
         "nid": "Downdraft",
         "name": "Downdraft",
-        "desc": "+5 Spd and +30 Avo/Ddg to all allies within 3 spaces.",
+        "desc": "+5 SPD and +30 Avoid/Dodge to all allies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -44502,7 +44502,7 @@
     {
         "nid": "Downdraft_Buff",
         "name": "Downdraft",
-        "desc": "+5 Spd and +30 Avo/Ddg.",
+        "desc": "+5 Spd and +30 Avoid/Dodge.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -44823,6 +44823,10 @@
                 "10"
             ],
             [
+                "dynamic_crit_avoid",
+                "-30"
+            ],
+            [
                 "lost_on_end_chapter",
                 null
             ]
@@ -44854,6 +44858,34 @@
             [
                 "canto_plus",
                 null
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stiletto_Heel_Debuff",
+        "name": "Stiletto Heel",
+        "desc": "For the Stiletto Heel item.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            10,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_accuracy",
+                "0 if attack_info[0] == 0 else -70"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "0 if attack_info[0] == 0 else -20"
             ],
             [
                 "lost_on_endstep",
@@ -44988,7 +45020,7 @@
     {
         "nid": "Damage_Void",
         "name": "Damage Void",
-        "desc": "The user reduces the damage they receive by 50% and is immune to negative status effects.\nNegate the damage from enemies below lvl 25.",
+        "desc": "Reduce damage taken by 50%. Unit is immune to negative status effects while equipped.\nNegate damage from enemies below lvl 15.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -45000,7 +45032,7 @@
                 0.5
             ],
             [
-                "resist_status",
+                "immune_status",
                 null
             ],
             [
@@ -45027,7 +45059,7 @@
             ],
             [
                 "combat_condition",
-                "unit.get_internal_level() < 41"
+                "unit.get_internal_level() < 55"
             ],
             [
                 "ignore_damage",
@@ -45037,8 +45069,24 @@
     },
     {
         "nid": "Dark_Wisdom",
-        "name": "Dark Wisdom",
-        "desc": "The user gains a charge whenever they kill an enemy, while charged, they gain 10% more weapon xp and gain +1 MAG, stacks infinitely.\nLoses one charge per turn.",
+        "name": "Wisdom Spark",
+        "desc": "Dains a stack of Wisdom Spark whenever unit kills an enemy. Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "gain_skill_after_kill",
+                "Dark_Wisdom_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Wisdom_Buff",
+        "name": "Dark Spark",
+        "desc": "Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
         "icon_nid": "Skills",
         "icon_index": [
             2,
@@ -45048,10 +45096,6 @@
             [
                 "stack",
                 999
-            ],
-            [
-                "kill_charge_increase",
-                1
             ],
             [
                 "wexp_multiplier",
@@ -45065,13 +45109,17 @@
                         1
                     ]
                 ]
+            ],
+            [
+                "time",
+                1
             ]
         ]
     },
     {
         "nid": "Grab_Heart",
         "name": "Grab Heart",
-        "desc": "Multiplies damage by 350%, Target is sealed for 2 turns.",
+        "desc": "<red>CA:</>Multiplies damage by 350%, Target is sealed for 2 turns. <green>CD:8 Turns</>",
         "icon_nid": "Skills",
         "icon_index": [
             2,
@@ -45127,7 +45175,7 @@
     {
         "nid": "High_Reduction",
         "name": "High Reduction",
-        "desc": "Reduce the damage recieved by 50%. The user is immune to negative effects.",
+        "desc": "Reduce damage taken by 50%. Unit is immune to negative status effects while equipped.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -45147,7 +45195,7 @@
     {
         "nid": "Low_Reduction",
         "name": "Low Reduction",
-        "desc": "Reduce the damage recieved by 10%.",
+        "desc": "Reduce damage taken by 10%.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -45163,7 +45211,7 @@
     {
         "nid": "Magnum_Reduction",
         "name": "Magnum Reduction",
-        "desc": "Reduce the damage received in a 75%.The user is inmune too negative effects.",
+        "desc": "Reduce damage taken by 75%. Unit is immune to negative status effects while equipped.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -45183,7 +45231,7 @@
     {
         "nid": "Medium_Reduction",
         "name": "Medium Reduction",
-        "desc": "Reduce the damage recieved by 30%. The user is immune to negative statuses.",
+        "desc": "Reduce damage taken by 30%. Unit is immune to negative status effects while equipped.",
         "icon_nid": "Skills",
         "icon_index": [
             6,
@@ -45268,7 +45316,7 @@
     {
         "nid": "Soul_Taint",
         "name": "Soul Taint",
-        "desc": "Apply any enemies hit the effects of Drenched, Poisoned and Seared.",
+        "desc": "Attacks inflict the Drenched, Poisoned and Seared to enemies.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -45278,6 +45326,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_statuses_after_combat",
@@ -45292,7 +45344,7 @@
     {
         "nid": "Soul_Use",
         "name": "Soul Manipulation",
-        "desc": "For every ally within 3 spaces of the user, increase all stats by 2, except MOV and CON. the user gains 20% lifesteal.",
+        "desc": "+2 to most stats for each ally within 3 spaces of unit.\nAttacks restore HP = 20% of damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -45377,7 +45429,7 @@
     {
         "nid": "True_Death",
         "name": "True Death",
-        "desc": "<red>CA:</>Negate the DEF and RES of the enemies, The attack never miss and +1 bonus attack (+2 if unit doubles).<green>CD:12 Turns</>",
+        "desc": "<red>CA:</>Negate the DEF or RES of the enemies, +1 bonus attack (+2 if unit doubles), and this attack doesn't miss. <green>CD:4 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -45394,7 +45446,7 @@
             ],
             [
                 "build_charge",
-                12
+                4
             ],
             [
                 "allowed_weapons",
@@ -45442,11 +45494,11 @@
     {
         "nid": "Head_Collector",
         "name": "Head Collector",
-        "desc": "Increases critical damage multiplier from x3 to x5, user gains galeforce up to three times per turn when kill a enemy unit.",
-        "icon_nid": "SkillIcons",
+        "desc": "Increases critical damage multiplier from x3 to x5, unit gains Galeforce up to three times per turn when kill a enemy unit.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            7
+            10,
+            14
         ],
         "components": [
             [
@@ -45454,27 +45506,47 @@
                 null
             ],
             [
-                "alternate_critical_multiplier_formula",
-                "CRIT_MULT_EXTREME"
+                "drain_charge",
+                3
+            ],
+            [
+                "Endstep_charge_increase",
+                3
             ],
             [
                 "galeforce",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Head_Collector_Child",
+        "name": "Head Collector",
+        "desc": "Increases critical damage multiplier from x3 to x5, user gains galeforce up to three times per turn when kill a enemy unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "hidden",
+                null
             ],
             [
-                "drain_charge",
-                3
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
             ]
         ]
     },
     {
         "nid": "Heavy_Shot",
         "name": "Heavy Shot",
-        "desc": "The user's attack is increased by 75% and ignores 50% of the enemy's defense when attacking. The user loses 25 hits for each square of distance between it and the target.",
-        "icon_nid": "SkillIcons",
+        "desc": "Unit deals 75% more damage and ignores 50% of enemy's DEF or RES. -25% for each space between unit and enemy.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            0
+            8,
+            48
         ],
         "components": [
             [
@@ -45482,12 +45554,12 @@
                 null
             ],
             [
-                "damage_multiplier",
-                1.75
-            ],
-            [
                 "combat_condition",
                 "mode == 'attack'"
+            ],
+            [
+                "damage_multiplier",
+                1.75
             ],
             [
                 "dynamic_damage",
@@ -45502,11 +45574,11 @@
     {
         "nid": "Hunter_Mark",
         "name": "Hunter Mark",
-        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
-        "icon_nid": "Skills",
+        "desc": "Attacks inflict Marked to enemies on hit (-1 MOV, -5 SPD for 2 turns.)\nUnit gains +3 SKL and +15 Hit after combat for 2 turns.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            9,
-            1
+            14,
+            14
         ],
         "components": [
             [
@@ -45525,12 +45597,12 @@
     },
     {
         "nid": "Hunter_Mark_Buff",
-        "name": " Hunter Mark",
-        "desc": "Enemies hit by the user are marked for two turns, marked enemies lose 1 Mov and 5 SPD for the duration, the user gains +3 SKL and +15 hit for each marked enemy.",
-        "icon_nid": "Skills",
+        "name": "Hunter's Sense",
+        "desc": "+3 SKL and +15 Hit for 2 turns.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            9,
-            1
+            14,
+            14
         ],
         "components": [
             [
@@ -45558,12 +45630,12 @@
     },
     {
         "nid": "Hunter_Mark_Debuff",
-        "name": "Hunter Mark Debuff",
-        "desc": "Decreases the MOV in 1 and the SPD in 5 for two turns.",
-        "icon_nid": "Skills",
+        "name": "Marked",
+        "desc": "-1 MOV and -5 SPD for 2 turns.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            9,
-            6
+            15,
+            14
         ],
         "components": [
             [
@@ -45571,11 +45643,11 @@
                 [
                     [
                         "SPD",
-                        -1
+                        -5
                     ],
                     [
                         "MOV",
-                        -5
+                        -1
                     ]
                 ]
             ],
@@ -45588,21 +45660,13 @@
     {
         "nid": "Single_Strike",
         "name": "Single Strike",
-        "desc": "Neither the user nor the enemy can make more than one attack.",
-        "icon_nid": "SkillIcons",
+        "desc": "Unit can no longer double, but cannot be doubled either.",
+        "icon_nid": "skill_icons",
         "icon_index": [
             4,
-            10
+            35
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "hidden",
-                null
-            ],
             [
                 "cannot_double",
                 null
@@ -45616,11 +45680,11 @@
     {
         "nid": "Suppression_Fire",
         "name": "Suppression Fire",
-        "desc": "<red>CA:</>The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses.<green>CD:6 Turns</>",
-        "icon_nid": "SkillIcons",
+        "desc": "<red>CA:</>An AOE:2 attack, +1 bonus attack for every 30 SKL this unit has. <green>CD:6 Turns</>",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            6
+            6,
+            48
         ],
         "components": [
             [
@@ -45632,12 +45696,184 @@
                 "Suppression_Fire"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 6
             ],
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Suppression_Fire_Proc",
+        "name": " Suppression Fire",
+        "desc": "An AOE:2 attack, +1 bonus attack for every 30 SKL this unit has.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            48
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "enemy_oversplash",
+                2
+            ],
+            [
+                "dynamic_attacks",
+                "unit.get_stat('SKL') //30"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded",
+        "name": "Wounded Prey",
+        "desc": "Attacks inflict Wounded to enemies on hit (+20% damage taken, -20% damage given, and -20 Crit Avoid, lasts 2 turns).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff",
+        "name": "Wounded",
+        "desc": "+20% damage taken, -20% damage given, and -20 Crit Avoid, lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "dynamic_crit_avoid",
+                "-20"
+            ],
+            [
+                "resist_multiplier",
+                1.2
+            ],
+            [
+                "damage_multiplier",
+                0.8
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Plus",
+        "name": "Wounded Prey+",
+        "desc": "Attacks inflict Wounded+ to enemies on hit (+25% damage taken, -25% damage given, and -25 Crit Avoid, lasts 2 turns).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff_Plus"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff_Plus",
+        "name": "Wounded+",
+        "desc": "+25% damage taken, -25% damage given, and -25 Crit Avoid, lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            43
+        ],
+        "components": [
+            [
+                "dynamic_crit_avoid",
+                "-25"
+            ],
+            [
+                "resist_multiplier",
+                1.25
+            ],
+            [
+                "damage_multiplier",
+                0.75
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Plus_Plus",
+        "name": "Wounded Prey++",
+        "desc": "Attacks inflict Wounded+ to enemies on hit (+30% damage taken, -30% damage given, and -30 Crit Avoid, lasts 2 turns).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Prey_Wounded_Debuff_Plus_Plus"
+            ]
+        ]
+    },
+    {
+        "nid": "Prey_Wounded_Debuff_Plus_Plus",
+        "name": "Wounded++",
+        "desc": "+30% damage taken, -30% damage given, and -30 Crit Avoid, lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            43
+        ],
+        "components": [
+            [
+                "dynamic_crit_avoid",
+                "-30"
+            ],
+            [
+                "resist_multiplier",
+                1.3
+            ],
+            [
+                "damage_multiplier",
+                0.7
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
@@ -58829,162 +59065,6 @@
             [
                 "lost_on_end_chapter",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded",
-        "name": "Prey Wounded",
-        "desc": "Enemies hit by the user decreases crit avoid by 20% and damage by 20%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            35
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "give_status_after_hit",
-                "Prey_Wounded_Debuff"
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded_Debuff",
-        "name": "Prey Wounded Debuff",
-        "desc": "Decreases crit avoid by 20% and damage by 20%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            35
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                -20
-            ],
-            [
-                "resist_multiplier",
-                -0.8
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded_Debuff_Plus",
-        "name": "Prey Wounded Debuff+",
-        "desc": "Decreases crit avoid by 25% and damage by 25%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            2,
-            35
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                -25
-            ],
-            [
-                "resist_multiplier",
-                -0.75
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded_Debuff_Plus_Plus",
-        "name": "Prey Wounded Debuff++",
-        "desc": "Decreases crit avoid by 30% and damage by 30%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            3,
-            35
-        ],
-        "components": [
-            [
-                "crit_avoid",
-                -30
-            ],
-            [
-                "resist_multiplier",
-                -0.7000000000000001
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded_Plus",
-        "name": "Prey Wounded+",
-        "desc": "Enemies hit by the user decreases crit avoid by 25% and damage by 25%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            2,
-            35
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "give_status_after_hit",
-                "Prey_Wounded_Debuff_Plus"
-            ]
-        ]
-    },
-    {
-        "nid": "Prey_Wounded_Plus_Plus",
-        "name": "Prey Wounded++",
-        "desc": "Enemies hit by the user decreases crit avoid by 30% and damage by 30%.For two turns.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            3,
-            35
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "give_status_after_hit",
-                "Prey_Wounded_Debuff_Plus_Plus"
-            ]
-        ]
-    },
-    {
-        "nid": "Suppression_Fire_Proc",
-        "name": " Suppression Fire",
-        "desc": "The user acquires an AOE of 2 on his attacks in addition to obtaining an extra attack for every 30 of skill he possesses. ",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            6
-        ],
-        "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "enemy_oversplash",
-                2
-            ],
-            [
-                "dynamic_attacks",
-                "unit.get_stat('SKL') //30"
             ]
         ]
     }

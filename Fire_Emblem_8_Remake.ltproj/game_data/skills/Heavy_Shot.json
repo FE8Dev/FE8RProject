@@ -2,11 +2,11 @@
     {
         "nid": "Heavy_Shot",
         "name": "Heavy Shot",
-        "desc": "The user's attack is increased by 75% and ignores 50% of the enemy's defense when attacking. The user loses 25 hits for each square of distance between it and the target.",
-        "icon_nid": "SkillIcons",
+        "desc": "Unit deals 75% more damage and ignores 50% of enemy's DEF or RES. -25% for each space between unit and enemy.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            0
+            8,
+            48
         ],
         "components": [
             [
@@ -14,12 +14,12 @@
                 null
             ],
             [
-                "damage_multiplier",
-                1.75
-            ],
-            [
                 "combat_condition",
                 "mode == 'attack'"
+            ],
+            [
+                "damage_multiplier",
+                1.75
             ],
             [
                 "dynamic_damage",

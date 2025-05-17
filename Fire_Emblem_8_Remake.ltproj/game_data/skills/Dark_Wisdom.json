@@ -1,8 +1,8 @@
 [
     {
         "nid": "Dark_Wisdom",
-        "name": "Dark Wisdom",
-        "desc": "The user gains a charge whenever they kill an enemy, while charged, they gain 10% more weapon xp and gain +1 MAG, stacks infinitely.\nLoses one charge per turn.",
+        "name": "Wisdom Spark",
+        "desc": "Dains a stack of Wisdom Spark whenever unit kills an enemy. Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
         "icon_nid": "Skills",
         "icon_index": [
             2,
@@ -10,25 +10,8 @@
         ],
         "components": [
             [
-                "stack",
-                999
-            ],
-            [
-                "kill_charge_increase",
-                1
-            ],
-            [
-                "wexp_multiplier",
-                1.1
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "MAG",
-                        1
-                    ]
-                ]
+                "gain_skill_after_kill",
+                "Dark_Wisdom_Buff"
             ]
         ]
     }

@@ -2,11 +2,11 @@
     {
         "nid": "Weltbrecher",
         "name": "Weltbrecher",
-        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<green>Skills:</>Wounded Prey++\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON",
-        "icon_nid": "Alexander Weapons",
+        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<violet>Inflicts:</>Wounded Prey++\n<red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON",
+        "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
-            2,
-            0
+            7,
+            2
         ],
         "components": [
             [
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                42
+                20
             ],
             [
                 "hit",
-                75
+                95
             ],
             [
                 "weapon_type",
@@ -35,15 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "X"
-            ],
-            [
-                "weight",
-                20
+                "A"
             ],
             [
                 "crit",
-                0
+                15
             ],
             [
                 "min_range",
@@ -58,11 +54,16 @@
                 null
             ],
             [
+                "weight",
+                22
+            ],
+            [
                 "effective_damage",
                 {
                     "effective_tags": [
                         "Armor",
-                        "Monster"
+                        "Monster",
+                        "Flying"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -86,7 +87,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Alexander\").wexp['Bow'] >= 480"
+                "u(\"Alexander\").wexp['Bow'] >= 240 and u(\"Alexander\").wexp['Bow'] < 420"
             ]
         ]
     }

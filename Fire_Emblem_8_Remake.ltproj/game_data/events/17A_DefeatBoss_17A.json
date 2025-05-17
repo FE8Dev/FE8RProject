@@ -8,6 +8,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "remove_region;Trigger",
             "if;game.turncount <= 16",
             "    give_bexp;4000",
             "    else",
@@ -109,6 +110,10 @@
             "add_unit;Duessel;7,14;immediate;closest",
             "add_unit;Knoll;11,6;immediate;closest",
             "add_unit;Myrrh;19,9;immediate;closest",
+            "if;game.get_unit('Syrene').team == 'other'",
+            "change_team;Syrene;player",
+            "else",
+            "end",
             "add_unit;Syrene;13,9;immediate;closest",
             "add_unit;125;7,17;immediate;closest",
             "add_unit;126;7,18;immediate;closest",

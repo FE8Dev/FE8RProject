@@ -2,7 +2,7 @@
     {
         "nid": "Sturmpiercer",
         "name": "Sturmpiercer",
-        "desc": "Crossbow forged to emulate the power of the wind. Easily pierces everything in its path\n<green>Skills:</>Wounded Prey+\n<red>Effective:</><icon>Armor</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON/2",
+        "desc": "Crossbow forged to emulate the power of the wind. Easily pierces everything in its path\n<violet>Inflicts:</>Wounded Prey+\n<red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON/2",
         "icon_nid": "Alexander Weapons",
         "icon_index": [
             0,
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                16
+                13
             ],
             [
                 "hit",
-                125
+                85
             ],
             [
                 "weapon_type",
@@ -35,11 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "SSS"
+                "C"
             ],
             [
                 "weight",
-                8
+                18
             ],
             [
                 "crit",
@@ -66,7 +66,8 @@
                 {
                     "effective_tags": [
                         "Armor",
-                        "Monster"
+                        "Monster",
+                        "Flying"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -90,7 +91,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Alexander\").wexp['Bow'] >= 420 and u(\"Alexander\").wexp['Bow'] < 480"
+                "u(\"Alexander\").wexp['Bow'] >= 120 and u(\"Alexander\").wexp['Bow'] < 240"
             ]
         ]
     }

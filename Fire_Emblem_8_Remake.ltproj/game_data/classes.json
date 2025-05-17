@@ -13672,14 +13672,14 @@
         },
         "promotion": {
             "HP": 3,
-            "STR": 1,
+            "STR": 0,
             "MAG": 2,
             "SKL": 2,
             "SPD": 2,
-            "LCK": 4,
-            "DEF": 1,
-            "RES": 2,
-            "CON": 2,
+            "LCK": 1,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
             "MOV": -98
         },
         "max_stats": {
@@ -85571,14 +85571,14 @@
             "MOV": 0
         },
         "growth_bonus": {
-            "HP": 5,
-            "STR": 10,
-            "MAG": 10,
-            "SKL": 20,
-            "SPD": 15,
-            "LCK": 10,
-            "DEF": 5,
-            "RES": 5,
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
             "CON": 0,
             "MOV": 0
         },
@@ -86028,14 +86028,14 @@
             "MOV": 0
         },
         "growth_bonus": {
-            "HP": 50,
-            "STR": 10,
-            "MAG": 20,
-            "SKL": 10,
-            "SPD": 10,
-            "LCK": 15,
-            "DEF": 30,
-            "RES": 10,
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
             "CON": 0,
             "MOV": 0
         },
@@ -86100,8 +86100,8 @@
             ],
             "Staff": [
                 true,
-                120,
-                null
+                1,
+                240
             ],
             "Light": [
                 false,
@@ -86110,8 +86110,8 @@
             ],
             "Anima": [
                 true,
-                120,
-                null
+                1,
+                240
             ],
             "Dark": [
                 false,
@@ -86261,8 +86261,8 @@
             ],
             "Staff": [
                 true,
-                65,
-                null
+                60,
+                360
             ],
             "Light": [
                 false,
@@ -86271,8 +86271,8 @@
             ],
             "Anima": [
                 true,
-                65,
-                null
+                60,
+                360
             ],
             "Dark": [
                 false,
@@ -86286,8 +86286,8 @@
             ],
             "Monster": [
                 true,
-                1,
-                null
+                120,
+                360
             ]
         },
         "icon_nid": "Slime",
@@ -86420,7 +86420,7 @@
             ],
             "Anima": [
                 true,
-                180,
+                60,
                 480
             ],
             "Dark": [
@@ -86435,7 +86435,7 @@
             ],
             "Monster": [
                 true,
-                120,
+                60,
                 null
             ]
         },
@@ -86563,7 +86563,7 @@
             ],
             "Staff": [
                 true,
-                120,
+                60,
                 null
             ],
             "Light": [
@@ -86573,7 +86573,7 @@
             ],
             "Anima": [
                 true,
-                120,
+                60,
                 null
             ],
             "Dark": [
@@ -86588,7 +86588,7 @@
             ],
             "Monster": [
                 true,
-                240,
+                60,
                 null
             ]
         },
@@ -86597,7 +86597,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "Samurai (Iaijutsu - Rouge) (F) Sword {GabrielKnight}-stand",
+        "map_sprite_nid": "Blade Lord (F) Lyn Axe {Vilkalizer, Morth}-stand-stand",
         "combat_anim_nid": "Slime_Warrior",
         "fields": []
     },
@@ -86761,8 +86761,8 @@
         "movement_group": "Mages",
         "promotes_from": "Slime",
         "turns_into": [
-            "Slime_Fighter",
-            "Slime_Queen"
+            "Slime_Queen",
+            "Slime_Fighter"
         ],
         "tags": [
             "AutoPromote",
@@ -86912,6 +86912,564 @@
         ],
         "map_sprite_nid": "Wetgal (U) {Stephano}-stand-stand",
         "combat_anim_nid": "Slime_Gal",
+        "fields": []
+    },
+    {
+        "nid": "Initiate_Natasha",
+        "name": "Initiate",
+        "desc": "sister animation",
+        "tier": 0,
+        "movement_group": "Mages",
+        "promotes_from": null,
+        "turns_into": [
+            "Cleric",
+            "Troubadour",
+            "Medic_Natasha"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 10,
+        "bases": {
+            "HP": 17,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 2,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 15,
+            "MAG": 35,
+            "SKL": 10,
+            "SPD": 25,
+            "LCK": 20,
+            "DEF": 15,
+            "RES": 45,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 5,
+            "STR": 5,
+            "MAG": 20,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 30,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 0,
+            "MAG": 2,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": -98
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 50,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                1,
+                240
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": null,
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Medic_Natasha",
+        "name": "Medic",
+        "desc": "bishop + dagger animation",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": "Initiate_Natasha",
+        "turns_into": [
+            "Surgeon_Natasha"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Thief",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                31,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                31,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": null,
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Surgeon_Natasha",
+        "name": "Surgeon",
+        "desc": "dark fencer animation",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Medic_Natasha",
+        "turns_into": [
+            "Doctor_Natasha"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Thief",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 66,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 60,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                120,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                60,
+                360
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": null,
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "Doctor_Natasha",
+        "name": "Doctor",
+        "desc": "plague doctor animation",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": "Surgeon_Natasha",
+        "turns_into": [],
+        "tags": [
+            "Support",
+            "Thief",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 96,
+            "MAG": 95,
+            "SKL": 96,
+            "SPD": 97,
+            "LCK": 100,
+            "DEF": 95,
+            "RES": 96,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                60,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": null,
+        "combat_anim_nid": null,
         "fields": []
     }
 ]
