@@ -14,12 +14,28 @@
 ##To do - high priority on top
 
 
+*Finish Diana
+
+
+
+
+*Add Jaffar
+
+
+
+*Add Tareon
+
+
+
+
+
+
 
 *add new trainees
 
 
 
-*make duplicate weapon for azuth summons
+
 
 
 
