@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Vantage_Plus_Item_Class_1",
+        "name": "Vantage+",
+        "desc": "Unit always attacks first. conditional",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "False if (len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3]) > 1) el False"
+            ],
+            [
+                "vantage",
+                null
+            ]
+        ]
+    }
+]
