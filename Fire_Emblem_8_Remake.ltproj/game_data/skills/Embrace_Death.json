@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "Embrace_Death",
+        "name": "Embrace Death",
+        "desc": "Increases the user's Hit by 100 and damage by 100%, decreasses the avoid by 100 and the DEF/RES by 50%. The user cannot heal.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "hit",
+                100
+            ],
+            [
+                "avoid",
+                -100
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.5
+                    ],
+                    [
+                        "RES",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "empower_heal",
+                "-999"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

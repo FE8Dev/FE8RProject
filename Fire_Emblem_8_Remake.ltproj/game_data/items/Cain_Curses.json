@@ -1,0 +1,99 @@
+[
+    {
+        "nid": "Cain_Curses",
+        "name": "Cain Curses",
+        "desc": "Daggers said to belong to Cain, the first murderer.Their poison corrupts the will of enemy and user alike.<green>Skills:</>Quick Knife<violet>Inflicts:</><icon>Poison(5)</><pink>Misc:</>Uses SPD + SKL.",
+        "icon_nid": "{FuriousHaunter} Duel Slashers",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "JavelinDracolord"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 420"
+            ]
+        ]
+    }
+]
