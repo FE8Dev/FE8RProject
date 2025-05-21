@@ -1,18 +1,14 @@
 [
     {
         "nid": "Diana_Staff_Switch_B",
-        "name": "Pass",
-        "desc": "Swap with allies and enemies. Removes paired up partner on use.\nThis is a free action. Unlimited uses per turn.",
-        "icon_nid": "skill_icons",
+        "name": "Translocation",
+        "desc": "Swap with enemies. Removes paired up partner on use.\nbuff Hit/Avoid/AS by +5",
+        "icon_nid": "Staff",
         "icon_index": [
-            3,
-            32
+            0,
+            7
         ],
         "components": [
-            [
-                "target_unit",
-                null
-            ],
             [
                 "swap",
                 null
@@ -69,6 +65,10 @@
             ],
             [
                 "unstealable",
+                null
+            ],
+            [
+                "target_enemy",
                 null
             ]
         ]

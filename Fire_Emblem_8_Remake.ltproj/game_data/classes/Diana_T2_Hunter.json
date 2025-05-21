@@ -2,15 +2,18 @@
     {
         "nid": "Diana_T2_Hunter",
         "name": "Hunter",
-        "desc": "",
+        "desc": "Deadly warriors that focus on killing enemies in one blow from afar. <icon>Infantry</><icon>Magic</><icon>Steal</><icon>Support</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
+        "promotes_from": "Diana_T1_Outlaw",
+        "turns_into": [
+            "Diana_T3_Adventurer"
+        ],
         "tags": [
             "AutoPromote",
             "Support",
-            "Infantry"
+            "Infantry",
+            "Magic"
         ],
         "max_level": 20,
         "bases": {
@@ -23,7 +26,7 @@
             "DEF": 3,
             "RES": 3,
             "CON": 7,
-            "MOV": 6
+            "MOV": 7
         },
         "growths": {
             "HP": 70,
@@ -38,28 +41,28 @@
             "MOV": 1
         },
         "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
+            "HP": 15,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 15,
+            "DEF": 5,
+            "RES": 10,
             "CON": 0,
             "MOV": 0
         },
         "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
+            "HP": 3,
+            "STR": 5,
+            "MAG": 1,
+            "SKL": 4,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -97
         },
         "max_stats": {
             "HP": 480,

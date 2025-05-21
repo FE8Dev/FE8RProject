@@ -1,12 +1,12 @@
 [
     {
         "nid": "Diana_Sword_D",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
-        "icon_nid": "Sword",
+        "name": "Estoc",
+        "desc": "Thin and long sword made for fencing\nuses LCK for damage, targets LCK\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
+        "icon_nid": "{Batima} Quick Sword",
         "icon_index": [
             0,
-            2
+            0
         ],
         "components": [
             [
@@ -90,11 +90,17 @@
             ],
             [
                 "alternate_damage_formula",
-                "LUCK_PROC"
+                "STR_MAG_MID"
             ],
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade1"
+                ]
             ]
         ]
     }

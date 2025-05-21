@@ -1,12 +1,12 @@
 [
     {
         "nid": "Diana_Sword_S",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
-        "icon_nid": "Sword",
+        "name": "Luckblade",
+        "desc": "Said to appear randomly when needed.\nuses LCK for damage, targets LCK\n<green>Skills:</>Flash Step\n<pink>Misc:</>+7 SPD.",
+        "icon_nid": "Swords Sheet",
         "icon_index": [
-            0,
-            2
+            3,
+            5
         ],
         "components": [
             [
@@ -95,6 +95,12 @@
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade2"
+                ]
             ]
         ]
     }
