@@ -5165,7 +5165,7 @@
     {
         "nid": "Ghostly_Dagger",
         "name": "Ghostly_Dagger",
-        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Magical, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
+        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\nEffective vs pirate and water\n<pink>Misc:</>Magical, MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             1,
@@ -5240,7 +5240,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_SPD_STRONG"
+                "MAG_SKL_SPD_STRONG"
             ],
             [
                 "prf_tags",
@@ -5252,7 +5252,8 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_40",
-                    "Ghostly_Alliance"
+                    "Ghostly_Alliance",
+                    "Quick_Knife"
                 ]
             ],
             [
@@ -5260,6 +5261,19 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Water",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },
@@ -6138,7 +6152,7 @@
     {
         "nid": "Zypher_Greatlance",
         "name": "Zephyr G.L.",
-        "desc": "A greatlance infused with a wind gem.\n<green>Skills:</>Lance Guard (E), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, SPD + SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//3))}</>), targets SPD.",
+        "desc": "A greatlance infused with a wind gem.\n<green>Skills:</>Lance Guard (E), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, SPD + SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//3))}</>), targets SPD.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             8,
@@ -6251,7 +6265,7 @@
     {
         "nid": "Airburst_Greatlance",
         "name": "Airburst G.L.",
-        "desc": "A greatlance that bursts the air itself.\n<green>Skills:</>Lance Guard (C), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD.",
+        "desc": "A greatlance that bursts the air itself.\n<green>Skills:</>Lance Guard (C), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD.",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -6364,7 +6378,7 @@
     {
         "nid": "Jetstream_Greatlance",
         "name": "Jetstream G.L.",
-        "desc": "A greatlance that soars the skies.\n<green>Skills:</>Lance Guard (SS), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), targets SPD.",
+        "desc": "A greatlance that soars the skies.\n<green>Skills:</>Lance Guard (SS), G.L. Mastery <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), targets SPD.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             9,
@@ -60924,7 +60938,7 @@
             ],
             [
                 "battle_cast_anim",
-                "BlueExplosion"
+                "Blue_Explosion"
             ],
             [
                 "ignore_line_of_sight",
@@ -129583,7 +129597,7 @@
             ],
             [
                 "battle_cast_anim",
-                "WindWave"
+                "Wind"
             ],
             [
                 "ignore_line_of_sight",
@@ -159093,5 +159107,568 @@
             0
         ],
         "components": []
+    },
+    {
+        "nid": "Diana_Bow_E",
+        "name": "Iron Bow",
+        "desc": "Bounty\nSKL + SPD/3\nmin of DEF/RES\n<red>Effective:</><icon>Flying</>",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Bounty"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Bounty"
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Bow'] < 120"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Diana_Bow_C",
+        "name": "Iron Bow",
+        "desc": "Bounty\nSKL + SPD/3\nmin of DEF/RES\n<red>Effective:</><icon>Flying</>",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Bounty"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Bow'] >= 120 and u(\"Diana\").wexp['Bow'] < 240"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Diana_Bow_A",
+        "name": "Iron Bow",
+        "desc": "Bounty\nSKL + SPD/2\nmin of DEF/RES\nBrave\n<red>Effective:</><icon>Flying</>",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Bounty"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Bow'] >= 240 and u(\"Diana\").wexp['Bow'] < 360"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "brave_on_attack",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Diana_Bow_SS",
+        "name": "Iron Bow",
+        "desc": "Bounty\nSKL + SPD\nmin of DEF/RES\nBrave\n<red>Effective:</><icon>Flying</>",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                6
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Poaching",
+                    "Bounty"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Bow'] >= 360 and u(\"Diana\").wexp['Bow'] < 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "brave_on_attack",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Diana_Bow_X",
+        "name": "Iron Bow",
+        "desc": "Bounty\nSKL + SPD + LCK\nmin of DEF/RES\nBrave\n+1 attack\n<red>Effective:</><icon>Flying</>",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                27
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Poaching",
+                    "Bounty"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_LCK_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Bow'] = 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "brave_on_attack",
+                null
+            ]
+        ]
     }
 ]

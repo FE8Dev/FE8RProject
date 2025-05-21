@@ -9183,7 +9183,7 @@
             ],
             [
                 "sight_range_bonus",
-                5
+                8
             ],
             [
                 "allowed_weapons",
@@ -9242,7 +9242,7 @@
     {
         "nid": "Sunder_Armor",
         "name": "Sunder Armor",
-        "desc": "Negate 25% of enemy's DEF when attacking.\nEffective damage against Armored units.\nDoes not work on Bosses.",
+        "desc": "Negate 50% of enemy's DEF when attacking.\nEffective damage against Armored units.\nDoes not work on Bosses.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -9259,7 +9259,7 @@
             ],
             [
                 "dynamic_damage",
-                "unit2.get_stat('DEF') // 4"
+                "unit2.get_stat('DEF') // 2"
             ],
             [
                 "item_override",
@@ -9270,7 +9270,7 @@
     {
         "nid": "Sunder_Barrier",
         "name": "Sunder Barrier",
-        "desc": "Negate 25% of enemy's RES when attacking.\nEffective damage against magical units.\nDoes not work on Bosses.",
+        "desc": "Negate 50% of enemy's RES when attacking.\nEffective damage against magical units.\nDoes not work on Bosses.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -9287,7 +9287,7 @@
             ],
             [
                 "dynamic_damage",
-                "unit2.get_stat('RES') // 4"
+                "unit2.get_stat('RES') // 2"
             ],
             [
                 "item_override",
@@ -19593,7 +19593,7 @@
     {
         "nid": "Dimensional_Attack",
         "name": "Dimensional Attack",
-        "desc": "Can counterattack at any range when attacked.\nDoes not work against siege weapons.\n+10 Crit, +40 Crit Damage.",
+        "desc": "Can counterattack at any range when attacked.\nDoes not work against Siege weapons.\n+10 Crit, +40 Crit Damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -45772,10 +45772,6 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
-            ],
-            [
                 "give_status_after_hit",
                 "Prey_Wounded_Debuff"
             ]
@@ -45820,10 +45816,6 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
-            ],
-            [
                 "give_status_after_hit",
                 "Prey_Wounded_Debuff_Plus"
             ]
@@ -45867,10 +45859,6 @@
             43
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "give_status_after_hit",
                 "Prey_Wounded_Debuff_Plus_Plus"
@@ -55930,7 +55918,7 @@
     {
         "nid": "Dimensional_Attack_T3",
         "name": "Dimensional Attack",
-        "desc": "Can counterattack at any range when attacked.\nDoes not work against siege weapons.\n+10 Crit, +40 Crit Damage.",
+        "desc": "Can counterattack at any range when attacked.\nDoes not work against Siege weapons.\n+10 Crit, +40 Crit Damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -59099,7 +59087,7 @@
     {
         "nid": "Anihilation",
         "name": "Anihilation",
-        "desc": "",
+        "desc": "+crit on crit, stacks, last per chapter",
         "icon_nid": null,
         "icon_index": [
             0,
@@ -59110,7 +59098,7 @@
     {
         "nid": "Wonderdrug",
         "name": "Wonderdrug",
-        "desc": "",
+        "desc": "bonus heal when low hp",
         "icon_nid": null,
         "icon_index": [
             0,
@@ -59121,12 +59109,28 @@
     {
         "nid": "Aim_For_The_Throat",
         "name": "Aim For The Throat",
-        "desc": "",
+        "desc": "CA silence + seal",
         "icon_nid": null,
         "icon_index": [
             0,
             0
         ],
         "components": []
+    },
+    {
+        "nid": "Poaching",
+        "name": "Poaching",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "1"
+            ]
+        ]
     }
 ]

@@ -2,7 +2,7 @@
     {
         "nid": "Sunder_Barrier",
         "name": "Sunder Barrier",
-        "desc": "Negate 25% of enemy's RES when attacking.\nEffective damage against magical units.\nDoes not work on Bosses.",
+        "desc": "Negate 50% of enemy's RES when attacking.\nEffective damage against magical units.\nDoes not work on Bosses.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -19,7 +19,7 @@
             ],
             [
                 "dynamic_damage",
-                "unit2.get_stat('RES') // 4"
+                "unit2.get_stat('RES') // 2"
             ],
             [
                 "item_override",
