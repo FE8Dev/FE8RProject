@@ -34097,6 +34097,12 @@
             [
                 "eval_upkeep_damage_non_fatal",
                 "unit.get_max_hp() * 0.07"
+            ],
+            [
+                "has_tags",
+                [
+                    "Bleeding"
+                ]
             ]
         ]
     },
@@ -34170,6 +34176,12 @@
                         "SPD",
                         -1
                     ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Bleeding"
                 ]
             ]
         ]
@@ -46042,6 +46054,236 @@
             [
                 "hidden",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Poaching",
+        "name": "Poaching",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "1"
+            ]
+        ]
+    },
+    {
+        "nid": "Anatomy_Murder",
+        "name": "Anatomy Expertise",
+        "desc": "Apply effective damage vs bleeding enemies, on hit apply a stack of bleed and lethargy a the enemy.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "give_statuses_after_combat",
+                [
+                    "Lethargy",
+                    "Bleeding",
+                    "Bleeding_Boss"
+                ]
+            ],
+            [
+                "item_override",
+                "Anatomy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Deathwaltz",
+        "name": "Deathwaltz",
+        "desc": "Ignore the DEF of the enemies with 100% HP. When figthing a unit with 100% of HP, the user obtains Canto for 5 spaces.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            36
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_hp() == target.get_max_hp()"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF')"
+            ],
+            [
+                "canter",
+                5
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lethargy",
+        "name": "Lethargy",
+        "desc": "Decreasses the MOV in 1 and the SKL in 4 per stacks, maximun 5 stacks.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            6
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ],
+                    [
+                        "SKL",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dual_Cut",
+        "name": "Dual Cut",
+        "desc": "The user always strikes twice.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            9
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Embrace_Death",
+        "name": "Embrace Death",
+        "desc": "Increases the user's Hit by 100 and damage by 100%, decreasses the avoid by 100 and the DEF/RES by 50%. The user cannot heal.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "hit",
+                100
+            ],
+            [
+                "avoid",
+                -100
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.5
+                    ],
+                    [
+                        "RES",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "empower_heal",
+                "-999"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Maker_End",
+        "name": "Epitaph",
+        "desc": "LCK+SKL/3% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            17
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Maker_End_Proc"
+            ],
+            [
+                "proc_rate",
+                "LCK_SKL_WEAK"
+            ],
+            [
+                "combat_condition",
+                " \"Boss\" not in unit2.tags"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Maker_End_Proc",
+        "name": "Epitaph",
+        "desc": "Skill/2% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            17
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "alternate_battle_anim",
+                "Critical"
+            ],
+            [
+                "dynamic_damage",
+                "999"
             ]
         ]
     },
@@ -59116,21 +59358,5 @@
             0
         ],
         "components": []
-    },
-    {
-        "nid": "Poaching",
-        "name": "Poaching",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "dynamic_multiattacks",
-                "1"
-            ]
-        ]
     }
 ]

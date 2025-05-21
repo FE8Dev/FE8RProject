@@ -87218,7 +87218,7 @@
             0
         ],
         "map_sprite_nid": "BishopFemale",
-        "combat_anim_nid": "Bishop_Daggers",
+        "combat_anim_nid": "Bishop_Dagger",
         "fields": []
     },
     {
@@ -87371,7 +87371,7 @@
             0
         ],
         "map_sprite_nid": "T2_Female_Light_Sage",
-        "combat_anim_nid": "Tactician_Female",
+        "combat_anim_nid": "Tactician_Robin",
         "fields": []
     },
     {
@@ -87992,6 +87992,474 @@
         ],
         "map_sprite_nid": "Trickster (F) {StreetHero, Sable Mage}-stand",
         "combat_anim_nid": "T3_Phantom_Lord",
+        "fields": []
+    },
+    {
+        "nid": "Thief_Jaffar",
+        "name": "Thief",
+        "desc": "Expert in stealth and subterfuge. Possess weak attacks but many other skills. <icon>Infantry</><icon>Steal</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Assassin_Jaffar"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 5,
+            "SPD": 9,
+            "LCK": 4,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 6,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 40,
+            "MAG": 5,
+            "SKL": 45,
+            "SPD": 60,
+            "LCK": 40,
+            "DEF": 15,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 1,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 2,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                5,
+                "Dual_Cut"
+            ],
+            [
+                15,
+                "Pass"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Thief",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Thief",
+        "combat_anim_nid": "Thief_V3",
+        "fields": []
+    },
+    {
+        "nid": "Assassin_Jaffar",
+        "name": "Assassin",
+        "desc": "A lethal warrior who focuses on killing wewakened with one blow. <icon>Infantry</><icon>Steal</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Thief_Jaffar",
+        "turns_into": [
+            "Death_Angel"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 29,
+            "STR": 6,
+            "MAG": 2,
+            "SKL": 10,
+            "SPD": 12,
+            "LCK": 3,
+            "DEF": 4,
+            "RES": 4,
+            "CON": 8,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": -15,
+            "STR": -10,
+            "MAG": 0,
+            "SKL": -10,
+            "SPD": -5,
+            "LCK": -5,
+            "DEF": -5,
+            "RES": -5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 15,
+            "DEF": 5,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 4,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 66,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 60,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                5,
+                "Deathwaltz"
+            ],
+            [
+                15,
+                "Deadly_Force"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                360
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Assassin",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Assassin",
+        "combat_anim_nid": "Assassin",
+        "fields": []
+    },
+    {
+        "nid": "Death_Angel",
+        "name": "Death Angel",
+        "desc": "Title given to legendary assassins who represent death with their presence.. <icon>Infantry</>",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Assassin_Jaffar",
+        "turns_into": [],
+        "tags": [
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 28,
+            "MAG": 16,
+            "SKL": 35,
+            "SPD": 35,
+            "LCK": 24,
+            "DEF": 20,
+            "RES": 25,
+            "CON": 8,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 180,
+            "STR": 160,
+            "MAG": 40,
+            "SKL": 300,
+            "SPD": 300,
+            "LCK": 150,
+            "DEF": 100,
+            "RES": 140,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 90,
+            "MAG": 10,
+            "SKL": 200,
+            "SPD": 200,
+            "LCK": 90,
+            "DEF": 60,
+            "RES": 140,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 20,
+            "STR": 6,
+            "MAG": 0,
+            "SKL": 7,
+            "SPD": 4,
+            "LCK": 2,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 4,
+            "MOV": 2
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 99,
+            "MAG": 90,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 96,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Thief_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Embrace_Death"
+            ],
+            [
+                15,
+                "Anatomy_Murder"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Trickster (M) Sword {Khrene The Wayfarer}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "_Outlander (M) {J-Treecko}-stand-stand",
+        "combat_anim_nid": "Mercenary_Yygdra",
         "fields": []
     }
 ]
