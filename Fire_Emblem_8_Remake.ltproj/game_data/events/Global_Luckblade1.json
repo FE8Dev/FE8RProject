@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Luckblade1",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;Luckblade;game.get_random(1,5)",
+            "",
+            "if;{v:Luckblade}==1",
+            "    give_skill;{unit};Inflict_Seared;no_banner",
+            "elif;{v:Luckblade}==2",
+            "    give_skill;{unit};Inflict_Drenched;no_banner",
+            "elif;{v:Luckblade}==3",
+            "    give_skill;{unit};Inflict_Frozen;no_banner",
+            "elif;{v:Luckblade}==4",
+            "    give_skill;{unit};Inflict_RockPunctures;no_banner",
+            "elif;{v:Luckblade}==5",
+            "    give_skill;{unit};Inflict_Shadowblight;no_banner",
+            "end",
+            "",
+            "",
+            "# 1 of Seared/Drenched/Frozen/Rock Puncture/Shadowblight"
+        ],
+        "nid": "Global Luckblade1"
+    }
+]

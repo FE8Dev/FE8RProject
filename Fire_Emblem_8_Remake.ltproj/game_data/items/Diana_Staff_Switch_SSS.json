@@ -1,18 +1,14 @@
 [
     {
         "nid": "Diana_Staff_Switch_SSS",
-        "name": "Pass",
-        "desc": "Swap with allies and enemies. Removes paired up partner on use.\nThis is a free action. Unlimited uses per turn.",
-        "icon_nid": "skill_icons",
+        "name": "Translocation++",
+        "desc": "Swap with and enemies. Removes paired up partner on use.\n<violet>Inflicts:</><icon>Shadowblight</><icon>Stunned</>\nbuff Hit/Avoid/AS by +15",
+        "icon_nid": "Staffs Sheet",
         "icon_index": [
-            3,
-            32
+            1,
+            1
         ],
         "components": [
-            [
-                "target_unit",
-                null
-            ],
             [
                 "swap",
                 null
@@ -77,6 +73,10 @@
                     "Shadow_Blight_Item",
                     "Stunned"
                 ]
+            ],
+            [
+                "target_enemy",
+                null
             ]
         ]
     }
