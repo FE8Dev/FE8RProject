@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Anatomy_Murder",
+        "name": "Anatomy Expertise",
+        "desc": "Apply effective damage vs bleeding enemies, on hit apply a stack of bleed and lethargy a the enemy.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "give_statuses_after_combat",
+                [
+                    "Lethargy",
+                    "Bleeding",
+                    "Bleeding_Boss"
+                ]
+            ],
+            [
+                "item_override",
+                "Anatomy"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

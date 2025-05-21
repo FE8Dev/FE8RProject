@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Maker_End",
+        "name": "Epitaph",
+        "desc": "LCK+SKL/3% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            17
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Maker_End_Proc"
+            ],
+            [
+                "proc_rate",
+                "LCK_SKL_WEAK"
+            ],
+            [
+                "combat_condition",
+                " \"Boss\" not in unit2.tags"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

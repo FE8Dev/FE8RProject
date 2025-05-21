@@ -1,65 +1,66 @@
 [
     {
-        "nid": "Diana_T2_Hunter",
-        "name": "Hunter",
-        "desc": "",
+        "nid": "Assassin_Jaffar",
+        "name": "Assassin",
+        "desc": "A lethal warrior who focuses on killing wewakened with one blow. <icon>Infantry</><icon>Steal</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": null,
-        "turns_into": [],
+        "promotes_from": "Thief_Jaffar",
+        "turns_into": [
+            "Death_Angel"
+        ],
         "tags": [
             "AutoPromote",
-            "Support",
             "Infantry"
         ],
         "max_level": 20,
         "bases": {
-            "HP": 21,
-            "STR": 7,
-            "MAG": 7,
-            "SKL": 8,
-            "SPD": 7,
-            "LCK": 17,
-            "DEF": 3,
-            "RES": 3,
-            "CON": 7,
+            "HP": 29,
+            "STR": 6,
+            "MAG": 2,
+            "SKL": 10,
+            "SPD": 12,
+            "LCK": 3,
+            "DEF": 4,
+            "RES": 4,
+            "CON": 8,
             "MOV": 6
         },
         "growths": {
-            "HP": 70,
-            "STR": 35,
-            "MAG": 35,
-            "SKL": 45,
-            "SPD": 45,
-            "LCK": 70,
-            "DEF": 25,
-            "RES": 25,
-            "CON": 20,
-            "MOV": 1
+            "HP": -15,
+            "STR": -10,
+            "MAG": 0,
+            "SKL": -10,
+            "SPD": -5,
+            "LCK": -5,
+            "DEF": -5,
+            "RES": -5,
+            "CON": 0,
+            "MOV": 0
         },
         "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
+            "HP": 15,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 15,
+            "DEF": 5,
+            "RES": 10,
             "CON": 0,
             "MOV": 0
         },
         "promotion": {
-            "HP": 0,
-            "STR": 0,
-            "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
-            "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
+            "HP": 3,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 4,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 2,
+            "MOV": -97
         },
         "max_stats": {
             "HP": 480,
@@ -83,63 +84,67 @@
                 "Locktouch_hide"
             ],
             [
-                1,
-                "Thief_Pair_Up_T2_hide"
-            ],
-            [
                 5,
-                "Cloaked_Attack"
+                "Deathwaltz"
             ],
             [
                 15,
                 "Deadly_Force"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T2_hide"
             ]
         ],
         "wexp_gain": {
             "Sword": [
-                false,
-                0,
-                null
+                2,
+                60,
+                360
             ],
             "Lance": [
                 false,
                 0,
-                null
+                300
             ],
             "Axe": [
                 false,
                 0,
-                null
+                300
             ],
             "Bow": [
-                true,
-                31,
+                false,
+                0,
                 360
             ],
             "Staff": [
-                true,
-                60,
-                360
+                false,
+                0,
+                300
             ],
             "Light": [
                 false,
                 0,
-                null
+                300
             ],
             "Anima": [
                 false,
                 0,
-                null
+                300
             ],
             "Dark": [
                 false,
                 0,
-                null
+                300
             ],
             "Default": [
                 false,
                 0,
-                null
+                300
             ],
             "Monster": [
                 false,
@@ -147,13 +152,13 @@
                 null
             ]
         },
-        "icon_nid": null,
+        "icon_nid": "Generic_Portrait_Assassin",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "SniperFemale",
-        "combat_anim_nid": "Adventurer",
+        "map_sprite_nid": "Assassin",
+        "combat_anim_nid": "Assassin_Jaffar",
         "fields": []
     }
 ]

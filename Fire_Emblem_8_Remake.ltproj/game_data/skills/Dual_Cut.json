@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dual_Cut",
+        "name": "Dual Cut",
+        "desc": "The user always strikes twice.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            9
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]
