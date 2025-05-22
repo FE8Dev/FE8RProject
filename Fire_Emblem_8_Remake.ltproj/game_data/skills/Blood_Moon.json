@@ -2,36 +2,32 @@
     {
         "nid": "Blood_Moon",
         "name": "Blood Moon",
-        "desc": "In a bloody night, no sinner can escape the embrace of this Angel of Death.\ngains Cleave after consecutive kills, drains 2 charges per round, kills keep it active.\nGain +2MOV after each kill",
-        "icon_nid": "Skills",
+        "desc": "Once Jaffar kills 9 units in quick succession, summon a Blood Red Moon that debuffs all enemies until end of chapter and gives all his attacks Cleave. Only activates once.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            10,
-            5
+            0,
+            23
         ],
         "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Blood_Moon_Stop')"
+            ],
+            [
+                "build_charge",
+                9
+            ],
             [
                 "kill_charge_increase",
                 1
             ],
             [
-                "Endstep_charge_increase",
-                -2
+                "event_after_kill",
+                "Global Blood_Moon"
             ],
             [
-                "drain_charge",
-                0
-            ],
-            [
-                "Cleave",
+                "lost_on_end_chapter",
                 null
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "gain_skill_after_kill",
-                "Swift_Death_Buff"
             ]
         ]
     }

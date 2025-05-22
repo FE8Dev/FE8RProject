@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Summon Skeleton",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.check_dead('Skeleton_' + unit.nid)",
+            "    resurrect;Skeleton_{e:unit.nid}",
+            "    for;item;u('Skeleton_' + unit.nid).items",
+            "        remove_item;Skeleton_{e:unit.nid};{item};no_banner",
+            "    endf",
+            "else",
+            "    make_generic;Skeleton_{e:unit.nid};Sword_Wight;{e:unit.level};player",
+            "    give_wexp;Skeleton_{e:unit.nid};Lance;{e:181 - u('Skeleton_' + unit.nid).wexp.get('Spear')};no_banner",
+            "end",
+            "give_item;Skeleton_{e:unit.nid};Iron_Sword;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Iron_Lance;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Fenrir_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Gleipnir_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Demon_Specter_A;no_banner",
+            "add_unit;Skeleton_{e:unit.nid};{e:target_pos};warp",
+            "wait;200"
+        ],
+        "nid": "Global Summon Skeleton"
+    }
+]
