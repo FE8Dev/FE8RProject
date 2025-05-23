@@ -1,0 +1,107 @@
+[
+    {
+        "nid": "Diana_Sword_E",
+        "name": "Estoc",
+        "desc": "Thin and long sword made for fencing.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses LCK instead of STR, targets LCK, +1 SPD, attacks inflict a random debuff onto enemy.",
+        "icon_nid": "{Batima} Quick Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                5
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Diana\").wexp['Sword'] < 180"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade1"
+                ]
+            ]
+        ]
+    }
+]

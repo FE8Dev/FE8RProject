@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Staff_Switch_S",
         "name": "Translocation+",
-        "desc": "Swap with enemies. Removes paired up partner on use.\n<violet>Inflicts:</><icon>Shadowblight</>\nbuff Hit/Avoid/AS by +10",
+        "desc": "Swap location with enemies. Removes paired up partner on use.\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>+10 Hit, Avoid, and AS to unit after swap.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -39,7 +39,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Diana\").wexp['Staff'] >= 300 and u(\"Diana\").wexp['Staff'] < 420"
+                "u(\"Diana\").wexp['Staff'] >= 120 and u(\"Diana\").wexp['Staff'] < 420"
             ],
             [
                 "exempt_from_dual_strike",

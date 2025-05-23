@@ -35686,7 +35686,7 @@
     {
         "nid": "Momentum_Skill",
         "name": "Momentum",
-        "desc": "+2 damage to all attacks for each stack.\nAllies within 3 spaces gain High Morale if below 75% Max HP.\nMax 5 stacks. Lost on end of chapter.",
+        "desc": "+3 damage to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nMax 5 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35710,7 +35710,7 @@
     {
         "nid": "Momentum_Skill_P",
         "name": "Momentum+",
-        "desc": "+3 damage to all attacks for each stack.\nAllies within 3 spaces gain High Morale if below 75% Max HP.\nStacks infinitely. Lost on end of chapter.",
+        "desc": "+4 damage to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35734,7 +35734,7 @@
     {
         "nid": "Momentum_Skill_PP",
         "name": "Momentum++",
-        "desc": "+5 damage to all attacks for each stack.\nAllies within 3 spaces gain High Morale if below 75% Max HP.\nStacks infinitely. Lost on end of chapter.",
+        "desc": "+5 damage to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35758,7 +35758,7 @@
     {
         "nid": "Momentum_Buff",
         "name": "Momentum",
-        "desc": "+2 damage to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if below 75% Max HP.\nMax 5 stacks. Lost on end of chapter.",
+        "desc": "+3 damage to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nMax 5 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35794,7 +35794,7 @@
     {
         "nid": "Momentum_Buff_Plus",
         "name": "Momentum+",
-        "desc": "+2 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if below 75% Max HP.\nMax 999 stacks. Lost on end of chapter.",
+        "desc": "+2 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35834,7 +35834,7 @@
     {
         "nid": "Momentum_Buff_Plus_Plus",
         "name": "Momentum++",
-        "desc": "+5 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if below 75% Max HP.\nMax 999 stacks. Lost on end of chapter.",
+        "desc": "+5 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35887,7 +35887,7 @@
             ],
             [
                 "condition",
-                "unit.get_hp() <= unit.get_max_hp() * 0.9"
+                "unit.get_hp() >= unit.get_max_hp() * 0.9"
             ],
             [
                 "desperation",
@@ -46060,11 +46060,11 @@
     {
         "nid": "Poaching",
         "name": "Poaching",
-        "desc": "",
-        "icon_nid": null,
+        "desc": "+1 Bonus attacks (+2 if unit doubles).",
+        "icon_nid": "Skills",
         "icon_index": [
-            0,
-            0
+            5,
+            9
         ],
         "components": [
             [
@@ -46074,9 +46074,69 @@
         ]
     },
     {
+        "nid": "Luckblade1",
+        "name": "Luckblade1",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global Luckblade1"
+            ]
+        ]
+    },
+    {
+        "nid": "Luckblade2",
+        "name": "Luckblade2",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global Luckblade2"
+            ]
+        ]
+    },
+    {
+        "nid": "Luckblade3",
+        "name": "Luckblade3",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global Luckblade3"
+            ]
+        ]
+    },
+    {
         "nid": "Anatomy_Murder",
         "name": "Anatomy Expertise",
-        "desc": "Apply effective damage vs bleeding enemies, on hit apply a stack of bleed and lethargy a the enemy.",
+        "desc": "Attacks become effective against bleeding enemies.\nAttacks also inflict Bleed and Lethargy.",
         "icon_nid": "SkillIcons",
         "icon_index": [
             2,
@@ -58799,6 +58859,296 @@
         ]
     },
     {
+        "nid": "Inflict_Seared",
+        "name": "Inflict Seared",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Seared"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Drenched",
+        "name": "Inflict Drenched",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Frozen",
+        "name": "Inflict Frozen",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Frozen"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_RockPunctures",
+        "name": "Inflict RockPunctures",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Rock_Punctures"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Shadowblight",
+        "name": "Inflict Shadowblight",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Sleep",
+        "name": "Inflict Sleep",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Sleep"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Venom",
+        "name": "Inflict Venom",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Venomous_Effect"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Burned",
+        "name": "Inflict Burned",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Burned"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Silenced",
+        "name": "Inflict Silenced",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Silence"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Inflict_Stunned",
+        "name": "Inflict Stunned",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Stunned"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
         "nid": "Eirika_Bond_Support",
         "name": "Eirika's Bond Support",
         "desc": "Certain allies get increased might, defense, accuracy, avoid, and crit avoid",
@@ -59358,5 +59708,29 @@
             0
         ],
         "components": []
+    },
+    {
+        "nid": "Outshine",
+        "name": "Outshine",
+        "desc": "x2 damage if enemy's LCK <= unit's LCK.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('LCK') >= target.get_stat('LCK')"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ]
+        ]
     }
 ]

@@ -2,7 +2,7 @@
     {
         "nid": "Cain_Curses",
         "name": "Cain Curses",
-        "desc": "Daggers said to belong to Cain, the first murderer.Their poison corrupts the will of enemy and user alike.<green>Skills:</>Quick Knife<violet>Inflicts:</><icon>Poison(5)</><pink>Misc:</>Uses SPD + SKL.",
+        "desc": "Daggers said to belong to Cain, the first murderer. Their poison corrupts the will of enemy and user alike.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
         "icon_nid": "{FuriousHaunter} Duel Slashers",
         "icon_index": [
             0,
@@ -68,12 +68,7 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss"
+                    "Venomous_Effect"
                 ]
             ],
             [
@@ -92,7 +87,13 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 420"
+                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40"
+                ]
             ]
         ]
     }

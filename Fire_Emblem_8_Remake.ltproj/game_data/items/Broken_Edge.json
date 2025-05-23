@@ -2,7 +2,7 @@
     {
         "nid": "Broken_Edge",
         "name": "Broken Edge",
-        "desc": "A egde of a broken sword when failing a mission.\n<pink>Misc:</>Uses SPD + 1/3 SKL, bonus WEXP.",
+        "desc": "A egde of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), bonus WEXP.",
         "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
             0,
@@ -73,7 +73,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] < 360"
+                "u(\"Jaffar\").wexp['Sword'] < 300"
             ]
         ]
     }

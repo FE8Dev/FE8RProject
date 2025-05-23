@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Staff_Switch_B",
         "name": "Translocation",
-        "desc": "Swap with enemies. Removes paired up partner on use.\nbuff Hit/Avoid/AS by +5",
+        "desc": "Swap location with enemies. Removes paired up partner on use.\n<pink>Misc:</>+5 Hit, Avoid, and AS to unit after swap.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -35,11 +35,11 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "E"
             ],
             [
                 "eval_available",
-                "u(\"Diana\").wexp['Staff'] >= 180 and u(\"Diana\").wexp['Staff'] < 300"
+                "u(\"Diana\").wexp['Bow'] < 120"
             ],
             [
                 "exempt_from_dual_strike",

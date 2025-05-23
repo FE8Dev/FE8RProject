@@ -60676,7 +60676,7 @@
             ],
             [
                 "damage",
-                3
+                6
             ],
             [
                 "hit",
@@ -60785,7 +60785,7 @@
             ],
             [
                 "damage",
-                10
+                11
             ],
             [
                 "hit",
@@ -60895,7 +60895,7 @@
             ],
             [
                 "damage",
-                14
+                15
             ],
             [
                 "hit",
@@ -120948,7 +120948,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Discipline_Buff"
+                    "Discipline_Item"
                 ]
             ],
             [
@@ -138571,13 +138571,59 @@
         ]
     },
     {
-        "nid": "Diana_Bow_E",
-        "name": "Iron Bow",
-        "desc": "Bounty\nSKL + SPD/3\nmin of DEF/RES\n<red>Effective:</><icon>Flying</>",
+        "nid": "Dianas_Arsenal",
+        "name": "Diana's Arsenal",
+        "desc": "Diana's personal weapons.\n<red>Prof:</><icon>Bow</><icon>Staff</><icon>Sword</>",
         "icon_nid": "Bow",
         "icon_index": [
             0,
-            0
+            11
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Diana_Bow_E",
+                    "Diana_Bow_C",
+                    "Diana_Bow_A",
+                    "Diana_Bow_SS",
+                    "Diana_Bow_X",
+                    "Diana_Sword_E",
+                    "Diana_Sword_B",
+                    "Diana_Sword_S",
+                    "Diana_Sword_SSS",
+                    "Diana_Staff_Switch_B",
+                    "Diana_Staff_Switch_S",
+                    "Diana_Staff_Switch_SSS",
+                    "Diana_Staff_DMG_E",
+                    "Diana_Staff_DMG_A",
+                    "Diana_Staff_DMG_SS"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Diana"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Diana_Bow_E",
+        "name": "Scout's bow",
+        "desc": "Bow given to army scouts, probably stolen.\n<green>Skills:</>Bounty\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
+        "icon_nid": "Bow",
+        "icon_index": [
+            0,
+            11
         ],
         "components": [
             [
@@ -138685,12 +138731,12 @@
     },
     {
         "nid": "Diana_Bow_C",
-        "name": "Iron Bow",
-        "desc": "Bounty\nSKL + SPD/3\nmin of DEF/RES\n<red>Effective:</><icon>Flying</>",
+        "name": "Reinforced Scout's Bow",
+        "desc": "Bow given to army scouts, probably stolen. With reinforced limbs for stronger draw.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
-            0
+            5
         ],
         "components": [
             [
@@ -138794,11 +138840,11 @@
     },
     {
         "nid": "Diana_Bow_A",
-        "name": "Iron Bow",
-        "desc": "Bounty\nSKL + SPD/2\nmin of DEF/RES\nBrave\n<red>Effective:</><icon>Flying</>",
-        "icon_nid": "Bow",
+        "name": "Exquisite Bow",
+        "desc": "Gold coated bow that used to belong to a noble.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD/2  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), targets the weaker of foe's DEF or RES, Brave.",
+        "icon_nid": "Bows Sheet",
         "icon_index": [
-            0,
+            4,
             0
         ],
         "components": [
@@ -138907,12 +138953,12 @@
     },
     {
         "nid": "Diana_Bow_SS",
-        "name": "Iron Bow",
-        "desc": "Bounty\nSKL + SPD\nmin of DEF/RES\nBrave\n<red>Effective:</><icon>Flying</>",
-        "icon_nid": "Bow",
+        "name": "Remodeled Bow",
+        "desc": "Scraping off most gold results in a stronger weapon, even if it looks this bad.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>), targets the weaker of foe's DEF or RES, Brave.",
+        "icon_nid": "Bows Sheet",
         "icon_index": [
-            0,
-            0
+            9,
+            2
         ],
         "components": [
             [
@@ -139021,12 +139067,12 @@
     },
     {
         "nid": "Diana_Bow_X",
-        "name": "Iron Bow",
-        "desc": "Bounty\nSKL + SPD + LCK\nmin of DEF/RES\nBrave\n+1 attack\n<red>Effective:</><icon>Flying</>",
-        "icon_nid": "Bow",
+        "name": "Royal Heritage",
+        "desc": "Taken from the treasury of a nation that no longer exists\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD + LCK (<red>{e:(unit.get_stat('SPD') + unit.get_stat('SKL') + unit.get_stat('LCK')))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
+        "icon_nid": "Bows Sheet",
         "icon_index": [
             0,
-            0
+            2
         ],
         "components": [
             [
@@ -139134,13 +139180,13 @@
         ]
     },
     {
-        "nid": "Diana_Sword_D",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
-        "icon_nid": "Sword",
+        "nid": "Diana_Sword_E",
+        "name": "Estoc",
+        "desc": "Thin and long sword made for fencing.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses LCK instead of STR, targets LCK, +1 SPD, attacks inflict a random debuff onto enemy.",
+        "icon_nid": "{Batima} Quick Sword",
         "icon_index": [
             0,
-            2
+            0
         ],
         "components": [
             [
@@ -139185,7 +139231,7 @@
             ],
             [
                 "weapon_rank",
-                "D"
+                "E"
             ],
             [
                 "wexp",
@@ -139224,22 +139270,28 @@
             ],
             [
                 "alternate_damage_formula",
-                "LUCK_PROC"
+                "STR_MAG_MID"
             ],
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade1"
+                ]
             ]
         ]
     },
     {
         "nid": "Diana_Sword_B",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
+        "name": "Polished Estoc",
+        "desc": "Thin and long sword made for fencing, polished to perfection.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses LCK instead of STR, targets LCK, +3 SPD, attacks inflict a random debuff onto enemy.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
-            2
+            18
         ],
         "components": [
             [
@@ -139328,17 +139380,23 @@
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade1"
+                ]
             ]
         ]
     },
     {
         "nid": "Diana_Sword_S",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
-        "icon_nid": "Sword",
+        "name": "Luckblade",
+        "desc": "Said to appear randomly when needed.\n<green>Skills:</>Flash Step\n<pink>Misc:</><pink>Misc:</>Uses LCK instead of STR, targets LCK, +7 SPD, attacks inflict a random debuff onto enemy.",
+        "icon_nid": "Swords Sheet",
         "icon_index": [
-            0,
-            2
+            3,
+            5
         ],
         "components": [
             [
@@ -139363,7 +139421,7 @@
             ],
             [
                 "hit",
-                80
+                90
             ],
             [
                 "crit",
@@ -139427,17 +139485,23 @@
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade2"
+                ]
             ]
         ]
     },
     {
         "nid": "Diana_Sword_SSS",
-        "name": "Steel Sword",
-        "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
-        "icon_nid": "Sword",
+        "name": "Radiant ",
+        "desc": "Ancient artifact found in a sealed tomb.\n<green>Skills:</>Flash Step\n<pink>Misc:</><pink>Misc:</>Uses LCK instead of STR, targets LCK, +10 SPD, attacks inflict a random debuff onto enemy.",
+        "icon_nid": "Swords Sheet",
         "icon_index": [
-            0,
-            2
+            4,
+            6
         ],
         "components": [
             [
@@ -139462,7 +139526,7 @@
             ],
             [
                 "hit",
-                80
+                110
             ],
             [
                 "crit",
@@ -139493,7 +139557,7 @@
                 [
                     [
                         "SPD",
-                        9
+                        10
                     ]
                 ]
             ],
@@ -139526,23 +139590,25 @@
             [
                 "alternate_resist_formula",
                 "LUCK_PROC"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Luckblade3"
+                ]
             ]
         ]
     },
     {
         "nid": "Diana_Staff_Switch_B",
-        "name": "Pass",
-        "desc": "Swap with allies and enemies. Removes paired up partner on use.\nThis is a free action. Unlimited uses per turn.",
-        "icon_nid": "skill_icons",
+        "name": "Translocation",
+        "desc": "Swap location with enemies. Removes paired up partner on use.\n<pink>Misc:</>+5 Hit, Avoid, and AS to unit after swap.",
+        "icon_nid": "Staff",
         "icon_index": [
-            3,
-            32
+            0,
+            7
         ],
         "components": [
-            [
-                "target_unit",
-                null
-            ],
             [
                 "swap",
                 null
@@ -139569,11 +139635,11 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "E"
             ],
             [
                 "eval_available",
-                "u(\"Diana\").wexp['Staff'] >= 180 and u(\"Diana\").wexp['Staff'] < 300"
+                "u(\"Diana\").wexp['Bow'] < 120"
             ],
             [
                 "exempt_from_dual_strike",
@@ -139600,23 +139666,23 @@
             [
                 "unstealable",
                 null
+            ],
+            [
+                "target_enemy",
+                null
             ]
         ]
     },
     {
         "nid": "Diana_Staff_Switch_S",
-        "name": "Pass",
-        "desc": "Swap with allies and enemies. Removes paired up partner on use.\nThis is a free action. Unlimited uses per turn.",
-        "icon_nid": "skill_icons",
+        "name": "Translocation+",
+        "desc": "Swap location with enemies. Removes paired up partner on use.\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>+10 Hit, Avoid, and AS to unit after swap.",
+        "icon_nid": "Staff",
         "icon_index": [
-            3,
-            32
+            0,
+            13
         ],
         "components": [
-            [
-                "target_unit",
-                null
-            ],
             [
                 "swap",
                 null
@@ -139647,7 +139713,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Diana\").wexp['Staff'] >= 300 and u(\"Diana\").wexp['Staff'] < 420"
+                "u(\"Diana\").wexp['Staff'] >= 120 and u(\"Diana\").wexp['Staff'] < 420"
             ],
             [
                 "exempt_from_dual_strike",
@@ -139680,23 +139746,23 @@
                 [
                     "Shadow_Blight_Item"
                 ]
+            ],
+            [
+                "target_enemy",
+                null
             ]
         ]
     },
     {
         "nid": "Diana_Staff_Switch_SSS",
-        "name": "Pass",
-        "desc": "Swap with allies and enemies. Removes paired up partner on use.\nThis is a free action. Unlimited uses per turn.",
-        "icon_nid": "skill_icons",
+        "name": "Translocation++",
+        "desc": "Swap location with enemies. Removes paired up partner on use.\n<violet>Inflicts:</><icon>Shadowblight</><icon>Stunned</>\n<pink>Misc:</>+15 Hit, Avoid, and AS to unit after swap.",
+        "icon_nid": "Staffs Sheet",
         "icon_index": [
-            3,
-            32
+            1,
+            1
         ],
         "components": [
-            [
-                "target_unit",
-                null
-            ],
             [
                 "swap",
                 null
@@ -139761,17 +139827,21 @@
                     "Shadow_Blight_Item",
                     "Stunned"
                 ]
+            ],
+            [
+                "target_enemy",
+                null
             ]
         ]
     },
     {
-        "nid": "Diana_Staff_DMG_D",
+        "nid": "Diana_Staff_DMG_E",
         "name": "Frost Staff",
-        "desc": "An icy staff that can hit two enemies.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Multi-Target:2), cannot crit, always hits, cannot DS.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "ignores RES\n<violet>Inflicts:</><icon>Breached</><icon>Cursed</>\n<pink>Misc:</>Cannot crit, always hits, cannot DS.",
+        "icon_nid": "Staff",
         "icon_index": [
-            18,
-            3
+            0,
+            5
         ],
         "components": [
             [
@@ -139808,7 +139878,7 @@
             ],
             [
                 "weapon_rank",
-                "D"
+                "E"
             ],
             [
                 "magic",
@@ -139837,12 +139907,6 @@
                 ]
             ],
             [
-                "item_tags",
-                [
-                    "Ice"
-                ]
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Breached_5",
@@ -139862,11 +139926,11 @@
     {
         "nid": "Diana_Staff_DMG_A",
         "name": "Frost Staff",
-        "desc": "An icy staff that can hit two enemies.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Multi-Target:2), cannot crit, always hits, cannot DS.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "ignores RES\n<violet>Inflicts:</><icon>Breached</><icon>Cursed</>\n<pink>Misc:</>Cannot crit, always hits, cannot DS.",
+        "icon_nid": "Staff",
         "icon_index": [
-            18,
-            3
+            0,
+            11
         ],
         "components": [
             [
@@ -139932,12 +139996,6 @@
                 ]
             ],
             [
-                "item_tags",
-                [
-                    "Ice"
-                ]
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Breached_15",
@@ -139957,11 +140015,11 @@
     {
         "nid": "Diana_Staff_DMG_SS",
         "name": "Frost Staff",
-        "desc": "An icy staff that can hit two enemies.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Multi-Target:2), cannot crit, always hits, cannot DS.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "ignores RES\n<violet>Inflicts:</><icon>Breached</><icon>Cursed</>\n<pink>Misc:</>Cannot crit, always hits, cannot DS.",
+        "icon_nid": "Staffs Sheet",
         "icon_index": [
-            18,
-            3
+            6,
+            0
         ],
         "components": [
             [
@@ -140027,12 +140085,6 @@
                 ]
             ],
             [
-                "item_tags",
-                [
-                    "Ice"
-                ]
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Breached_25",
@@ -140077,10 +140129,10 @@
         "nid": "Jaffar_Arsenal",
         "name": "Jaffar Arsenal",
         "desc": "Jaffar personal weapons, instruments employ to complete his missions.\n<red>Proficiency:</><icon>Wind</><icon>Sword</>",
-        "icon_nid": "skill_icons",
+        "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
-            14,
-            28
+            0,
+            0
         ],
         "components": [
             [
@@ -140111,7 +140163,7 @@
     {
         "nid": "Broken_Edge",
         "name": "Broken Edge",
-        "desc": "A egde of a broken sword when failing a mission.\n<pink>Misc:</>Uses SPD + 1/3 SKL, bonus WEXP.",
+        "desc": "A egde of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), bonus WEXP.",
         "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
             0,
@@ -140182,14 +140234,14 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] < 360"
+                "u(\"Jaffar\").wexp['Sword'] < 300"
             ]
         ]
     },
     {
         "nid": "Reforged_Daggers",
         "name": "Reforged Daggers",
-        "desc": "A dagger that has been re-forged by drinking enemy blood. Their bite is poisonous.<green>Skills:</>Quick Knife<violet>Inflicts:</><icon>Poison</><pink>Misc:</>Uses SPD + SKL ,+30 Crit damage .",
+        "desc": "A dagger that has been re-forged by drinking enemy blood. Their bite is poisonous.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
         "icon_nid": "{Batima} Quick Sword",
         "icon_index": [
             0,
@@ -140214,11 +140266,11 @@
             ],
             [
                 "damage",
-                14
+                10
             ],
             [
                 "hit",
-                100
+                90
             ],
             [
                 "crit",
@@ -140238,7 +140290,7 @@
             ],
             [
                 "weapon_rank",
-                "SS"
+                "S"
             ],
             [
                 "status_on_equip",
@@ -140277,99 +140329,14 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
-            ]
-        ]
-    },
-    {
-        "nid": "Azrael_Sword",
-        "name": "Azrael Sword",
-        "desc": "Divine sword of the angel of the death, it can kill with a single scratch.\n<green>Skills:</>Maker End<pink>Misc:</>Uses SPD+SKL+STR,+50 Crit damage .",
-        "icon_nid": "{Batima} Sublime Sword of the Creator",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "weapon",
-                null
-            ],
-            [
-                "target_enemy",
-                null
-            ],
-            [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                3
-            ],
-            [
-                "damage",
-                30
-            ],
-            [
-                "hit",
-                125
-            ],
-            [
-                "crit",
-                35
-            ],
-            [
-                "weight",
-                10
-            ],
-            [
-                "level_exp",
-                null
-            ],
-            [
-                "weapon_type",
-                "Sword"
-            ],
-            [
-                "weapon_rank",
-                "X"
-            ],
-            [
-                "battle_cast_anim",
-                "JavelinDracolord"
-            ],
-            [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "alternate_damage_formula",
-                "STR_SPD_SKL_STRONG"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Jaffar"
-                ]
-            ],
-            [
-                "multi_status_on_equip",
-                [
-                    "Crit_Damage_Bonus_50",
-                    "Maker_End"
-                ]
-            ],
-            [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 480"
+                "u(\"Jaffar\").wexp['Sword'] >= 300 and u(\"Jaffar\").wexp['Sword'] < 360"
             ]
         ]
     },
     {
         "nid": "Cain_Curses",
         "name": "Cain Curses",
-        "desc": "Daggers said to belong to Cain, the first murderer.Their poison corrupts the will of enemy and user alike.<green>Skills:</>Quick Knife<violet>Inflicts:</><icon>Poison(5)</><pink>Misc:</>Uses SPD + SKL.",
+        "desc": "Daggers said to belong to Cain, the first murderer. Their poison corrupts the will of enemy and user alike.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
         "icon_nid": "{FuriousHaunter} Duel Slashers",
         "icon_index": [
             0,
@@ -140435,12 +140402,7 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss"
+                    "Venomous_Effect"
                 ]
             ],
             [
@@ -140459,7 +140421,108 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 420"
+                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Azrael_Sword",
+        "name": "Azrael Sword",
+        "desc": "Divine sword of the angel of the death, it can kill with a single scratch.\n<green>Skills:</>Maker's End\n<violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</>Uses SPD + SKL + STR (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>), +50 Crit damage.",
+        "icon_nid": "{Batima} Sublime Sword of the Creator",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                35
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_50",
+                    "Maker_End"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 480"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect"
+                ]
             ]
         ]
     },

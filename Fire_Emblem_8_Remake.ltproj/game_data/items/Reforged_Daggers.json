@@ -2,7 +2,7 @@
     {
         "nid": "Reforged_Daggers",
         "name": "Reforged Daggers",
-        "desc": "A dagger that has been re-forged by drinking enemy blood. Their bite is poisonous.<green>Skills:</>Quick Knife<violet>Inflicts:</><icon>Poison</><pink>Misc:</>Uses SPD + SKL ,+30 Crit damage .",
+        "desc": "A dagger that has been re-forged by drinking enemy blood. Their bite is poisonous.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
         "icon_nid": "{Batima} Quick Sword",
         "icon_index": [
             0,
@@ -27,11 +27,11 @@
             ],
             [
                 "damage",
-                14
+                10
             ],
             [
                 "hit",
-                100
+                90
             ],
             [
                 "crit",
@@ -51,7 +51,7 @@
             ],
             [
                 "weapon_rank",
-                "SS"
+                "S"
             ],
             [
                 "status_on_equip",
@@ -90,7 +90,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
+                "u(\"Jaffar\").wexp['Sword'] >= 300 and u(\"Jaffar\").wexp['Sword'] < 360"
             ]
         ]
     }
