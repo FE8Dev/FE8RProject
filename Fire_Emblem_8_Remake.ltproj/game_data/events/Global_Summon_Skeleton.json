@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Summon Skeleton",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "level_var;Summoner;unit.wexp['Dark']",
+            "",
+            "if;game.check_dead('Skeleton_' + unit.nid)",
+            "    resurrect;Skeleton_{e:unit.nid}",
+            "    for;item;u('Skeleton_' + unit.nid).items",
+            "        remove_item;Skeleton_{e:unit.nid};{item};no_banner",
+            "    endf",
+            "else",
+            "    make_generic;Skeleton_{e:unit.nid};Sword_Wight;{e:unit.level};player",
+            "",
+            "end",
+            "",
+            "set_wexp;Skeleton_{e:unit.nid};Sword;{v:Summoner};no_banner",
+            "set_wexp;Skeleton_{e:unit.nid};Lance;{v:Summoner};no_banner",
+            "give_item;Skeleton_{e:unit.nid};Javelin_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Poison_Sword_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Steel_Scythe_Lance_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Winged_Blade_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Silver_Sword_A;no_banner",
+            "give_item;Skeleton_{e:unit.nid};Omen_Lance_A;no_banner",
+            "add_unit;Skeleton_{e:unit.nid};{e:target_pos};warp",
+            "wait;200",
+            "",
+            "#u(\"Azuth\").wexp['Dark'] >= 360",
+            "#    give_wexp;Skeleton_{e:unit.nid};Lance;{e:181 - u('Skeleton_' + unit.nid).wexp.get('Lance')};no_banner",
+            "#    give_wexp;Skeleton_{e:unit.nid};Sword;{e:181 - u('Skeleton_' + unit.nid).wexp.get('Sword')};no_banner"
+        ],
+        "nid": "Global Summon Skeleton"
+    }
+]

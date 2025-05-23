@@ -14,27 +14,14 @@
 ##To do - high priority on top
 
 
-*Finish Diana
-
-
-
-
-*Add Jaffar
-
-
-
 *Add Tareon
-
-
-
-
 
 
 
 *add new trainees
 
 
-
+*add correct music and sfx to bloodmoon
 
 
 

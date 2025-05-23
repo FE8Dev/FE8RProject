@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Blood_Moon",
+        "name": "Blood Moon",
+        "desc": "Once Jaffar kills 9 units in quick succession, summon a Blood Red Moon that debuffs all enemies until end of chapter and gives all his attacks Cleave. Only activates once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Blood_Moon_Stop')"
+            ],
+            [
+                "build_charge",
+                9
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "event_after_kill",
+                "Global Blood_Moon"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]
