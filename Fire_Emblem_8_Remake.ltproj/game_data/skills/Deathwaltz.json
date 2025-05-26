@@ -2,13 +2,17 @@
     {
         "nid": "Deathwaltz",
         "name": "Deathwaltz",
-        "desc": "Ignore the DEF of the enemies with 100% HP. When figthing a unit with 100% of HP, the user obtains Canto for 5 spaces.",
-        "icon_nid": "SkillIcons",
+        "desc": "Ignore the DEF of the enemies with 100% HP.\nWhen figthing a unit with 100% HP, the unit obtains Canto for 5 spaces.\n",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            6,
-            36
+            2,
+            51
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "combat_condition",
                 "target.get_hp() == target.get_max_hp()"
@@ -20,10 +24,6 @@
             [
                 "canter",
                 5
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     }

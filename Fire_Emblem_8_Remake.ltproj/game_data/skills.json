@@ -35767,7 +35767,7 @@
         "components": [
             [
                 "dynamic_damage",
-                "2"
+                "3"
             ],
             [
                 "stack",
@@ -35794,7 +35794,7 @@
     {
         "nid": "Momentum_Buff_Plus",
         "name": "Momentum+",
-        "desc": "+2 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
+        "desc": "+4 damage and hit to all attacks for each stack.\nEphraim and allies within 3 spaces gain High Morale if above 90% Max HP.\nStacks infinitely. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -35803,11 +35803,11 @@
         "components": [
             [
                 "dynamic_damage",
-                "2"
+                "4"
             ],
             [
                 "dynamic_accuracy",
-                "2"
+                "4"
             ],
             [
                 "stack",
@@ -37410,7 +37410,7 @@
     {
         "nid": "Destiny_Painter_Display",
         "name": "Destiny Painter",
-        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit. Forde gains 5 EXP after each combat involving the turned unit. Cannot gain EXP and EXP drops to 0 after level 20 until Forde promotes.",
+        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit. Forde gains 5 EXP after each combat involving the turned unit. Forde will automatically promote at level 20 when gaining EXP this way.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -37421,7 +37421,7 @@
     {
         "nid": "Destiny_Painter_DisplayP",
         "name": "Destiny Painter+",
-        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit with a small Revival Stone.  Forde gains 15 EXP after each combat involving the turned unit. Cannot gain EXP and EXP drops to 0 after level 20 until Forde promotes.",
+        "desc": "If Forde kills an enemy with this weapon, the enemy turns into a Green unit with a small Revival Stone.  Forde gains 15 EXP after each combat involving the turned unit.  Forde will automatically promote at level 20 when gaining EXP this way.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -41102,7 +41102,7 @@
         "components": [
             [
                 "combat_condition",
-                "mode == 'attack'"
+                "(mode == 'attack') and (unit2.team == 'enemy' or unit2.team == 'enemy2')"
             ],
             [
                 "dynamic_damage",
@@ -41115,6 +41115,10 @@
             [
                 "give_status_after_hit",
                 "Stomped"
+            ],
+            [
+                "lost_on_endstep",
+                null
             ]
         ]
     },
@@ -41130,7 +41134,7 @@
         "components": [
             [
                 "combat_condition",
-                "mode == 'attack'"
+                "(mode == 'attack') and (unit2.team == 'enemy' or unit2.team == 'enemy2')"
             ],
             [
                 "dynamic_damage",
@@ -41143,6 +41147,10 @@
             [
                 "give_status_after_hit",
                 "Stomped_P"
+            ],
+            [
+                "lost_on_endstep",
+                null
             ]
         ]
     },
@@ -41158,7 +41166,7 @@
         "components": [
             [
                 "combat_condition",
-                "mode == 'attack'"
+                "(mode == 'attack') and (unit2.team == 'enemy' or unit2.team == 'enemy2')"
             ],
             [
                 "dynamic_damage",
@@ -41171,6 +41179,10 @@
             [
                 "give_status_after_hit",
                 "Stomped_PP"
+            ],
+            [
+                "lost_on_endstep",
+                null
             ]
         ]
     },
@@ -41186,7 +41198,7 @@
         "components": [
             [
                 "combat_condition",
-                "mode == 'attack'"
+                "(mode == 'attack') and (unit2.team == 'enemy' or unit2.team == 'enemy2')"
             ],
             [
                 "dynamic_damage",
@@ -41199,6 +41211,10 @@
             [
                 "give_status_after_hit",
                 "Stomped_PPP"
+            ],
+            [
+                "lost_on_endstep",
+                null
             ]
         ]
     },
@@ -45440,7 +45456,7 @@
     },
     {
         "nid": "Summon_Elder_Lich",
-        "name": "Summon",
+        "name": "Raise Elder Lich",
         "desc": "Summon two Gore units to aid you. Gain 10 EXP after their actions. This is a free action.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -45453,16 +45469,36 @@
                 null
             ],
             [
-                "drain_charge",
-                1
-            ],
-            [
                 "condition",
-                "not game.check_alive('zombie_' + unit.nid)"
+                "not game.check_alive('ElderLich_' + unit.nid)"
             ],
             [
                 "ability",
                 "Summon_ElderLich"
+            ]
+        ]
+    },
+    {
+        "nid": "Summon_Skeleton",
+        "name": "Raise Skeleton",
+        "desc": "Summon a skeleton units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('Skeleton_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_Skeleton"
             ]
         ]
     },
@@ -45528,6 +45564,26 @@
                     "lost_on_enemy": true,
                     "lost_on_splash": true
                 }
+            ]
+        ]
+    },
+    {
+        "nid": "Undead_Knowledge_Azuth",
+        "name": "Undead Knowledge",
+        "desc": "This unit gains 15 EXP whenever summoned monster fights an enemy.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "item_override",
+                "Undead_Knowledge_Lindsey"
             ]
         ]
     },
@@ -46134,13 +46190,45 @@
         ]
     },
     {
+        "nid": "Translocated",
+        "name": "Translocated",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "hit",
+                10
+            ],
+            [
+                "avoid",
+                10
+            ],
+            [
+                "attack_speed",
+                10
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
         "nid": "Anatomy_Murder",
         "name": "Anatomy Expertise",
-        "desc": "Attacks become effective against bleeding enemies.\nAttacks also inflict Bleed and Lethargy.",
-        "icon_nid": "SkillIcons",
+        "desc": "Apply effective damage vs bleeding enemies, on hit apply a stack of bleed and lethargy to the enemy.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            6
+            11,
+            37
         ],
         "components": [
             [
@@ -46164,13 +46252,17 @@
     {
         "nid": "Deathwaltz",
         "name": "Deathwaltz",
-        "desc": "Ignore the DEF of the enemies with 100% HP. When figthing a unit with 100% of HP, the user obtains Canto for 5 spaces.",
-        "icon_nid": "SkillIcons",
+        "desc": "Ignore the DEF of the enemies with 100% HP.\nWhen figthing a unit with 100% HP, the unit obtains Canto for 5 spaces.\n",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            6,
-            36
+            2,
+            51
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "combat_condition",
                 "target.get_hp() == target.get_max_hp()"
@@ -46182,21 +46274,17 @@
             [
                 "canter",
                 5
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
     {
         "nid": "Lethargy",
         "name": "Lethargy",
-        "desc": "Decreasses the MOV in 1 and the SKL in 4 per stacks, maximun 5 stacks.",
-        "icon_nid": "SkillIcons",
+        "desc": "-1 MOV and -4 SKL for each stack.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            3,
-            6
+            8,
+            49
         ],
         "components": [
             [
@@ -46206,10 +46294,6 @@
             [
                 "stack",
                 5
-            ],
-            [
-                "time",
-                2
             ],
             [
                 "stat_change",
@@ -46223,17 +46307,21 @@
                         4
                     ]
                 ]
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
     {
         "nid": "Dual_Cut",
         "name": "Dual Cut",
-        "desc": "The user always strikes twice.",
-        "icon_nid": "SkillIcons",
+        "desc": "+1 Bonus attack (+2 if unit doubles).",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            9
+            4,
+            44
         ],
         "components": [
             [
@@ -46253,20 +46341,24 @@
     {
         "nid": "Embrace_Death",
         "name": "Embrace Death",
-        "desc": "Increases the user's Hit by 100 and damage by 100%, decreasses the avoid by 100 and the DEF/RES by 50%. The user cannot heal.",
-        "icon_nid": "SkillIcons",
+        "desc": "Double unit's damage and +100 Hit.\n-100 Avoid and reduce DEF/RES by 50%.\nThis unit cannot be normally healed.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            29
+            11,
+            34
         ],
         "components": [
             [
-                "hit",
-                100
+                "class_skill",
+                null
             ],
             [
-                "avoid",
-                -100
+                "dynamic_accuracy",
+                "100"
+            ],
+            [
+                "dynamic_avoid",
+                "-100"
             ],
             [
                 "stat_multiplier",
@@ -46288,21 +46380,17 @@
             [
                 "empower_heal",
                 "-999"
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
     {
         "nid": "Maker_End",
         "name": "Epitaph",
-        "desc": "LCK+SKL/3% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
-        "icon_nid": "SkillIcons",
+        "desc": "(LCK + SKL/3)% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            17
+            10,
+            36
         ],
         "components": [
             [
@@ -46326,11 +46414,11 @@
     {
         "nid": "Maker_End_Proc",
         "name": "Epitaph",
-        "desc": "Skill/2% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
-        "icon_nid": "SkillIcons",
+        "desc": "(LCK + SKL/3)% chance to instantly kill an enemy.\nDoesn't work on Bosses.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            17
+            10,
+            36
         ],
         "components": [
             [
@@ -46344,6 +46432,167 @@
             [
                 "dynamic_damage",
                 "999"
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Moon_",
+        "name": "Blood Moon",
+        "desc": "In a bloody night, no sinner can escape the embrace of this Angel of Death.\nAttacks gain Cleave after consecutive kills, drains 2 charges per round, kills keep it active.\nGain +2MOV after each kill",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            5
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Swift_Death_Buff"
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "Endstep_charge_increase",
+                -2
+            ],
+            [
+                "drain_charge",
+                0
+            ],
+            [
+                "Cleave",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Moon_Giver",
+        "name": "Blood Moon",
+        "desc": "Once Jaffar kills 9 units while this skill is active, summon a Blood Red Moon that debuffs all enemies until end of chapter. Only activates once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not has_skill(unit, 'Blood_Moon')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Blood_Moon"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Moon",
+        "name": "Blood Moon",
+        "desc": "Once Jaffar kills 9 units in quick succession, summon a Blood Red Moon that debuffs all enemies until end of chapter and gives all his attacks Cleave. Only activates once.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            23
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Blood_Moon_Stop')"
+            ],
+            [
+                "build_charge",
+                9
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "event_after_kill",
+                "Global Blood_Moon"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Moon_Global",
+        "name": "Blood Moon",
+        "desc": "-10 Crit Avoid, -15 Avoid, Deals and receives 50% more damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            5
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "-15"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "-10"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "resist_multiplier",
+                1.5
+            ]
+        ]
+    },
+    {
+        "nid": "Blood_Moon_Stop",
+        "name": "Blood Moon",
+        "desc": "Stops Blood Moon.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "Cleave",
+                null
             ]
         ]
     },
@@ -59685,7 +59934,12 @@
             0,
             0
         ],
-        "components": []
+        "components": [
+            [
+                "change_variant",
+                "Lyn_Test"
+            ]
+        ]
     },
     {
         "nid": "Wonderdrug",

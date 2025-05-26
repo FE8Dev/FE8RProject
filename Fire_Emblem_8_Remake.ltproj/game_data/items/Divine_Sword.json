@@ -1,0 +1,98 @@
+[
+    {
+        "nid": "Divine_Sword",
+        "name": "Divine Sword",
+        "desc": "A divine sword made to purge devil forces.\n<green>Skills:</>Flash Step, Slayer\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>+40 Crit damage.",
+        "icon_nid": "lyn_weapons",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Lyn\").wexp['Sword'] >= 360 and u(\"Lyn\").wexp['Sword'] < 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Purge"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dark",
+                        "Shadow",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40",
+                    "Flash_Step",
+                    "Slayer"
+                ]
+            ]
+        ]
+    }
+]

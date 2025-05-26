@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Luna_Lyn",
+        "name": "Luna Lyn",
+        "desc": "Halves enemy defenses.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    }
+]

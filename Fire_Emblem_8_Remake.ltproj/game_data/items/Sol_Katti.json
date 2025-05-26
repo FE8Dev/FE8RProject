@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Sol_Katti",
+        "name": "Sol Katti",
+        "desc": "Divine sword weilded by Lyn, sister of Mani Katti.\n<green>Skills:</>Flash Step, Slayer, Sol Katti\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>+50 Crit damage, HP Absorb (50%).",
+        "icon_nid": "lyn_weapons",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Lyn\").wexp['Sword'] >= 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dark",
+                        "Monster",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_50",
+                    "Flash_Step",
+                    "Slayer",
+                    "Sol_Lyn"
+                ]
+            ],
+            [
+                "lifelink",
+                0.5
+            ],
+            [
+                "battle_cast_anim",
+                "Bolganone"
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ]
+        ]
+    }
+]

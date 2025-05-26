@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Mani",
+        "name": "Mani",
+        "desc": "Ignore's enemy's DEF.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF')"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Nomad_Strike",
+        "name": "Nomad Strike",
+        "desc": "Adds unit's MOV to damage and critical change.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('MOV')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MOV')"
+            ]
+        ]
+    }
+]

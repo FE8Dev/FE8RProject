@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Sure_Shot",
+        "name": "Sure Shot",
+        "desc": "Always hit.\nCannot double or crit.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Sure_Shot_Art"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    }
+]

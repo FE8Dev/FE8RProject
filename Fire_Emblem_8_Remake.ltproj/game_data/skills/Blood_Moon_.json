@@ -1,14 +1,22 @@
 [
     {
         "nid": "Blood_Moon_",
-        "name": "Blood Moon ",
-        "desc": "In a bloody night, no sinner can escape the embrace of this Angel of Death.\nGains Cleave after consecutive kills, drains 2 charges per round, kills keep it active.\nGain +2MOV after each kill",
+        "name": "Blood Moon",
+        "desc": "In a bloody night, no sinner can escape the embrace of this Angel of Death.\nAttacks gain Cleave after consecutive kills, drains 2 charges per round, kills keep it active.\nGain +2MOV after each kill",
         "icon_nid": "Skills",
         "icon_index": [
             10,
             5
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Swift_Death_Buff"
+            ],
             [
                 "kill_charge_increase",
                 1
@@ -24,14 +32,6 @@
             [
                 "Cleave",
                 null
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "gain_skill_after_kill",
-                "Swift_Death_Buff"
             ]
         ]
     }

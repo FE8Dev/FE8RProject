@@ -1,0 +1,82 @@
+[
+    {
+        "nid": "Mani_Katti",
+        "name": "Mani Katti",
+        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>Doubles Triangle effects, ignores half of enemy's defense.",
+        "icon_nid": "lyn_weapons",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Lyn\").wexp['Sword'] >= 480"
+            ],
+            [
+                "double_triangle",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Mani_Skill",
+                    "Luna_Lyn"
+                ]
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ]
+        ]
+    }
+]

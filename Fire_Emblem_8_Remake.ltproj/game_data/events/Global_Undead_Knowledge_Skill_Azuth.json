@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Undead_Knowledge_Skill_Azuth",
+        "trigger": "combat_end",
+        "level_nid": null,
+        "condition": "unit.klass =='Deathgoyle_Summon' or unit.klass =='Succubus_Summon'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit2.team == 'enemy' or unit2.team == 'enemy2' or unit.team == 'enemy2' or unit.team == 'enemy'",
+            "give_exp;Azuth;10",
+            "else",
+            "end"
+        ],
+        "nid": "Global Undead_Knowledge_Skill_Azuth"
+    }
+]

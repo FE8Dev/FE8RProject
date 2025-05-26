@@ -1,0 +1,23 @@
+[
+    {
+        "nid": "Quick_Debuff",
+        "name": "Quick Debuff",
+        "desc": "Enemy cannot counter if Unit's SPD is 6 points > Enemy's SPD.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]
