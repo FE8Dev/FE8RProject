@@ -2,7 +2,7 @@
     {
         "nid": "Short_Sword",
         "name": "Short Sword",
-        "desc": "Light and accurated sword.\n<green>Skills:</>Flash Step\n",
+        "desc": "Light and accurated sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -60,6 +60,10 @@
             [
                 "status_on_equip",
                 "Flash_Step"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_WEAK"
             ]
         ]
     }

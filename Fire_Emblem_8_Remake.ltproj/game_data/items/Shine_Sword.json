@@ -2,7 +2,7 @@
     {
         "nid": "Shine_Sword",
         "name": "Shine Sword",
-        "desc": "A shining sword use to fight for the justice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>+20 Bonus Crit damage.",
+        "desc": "A shining sword use to fight for the justice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), +20 Bonus Crit damage, also acts like Light weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             1,
@@ -90,6 +90,14 @@
                     "Crit_Damage_Bonus_20",
                     "Flash_Step"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_MID"
+            ],
+            [
+                "weapon_triangle_override",
+                "Light_Lyn"
             ]
         ]
     }

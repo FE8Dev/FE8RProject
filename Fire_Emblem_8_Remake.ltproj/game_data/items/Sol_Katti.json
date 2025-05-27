@@ -2,7 +2,7 @@
     {
         "nid": "Sol_Katti",
         "name": "Sol Katti",
-        "desc": "Divine sword weilded by Lyn, sister of Mani Katti.\n<green>Skills:</>Flash Step, Slayer, Sol Katti\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>+50 Crit damage, HP Absorb (50%).",
+        "desc": "Divine sword weilded by Lyn, sister of Mani Katti.\n<green>Skills:</>Flash Step, Slayer, Sol Katti\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +50 Crit damage, HP Absorb (50%), also acts like Light weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             1,
@@ -102,6 +102,14 @@
             [
                 "pre_combat_effect",
                 "Legend"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "weapon_triangle_override",
+                "Light_Lyn"
             ]
         ]
     }

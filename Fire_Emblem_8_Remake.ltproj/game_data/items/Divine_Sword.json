@@ -2,7 +2,7 @@
     {
         "nid": "Divine_Sword",
         "name": "Divine Sword",
-        "desc": "A divine sword made to purge devil forces.\n<green>Skills:</>Flash Step, Slayer\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>+40 Crit damage.",
+        "desc": "A divine sword made to purge devil forces.\n<green>Skills:</>Flash Step, Slayer\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage, also acts like Light weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             1,
@@ -92,6 +92,14 @@
                     "Flash_Step",
                     "Slayer"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "weapon_triangle_override",
+                "Light_Lyn"
             ]
         ]
     }

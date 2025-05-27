@@ -2,7 +2,7 @@
     {
         "nid": "Mani_Katti",
         "name": "Mani Katti",
-        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>Doubles Triangle effects, ignores half of enemy's defense.",
+        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), doubles Triangle effects, ignores half of enemy's defense, also acts like Anima weapon..",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -76,6 +76,14 @@
             [
                 "status_on_hit",
                 "Shadow_Blight"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
+            ],
+            [
+                "weapon_triangle_override",
+                "Lyn_Luna"
             ]
         ]
     }

@@ -8212,7 +8212,7 @@
             ],
             [
                 "dynamic_damage_multiplier",
-                "0 if attack_info[0] == 0 else 1.5"
+                "1 if attack_info[0] == 0 else 1.5"
             ]
         ]
     },
@@ -46597,6 +46597,421 @@
         ]
     },
     {
+        "nid": "Accost",
+        "name": "Accost",
+        "desc": "Adds SKL + SPD/2 to Crit.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('SPD') // 2 + unit.get_stat('SKL') // 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Adept",
+        "name": "Adept",
+        "desc": "Gains a bonus attack if unit's SPD > enemy's SPD.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') > target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ]
+        ]
+    },
+    {
+        "nid": "Astra",
+        "name": "Astra",
+        "desc": "Speed% chance to attack 5 times.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "attack_proc",
+                "Astra_Proc"
+            ],
+            [
+                "proc_rate",
+                "STEAL_ATK"
+            ]
+        ]
+    },
+    {
+        "nid": "Astra_Proc",
+        "name": "Astra Proc",
+        "desc": "Speed% chance to attack 5 times, but halves damage.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "astra_proc",
+                {
+                    "extra_attacks": 5,
+                    "damage_percent": 0.5000000000000001,
+                    "show_proc_effects": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Lorca_Dance",
+        "name": "Lorca Dance",
+        "desc": "Grants Galeforce on enemy kill. Only triggers once per turn.\n+10 Hit/Avoid and +1 Move on kill. Lasts for 1 turn.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "galeforce",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Lorca_Dance_Buff"
+            ],
+            [
+                "charges_per_turn",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Lorca_Dance_Buff",
+        "name": "Lorca Spirit",
+        "desc": "+10 Hit/Avoid, +1 MOV.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "avoid",
+                10
+            ],
+            [
+                "hit",
+                10
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Luna_Lyn",
+        "name": "Luna Lyn",
+        "desc": "Halves enemy defenses.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Mani_Skill",
+        "name": "Mani",
+        "desc": "Skill% chance to add enemy's DEF to damage.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "attack_pre_proc",
+                "Mani"
+            ],
+            [
+                "proc_rate",
+                "SKILL_PROC"
+            ],
+            [
+                "defense_pre_proc",
+                "Mani"
+            ]
+        ]
+    },
+    {
+        "nid": "Mani",
+        "name": "Mani",
+        "desc": "Skill% chance to add enemy's DEF to damage.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF')"
+            ]
+        ]
+    },
+    {
+        "nid": "Nomad_Strike",
+        "name": "Nomad Strike",
+        "desc": "Adds unit's MOV to damage and critical change.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('MOV')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MOV')"
+            ]
+        ]
+    },
+    {
+        "nid": "Sol_Lyn",
+        "name": "Sol",
+        "desc": "HP/3% chance to fully recover HP.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "attack_proc",
+                "Sol_Lyn_Proc"
+            ],
+            [
+                "defense_proc",
+                "Sol_Lyn_Proc"
+            ],
+            [
+                "proc_rate",
+                "SOL"
+            ]
+        ]
+    },
+    {
+        "nid": "Sol_Lyn_Proc",
+        "name": "Sol",
+        "desc": "HP/3% chance to fully recover HP.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "post_combat_healing",
+                999
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Sure_Shot",
+        "name": "Sure Shot",
+        "desc": "Always hit.\nCannot double or crit.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Sure_Shot_Art"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    },
+    {
+        "nid": "Sure_Shot_Art",
+        "name": "Sure Shot",
+        "desc": "Always hit at cost of 1 range, cannot crit.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            4
+        ],
+        "components": [
+            [
+                "modify_maximum_range",
+                -1
+            ],
+            [
+                "crit",
+                -999
+            ],
+            [
+                "hit",
+                999
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "cannot_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Vantage",
+        "name": "Vantage",
+        "desc": "Always attack first HP >= 75%.\nEnemy cannot counter if Unit HP >= 75% and Unit SPD >= Enemy SPD + 7.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Quick_Draw",
+        "name": "Quick Draw",
+        "desc": "Enemy cannot counter if Unit's SPD is 7 points > Enemy's SPD.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_hp() <= unit.get_max_hp() // 1.3333 and unit.get_stat('SPD') >= target.get_stat('SPD') + 7"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Quick_Debuff",
+        "name": "Quick Debuff",
+        "desc": "Enemy cannot counter if Unit's SPD is 6 points > Enemy's SPD.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            1,
+            2
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
         "nid": "Eloquent_Form_T1",
         "name": "Eloquent Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
@@ -59934,12 +60349,7 @@
             0,
             0
         ],
-        "components": [
-            [
-                "change_variant",
-                "Lyn_Test"
-            ]
-        ]
+        "components": []
     },
     {
         "nid": "Wonderdrug",
