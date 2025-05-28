@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Fortune_Photon_Buff",
+        "name": "Fortune Photon Buff",
+        "desc": "For the Fortune Photon item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Light' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    }
+]

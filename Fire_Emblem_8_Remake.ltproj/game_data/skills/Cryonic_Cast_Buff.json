@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Cryonic_Cast_Buff",
+        "name": "Cryonic Cast Buff",
+        "desc": "For the Cryonic Cast item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Ice' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    }
+]
