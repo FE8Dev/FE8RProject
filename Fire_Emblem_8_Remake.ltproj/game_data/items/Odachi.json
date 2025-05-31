@@ -2,7 +2,7 @@
     {
         "nid": "Odachi",
         "name": "Odachi",
-        "desc": "Sword of honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses SPD, +5 SPD.",
+        "desc": "Sword representing the honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>SPDx2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SPD'))}</>)., +5 SPD.",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             1,
@@ -84,7 +84,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPDDOUBLE"
             ],
             [
                 "eval_available",

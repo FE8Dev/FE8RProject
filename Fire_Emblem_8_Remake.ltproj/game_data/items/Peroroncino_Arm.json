@@ -2,7 +2,7 @@
     {
         "nid": "Peroroncino_Arm",
         "name": "Peroroncino Arm",
-        "desc": "The weapon of the crimson angel, burst with hellish flame.\n<green>Skills:</>Pierce <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL.",
+        "desc": "The weapon of the crimson angel, bursts everything with a hellish flame.\n<green>Skills:</>Pierce <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat(SKL'))}</>).",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             2,
@@ -80,7 +80,7 @@
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 420"
+                "u(\"Atlas\").wexp['Sword'] >= 420"
             ],
             [
                 "weapon_type_exempt",
