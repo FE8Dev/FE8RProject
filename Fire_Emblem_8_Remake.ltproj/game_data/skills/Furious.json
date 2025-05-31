@@ -1,0 +1,46 @@
+[
+    {
+        "nid": "Furious",
+        "name": "Furious",
+        "desc": "While Genji is below 50%HP, become Beserked.Counterattack a long distance and all attacks are Brave. The unit cannot use magic items.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            10
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() < unit.get_max_hp()//2"
+            ],
+            [
+                "all_brave",
+                null
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "change_ai",
+                "Berserk"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

@@ -1,12 +1,12 @@
 [
     {
-        "nid": "Veteran_Hammer_1",
-        "name": "Veteran Hammer",
-        "desc": "Dozla's trusty warhammer that has helped him in many battles.\n<green>Skills:</>Hearty Laugh, War Blow\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first.",
-        "icon_nid": "Axes Sheet",
+        "nid": "Defensive_Axe",
+        "name": "Defensive Axe",
+        "desc": "An axe used for more defensive uses.\n<green>Skills:</>Power Chop (C)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), ignores Weapon Triangle, +10 DEF, RES.",
+        "icon_nid": "Tareon New Weapons",
         "icon_index": [
-            7,
-            4
+            1,
+            0
         ],
         "components": [
             [
@@ -23,11 +23,11 @@
             ],
             [
                 "damage",
-                26
+                21
             ],
             [
                 "hit",
-                65
+                100
             ],
             [
                 "weapon_type",
@@ -35,15 +35,15 @@
             ],
             [
                 "weapon_rank",
-                "E"
+                "C"
             ],
             [
                 "weight",
-                24
+                23
             ],
             [
                 "crit",
-                10
+                12
             ],
             [
                 "min_range",
@@ -62,24 +62,11 @@
                 null
             ],
             [
-                "statuses_on_hit",
-                [
-                    "Stun",
-                    "Rock_Punctures"
-                ]
-            ],
-            [
-                "item_tags",
-                [
-                    "Warhammer",
-                    "Earth"
-                ]
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Frozen"
+                        "Frozen",
+                        "Horse"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -90,8 +77,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Hearty_Laugh",
-                    "War_Blow"
+                    "Power_Chop_C",
+                    "Vantage_Plus_Item_Blade"
                 ]
             ],
             [
@@ -106,11 +93,36 @@
             ],
             [
                 "eval_available",
-                "u(\"Tareon\").wexp['Axe'] < 180"
+                "u(\"Tareon\").wexp['Axe'] >= 120 and u(\"Tareon\").wexp['Axe'] < 300"
             ],
             [
                 "wexp",
                 3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "ignore_weapon_advantage",
+                null
+            ],
+            [
+                "ignore_weapon_disadvantage",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_MID"
             ]
         ]
     }

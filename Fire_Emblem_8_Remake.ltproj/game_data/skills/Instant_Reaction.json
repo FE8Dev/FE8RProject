@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Instant_Reaction",
+        "name": "Instant Reaction",
+        "desc": "The user gains vantage if his SPD is >= than the enemy units' SPD, the user's attacks prevent the enemy from counterattacking.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            5
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ]
+        ]
+    }
+]

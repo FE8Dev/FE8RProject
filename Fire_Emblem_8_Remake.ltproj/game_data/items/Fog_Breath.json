@@ -66,8 +66,7 @@
                 [
                     "Drench_Debuff",
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Fog_Sword_Effect_Mid"
+                    "Venomous_Effect_Boss"
                 ]
             ],
             [
@@ -103,13 +102,19 @@
             ],
             [
                 "eval_available",
-                "u(\"Dozla\").wexp['Monster'] >= 360 and u(\"Dozla\").wexp['Monster'] < 420"
+                "u(\"Dozla\").wexp['Monster'] >= 300 and u(\"Dozla\").wexp['Monster'] < 420"
             ],
             [
                 "item_tags",
                 [
                     "Water",
                     "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fog_Sword_Effect_Mid"
                 ]
             ]
         ]

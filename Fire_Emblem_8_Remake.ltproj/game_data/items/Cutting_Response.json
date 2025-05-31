@@ -1,0 +1,141 @@
+[
+    {
+        "nid": "Cutting_Response",
+        "name": "Cutting Response",
+        "desc": "An axe that starts to show one's true colors.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), ignores Weapon Triangle, +15 DEF, RES.",
+        "icon_nid": "Tareon New Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                26
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "crit",
+                16
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_A",
+                    "Vantage_Plus_Item_Blade"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tareon"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Tareon\").wexp['Axe'] >= 300 and u(\"Tareon\").wexp['Axe'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "ignore_weapon_advantage",
+                null
+            ],
+            [
+                "ignore_weapon_disadvantage",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

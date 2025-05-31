@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Martial_Maestry",
+        "name": "Martial Maestry",
+        "desc": "The user can wield all types of phisical weapons (Lance, Bow and axe) based in the rank of sword of the user.If the user has rank X weapons obtains Vantage, distant counter and close counter.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            12
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "close_counter",
+                null
+            ],
+            [
+                "condition",
+                "u(\"_Atlas\").wexp['Sword'] >= 480"
+            ]
+        ]
+    }
+]

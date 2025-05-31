@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Shadow_Gather_Buff",
+        "name": "Shadow Gather Buff",
+        "desc": "For the Shadow Gather item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Dark' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    }
+]

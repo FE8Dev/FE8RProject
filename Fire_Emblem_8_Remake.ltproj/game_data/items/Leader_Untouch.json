@@ -1,0 +1,78 @@
+[
+    {
+        "nid": "Leader_Untouch",
+        "name": "Leader Untouch",
+        "desc": "The sword of the more brave leader.He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF+RES",
+        "icon_nid": "Atlus Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Protector_Force"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"_Atlas\").wexp['Sword'] >= 480"
+            ]
+        ]
+    }
+]

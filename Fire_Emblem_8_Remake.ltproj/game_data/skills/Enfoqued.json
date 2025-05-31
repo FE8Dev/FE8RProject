@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Enfoqued",
+        "name": "Enfoqued",
+        "desc": "While Genji has full HP, +50 Avoid/Hit.The user gains +30Crit Damage and Crit.Gain Furious is below 50%HP.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            11
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "eval_crit_additional",
+                "30"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

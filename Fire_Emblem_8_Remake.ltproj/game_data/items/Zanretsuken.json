@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Fog_Breath_1",
-        "name": "Fog Breath",
-        "desc": "This Fog blocks the senses of all life within range.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</><icon>Venom</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>+40 Avoid/Dodge.",
-        "icon_nid": "Monster-Dragon",
+        "nid": "Zanretsuken",
+        "name": "Zanretsuken",
+        "desc": "Maximum balance of emotions, the user of this katana has iron control over them.\n<green>Skills:</>Enfoqued, Furious, Flash Step<orange>Element:</><icon>Light</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><red>Effective:</><icon>Shadow</><icon>Monster</>\n<pink>Misc:</>Uses STR+SKL+SPD.",
+        "icon_nid": "Genji Weapons",
         "icon_index": [
-            1,
+            3,
             0
         ],
         "components": [
@@ -23,59 +23,70 @@
             ],
             [
                 "max_range",
-                3
+                2
             ],
             [
                 "damage",
-                15
+                22
             ],
             [
                 "hit",
-                125
+                115
             ],
             [
                 "crit",
-                10
+                25
             ],
             [
                 "weight",
-                0
+                10
             ],
             [
                 "level_exp",
                 null
             ],
             [
-                "locked",
-                null
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Furious",
+                    "Enfoqued"
+                ]
             ],
             [
                 "battle_cast_anim",
-                "Mephiles"
+                "Arrow"
             ],
             [
-                "ignore_line_of_sight",
-                null
-            ],
-            [
-                "unstealable",
-                null
+                "prf_unit",
+                [
+                    "Genji"
+                ]
             ],
             [
                 "statuses_on_hit",
                 [
-                    "Drench_Debuff",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Fog_Sword_Effect_Mid"
+                    "Shadow_Blight"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL_STRONG"
             ],
             [
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Flying",
-                        "Seared"
+                        "Monster",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -84,32 +95,14 @@
                 }
             ],
             [
-                "weapon_type",
-                "Monster"
-            ],
-            [
-                "weapon_rank",
-                "S"
-            ],
-            [
-                "wexp",
-                2
-            ],
-            [
-                "prf_unit",
-                [
-                    "Tareon"
-                ]
-            ],
-            [
                 "eval_available",
-                "u(\"Tareon\").wexp['Monster'] >= 360 and u(\"Tareon\").wexp['Monster'] < 420"
+                "u(\"Genji\").wexp['Sword'] >= 480"
             ],
             [
                 "item_tags",
                 [
-                    "Water",
-                    "Wind"
+                    "Light",
+                    "Dark"
                 ]
             ]
         ]

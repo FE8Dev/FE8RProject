@@ -1702,3 +1702,18 @@ class MultiDescItem(SkillComponent):
     
     def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
         return self.value, self.expose[1]
+
+class EndstepChargeIncrease(SkillComponent):
+    nid = 'Endstep_charge_increase'
+    desc = "Increases charge of skill by the *value* set here each endstep. Usually used in conjunction with `Build Charge` skill component. Will not go below 0 or above `total_charge`"
+    tag = SkillTags.CHARGE
+
+    expose = ComponentType.Int
+    value = 5
+
+    ignore_conditional = True
+
+    def on_endstep(self, actions, playback, unit):
+        new_value = self.skill.data['charge'] + self.value
+        new_value = utils.clamp(new_value, 0, self.skill.data['total_charge'])
+        action.do(action.SetObjData(self.skill, 'charge', new_value))

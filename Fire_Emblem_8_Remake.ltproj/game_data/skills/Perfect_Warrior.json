@@ -1,0 +1,67 @@
+[
+    {
+        "nid": "Perfect_Warrior",
+        "name": "Perfect Warrior",
+        "desc": "Reduce a Zero the stat MAG of the user, the user not can healing for other units.Increment in 8 the stats except HP and MOV. Gains 25% damage reducction and gains resistance a negatives status.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            13
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        -250
+                    ],
+                    [
+                        "STR",
+                        8
+                    ],
+                    [
+                        "SKL",
+                        8
+                    ],
+                    [
+                        "SPD",
+                        8
+                    ],
+                    [
+                        "LCK",
+                        8
+                    ],
+                    [
+                        "DEF",
+                        8
+                    ],
+                    [
+                        "RES",
+                        8
+                    ],
+                    [
+                        "CON",
+                        8
+                    ]
+                ]
+            ],
+            [
+                "empower_heal_received",
+                "-999"
+            ],
+            [
+                "resist_multiplier",
+                0.75
+            ],
+            [
+                "resist_status",
+                null
+            ]
+        ]
+    }
+]

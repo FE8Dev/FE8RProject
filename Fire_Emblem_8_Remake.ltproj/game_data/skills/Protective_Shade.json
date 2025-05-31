@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Protective_Shade",
+        "name": "Protective Shade",
+        "desc": "When the user is three spaces or less from a lord, he acquires the effect of provoke against enemies, increasing STR, SKL and SPD by 5.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "([unitx for unitx in game.get_a_unit(Lord) if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                []
+            ]
+        ]
+    }
+]

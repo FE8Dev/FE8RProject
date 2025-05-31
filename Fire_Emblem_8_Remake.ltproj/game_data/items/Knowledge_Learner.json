@@ -2,7 +2,7 @@
     {
         "nid": "Knowledge_Learner",
         "name": "Knowledge Learner",
-        "desc": "An accurate bow that\u2019s easy to aim with.\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)</>(Multi-target:2), cannot DS.",
+        "desc": "An accurate bow that\u2019s easy to aim with.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)</>(Multi-target:2), cannot DS.",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             6,
@@ -80,6 +80,24 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
             ]
         ]
     }

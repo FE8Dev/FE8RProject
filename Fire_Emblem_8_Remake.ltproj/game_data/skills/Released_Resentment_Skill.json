@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Released_Resentment_Skill",
+        "name": "Released Resentment",
+        "desc": "+30 Crit and add missing HP to Bonus damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "30"
+            ],
+            [
+                "eval_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1) + 5"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

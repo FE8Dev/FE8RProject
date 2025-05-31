@@ -221,10 +221,6 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "drain_charge",
                 1
             ],
@@ -340,10 +336,6 @@
             1
         ],
         "components": [
-            [
-                "Endstep_charge_increase",
-                1
-            ],
             [
                 "drain_charge",
                 1
@@ -464,10 +456,6 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "drain_charge",
                 1
             ],
@@ -583,10 +571,6 @@
             5
         ],
         "components": [
-            [
-                "Endstep_charge_increase",
-                1
-            ],
             [
                 "drain_charge",
                 1
@@ -704,10 +688,6 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "drain_charge",
                 1
             ],
@@ -823,10 +803,6 @@
             8
         ],
         "components": [
-            [
-                "Endstep_charge_increase",
-                1
-            ],
             [
                 "drain_charge",
                 1
@@ -6656,6 +6632,10 @@
                 "Swift_Strike_Activate"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -6845,16 +6825,16 @@
                 "Paladin_Shield_Skill"
             ],
             [
+                "class_skill",
+                null
+            ],
+            [
                 "Endstep_charge_increase",
                 1
             ],
             [
                 "build_charge",
                 3
-            ],
-            [
-                "class_skill",
-                null
             ],
             [
                 "allowed_weapons",
@@ -7052,12 +7032,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Rally_Tech"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "ability",
+                "Rally_Tech"
             ]
         ]
     },
@@ -7072,12 +7052,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Charge"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "ability",
+                "Charge"
             ],
             [
                 "Endstep_charge_increase",
@@ -7393,6 +7373,10 @@
                 "Blade_and_Fang_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 2
             ],
@@ -7472,6 +7456,10 @@
             [
                 "combat_art",
                 "Mana_Strike_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -7659,6 +7647,10 @@
                 "Pierce_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ],
@@ -7766,6 +7758,10 @@
             [
                 "combat_art",
                 "Ire_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -8437,6 +8433,10 @@
                 "Anger_Point_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -8895,10 +8895,6 @@
             [
                 "combat_art",
                 "Compact_Blast_Powder_Skill"
-            ],
-            [
-                "Endstep_charge_increase",
-                1
             ],
             [
                 "build_charge",
@@ -9441,10 +9437,6 @@
             [
                 "combat_art",
                 "Heroic_Stance_Skill"
-            ],
-            [
-                "Endstep_charge_increase",
-                1
             ],
             [
                 "build_charge",
@@ -10590,7 +10582,7 @@
     {
         "nid": "Swordmasters_Dance_Buff",
         "name": "Swordmaster's Dance",
-        "desc": "+5 Avoid for each attack that misses this unit.\nMax 8 stacks.",
+        "desc": "+5 Avoid and +3 Crit for each attack that misses this unit.\nMax 8 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -10912,12 +10904,12 @@
                 null
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "ability",
                 "Light_Break"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -11669,6 +11661,10 @@
                 "Sol_Activate"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -11980,7 +11976,7 @@
     {
         "nid": "Ultimate_Decree",
         "name": "Ultimate Decree",
-        "desc": "All allies negate the damage they would take from the first round of combat.\nLasts only for 1 turn.",
+        "desc": "<red>CA: </>All allies negate the damage they would take from the first round of combat. <green>CD:0 Turns</>\nLasts only for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -12293,6 +12289,10 @@
                 null
             ],
             [
+                "Endstep_charge_increase",
+                3
+            ],
+            [
                 "drain_charge",
                 3
             ]
@@ -12490,7 +12490,7 @@
     {
         "nid": "Reinforce",
         "name": "Reinforce",
-        "desc": "Summon 4 Seraph Knight allies to help in battle. This is a free action.",
+        "desc": "Summon 4 Seraph Knight allies to help in battle. This is a free action. <green>CD:3 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -12522,7 +12522,7 @@
     {
         "nid": "Reinforce_Item",
         "name": "Reinforce",
-        "desc": "Summon 4 Falcon Knight allies to help in battle. This is a free action.",
+        "desc": "Summon 4 Falcon Knight allies to help in battle. This is a free action. <green>CD:4 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -13052,6 +13052,10 @@
                 null
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 7
             ],
@@ -13499,16 +13503,16 @@
                 null
             ],
             [
+                "ability",
+                "Lancerush"
+            ],
+            [
                 "Endstep_charge_increase",
                 1
             ],
             [
                 "build_charge",
                 4
-            ],
-            [
-                "ability",
-                "Lancerush"
             ]
         ]
     },
@@ -13631,12 +13635,12 @@
                 null
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "ability",
                 "Quick_Strike"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -13734,6 +13738,10 @@
             [
                 "combat_art",
                 "Chivalrous_Strike_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -14140,7 +14148,7 @@
             ],
             [
                 "combat_condition",
-                "has_skill(target, 'Rock_Punctures') or has_skill(target, 'Rock_Breach)"
+                "has_skill(target, 'Rock_Punctures') or has_skill(target, 'Rock_Breach')"
             ],
             [
                 "give_status_after_combat",
@@ -15039,6 +15047,10 @@
                 "Magic_Blast"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ]
@@ -15420,12 +15432,12 @@
                 null
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "ability",
                 "Judgement"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -15675,7 +15687,7 @@
             ],
             [
                 "Endstep_charge_increase",
-                51
+                1
             ],
             [
                 "build_charge",
@@ -15981,6 +15993,10 @@
             [
                 "combat_art",
                 "Crimson_Moon_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -16521,7 +16537,7 @@
     {
         "nid": "Wishing_Warp",
         "name": "Wishing Warp",
-        "desc": "Warp an ally to another location.\nThis is a free action.",
+        "desc": "Warp an ally to another location.  <green>CD:6 Turns</>\nThis is a free action.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -16535,6 +16551,10 @@
             [
                 "ability",
                 "Wishing_Warp"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -16577,12 +16597,12 @@
                 null
             ],
             [
-                "galeforce",
-                null
-            ],
-            [
                 "Endstep_charge_increase",
                 2
+            ],
+            [
+                "galeforce",
+                null
             ],
             [
                 "drain_charge",
@@ -16593,7 +16613,7 @@
     {
         "nid": "Tricky_Warp",
         "name": "Tricky Warp",
-        "desc": "Swap places with an ally with range based on MAG/4.\nThis is a free action.",
+        "desc": "Swap places with an ally with range based on MAG/4.  <green>CD:3 Turns</>\nThis is a free action.",
         "icon_nid": "Skills",
         "icon_index": [
             7,
@@ -16605,12 +16625,12 @@
                 null
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "ability",
                 "Tricky_Warp"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -16945,12 +16965,12 @@
                 "Marshall_Law"
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 4
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ]
         ]
     },
@@ -18963,6 +18983,10 @@
                 "Magnum_Opus"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ]
@@ -19132,12 +19156,12 @@
                 null
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "ability",
                 "Berserkers_Rage"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -20083,16 +20107,16 @@
                 "Edgestorm_Skill"
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 3
             ],
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ]
         ]
     },
@@ -20239,7 +20263,7 @@
     {
         "nid": "Divine_Presence_Buff",
         "name": "Divine Presence",
-        "desc": " +10% buff to adj. allies stats.",
+        "desc": "+10% buff to adj. allies stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -22138,6 +22162,10 @@
                 null
             ],
             [
+                "Endstep_charge_increase",
+                4
+            ],
+            [
                 "drain_charge",
                 4
             ],
@@ -22992,7 +23020,7 @@
             ],
             [
                 "Endstep_charge_increase",
-                1
+                3
             ],
             [
                 "build_charge",
@@ -23102,7 +23130,7 @@
             ],
             [
                 "Endstep_charge_increase",
-                1
+                3
             ],
             [
                 "build_charge",
@@ -28855,6 +28883,10 @@
                 "Anger_Point_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -31507,6 +31539,270 @@
         ]
     },
     {
+        "nid": "Cryonic_Cast_Buff",
+        "name": "Cryonic Cast Buff",
+        "desc": "For the Cryonic Cast item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Ice' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Fiery_Igniter_Buff",
+        "name": "Fiery Igniter Buff",
+        "desc": "For the Fiery Igniter item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Fire' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Fortune_Photon_Buff",
+        "name": "Fortune Photon Buff",
+        "desc": "For the Fortune Photon item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Light' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Gale_Wind_Buff",
+        "name": "Gale Wind Buff",
+        "desc": "For the Gale Wind item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Wind' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Geo_Build_Buff",
+        "name": "Geo Build Buff",
+        "desc": "For the Geo Build item",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Earth' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Shadow_Gather_Buff",
+        "name": "Shadow Gather Buff",
+        "desc": "For the Shadow Gather item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Dark' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Volt_Charge_Buff",
+        "name": "Volt Charge Buff",
+        "desc": "For the Volt Charge item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Thunder' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
+        "nid": "Water_Sport_Buff",
+        "name": "Water Sport Buff",
+        "desc": "For the Water Sport item.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "2 if ('Water' in unit.get_weapon().tags) else 1"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                4
+            ]
+        ]
+    },
+    {
         "nid": "Combustion_Elixir_Skill",
         "name": "Combustion Elixir",
         "desc": "For the Combustion Elixir item.",
@@ -32663,6 +32959,30 @@
             [
                 "pairup_bonus",
                 "Ghostly_Alliance"
+            ]
+        ]
+    },
+    {
+        "nid": "Outshine",
+        "name": "Outshine",
+        "desc": "x2 damage if enemy's LCK <= unit's LCK.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('LCK') >= target.get_stat('LCK')"
+            ],
+            [
+                "damage_multiplier",
+                2.0
             ]
         ]
     },
@@ -35427,6 +35747,22 @@
         ]
     },
     {
+        "nid": "Summon_Status_Immunity",
+        "name": "Summon Status Immunity",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "immune_status",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Gentle_Light_Low",
         "name": "Gentle Light (Low)",
         "desc": "Reduce Damage taken by 3 and heal 10% Max HP each turn.",
@@ -37678,7 +38014,7 @@
     {
         "nid": "Destiny_Ender",
         "name": "Destiny Ender",
-        "desc": "Use this to kill any green unit.",
+        "desc": "Use this to kill any green unit.\n(WARNING: BUGGY, USE ONLY FOR SOFT LOCK PREVENTION)",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -39729,7 +40065,7 @@
     {
         "nid": "Upstream_Body",
         "name": "Upstream Body",
-        "desc": "-5 to all stats for 1 turn.",
+        "desc": "-5 to most stats for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -39782,7 +40118,7 @@
     {
         "nid": "Upstream_BodyP",
         "name": "Upstream Body+",
-        "desc": "-10 to all stats for 1 turn.",
+        "desc": "-10 to most stats for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -39835,7 +40171,7 @@
     {
         "nid": "Downstream_Body",
         "name": "Downstream Body",
-        "desc": "+5 to all stats for 1 turn.",
+        "desc": "+5 to most stats for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -39884,7 +40220,7 @@
     {
         "nid": "Downstream_BodyP",
         "name": "Downstream Body+",
-        "desc": "+10 to all stats for 1 turn.",
+        "desc": "+10 to most stats for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -42803,6 +43139,10 @@
                 "Death_Machine_Proc"
             ],
             [
+                "Endstep_charge_increase",
+                3
+            ],
+            [
                 "drain_charge",
                 3
             ],
@@ -43927,7 +44267,7 @@
     {
         "nid": "Debilitating_Chop_Activate",
         "name": "Debilitating Chop",
-        "desc": "<red>CA:</> +20 DMG, +30 Hit, +20 Crit, Inflicts -20 to most of oppenents stats. <green>CD:5 Turns</>",
+        "desc": "<red>CA:</> +20 DMG, +30 Hit, +20 Crit, Inflicts -20 to most of oppenents stats. <green>CD:4 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -44830,10 +45170,6 @@
                 "not game.check_alive('Succubus1_' + unit.nid) and (not game.check_alive('Succubus2_' + unit.nid)) and (not game.check_alive('Succubus3_' + unit.nid)) "
             ],
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 3
             ],
@@ -45191,12 +45527,12 @@
                 "Grab_Heart_Skill"
             ],
             [
-                "build_charge",
-                8
-            ],
-            [
                 "Endstep_charge_increase",
                 1
+            ],
+            [
+                "build_charge",
+                8
             ],
             [
                 "allowed_weapons",
@@ -45521,6 +45857,10 @@
                 "True_Death_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ],
@@ -45602,11 +45942,11 @@
                 null
             ],
             [
-                "drain_charge",
+                "Endstep_charge_increase",
                 3
             ],
             [
-                "Endstep_charge_increase",
+                "drain_charge",
                 3
             ],
             [
@@ -45980,16 +46320,16 @@
                 "not game.check_alive('SlimeGal1_' + unit.nid) and (not game.check_alive('SlimeGal2_' + unit.nid))  "
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
-                3
+                4
             ],
             [
                 "ability",
                 "Slime_Proliferation_Suu"
-            ],
-            [
-                "Endstep_charge_increase",
-                1
             ]
         ]
     },
@@ -46456,10 +46796,6 @@
             [
                 "kill_charge_increase",
                 1
-            ],
-            [
-                "Endstep_charge_increase",
-                -2
             ],
             [
                 "drain_charge",
@@ -46939,9 +47275,9 @@
         ]
     },
     {
-        "nid": "Vantage",
-        "name": "Vantage",
-        "desc": "Always attack first HP >= 75%.\nEnemy cannot counter if Unit HP >= 75% and Unit SPD >= Enemy SPD + 7.",
+        "nid": "Advantage",
+        "name": "Advantage",
+        "desc": "Always attack first when unit is above 75% Max HP.\nEnemy cannot counter if unit is above 75% Max HP and unit's SPD >= enemy's SPD + 7.",
         "icon_nid": "lyn_skills",
         "icon_index": [
             0,
@@ -46954,7 +47290,7 @@
             ],
             [
                 "combat_condition",
-                "unit.get_hp() <= unit.get_max_hp() // 1.3333"
+                "unit.get_hp() >= unit.get_max_hp() // 1.3333"
             ],
             [
                 "display_skill_icon_in_combat",
@@ -46978,7 +47314,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit.get_hp() <= unit.get_max_hp() // 1.3333 and unit.get_stat('SPD') >= target.get_stat('SPD') + 7"
+                "unit.get_hp() >= unit.get_max_hp() // 1.3333 and unit.get_stat('SPD') >= target.get_stat('SPD') + 7"
             ],
             [
                 "display_skill_icon_in_combat",
@@ -47008,6 +47344,929 @@
                     "lost_on_enemy": true,
                     "lost_on_splash": true
                 }
+            ]
+        ]
+    },
+    {
+        "nid": "Lyn_Light_Sword",
+        "name": "Lyn Light Sword",
+        "desc": "Makes Lyn's sword Light type when against Anima or Dark weapons.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Anima', 'Dark')"
+            ],
+            [
+                "item_override",
+                "Lyn_Light_Sword"
+            ]
+        ]
+    },
+    {
+        "nid": "Lyn_Dark_Sword",
+        "name": "Lyn Dark Sword",
+        "desc": "Makes Lyn's sword Dark type when against Anima or Light weapons.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Anima', 'Light')"
+            ],
+            [
+                "item_override",
+                "Lyn_Dark_Sword"
+            ]
+        ]
+    },
+    {
+        "nid": "Drained",
+        "name": "Drained",
+        "desc": "-3 to most stats for 1 turn.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            15
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -3
+                    ],
+                    [
+                        "MAG",
+                        -3
+                    ],
+                    [
+                        "SKL",
+                        -3
+                    ],
+                    [
+                        "SPD",
+                        -3
+                    ],
+                    [
+                        "LCK",
+                        -3
+                    ],
+                    [
+                        "DEF",
+                        -3
+                    ],
+                    [
+                        "RES",
+                        -3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "DrainedP",
+        "name": "Drained+",
+        "desc": "-6 to most stats for 1 turn.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            15
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -6
+                    ],
+                    [
+                        "MAG",
+                        -6
+                    ],
+                    [
+                        "SKL",
+                        -6
+                    ],
+                    [
+                        "SPD",
+                        -6
+                    ],
+                    [
+                        "LCK",
+                        -6
+                    ],
+                    [
+                        "DEF",
+                        -6
+                    ],
+                    [
+                        "RES",
+                        -6
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Pumped_Up",
+        "name": "Pumped Up",
+        "desc": "+3 to most stats for 1 turn.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            52
+        ],
+        "components": [
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        3
+                    ],
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "SKL",
+                        3
+                    ],
+                    [
+                        "SPD",
+                        3
+                    ],
+                    [
+                        "LCK",
+                        3
+                    ],
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Pumped_UpP",
+        "name": "Pumped Up+",
+        "desc": "+6 to most stats for 1 turn.\nMax 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            52
+        ],
+        "components": [
+            [
+                "stack",
+                5
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        6
+                    ],
+                    [
+                        "MAG",
+                        6
+                    ],
+                    [
+                        "SKL",
+                        6
+                    ],
+                    [
+                        "SPD",
+                        6
+                    ],
+                    [
+                        "LCK",
+                        6
+                    ],
+                    [
+                        "DEF",
+                        6
+                    ],
+                    [
+                        "RES",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Renewal",
+        "name": "Renewal",
+        "desc": "Restore 30% HP at the beginning of each turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            46
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.3
+            ]
+        ]
+    },
+    {
+        "nid": "Renewal_P",
+        "name": "RenewalP",
+        "desc": "Restore 50% HP at the beginning of each turn.\nAllies within 3 spaces of unit gain +15 RES/DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            46
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.3
+            ],
+            [
+                "aura",
+                "Dark_Embrace"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Embrace",
+        "name": "Dark Embrace",
+        "desc": "+15 RES/DEF.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            18
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Edge_Agressive",
+        "name": "Edge Agressive",
+        "desc": "Reduces DEF/RES to 0, Multiply the STR/SKL by 3. The damage inflicted by the unit is reduced to the maximum HP.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        3.0
+                    ],
+                    [
+                        "SKL",
+                        3.0
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -200
+                    ],
+                    [
+                        "RES",
+                        -200
+                    ]
+                ]
+            ],
+            [
+                "permanent_damage",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Martial_Maestry",
+        "name": "Martial Maestry",
+        "desc": "The user can wield all types of phisical weapons (Lance, Bow and axe) based in the rank of sword of the user.If the user has rank X weapons obtains Vantage, distant counter and close counter.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            12
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "close_counter",
+                null
+            ],
+            [
+                "condition",
+                "u(\"_Atlas\").wexp['Sword'] >= 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Perfect_Warrior",
+        "name": "Perfect Warrior",
+        "desc": "Reduce a Zero the stat MAG of the user, the user not can healing for other units.Increment in 8 the stats except HP and MOV. Gains 25% damage reducction and gains resistance a negatives status.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            13
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        -250
+                    ],
+                    [
+                        "STR",
+                        8
+                    ],
+                    [
+                        "SKL",
+                        8
+                    ],
+                    [
+                        "SPD",
+                        8
+                    ],
+                    [
+                        "LCK",
+                        8
+                    ],
+                    [
+                        "DEF",
+                        8
+                    ],
+                    [
+                        "RES",
+                        8
+                    ],
+                    [
+                        "CON",
+                        8
+                    ]
+                ]
+            ],
+            [
+                "empower_heal_received",
+                "-999"
+            ],
+            [
+                "resist_multiplier",
+                0.75
+            ],
+            [
+                "resist_status",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Pierce",
+        "name": "Pierce",
+        "desc": "Remove enemy DEF when attack.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF')"
+            ]
+        ]
+    },
+    {
+        "nid": "Protector_Force",
+        "name": "Protector Force",
+        "desc": "For each allied unit within three spaces of the user,the user gains +2 to all stats except HP and MOV. The user gains 20 of HP per allied unit within three spaces of the user.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "MAG",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SKL",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SPD",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "LCK",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "DEF",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "RES",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "CON",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ]
+                ]
+            ],
+            [
+                "eval_regeneration",
+                "20*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+            ]
+        ]
+    },
+    {
+        "nid": "Enfoqued",
+        "name": "Enfoqued",
+        "desc": "While Genji has full HP, +50 Avoid/Hit.The user gains +30Crit Damage and Crit.Gain Furious is below 50%HP.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            11
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "eval_crit_additional",
+                "30"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Furious",
+        "name": "Furious",
+        "desc": "While Genji is below 50%HP, become Beserked.Counterattack a long distance and all attacks are Brave. The unit cannot use magic items.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            10
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() < unit.get_max_hp()//2"
+            ],
+            [
+                "all_brave",
+                null
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "change_ai",
+                "Berserk"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Instant_Reaction",
+        "name": "Instant Reaction",
+        "desc": "The user gains vantage if his SPD is >= than the enemy units' SPD, the user's attacks prevent the enemy from counterattacking.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            5
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ]
+        ]
+    },
+    {
+        "nid": "Protective_Shade",
+        "name": "Protective Shade",
+        "desc": "When the user is three spaces or less from a lord, he acquires the effect of provoke against enemies, increasing STR, SKL and SPD by 5.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "([unitx for unitx in game.get_a_unit(Lord) if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Reinforced_by_Blood",
+        "name": "Reinforced by Blood",
+        "desc": "Increases the ATK and Hit by 0.25 for each enemy unit killed of mode permanent.\nGains 25% lifesteal.The user's attacks cause bleed(1) to the enemy.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_internal_level() > 41"
+            ],
+            [
+                "dynamic_damage",
+                "0,25"
+            ],
+            [
+                "dynamic_accuracy",
+                "0,25"
+            ],
+            [
+                "stack",
+                9999
+            ],
+            [
+                "lifelink",
+                0.25
+            ],
+            [
+                "give_statuses_after_combat",
+                [
+                    "Bleeding",
+                    "Bleeding_Boss"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Released_Resentment",
+        "name": "Released Resentment",
+        "desc": "<red>CA:</>+30 Crit and add missing HP as Bonus damage. <green>CD:6 Turns</>Gives galeforce up to 2 times per turn, the galeforce activation probability is calculated in SKL+LCK/3. The Cd increment in 1 for every kill and loses 1CD every turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Released_Resentment_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
+                "build_charge",
+                6
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "drain_charge",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Released_Resentment_Galeforce_Hide",
+        "name": "Released Resentment",
+        "desc": "Gives galeforce up to 2 times per turn, the galeforce activation probability is calculated in SKL+LCK/3.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "proc_rate",
+                "LCK_SKL_WEAK"
+            ],
+            [
+                "Endstep_charge_increase",
+                2
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Released_Resentment_Skill",
+        "name": "Released Resentment",
+        "desc": "+30 Crit and add missing HP to Bonus damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            7
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "30"
+            ],
+            [
+                "eval_damage",
+                "((unit.get_hp() - unit.get_max_hp()) // -1) + 5"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Unchained_Wrath",
+        "name": "Unchained Wrath",
+        "desc": "The user gains the ability to be immune to negative status effects. Gains +5 STR and SKL\neach time they dodge an attack for 2 turns.For each stack loses 10 Avoid and 5 LCK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "gain_skill_after_take_miss",
+                "Unchained_Wrath_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Unchained_Wrath_Buff",
+        "name": "Unchained Wrath",
+        "desc": "The user gains the ability to be immune to negative status effects. Gains +5 STR and SKL\neach time they dodge an attack for 2 turns.For each stack loses 10 Avoid and 5 LCK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "LCK",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -10
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
@@ -48593,6 +49852,10 @@
                 "Swift_Strike_Activate"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -49073,6 +50336,10 @@
                 "Anger_Point_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 3
             ],
@@ -49136,6 +50403,10 @@
             [
                 "combat_art",
                 "Mana_Strike_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -49268,8 +50539,12 @@
                 "Pierce_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
-                4
+                3
             ],
             [
                 "allowed_weapons",
@@ -49331,6 +50606,10 @@
             [
                 "combat_art",
                 "Ire_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -49513,46 +50792,6 @@
             [
                 "build_charge",
                 4
-            ],
-            [
-                "feat",
-                null
-            ],
-            [
-                "copysafe",
-                []
-            ]
-        ]
-    },
-    {
-        "nid": "Lightfaire_T2",
-        "name": "Lightfaire",
-        "desc": "<red>CA:</>+6 damage, +15 Avoid/Hit, and +20 Crit when using Light <green>CD:0 Turns</>",
-        "icon_nid": "Light",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
-            ],
-            [
-                "dynamic_damage",
-                "6"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "20"
-            ],
-            [
-                "dynamic_avoid",
-                "15"
-            ],
-            [
-                "dynamic_accuracy",
-                "15"
             ],
             [
                 "feat",
@@ -51969,12 +53208,12 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 2
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "combat_art",
@@ -52355,7 +53594,7 @@
     {
         "nid": "Ultimate_Decree_T3",
         "name": "Ultimate Decree",
-        "desc": "All allies negate the damage they would take from the first round of combat.\nLasts only for 1 turn.",
+        "desc": "<red>CA: </>All allies negate the damage they would take from the first round of combat. <green>CD:0 Turns</>\nLasts only for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -52555,6 +53794,10 @@
                 null
             ],
             [
+                "Endstep_charge_increase",
+                3
+            ],
+            [
                 "drain_charge",
                 3
             ],
@@ -52665,7 +53908,7 @@
     {
         "nid": "Reinforce_T3",
         "name": "Reinforce",
-        "desc": "Summon 4 Seraph Knight allies to help in battle. This is a free action.",
+        "desc": "Summon 4 Seraph Knight allies to help in battle. This is a free action. <green>CD:3 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -53014,6 +54257,10 @@
             36
         ],
         "components": [
+            [
+                "Endstep_charge_increase",
+                1
+            ],
             [
                 "build_charge",
                 7
@@ -53391,6 +54638,10 @@
             [
                 "combat_art",
                 "Chivalrous_Strike_Skill"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -54080,6 +55331,10 @@
                 "Fire_Blast"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ],
@@ -54138,6 +55393,10 @@
             [
                 "ability",
                 "Magic_Blast"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -54711,6 +55970,10 @@
                 "Crimson_Moon_Skill"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ],
@@ -54843,6 +56106,10 @@
             [
                 "ability",
                 "Wishing_Warp"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "build_charge",
@@ -56404,6 +57671,10 @@
                 "Magnum_Opus"
             ],
             [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
                 "build_charge",
                 4
             ],
@@ -57571,12 +58842,12 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 3
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "ability",
@@ -58417,12 +59688,12 @@
         ],
         "components": [
             [
-                "build_charge",
-                3
-            ],
-            [
                 "Endstep_charge_increase",
                 1
+            ],
+            [
+                "build_charge",
+                3
             ],
             [
                 "ability",
@@ -59043,12 +60314,12 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 3
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "ability",
@@ -59281,12 +60552,12 @@
         ],
         "components": [
             [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
                 "build_charge",
                 6
+            ],
+            [
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "ability",
@@ -60372,29 +61643,5 @@
             0
         ],
         "components": []
-    },
-    {
-        "nid": "Outshine",
-        "name": "Outshine",
-        "desc": "x2 damage if enemy's LCK <= unit's LCK.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            4,
-            2
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "unit.get_stat('LCK') >= target.get_stat('LCK')"
-            ],
-            [
-                "damage_multiplier",
-                2.0
-            ]
-        ]
     }
 ]

@@ -1,0 +1,45 @@
+[
+    {
+        "nid": "Reinforced_by_Blood",
+        "name": "Reinforced by Blood",
+        "desc": "Increases the ATK and Hit by 0.25 for each enemy unit killed of mode permanent.\nGains 25% lifesteal.The user's attacks cause bleed(1) to the enemy.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_internal_level() > 41"
+            ],
+            [
+                "dynamic_damage",
+                "0,25"
+            ],
+            [
+                "dynamic_accuracy",
+                "0,25"
+            ],
+            [
+                "stack",
+                9999
+            ],
+            [
+                "lifelink",
+                0.25
+            ],
+            [
+                "give_statuses_after_combat",
+                [
+                    "Bleeding",
+                    "Bleeding_Boss"
+                ]
+            ]
+        ]
+    }
+]

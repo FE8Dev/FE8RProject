@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Unchained_Wrath_Buff",
+        "name": "Unchained Wrath",
+        "desc": "The user gains the ability to be immune to negative status effects. Gains +5 STR and SKL\neach time they dodge an attack for 2 turns.For each stack loses 10 Avoid and 5 LCK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "LCK",
+                        -5
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -10
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]

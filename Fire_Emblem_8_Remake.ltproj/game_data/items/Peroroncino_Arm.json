@@ -1,0 +1,103 @@
+[
+    {
+        "nid": "Peroroncino_Arm",
+        "name": "Peroroncino Arm",
+        "desc": "The weapon of the crimson angel, burst with hellish flame.\n<green>Skills:</>Pierce <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL.",
+        "icon_nid": "Atlus Weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Pierce"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"_Atlas\").wexp['Sword'] >= 420"
+            ],
+            [
+                "weapon_type_exempt",
+                "Bow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

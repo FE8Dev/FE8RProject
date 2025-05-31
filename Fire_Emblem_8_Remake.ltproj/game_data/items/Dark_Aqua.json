@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Aqua",
         "name": "Dark Aqua",
-        "desc": "Dozla blasts enemies with dark water.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>LCK + STR/2.",
+        "desc": "Dozla blasts enemies with dark water.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>LCK + STR/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('STR')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -105,6 +105,12 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_E"
+                ]
             ]
         ]
     }
