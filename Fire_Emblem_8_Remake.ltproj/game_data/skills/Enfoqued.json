@@ -1,18 +1,14 @@
 [
     {
         "nid": "Enfoqued",
-        "name": "Enfoqued",
-        "desc": "While Genji has full HP, +50 Avoid/Hit.The user gains +30Crit Damage and Crit.Gain Furious is below 50%HP.",
+        "name": "Perfect Focus",
+        "desc": "While Genji is at full HP, +50 Avoid/Hit.The user gains +30 Crit and Crit Damage. Gain Furious is below 50%HP.",
         "icon_nid": "SkillIcons",
         "icon_index": [
             1,
             11
         ],
         "components": [
-            [
-                "hidden_if_inactive",
-                null
-            ],
             [
                 "condition",
                 "unit.get_hp() == unit.get_max_hp()"
@@ -35,6 +31,10 @@
             ],
             [
                 "lost_on_endstep",
+                null
+            ],
+            [
+                "grey_if_inactive",
                 null
             ]
         ]

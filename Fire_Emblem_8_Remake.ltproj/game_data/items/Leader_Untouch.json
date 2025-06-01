@@ -1,8 +1,8 @@
 [
     {
         "nid": "Leader_Untouch",
-        "name": "Leader Untouch",
-        "desc": "The sword of the more brave leader.He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF+RES",
+        "name": "Untouchable",
+        "desc": "The sword of the bravest leader.He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF+RES  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))+ (unit.get_stat('RES'))}</>)",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             1,
@@ -71,7 +71,7 @@
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 480"
+                "u(\"Atlas\").wexp['Sword'] >= 480"
             ]
         ]
     }
