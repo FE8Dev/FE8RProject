@@ -1,0 +1,80 @@
+[
+    {
+        "nid": "Reforged_Sword",
+        "name": "Reforged Sword",
+        "desc": "A sword that has been re-forged by drinking enemy blood.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+ SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//3}</>).",
+        "icon_nid": "{Batima} Quick Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 120 and u(\"Jaffar\").wexp['Sword'] < 240"
+            ]
+        ]
+    }
+]

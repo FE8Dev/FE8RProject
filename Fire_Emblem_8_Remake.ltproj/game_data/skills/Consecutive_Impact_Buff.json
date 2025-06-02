@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Consecutive_Impact_Buff",
+        "name": " Consecutive Impact",
+        "desc": "+5 damage and +10 Hit for each attack of this unit to hit an enemy in combat.\nLost on end combat",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            34
+        ],
+        "components": [
+            [
+                "stack",
+                99
+            ],
+            [
+                "dynamic_damage",
+                "5"
+            ],
+            [
+                "dynamic_accuracy",
+                "10"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

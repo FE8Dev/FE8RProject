@@ -1,0 +1,88 @@
+[
+    {
+        "nid": "Merhunes_Razor",
+        "name": "Merhunes Razor",
+        "desc": "Representative sword of a demon prince, it is said that death is still the bearer of this weapon.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>SPD+ STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))//}</>).",
+        "icon_nid": "{Ereshkigal} Extra 6",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
+            ]
+        ]
+    }
+]

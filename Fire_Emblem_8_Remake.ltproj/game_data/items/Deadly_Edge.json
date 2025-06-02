@@ -1,0 +1,84 @@
+[
+    {
+        "nid": "Deadly_Edge",
+        "name": "Deadly Edge",
+        "desc": "Blade said to have taken several lives. Not to be confused with a Killing Edge.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//2}</>) .",
+        "icon_nid": "{Batima} Scarlet Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 240 and u(\"Jaffar\").wexp['Sword'] < 360"
+            ]
+        ]
+    }
+]
