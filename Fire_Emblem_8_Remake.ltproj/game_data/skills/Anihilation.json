@@ -2,12 +2,17 @@
     {
         "nid": "Anihilation",
         "name": "Anihilation",
-        "desc": "+crit on crit, stacks, last per chapter",
-        "icon_nid": null,
+        "desc": "+5 crit dmg on crit, stacks, last per chapter",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            14,
+            14
         ],
-        "components": []
+        "components": [
+            [
+                "gain_skill_after_crit",
+                "Anihilation_Buff"
+            ]
+        ]
     }
 ]
