@@ -2,11 +2,11 @@
     {
         "nid": "Reinforced_by_Blood",
         "name": "Reinforced by Blood",
-        "desc": "Increases the ATK and Hit by 0.25 for each enemy unit killed of for the rest of the chapter.\nGains 25% lifesteal.The user's attacks cause bleed(1) to the enemy.",
-        "icon_nid": "SkillIcons",
+        "desc": "+1 Damage given, Hit for each enemy killed. Lasts until end of chapter.\nAttacks gain HP Absorb (25%), and inflict Bleed on hit.\n",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            3
+            2,
+            45
         ],
         "components": [
             [
@@ -14,20 +14,16 @@
                 null
             ],
             [
-                "combat_condition",
-                "unit.get_internal_level() > 41"
+                "stack",
+                9999
             ],
             [
                 "dynamic_damage",
-                "0,25"
+                "1"
             ],
             [
                 "dynamic_accuracy",
-                "0,25"
-            ],
-            [
-                "stack",
-                9999
+                "1"
             ],
             [
                 "lifelink",
@@ -36,9 +32,12 @@
             [
                 "give_statuses_after_combat",
                 [
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     }

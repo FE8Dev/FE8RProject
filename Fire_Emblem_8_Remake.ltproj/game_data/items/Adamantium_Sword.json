@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Adamantium_Sword",
+        "name": "Adamantium Sword",
+        "desc": "A sword refined by an even stronger material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +5 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            17,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] >= 240 and u(\"Atlas\").wexp['Sword'] < 420"
+            ]
+        ]
+    }
+]

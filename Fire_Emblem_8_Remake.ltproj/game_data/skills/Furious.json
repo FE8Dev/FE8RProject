@@ -2,16 +2,20 @@
     {
         "nid": "Furious",
         "name": "Furious",
-        "desc": "While Genji is below 50%HP, become Beserked. Gains Distant counter and Brave. The unit cannot use magic items.",
-        "icon_nid": "SkillIcons",
+        "desc": "While unit is below 50% Max HP, unit becomes Beserked. Gains Distant counter and Brave. Unit cannot use magic items.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            10
+            13,
+            52
         ],
         "components": [
             [
+                "grey_if_inactive",
+                null
+            ],
+            [
                 "condition",
-                "unit.get_hp() < unit.get_max_hp()//2"
+                "unit.get_hp() < unit.get_max_hp() // 2"
             ],
             [
                 "all_brave",
@@ -38,8 +42,16 @@
                 null
             ],
             [
-                "grey_if_inactive",
-                null
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapProvoke"
             ]
         ]
     }

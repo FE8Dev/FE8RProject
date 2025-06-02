@@ -2,7 +2,7 @@
     {
         "nid": "Odachi",
         "name": "Odachi",
-        "desc": "Sword representing the honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>SPDx2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SPD'))}</>)., +5 SPD.",
+        "desc": "Sword representing the honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses SPD instead of STR, +5 SPD.",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             1,
@@ -51,7 +51,7 @@
             ],
             [
                 "weapon_rank",
-                "S"
+                "A"
             ],
             [
                 "wexp",
@@ -84,11 +84,11 @@
             ],
             [
                 "alternate_damage_formula",
-                "SPDDOUBLE"
+                "ATTACK_SPEED"
             ],
             [
                 "eval_available",
-                "u(\"Genji\").wexp['Sword'] >= 300 and u(\"Genji\").wexp['Sword'] < 360"
+                "u(\"Genji\").wexp['Sword'] >= 240 and u(\"Genji\").wexp['Sword'] < 360"
             ]
         ]
     }

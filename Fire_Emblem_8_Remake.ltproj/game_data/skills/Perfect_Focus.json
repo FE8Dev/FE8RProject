@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Perfect_Focus",
+        "name": "Perfect Focus",
+        "desc": "While unit is at Max HP, +50 Avoid/Hit. Unit gains +30 Crit and Crit Damage. Unit gains Furious when HP is below 50% Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            52
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "eval_crit_additional",
+                "30"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

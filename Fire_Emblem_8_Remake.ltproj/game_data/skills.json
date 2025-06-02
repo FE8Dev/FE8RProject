@@ -43406,7 +43406,7 @@
             ],
             [
                 "gain_skill_after_kill",
-                "Pair_Up_Affinity_Generic"
+                "Scalatin_Work_Buff"
             ],
             [
                 "lost_on_end_chapter",
@@ -47689,60 +47689,59 @@
         ]
     },
     {
-        "nid": "Edge_Agressive",
-        "name": "Edge Agressive",
-        "desc": "Reduces DEF/RES to 0, Multiply the STR/SKL by 3. The damage inflicted by the unit is reduced to the maximum HP.",
-        "icon_nid": "SkillIcons",
+        "nid": "Lethal_Edge",
+        "name": "Lethal Edge",
+        "desc": "When unit initiates combat, double damage taken, multiply STR/SKL by 2, and unit deals x5 Crit damage instead of x3.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            3,
-            1
+            6,
+            28
         ],
         "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
             [
                 "stat_multiplier",
                 [
                     [
                         "STR",
-                        3.0
+                        2.0
                     ],
                     [
                         "SKL",
-                        3.0
+                        2
                     ]
                 ]
             ],
             [
-                "stat_change",
-                [
-                    [
-                        "DEF",
-                        -200
-                    ],
-                    [
-                        "RES",
-                        -200
-                    ]
-                ]
+                "resist_multiplier",
+                2.0
             ],
             [
-                "permanent_damage",
-                null
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
             ]
         ]
     },
     {
         "nid": "Martial_Maestry",
-        "name": "Martial Maestry",
-        "desc": "The user can wield all types of phisical weapons (Lance, Bow and axe) based in the rank of sword of the user.If the user has rank X weapons obtains Vantage, distant counter and close counter.",
-        "icon_nid": "SkillIcons",
+        "name": "Martial Mastery",
+        "desc": "This unit can use their special Axe and Bow weapon if Sword rank = SS. If unit's Sword rank = X rank, unit gains Vantage, Distant counter and Close counter.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            12
+            12,
+            48
         ],
         "components": [
             [
                 "class_skill",
                 null
+            ],
+            [
+                "condition",
+                "u(\"Atlas\").wexp['Sword'] >= 480"
             ],
             [
                 "vantage",
@@ -47755,21 +47754,17 @@
             [
                 "close_counter",
                 null
-            ],
-            [
-                "condition",
-                "u(\"_Atlas\").wexp['Sword'] >= 480"
             ]
         ]
     },
     {
         "nid": "Perfect_Warrior",
         "name": "Perfect Warrior",
-        "desc": "Reduce a Zero the stat MAG of the user, the user not can healing for other units.Increment in 8 the stats except HP and MOV. Gains 25% damage reducction and gains resistance a negatives status.",
-        "icon_nid": "SkillIcons",
+        "desc": "Reduce the unit's MAG to 0, unit cannot be healed. Increases all stats except HP and MOV by 8. Unit takes 25% less damage, and negative statuses last only one round.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            13
+            8,
+            50
         ],
         "components": [
             [
@@ -47850,11 +47845,11 @@
     {
         "nid": "Protector_Force",
         "name": "Protector Force",
-        "desc": "For each allied unit within three spaces of the user,the user gains +2 to all stats except HP and MOV. The user gains 20 of HP per allied unit within three spaces of the user.",
-        "icon_nid": "SkillIcons",
+        "desc": "For each ally within three spaces of the unit, this unit gains +2 to most stats. This unit heals 20% HP per ally within three spaces of the unit.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            3,
-            25
+            12,
+            52
         ],
         "components": [
             [
@@ -47901,17 +47896,17 @@
         ]
     },
     {
-        "nid": "Enfoqued",
-        "name": "Enfoqued",
-        "desc": "While Genji has full HP, +50 Avoid/Hit.The user gains +30Crit Damage and Crit.Gain Furious is below 50%HP.",
-        "icon_nid": "SkillIcons",
+        "nid": "Perfect_Focus",
+        "name": "Perfect Focus",
+        "desc": "While unit is at Max HP, +50 Avoid/Hit. Unit gains +30 Crit and Crit Damage. Unit gains Furious when HP is below 50% Max HP.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            11
+            10,
+            52
         ],
         "components": [
             [
-                "hidden_if_inactive",
+                "grey_if_inactive",
                 null
             ],
             [
@@ -47943,20 +47938,20 @@
     {
         "nid": "Furious",
         "name": "Furious",
-        "desc": "While Genji is below 50%HP, become Beserked.Counterattack a long distance and all attacks are Brave. The unit cannot use magic items.",
-        "icon_nid": "SkillIcons",
+        "desc": "While unit is below 50% Max HP, unit becomes Beserked. Gains Distant counter and Brave. Unit cannot use magic items.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            10
+            13,
+            52
         ],
         "components": [
             [
-                "hidden_if_inactive",
+                "grey_if_inactive",
                 null
             ],
             [
                 "condition",
-                "unit.get_hp() < unit.get_max_hp()//2"
+                "unit.get_hp() < unit.get_max_hp() // 2"
             ],
             [
                 "all_brave",
@@ -47981,17 +47976,29 @@
             [
                 "lost_on_endstep",
                 null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapProvoke"
             ]
         ]
     },
     {
         "nid": "Instant_Reaction",
         "name": "Instant Reaction",
-        "desc": "The user gains vantage if his SPD is >= than the enemy units' SPD, the user's attacks prevent the enemy from counterattacking.",
-        "icon_nid": "SkillIcons",
+        "desc": "The unit gains Vantage if unit's SPD is >= enemy's SPD, the unit's attacks prevent the enemy from counterattacking.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            3,
-            5
+            11,
+            27
         ],
         "components": [
             [
@@ -48014,12 +48021,12 @@
     },
     {
         "nid": "Protective_Shade",
-        "name": "Protective Shade",
-        "desc": "When the user is three spaces or less from a lord, he acquires the effect of provoke against enemies, increasing STR, SKL and SPD by 5.",
-        "icon_nid": "SkillIcons",
+        "name": "Protector Shade",
+        "desc": "Unit is more likely to be targeted by enemies.\n+5 STR, SKL, SPD if unit is within 3 spaces of any Lord ally.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            31
+            15,
+            32
         ],
         "components": [
             [
@@ -48027,40 +48034,38 @@
                 null
             ],
             [
-                "condition",
-                "([unitx for unitx in game.get_a_unit(Lord) if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
-            ],
-            [
-                "stat_change",
+                "stat_change_expression",
                 [
                     [
                         "STR",
-                        5
+                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
                     ],
                     [
                         "SKL",
-                        5
+                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
                     ],
                     [
                         "SPD",
-                        5
+                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
                     ]
                 ]
             ],
             [
                 "has_tags",
-                []
+                [
+                    "AIProvoke"
+                ]
             ]
         ]
     },
     {
         "nid": "Reinforced_by_Blood",
         "name": "Reinforced by Blood",
-        "desc": "Increases the ATK and Hit by 0.25 for each enemy unit killed of mode permanent.\nGains 25% lifesteal.The user's attacks cause bleed(1) to the enemy.",
-        "icon_nid": "SkillIcons",
+        "desc": "+1 Damage given, Hit for each enemy killed. Lasts until end of chapter.\nAttacks gain HP Absorb (25%), and inflict Bleed on hit.\n",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            4,
-            3
+            2,
+            45
         ],
         "components": [
             [
@@ -48068,20 +48073,16 @@
                 null
             ],
             [
-                "combat_condition",
-                "unit.get_internal_level() > 41"
+                "stack",
+                9999
             ],
             [
                 "dynamic_damage",
-                "0,25"
+                "1"
             ],
             [
                 "dynamic_accuracy",
-                "0,25"
-            ],
-            [
-                "stack",
-                9999
+                "1"
             ],
             [
                 "lifelink",
@@ -48090,16 +48091,19 @@
             [
                 "give_statuses_after_combat",
                 [
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
     {
         "nid": "Released_Resentment",
-        "name": "Released Resentment",
-        "desc": "<red>CA:</>+30 Crit and add missing HP as Bonus damage. <green>CD:6 Turns</>Gives galeforce up to 2 times per turn, the galeforce activation probability is calculated in SKL+LCK/3. The Cd increment in 1 for every kill and loses 1CD every turn.",
+        "name": "Release Resentment",
+        "desc": "<red>CA:</>+30 Crit and add missing HP as Bonus damage. <green>CD:6 Turns</>\n(SKL+LCK/3)% to activate Galeforce up to 2 times per turn. Kills also reduce the CD of the CA.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -48129,17 +48133,13 @@
             [
                 "kill_charge_increase",
                 1
-            ],
-            [
-                "drain_charge",
-                1
             ]
         ]
     },
     {
         "nid": "Released_Resentment_Galeforce_Hide",
-        "name": "Released Resentment",
-        "desc": "Gives galeforce up to 2 times per turn, the galeforce activation probability is calculated in SKL+LCK/3.",
+        "name": "Release Resentment",
+        "desc": "Gives galeforce up to 2 times per turn, the galeforce activation probability is SKL+LCK/3.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -48170,18 +48170,14 @@
     },
     {
         "nid": "Released_Resentment_Skill",
-        "name": "Released Resentment",
-        "desc": "+30 Crit and add missing HP to Bonus damage.",
+        "name": "Release Resentment",
+        "desc": "+30 Crit and add missing HP to damage.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
             7
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "display_skill_icon_in_combat",
                 null
@@ -48192,7 +48188,7 @@
             ],
             [
                 "eval_damage",
-                "((unit.get_hp() - unit.get_max_hp()) // -1) + 5"
+                "(unit.get_max_hp() - unit.get_hp()) + 1"
             ],
             [
                 "lost_on_end_combat2",
@@ -48208,7 +48204,7 @@
     {
         "nid": "Unchained_Wrath",
         "name": "Unchained Wrath",
-        "desc": "The user gains the ability to be immune to negative status effects. Gains +5 STR and SKL\neach time they dodge an attack for 2 turns.For each stack loses 10 Avoid and 5 LCK.",
+        "desc": "This unit is immune to negative status effects. +5 STR and SKL, and -10 Avo, -5 LCK each time this unit dodges an attack. Lasts for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -48232,7 +48228,7 @@
     {
         "nid": "Unchained_Wrath_Buff",
         "name": "Unchained Wrath",
-        "desc": "The user gains the ability to be immune to negative status effects. Gains +5 STR and SKL\neach time they dodge an attack for 2 turns.For each stack loses 10 Avoid and 5 LCK.",
+        "desc": "The user becomess immune to negative status effects. +5 STR and SKL, and -10 Avo, -5 LCK each time this unit dodges an attack. Lasts for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -48261,8 +48257,8 @@
                 ]
             ],
             [
-                "avoid",
-                -10
+                "dynamic_avoid",
+                "-10"
             ],
             [
                 "time",

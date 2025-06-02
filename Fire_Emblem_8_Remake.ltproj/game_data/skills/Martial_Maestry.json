@@ -2,16 +2,20 @@
     {
         "nid": "Martial_Maestry",
         "name": "Martial Mastery",
-        "desc": "The user can wield all types of melee weapons (Lance, Bow and axe) based on his sword rank.If the user has X rank, he gains Vantage, Distant counter and Close counter.",
-        "icon_nid": "SkillIcons",
+        "desc": "This unit can use their special Axe and Bow weapon if Sword rank = SS. If unit's Sword rank = X rank, unit gains Vantage, Distant counter and Close counter.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            1,
-            12
+            12,
+            48
         ],
         "components": [
             [
                 "class_skill",
                 null
+            ],
+            [
+                "condition",
+                "u(\"Atlas\").wexp['Sword'] >= 480"
             ],
             [
                 "vantage",
@@ -24,10 +28,6 @@
             [
                 "close_counter",
                 null
-            ],
-            [
-                "condition",
-                "u(\"Atlas\").wexp['Sword'] >= 480"
             ]
         ]
     }

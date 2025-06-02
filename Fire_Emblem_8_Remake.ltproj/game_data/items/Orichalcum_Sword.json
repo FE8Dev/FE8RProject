@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Orichalcum_Sword",
+        "name": "Orichalcum Sword",
+        "desc": "A sword rumored to be made of a rare material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), +3 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                16
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] >= 120 and u(\"Atlas\").wexp['Sword'] < 240"
+            ]
+        ]
+    }
+]

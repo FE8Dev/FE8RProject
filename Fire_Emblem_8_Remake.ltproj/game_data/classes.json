@@ -90411,6 +90411,157 @@
         "fields": []
     },
     {
+        "nid": "Knight_Atlas",
+        "name": "Knight",
+        "desc": "Heavily armored knights with poor movement. <icon>Infantry</><icon>Armor</>",
+        "tier": 1,
+        "movement_group": "Armors",
+        "promotes_from": null,
+        "turns_into": [
+            "General_Atlas"
+        ],
+        "tags": [
+            "Armor",
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 9,
+            "CON": 13,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 15,
+            "LCK": 25,
+            "DEF": 28,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 20,
+            "STR": 20,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 25,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 15
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 3,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 4,
+            "CON": 3,
+            "MOV": -98,
+            "RES": 3
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                5,
+                "Knights_Rush"
+            ],
+            [
+                15,
+                "Wary_Fighter"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                240
+            ],
+            "Axe": [
+                false,
+                0,
+                240
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Knight (U) Sword {Agro}-stand",
+        "combat_anim_nid": "T1_V3_Knight",
+        "fields": []
+    },
+    {
         "nid": "General_Atlas",
         "name": "General",
         "desc": "Experienced Knights clad in massive armor, wielding chained weapons. <icon>Infantry</><icon>Armor</>",
@@ -90418,9 +90569,7 @@
         "movement_group": "Armors",
         "promotes_from": "Knight",
         "turns_into": [
-            "T3_Terror_Knight",
-            "T3_Marshall",
-            "T3_Black_Knight"
+            "World_Protector"
         ],
         "tags": [
             "Armor",
@@ -90437,7 +90586,7 @@
             "LCK": 3,
             "DEF": 14,
             "RES": 4,
-            "CON": 11,
+            "CON": 15,
             "MOV": 6
         },
         "growths": {
@@ -90568,162 +90717,9 @@
         "fields": []
     },
     {
-        "nid": "Knight_Atlas",
-        "name": "Knight",
-        "desc": "Heavily armored knights with poor movement. <icon>Infantry</><icon>Armor</>",
-        "tier": 1,
-        "movement_group": "Armors",
-        "promotes_from": null,
-        "turns_into": [
-            "Great_Knight",
-            "T2_Armored_Blaster",
-            "General_Atlas"
-        ],
-        "tags": [
-            "Armor",
-            "AutoPromote",
-            "Infantry"
-        ],
-        "max_level": 20,
-        "bases": {
-            "HP": 23,
-            "STR": 5,
-            "MAG": 0,
-            "SKL": 3,
-            "SPD": 1,
-            "LCK": 0,
-            "DEF": 9,
-            "CON": 13,
-            "MOV": 5,
-            "RES": 1
-        },
-        "growths": {
-            "HP": 80,
-            "STR": 40,
-            "MAG": 0,
-            "SKL": 30,
-            "SPD": 15,
-            "LCK": 25,
-            "DEF": 28,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 20
-        },
-        "growth_bonus": {
-            "HP": 20,
-            "STR": 20,
-            "MAG": 5,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 10,
-            "DEF": 25,
-            "CON": 0,
-            "MOV": 0,
-            "RES": 15
-        },
-        "promotion": {
-            "HP": 4,
-            "STR": 3,
-            "MAG": 0,
-            "SKL": 1,
-            "SPD": 1,
-            "LCK": 1,
-            "DEF": 4,
-            "CON": 3,
-            "MOV": -98,
-            "RES": 3
-        },
-        "max_stats": {
-            "HP": 240,
-            "STR": 40,
-            "MAG": 40,
-            "SKL": 40,
-            "SPD": 40,
-            "LCK": 50,
-            "DEF": 40,
-            "CON": 40,
-            "MOV": 15,
-            "RES": 40
-        },
-        "learned_skills": [
-            [
-                5,
-                "Knights_Rush"
-            ],
-            [
-                15,
-                "Wary_Fighter"
-            ],
-            [
-                1,
-                "Knight_Pair_Up_hide"
-            ]
-        ],
-        "wexp_gain": {
-            "Sword": [
-                false,
-                0,
-                360
-            ],
-            "Lance": [
-                true,
-                1,
-                240
-            ],
-            "Axe": [
-                false,
-                0,
-                240
-            ],
-            "Bow": [
-                false,
-                0,
-                300
-            ],
-            "Staff": [
-                false,
-                0,
-                300
-            ],
-            "Light": [
-                false,
-                0,
-                300
-            ],
-            "Anima": [
-                false,
-                0,
-                300
-            ],
-            "Dark": [
-                false,
-                0,
-                300
-            ],
-            "Default": [
-                false,
-                0,
-                300
-            ],
-            "Monster": [
-                false,
-                0,
-                null
-            ]
-        },
-        "icon_nid": "Generic_Portrait_Knight",
-        "icon_index": [
-            0,
-            0
-        ],
-        "map_sprite_nid": "Knight (U) Sword {Agro}-stand",
-        "combat_anim_nid": "T1_V3_Knight",
-        "fields": []
-    },
-    {
         "nid": "World_Protector",
         "name": "World Protector",
-        "desc": "Warriors of heavy armor that are known as legend knight, are the it last defense of the world.<icon>Infantry</><icon>Armor</>",
+        "desc": "Warriors of immense armor known as legends, they are the last line of defense for the world.<icon>Infantry</><icon>Armor</>",
         "tier": 3,
         "movement_group": "Armors",
         "promotes_from": "General_Atlas",
@@ -90759,13 +90755,13 @@
         },
         "growth_bonus": {
             "HP": 180,
-            "STR": 100,
-            "MAG": 30,
-            "SKL": 85,
-            "SPD": 80,
-            "LCK": 85,
-            "DEF": 120,
-            "RES": 120,
+            "STR": 170,
+            "MAG": 90,
+            "SKL": 90,
+            "SPD": 90,
+            "LCK": 150,
+            "DEF": 140,
+            "RES": 140,
             "CON": 0,
             "MOV": 0
         },
@@ -90778,7 +90774,7 @@
             "LCK": 4,
             "DEF": 7,
             "RES": 7,
-            "CON": 2,
+            "CON": 3,
             "MOV": -97
         },
         "max_stats": {
@@ -90865,16 +90861,16 @@
             0
         ],
         "map_sprite_nid": "Marshall (U) Capeless Sword {Nuramon}-stand",
-        "combat_anim_nid": "_World_Protector",
+        "combat_anim_nid": "World_Protector",
         "fields": []
     },
     {
         "nid": "Shadow_Guard",
         "name": "Shadow Guard",
-        "desc": "Swordsmen who protect their lord from the darkness against any danger. <icon>Infantry</>",
+        "desc": "Swordsmen who protect their lord from any ahrm and danger. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": null,
+        "promotes_from": "Myrmidon_Male",
         "turns_into": [
             "Renegade_Avenger"
         ],
@@ -90910,7 +90906,7 @@
         },
         "growth_bonus": {
             "HP": 20,
-            "STR": 45,
+            "STR": 15,
             "MAG": 15,
             "SKL": 20,
             "SPD": 20,
@@ -91020,13 +91016,13 @@
             0
         ],
         "map_sprite_nid": "Swordmaster",
-        "combat_anim_nid": "_Shadow Guardian",
+        "combat_anim_nid": "Shadow_Guardian",
         "fields": []
     },
     {
         "nid": "Renegade_Avenger",
         "name": "Renegade Avenger",
-        "desc": "Samurai who has become a renegade ronin seeking revenge. <icon>Infantry</>",
+        "desc": "Sworn Samurai who has become a renegade ronin seeking revenge. <icon>Infantry</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Shadow_Guard",
@@ -91062,13 +91058,13 @@
         },
         "growth_bonus": {
             "HP": 90,
-            "STR": 70,
-            "MAG": 20,
-            "SKL": 75,
-            "SPD": 75,
-            "LCK": 50,
+            "STR": 90,
+            "MAG": 90,
+            "SKL": 180,
+            "SPD": 180,
+            "LCK": 70,
             "DEF": 70,
-            "RES": 50,
+            "RES": 70,
             "CON": 0,
             "MOV": 0
         },
@@ -91176,7 +91172,7 @@
             0
         ],
         "map_sprite_nid": "T3_Joshua_Quick_Blade",
-        "combat_anim_nid": "_Renegade_Avenger",
+        "combat_anim_nid": "Renegade_Avenger",
         "fields": []
     }
 ]

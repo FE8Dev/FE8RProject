@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Lethal_Edge",
+        "name": "Lethal Edge",
+        "desc": "When unit initiates combat, double damage taken, multiply STR/SKL by 2, and unit deals x5 Crit damage instead of x3.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            28
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "resist_multiplier",
+                2.0
+            ],
+            [
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
+            ]
+        ]
+    }
+]

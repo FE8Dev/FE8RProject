@@ -23395,6 +23395,10 @@
                 [
                     "Ancient_Pact_X"
                 ]
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
@@ -75870,7 +75874,8 @@
             [
                 "item_tags",
                 [
-                    "Water"
+                    "Water",
+                    "Wind"
                 ]
             ]
         ]
@@ -75971,7 +75976,8 @@
             [
                 "item_tags",
                 [
-                    "Water"
+                    "Water",
+                    "Wind"
                 ]
             ]
         ]
@@ -126635,7 +126641,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Cucara\").wexp['Sword'] >= 180 and u(\"Cucara\").wexp['Sword'] < 360"
+                "u(\"Cucara\").wexp['Sword'] >= 120 and u(\"Cucara\").wexp['Sword'] < 360"
             ],
             [
                 "wexp",
@@ -126912,7 +126918,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Cucara\").wexp['Bow'] >= 180 and u(\"Cucara\").wexp['Bow'] < 360"
+                "u(\"Cucara\").wexp['Bow'] >= 120 and u(\"Cucara\").wexp['Bow'] < 360"
             ],
             [
                 "wexp",
@@ -130783,7 +130789,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Arno\").wexp['Lance'] >= 420 or u(\"Arno\").wexp['Lance'] >= 360"
+                "u(\"Arno\").wexp['Lance'] >= 420"
             ],
             [
                 "status_on_hit",
@@ -137907,7 +137913,8 @@
             [
                 "item_tags",
                 [
-                    "Water"
+                    "Water",
+                    "Wind"
                 ]
             ]
         ]
@@ -138114,7 +138121,8 @@
             [
                 "item_tags",
                 [
-                    "Water"
+                    "Water",
+                    "Wind"
                 ]
             ]
         ]
@@ -144152,8 +144160,8 @@
     {
         "nid": "Atlas_Arsenal",
         "name": "Atlas Arsenal",
-        "desc": "Atlas personal weapons, Treasures of legends of other worlds.\n<red>Proficiency:</><icon>Sword</>",
-        "icon_nid": "Atlus Weapons",
+        "desc": "Atlas' personal weapons, Treasures of legends from other worlds.\n<red>Proficiency:</><icon>Sword</>",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             0,
             0
@@ -144166,10 +144174,13 @@
             [
                 "multi_item",
                 [
-                    "Peroroncino_Arm",
+                    "Battle_Sword",
+                    "Orichalcum_Sword",
+                    "Adamantium_Sword",
+                    "World_Vision",
+                    "Leader_Untouch",
                     "Dragon_Head",
-                    "Tatemikatsuchi",
-                    "Leader_Untouch"
+                    "Peroroncino_Arm"
                 ]
             ],
             [
@@ -144185,12 +144196,192 @@
         ]
     },
     {
-        "nid": "Tatemikatsuchi",
-        "name": "Tatemikatsuchi",
-        "desc": "Unfinished sword, forged to kill gods. Represents the ferocity of the user.\n<green>Skills:</>Edge Agressive, Flash Step\n<pink>Misc:</>SPD+SKL,+10 SPD.",
-        "icon_nid": "Atlus Weapons",
+        "nid": "Battle_Sword",
+        "name": "Battle Sword",
+        "desc": "A sword of a warrior.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), +1 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            0,
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] < 120"
+            ]
+        ]
+    },
+    {
+        "nid": "Orichalcum_Sword",
+        "name": "Orichalcum Sword",
+        "desc": "A sword rumored to be made of a rare material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), +3 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                16
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] >= 120 and u(\"Atlas\").wexp['Sword'] < 240"
+            ]
+        ]
+    },
+    {
+        "nid": "Adamantium_Sword",
+        "name": "Adamantium Sword",
+        "desc": "A sword refined by an even stronger material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +5 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            17,
             0
         ],
         "components": [
@@ -144216,6 +144407,96 @@
             ],
             [
                 "hit",
+                125
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] >= 240 and u(\"Atlas\").wexp['Sword'] < 420"
+            ]
+        ]
+    },
+    {
+        "nid": "World_Vision",
+        "name": "World Vision",
+        "desc": "A sword for one who now serves to protect the world.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +10 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            30,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
                 140
             ],
             [
@@ -144224,7 +144505,7 @@
             ],
             [
                 "weight",
-                10
+                14
             ],
             [
                 "level_exp",
@@ -144242,7 +144523,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Edge_Agressive"
+                    "Lethal_Edge"
                 ]
             ],
             [
@@ -144266,18 +144547,18 @@
             ],
             [
                 "alternate_damage_formula",
-                "SPD_SKL_STRONG"
+                "STR_DEF_STRONG"
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 420"
+                "u(\"Atlas\").wexp['Sword'] >= 420 and u(\"Atlas\").wexp['Sword'] < 480"
             ]
         ]
     },
     {
         "nid": "Leader_Untouch",
-        "name": "Leader Untouch",
-        "desc": "The sword of the more brave leader.He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF+RES",
+        "name": "Untouchable",
+        "desc": "The sword of the bravest leader. He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF + RES  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))+ (unit.get_stat('RES')))}</>), +15 SPD.",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             1,
@@ -144310,7 +144591,7 @@
             ],
             [
                 "crit",
-                15
+                35
             ],
             [
                 "weight",
@@ -144346,14 +144627,113 @@
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 480"
+                "u(\"Atlas\").wexp['Sword'] >= 480"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tatemikatsuchi",
+        "name": "Tatemikatsuchi",
+        "desc": "Unfinished sword, forged to kill gods. Represents the ferocity of the user.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +10 SPD.",
+        "icon_nid": "Atlus Weapons",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                155
+            ],
+            [
+                "crit",
+                45
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] >= 360"
             ]
         ]
     },
     {
         "nid": "Dragon_Head",
         "name": "Dragon Head",
-        "desc": "An axe forged with the skull of a legendary devil dragon.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Rock Punture</>\n<red>Effective:</><icon>Armor</><icon>magic</>",
+        "desc": "An axe forged with the skull of a legendary devil dragon.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Rock Punture</>\n<red>Effective:</><icon>Armor</><icon>Magic</>\n<pink>Misc:</>STR x2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             3,
@@ -144414,7 +144794,7 @@
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 420"
+                "u(\"Atlas\").wexp['Sword'] >= 360"
             ],
             [
                 "weapon_type_exempt",
@@ -144446,13 +144826,17 @@
                     "Earth",
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DAMAGE_2X"
             ]
         ]
     },
     {
         "nid": "Peroroncino_Arm",
         "name": "Peroroncino Arm",
-        "desc": "The weapon of the crimson angel, burst with hellish flame.\n<green>Skills:</>Pierce <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL.",
+        "desc": "The weapon of the crimson angel, bursts everything with a hellish flame.\n<green>Skills:</>Pierce <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat(SKL')))}</>).",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             2,
@@ -144530,7 +144914,7 @@
             ],
             [
                 "eval_available",
-                "u(\"_Atlas\").wexp['Sword'] >= 420"
+                "u(\"Atlas\").wexp['Sword'] >= 360"
             ],
             [
                 "weapon_type_exempt",
@@ -144553,7 +144937,7 @@
     {
         "nid": "Genji_Arsenal",
         "name": "Genji Arsenal",
-        "desc": "Genji personal blade, Forged with sweat and blood, it accompanies him on his journey.\n<red>Proficiency:</><icon>Sword</>",
+        "desc": "Genji's personal blade, Forged with sweat and blood, it accompanies him on his journey.\n<red>Proficiency:</><icon>Sword</>",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             1,
@@ -144588,7 +144972,7 @@
     {
         "nid": "Odachi",
         "name": "Odachi",
-        "desc": "Sword of honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses SPD, +5 SPD.",
+        "desc": "Sword representing the honor of a warrior serving a lord.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses SPD instead of STR, +5 SPD.",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             1,
@@ -144637,7 +145021,7 @@
             ],
             [
                 "weapon_rank",
-                "S"
+                "A"
             ],
             [
                 "wexp",
@@ -144674,14 +145058,14 @@
             ],
             [
                 "eval_available",
-                "u(\"Genji\").wexp['Sword'] >= 300 and u(\"Genji\").wexp['Sword'] < 360"
+                "u(\"Genji\").wexp['Sword'] >= 240 and u(\"Genji\").wexp['Sword'] < 360"
             ]
         ]
     },
     {
         "nid": "Onigiri",
         "name": "Onigiri",
-        "desc": "The user angry is imbued into this katana, strikes like a bloodthirsty demon.\n<green>Skills:</>Flash Step<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight<pink>Misc:</>Uses STR+SKL.",
+        "desc": "The user's anger is imbued into this katana, strikes like a bloodthirsty demon.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             0,
@@ -144777,7 +145161,7 @@
     {
         "nid": "Seiryuken",
         "name": "Seiryuken",
-        "desc": "Crystallization of the user's search for inner light, calm in its grip.\n<green>Skills:</>Flash Step<orange>Element:</><icon>Light</>\n</><red>Effective:</><icon>Shadow</><icon>Monsters</><pink>Misc:</>Uses SKL+SPD.",
+        "desc": "Crystallization of the user's search for inner light, calm in its grip.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadow</><icon>Monsters</>\n<pink>Misc:</>Uses SKL + SPD (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             2,
@@ -144880,7 +145264,7 @@
     {
         "nid": "Zanretsuken",
         "name": "Zanretsuken",
-        "desc": "Maximum balance of emotions, the user of this katana has iron control over them.\n<green>Skills:</>Enfoqued, Furious, Flash Step<orange>Element:</><icon>Light</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><red>Effective:</><icon>Shadow</><icon>Monster</>\n<pink>Misc:</>Uses STR+SKL+SPD.",
+        "desc": "A soothing blade, the wielder of this weapon has perfect control over their emotions.\n<green>Skills:</>Perfect Focus, Furious, Flash Step <orange>Element:</><icon>Light</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</> <red>Effective:</><icon>Shadow</><icon>Monster</>\n<pink>Misc:</>Uses STR + SKL + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')) + (unit.get_stat('SPD'))}</>).",
         "icon_nid": "Genji Weapons",
         "icon_index": [
             3,
@@ -144917,7 +145301,7 @@
             ],
             [
                 "weight",
-                10
+                18
             ],
             [
                 "level_exp",
@@ -144936,7 +145320,7 @@
                 [
                     "Flash_Step",
                     "Furious",
-                    "Enfoqued"
+                    "Perfect_Focus"
                 ]
             ],
             [
@@ -161332,7 +161716,9 @@
                     "T3_Joshua_Trueblade",
                     "T3_Marisa_Trueblade",
                     "T3_Marisa_Whisper",
-                    "T3_Joshua_Quick_Blade"
+                    "T3_Joshua_Quick_Blade",
+                    "Shadow_Guard",
+                    "Renegade_Avenger"
                 ]
             ]
         ]
@@ -165469,7 +165855,7 @@
     {
         "nid": "Red_Cross",
         "name": "Red Cross",
-        "desc": "A badge for those that pledge to do no harm, most of the time.",
+        "desc": "A badge for those that pledge to do no harm, most of the time.\nGives the Mercy CA",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,

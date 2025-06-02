@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Battle_Sword",
+        "name": "Battle Sword",
+        "desc": "A sword of a warrior.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), +1 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lethal_Edge"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Atlas"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
+            ],
+            [
+                "eval_available",
+                "u(\"Atlas\").wexp['Sword'] < 120"
+            ]
+        ]
+    }
+]
