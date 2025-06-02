@@ -2,12 +2,21 @@
     {
         "nid": "Aim_For_The_Throat",
         "name": "Aim For The Throat",
-        "desc": "CA silence + seal",
-        "icon_nid": null,
+        "desc": "Attacks inflict Silence after combat.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            5,
+            39
         ],
-        "components": []
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Silence"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
     }
 ]
