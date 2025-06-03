@@ -1,0 +1,55 @@
+[
+    {
+        "nid": "Protector_Force_P",
+        "name": "Protector Force +",
+        "desc": "For each ally within three spaces of the unit, this unit gains +2 to most stats. This unit heals 20% HP per ally within three spaces of the unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "MAG",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SKL",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SPD",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "LCK",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "DEF",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "RES",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "CON",
+                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ]
+                ]
+            ],
+            [
+                "eval_regeneration",
+                "20*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+            ]
+        ]
+    }
+]

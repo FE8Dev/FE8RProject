@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Terrify",
+        "name": "Terrify",
+        "desc": "Terifying magic that will leave it's victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Petrify</>Curse(8)</>(AOE:2)",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 300 and u(\"Oliver\").wexp['Dark'] < 420"
+            ],
+            [
+                "battle_cast_anim",
+                "Crimson Eye"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Petrify_Short",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_A",
+                    "Terrify_Debuff_Splash"
+                ]
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    }
+]
