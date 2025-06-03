@@ -41526,7 +41526,7 @@
     {
         "nid": "Abyss_Ring",
         "name": "Abyss Ring",
-        "desc": "A valuable ring shrounded in ominous darkness.\n<blue>On Hold:</>+10 MAG, attacks are very effective and deal double damage to Monster/Shadowblighted enemies.",
+        "desc": "A valuable ring shrouded in ominous darkness.\n<blue>On Hold:</>+10 MAG, attacks are very effective and deal double damage to Monster/Shadowblighted enemies.",
         "icon_nid": "03-29-25 New Accessories Icons",
         "icon_index": [
             7,
@@ -79488,6 +79488,524 @@
                     "Light",
                     "Wind"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Natasha_Dagger_E",
+        "name": "Crude Tools",
+        "desc": "Colm's polished dagger that is used to blind enemies' eyes.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<pink>Misc:</>Uses SPD, +10 Crit damage.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            7,
+            5
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "weight",
+                3
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_10"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Sword'] < 120"
+            ],
+            [
+                "added_crit_damage",
+                30
+            ]
+        ]
+    },
+    {
+        "nid": "Natasha_Dagger_C",
+        "name": "Barber's Razor",
+        "desc": "A dagger that's both bright and deadly.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +20 Crit damage.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                4
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_20"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Sword'] >= 120 and u(\"Natasha\").wexp['Sword'] < 240"
+            ]
+        ]
+    },
+    {
+        "nid": "Natasha_Dagger_A",
+        "name": "Scalpel",
+        "desc": "A bright dagger that Colm uses to blind multiple enemies.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +30 Crit damage.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_30"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Sword'] >= 240 and u(\"Natasha\").wexp['Sword'] < 420"
+            ]
+        ]
+    },
+    {
+        "nid": "Natasha_Dagger_SSS",
+        "name": "Natasha Dagger SSS",
+        "desc": "A dagger that can enable one to move at blinding speeds.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +15 SPD, +40 Crit damage.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            39,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_40",
+                    "Anihilation"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Sword'] >= 420"
+            ]
+        ]
+    },
+    {
+        "nid": "Natasha_Dagger_X",
+        "name": "Natasha Dagger X",
+        "desc": "A dagger that swaps enemy through an venomous portal.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</>Uses SPD, +20 SPD, Swap, +50 Crit Damage.",
+        "icon_nid": "New X rank stuff",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Natasha"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Natasha\").wexp['Sword'] >= 480"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_50",
+                    "Anihilation"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Red_Cross",
+        "name": "Red Cross",
+        "desc": "A badge for those that pledge to do no harm, most of the time.\nGives the Mercy CA",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            23
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Mercy_Seth_Skill"
+                ]
+            ],
+            [
+                "value",
+                500
             ]
         ]
     },
@@ -137019,6 +137537,39 @@
         ]
     },
     {
+        "nid": "Guild_Ring",
+        "name": "Guild Ring",
+        "desc": "Keepsake to remember better times.\n<blue>On Hold:</> Increases MAG growth by 20%, HP/STR/SKL/SPD/DEF/RES growth by 10% and gives the Bookworm skill.",
+        "icon_nid": "{Maxim} Vlad's Ring",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Guild_Ring_Skill",
+                    "Book_Worm_T1"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Azuth"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Alexander_Arsenal",
         "name": "Alexander Arsenal",
         "desc": "Alexander's personal crossbow, forged for the hunt of every prey.\n<red>Prof:</><icon>Bow</>",
@@ -165851,82 +166402,5 @@
                 null
             ]
         ]
-    },
-    {
-        "nid": "Red_Cross",
-        "name": "Red Cross",
-        "desc": "A badge for those that pledge to do no harm, most of the time.\nGives the Mercy CA",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            23
-        ],
-        "components": [
-            [
-                "multi_status_on_hold",
-                [
-                    "Mercy_Seth_Skill"
-                ]
-            ],
-            [
-                "value",
-                500
-            ]
-        ]
-    },
-    {
-        "nid": "Dagger_Natasha",
-        "name": "Dagger Natasha",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Dagger_Natasha_1",
-        "name": "Dagger Natasha",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Dagger_Natasha_2",
-        "name": "Dagger Natasha",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Dagger_Natasha_3",
-        "name": "Dagger Natasha",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Dagger_Natasha_4",
-        "name": "Dagger Natasha",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     }
 ]

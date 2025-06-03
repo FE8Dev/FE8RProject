@@ -37566,6 +37566,94 @@
         ]
     },
     {
+        "nid": "Triage",
+        "name": "Triage",
+        "desc": "+10 healing on targets below half hp\n(should be double healing)",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "empower_heal",
+                "10"
+            ],
+            [
+                "condition",
+                "target.get_hp() <= target.get_max_hp() / 2"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Aim_For_The_Throat",
+        "name": "Aim For The Throat",
+        "desc": "Attacks inflict Silence after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "give_status_after_combat_on_hit",
+                "Silence"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Anihilation",
+        "name": "Anihilation",
+        "desc": "+5 crit dmg on crit, stacks, last per chapter",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            14
+        ],
+        "components": [
+            [
+                "gain_skill_after_crit",
+                "Anihilation_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Anihilation_Buff",
+        "name": "Anihilation",
+        "desc": "+5crit dmg on crit, stacks, last per chapter",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            14
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "eval_crit_additional",
+                "5"
+            ]
+        ]
+    },
+    {
         "nid": "Gamble_Event",
         "name": "Gamble",
         "desc": "Joshua gambles in a fight. If Joshua wins, gain +1 bonus attack. If you lose, enemy gains +2 bonus attacks. 50/50 chance.",
@@ -45928,6 +46016,59 @@
         ]
     },
     {
+        "nid": "Guild_Ring_Skill",
+        "name": "Guild Ring Skill",
+        "desc": "gives stat growths",
+        "icon_nid": "{Maxim} Vlad's Ring",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        10
+                    ],
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        20
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Head_Collector",
         "name": "Head Collector",
         "desc": "Increases critical damage multiplier from x3 to x5, unit gains Galeforce up to three times per turn when kill a enemy unit.",
@@ -47825,7 +47966,7 @@
     {
         "nid": "Pierce",
         "name": "Pierce",
-        "desc": "Remove enemy DEF when attack.",
+        "desc": "Ignore enemy DEF when initiating combat.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -61606,38 +61747,5 @@
                 null
             ]
         ]
-    },
-    {
-        "nid": "Anihilation",
-        "name": "Anihilation",
-        "desc": "+crit on crit, stacks, last per chapter",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Wonderdrug",
-        "name": "Wonderdrug",
-        "desc": "bonus heal when low hp",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Aim_For_The_Throat",
-        "name": "Aim For The Throat",
-        "desc": "CA silence + seal",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     }
 ]
