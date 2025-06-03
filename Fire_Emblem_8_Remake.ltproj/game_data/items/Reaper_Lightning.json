@@ -1,0 +1,128 @@
+[
+    {
+        "nid": "Reaper_Lightning",
+        "name": "Reaper's Lightning",
+        "desc": "The peak of dark and thunder magic combined into a deadly spell.\n<green>Skills:</>Ancient Pact (X)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning_Black_Thunder"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_X"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    }
+]

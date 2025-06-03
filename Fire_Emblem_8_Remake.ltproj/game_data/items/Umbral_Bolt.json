@@ -1,0 +1,128 @@
+[
+    {
+        "nid": "Umbral_Bolt",
+        "name": "Umbral Bolt",
+        "desc": "The combined might of thunder and dark magic.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 360 and u(\"Oliver\").wexp['Dark'] < 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Black_Lightning"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_SS"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    }
+]

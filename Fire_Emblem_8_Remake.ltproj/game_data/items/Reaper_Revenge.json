@@ -1,0 +1,102 @@
+[
+    {
+        "nid": "Reaper_Revenge",
+        "name": "Reaper's Revenge",
+        "desc": "With this last transformation it finally has the power to avenge it's former wielder.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched\n<pink>Misc:</>cleave AOE attack, MAG+STR+SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets DEF, HP Absorb(20%)",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MAG_STRONG"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Axe'] >= 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_X"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "lifelink",
+                0.2
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    }
+]

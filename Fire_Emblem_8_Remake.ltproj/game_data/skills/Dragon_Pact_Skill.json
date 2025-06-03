@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dragon_Pact_Skill",
+        "name": "Dragon Pact",
+        "desc": "<red>CA:</>Allows you to trade 10 MAG in exchange for a free action attack. Regain your MAG next turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "combat_art_proc",
+                null
+            ],
+            [
+                "item_override",
+                "Dragon_Pact_Ability"
+            ],
+            [
+                "gain_skill_after_combat",
+                "Dragon_Pact_Debuff"
+            ]
+        ]
+    }
+]
