@@ -1,0 +1,52 @@
+[
+    {
+        "nid": "Self_Silence",
+        "name": "Self Silence",
+        "desc": "Unit cannot use offensive, non-STR based magic for 2 turns. Cannot be restored.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_anim",
+                "MapSilence"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapSilence"
+            ],
+            [
+                "upkeep_sound",
+                "Silence"
+            ],
+            [
+                "has_tags",
+                [
+                    "Silence"
+                ]
+            ]
+        ]
+    }
+]
