@@ -2,8 +2,8 @@
     {
         "nid": "Natasha_Dagger_C",
         "name": "Barber's Razor",
-        "desc": "A dagger that's both bright and deadly.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +20 Crit damage.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "Extremely sharp and clean, good for cutting.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +20 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
             5,
             0
@@ -64,7 +64,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -73,7 +74,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKILL_PROC"
             ],
             [
                 "prf_unit",
@@ -90,6 +91,16 @@
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 120 and u(\"Natasha\").wexp['Sword'] < 240"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     }

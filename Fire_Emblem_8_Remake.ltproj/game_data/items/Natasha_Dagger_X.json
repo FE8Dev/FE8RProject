@@ -1,11 +1,11 @@
 [
     {
         "nid": "Natasha_Dagger_X",
-        "name": "Natasha Dagger X",
-        "desc": "A dagger that swaps enemy through an venomous portal.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</>Uses SPD, +20 SPD, Swap, +50 Crit Damage.",
-        "icon_nid": "New X rank stuff",
+        "name": "Mercy",
+        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>Uses SKL, targets SPD, +20 SKL, +50 Crit Damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            9,
+            4,
             0
         ],
         "components": [
@@ -66,7 +66,10 @@
                 [
                     "Bleeding",
                     "Bleeding",
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia",
+                    "Anesthesia",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -75,7 +78,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKL_SKL"
             ],
             [
                 "prf_unit",
@@ -100,8 +103,18 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50",
-                    "Anihilation"
+                    "Bloodletting"
                 ]
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     }
