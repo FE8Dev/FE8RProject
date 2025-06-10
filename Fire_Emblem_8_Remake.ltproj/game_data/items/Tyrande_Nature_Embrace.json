@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Tyrande_Nature_Embrace",
+        "name": "Nature's Embrace",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>(Multi-target:2), Gives +7 DEF/+7 RES temporarily to ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 240"
+            ],
+            [
+                "status_on_hit",
+                "RES_DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Recover"
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ]
+        ]
+    }
+]

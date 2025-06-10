@@ -39196,7 +39196,7 @@
     {
         "nid": "Training_Weights",
         "name": "Training Weights",
-        "desc": "A heavy chain that can be worn to push one's limits.\n<blue>On Hold:</>Gain Paragon, but -50% SPD and does not apply to healing staves or when original EXP gain is 5.",
+        "desc": "A heavy chain that can be worn to push one's limits.\n<blue>On Hold:</>Gain Paragon, but -50% SPD and does not apply when original EXP gain is 5.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             9,
@@ -116592,7 +116592,8 @@
                         "Flying",
                         "Dragon",
                         "Armor",
-                        "Monster"
+                        "Monster",
+                        "Horse"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -137547,11 +137548,7 @@
         ],
         "components": [
             [
-                "equippable_accessory",
-                null
-            ],
-            [
-                "multi_status_on_equip",
+                "multi_status_on_hold",
                 [
                     "Guild_Ring_Skill",
                     "Book_Worm_T1"
@@ -138681,7 +138678,7 @@
     {
         "nid": "Suu_Well_of_Eternity",
         "name": "Well of Eternity",
-        "desc": "Restores HP equal user's MAG + MOV X2.\n<pink>Misc:</>(Multi-target:3), Gives +7 DEF/+7 RES temporarily to ally for 1 turn and restores them.",
+        "desc": "Restores HP equal user's MAG + MOV X2.\n<pink>Misc:</>(Multi-target:3), Gives +7 DEF/+7 RES temporarily to ally for 1 turn.",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -138777,10 +138774,6 @@
             [
                 "map_cast_anim",
                 "MapBigHealTrans"
-            ],
-            [
-                "restore",
-                null
             ]
         ]
     },
@@ -140949,7 +140942,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Diana\").wexp['Bow'] = 480"
+                "u(\"Diana\").wexp['Bow'] >= 480"
             ],
             [
                 "prf_unit",
@@ -141919,9 +141912,13 @@
                 "multi_item",
                 [
                     "Broken_Edge",
-                    "Reforged_Daggers",
-                    "Cain_Curses",
-                    "Azrael_Sword"
+                    "Reforged_Sword",
+                    "Anointed_Daggers",
+                    "Deadly_Edge",
+                    "Hassan_Aspect",
+                    "Merhunes_Razor",
+                    "Azrael_Sword",
+                    "Basiliscos_teeth"
                 ]
             ],
             [
@@ -142010,15 +142007,93 @@
             ],
             [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] < 300"
+                "u(\"Jaffar\").wexp['Sword'] < 120"
             ]
         ]
     },
     {
-        "nid": "Reforged_Daggers",
-        "name": "Reforged Daggers",
-        "desc": "A dagger that has been re-forged by drinking enemy blood. Their bite is poisonous.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
+        "nid": "Reforged_Sword",
+        "name": "Reforged Sword",
+        "desc": "A sword that has been re-forged by drinking enemy blood.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+ SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//3}</>).",
         "icon_nid": "{Batima} Quick Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 120 and u(\"Jaffar\").wexp['Sword'] < 240"
+            ]
+        ]
+    },
+    {
+        "nid": "Anointed_Daggers",
+        "name": "Anointed Daggers",
+        "desc": "Ritual razors consecrated between blood and rust, for eternity.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x1\n<pink>Misc:</>SPD+ SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//3}</>),gains 10% lifesteal,+20Crit damage .",
+        "icon_nid": "{SacredStones} Item 006 Spy s Dagger",
         "icon_index": [
             0,
             0
@@ -142042,11 +142117,11 @@
             ],
             [
                 "damage",
-                10
+                12
             ],
             [
                 "hit",
-                90
+                100
             ],
             [
                 "crit",
@@ -142055,6 +142130,191 @@
             [
                 "weight",
                 6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "status_on_equip",
+                "Quick_Knife"
+            ],
+            [
+                "battle_cast_anim",
+                "JavelinDracolord"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_WEAK"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_20"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "lifelink",
+                0.1
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 180 and u(\"Jaffar\").wexp['Sword'] < 300"
+            ]
+        ]
+    },
+    {
+        "nid": "Deadly_Edge",
+        "name": "Deadly Edge",
+        "desc": "Blade said to have taken several lives. Not to be confused with a Killing Edge.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//2}</>) .",
+        "icon_nid": "{Batima} Scarlet Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 240 and u(\"Jaffar\").wexp['Sword'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Basiliscos_teeth",
+        "name": "Basiliscos teeth",
+        "desc": "Daggers forged from the teeth of a basilisk, the most poisonous living creature.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x3\n<pink>Misc:</>SPD+ SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//2}</>),gains 20% lifesteal,+30 Crit Damage",
+        "icon_nid": "{FuriousHaunter} Duel Slashers",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                8
             ],
             [
                 "level_exp",
@@ -142080,6 +142340,10 @@
                 "statuses_on_hit",
                 [
                     "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
                     "Venomous_Effect_Boss"
                 ]
             ],
@@ -142089,13 +142353,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "SPD_SKL_STRONG"
-            ],
-            [
-                "prf_unit",
-                [
-                    "Jaffar"
-                ]
+                "SPD_SKL_MID"
             ],
             [
                 "multi_status_on_equip",
@@ -142104,16 +142362,30 @@
                 ]
             ],
             [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "lifelink",
+                0.2
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
                 "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 300 and u(\"Jaffar\").wexp['Sword'] < 360"
+                "u(\"Jaffar\").wexp['Sword'] >= 300 and u(\"Jaffar\").wexp['Sword'] < 420"
             ]
         ]
     },
     {
-        "nid": "Cain_Curses",
-        "name": "Cain Curses",
-        "desc": "Daggers said to belong to Cain, the first murderer. Their poison corrupts the will of enemy and user alike.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), +30 Crit damage .",
-        "icon_nid": "{FuriousHaunter} Duel Slashers",
+        "nid": "Merhunes_Razor",
+        "name": "Merhunes Razor",
+        "desc": "Representative sword of a demon prince, it is said that death is still the bearer of this weapon.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>SPD+ STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))//}</>).",
+        "icon_nid": "{Ereshkigal} Extra 6",
         "icon_index": [
             0,
             0
@@ -142137,7 +142409,93 @@
             ],
             [
                 "damage",
-                24
+                20
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "status_on_equip",
+                "Consecutive_Impact"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jaffar"
+                ]
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Hassan_Aspect",
+        "name": "Hassan Aspect",
+        "desc": "Daggers said to belong to the master of assassins, their lethal poison corrodes any defense and their edge drains all life.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x5\n<pink>Misc:</>SPD+ SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>)Gains 40%lifesteal,+40 Crit Damage.",
+        "icon_nid": "{SacredStones} Deathly Dagger (Jaffar - FEH) (SacredStones)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                20
             ],
             [
                 "hit",
@@ -142145,7 +142503,7 @@
             ],
             [
                 "crit",
-                25
+                40
             ],
             [
                 "weight",
@@ -142161,7 +142519,7 @@
             ],
             [
                 "weapon_rank",
-                "SS"
+                "SSS"
             ],
             [
                 "status_on_equip",
@@ -142178,7 +142536,12 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect"
+                    "Venomous_Effect",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss",
+                    "Venomous_Effect_Boss"
                 ]
             ],
             [
@@ -142196,14 +142559,22 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_40"
                 ]
+            ],
+            [
+                "lifelink",
+                0.4
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "eval_available",
+                "u(\"Jaffar\").wexp['Sword'] >=420"
             ]
         ]
     },
@@ -142283,7 +142654,8 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50",
-                    "Maker_End"
+                    "Maker_End",
+                    "Consecutive_Impact"
                 ]
             ],
             [
@@ -143489,8 +143861,8 @@
                     "Defensive_Axe",
                     "Cutting_Response",
                     "Bloodthirster",
+                    "Hidden_Darkness",
                     "Malefic_Force",
-                    "Sullying_Wind",
                     "Inner_Darkness",
                     "Gentle_Darkness",
                     "Pitch_Black_Embrace"
@@ -143587,7 +143959,7 @@
                 "multi_status_on_equip",
                 [
                     "Power_Chop_E",
-                    "Vantage_Plus_Item_Blade"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -143701,7 +144073,7 @@
                 "multi_status_on_equip",
                 [
                     "Power_Chop_C",
-                    "Vantage_Plus_Item_Blade"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -143828,7 +144200,7 @@
                 "multi_status_on_equip",
                 [
                     "Power_Chop_A",
-                    "Vantage_Plus_Item_Blade"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -143967,7 +144339,7 @@
                 "multi_status_on_equip",
                 [
                     "Power_Chop_X",
-                    "Vantage_Plus_Item_Blade"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -144031,8 +144403,8 @@
         ]
     },
     {
-        "nid": "Malefic_Force",
-        "name": "Malefic Force",
+        "nid": "Hidden_Darkness",
+        "name": "Hidden Darkness",
         "desc": "A sickening wave of energy that weakens one's enemies.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
@@ -144159,8 +144531,8 @@
         ]
     },
     {
-        "nid": "Sullying_Wind",
-        "name": "Sullying Wind",
+        "nid": "Malefic_Force",
+        "name": "Malefic Force",
         "desc": "A wind that whithers out the weak.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
@@ -144714,7 +145086,7 @@
         "desc": "Atlas' personal weapons, Treasures of legends from other worlds.\n<red>Proficiency:</><icon>Sword</>",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            0,
+            4,
             0
         ],
         "components": [
@@ -144749,7 +145121,7 @@
     {
         "nid": "Battle_Sword",
         "name": "Battle Sword",
-        "desc": "A sword of a warrior.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), +1 SPD.",
+        "desc": "A sword of a warrior.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), +1 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             4,
@@ -144803,8 +145175,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Lethal_Edge"
+                    "Protector_Force"
                 ]
             ],
             [
@@ -144839,7 +145210,7 @@
     {
         "nid": "Orichalcum_Sword",
         "name": "Orichalcum Sword",
-        "desc": "A sword rumored to be made of a rare material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF/2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), +3 SPD.",
+        "desc": "A sword rumored to be made of a rare material.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF/2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), +3 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             5,
@@ -144893,8 +145264,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Lethal_Edge"
+                    "Protector_Force"
                 ]
             ],
             [
@@ -144929,7 +145299,7 @@
     {
         "nid": "Adamantium_Sword",
         "name": "Adamantium Sword",
-        "desc": "A sword refined by an even stronger material.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +5 SPD.",
+        "desc": "A sword refined by an even stronger material.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +5 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             17,
@@ -144983,8 +145353,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Lethal_Edge"
+                    "Protector_Force"
                 ]
             ],
             [
@@ -145019,7 +145388,7 @@
     {
         "nid": "World_Vision",
         "name": "World Vision",
-        "desc": "A sword for one who now serves to protect the world.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +10 SPD.",
+        "desc": "A sword for one who now serves to protect the world.\n<green>Skills:</>Protector Force+\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +10 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             30,
@@ -145073,8 +145442,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Lethal_Edge"
+                    "Protector_Force_P"
                 ]
             ],
             [
@@ -145109,7 +145477,7 @@
     {
         "nid": "Leader_Untouch",
         "name": "Untouchable",
-        "desc": "The sword of the bravest leader. He protects his own with all his soul.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF + RES  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))+ (unit.get_stat('RES')))}</>), +15 SPD.",
+        "desc": "The sword of the bravest leader. He protects his own with all his soul.\n<green>Skills:</>Protector Force+\n<pink>Misc:</>STR + DEF + RES  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))+ (unit.get_stat('RES')))}</>), +15 SPD.",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             1,
@@ -145163,7 +145531,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Protector_Force"
+                    "Protector_Force_P"
                 ]
             ],
             [
@@ -145381,6 +145749,10 @@
             [
                 "alternate_damage_formula",
                 "DAMAGE_2X"
+            ],
+            [
+                "wexp",
+                0
             ]
         ]
     },
@@ -145482,6 +145854,10 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "wexp",
+                0
             ]
         ]
     },
@@ -145917,6 +146293,1584 @@
                     "Light",
                     "Dark"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Oliver_Arsenal",
+        "name": "Oliver Arsenal",
+        "desc": "Oliver's personal weapons. There's something ominous about them.\n<red>Prof:</><icon>Dark</><icon>Axe</><icon>MonsterW</>",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Dark_Spark",
+                    "Dark_Shock",
+                    "Umbral_Bolt",
+                    "Reaper_Lightning",
+                    "Scare",
+                    "Terrify",
+                    "Dragon_Fear",
+                    "Reaper_Memento",
+                    "Bloodied_Memento",
+                    "Mortal_Reminder",
+                    "Reaper_Revenge",
+                    "Dark_Lightning_Breath",
+                    "Fell_Storm"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Spark",
+        "name": "Dark Spark",
+        "desc": "A weak thunder spell enhanced by dark magic.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            7,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] < 120"
+            ],
+            [
+                "battle_cast_anim",
+                "Crimson_Eye_Thunder"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_E"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "allow_same_target",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Shock",
+        "name": "Dark Shock",
+        "desc": "An intermediate thunder spell enhanced by dark magic.\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 120 and u(\"Oliver\").wexp['Dark'] < 360"
+            ],
+            [
+                "battle_cast_anim",
+                "Demon_Surge_Thunder"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_C"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Umbral_Bolt",
+        "name": "Umbral Bolt",
+        "desc": "The combined might of thunder and dark magic.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 360 and u(\"Oliver\").wexp['Dark'] < 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Black_Lightning"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_SS"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Reaper_Lightning",
+        "name": "Reaper's Lightning",
+        "desc": "The peak of dark and thunder magic combined into a deadly spell.\n<green>Skills:</>Ancient Pact (X)\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning_Black_Thunder"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_X"
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "multi_target",
+                3
+            ],
+            [
+                "allow_same_target",
+                null
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Scare",
+        "name": "Scare",
+        "desc": "Ominous magic that will leave it's victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Petrify</>",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] < 300"
+            ],
+            [
+                "battle_cast_anim",
+                "Evil Eye"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_C"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Petrify_Short"
+                ]
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Terrify",
+        "name": "Terrify",
+        "desc": "Terifying magic that will leave it's victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Petrify</>Curse(8), (AOE:2)",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 300 and u(\"Oliver\").wexp['Dark'] < 420"
+            ],
+            [
+                "battle_cast_anim",
+                "Crimson Eye"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Petrify_Short",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_A",
+                    "Terrify_Debuff_Splash"
+                ]
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Fear",
+        "name": "Dragon Fear",
+        "desc": "Evil draconic magic petrifies your foes for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Petrify</>(AOE:2),Curse(15), (AOE:2)",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Dark'] >= 420"
+            ],
+            [
+                "battle_cast_anim",
+                "Gespenst"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Petrify_Short",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_SS",
+                    "Dragon_Fear_Debuff_Splash"
+                ]
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "start_cooldown",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Reaper_Memento",
+        "name": "Reaper's Memento",
+        "desc": "A keepsake of the former Reaper. It's magic hasn't fully faded yet.\n<green>Skills:</>Power Chop (C)\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            11,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Axe'] < 240"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_C"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Bloodied_Memento",
+        "name": "Bloodied Memento",
+        "desc": "The blood of your foes seems to have restored a bit of it's power. It hungers for more.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            12,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAGIC_DAMAGE"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Axe'] >= 240 and u(\"Oliver\").wexp['Axe'] < 360"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_A"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Mortal_Reminder",
+        "name": "Mortal Reminder",
+        "desc": "The Axe has been fully restored to it's former glory. But it hungers still...\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>Cleave AOE attack, MAG+STR (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets DEF",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_STR_STRONG"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Axe'] >= 360 and u(\"Oliver\").wexp['Axe'] < 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_SS"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Reaper_Revenge",
+        "name": "Reaper's Revenge",
+        "desc": "With this last transformation it finally has the power to avenge it's former wielder.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, MAG + STR + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets DEF, HP Absorb(20%)",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MAG_STRONG"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Axe'] >= 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_X"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Water"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ],
+            [
+                "lifelink",
+                0.2
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Lightning_Breath",
+        "name": "Dark Lightning Breath",
+        "desc": "The Breath of the newly awakened Fell Dragon.\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(AOE:1), Magical",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Monster'] < 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Dark_Breath"
+            ],
+            [
+                "enemy_blast_aoe",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Storm",
+        "name": "Fell Storm",
+        "desc": "The true might of the Fell Dragon.\n<orange>Element:</><icon>Dark</><icon>Thunder</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(AOE:2), Magical",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                40
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Oliver\").wexp['Monster'] >= 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Oliver"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Thunder"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "enemy_blast_aoe",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Dark_Breath"
+            ]
+        ]
+    },
+    {
+        "nid": "Calamity_Ability",
+        "name": "Calamity",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "min_range",
+                1
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "all_enemies_aoe",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    135,
+                    15,
+                    255
+                ]
+            ],
+            [
+                "never_use_battle_animation",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "global_range",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_25",
+                    "Shadow_Blight"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Pact_Ability",
+        "name": "Dragon Pact",
+        "desc": "",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "attack_after_combat",
+                null
             ]
         ]
     },

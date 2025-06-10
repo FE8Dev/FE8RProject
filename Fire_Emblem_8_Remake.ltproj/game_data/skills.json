@@ -19746,6 +19746,10 @@
                 null
             ],
             [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
                 "dynamic_damage",
                 "unit.get_hp() // 1.33333"
             ],
@@ -45655,7 +45659,7 @@
     {
         "nid": "High_Reduction",
         "name": "High Reduction",
-        "desc": "Reduce damage taken by 50%. Unit is immune to negative status effects while equipped.",
+        "desc": "Reduce damage taken by 50%. Negative status effects only last 1 turn while equipped.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -45711,7 +45715,7 @@
     {
         "nid": "Medium_Reduction",
         "name": "Medium Reduction",
-        "desc": "Reduce damage taken by 30%. Unit is immune to negative status effects while equipped.",
+        "desc": "Reduce damage taken by 30%. Negative status effects only last 1 turn while equipped.",
         "icon_nid": "Skills",
         "icon_index": [
             6,
@@ -47074,6 +47078,55 @@
         ]
     },
     {
+        "nid": "Consecutive_Impact",
+        "name": "Consecutive Impact",
+        "desc": "Every consecutive attack in the same combat gains +10 hit and +5 damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            14
+        ],
+        "components": [
+            [
+                "gain_on_strike",
+                "Consecutive_Impact_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Consecutive_Impact_Buff",
+        "name": " Consecutive Impact",
+        "desc": "+5 damage and +10 Hit for each attack of this unit to hit an enemy in combat.\nLost on end combat",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            34
+        ],
+        "components": [
+            [
+                "stack",
+                99
+            ],
+            [
+                "dynamic_damage",
+                "5"
+            ],
+            [
+                "dynamic_accuracy",
+                "10"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
         "nid": "Accost",
         "name": "Accost",
         "desc": "Adds SKL + SPD/2 to Crit.",
@@ -47984,8 +48037,8 @@
         ]
     },
     {
-        "nid": "Protector_Force",
-        "name": "Protector Force",
+        "nid": "Protector_Force_P",
+        "name": "Protector Force +",
         "desc": "For each ally within three spaces of the unit, this unit gains +2 to most stats. This unit heals 20% HP per ally within three spaces of the unit.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -48033,6 +48086,59 @@
             [
                 "eval_regeneration",
                 "20*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+            ]
+        ]
+    },
+    {
+        "nid": "Protector_Force",
+        "name": "Protector Force",
+        "desc": "For each ally within three spaces of the unit, this unit gains +1 to most stats. This unit heals 10% HP per ally within three spaces of the unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "MAG",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SKL",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "SPD",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "LCK",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "DEF",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "RES",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ],
+                    [
+                        "CON",
+                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                    ]
+                ]
+            ],
+            [
+                "eval_regeneration",
+                "10*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
             ]
         ]
     },
@@ -48404,6 +48510,254 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Pact_Art",
+        "name": "Dragon Pact",
+        "desc": "<red>CA:</>Allows you to trade 10 MAG in exchange for a free action attack. Regain your MAG next turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Dragon_Pact_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "condition",
+                "unit.get_stat('MAG') >= 10"
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Pact_Debuff",
+        "name": "Dragon Pact",
+        "desc": "-10 MAG until next your next turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "lost_on_upkeep",
+                null
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        -10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Pact_Skill",
+        "name": "Dragon Pact",
+        "desc": "<red>CA:</>Allows you to trade 10 MAG in exchange for a free action attack. Regain your MAG next turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "combat_art_proc",
+                null
+            ],
+            [
+                "item_override",
+                "Dragon_Pact_Ability"
+            ],
+            [
+                "gain_skill_after_combat",
+                "Dragon_Pact_Debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Scales",
+        "name": "Fell Scales",
+        "desc": "Reflect negative statuses back to the attacker. \n+15 DEF/RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "reflect_status",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Calamity",
+        "name": "Calamity",
+        "desc": "<red>CA:</>A magical attack that hits all enemies. Inflict Shadowblight and Curse(25) to all enemies hit. Cannot Double, cannot DS. Starts on cooldown <green>CD:7 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                7
+            ],
+            [
+                "ability",
+                "Calamity_Ability"
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Fear_Debuff_Splash",
+        "name": "Dragon Fear Debuff Splash",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_statuses",
+                {
+                    "statuses": [
+                        "Cursed_15",
+                        "Shadow_Blight",
+                        "Petrify_Short"
+                    ],
+                    "range": 2
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Terrify_Debuff_Splash",
+        "name": "Terrify Debuff Splash",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_statuses",
+                {
+                    "statuses": [
+                        "Cursed_8",
+                        "Shadow_Blight"
+                    ],
+                    "range": 2
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Petrify_Short",
+        "name": "Petrify",
+        "desc": "Unit is petrified.\nCannot avoid enemy attacks and suffers -30 dodge.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "end_time",
+                1
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "avoid",
+                -1000
+            ],
+            [
+                "crit_avoid",
+                -30
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    0,
+                    0,
+                    0
+                ]
             ]
         ]
     },
@@ -58428,6 +58782,10 @@
             48
         ],
         "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
             [
                 "dynamic_damage",
                 "unit.get_hp() // 1.33333"
