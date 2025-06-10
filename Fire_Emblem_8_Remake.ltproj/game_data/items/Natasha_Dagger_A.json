@@ -2,11 +2,11 @@
     {
         "nid": "Natasha_Dagger_A",
         "name": "Scalpel",
-        "desc": "A bright dagger that Colm uses to blind multiple enemies.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +30 Crit damage.",
-        "icon_nid": "Swords Sheet",
+        "desc": "Proffesional surgeon's tool, now used for war.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +30 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            6,
-            2
+            2,
+            0
         ],
         "components": [
             [
@@ -64,7 +64,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -73,7 +74,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKLP5"
             ],
             [
                 "prf_unit",
@@ -84,12 +85,23 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_30"
+                    "Crit_Damage_Bonus_30",
+                    "Bloodletting"
                 ]
             ],
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 240 and u(\"Natasha\").wexp['Sword'] < 420"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     }

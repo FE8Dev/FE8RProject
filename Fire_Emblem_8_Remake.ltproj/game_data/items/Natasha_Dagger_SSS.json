@@ -2,11 +2,11 @@
     {
         "nid": "Natasha_Dagger_SSS",
         "name": "Natasha Dagger SSS",
-        "desc": "A dagger that can enable one to move at blinding speeds.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +15 SPD, +40 Crit damage.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +15 SKL, +40 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            39,
-            1
+            3,
+            0
         ],
         "components": [
             [
@@ -64,7 +64,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -73,7 +74,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKL_SKL"
             ],
             [
                 "prf_unit",
@@ -94,12 +95,22 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_40",
-                    "Anihilation"
+                    "Bloodletting"
                 ]
             ],
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 420"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     }

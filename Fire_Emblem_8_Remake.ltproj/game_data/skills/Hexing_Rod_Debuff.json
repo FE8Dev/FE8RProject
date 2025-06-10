@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Hexing_Rod_Debuff",
+        "name": "Hexing Rod Debuff",
+        "desc": "Unit's max HP is cut by half during 5 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "'Boss' not in unit.tags"
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    }
+]
