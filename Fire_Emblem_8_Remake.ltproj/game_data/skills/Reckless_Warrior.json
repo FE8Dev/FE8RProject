@@ -2,12 +2,33 @@
     {
         "nid": "Reckless_Warrior",
         "name": "Reckless Warrior",
-        "desc": "",
+        "desc": " this unit has 0 def and res when in combat. this unit adds 1/2 def and 1/2 res into dodge. this unit can Always counter, regardless of range \nevent to give enemy pierce skill",
         "icon_nid": null,
         "icon_index": [
             0,
             0
         ],
-        "components": []
+        "components": [
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "close_counter",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global DeathEirika"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('RES')//2+unit.get_stat('DEF')//2"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
     }
 ]

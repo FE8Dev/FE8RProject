@@ -2,12 +2,33 @@
     {
         "nid": "Mindless_Beast",
         "name": "Mindless Beast",
-        "desc": "",
+        "desc": " this unit has 100% life steal(changed to 50% on kill). this unit cannot be healed any other way. this unit Always has desperation and vantage.",
         "icon_nid": null,
         "icon_index": [
             0,
             0
         ],
-        "components": []
+        "components": [
+            [
+                "empower_heal_received",
+                ""
+            ],
+            [
+                "lifetaker",
+                0.5
+            ],
+            [
+                "desperation",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
     }
 ]

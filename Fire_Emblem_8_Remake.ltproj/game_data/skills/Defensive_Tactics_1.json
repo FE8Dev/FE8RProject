@@ -1,6 +1,6 @@
 [
     {
-        "nid": "Defensive_Tactics",
+        "nid": "Defensive_Tactics_1",
         "name": "Defensive Tactics",
         "desc": "every ally that is in a 2x2 distance of the king's hand (king's hand included) takes 50% reduced damage.\nif those units attack in the player turn, they suffer a penalty of 30% damage dealth.\nif those units are attacked in the enemie's turn, the gain a bonus 60% damage dealth.",
         "icon_nid": null,
@@ -10,16 +10,12 @@
         ],
         "components": [
             [
-                "aura",
-                "Defensive_Tactics_1"
+                "resist_multiplier",
+                0.5
             ],
             [
-                "aura_range",
-                2
-            ],
-            [
-                "aura_target",
-                "unit"
+                "dynamic_damage_multiplier",
+                "0.7 if mode == 'attack' else 1.6"
             ]
         ]
     }
