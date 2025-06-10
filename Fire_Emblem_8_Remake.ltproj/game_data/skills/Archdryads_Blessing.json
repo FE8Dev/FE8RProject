@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Archdryads_Blessing",
+        "name": "Archdryad's Blessing",
+        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Archbishops_Blessing_Buff"
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Staff' and unit2.team == 'player'"
+            ]
+        ]
+    }
+]

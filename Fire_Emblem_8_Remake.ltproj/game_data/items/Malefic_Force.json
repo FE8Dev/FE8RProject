@@ -2,10 +2,10 @@
     {
         "nid": "Malefic_Force",
         "name": "Malefic Force",
-        "desc": "A sickening wave of energy that weakens one's enemies.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
+        "desc": "A wind that whithers out the weak.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
-            4,
+            5,
             0
         ],
         "components": [
@@ -19,19 +19,19 @@
             ],
             [
                 "damage",
-                6
+                10
             ],
             [
                 "hit",
-                75
+                85
             ],
             [
                 "crit",
-                4
+                6
             ],
             [
                 "weight",
-                12
+                16
             ],
             [
                 "weapon_type",
@@ -39,7 +39,7 @@
             ],
             [
                 "weapon_rank",
-                "E"
+                "A"
             ],
             [
                 "map_hit_add_blend",
@@ -55,7 +55,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Evil Eye"
+                "Crimson Eye"
             ],
             [
                 "ignore_line_of_sight",
@@ -64,7 +64,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Cursed_2",
+                    "Cursed_8",
                     "Shadow_Blight",
                     "Drained"
                 ]
@@ -77,7 +77,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Tareon\").wexp['Dark'] < 240"
+                "u(\"Tareon\").wexp['Dark'] >= 240 and u(\"Tareon\").wexp['Dark'] < 420"
             ],
             [
                 "min_range",
@@ -85,11 +85,11 @@
             ],
             [
                 "max_range",
-                2
+                3
             ],
             [
                 "alternate_damage_formula",
-                "MAG_RES_WEAK"
+                "MAG_RES_MID"
             ],
             [
                 "item_tags",
@@ -118,7 +118,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Ancient_Pact_E"
+                    "Ancient_Pact_A"
                 ]
             ],
             [

@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Tyrande_Natures_Glimmer",
+        "name": "Nature's Glimmer",
+        "desc": "Special light magic of mother nature.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            8
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Light'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Smite"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]
