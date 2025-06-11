@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Death_Penalty_Skill",
+        "name": "Death Penalty Skill",
+        "desc": "60% life steal on attack.\n+15 crit\n+10 rounds",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Pair_Up_Affinity_Generic",
+                    "recipient": "both",
+                    "allegiance": "both"
+                }
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "lifelink",
+                60.0
+            ]
+        ]
+    }
+]
