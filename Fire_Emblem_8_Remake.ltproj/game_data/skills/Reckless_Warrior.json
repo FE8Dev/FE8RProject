@@ -18,16 +18,20 @@
                 null
             ],
             [
-                "event_before_combat",
-                "Global DeathEirika"
-            ],
-            [
                 "dynamic_avoid",
                 "unit.get_stat('RES')//2+unit.get_stat('DEF')//2"
             ],
             [
                 "class_skill",
                 null
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Reckless_Warrior_Pierce",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
             ]
         ]
     }

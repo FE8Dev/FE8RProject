@@ -2,12 +2,17 @@
     {
         "nid": "Celerity",
         "name": "Celerity",
-        "desc": "",
+        "desc": "+10%damage per tile moved",
         "icon_nid": null,
         "icon_index": [
             0,
             0
         ],
-        "components": []
+        "components": [
+            [
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
+            ]
+        ]
     }
 ]
