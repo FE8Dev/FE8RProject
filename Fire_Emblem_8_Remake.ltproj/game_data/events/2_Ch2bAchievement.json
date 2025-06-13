@@ -3,7 +3,7 @@
         "name": "Ch2bAchievement",
         "trigger": "unit_wait",
         "level_nid": "2",
-        "condition": "region.nid == 'VanessaTile'",
+        "condition": "region.nid == 'VanessaTile' and unit.team == 'player'",
         "commands": [],
         "only_once": true,
         "priority": 20,

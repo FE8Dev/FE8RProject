@@ -1870,4 +1870,3 @@ class DefenseProcWhenHit(SkillComponent):
             if component.defines('weapon_filter'):
                 return component.weapon_filter(unit, item)
         return True
- 

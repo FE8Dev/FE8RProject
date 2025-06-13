@@ -2,7 +2,7 @@
     {
         "nid": "Divine_Presence_T3",
         "name": "Divine Presence",
-        "desc": "Allows unit to warp to any ally on the map.",
+        "desc": "Allows unit to warp to any ally on the map. +10% buff to adj. allies stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -20,6 +20,18 @@
             [
                 "copysafe",
                 []
+            ],
+            [
+                "aura",
+                "Divine_Presence_Buff"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
             ]
         ]
     }

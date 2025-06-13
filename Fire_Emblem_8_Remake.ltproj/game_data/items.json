@@ -29487,7 +29487,7 @@
     {
         "nid": "Multiheal",
         "name": "Multiheal",
-        "desc": "Restores 35 HP.\n<pink>Misc:</>(Multi-target:2), support classes only.",
+        "desc": "Restores (User's MAG + LCK/3) HP.\n<pink>Misc:</>(Multi-target:2), support classes only.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             8,
@@ -29577,12 +29577,12 @@
                 "33- Healing Orchestral Cover"
             ],
             [
-                "heal",
-                35
-            ],
-            [
                 "cooldown",
                 3
+            ],
+            [
+                "equation_heal",
+                "MAG_LCK_WEAK"
             ]
         ]
     },
@@ -30525,7 +30525,7 @@
     {
         "nid": "MultihealP",
         "name": "Multiheal+",
-        "desc": "Restores 55 HP.\n<pink>Misc:</>(Multi-target:3), support class only.",
+        "desc": "Restores (User's MAG + LCK/2) HP.\n<pink>Misc:</>(Multi-target:3), support class only.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             7,
@@ -30619,8 +30619,8 @@
                 "33- Healing Orchestral Cover"
             ],
             [
-                "heal",
-                55
+                "equation_heal",
+                "MAG_LCK_MID"
             ]
         ]
     },
@@ -32076,7 +32076,7 @@
     {
         "nid": "MultihealPP",
         "name": "Multiheal++",
-        "desc": "Restores 100 HP.\n<pink>Misc:</>(Multi-target:5), support class only.",
+        "desc": "Restores (User's MAG + LCK) HP.\n<pink>Misc:</>(Multi-target:5), support class only.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             0,
@@ -32170,8 +32170,8 @@
                 "33- Healing Orchestral Cover"
             ],
             [
-                "heal",
-                100
+                "equation_heal",
+                "MAG_LCK_STRONG"
             ]
         ]
     },
@@ -40183,6 +40183,342 @@
         ]
     },
     {
+        "nid": "Hexing_Rod",
+        "name": "Hexing Rod",
+        "desc": "A rod from a faraway land that cuts enemy's max HP by half. <green>CD:2</>\n<pink>Misc:</>Support classes only. Doesn't affect Bosses.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                5
+            ],
+            [
+                "value",
+                1500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Hexing_Rod_Debuff"
+            ],
+            [
+                "exp",
+                30
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Immobilize",
+        "name": "Immobilize",
+        "desc": "Enemy can't move and Avoid is reduced by 30. <green>CD:3</>\n<pink>Misc:</>Support classes only.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                5
+            ],
+            [
+                "value",
+                1500
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Immobilize"
+            ],
+            [
+                "exp",
+                30
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Totter",
+        "name": "Totter",
+        "desc": "A staff that confuses up to 4 enemies. <green>CD:5</>\n<pink>Misc:</>Support classes only.",
+        "icon_nid": "Staff",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "cooldown",
+                5
+            ],
+            [
+                "status_on_hit",
+                "Confuse"
+            ],
+            [
+                "exp",
+                5
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_target",
+                4
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rex_Silence",
+        "name": "Rex Silence",
+        "desc": "Silences all enemies in an area, but user is silenced for 2 turns. <green>CD:8</>\n<pink>Misc:</>Support classes only. Starts on CD.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "hit",
+                50
+            ],
+            [
+                "exp",
+                0
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "value",
+                15000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "enemy_blast_aoe",
+                12
+            ],
+            [
+                "status_on_hit",
+                "Silence"
+            ],
+            [
+                "self_status_on_hit",
+                "Self_Silence"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    85,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Silence1"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Reinforce"
+            ],
+            [
+                "battle_cast_anim",
+                "Silence"
+            ],
+            [
+                "cooldown",
+                8
+            ],
+            [
+                "start_cooldown",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Angelic_Robe_Consumable",
         "name": "Angel's Tear",
         "desc": "Permanently raises HP by 7 points.",
@@ -44710,7 +45046,7 @@
         ]
     },
     {
-        "nid": "Iron Sword",
+        "nid": "Iron_Sword",
         "name": "Iron Sword",
         "desc": "Easy to use sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
         "icon_nid": "Sword",
@@ -44967,7 +45303,7 @@
         ]
     },
     {
-        "nid": "Slim Sword",
+        "nid": "Slim_Sword",
         "name": "Slim Sword",
         "desc": "A lightweight sword that crits more often.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR/2 +SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP, +1 SPD.",
         "icon_nid": "Sword",
@@ -45052,7 +45388,7 @@
         ]
     },
     {
-        "nid": "Steel Sword",
+        "nid": "Steel_Sword",
         "name": "Steel Sword",
         "desc": "Basic sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+1 SPD.",
         "icon_nid": "Sword",
@@ -45133,7 +45469,7 @@
         ]
     },
     {
-        "nid": "Silver Sword",
+        "nid": "Silver_Sword",
         "name": "Silver Sword",
         "desc": "Valuable sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>+3 SPD.",
         "icon_nid": "Sword",
@@ -45299,7 +45635,7 @@
         ]
     },
     {
-        "nid": "Iron Blade",
+        "nid": "Iron_Blade",
         "name": "Iron Blade",
         "desc": "Heavy blade. Knocks back enemy on hit.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
         "icon_nid": "Sword",
@@ -45394,7 +45730,7 @@
         ]
     },
     {
-        "nid": "Steel Blade",
+        "nid": "Steel_Blade",
         "name": "Steel Blade",
         "desc": "Strong, heavy blade.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
         "icon_nid": "Sword",
@@ -45489,7 +45825,7 @@
         ]
     },
     {
-        "nid": "Silver Blade",
+        "nid": "Silver_Blade",
         "name": "Silver Blade",
         "desc": "Valuable heavy blade.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
         "icon_nid": "Sword",
@@ -45758,7 +46094,7 @@
         ]
     },
     {
-        "nid": "Killing Edge",
+        "nid": "Killing_Edge",
         "name": "Killing Edge",
         "desc": "A sword made to finish off weakened enemies. <green>CD: 1</>\n<green>Skills:</>Flash Step, Finisher\n<pink>Misc:</>+3 SPD.",
         "icon_nid": "Sword",
@@ -46214,7 +46550,7 @@
         ]
     },
     {
-        "nid": "Brave Sword",
+        "nid": "Brave_Sword",
         "name": "Brave Sword",
         "desc": "Allows 2 consecutive hits.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Brave, +5 SPD.",
         "icon_nid": "Sword",
@@ -46388,7 +46724,7 @@
         ]
     },
     {
-        "nid": "Light Brand",
+        "nid": "Light_Brand",
         "name": "Light Brand",
         "desc": "A magical sword that uses light to strike.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Magical, +3 SPD.",
         "icon_nid": "Sword",
@@ -46709,7 +47045,7 @@
         ]
     },
     {
-        "nid": "Iron Lance",
+        "nid": "Iron_Lance",
         "name": "Iron Lance",
         "desc": "Basic Lance.\n<green>Skills:</>Lance Guard (E)",
         "icon_nid": "Lance",
@@ -46849,7 +47185,7 @@
         ]
     },
     {
-        "nid": "Slim Lance",
+        "nid": "Slim_Lance",
         "name": "Slim Lance",
         "desc": "Easy to use lance.\n<green>Skills:</>Lance Guard (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP.",
         "icon_nid": "Lance",
@@ -46925,7 +47261,7 @@
         ]
     },
     {
-        "nid": "Steel Lance",
+        "nid": "Steel_Lance",
         "name": "Steel Lance",
         "desc": "Reinforced Lance.\n<green>Skills:</>Lance Guard (E)",
         "icon_nid": "Lance",
@@ -46997,7 +47333,7 @@
         ]
     },
     {
-        "nid": "Silver Lance",
+        "nid": "Silver_Lance",
         "name": "Silver Lance",
         "desc": "Valuable Lance.\n<green>Skills:</>Lance Guard (C)",
         "icon_nid": "Lance",
@@ -47145,7 +47481,7 @@
         ]
     },
     {
-        "nid": "Toxin Lance",
+        "nid": "Toxin_Lance",
         "name": "Toxin Lance",
         "desc": "Venom on contact.\n<green>Skills:</>Lance Guard (E)\n<violet>Inflicts:</><icon>Venom</>",
         "icon_nid": "Lance",
@@ -47309,7 +47645,7 @@
         ]
     },
     {
-        "nid": "Killer Lance",
+        "nid": "Killer_Lance",
         "name": "Killer Lance",
         "desc": "A lance that transfers momentum to its lethality. <green>CD: 1</>\n<green>Skills:</>Lance Guard (C), Impaling Charge.",
         "icon_nid": "Lance",
@@ -47632,7 +47968,7 @@
         ]
     },
     {
-        "nid": "Brave Lance",
+        "nid": "Brave_Lance",
         "name": "Brave Lance",
         "desc": "Allows two consecutive hits.\n<green>Skills:</>Lance Guard (A)\n<pink>Misc:</>Brave",
         "icon_nid": "Lance",
@@ -47792,7 +48128,7 @@
         ]
     },
     {
-        "nid": "Heavy Spear",
+        "nid": "Heavy_Spear",
         "name": "Heavy Spear",
         "desc": "A heavy spear that knights fear.\n<green>Skills:</>Lance Guard (E)\n<red>Very effective:</><icon>Armor</>",
         "icon_nid": "Lance",
@@ -48236,7 +48572,7 @@
         ]
     },
     {
-        "nid": "Iron Axe",
+        "nid": "Iron_Axe",
         "name": "Iron Axe",
         "desc": "Basic iron axe.\n<green>Skills:</>Power Chop (E)",
         "icon_nid": "Axe",
@@ -48462,7 +48798,7 @@
         ]
     },
     {
-        "nid": "Steel Axe",
+        "nid": "Steel_Axe",
         "name": "Steel Axe",
         "desc": "Heavy steel axe.\n<violet>Inflicts:</>Breach (2)",
         "icon_nid": "Axe",
@@ -48534,7 +48870,7 @@
         ]
     },
     {
-        "nid": "Silver Axe",
+        "nid": "Silver_Axe",
         "name": "Silver Axe",
         "desc": "Precious powerful axe.\n<violet>Inflicts:</>Breach (5)",
         "icon_nid": "Axe",
@@ -48686,7 +49022,7 @@
         ]
     },
     {
-        "nid": "Poison Axe",
+        "nid": "Poison_Axe",
         "name": "Poison Axe",
         "desc": "Venom on contact.\n<green>Skills:</>Power Chop (E)\n<violet>Inflicts:</><icon>Venom</>",
         "icon_nid": "Axe",
@@ -48767,7 +49103,7 @@
         ]
     },
     {
-        "nid": "Hand Axe",
+        "nid": "Hand_Axe",
         "name": "Hand Axe",
         "desc": "Throwable axe.\n<green>Skills:</>Power Chop (E)",
         "icon_nid": "Axe",
@@ -49021,7 +49357,7 @@
         ]
     },
     {
-        "nid": "Killer Axe",
+        "nid": "Killer_Axe",
         "name": "Killer Axe",
         "desc": "An axe made with revenge, for revenge. <green>CD: 1</>\n<green>Skill:</>Retribution, </>Power Chop (C)\n<violet>Inflicts:</>Breach (5)",
         "icon_nid": "Axe",
@@ -49367,7 +49703,7 @@
         ]
     },
     {
-        "nid": "Dragon Axe",
+        "nid": "Dragon_Axe",
         "name": "Dragon Axe",
         "desc": "Clip the wings of dragons.\n<violet>Inflicts:</>Breach (5)\n<red>Very effective:</><icon>Dragon</>",
         "icon_nid": "Axe",
@@ -49699,7 +50035,7 @@
         ]
     },
     {
-        "nid": "Brave Axe",
+        "nid": "Brave_Axe",
         "name": "Brave Axe",
         "desc": "Allows two consecutive hits.\n<green>Skills:</>Power Chop (A)\n<pink>Misc:</>Brave",
         "icon_nid": "Axe",
@@ -49785,7 +50121,7 @@
         ]
     },
     {
-        "nid": "Battle Axe",
+        "nid": "Battle_Axe",
         "name": "Battle Axe",
         "desc": "An axe for veterans.\n<violet>Inflicts:</>Breach (5)",
         "icon_nid": "Axe",
@@ -49979,7 +50315,7 @@
         ]
     },
     {
-        "nid": "Iron Bow",
+        "nid": "Iron_Bow",
         "name": "Iron Bow",
         "desc": "Basic iron bow.\n<red>Effective:</><icon>Flying</>",
         "icon_nid": "Bow",
@@ -50065,7 +50401,7 @@
         ]
     },
     {
-        "nid": "Steel Bow",
+        "nid": "Steel_Bow",
         "name": "Steel Bow",
         "desc": "Heavy steel bow.\n<red>Effective:</><icon>Flying</>",
         "icon_nid": "Bow",
@@ -50151,7 +50487,7 @@
         ]
     },
     {
-        "nid": "Silver Bow",
+        "nid": "Silver_Bow",
         "name": "Silver Bow",
         "desc": "Precious powerful bow.\n<red>Effective:</><icon>Flying</>",
         "icon_nid": "Bow",
@@ -50237,7 +50573,7 @@
         ]
     },
     {
-        "nid": "Poison Bow",
+        "nid": "Poison_Bow",
         "name": "Poison Bow",
         "desc": "Venom on contact.\n<violet>Inflicts:</><icon>Venom</>\n<red>Effective:</><icon>Flying</>",
         "icon_nid": "Bow",
@@ -50429,7 +50765,7 @@
         ]
     },
     {
-        "nid": "Killer Bow",
+        "nid": "Killer_Bow",
         "name": "Killer Bow",
         "desc": "A bow that channels accuracy into deadly force. <green>CD: 1</>\n<green>Skill:</>Markman's Edge\n<red>Effective:</><icon>Flying</>",
         "icon_nid": "Bow",
@@ -50524,7 +50860,7 @@
         ]
     },
     {
-        "nid": "Brave Bow",
+        "nid": "Brave_Bow",
         "name": "Brave Bow",
         "desc": "Allows two consecutive hits.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Brave",
         "icon_nid": "Bow",
@@ -50618,7 +50954,7 @@
         ]
     },
     {
-        "nid": "Short Bow",
+        "nid": "Short_Bow",
         "name": "Short Bow",
         "desc": "A bow that can shoot at close range.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Infantry archers only.",
         "icon_nid": "Bow",
@@ -51541,7 +51877,7 @@
     {
         "nid": "Heal",
         "name": "Heal",
-        "desc": "Restores (User's MAG + 10) HP.\n<pink>Misc:</>Support classes only.",
+        "desc": "Restores (User's MAG + LCK/3) HP.\n<pink>Misc:</>Support classes only.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -51597,10 +51933,6 @@
                 null
             ],
             [
-                "equation_heal",
-                "HEAL"
-            ],
-            [
                 "prf_tags",
                 [
                     "Support"
@@ -51613,13 +51945,17 @@
             [
                 "battle_cast_anim",
                 "Heal"
+            ],
+            [
+                "eval_heal_and_restore",
+                "500"
             ]
         ]
     },
     {
         "nid": "Mend",
         "name": "Mend",
-        "desc": "Restores (User's MAG + 20) HP.\n<pink>Misc:</>Support classes only.",
+        "desc": "Restores (User's MAG + LCK/3) HP.\n<pink>Misc:</>Support classes only.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -51672,7 +52008,7 @@
             ],
             [
                 "equation_heal",
-                "MEND"
+                "MAG_LCK_MID"
             ],
             [
                 "prf_tags",
@@ -51767,7 +52103,7 @@
     {
         "nid": "Physic",
         "name": "Physic",
-        "desc": "Restores an ally's HP from afar. <green>CD:2</>\n<pink>Misc:</>Support classes only.",
+        "desc": "Restores (User's MAG + LCK) an ally's HP from afar. <green>CD:2</>\n<pink>Misc:</>Support classes only.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -51832,7 +52168,7 @@
             ],
             [
                 "equation_heal",
-                "HEAL"
+                "MAG_LCK_STRONG"
             ],
             [
                 "prf_tags",
@@ -51849,7 +52185,7 @@
     {
         "nid": "Fortify",
         "name": "Fortify",
-        "desc": "Restores (User's Magic + 10) HP to all allies within range. <green>CD:6</>\n<pink>Misc:</>Support classes only.",
+        "desc": "Restores (User's MAG + LCK/2) HP to all allies within range. <green>CD:6</>\n<pink>Misc:</>Support classes only.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -51902,7 +52238,7 @@
             ],
             [
                 "equation_heal",
-                "HEAL"
+                "MAG_LCK_MID"
             ],
             [
                 "prf_tags",
@@ -55524,7 +55860,7 @@
         ]
     },
     {
-        "nid": "Wretched Air",
+        "nid": "Wretched_Air",
         "name": "Wretched Air",
         "desc": "<pink>Misc:</>Ignore's enemy defence.",
         "icon_nid": "Neutral",
@@ -55692,7 +56028,7 @@
         ]
     },
     {
-        "nid": "Demon Light",
+        "nid": "Demon_Light",
         "name": "Demon Light",
         "desc": "<red>Effective:</><icon>Shadowblight</>",
         "icon_nid": "Neutral",
@@ -55860,7 +56196,7 @@
         ]
     },
     {
-        "nid": "Demon Surge",
+        "nid": "Demon_Surge",
         "name": "Demon Surge",
         "desc": "<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (5)",
         "icon_nid": "Neutral",
@@ -56052,7 +56388,7 @@
         ]
     },
     {
-        "nid": "Rotten Claw",
+        "nid": "Rotten_Claw",
         "name": "Rotten Claw",
         "desc": "Strong claws.\n<violet>Inflicts:</><icon>Bleed</>",
         "icon_nid": "Neutral",
@@ -56216,7 +56552,7 @@
         ]
     },
     {
-        "nid": "Poison Claw",
+        "nid": "Poison_Claw",
         "name": "Poison Claw",
         "desc": "Claws that spread diseases.\n<violet>Inflicts:</><icon>Venom</><icon>Bleed</>",
         "icon_nid": "Neutral",
@@ -56374,7 +56710,7 @@
         ]
     },
     {
-        "nid": "Fetid Claw",
+        "nid": "Fetid_Claw",
         "name": "Fetid Claw",
         "desc": "Powerful claws.\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>STR + HP/5. (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "Neutral",
@@ -56534,7 +56870,7 @@
         ]
     },
     {
-        "nid": "Lethal Talon",
+        "nid": "Lethal_Talon",
         "name": "Lethal Talon",
         "desc": "Claws that spread plagues.\n<violet>Inflicts:</><icon>Venom</>x2<icon>Bleed</>\n<pink>Misc:</>STR + HP/5.",
         "icon_nid": "Neutral",
@@ -56704,7 +57040,7 @@
         ]
     },
     {
-        "nid": "Sharp Claw",
+        "nid": "Sharp_Claw",
         "name": "Sharp Claw",
         "desc": "Sharp claws.\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Neutral",
@@ -56864,7 +57200,7 @@
         ]
     },
     {
-        "nid": "Fiery Fang",
+        "nid": "Fiery_Fang",
         "name": "Fiery Fang",
         "desc": "Strong fangs.\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SPD.",
         "icon_nid": "Neutral",
@@ -57024,7 +57360,7 @@
         ]
     },
     {
-        "nid": "Evil Eye",
+        "nid": "Evil_Eye",
         "name": "Evil Eye",
         "desc": "<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>",
         "icon_nid": "Neutral",
@@ -57127,7 +57463,7 @@
         ]
     },
     {
-        "nid": "Crimson Eye",
+        "nid": "Crimson_Eye",
         "name": "Crimson Eye",
         "desc": "<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>",
         "icon_nid": "Neutral",
@@ -58179,7 +58515,7 @@
         ]
     },
     {
-        "nid": "Chest Key",
+        "nid": "Chest_Key",
         "name": "Chest Key",
         "desc": "Opens chests.",
         "icon_nid": "Consumable",
@@ -58210,7 +58546,7 @@
         ]
     },
     {
-        "nid": "Door Key",
+        "nid": "Door_Key",
         "name": "Door Key",
         "desc": "Opens doors.",
         "icon_nid": "Consumable",
@@ -58514,7 +58850,7 @@
         ]
     },
     {
-        "nid": "Angelic Robe",
+        "nid": "Angelic_Robe",
         "name": "Angelic Robe",
         "desc": "Accessory that raises maximum HP by 15, boost HP growth rate by 30%, and restore 25% of user's Max HP each turn.",
         "icon_nid": "Boosters",
@@ -58554,7 +58890,7 @@
         ]
     },
     {
-        "nid": "Energy Ring",
+        "nid": "Energy_Ring",
         "name": "Energy Ring",
         "desc": "Accessory that raises STR/MAG by 5 points, boost STR/MAG growth rate by 15% and gives both the Odd/Even Tempo skill.",
         "icon_nid": "Boosters",
@@ -58600,7 +58936,7 @@
         ]
     },
     {
-        "nid": "Secret Book",
+        "nid": "Secret_Book",
         "name": "Secret Book",
         "desc": "Accessory that raises SKL by 5 points, boost SKL growth rate by 30% and gives the Discipline skill.",
         "icon_nid": "Boosters",
@@ -58682,7 +59018,7 @@
         ]
     },
     {
-        "nid": "Goddess Icon",
+        "nid": "Goddess_Icon",
         "name": "Goddess Icon",
         "desc": "Accessory that raises LCK by 7 points, boosts LCK growth rate by 30%, and gives the Support Magic skill.",
         "icon_nid": "Boosters",
@@ -58840,7 +59176,7 @@
         ]
     },
     {
-        "nid": "Body Ring",
+        "nid": "Body_Ring",
         "name": "Body Ring",
         "desc": "Accessory that raises Constitution by 2 points and increases almost all growths by 5%",
         "icon_nid": "Boosters",
@@ -58876,7 +59212,7 @@
         ]
     },
     {
-        "nid": "Hero Crest",
+        "nid": "Hero_Crest",
         "name": "Hero Crest",
         "desc": "Accessory that increases HP/Luck growths by 15%, SKL growth by 10%, SPD growth by 5%, and gives the Heroic Stance Combat Art.",
         "icon_nid": "Boosters",
@@ -58904,7 +59240,7 @@
         ]
     },
     {
-        "nid": "Knight Crest",
+        "nid": "Knight_Crest",
         "name": "Knight Crest",
         "desc": "Accessory that increases HP growth by 20%, DEF growth by 15%, SKL growth by 10%, RES growth by 5%, and gives the Charge Combat Art.",
         "icon_nid": "Boosters",
@@ -58932,7 +59268,7 @@
         ]
     },
     {
-        "nid": "Orion Bolt",
+        "nid": "Orion_Bolt",
         "name": "Orion Bolt",
         "desc": "Accessory that increases RES/SKL growths by 15%, SPD growth by 10%, STR growth by 5%, and gives the Sleep Strike Combat Art.",
         "icon_nid": "Boosters",
@@ -58960,7 +59296,7 @@
         ]
     },
     {
-        "nid": "Elysian Whip",
+        "nid": "Elysian_Whip",
         "name": "Elysian Whip",
         "desc": "Accessory that increases RES growth by 20%, STR/MAG/SPD growths by 10% and gives the Reinforce Ability.",
         "icon_nid": "Boosters",
@@ -58988,7 +59324,7 @@
         ]
     },
     {
-        "nid": "Guiding Ring",
+        "nid": "Guiding_Ring",
         "name": "Guiding Ring",
         "desc": "Accessory that increases MAG growth by 20%, RES/SKL growths by 10%, LCK growth by 5%, and gives the Flare Combat Art.",
         "icon_nid": "Boosters",
@@ -59016,7 +59352,7 @@
         ]
     },
     {
-        "nid": "Ocean Seal",
+        "nid": "Ocean_Seal",
         "name": "Ocean Seal",
         "desc": "Accessory that increases HP growth by 25%, STR growth by 15%, SPD/LCK by 10%, and gives the Tsunami Combat Art.",
         "icon_nid": "Boosters",
@@ -59044,7 +59380,7 @@
         ]
     },
     {
-        "nid": "Lunar Brace",
+        "nid": "Lunar_Brace",
         "name": "Lunar Brace",
         "desc": "+15 HP, +3 to most stats, and 100% growth bonus to most stats. Attacks pierce either DEF or RES.",
         "icon_nid": "Boosters",
@@ -59110,7 +59446,7 @@
         ]
     },
     {
-        "nid": "Solar Brace",
+        "nid": "Solar_Brace",
         "name": "Solar Brace",
         "desc": "+15 HP, +3 to most stats, and 100% growth bonus to most stats. Heal 100% of damage dealt.",
         "icon_nid": "Boosters",
@@ -59175,7 +59511,7 @@
         ]
     },
     {
-        "nid": "Master Seal",
+        "nid": "Master_Seal",
         "name": "Master Seal",
         "desc": "Can promote any unit that is Lv. 15.",
         "icon_nid": "Boosters",
@@ -59233,8 +59569,8 @@
         ]
     },
     {
-        "nid": "Metis's Tome",
-        "name": "Metis's Tome",
+        "nid": "Metis_s_Tome",
+        "name": "Metis s Tome",
         "desc": "Accessory that raises all of the user's growth rates by 25.",
         "icon_nid": "Boosters",
         "icon_index": [
@@ -59256,7 +59592,7 @@
         ]
     },
     {
-        "nid": "Fili Shield",
+        "nid": "Fili_Shield",
         "name": "Fili Shield",
         "desc": "<blue>On Hold:</>Negates flying weakness.",
         "icon_nid": "Boosters",
@@ -59276,7 +59612,7 @@
         ]
     },
     {
-        "nid": "Hoplon Guard",
+        "nid": "Hoplon_Guard",
         "name": "Hoplon Guard",
         "desc": "<blue>On Hold:</>User is immune to critical attacks.",
         "icon_nid": "Boosters",
@@ -59296,7 +59632,7 @@
         ]
     },
     {
-        "nid": "Red Gem",
+        "nid": "Red_Gem",
         "name": "Red Gem",
         "desc": "An expensive gem worth 500 gold.",
         "icon_nid": "Valuable",
@@ -59312,7 +59648,7 @@
         ]
     },
     {
-        "nid": "Blue Gem",
+        "nid": "Blue_Gem",
         "name": "Blue Gem",
         "desc": "An expensive gem worth 2500 gold.",
         "icon_nid": "Valuable",
@@ -59328,7 +59664,7 @@
         ]
     },
     {
-        "nid": "White Gem",
+        "nid": "White_Gem",
         "name": "White Gem",
         "desc": "An expensive gem worth 5000 gold.",
         "icon_nid": "Valuable",
@@ -79494,11 +79830,11 @@
     {
         "nid": "Natasha_Dagger_E",
         "name": "Crude Tools",
-        "desc": "Colm's polished dagger that is used to blind enemies' eyes.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<pink>Misc:</>Uses SPD, +10 Crit damage.",
-        "icon_nid": "Swords Sheet",
+        "desc": "Old tanner's knives that have seen better days.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>Uses SKL, targets SPD, +10 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            7,
-            5
+            1,
+            0
         ],
         "components": [
             [
@@ -79565,7 +79901,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKILL_PROC"
             ],
             [
                 "prf_unit",
@@ -79581,19 +79917,25 @@
             ],
             [
                 "eval_available",
-                "u(\"Natasha\").wexp['Sword'] < 120"
+                "u(\"Natasha\").wexp['Sword'] < 120 and has_skill(unit, 'Eirika_Ultimate')"
             ],
             [
-                "added_crit_damage",
-                30
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     },
     {
         "nid": "Natasha_Dagger_C",
         "name": "Barber's Razor",
-        "desc": "A dagger that's both bright and deadly.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +20 Crit damage.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "Extremely sharp and clean, good for cutting.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +20 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
             5,
             0
@@ -79654,7 +79996,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -79663,7 +80006,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKILL_PROC"
             ],
             [
                 "prf_unit",
@@ -79680,17 +80023,27 @@
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 120 and u(\"Natasha\").wexp['Sword'] < 240"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     },
     {
         "nid": "Natasha_Dagger_A",
         "name": "Scalpel",
-        "desc": "A bright dagger that Colm uses to blind multiple enemies.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +30 Crit damage.",
-        "icon_nid": "Swords Sheet",
+        "desc": "Proffesional surgeon's tool, now used for war.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +30 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            6,
-            2
+            2,
+            0
         ],
         "components": [
             [
@@ -79748,7 +80101,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -79757,7 +80111,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKLP5"
             ],
             [
                 "prf_unit",
@@ -79768,23 +80122,34 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_30"
+                    "Crit_Damage_Bonus_30",
+                    "Bloodletting"
                 ]
             ],
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 240 and u(\"Natasha\").wexp['Sword'] < 420"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     },
     {
         "nid": "Natasha_Dagger_SSS",
         "name": "Natasha Dagger SSS",
-        "desc": "A dagger that can enable one to move at blinding speeds.\n<green>Skills:</>Quick Knife\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Bleed</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses SPD, +15 SPD, +40 Crit damage.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +15 SKL, +40 Crit damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            39,
-            1
+            3,
+            0
         ],
         "components": [
             [
@@ -79842,7 +80207,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -79851,7 +80217,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKL_SKL"
             ],
             [
                 "prf_unit",
@@ -79872,22 +80238,32 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_40",
-                    "Anihilation"
+                    "Bloodletting"
                 ]
             ],
             [
                 "eval_available",
                 "u(\"Natasha\").wexp['Sword'] >= 420"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     },
     {
         "nid": "Natasha_Dagger_X",
-        "name": "Natasha Dagger X",
-        "desc": "A dagger that swaps enemy through an venomous portal.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</>Uses SPD, +20 SPD, Swap, +50 Crit Damage.",
-        "icon_nid": "New X rank stuff",
+        "name": "Mercy",
+        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>Uses SKL, targets SPD, +20 SKL, +50 Crit Damage.",
+        "icon_nid": "New Daggers Natasha",
         "icon_index": [
-            9,
+            4,
             0
         ],
         "components": [
@@ -79948,7 +80324,10 @@
                 [
                     "Bleeding",
                     "Bleeding",
-                    "Bleeding"
+                    "Bleeding",
+                    "Anesthesia",
+                    "Anesthesia",
+                    "Anesthesia"
                 ]
             ],
             [
@@ -79957,7 +80336,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SKL_SKL"
             ],
             [
                 "prf_unit",
@@ -79982,19 +80361,29 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50",
-                    "Anihilation"
+                    "Bloodletting"
                 ]
+            ],
+            [
+                "prf_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ATTACK_SPEED"
             ]
         ]
     },
     {
-        "nid": "Red_Cross",
-        "name": "Red Cross",
+        "nid": "Red_Heart",
+        "name": "Red Heart",
         "desc": "A badge for those that pledge to do no harm, most of the time.\nGives the Mercy CA",
         "icon_nid": "skill_icons",
         "icon_index": [
-            8,
-            23
+            0,
+            24
         ],
         "components": [
             [
@@ -123037,7 +123426,7 @@
     {
         "nid": "Tiamats_Wrath",
         "name": "Tiamat's Wrath",
-        "desc": "Moze's lance tranformed to it's true form.\n<green>Skills:</>Lance Guard (X)\n<orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets weaker of DEF or RES.",
+        "desc": "Moze's lance tranformed to its true form.\n<green>Skills:</>Lance Guard (X)\n<orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets weaker of DEF or RES.",
         "icon_nid": "Moze Weapons",
         "icon_index": [
             3,
@@ -127101,7 +127490,7 @@
     {
         "nid": "Joy_Receiver",
         "name": "Joy Receiver",
-        "desc": "A relatively lightweight sword that gleefully sings while swung, with a thrum of lightning in it's blade.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</> SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
+        "desc": "A relatively lightweight sword that gleefully sings while swung, with a thrum of lightning in its blade.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</> SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             8,
@@ -129937,7 +130326,7 @@
     {
         "nid": "Firesnake_Staff",
         "name": "Firesnake Staff",
-        "desc": "Summons a firesnake familiar to help protect it's user.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Cannot Crit, always hits, +5 RES",
+        "desc": "Summons a firesnake familiar to help protect its user.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Cannot Crit, always hits, +5 RES",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             5,
@@ -141936,7 +142325,7 @@
     {
         "nid": "Broken_Edge",
         "name": "Broken Edge",
-        "desc": "A egde of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), bonus WEXP.",
+        "desc": "An edge of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), bonus WEXP.",
         "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
             0,
@@ -143593,7 +143982,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Lyn\").wexp['Bow'] >= 180 and u(\"Lyn\").wexp['Bow'] > 360"
+                "u(\"Lyn\").wexp['Bow'] >= 180 and u(\"Lyn\").wexp['Bow'] < 360"
             ],
             [
                 "effective_damage",
@@ -143837,6 +144226,22 @@
             [
                 "weapon_triangle_override",
                 "Dark"
+            ]
+        ]
+    },
+    {
+        "nid": "Not_Counterable",
+        "name": "Not Counterable",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -147873,6 +148278,1396 @@
                 null
             ]
         ]
+    },
+    {
+        "nid": "Tyrande_Arsenal",
+        "name": "Tyrande Arsenal",
+        "desc": "Arsenal of a Dryad.\n<red>Prof:</><icon>Staff</><icon>Sword</><icon>Anima</><icon>Light</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Tyrande_Leaf_Staff",
+                    "Tyrande_Verdant_Touch",
+                    "Tyrande_Nature_Embrace",
+                    "Tyrande_Wooden_Staff",
+                    "Tyrande_Dryad_Staff",
+                    "Tyrande_Archdruid_Staff",
+                    "Tyrande_Natures_Judgement",
+                    "Tyrande_Natures_Glimmer",
+                    "Tyrande_Natures_Flame",
+                    "Tyrande_Archdryads_Wrath",
+                    "Tyrande_Fissure",
+                    "Tyrande_Chasm",
+                    "Tyrande_Upheaval"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Wooden_Staff",
+        "name": "Wooden Staff",
+        "desc": "An old staff that can deal damage in a pinch forTyrande.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Cannot Crit, always hits.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            4,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "Stone_New"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] < 120"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Dryad_Staff",
+        "name": "Dryad's Staff",
+        "desc": "A staff for those who walk the path of wisdom.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Cannot Crit, always hits, +5 DEF",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "battle_cast_anim",
+                "Elstone"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 120 and u(\"Tyrande\").wexp['Staff'] < 240"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Archdruid_Staff",
+        "name": "Archdruid's Staff",
+        "desc": "Staff for masters of their mind.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<green>Skills:</>Rolling Stone\n<pink>Misc:</>Cannot Crit, always hits, +10 DEF.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "battle_cast_anim",
+                "Wall_Crush"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Rolling_Stone"
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 240 and u(\"Tyrande\").wexp['Staff'] < 420"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Natures_Judgement",
+        "name": "Nature's Judgement",
+        "desc": "What lays beyond those who have found retribution.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<green>Skills:</>Rolling Stone\n<pink>Misc:</>Cannot Crit, always hits, +20 DEF.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            5,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "battle_cast_anim",
+                "Earthly_Purge"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Rolling_Stone"
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 420"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Leaf_Staff",
+        "name": "Leaf Staff",
+        "desc": "Restores HP equal user's MAG/2 + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            7
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_WEAK"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] < 120"
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Verdant_Touch",
+        "name": "Verdant Touch",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 120 and u(\"Tyrande\").wexp['Staff'] < 240"
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Mend"
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Nature_Embrace",
+        "name": "Nature's Embrace",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>(Multi-target:2), Gives +7 DEF/+7 RES temporarily to ally for 1 turn.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_MOV_HEAL_MID"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Staff'] >= 240"
+            ],
+            [
+                "status_on_hit",
+                "RES_DEFP"
+            ],
+            [
+                "battle_cast_anim",
+                "Recover"
+            ],
+            [
+                "multi_target",
+                2
+            ],
+            [
+                "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exp",
+                15
+            ],
+            [
+                "map_hit_sfx",
+                "Heal"
+            ],
+            [
+                "map_cast_sfx",
+                "HealInit"
+            ],
+            [
+                "map_cast_anim",
+                "MapMediumHealTrans"
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Natures_Glimmer",
+        "name": "Nature's Glimmer",
+        "desc": "Special light magic of mother nature.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            9,
+            8
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                150
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Light'] < 360"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Smite"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Natures_Flame",
+        "name": "Nature's Flame",
+        "desc": "A light filled fire to cleanse the intruders of nature.\n<orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Reduced Vision\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                170
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Light'] >= 360 and u(\"Tyrande\").wexp['Light'] < 420"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision",
+                    "Seared"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Ivaldi"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Fire"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Archdryads_Wrath",
+        "name": "Archdryad's Wrath",
+        "desc": "Nature's reckoning is nigh.\n<orange>Element:</><icon>Light</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Seared</><icon>Shadowblight</>, Reduced Vision, Curse (15)\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                200
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                80
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Light'] >= 420"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Reduced_Vision",
+                    "Seared",
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aureola_Dark"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Fire",
+                    "Dark"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Fissure",
+        "name": "Fissure",
+        "desc": "Advanced earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (30), +15 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            16,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                1600
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_DEF_STRONG"
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_A"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Rock_Punctures"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Anima'] >= 180 and u(\"Tyrande\").wexp['Anima'] < 360"
+            ],
+            [
+                "battle_cast_anim",
+                "Sand_Blast"
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Chasm",
+        "name": "Chasm",
+        "desc": "A tome that splits the earth. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (50), +20 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            17,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                3000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_DEF_STRONG"
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_SS"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Rock_Punctures"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Anima'] >= 360 and u(\"Tyrande\").wexp['Anima'] < 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Wall_Crush"
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_Upheaval",
+        "name": "Upheaval",
+        "desc": "Tremendous movements reshape the world.\n<green>Skills:</>Counter\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (70), +30 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            19,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                3000
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_DEF_STRONG"
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_X"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        30
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Rock_Punctures"
+            ],
+            [
+                "status_on_equip",
+                "Counter"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tyrande"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Tyrande\").wexp['Anima'] >= 480"
+            ],
+            [
+                "battle_cast_anim",
+                "Gaia_Worm"
+            ]
+        ]
+    },
+    {
+        "nid": "Transform",
+        "name": "Transform",
+        "desc": "Used if someone needs a transformation.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "transform",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jonathans_Arsenal",
+        "name": "Jonathans Arsenal",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Heavy_Boots",
+        "name": "Heavy Boots",
+        "desc": "-2 move but +20% move growth",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "equippable_accessory",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Heavy_Boots_Skill"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Jonathan_Sword",
+        "name": "Jonathan Sword",
+        "desc": "1-2 range\n when this unit kils 5 units with this axe: give every ally unit a buff of 10-20-30-40-50 (scale with weapon tier) poits of defense and res\nthis sword can use the mercy skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Jonathan_Axe",
+        "name": "new_1",
+        "desc": "1-3 range\nwhen this unit kills 5 units with this axe: give this axe 30-35-40-50-60% (scale with weapon tier) health steal and terrify enemies (terrify gives -10-15-20-30-40% (scale with weapon tier) debuff to dodge and hit)",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
     },
     {
         "nid": "Sol_Activate",
@@ -152653,7 +154448,7 @@
     {
         "nid": "Massive_Blade",
         "name": "Massive Blade",
-        "desc": "Gives Massive Blade it's knockback effect.",
+        "desc": "Gives Massive Blade its knockback effect.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -153420,7 +155215,7 @@
     {
         "nid": "Quick_Blade",
         "name": "Quick Blade",
-        "desc": "Unit can attack up to 4 targets per combat.",
+        "desc": "Unit can attack up to 4 targets per combat or select a single target multiple times, but cannot initiate Dual Strikes anymore this way.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -153437,6 +155232,10 @@
             ],
             [
                 "allow_same_target",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
                 null
             ]
         ]
@@ -168330,6 +170129,10 @@
             [
                 "menu_after_combat",
                 null
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
             ]
         ]
     },
@@ -168353,6 +170156,10 @@
             ],
             [
                 "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
                 null
             ]
         ]

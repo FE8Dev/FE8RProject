@@ -2,7 +2,7 @@
     {
         "nid": "Heal",
         "name": "Heal",
-        "desc": "Restores (User's MAG + 10) HP.\n<pink>Misc:</>Support classes only.",
+        "desc": "Restores (User's MAG + LCK/3) HP.\n<pink>Misc:</>Support classes only.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -58,10 +58,6 @@
                 null
             ],
             [
-                "equation_heal",
-                "HEAL"
-            ],
-            [
                 "prf_tags",
                 [
                     "Support"
@@ -74,6 +70,10 @@
             [
                 "battle_cast_anim",
                 "Heal"
+            ],
+            [
+                "eval_heal_and_restore",
+                "500"
             ]
         ]
     }

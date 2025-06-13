@@ -2,7 +2,7 @@
     {
         "nid": "MultihealPP",
         "name": "Multiheal++",
-        "desc": "Restores 100 HP.\n<pink>Misc:</>(Multi-target:5), support class only.",
+        "desc": "Restores (User's MAG + LCK) HP.\n<pink>Misc:</>(Multi-target:5), support class only.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             0,
@@ -96,8 +96,8 @@
                 "33- Healing Orchestral Cover"
             ],
             [
-                "heal",
-                100
+                "equation_heal",
+                "MAG_LCK_STRONG"
             ]
         ]
     }

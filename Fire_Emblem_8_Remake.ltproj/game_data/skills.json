@@ -16131,7 +16131,7 @@
     {
         "nid": "Quick_Blade",
         "name": "Quick Blade",
-        "desc": "Unit can attack up to 4 targets per combat or select a single target multiple times.",
+        "desc": "Unit can attack up to 4 targets per combat or select a single target multiple times, but cannot initiate Dual Strikes anymore this way.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -35024,6 +35024,122 @@
         ]
     },
     {
+        "nid": "Hexing_Rod_Debuff",
+        "name": "Hexing Rod Debuff",
+        "desc": "Unit's max HP is cut by half during 5 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            35
+        ],
+        "components": [
+            [
+                "condition",
+                "'Boss' not in unit.tags"
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.5
+                    ]
+                ]
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Immobilize",
+        "name": "Immobilize",
+        "desc": "Unit cannot move and Avoid is reduced by 30.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            35
+        ],
+        "components": [
+            [
+                "time",
+                2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "avoid",
+                -30
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Self_Silence",
+        "name": "Self Silence",
+        "desc": "Unit cannot use offensive, non-STR based magic for 2 turns. Cannot be restored.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "cannot_use_magic_items",
+                null
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "unit_anim",
+                "MapSilence"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    255
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapSilence"
+            ],
+            [
+                "upkeep_sound",
+                "Silence"
+            ],
+            [
+                "has_tags",
+                [
+                    "Silence"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Flying_hide",
         "name": "Flying hide",
         "desc": "Can fly.",
@@ -37618,8 +37734,8 @@
         ]
     },
     {
-        "nid": "Anihilation",
-        "name": "Anihilation",
+        "nid": "Bloodletting",
+        "name": "Bloodletting",
         "desc": "+5 crit dmg on crit, stacks, last per chapter",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -37629,13 +37745,13 @@
         "components": [
             [
                 "gain_skill_after_crit",
-                "Anihilation_Buff"
+                "Bloodletting_Buff"
             ]
         ]
     },
     {
-        "nid": "Anihilation_Buff",
-        "name": "Anihilation",
+        "nid": "Bloodletting_Buff",
+        "name": "Bloodletting",
         "desc": "+5crit dmg on crit, stacks, last per chapter",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -37654,6 +37770,39 @@
             [
                 "eval_crit_additional",
                 "5"
+            ]
+        ]
+    },
+    {
+        "nid": "Anesthesia",
+        "name": "Anesthesia",
+        "desc": "-4 SKL and SPD per stack, up to 10 stacks. lasts 3 rounds",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            41
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        4
+                    ],
+                    [
+                        "SPD",
+                        4
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "stack",
+                10
             ]
         ]
     },
@@ -45554,7 +45703,7 @@
     {
         "nid": "Dark_Wisdom",
         "name": "Wisdom Spark",
-        "desc": "Dains a stack of Wisdom Spark whenever unit kills an enemy. Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
+        "desc": "Gains a stack of Wisdom Spark whenever unit kills an enemy. Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
         "icon_nid": "Skills",
         "icon_index": [
             2,
@@ -47517,6 +47666,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "item_override",
+                "Not_Counterable"
             ]
         ]
     },
@@ -48758,6 +48911,251 @@
                     0,
                     0
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Archdryads_Blessing",
+        "name": "Archdryad's Blessing",
+        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Archbishops_Blessing_Buff"
+            ],
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Staff' and unit2.team == 'player'"
+            ]
+        ]
+    },
+    {
+        "nid": "Archdryads_Blessing_Art_hide",
+        "name": "Archdryad's Blessing",
+        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "combat_art",
+                "Archdryads_Blessing_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Staff'"
+            ]
+        ]
+    },
+    {
+        "nid": "Archdryads_Blessing_EP_hide",
+        "name": "Archdryad's Blessing",
+        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+            ]
+        ]
+    },
+    {
+        "nid": "Archdryads_Blessing_Skill",
+        "name": "Archdryad's Blessing",
+        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "eval_max_range",
+                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T1_1st",
+        "name": "Tyrande T1 1st",
+        "desc": "To give the MyUnit the T1 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T1_2nd",
+        "name": "Tyrande T1 2nd",
+        "desc": "To give the MyUnit the T1 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T2_1st",
+        "name": "Tyrande T2 1st",
+        "desc": "To give the MyUnit the T2 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T2_2nd",
+        "name": "Tyrande T2 2nd",
+        "desc": "To give the MyUnit the T2 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T3_1st",
+        "name": "Tyrande T3 1st",
+        "desc": "To give the MyUnit the T3 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tyrande_T3_2nd",
+        "name": "Tyrande T3 2nd",
+        "desc": "To give the MyUnit the T3 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Divine_Presence_Tyrande",
+        "name": "Divine Presence",
+        "desc": "Allows unit to warp to any ally on the map. +10% buff to adj. allies stats.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            51
+        ],
+        "components": [
+            [
+                "witch_warp",
+                null
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura",
+                "Divine_Presence_Buff"
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Transform_Test",
+        "name": "Transform Test",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light, Staff, Anima')"
+            ],
+            [
+                "item_override",
+                "Transform"
             ]
         ]
     },
@@ -53840,7 +54238,7 @@
     {
         "nid": "Divine_Presence_T3",
         "name": "Divine Presence",
-        "desc": "Allows unit to warp to any ally on the map.",
+        "desc": "Allows unit to warp to any ally on the map. +10% buff to adj. allies stats.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -53858,6 +54256,18 @@
             [
                 "copysafe",
                 []
+            ],
+            [
+                "aura",
+                "Divine_Presence_Buff"
+            ],
+            [
+                "aura_range",
+                1
+            ],
+            [
+                "aura_target",
+                "ally"
             ]
         ]
     },
@@ -61121,7 +61531,7 @@
     {
         "nid": "Quick_Blade_T3",
         "name": "Quick Blade",
-        "desc": "Unit can attack up to 4 targets per combat or select a single target multiple times.",
+        "desc": "Unit can attack up to 4 targets per combat or select a single target multiple times, but cannot initiate Dual Strikes anymore this way.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -62103,6 +62513,195 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Celerity",
+        "name": "Celerity",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Defensive_Tactics",
+        "name": "Defensive Tactics",
+        "desc": "every ally that is in a 2x2 distance of the king's hand (king's hand included) takes 50% reduced damage.\nif those units attack in the player turn, they suffer a penalty of 30% damage dealth.\nif those units are attacked in the enemie's turn, the gain a bonus 60% damage dealth.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "aura",
+                "Defensive_Tactics_1"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "unit"
+            ]
+        ]
+    },
+    {
+        "nid": "Defensive_Tactics_1",
+        "name": "Defensive Tactics",
+        "desc": "every ally that is in a 2x2 distance of the king's hand (king's hand included) takes 50% reduced damage.\nif those units attack in the player turn, they suffer a penalty of 30% damage dealth.\nif those units are attacked in the enemie's turn, the gain a bonus 60% damage dealth.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "0.7 if mode == 'attack' else 1.6"
+            ]
+        ]
+    },
+    {
+        "nid": "Death_Penalty",
+        "name": "Death Penalty",
+        "desc": "Make this a CA or it will be unusable\n60% life steal on attack.\n+15 crit\nthe battle does not end untill one unit is dead (it Works like the arena, where everyone keeps attacking untill someone is dead)",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "Reckless_Warrior",
+        "name": "Reckless Warrior",
+        "desc": " this unit has 0 def and res when in combat. this unit adds 1/2 def and 1/2 res into dodge. this unit can Always counter, regardless of range \nevent to give enemy pierce skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "close_counter",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global DeathEirika"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('RES')//2+unit.get_stat('DEF')//2"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Reckless_Warrior_1",
+        "name": "Reckless Warrior",
+        "desc": " this unit has 0 def and res when in combat. this unit adds 1/2 def and 1/2 res into dodge. this unit can Always counter, regardless of range \nevent to give enemy pierce skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES') if item_funcs.is_magic(unit, unit.get_weapon()) else unit2.get_stat('DEF')"
+            ]
+        ]
+    },
+    {
+        "nid": "Mindless_Beast",
+        "name": "Mindless Beast",
+        "desc": " this unit has 100% life steal(changed to 50% on kill). this unit cannot be healed any other way. this unit Always has desperation and vantage.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "empower_heal_received",
+                ""
+            ],
+            [
+                "lifetaker",
+                0.5
+            ],
+            [
+                "desperation",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Heavy_Boots_Skill",
+        "name": "Heavy Boots Skill",
+        "desc": "-2 MOV, +10% MOV growth, changes movement to Armor",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "movement_type",
+                "Armors"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -2
+                    ]
+                ]
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "MOV",
+                        10
+                    ]
+                ]
             ]
         ]
     }
