@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Shooter_Scroll_Skill",
+        "name": "Shooter Scroll Skill",
+        "desc": "For the Shooter Scroll Skill.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            6,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.5 if utils.calculate_distance(unit.position, target.position) > 1 else 0.8"
+            ],
+            [
+                "dynamic_accuracy",
+                "45 if utils.calculate_distance(unit.position, target.position) > 1 else -15"
+            ]
+        ]
+    }
+]
