@@ -2,11 +2,13 @@
     {
         "nid": "Surgeon_Natasha",
         "name": "Surgeon",
-        "desc": "",
+        "desc": "Healers adept at cutting people, able to fight and support\n<icon>Magic</><icon>Staff</>",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Medic_Natasha",
         "turns_into": [
+            "T3_Executioner",
+            "T3_Trickster",
             "Doctor_Natasha"
         ],
         "tags": [
@@ -88,7 +90,11 @@
             ],
             [
                 15,
-                "Pierce_Skill"
+                "Pierce_Proc"
+            ],
+            [
+                1,
+                "Crit_P10"
             ]
         ],
         "wexp_gain": {
