@@ -1870,3 +1870,18 @@ class DefenseProcWhenHit(SkillComponent):
             if component.defines('weapon_filter'):
                 return component.weapon_filter(unit, item)
         return True
+
+class EvalEmpowerHeal(SkillComponent):
+    nid = 'eval_empower_heal'
+    desc = "Gives evaluated bonus healing when healing others."
+    tag = SkillTags.ADVANCED
+
+    expose = ComponentType.String  # e.g., "unit.get_stat('MAG') // 2"
+
+    def empower_heal(self, unit, target):
+        from app.engine import evaluate
+        try:
+            return int(evaluate.evaluate(self.value, unit, target, unit.position, local_args={'target': target}))
+        except Exception as e:
+            logging.error("EvalEmpowerHeal: Couldn't evaluate '%s' (%s)", self.value, e)
+            return 0
