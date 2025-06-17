@@ -2,7 +2,7 @@
     {
         "nid": "Triage",
         "name": "Triage",
-        "desc": "+10 healing on targets below half hp\n(should be double healing)",
+        "desc": "When healing an ally, add half their missing HP to the heal done",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -14,16 +14,12 @@
                 "unit2.team == 'player'"
             ],
             [
-                "empower_heal",
-                "10"
-            ],
-            [
-                "condition",
-                "target.get_hp() <= target.get_max_hp() // 2"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 2"
             ]
         ]
     }
