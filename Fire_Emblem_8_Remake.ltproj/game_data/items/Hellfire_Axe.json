@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Hellfire_Axe",
+        "name": "Hellfire Axe",
+        "desc": "An axe infused with fire from the depths of hell.\n<green>Skills:</>Power Chop(SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave, STR*2 (<red>{e:(unit.get_stat('STR')*2)}</>).",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            11,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Axe'] >= 420"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_SS"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Monster",
+                        "Shadow",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DOUBLE"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15",
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

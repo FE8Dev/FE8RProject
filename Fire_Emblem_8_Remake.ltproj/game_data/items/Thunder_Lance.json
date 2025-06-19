@@ -1,0 +1,95 @@
+[
+    {
+        "nid": "Thunder_Lance",
+        "name": "Thunder Lance",
+        "desc": "A lance infused with the might of thunder.\n<green>Skills:</>Lance Guard(A)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Lance'] >= 300 and u(\"Jack\").wexp['Lance'] < 420"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Lance_Guard_A"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

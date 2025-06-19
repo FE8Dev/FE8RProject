@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Heated_Axe",
+        "name": "Heated Axe",
+        "desc": "An axe heated up with fire magic.\n<green>Skills:</>Power Chop(C)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Axe'] >= 120 and u(\"Jack\").wexp['Axe'] < 300"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_C"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Monster",
+                        "Shadow",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Breached_5"
+                ]
+            ]
+        ]
+    }
+]

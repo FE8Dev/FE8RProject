@@ -39327,6 +39327,46 @@
         ]
     },
     {
+        "nid": "Brawler_Scroll",
+        "name": "Brawler Scroll",
+        "desc": "Raises accuracy and multiplies damage dealt by 50% at 1 range but decreases accuracy and reduces damage dealt by 20% at 2 or more range.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            1,
+            5
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Brawler_Scroll_Skill"
+                ]
+            ],
+            [
+                "value",
+                1000
+            ]
+        ]
+    },
+    {
+        "nid": "Shooter_Scroll",
+        "name": "Shooter Scroll",
+        "desc": "Raises accuracy and multiplies damage dealt by 50% at 2 or more range but decreases accuracy and reduces damage dealt by 20% at 1 range.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            6,
+            5
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Shooter_Scroll_Skill"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Master_Scroll",
         "name": "Master's Scroll",
         "desc": "Increase a unit's weapon rank to the next rank based on unit's equipped weapon type.",
@@ -78177,7 +78217,12 @@
                     "Heavens_Tome",
                     "Righteous_Wind",
                     "Holy_Tempest",
-                    "Joyous_Victory"
+                    "Joyous_Victory",
+                    "Natasha_Dagger_E",
+                    "Natasha_Dagger_C",
+                    "Natasha_Dagger_A",
+                    "Natasha_Dagger_SSS",
+                    "Natasha_Dagger_X"
                 ]
             ],
             [
@@ -80144,8 +80189,8 @@
     },
     {
         "nid": "Natasha_Dagger_SSS",
-        "name": "Natasha Dagger SSS",
-        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +15 SKL, +40 Crit damage.",
+        "name": "Peaceful rest",
+        "desc": "Small and thin blade coated in a numbing poison.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +15 SKL, +40 Crit damage.",
         "icon_nid": "New Daggers Natasha",
         "icon_index": [
             3,
@@ -80260,7 +80305,7 @@
     {
         "nid": "Natasha_Dagger_X",
         "name": "Mercy",
-        "desc": "***.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>Uses SKL, targets SPD, +20 SKL, +50 Crit Damage.",
+        "desc": "The only thing we have left to gift.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>Uses SKL, targets SPD, +20 SKL, +50 Crit Damage.",
         "icon_nid": "New Daggers Natasha",
         "icon_index": [
             4,
@@ -80361,7 +80406,8 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50",
-                    "Bloodletting"
+                    "Bloodletting",
+                    "Mercy_Seth_Art"
                 ]
             ],
             [
@@ -170161,6 +170207,123 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Strong_Mineral",
+        "name": "Strong Mineral",
+        "desc": "Upon using it, most unit's stats are raised by 80%, but unit becomes berserked and suffers 5 damage after combat. One use per chapter.",
+        "icon_nid": "Valuable",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                5000
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "status_on_hit",
+                "Angers_Might"
+            ]
+        ]
+    },
+    {
+        "nid": "Repairing_Wave",
+        "name": "Repairing Wave",
+        "desc": "A staff that heals 50% of allies' HP on a range.\nIt also boosts their movement, increases damage dealt to enemies and decreases damage received for 4 turns.\n<green>CD:5</> <pink>Misc:</>Support classes only.",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "value",
+                0
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "ally_equation_blast_aoe",
+                "MAGIC_RANGE"
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ],
+            [
+                "exp",
+                5
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "cooldown",
+                5
+            ],
+            [
+                "eval_healing",
+                "target.get_max_hp() // 2"
+            ],
+            [
+                "wexp",
+                5
+            ],
+            [
+                "status_on_hit",
+                "Repaired"
             ]
         ]
     }

@@ -1,0 +1,99 @@
+[
+    {
+        "nid": "Storm_Lance",
+        "name": "Storm Lance",
+        "desc": "A lance infused with the wrath of a storm.\n<green>Skills:</>Lance Guard(SS)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Lance'] >= 420"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Lance_Guard_SS"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Drenched",
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

@@ -31807,6 +31807,54 @@
         ]
     },
     {
+        "nid": "Brawler_Scroll_Skill",
+        "name": "Brawler Scroll Skill",
+        "desc": "For the Brawler Scroll item.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            1,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.5 if utils.calculate_distance(unit.position, target.position) == 1 else 0.8"
+            ],
+            [
+                "dynamic_accuracy",
+                "45 if utils.calculate_distance(unit.position, target.position) == 1 else -15"
+            ]
+        ]
+    },
+    {
+        "nid": "Shooter_Scroll_Skill",
+        "name": "Shooter Scroll Skill",
+        "desc": "For the Shooter Scroll Skill.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            6,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.5 if utils.calculate_distance(unit.position, target.position) > 1 else 0.8"
+            ],
+            [
+                "dynamic_accuracy",
+                "45 if utils.calculate_distance(unit.position, target.position) > 1 else -15"
+            ]
+        ]
+    },
+    {
         "nid": "Combustion_Elixir_Skill",
         "name": "Combustion Elixir",
         "desc": "For the Combustion Elixir item.",
@@ -35883,6 +35931,39 @@
         ]
     },
     {
+        "nid": "Repaired",
+        "name": "Repaired",
+        "desc": "Raises Mov by 1, increases damage dealt by 20% and reduced damage received by 10% for 4 turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            3
+        ],
+        "components": [
+            [
+                "time",
+                4
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "resist_multiplier",
+                0.9
+            ]
+        ]
+    },
+    {
         "nid": "Gentle_Light_Low",
         "name": "Gentle Light (Low)",
         "desc": "Reduce Damage taken by 3 and heal 10% Max HP each turn.",
@@ -37705,7 +37786,7 @@
             ],
             [
                 "condition",
-                "target.get_hp() <= target.get_max_hp() / 2"
+                "target.get_hp() <= target.get_max_hp() // 2"
             ],
             [
                 "class_skill",
@@ -37752,7 +37833,7 @@
     {
         "nid": "Bloodletting_Buff",
         "name": "Bloodletting",
-        "desc": "+5crit dmg on crit, stacks, last per chapter",
+        "desc": "+5 crit dmg on crit, stacks, last per chapter",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -62784,6 +62865,107 @@
                         10
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Angers_Might",
+        "name": "Angers' Might",
+        "desc": "Unit's stats are raised by 80% for 5 turns, but is Berserked and takes 5 damage after combat. Cannot be restored.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            2
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "change_ai",
+                "Pursue"
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapBerserk"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapBerserk"
+            ],
+            [
+                "upkeep_sound",
+                "Berserk"
+            ],
+            [
+                "cannot_trade",
+                null
+            ],
+            [
+                "recoil",
+                5
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.8
+                    ],
+                    [
+                        "MAG",
+                        1.8
+                    ],
+                    [
+                        "SKL",
+                        1.8
+                    ],
+                    [
+                        "SPD",
+                        1.8
+                    ],
+                    [
+                        "LCK",
+                        1.8
+                    ],
+                    [
+                        "DEF",
+                        1.8
+                    ],
+                    [
+                        "RES",
+                        1.8
+                    ]
+                ]
+            ],
+            [
+                "exp_multiplier",
+                0
+            ],
+            [
+                "enemy_exp_multiplier",
+                0
             ]
         ]
     }

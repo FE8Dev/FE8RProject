@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Burning_Axe",
+        "name": "Burning Axe",
+        "desc": "An axe that burns everything it touches.\n<green>Skills:</>Power Chop(A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Brave",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            12,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Axe'] >= 300 and u(\"Jack\").wexp['Axe'] < 420"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Power_Chop_A"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Monster",
+                        "Shadow",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_8",
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]

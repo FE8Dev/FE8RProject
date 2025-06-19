@@ -1,0 +1,125 @@
+[
+    {
+        "nid": "Sword_Axe_Lance",
+        "name": "Ultimate Weapon",
+        "desc": "A sword, axe and lance combined to form the ultimate weapon.\n<green>Skills:</>Flash Step, Power Chop(X), Lance Guard(X)\n<orange>Element:</><icon>Fire</><icon>Thunder</><icon>Light</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</><icon>Shadowblight</><icon>Monster</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>Brave, 30% HP Absorb, STR+SPD+SKL (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>)",
+        "icon_nid": "Jack Icons",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                33
+            ],
+            [
+                "hit",
+                133
+            ],
+            [
+                "crit",
+                33
+            ],
+            [
+                "weight",
+                33
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jack\").wexp['Axe'] >= 480 and u(\"Jack\").wexp['Sword'] >= 480 and u(\"Jack\").wexp['Lance'] >= 480"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jack"
+                ]
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Thunder",
+                    "Light"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Monster",
+                        "Shadow",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL_STRONG"
+            ],
+            [
+                "lifelink",
+                0.3
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Lance_Guard_X",
+                    "Power_Chop_X",
+                    "Sword_Advantage",
+                    "Lance_Advantage"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_25",
+                    "Seared"
+                ]
+            ]
+        ]
+    }
+]
