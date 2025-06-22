@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Heavier_Hit",
+        "name": "Heavier Hit",
+        "desc": "If unit's weapon is heavier than enemy's weapon, raises Hit, Crit chance and damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_weapon().weight.value > target.get_weapon().weight.value"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_accuracy",
+                "20"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_weapon().weight.value - target.get_weapon().weight.value)/100"
+            ]
+        ]
+    }
+]
