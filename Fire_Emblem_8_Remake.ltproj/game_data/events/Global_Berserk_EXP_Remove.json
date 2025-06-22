@@ -8,8 +8,9 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;unit.team == 'player'",
+            "if;unit.team == 'player' and unit2.team == 'player'",
             "set_exp;{unit};0",
+            "set_exp;{unit2};0",
             "else",
             "end"
         ],

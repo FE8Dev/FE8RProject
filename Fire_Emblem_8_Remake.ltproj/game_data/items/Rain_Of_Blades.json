@@ -2,7 +2,7 @@
     {
         "nid": "Rain_Of_Blades",
         "name": "Rain Of Blades",
-        "desc": "Executes enemies with a swarm of Holy Swords.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses STR, +40 Crit damage.",
+        "desc": "Executes enemies with a swarm of Holy Swords.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Uses STR x2, +40 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             5,
@@ -95,6 +95,14 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "DAMAGE_2X"
             ]
         ]
     }

@@ -20,7 +20,17 @@
             "speak;Amelia;Sir!|I'm Amelia of Silva, sir!|I'm new.|I was only assigned to your command today.|I wanted to fight for the empire!",
             "speak;SoldierRed;I don't need your life story, fool!|Recruits are in front!|Grab a lance and move!",
             "speak;Amelia;Sir, yes sir!|This lance...|Stab the enemy.|I'm not afraid...|I'm a citizen of Grado.|It's my duty to fight.|And I'll fight my best!",
-            "multi_remove_portrait;SoldierRed;Amelia"
+            "multi_remove_portrait;SoldierRed;Amelia",
+            "",
+            "move_cursor;16,23",
+            "add_group;Rein6;16,23;fade;stack",
+            "move_group;Rein6;Rein6;normal;closest",
+            "wait;300",
+            "",
+            "move_cursor;6,0",
+            "add_group;Rein5;6,0;fade;stack",
+            "move_group;Rein5;Rein5;normal;closest",
+            "wait;300"
         ],
         "nid": "9A Turn5Rein"
     }

@@ -22045,7 +22045,7 @@
     },
     {
         "nid": "Rabies_Proc",
-        "name": "Rabies Proc",
+        "name": "Rabies",
         "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+15 Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -22892,6 +22892,26 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Big_Weapon",
+        "name": "Big Weapon",
+        "desc": "Add weapon weight to Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "(unit.get_weapon().weight.value)"
             ]
         ]
     },
@@ -33288,7 +33308,7 @@
     {
         "nid": "Berserk",
         "name": "Berserk",
-        "desc": "Unit is enraged and can no longer tell friend from foe. Player unit's EXP set to 0 after each combat.",
+        "desc": "Unit is enraged and can no longer tell friend from foe. Both player unit's EXP set to 0 after each combat if both combatants are player units.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -33345,10 +33365,6 @@
             ],
             [
                 "exp_multiplier",
-                0
-            ],
-            [
-                "enemy_exp_multiplier",
                 0
             ]
         ]
@@ -37769,7 +37785,7 @@
     {
         "nid": "Triage",
         "name": "Triage",
-        "desc": "+10 healing on targets below half hp\n(should be double healing)",
+        "desc": "When healing an ally, add half their missing HP to the heal done",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -37781,16 +37797,12 @@
                 "unit2.team == 'player'"
             ],
             [
-                "empower_heal",
-                "10"
-            ],
-            [
-                "condition",
-                "target.get_hp() <= target.get_max_hp() // 2"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 2"
             ]
         ]
     },
@@ -49245,6 +49257,279 @@
         ]
     },
     {
+        "nid": "Axe_Advantage",
+        "name": "Axe Advantage",
+        "desc": "Gain advantage against lances.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Lance')"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "item_override",
+                "Axe_Advantage"
+            ]
+        ]
+    },
+    {
+        "nid": "Sword_Advantage",
+        "name": "Sword Advantage",
+        "desc": "Gain advantage against axes.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Axe')"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "item_override",
+                "Sword_Advantage"
+            ]
+        ]
+    },
+    {
+        "nid": "Lance_Advantage",
+        "name": "Lance Advantage",
+        "desc": "Gain advantage against swords.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Sword')"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "item_override",
+                "Lance_Advantage"
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T1_1st",
+        "name": "Jack T1 1st",
+        "desc": "To give Jack the T1 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T1_2nd",
+        "name": "Jack T1 2nd",
+        "desc": "To give Jack the T1 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T2_1st",
+        "name": "Jack T2 1st",
+        "desc": "To give Jack the T2 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T2_2nd",
+        "name": "Jack T2 2nd",
+        "desc": "To give Jack the T2 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T3_1st",
+        "name": "Jack T3 1st",
+        "desc": "To give Jack the T3 1st feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Jack_T3_2nd",
+        "name": "Jack T3 2nd",
+        "desc": "To give Jack the T3 2nd feat skill",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Trinity_Blessing",
+        "name": "Trinity Blessing",
+        "desc": "Remove effective Horse/Armor damage. Unit is immune to negative status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "negate_tags",
+                [
+                    "Horse",
+                    "Mounted",
+                    "Armor"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Trinity_Force",
+        "name": "Trinity Force",
+        "desc": "Gain a stacking +11% buff to all stats on active kill.\nMax 3 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_active_kill",
+                "Trinity_Force_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Trinity_Force_Buff",
+        "name": "Trinity Force Buff",
+        "desc": "+11% to all stats per stack.\nMax 3 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            18
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.11
+                    ],
+                    [
+                        "MAG",
+                        1.11
+                    ],
+                    [
+                        "SKL",
+                        1.11
+                    ],
+                    [
+                        "LCK",
+                        1.11
+                    ],
+                    [
+                        "DEF",
+                        1.11
+                    ],
+                    [
+                        "RES",
+                        1.11
+                    ],
+                    [
+                        "CON",
+                        1.11
+                    ],
+                    [
+                        "MOV",
+                        1.11
+                    ],
+                    [
+                        "SPD",
+                        1.11
+                    ]
+                ]
+            ],
+            [
+                "stack",
+                3
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Eloquent_Form_T1",
         "name": "Eloquent Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
@@ -53827,7 +54112,7 @@
     },
     {
         "nid": "Rabies_Proc_T2",
-        "name": "Rabies Proc",
+        "name": "Rabies",
         "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+15 Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -54281,6 +54566,30 @@
             [
                 "gain_skill_after_take_damage",
                 "Toughen_Scales_Child"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Big_Weapon_T2",
+        "name": "Big Weapon",
+        "desc": "Add weapon weight to Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "(unit.get_weapon().weight.value)"
             ],
             [
                 "feat",
@@ -60147,7 +60456,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
                 "feat",
@@ -62602,6 +62911,107 @@
         ]
     },
     {
+        "nid": "Angers_Might",
+        "name": "Angers' Might",
+        "desc": "Unit's stats are raised by 80% for 5 turns, but is Berserked and takes 5 damage after combat. Cannot be restored.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            2
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "ignore_alliances",
+                null
+            ],
+            [
+                "change_ai",
+                "Pursue"
+            ],
+            [
+                "unselectable",
+                null
+            ],
+            [
+                "unit_anim",
+                "MapBerserk"
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    0,
+                    255
+                ]
+            ],
+            [
+                "upkeep_animation",
+                "MapBerserk"
+            ],
+            [
+                "upkeep_sound",
+                "Berserk"
+            ],
+            [
+                "cannot_trade",
+                null
+            ],
+            [
+                "recoil",
+                5
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.8
+                    ],
+                    [
+                        "MAG",
+                        1.8
+                    ],
+                    [
+                        "SKL",
+                        1.8
+                    ],
+                    [
+                        "SPD",
+                        1.8
+                    ],
+                    [
+                        "LCK",
+                        1.8
+                    ],
+                    [
+                        "DEF",
+                        1.8
+                    ],
+                    [
+                        "RES",
+                        1.8
+                    ]
+                ]
+            ],
+            [
+                "exp_multiplier",
+                0
+            ],
+            [
+                "enemy_exp_multiplier",
+                0
+            ]
+        ]
+    },
+    {
         "nid": "Celerity",
         "name": "Celerity",
         "desc": "+10%damage per tile moved",
@@ -62614,6 +63024,10 @@
             [
                 "dynamic_damage_multiplier",
                 "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
@@ -62629,7 +63043,7 @@
         "components": [
             [
                 "aura",
-                "Defensive_Tactics_1"
+                "Defensive_Tactics_child"
             ],
             [
                 "aura_range",
@@ -62638,11 +63052,15 @@
             [
                 "aura_target",
                 "unit"
+            ],
+            [
+                "class_skill",
+                null
             ]
         ]
     },
     {
-        "nid": "Defensive_Tactics_1",
+        "nid": "Defensive_Tactics_child",
         "name": "Defensive Tactics",
         "desc": "every ally that is in a 2x2 distance of the king's hand (king's hand included) takes 50% reduced damage.\nif those units attack in the player turn, they suffer a penalty of 30% damage dealth.\nif those units are attacked in the enemie's turn, the gain a bonus 60% damage dealth.",
         "icon_nid": null,
@@ -62710,7 +63128,7 @@
             [
                 "skill_before_combat",
                 {
-                    "skill": "Pair_Up_Affinity_Generic",
+                    "skill": "Death_Penalty_Brave",
                     "recipient": "both",
                     "allegiance": "both"
                 }
@@ -62865,107 +63283,6 @@
                         10
                     ]
                 ]
-            ]
-        ]
-    },
-    {
-        "nid": "Angers_Might",
-        "name": "Angers' Might",
-        "desc": "Unit's stats are raised by 80% for 5 turns, but is Berserked and takes 5 damage after combat. Cannot be restored.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            9,
-            2
-        ],
-        "components": [
-            [
-                "condition",
-                "not has_skill(unit, 'SleepI')"
-            ],
-            [
-                "time",
-                5
-            ],
-            [
-                "ignore_alliances",
-                null
-            ],
-            [
-                "change_ai",
-                "Pursue"
-            ],
-            [
-                "unselectable",
-                null
-            ],
-            [
-                "unit_anim",
-                "MapBerserk"
-            ],
-            [
-                "unit_flickering_tint",
-                [
-                    255,
-                    0,
-                    255
-                ]
-            ],
-            [
-                "upkeep_animation",
-                "MapBerserk"
-            ],
-            [
-                "upkeep_sound",
-                "Berserk"
-            ],
-            [
-                "cannot_trade",
-                null
-            ],
-            [
-                "recoil",
-                5
-            ],
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "STR",
-                        1.8
-                    ],
-                    [
-                        "MAG",
-                        1.8
-                    ],
-                    [
-                        "SKL",
-                        1.8
-                    ],
-                    [
-                        "SPD",
-                        1.8
-                    ],
-                    [
-                        "LCK",
-                        1.8
-                    ],
-                    [
-                        "DEF",
-                        1.8
-                    ],
-                    [
-                        "RES",
-                        1.8
-                    ]
-                ]
-            ],
-            [
-                "exp_multiplier",
-                0
-            ],
-            [
-                "enemy_exp_multiplier",
-                0
             ]
         ]
     }

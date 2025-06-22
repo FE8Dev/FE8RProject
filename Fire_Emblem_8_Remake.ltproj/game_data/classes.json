@@ -6411,7 +6411,7 @@
         "movement_group": "Heavy Cav",
         "promotes_from": "Cavalier",
         "turns_into": [
-            "T3_Crusader_Moulder",
+            "T3_Crusader_Natasha",
             "T3_Silver_Knight_Natasha",
             "T3_Duke_Knight_Natasha"
         ],
@@ -22509,8 +22509,8 @@
                 480
             ],
             "Lance": [
-                true,
-                300,
+                false,
+                0,
                 480
             ],
             "Axe": [
@@ -22560,7 +22560,7 @@
             0
         ],
         "map_sprite_nid": "Eirika_T3_Royal_Knight",
-        "combat_anim_nid": "Royal_Knight_V2_Eirika",
+        "combat_anim_nid": "Royal_Knight_V3_Eirika",
         "fields": []
     },
     {
@@ -26590,6 +26590,164 @@
             "Axe": [
                 true,
                 60,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                60,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Paladin (U) Gendarme M-Sword {flasuban RobertFPY, MeteorSR23}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Crusader",
+        "combat_anim_nid": "T3_CrusaderV2",
+        "fields": []
+    },
+    {
+        "nid": "T3_Crusader_Natasha",
+        "name": "Crusader",
+        "desc": "Those who fight for a cause higher than their own. Wielding magic on their steeds. <icon>Horse</><icon>Magic</><icon>Staff</>.",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Paladin",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Support",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 6,
+            "MAG": 5,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 6,
+            "DEF": 6,
+            "RES": 5,
+            "CON": 11,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -39,
+            "MAG": -39,
+            "SKL": -28,
+            "SPD": -28,
+            "LCK": -35,
+            "DEF": -28,
+            "RES": -28,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 150,
+            "STR": 90,
+            "MAG": 90,
+            "SKL": 80,
+            "SPD": 80,
+            "LCK": 100,
+            "DEF": 95,
+            "RES": 95,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 2,
+            "MAG": 8,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 5,
+            "DEF": 2,
+            "RES": 8,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 95,
+            "MAG": 93,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 91,
+            "RES": 91,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Holy_Barrier"
+            ],
+            [
+                15,
+                "Holy_Crusade"
+            ],
+            [
+                1,
+                "Cav_Pair_Up_T3_hide"
+            ],
+            [
+                15,
+                "Holy_Crusade_Buff_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                true,
+                300,
                 480
             ],
             "Bow": [
@@ -67234,7 +67392,7 @@
             ],
             [
                 5,
-                "Heavy_Blade"
+                "Big_Weapon"
             ],
             [
                 15,
@@ -93246,6 +93404,1265 @@
         ],
         "map_sprite_nid": "Marshall (U) Axe {Nuramon}-stand",
         "combat_anim_nid": "Juggernaut",
+        "fields": []
+    },
+    {
+        "nid": "Squire_Jack",
+        "name": "Squire",
+        "desc": "A recruit that has lost his horse somewhere.<icon>Infantry</>",
+        "tier": 0,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Lance_Cavalier_Jack",
+            "Axe_Cavalier_Jack",
+            "Sword_Cavalier_Jack"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 10,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 6,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 63,
+            "RES": 63,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 255,
+            "STR": 50,
+            "MAG": 50,
+            "SKL": 50,
+            "SPD": 50,
+            "LCK": 50,
+            "DEF": 50,
+            "RES": 50,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Paragon"
+            ],
+            [
+                1,
+                "Mercenary_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Mercenary",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Villager (M) v2 Sword {HyperGammaSpaces}-stand",
+        "combat_anim_nid": "Squire",
+        "fields": []
+    },
+    {
+        "nid": "Lance_Cavalier_Jack",
+        "name": "Lance Cavalier",
+        "desc": "Mounted knights with superior movement. <icon>Horse</>",
+        "tier": 1,
+        "movement_group": "Light Cav",
+        "promotes_from": "Squire_Jack",
+        "turns_into": [
+            "Paladin_Light_Seth",
+            "T2_Praetor",
+            "Great_Knight_Jack_Lance"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 63,
+            "RES": 63,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 20,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 2,
+            "MAG": 2,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Discipline"
+            ],
+            [
+                15,
+                "Outdoor_Fighter"
+            ],
+            [
+                1,
+                "Jack_T1_1st"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                60,
+                240
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Cavalier",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Cavalier",
+        "combat_anim_nid": "Cavalier_V2",
+        "fields": []
+    },
+    {
+        "nid": "Axe_Cavalier_Jack",
+        "name": "Axe Cavalier",
+        "desc": "Mounted knights with superior movement. <icon>Horse</>",
+        "tier": 1,
+        "movement_group": "Light Cav",
+        "promotes_from": null,
+        "turns_into": [
+            "Wyvern_Lord",
+            "T2_Wolf_Knight",
+            "Great_Knight_Jack_Axe"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 63,
+            "RES": 63,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 25,
+            "STR": 20,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 10,
+            "LCK": 5,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Discipline"
+            ],
+            [
+                15,
+                "Outdoor_Fighter"
+            ],
+            [
+                1,
+                "Jack_T1_1st"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                true,
+                60,
+                240
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Cavalier (M) Helmless Axe {RobertFPY}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T1_Axe_Cav",
+        "combat_anim_nid": "T1_Axe_Cavalier",
+        "fields": []
+    },
+    {
+        "nid": "Sword_Cavalier_Jack",
+        "name": "Sword Cavalier",
+        "desc": "Mounted knights with superior movement. <icon>Horse</>",
+        "tier": 1,
+        "movement_group": "Light Cav",
+        "promotes_from": "Squire_Jack",
+        "turns_into": [
+            "Ranger_Forde",
+            "T2_Dark_Knight_Forde",
+            "Great_Knight_Jack_Sword"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 63,
+            "RES": 63,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 10,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 10,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Discipline"
+            ],
+            [
+                15,
+                "Outdoor_Fighter"
+            ],
+            [
+                1,
+                "Jack_T1_1st"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Cavalier (M) Helmless Sword {RobertFPY}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T1_Male_Sword_Cav",
+        "combat_anim_nid": "Cavalier_V2",
+        "fields": []
+    },
+    {
+        "nid": "Great_Knight_Jack_Axe",
+        "name": "Great Knight",
+        "desc": "Veteran horse knights clad in thick armor. <icon>Horse</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Axe_Cavalier_Jack",
+        "turns_into": [
+            "T3_Gold_Knight",
+            "T3_Magic_Tank_Forde",
+            "Trinity_Knight"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 33,
+            "RES": 33,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 25,
+            "MAG": 0,
+            "SKL": 15,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 4,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 68,
+            "MAG": 60,
+            "SKL": 66,
+            "SPD": 65,
+            "LCK": 70,
+            "DEF": 69,
+            "RES": 66,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Pivot"
+            ],
+            [
+                15,
+                "Armored_Blow"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                120,
+                360
+            ],
+            "Lance": [
+                true,
+                120,
+                360
+            ],
+            "Axe": [
+                true,
+                60,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Great_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Great_Knight",
+        "combat_anim_nid": "Great_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Great_Knight_Jack_Lance",
+        "name": "Great Knight",
+        "desc": "Veteran horse knights clad in thick armor. <icon>Horse</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Lance_Cavalier_Jack",
+        "turns_into": [
+            "T3_Gold_Knight",
+            "T3_Magic_Tank_Forde",
+            "Trinity_Knight"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 33,
+            "RES": 33,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 25,
+            "MAG": 0,
+            "SKL": 15,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 4,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 68,
+            "MAG": 60,
+            "SKL": 66,
+            "SPD": 65,
+            "LCK": 70,
+            "DEF": 69,
+            "RES": 66,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Pivot"
+            ],
+            [
+                15,
+                "Armored_Blow"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                120,
+                360
+            ],
+            "Lance": [
+                true,
+                60,
+                360
+            ],
+            "Axe": [
+                true,
+                120,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Great_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Great_Knight",
+        "combat_anim_nid": "Great_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Great_Knight_Jack_Sword",
+        "name": "Great Knight",
+        "desc": "Veteran horse knights clad in thick armor. <icon>Horse</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Sword_Cavalier_Jack",
+        "turns_into": [
+            "T3_Gold_Knight",
+            "T3_Magic_Tank_Forde",
+            "Trinity_Knight"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 33,
+            "RES": 33,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 25,
+            "MAG": 0,
+            "SKL": 15,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 4,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 68,
+            "MAG": 60,
+            "SKL": 66,
+            "SPD": 65,
+            "LCK": 70,
+            "DEF": 69,
+            "RES": 66,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Pivot"
+            ],
+            [
+                15,
+                "Armored_Blow"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                360
+            ],
+            "Lance": [
+                true,
+                120,
+                360
+            ],
+            "Axe": [
+                true,
+                120,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Great_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Great_Knight",
+        "combat_anim_nid": "Great_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Trinity_Knight",
+        "name": "Trinity Knight",
+        "desc": "A proud knight that has mastered the weapon triangle. <icon>Horse</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Great_Knight_Jack_Sword",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "AutoPromote"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 23,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 133,
+            "STR": 63,
+            "MAG": 33,
+            "SKL": 63,
+            "SPD": 63,
+            "LCK": 33,
+            "DEF": 63,
+            "RES": 63,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 233,
+            "STR": 133,
+            "MAG": 63,
+            "SKL": 93,
+            "SPD": 133,
+            "LCK": 63,
+            "DEF": 93,
+            "RES": 93,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 6,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 3,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 103,
+            "MAG": 93,
+            "SKL": 103,
+            "SPD": 103,
+            "LCK": 93,
+            "DEF": 103,
+            "RES": 103,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Trinity_Force"
+            ],
+            [
+                15,
+                "Trinity_Blessing"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                true,
+                60,
+                null
+            ],
+            "Axe": [
+                true,
+                60,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Paladin",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Ephraim_T3_Royal_Knight",
+        "combat_anim_nid": "Royal_Knight_V2_Ephraim",
         "fields": []
     }
 ]

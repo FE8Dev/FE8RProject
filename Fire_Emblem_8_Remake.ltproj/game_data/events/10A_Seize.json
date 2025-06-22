@@ -80,6 +80,7 @@
             "if;game.get_unit('Marisa').team == 'player'",
             "add_unit;Marisa;4,15;immediate;closest",
             "else",
+            "kill_unit;Marisa;immediate",
             "end",
             "if;game.level_vars['House1'] == True",
             "make_generic;Civ1;Citizen;1;other;None",
@@ -128,6 +129,10 @@
             "game_var;TrainingIndicator;0",
             "remove_region;Seize",
             "remove_region;Challenge",
+            "if;game.level_vars['Door'] != True",
+            "show_layer;Door_1;immediate",
+            "else",
+            "end",
             "music;10- Rise Above Orchestral Cover;500",
             "transition;open;500"
         ],

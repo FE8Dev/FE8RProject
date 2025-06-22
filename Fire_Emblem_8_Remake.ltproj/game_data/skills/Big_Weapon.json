@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Big_Weapon",
+        "name": "Big Weapon",
+        "desc": "Add weapon weight to Crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "(unit.get_weapon().weight.value)"
+            ]
+        ]
+    }
+]
