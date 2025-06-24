@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Execution_Date",
+        "name": "Execution Date",
+        "desc": "An axe which puts fear into the most hard hearted warriors, knowing that death soon follows those who see it on the wrong side of the battlefield.\n<green>Skills:</>Power Chop (SS), Fear Feeder++\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES'))}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_FeederPP",
+                    "Power_Chop_SS"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] >= 360 and u(\"Jonathan\").wexp['Axe'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_STRONG"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

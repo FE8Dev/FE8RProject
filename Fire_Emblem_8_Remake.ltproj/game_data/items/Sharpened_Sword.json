@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Sharpened_Sword",
+        "name": "Sharpened Sword",
+        "desc": "A sword sharpened so well that it shines brightly.\n<green>Skills:</>Flash Step, Mercy, Inspire\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2)}</>), +1 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] < 120"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "Inspire"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    }
+]

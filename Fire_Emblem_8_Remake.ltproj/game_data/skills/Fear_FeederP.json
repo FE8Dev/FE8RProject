@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Fear_FeederP",
+        "name": "Fear Feeder+",
+        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "build_charge",
+                5
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "lifelink",
+                0.4
+            ],
+            [
+                "aura",
+                "TerrifiedP"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    }
+]

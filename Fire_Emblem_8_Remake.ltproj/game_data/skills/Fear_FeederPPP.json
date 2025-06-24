@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Fear_FeederPPP",
+        "name": "Fear Feeder+++",
+        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit.\nThis unit cannot die during the Player Phase.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "build_charge",
+                5
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "lifelink",
+                0.5
+            ],
+            [
+                "aura",
+                "TerrifiedPPP"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    }
+]

@@ -2,20 +2,28 @@
     {
         "nid": "Mindless_Beast",
         "name": "Mindless Beast",
-        "desc": " this unit has 100% life steal(changed to 50% on kill). this unit cannot be healed any other way. this unit Always has desperation and vantage.",
-        "icon_nid": null,
+        "desc": "This unit can no longer be healed by normal means, but gains HP Absorb (100%) and Lifetaker.\nThis unit also gains Vantage and Desperation.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            12,
+            34
         ],
         "components": [
             [
-                "empower_heal_received",
-                "-999"
+                "class_skill",
+                null
+            ],
+            [
+                "lifelink",
+                1.0
             ],
             [
                 "lifetaker",
                 0.5
+            ],
+            [
+                "empower_heal_received",
+                "-999"
             ],
             [
                 "desperation",
@@ -23,10 +31,6 @@
             ],
             [
                 "vantage",
-                null
-            ],
-            [
-                "class_skill",
                 null
             ]
         ]

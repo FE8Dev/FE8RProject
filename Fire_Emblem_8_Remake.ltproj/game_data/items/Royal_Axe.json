@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Royal_Axe",
+        "name": "Royal Axe",
+        "desc": "A golden axe given by the personal guard of the King Fado.\n<green>Skills:</>Power Chop (E), Fear Feeder\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</>STR + DEF/2 + RES/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF')//2 + unit.get_stat('RES')//2)}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_Feeder",
+                    "Power_Chop_E"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] < 240"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_2"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_WEAK"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_2"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]

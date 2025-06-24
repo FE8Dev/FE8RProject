@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Kingdoms_Reach",
+        "name": "Kingdom's Reach",
+        "desc": "A sword which simbolizes the power and reach of Renais' kingdom. It emits a blue light which can inspire hope even on the most desperate of soldiers\n<green>Skills:</>Flash Step, Mercy, Inspire+++\n<orange>Element:</><icon>Light</><icon>Ice</>\n<red>Effective:</><icon>Shadowblight</><icon>Pirate</>\n<violet>Inflicts:</><icon>Frozen</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES'))}</>), +10 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                24
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 420 and u(\"Jonathan\").wexp['Sword'] < 480"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Ice"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aura"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_STRONG"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "InspirePPP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Frozen"
+            ]
+        ]
+    }
+]

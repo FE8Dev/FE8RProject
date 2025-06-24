@@ -2,20 +2,20 @@
     {
         "nid": "Celerity",
         "name": "Celerity",
-        "desc": "+10%damage per tile moved",
-        "icon_nid": null,
+        "desc": "Unit deals 10% more damage for each tile moved.\n",
+        "icon_nid": "skill_icons",
         "icon_index": [
             0,
-            0
+            40
         ],
         "components": [
             [
-                "dynamic_damage_multiplier",
-                "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
             ]
         ]
     }

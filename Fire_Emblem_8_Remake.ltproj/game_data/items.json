@@ -138266,7 +138266,7 @@
                 "multi_status_on_hold",
                 [
                     "Guild_Ring_Skill",
-                    "Book_Worm_T1"
+                    "Book_Worm_Item"
                 ]
             ],
             [
@@ -149955,23 +149955,1025 @@
     },
     {
         "nid": "Jonathans_Arsenal",
-        "name": "Jonathans Arsenal",
-        "desc": "",
-        "icon_nid": null,
+        "name": "Jonathan's_Arsenal",
+        "desc": "Jonathan's personal weapons.\n<red>Prof:</><icon>Axe</><icon>Sword</>",
+        "icon_nid": "Sword",
         "icon_index": [
             0,
             0
         ],
-        "components": []
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                []
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Sharpened_Sword",
+        "name": "Sharpened Sword",
+        "desc": "A sword sharpened so well that it shines brightly.\n<green>Skills:</>Flash Step, Mercy, Inspire\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2)}</>), +1 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] < 120"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "Inspire"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Royal_Sword",
+        "name": "Royal Sword",
+        "desc": "An golden sword given to the personal guard of King Fado.\n<green>Skills:</>Flash Step, Mercy, Inspire+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2)}</>), +3 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 120 and u(\"Jonathan\").wexp['Sword'] < 240"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Divine"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "InspireP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Fados_Sword",
+        "name": "Fado's Sword",
+        "desc": "The personal side arm of King Fado himself, given to its most trusted general after a successful campaign.\n<green>Skills:</>Flash Step, Mercy, Inspire++\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2)}</>), +5 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 240 and u(\"Jonathan\").wexp['Sword'] < 420"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Purge"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "InspirePP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Kingdoms_Reach",
+        "name": "Kingdom's Reach",
+        "desc": "A sword which simbolizes the power and reach of Renais' kingdom. It emits a blue light which can inspire hope even on the most desperate of soldiers\n<green>Skills:</>Flash Step, Mercy, Inspire+++\n<orange>Element:</><icon>Light</><icon>Ice</>\n<red>Effective:</><icon>Shadowblight</><icon>Pirate</>\n<violet>Inflicts:</><icon>Frozen</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES'))}</>), +10 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                24
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 420 and u(\"Jonathan\").wexp['Sword'] < 480"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Ice"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aura"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_STRONG"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "InspirePPP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Frozen"
+            ]
+        ]
+    },
+    {
+        "nid": "Gram",
+        "name": "Gram",
+        "desc": "A sword which representes Faith in humanity itself, making even soldiers with fatal wounds be able to stand up and fight for what is right. The sword emits a protective light, said to make entire armies impervious to damage.\n<green>Skills:</>Flash Step, Mercy, Inspire++++\n<orange>Element:</><icon>Light</><icon>Ice</>\n<red>Effective:</><icon>Shadowblight</><icon>Pirate</>\n<violet>Inflicts:</><icon>Frozen</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES'))}</>), +15 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 420 and u(\"Jonathan\").wexp['Sword'] < 480"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Ice"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aura"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_STRONG"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "InspirePPP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Frozen"
+            ]
+        ]
+    },
+    {
+        "nid": "Royal_Axe",
+        "name": "Royal Axe",
+        "desc": "A golden axe given by the personal guard of the King Fado.\n<green>Skills:</>Power Chop (E), Fear Feeder\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</>STR + DEF/2 + RES/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF')//2 + unit.get_stat('RES')//2)}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_Feeder",
+                    "Power_Chop_E"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] < 240"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_2"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_WEAK"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_2"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "The_Enforcer",
+        "name": "The Enforcer",
+        "desc": "An axe used by the king's most trusted general to repress rebelions and keep the peace.\n<green>Skills:</>Power Chop (A), Fear Feeder+\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>STR + DEF + RES/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES')//2)}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_FeederP",
+                    "Power_Chop_A"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] >= 240 and u(\"Jonathan\").wexp['Axe'] < 360"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_8"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_MID"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_8"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Execution_Date",
+        "name": "Execution Date",
+        "desc": "An axe which puts fear into the most hard hearted warriors, knowing that death soon follows those who see it on the wrong side of the battlefield.\n<green>Skills:</>Power Chop (SS), Fear Feeder++\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES'))}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_FeederPP",
+                    "Power_Chop_SS"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] >= 360 and u(\"Jonathan\").wexp['Axe'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_STRONG"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Perun",
+        "name": "Perun",
+        "desc": "This legendary weapon was forged by the creator god himself. Few can hold it, let alone use it. Weaker minds break upon seeing it umprotected, their bodies soon follow.\n<green>Skills:</>Power Chop (X), Fear Feeder+++\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES'))}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                36
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_FeederPPP",
+                    "Power_Chop_X"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] >= 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_STRONG"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_25"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
     },
     {
         "nid": "Heavy_Boots",
         "name": "Heavy Boots",
-        "desc": "-2 move but +20% move growth",
-        "icon_nid": null,
+        "desc": "-2 MOV, but +20% MOV growth.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            1,
+            31
         ],
         "components": [
             [
@@ -149985,28 +150987,6 @@
                 ]
             ]
         ]
-    },
-    {
-        "nid": "Jonathan_Sword",
-        "name": "Jonathan Sword",
-        "desc": "1-2 range\n when this unit kils 5 units with this axe: give every ally unit a buff of 10-20-30-40-50 (scale with weapon tier) poits of defense and res\nthis sword can use the mercy skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
-    },
-    {
-        "nid": "Jonathan_Axe",
-        "name": "new_1",
-        "desc": "1-3 range\nwhen this unit kills 5 units with this axe: give this axe 30-35-40-50-60% (scale with weapon tier) health steal and terrify enemies (terrify gives -10-15-20-30-40% (scale with weapon tier) debuff to dodge and hit)",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": []
     },
     {
         "nid": "Jack_Arsenal",

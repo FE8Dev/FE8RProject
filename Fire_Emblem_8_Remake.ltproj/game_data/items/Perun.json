@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Perun",
+        "name": "Perun",
+        "desc": "This legendary weapon was forged by the creator god himself. Few can hold it, let alone use it. Weaker minds break upon seeing it umprotected, their bodies soon follow.\n<green>Skills:</>Power Chop (X), Fear Feeder+++\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + DEF + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES'))}</>).",
+        "icon_nid": "Axe",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                36
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Fear_FeederPPP",
+                    "Power_Chop_X"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Axe'] >= 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_RES_STRONG"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_25"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ]
+        ]
+    }
+]
