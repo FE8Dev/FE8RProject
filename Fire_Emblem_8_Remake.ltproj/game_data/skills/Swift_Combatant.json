@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Swift_Combatant",
+        "name": "Swift Combatant",
+        "desc": "If unit's Speed is higher than enemy's Speed, increases damage given and decreases damage received based on the difference between unit and enemy's Speed.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') > target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1-(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ]
+        ]
+    }
+]
