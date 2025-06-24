@@ -49281,6 +49281,30 @@
         ]
     },
     {
+        "nid": "Flowing_Earth",
+        "name": "Flowing Earth",
+        "desc": "If Tyrande's MAG >= Enemy's MAG, +1 bonus attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            38
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('MAG') >= target.get_stat('MAG')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Axe_Advantage",
         "name": "Axe Advantage",
         "desc": "Gain advantage against lances.",
@@ -51864,6 +51888,30 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Attack_T1",
+        "name": "Rally Attack",
+        "desc": "Grants +6 STR/SPD, +6 AS to allies within 3 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            24
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Attack"
             ],
             [
                 "feat",
@@ -63852,6 +63900,82 @@
             [
                 "enemy_exp_multiplier",
                 0
+            ]
+        ]
+    },
+    {
+        "nid": "Clever_Combatant",
+        "name": "Clever Combatant",
+        "desc": "If unit's Resistance is higher than enemy's Resistance, increases damage given and decreases damage received based on the difference between unit and enemy's Resistance.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('RES') > target.get_stat('RES')"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_stat('RES') - target.get_stat('RES'))/100"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1-(unit.get_stat('RES') - target.get_stat('RES'))/100"
+            ]
+        ]
+    },
+    {
+        "nid": "Heavier_Hit",
+        "name": "Heavier Hit",
+        "desc": "If unit's weapon is heavier than enemy's weapon, raises Hit, Crit chance and damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_weapon().weight.value > target.get_weapon().weight.value"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_accuracy",
+                "20"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_weapon().weight.value - target.get_weapon().weight.value)/100"
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Combatant",
+        "name": "Swift Combatant",
+        "desc": "If unit's Speed is higher than enemy's Speed, increases damage given and decreases damage received based on the difference between unit and enemy's Speed.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') > target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1-(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
             ]
         ]
     }
