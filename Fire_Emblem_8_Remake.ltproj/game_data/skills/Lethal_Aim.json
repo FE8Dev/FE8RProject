@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Lethal_Aim",
+        "name": "Lethal Aim",
+        "desc": "Adds the user's SPD+SKL to critical damage, increasing damage and crit chance by +5 for each square of distance between the user and the target.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            14
+        ],
+        "components": [
+            [
+                "eval_crit_additional",
+                "unit.get_stat('SKL') + unit.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage",
+                "5 * (utils.calculate_distance(unit.position, target.position))"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "5 * (utils.calculate_distance(unit.position, target.position))"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Punishment",
+        "name": "Imperial Punishment",
+        "desc": "Enemies hit by the user have their stats reduced by 15%, stacks twice. Stacks last until the end of the chapter. Increases the Arbiter's damage by 100% and the Hit in 50.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Punishment_Debuff"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "hit",
+                50
+            ]
+        ]
+    }
+]

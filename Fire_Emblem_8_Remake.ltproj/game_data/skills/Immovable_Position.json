@@ -1,0 +1,49 @@
+[
+    {
+        "nid": "Immovable_Position",
+        "name": "Entrench Position",
+        "desc": "On terrain with bonus effects, +20 DEF/RES and immunity to shove.\nTaunts enemies.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "AIProvoke"
+                ]
+            ],
+            [
+                "modify_ai_priority",
+                50.0
+            ],
+            [
+                "grounded",
+                null
+            ]
+        ]
+    }
+]

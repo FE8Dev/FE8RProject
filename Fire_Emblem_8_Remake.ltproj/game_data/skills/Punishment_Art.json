@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Punishment_Art",
+        "name": "Imperial Punishment",
+        "desc": "<red>CA:</> Increases damage deat by 100% and Hit by 50. Enemies hit have their stats reduced by 15%, stacks twice. Last until the end of the chapter.<green>CD:1 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Punishment"
+            ],
+            [
+                "build_charge",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ]
+        ]
+    }
+]

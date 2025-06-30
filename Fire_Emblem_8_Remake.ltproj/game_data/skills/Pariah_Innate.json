@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Pariah_Innate",
+        "name": "Innate Pariah",
+        "desc": "Reduces received magic damage by 75%.\nUnit attacks are effective vs. mages and monsters.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_funcs.is_magic(target, target.get_weapon())"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "item_override",
+                "Pariah_Gen"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "nid": "Rage_Buff",
+        "name": "Rage Buff",
+        "desc": "Gives X2 damage dealt, X2 maxHP and +2MOV for 5 turns",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    }
+]
