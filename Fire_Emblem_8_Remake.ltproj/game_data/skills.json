@@ -51622,6 +51622,707 @@
         ]
     },
     {
+        "nid": "Extensive_Strike",
+        "name": "Extensive Strike",
+        "desc": "The user gains +2 of range of attack with monsters attacks.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            0,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Monster'"
+            ]
+        ]
+    },
+    {
+        "nid": "Colossal_Impact",
+        "name": "Colossal Impact",
+        "desc": "When initiating, if unit's STR+CON/3 >= Enemy's DEF+CON, gains additional damage equal to the unit's STR*2+CON*2 and attacks inflict Stun.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Stunned"
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.get_stat('STR+CON/3') >= target.get_stat('DEF+CON') and unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('CON') * 2) + (unit.get_stat('STR') * 2)"
+            ]
+        ]
+    },
+    {
+        "nid": "Titanium_Body",
+        "name": "Titanium Body",
+        "desc": "Increment in 100 the Growth of HP;CON and STR.Reduce the Exp Gain in 50%. The user regenerate a 30% of Max HP at iniating turn.The user gains +30% of STR;DEF;RES and SKL and reduce the SPD in 75% and LCK in 100%",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            13
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        100
+                    ],
+                    [
+                        "STR",
+                        100
+                    ],
+                    [
+                        "CON",
+                        100
+                    ]
+                ]
+            ],
+            [
+                "exp_multiplier",
+                0.5
+            ],
+            [
+                "regeneration",
+                1.3
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.3
+                    ],
+                    [
+                        "SKL",
+                        1.3
+                    ],
+                    [
+                        "DEF",
+                        1.3
+                    ],
+                    [
+                        "RES",
+                        1.3
+                    ],
+                    [
+                        "SPD",
+                        0.25
+                    ],
+                    [
+                        "LCK",
+                        0.0
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Titanic_Reinforce_Skill",
+        "name": "Titanic Reinforce Skill",
+        "desc": "Deal extra 20% damage, ignore 20% enemy DEF and increase DEF and RES by 5 per stack. Each use of the skill costs 10 CON. The skill only can stacked twice per unit.",
+        "icon_nid": "03-29-25 New Accessories Icons_1",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Titanic_Reinforce_Ability"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_stat('CON') >= 10"
+            ]
+        ]
+    },
+    {
+        "nid": "Titanic_Reinforce_Buff",
+        "name": "Titanic Reinforce Buff",
+        "desc": "Deal extra 20% damage, ignore 20% enemy DEF and increase DEF and RES by 5 per stack",
+        "icon_nid": "03-29-25 New Accessories Icons_1",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "stack",
+                2
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 5"
+            ]
+        ]
+    },
+    {
+        "nid": "Titanic_Reinforce_Debuff",
+        "name": "Titanic Reinforce Debuff",
+        "desc": "-10 CON per stack.",
+        "icon_nid": "03-29-25 New Accessories Icons_1",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "CON",
+                        -10
+                    ]
+                ]
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Revitalize",
+        "name": "Revitalize",
+        "desc": "The user heal 35HP and gains +1 CON for every kill. Lost at the end of chapter.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            8
+        ],
+        "components": [
+            [
+                "heal_on_kill",
+                35
+            ],
+            [
+                "gain_skill_after_kill",
+                "Revitalize_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Revitalize_Buff",
+        "name": "Revitalize",
+        "desc": "+1 CON for every kill. Lost in the end of chapter.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            8
+        ],
+        "components": [
+            [
+                "stack",
+                9999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "CON",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rage_Mode",
+        "name": "Ancestral Rage",
+        "desc": "Gives X2 damage dealt, X2 maxHP and +2MOV for 5 turns, all stats set to 0 for 2 rounds after.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Rage_Mode_Item"
+            ]
+        ]
+    },
+    {
+        "nid": "Rage_Buff",
+        "name": "Rage Buff",
+        "desc": "Gives X2 damage dealt, X2 maxHP and +2MOV for 5 turns",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "time",
+                5
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Rage_Debuff",
+        "name": "Rage Debuff",
+        "desc": "all stats set to 0 for 2 rounds after Rage expires.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Rage_Buff')"
+            ],
+            [
+                "time",
+                7
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0
+                    ],
+                    [
+                        "MAG",
+                        0
+                    ],
+                    [
+                        "SPD",
+                        0
+                    ],
+                    [
+                        "LCK",
+                        0
+                    ],
+                    [
+                        "DEF",
+                        0
+                    ],
+                    [
+                        "RES",
+                        0
+                    ],
+                    [
+                        "SKL",
+                        0
+                    ],
+                    [
+                        "CON",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Pariah_Innate",
+        "name": "Innate Pariah",
+        "desc": "Reduces received magic damage by 75%.\nUnit attacks are effective vs. mages and monsters.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "item_funcs.is_magic(target, target.get_weapon())"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "item_override",
+                "Pariah_Gen"
+            ]
+        ]
+    },
+    {
+        "nid": "Immovable_Position",
+        "name": "Entrench Position",
+        "desc": "On terrain with bonus effects, +20 DEF/RES and immunity to shove.\nTaunts enemies.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        20
+                    ],
+                    [
+                        "RES",
+                        20
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "AIProvoke"
+                ]
+            ],
+            [
+                "modify_ai_priority",
+                50.0
+            ],
+            [
+                "grounded",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Military_Training",
+        "name": "Cadian Training",
+        "desc": "Increases the CON; STR; SKL and SPD in 6,the user's MOV is not penalized for rough terrain.  ",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            16
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        6
+                    ],
+                    [
+                        "SKL",
+                        6
+                    ],
+                    [
+                        "SPD",
+                        6
+                    ],
+                    [
+                        "CON",
+                        6
+                    ]
+                ]
+            ],
+            [
+                "ignore_terrain",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Justice",
+        "name": "Swift Justice",
+        "desc": "The user gains an additional attack (Double if SPD is > than enemy SPD), follow up attacks are guaranteed to crit.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            13
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "pcc_static",
+                10.0
+            ]
+        ]
+    },
+    {
+        "nid": "Punishment_Art",
+        "name": "Imperial Punishment",
+        "desc": "<red>CA:</> Increases damage deat by 100% and Hit by 50. Enemies hit have their stats reduced by 15%, stacks twice. Last until the end of the chapter.<green>CD:1 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Punishment"
+            ],
+            [
+                "build_charge",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Punishment",
+        "name": "Imperial Punishment",
+        "desc": "Enemies hit by the user have their stats reduced by 15%, stacks twice. Stacks last until the end of the chapter. Increases the Arbiter's damage by 100% and the Hit in 50.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Punishment_Debuff"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "hit",
+                50
+            ]
+        ]
+    },
+    {
+        "nid": "Punishment_Debuff",
+        "name": "Punishment",
+        "desc": "Stats reduced by 15%, stacks twice. Last until the end of the chapter",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "stack",
+                2
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.85
+                    ],
+                    [
+                        "STR",
+                        0.85
+                    ],
+                    [
+                        "MAG",
+                        0.85
+                    ],
+                    [
+                        "SKL",
+                        0.85
+                    ],
+                    [
+                        "SPD",
+                        0.85
+                    ],
+                    [
+                        "LCK",
+                        0.85
+                    ],
+                    [
+                        "DEF",
+                        0.85
+                    ],
+                    [
+                        "RES",
+                        0.85
+                    ],
+                    [
+                        "CON",
+                        0.85
+                    ],
+                    [
+                        "MOV",
+                        0.85
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fragmented_Fire",
+        "name": "Fragmented Fire",
+        "desc": "The user attacks ignore 50% of enemy DEF.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Lethal_Aim",
+        "name": "Lethal Aim",
+        "desc": "Adds the user's SPD+SKL to critical damage, increasing damage and crit chance by +5 for each square of distance between the user and the target.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            14
+        ],
+        "components": [
+            [
+                "eval_crit_additional",
+                "unit.get_stat('SKL') + unit.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage",
+                "5 * (utils.calculate_distance(unit.position, target.position))"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "5 * (utils.calculate_distance(unit.position, target.position))"
+            ]
+        ]
+    },
+    {
         "nid": "Eloquent_Form_T1",
         "name": "Eloquent Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
@@ -65225,6 +65926,145 @@
             [
                 "dynamic_resist_multiplier",
                 "1-(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ]
+        ]
+    },
+    {
+        "nid": "Closer_Healing",
+        "name": "Closer Healing",
+        "desc": "When healing an ally, increases healing output based on unit and ally's support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
+            ]
+        ]
+    },
+    {
+        "nid": "Awakened_Pair",
+        "name": "Awakened Pair",
+        "desc": "This unit and paired up units increase stats based on support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.traveler != None"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "MAG",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SKL",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SPD",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "LCK",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "DEF",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "RES",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ]
+                ]
+            ],
+            [
+                "pairup_bonus",
+                "Awakened_Pair"
+            ]
+        ]
+    },
+    {
+        "nid": "Guts",
+        "name": "Guts",
+        "desc": "If unit is at least under one negative status, increases unit's Strength and Magic by 50%.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            13
+        ],
+        "components": [
+            [
+                "condition",
+                "get_debuff_count(unit) > 0"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.5
+                    ],
+                    [
+                        "MAG",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Wonderful_Skin",
+        "name": "Wonderful Skin",
+        "desc": "If unit is at least under one negative status, increases unit's Defense and Resistance by 50%.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "condition",
+                "get_debuff_count(unit) > 0"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        1.5
+                    ],
+                    [
+                        "RES",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     }
