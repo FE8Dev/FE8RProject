@@ -1,0 +1,101 @@
+[
+    {
+        "nid": "Vindicare_Exitus",
+        "name": "Vindicare Exitus",
+        "desc": "A weapon created with future knowledge, inspired by legends, a single shot is fatal.\n<green>Skills:</>Lethal_Aim\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Uses SKL+SKL.",
+        "icon_nid": "{Ryan914, VelvetKitsune} Lights Out",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "status_on_equip",
+                "Lethal_Aim"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Infantry",
+                        "Armor",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vector"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Vector\").wexp['Bow'] >= 480"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SKL"
+            ]
+        ]
+    }
+]

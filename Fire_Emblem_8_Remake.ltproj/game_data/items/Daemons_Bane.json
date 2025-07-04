@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Daemons_Bane",
+        "name": "Daemons Bane",
+        "desc": "Demons fear meeting this gauntlet in melee combat.\n<red>Effective:</><icon>Monster</><pink>Misc:</>Uses STR+SKL+CON/2,Brave.",
+        "icon_nid": "Killer Knuckle {VelvetKitsune, LordGlenn}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "weight",
+                26
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Andre"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
+            ],
+            [
+                "brave",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Andre\").wexp['Monster'] >=360 and u(\"Andre\").wexp['Monster'] < 480"
+            ]
+        ]
+    }
+]

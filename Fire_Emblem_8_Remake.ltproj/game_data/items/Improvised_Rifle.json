@@ -1,0 +1,80 @@
+[
+    {
+        "nid": "Improvised_Rifle",
+        "name": "Improvised Rifle",
+        "desc": "A firearm made from parts of a futuristic rifle and wood from a nearby tree used by Vector.\n<pink>Misc:</>Uses SKL+STR/3.",
+        "icon_nid": "{N426} (Icon Blitz 3) Stick",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vector"
+                ]
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "eval_available",
+                "u(\"Vector\").wexp['Bow'] >= 180 and u(\"Vector\").wexp['Bow'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_STR_WEAK"
+            ]
+        ]
+    }
+]

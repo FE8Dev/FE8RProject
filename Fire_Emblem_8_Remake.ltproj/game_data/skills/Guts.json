@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Guts",
+        "name": "Guts",
+        "desc": "If unit is at least under one negative status, increases unit's Strength and Magic by 50%.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            13
+        ],
+        "components": [
+            [
+                "condition",
+                "get_debuff_count(unit) > 0"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        1.5
+                    ],
+                    [
+                        "MAG",
+                        1.5
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    }
+]

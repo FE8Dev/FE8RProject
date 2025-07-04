@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Extensive_Strike",
+        "name": "Extensive Strike",
+        "desc": "The user gains +2 of range of attack with monsters attacks.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            0,
+            31
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Monster'"
+            ]
+        ]
+    }
+]

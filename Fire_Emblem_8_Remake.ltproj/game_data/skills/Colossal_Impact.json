@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Colossal_Impact",
+        "name": "Colossal Impact",
+        "desc": "When initiating, if unit's STR+CON/3 >= Enemy's DEF+CON, gains additional damage equal to the unit's STR*2+CON*2 and attacks inflict Stun.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "give_status_after_hit",
+                "Stunned"
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack' and unit.get_stat('STR+CON/3') >= target.get_stat('DEF+CON') and unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('CON') * 2) + (unit.get_stat('STR') * 2)"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Pariah_Gen",
+        "name": "Pariah Gen",
+        "desc": "Unit attacks are effective vs. mages and monsters.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            10
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Magic",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

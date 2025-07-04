@@ -1,0 +1,63 @@
+[
+    {
+        "nid": "Rage_Debuff",
+        "name": "Rage Debuff",
+        "desc": "all stats set to 0 for 2 rounds after Rage expires.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "not has_skill(unit, 'Rage_Buff')"
+            ],
+            [
+                "time",
+                7
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        0
+                    ],
+                    [
+                        "MAG",
+                        0
+                    ],
+                    [
+                        "SPD",
+                        0
+                    ],
+                    [
+                        "LCK",
+                        0
+                    ],
+                    [
+                        "DEF",
+                        0
+                    ],
+                    [
+                        "RES",
+                        0
+                    ],
+                    [
+                        "SKL",
+                        0
+                    ],
+                    [
+                        "CON",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    }
+]
