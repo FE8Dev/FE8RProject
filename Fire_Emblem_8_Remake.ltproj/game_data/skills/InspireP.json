@@ -2,7 +2,7 @@
     {
         "nid": "InspireP",
         "name": "Inspire+",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +20% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +20% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -10,8 +10,16 @@
         ],
         "components": [
             [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",

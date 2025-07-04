@@ -2,15 +2,44 @@
     {
         "nid": "Vespera",
         "name": "Vespera",
-        "desc": "",
+        "desc": "A mysterious, but kind woman. A fierce fighter on the battlefield.\nUnit submitted by Xiakil. Portrait by Halone_Fenriel.",
         "variant": "",
         "level": 1,
-        "klass": "Citizen",
-        "tags": [],
-        "bases": {},
-        "growths": {},
+        "klass": "Maiden",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 32,
+            "STR": 7,
+            "MAG": 5,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 14,
+            "DEF": 7,
+            "RES": 5,
+            "CON": 9,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 100,
+            "STR": 60,
+            "MAG": 45,
+            "SKL": 60,
+            "SPD": 50,
+            "LCK": 85,
+            "DEF": 45,
+            "RES": 45,
+            "CON": 20,
+            "MOV": 1
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Vespera_Arsenal",
+                false
+            ]
+        ],
         "learned_skills": [
             [
                 1,
@@ -26,7 +55,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Halone_Fenriel_F2E",
+        "portrait_nid": "Halone_Fenriel_F2E_1",
         "affinity": "Light",
         "fields": []
     }

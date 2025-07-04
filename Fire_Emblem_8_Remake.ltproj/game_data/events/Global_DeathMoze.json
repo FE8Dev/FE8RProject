@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathMoze",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Moze'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Moze;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Moze;So this is my end...|Mother...Father...|I'm sorry I wasn't strong enough..",
+            "else",
+            "speak;Moze;It cannot end here...|I will be back after a short rest...",
+            "end",
+            "expression;Moze;CloseEyes",
+            "remove_portrait;Moze",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathMoze"
+    }
+]

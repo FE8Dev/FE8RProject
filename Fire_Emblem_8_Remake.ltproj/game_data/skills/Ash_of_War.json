@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Ash_of_War",
+        "name": "Ash of War",
+        "desc": "<red>CA:</>Strike with force against many dark souls. +30 damage, +50 hit, +50 crit, effective damage against monsters, dragons, and horses. Half damage taken while doing so. <green>CD:4 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Ash_of_War_Activate"
+            ],
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

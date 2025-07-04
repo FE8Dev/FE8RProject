@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Dawn_Blade",
+        "name": "Dawn Blade",
+        "desc": "A magical blade that is easy to wield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Light</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), Heavy.",
+        "icon_nid": "Fajar Weapons",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Light"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Fajar"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Frozen",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "eval_available",
+                "u(\"Fajar\").wexp['Sword'] >= 180 and u(\"Fajar\").wexp['Sword'] < 300"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_MID"
+            ]
+        ]
+    }
+]

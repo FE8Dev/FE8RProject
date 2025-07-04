@@ -10659,7 +10659,7 @@
         "movement_group": "Pirates",
         "promotes_from": "Journeyman",
         "turns_into": [
-            "T2_Brigand_Rider",
+            "T2_Brigand_Rider_Ross",
             "T2_Lizard_Pirate",
             "T2_Captain"
         ],
@@ -30019,6 +30019,159 @@
         "fields": []
     },
     {
+        "nid": "T3_Gold_Knight_Jonathan",
+        "name": "Gold Knight",
+        "desc": "Towering Knights with bolstering defences. <icon>Horse</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Great_Knight",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 36,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 15,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -63,
+            "MAG": 0,
+            "SKL": -21,
+            "SPD": -21,
+            "LCK": -21,
+            "DEF": -56,
+            "RES": -21,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 250,
+            "STR": 180,
+            "MAG": 0,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 60,
+            "DEF": 160,
+            "RES": 60,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 4,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 4,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 93,
+            "SPD": 90,
+            "LCK": 100,
+            "DEF": 100,
+            "RES": 90,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Mobile_Wall"
+            ],
+            [
+                15,
+                "Shield_Dash_Art"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                300,
+                480
+            ],
+            "Axe": [
+                true,
+                60,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Gold Knight (U) Axe {Nuramon}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Fortress",
+        "combat_anim_nid": "T3_Fortress_Knight",
+        "fields": []
+    },
+    {
         "nid": "T3_Holy_Guardian",
         "name": "Holy Guardian",
         "desc": "Holy Knights with bolstering defences. <icon>Horse</><icon>Armor</>",
@@ -43788,7 +43941,7 @@
     },
     {
         "nid": "T3_Female_Archbishop",
-        "name": "Archbishop",
+        "name": "Matriarch",
         "desc": "Those who's faith have been tested and achived heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Mages",
@@ -80216,7 +80369,7 @@
         "learned_skills": [
             [
                 5,
-                "EarthB_T1"
+                "EarthB"
             ],
             [
                 1,
@@ -80224,11 +80377,11 @@
             ],
             [
                 15,
-                "SupremeMasteryofCombat_T2"
+                "SupremeMasteryofCombat"
             ],
             [
                 25,
-                "SupremeMasteryofMagic_T3"
+                "SupremeMasteryofMagic"
             ]
         ],
         "wexp_gain": {
@@ -92885,7 +93038,7 @@
             ],
             [
                 1,
-                "Transform_Test"
+                "Transform_Test_hide"
             ]
         ],
         "wexp_gain": {
@@ -93029,10 +93182,6 @@
         },
         "learned_skills": [
             [
-                1,
-                "Knights_Rush"
-            ],
-            [
                 5,
                 "Pavise_Proc"
             ],
@@ -93046,7 +93195,7 @@
             ],
             [
                 1,
-                "Celerity"
+                "Full_Rush"
             ]
         ],
         "wexp_gain": {
@@ -93106,7 +93255,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "General (U) Sword {Norikins}-stand",
+        "map_sprite_nid": "General (U) Axe {IS, Blademaster}-stand",
         "combat_anim_nid": "General",
         "fields": []
     },
@@ -93254,7 +93403,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "T3_Marshall",
+        "map_sprite_nid": "Marshall (U) Axe {Nuramon}-stand",
         "combat_anim_nid": "T3_Marshall",
         "fields": []
     },
@@ -93402,7 +93551,7 @@
             0,
             0
         ],
-        "map_sprite_nid": "Marshall (U) Axe {Nuramon}-stand",
+        "map_sprite_nid": "Berserker (M) Hawkeye Axe {IS}-stand",
         "combat_anim_nid": "Juggernaut",
         "fields": []
     },
@@ -94663,6 +94812,6555 @@
         ],
         "map_sprite_nid": "Ephraim_T3_Royal_Knight",
         "combat_anim_nid": "Royal_Knight_V2_Ephraim",
+        "fields": []
+    },
+    {
+        "nid": "Myrmidon_Fajar",
+        "name": "Myrmidon",
+        "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Swordmaster_Fajar"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 9,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 2,
+            "CON": 8,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                5,
+                "Reckless_Swing_Art"
+            ],
+            [
+                15,
+                "Desperation"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Myrmidon",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "MyrmidonFemale",
+        "combat_anim_nid": "Fajar_T1",
+        "fields": []
+    },
+    {
+        "nid": "Swordmaster_Fajar",
+        "name": "Swordmaster",
+        "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Myrmidon_Female",
+        "turns_into": [
+            "Sword_Blossom_Fajar"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 32,
+            "STR": 6,
+            "MAG": 4,
+            "SKL": 12,
+            "SPD": 12,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 10,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 62,
+            "MAG": 64,
+            "SKL": 69,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 62,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Swordmasters_Dance"
+            ],
+            [
+                15,
+                "Astra_Art"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Swordmaster",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Blade Lord (F) Kawaii Blader Sword {blood}-stand",
+        "combat_anim_nid": "Fajar_T2",
+        "fields": []
+    },
+    {
+        "nid": "Sword_Blossom_Fajar",
+        "name": "Sword Blossom",
+        "desc": "A beautiful flower who is also deadly with her blades. <icon>Infantry</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Swordmaster_Female",
+        "turns_into": [],
+        "tags": [
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 6,
+            "MAG": 5,
+            "SKL": 6,
+            "SPD": 8,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 7,
+            "CON": 8,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -28,
+            "MAG": -35,
+            "SKL": -35,
+            "SPD": -42,
+            "LCK": -18,
+            "DEF": -14,
+            "RES": -49,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 110,
+            "STR": 110,
+            "MAG": 110,
+            "SKL": 100,
+            "SPD": 120,
+            "LCK": 50,
+            "DEF": 80,
+            "RES": 90,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 6,
+            "STR": 8,
+            "MAG": 3,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 3,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 93,
+            "MAG": 95,
+            "SKL": 98,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 93,
+            "RES": 94,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Aegis_Blow"
+            ],
+            [
+                15,
+                "Life_or_Death"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Aegis_Blow_Buff_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                300,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dread Fighter (F) T3 Sword {Nuramon}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Lord (F) Lyn T2 Short-Hair {Merpin}-stand",
+        "combat_anim_nid": "Fajar_T3",
+        "fields": []
+    },
+    {
+        "nid": "Maiden",
+        "name": "Maiden",
+        "desc": "A maiden fighting for what is right and pure. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Battle_Maiden",
+            "Falcoknight_Vespera",
+            "Holy_Dragon_First"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 9,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 2,
+            "CON": 8,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                5,
+                "Faith"
+            ],
+            [
+                15,
+                "Eloquent_Form"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                1,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Myrmidon",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Villager (F) v2 Sword {HyperGammaSpaces}-stand",
+        "combat_anim_nid": "Maiden",
+        "fields": []
+    },
+    {
+        "nid": "Battle_Maiden",
+        "name": "Battle Maiden",
+        "desc": "A warrior who fights with grace and elegancy. <icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Myrmidon_Female",
+        "turns_into": [
+            "Divine_Warrior",
+            "T3_Female_Battle_Sage_Vespera",
+            "Eirika_T3_Phantom_Lord_Vespera"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 32,
+            "STR": 6,
+            "MAG": 4,
+            "SKL": 12,
+            "SPD": 12,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 10,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 15,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 15,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 1,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 62,
+            "MAG": 64,
+            "SKL": 69,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 62,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Exterminator"
+            ],
+            [
+                15,
+                "Light_Break"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                2,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                120,
+                360
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Swordmaster",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Mercenary (F) Long-Hair Sword {Rasdel}-stand",
+        "combat_anim_nid": "Battle_Maiden",
+        "fields": []
+    },
+    {
+        "nid": "Falcoknight_Vespera",
+        "name": "Falcoknight",
+        "desc": "Veteran pegasus knights. <icon>Flying</>",
+        "tier": 2,
+        "movement_group": "Fliers",
+        "promotes_from": "Pegasus_Knight",
+        "turns_into": [
+            "T3_Angel_Vespera",
+            "T3_Seraphim_Vespera",
+            "T3_Sky_Guard_Vespera"
+        ],
+        "tags": [
+            "Mounted",
+            "AutoPromote",
+            "Flying"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 25,
+            "STR": 6,
+            "MAG": 5,
+            "SKL": 10,
+            "SPD": 12,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 6,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 5,
+            "STR": 10,
+            "MAG": 10,
+            "SKL": 15,
+            "SPD": 15,
+            "LCK": 10,
+            "DEF": 5,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 2,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 4,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 1,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 64,
+            "MAG": 63,
+            "SKL": 65,
+            "SPD": 68,
+            "LCK": 70,
+            "DEF": 63,
+            "RES": 66,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Darting_Blow"
+            ],
+            [
+                15,
+                "Mana_Strike_Proc"
+            ],
+            [
+                1,
+                "Pegasus_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                360
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                120,
+                360
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Falcoknight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Falcoknight",
+        "combat_anim_nid": "Falcon_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Holy_Dragon_First",
+        "name": "Holy Shifter",
+        "desc": "A lost race with mighty abilities. <icon>Dragon</><icon>Flying</>",
+        "tier": 2,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [
+            "Divine_Dragon_First",
+            "T3_Spirit_Dragon_First",
+            "T3_Mage_Dragon_Vespera_First"
+        ],
+        "tags": [
+            "Dragon",
+            "AutoPromote",
+            "Flying"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 95,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 25,
+            "DEF": 0,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 15,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 20,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 10,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 2,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 70,
+            "MAG": 70,
+            "SKL": 61,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 68,
+            "RES": 68,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                5,
+                "Dragon_Fang_Art"
+            ],
+            [
+                15,
+                "Dragon_power"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                1,
+                "Lord_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                120,
+                360
+            ]
+        },
+        "icon_nid": "Manakete Fiery (M) {N426}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Ice Dragon (U) {L95}-stand",
+        "combat_anim_nid": "Holy_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "Holy_Dragon_Second",
+        "name": "Holy Shifter",
+        "desc": "A lost race with mighty abilities. <icon>Dragon</><icon>Flying</>",
+        "tier": 2,
+        "movement_group": "Fliers",
+        "promotes_from": null,
+        "turns_into": [
+            "Divine_Dragon_First",
+            "T3_Spirit_Dragon_First",
+            "T3_Mage_Dragon_Vespera_First"
+        ],
+        "tags": [
+            "Dragon",
+            "AutoPromote",
+            "Flying"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 95,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 25,
+            "DEF": 0,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 15,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 20,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 70,
+            "MAG": 70,
+            "SKL": 61,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 68,
+            "RES": 68,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Dragon_Fang_Art"
+            ],
+            [
+                15,
+                "Dragon_power"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                1,
+                "Lord_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                0,
+                360
+            ]
+        },
+        "icon_nid": "Manakete Fiery (M) {N426}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Ice Dragon (U) {L95}-stand",
+        "combat_anim_nid": "Holy_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "Holy_Dragon_Human_First",
+        "name": "Holy Shifter",
+        "desc": "A lost race with mighty abilities. <icon>Dragon</><icon>Flying</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Divine_Dragon_First",
+            "T3_Spirit_Dragon_First",
+            "T3_Mage_Dragon_Vespera_First"
+        ],
+        "tags": [
+            "Dragon",
+            "AutoPromote",
+            "Flying"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 95,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 25,
+            "DEF": 0,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 15,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 20,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 70,
+            "MAG": 70,
+            "SKL": 61,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 68,
+            "RES": 68,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Dragon_Fang_Art"
+            ],
+            [
+                15,
+                "Dragon_power"
+            ],
+            [
+                1,
+                "Lord_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                360
+            ],
+            "Lance": [
+                false,
+                0,
+                360
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                360
+            ]
+        },
+        "icon_nid": "Manakete Fiery (M) {N426}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Villager (F) v2 Sword {HyperGammaSpaces}-stand",
+        "combat_anim_nid": "Maiden",
+        "fields": []
+    },
+    {
+        "nid": "Holy_Dragon_Human_Second",
+        "name": "Holy Shifter",
+        "desc": "A lost race with mighty abilities. <icon>Dragon</><icon>Flying</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Divine_Dragon_First",
+            "T3_Spirit_Dragon_First",
+            "T3_Mage_Dragon_Vespera_First"
+        ],
+        "tags": [
+            "Dragon",
+            "AutoPromote",
+            "Flying"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 20,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 2,
+            "LCK": 0,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 5,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 95,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 30,
+            "SPD": 20,
+            "LCK": 25,
+            "DEF": 0,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 10,
+            "MAG": 15,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 20,
+            "DEF": 15,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 70,
+            "MAG": 70,
+            "SKL": 61,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 68,
+            "RES": 68,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Dragon_Fang_Art"
+            ],
+            [
+                15,
+                "Dragon_power"
+            ],
+            [
+                1,
+                "Lord_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                360
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                1,
+                360
+            ]
+        },
+        "icon_nid": "Manakete Fiery (M) {N426}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Villager (F) v2 Sword {HyperGammaSpaces}-stand",
+        "combat_anim_nid": "Maiden",
+        "fields": []
+    },
+    {
+        "nid": "Divine_Dragon_First",
+        "name": "Divine Shifter",
+        "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 50,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 250,
+            "STR": 110,
+            "MAG": 110,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 130,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 3,
+            "DEF": 5,
+            "RES": 4,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 100,
+            "RES": 94,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Imbue"
+            ],
+            [
+                15,
+                "Judgement"
+            ],
+            [
+                1,
+                "Wyvern_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                60,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Divine {L95}-stand",
+        "combat_anim_nid": "Divine_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "Divine_Dragon_Second",
+        "name": "Divine Shifter",
+        "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 50,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 250,
+            "STR": 110,
+            "MAG": 110,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 130,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 100,
+            "RES": 94,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Imbue"
+            ],
+            [
+                15,
+                "Judgement"
+            ],
+            [
+                1,
+                "Wyvern_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Divine {L95}-stand",
+        "combat_anim_nid": "Divine_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "Divine_Dragon_Human_First",
+        "name": "Divine Shifter",
+        "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 50,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 250,
+            "STR": 110,
+            "MAG": 110,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 130,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 100,
+            "RES": 94,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                5,
+                "Imbue"
+            ],
+            [
+                15,
+                "Judgement"
+            ],
+            [
+                1,
+                "Wyvern_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Blade Lord (F) Kawaii Blader Sword {blood}-stand",
+        "combat_anim_nid": "Divine_Warrior",
+        "fields": []
+    },
+    {
+        "nid": "Divine_Dragon_Human_Second",
+        "name": "Divine Shifter",
+        "desc": "A manakete who has unlocked their dark past. <icon>Monster</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 50,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 250,
+            "STR": 110,
+            "MAG": 110,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 130,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 100,
+            "MAG": 90,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 100,
+            "RES": 94,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                5,
+                "Imbue"
+            ],
+            [
+                15,
+                "Judgement"
+            ],
+            [
+                1,
+                "Wyvern_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Blade Lord (F) Kawaii Blader Sword {blood}-stand",
+        "combat_anim_nid": "Divine_Warrior",
+        "fields": []
+    },
+    {
+        "nid": "Divine_Warrior",
+        "name": "Divine Warrior",
+        "desc": "Crusader of the battlefield, those who see her fight are blessed. <icon>Infantry</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Swordmaster_Female",
+        "turns_into": [],
+        "tags": [
+            "Sword",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 6,
+            "MAG": 5,
+            "SKL": 6,
+            "SPD": 8,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 7,
+            "CON": 8,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -28,
+            "MAG": -35,
+            "SKL": -35,
+            "SPD": -42,
+            "LCK": -18,
+            "DEF": -14,
+            "RES": -49,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 130,
+            "MAG": 130,
+            "SKL": 100,
+            "SPD": 90,
+            "LCK": 160,
+            "DEF": 100,
+            "RES": 90,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 6,
+            "STR": 8,
+            "MAG": 3,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 2,
+            "DEF": 2,
+            "RES": 3,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 98,
+            "MAG": 95,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 93,
+            "RES": 95,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Holy_Crusade"
+            ],
+            [
+                5,
+                "Holy_Crusade_Buff_hide"
+            ],
+            [
+                15,
+                "Sanctify_Ground_Ally_Parent"
+            ],
+            [
+                15,
+                "Sanctify_Ground_Enemy_Parent_hide"
+            ],
+            [
+                1,
+                "Myrmidon_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                300,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dread Fighter (F) T3 Sword {Nuramon}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Blade Lord (F) Kawaii Blader Sword {blood}-stand",
+        "combat_anim_nid": "Divine_Warrior",
+        "fields": []
+    },
+    {
+        "nid": "T3_Female_Battle_Sage_Vespera",
+        "name": "Battle Sage",
+        "desc": "Women sages who have mastered the blade and book. <icon>Infantry</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Sage_Female",
+        "turns_into": [],
+        "tags": [
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 7,
+            "SPD": 6,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 7,
+            "CON": 10,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -49,
+            "MAG": -32,
+            "SKL": -28,
+            "SPD": -32,
+            "LCK": -14,
+            "DEF": -28,
+            "RES": -28,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 120,
+            "STR": 140,
+            "MAG": 90,
+            "SKL": 80,
+            "SPD": 90,
+            "LCK": 40,
+            "DEF": 80,
+            "RES": 80,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 10,
+            "MAG": 3,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 4,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 95,
+            "MAG": 95,
+            "SKL": 92,
+            "SPD": 93,
+            "LCK": 100,
+            "DEF": 93,
+            "RES": 97,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Explosive_Weapon"
+            ],
+            [
+                15,
+                "Quick_Arcane_Barrier"
+            ],
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                true,
+                300,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                false,
+                60,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Mage (F) Fire Magic {L95}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Female_Battle_Sage",
+        "combat_anim_nid": "T3_Battle_Sage",
+        "fields": []
+    },
+    {
+        "nid": "Eirika_T3_Phantom_Lord_Vespera",
+        "name": "Phantom Lord",
+        "desc": "Eirika uses light and dark magic to hide from her enemies' attacks. <icon>Infantry</><icon>Magic</><icon>Steal</>",
+        "tier": 3,
+        "movement_group": "Bandits",
+        "promotes_from": "Eirika_T2MageLord",
+        "turns_into": [],
+        "tags": [
+            "Convoy",
+            "AdjConvoy",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 80,
+            "MAG": 80,
+            "SKL": 160,
+            "SPD": 160,
+            "LCK": 150,
+            "DEF": 70,
+            "RES": 60,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 2,
+            "MAG": 2,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 92,
+            "MAG": 93,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 100,
+            "DEF": 91,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Illusionary_Ambush"
+            ],
+            [
+                15,
+                "Dimensional_Attack"
+            ],
+            [
+                1,
+                "Lord_Pair_Up_T3_hide"
+            ],
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                480
+            ],
+            "Staff": [
+                true,
+                300,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                true,
+                300,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Assassin (F) {RobertFPY}-stand",
+        "combat_anim_nid": "T3_Phantom_Lord",
+        "fields": []
+    },
+    {
+        "nid": "T3_Angel_Vespera",
+        "name": "War Angel",
+        "desc": "Those who have become one with a Pegasus, reaching a new level of power. <icon>Flying</><icon>Magic</><icon>Staff</>.",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "Falcoknight",
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Support",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 33,
+            "STR": 7,
+            "MAG": 6,
+            "SKL": 6,
+            "SPD": 6,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 4,
+            "CON": 7,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -21,
+            "MAG": -28,
+            "SKL": -35,
+            "SPD": -35,
+            "LCK": -53,
+            "DEF": -21,
+            "RES": -53,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 120,
+            "STR": 60,
+            "MAG": 80,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 150,
+            "DEF": 60,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 4,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 1,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 94,
+            "MAG": 96,
+            "SKL": 95,
+            "SPD": 95,
+            "LCK": 100,
+            "DEF": 92,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Esuna_Aura"
+            ],
+            [
+                15,
+                "Heavens_Trumpet_Parent"
+            ],
+            [
+                1,
+                "Cleric_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                60,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Harpy (U) {Sphealnuke}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Angel",
+        "combat_anim_nid": "T3_War_Angel",
+        "fields": []
+    },
+    {
+        "nid": "T3_Seraphim_Vespera",
+        "name": "Seraphim",
+        "desc": "Holy beings who heal and smite with Light magic. <icon>Flying</><icon>Magic</><icon>Staff</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "T2_Pegasus_Medic",
+        "turns_into": [],
+        "tags": [
+            "Flying",
+            "Support",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 22,
+            "STR": 3,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 8,
+            "LCK": 8,
+            "DEF": 5,
+            "RES": 7,
+            "CON": 7,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 5,
+            "MAG": -42,
+            "SKL": -35,
+            "SPD": -35,
+            "LCK": -53,
+            "DEF": -18,
+            "RES": -32,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 70,
+            "MAG": 120,
+            "SKL": 100,
+            "SPD": 100,
+            "LCK": 150,
+            "DEF": 50,
+            "RES": 90,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 1,
+            "STR": 2,
+            "MAG": 3,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 4,
+            "DEF": 1,
+            "RES": 3,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 93,
+            "SKL": 96,
+            "SPD": 98,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Reflect_Magic"
+            ],
+            [
+                15,
+                "Angelic_Retribution_Art"
+            ],
+            [
+                1,
+                "Cleric_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                60,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Ophanim (U) {Sphealnuke}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Seraphim",
+        "combat_anim_nid": "T3_Seraphim",
+        "fields": []
+    },
+    {
+        "nid": "T3_Sky_Guard_Vespera",
+        "name": "Sky Guard",
+        "desc": "Those who defend the air with a variety of weapons. <icon>Flying</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "Falcoknight",
+        "turns_into": [],
+        "tags": [
+            "Mounted",
+            "Flying"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 28,
+            "STR": 6,
+            "MAG": 3,
+            "SKL": 7,
+            "SPD": 6,
+            "LCK": 6,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 9,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -39,
+            "MAG": -21,
+            "SKL": -46,
+            "SPD": -35,
+            "LCK": -21,
+            "DEF": -25,
+            "RES": -21,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 150,
+            "STR": 110,
+            "MAG": 60,
+            "SKL": 130,
+            "SPD": 100,
+            "LCK": 60,
+            "DEF": 70,
+            "RES": 60,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 2,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 95,
+            "MAG": 93,
+            "SKL": 98,
+            "SPD": 97,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 98,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Tailwind_Aura"
+            ],
+            [
+                15,
+                "Man_Killer"
+            ],
+            [
+                1,
+                "Pegasus_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                300,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                true,
+                300,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Arbalest (F) Sword {EldritchAbomination, Jj09}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Warbird (F) {Unknown, Alexsplode}-stand",
+        "combat_anim_nid": "T3_Sky_Guard",
+        "fields": []
+    },
+    {
+        "nid": "T3_Spirit_Dragon_First",
+        "name": "Spirit Shifter",
+        "desc": "A form for those who know the ancient ways. <icon>Infantry</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "Dancer",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 100,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 100,
+            "RES": 100,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 1,
+            "MAG": 8,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 5,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 96,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                5,
+                "Arcane_Drain"
+            ],
+            [
+                15,
+                "Dragons_Gift"
+            ],
+            [
+                5,
+                "Arcane_Drain_Refresh_hide"
+            ],
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                60,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Myrrh Generic [Kemui52]-stand",
+        "combat_anim_nid": "T3_Arcane_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "T3_Spirit_Dragon_Second",
+        "name": "Arcane Shifter",
+        "desc": "A form for those who know the ancient ways. <icon>Infantry</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "Dancer",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 100,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 100,
+            "RES": 100,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 96,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Arcane_Drain"
+            ],
+            [
+                15,
+                "Dragons_Gift"
+            ],
+            [
+                5,
+                "Arcane_Drain_Refresh_hide"
+            ],
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Myrrh Generic [Kemui52]-stand",
+        "combat_anim_nid": "T3_Arcane_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "T3_Spirit_Dragon_Human_First",
+        "name": "Arcane Shifter",
+        "desc": "A form for those who know the ancient ways. <icon>Infantry</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Fliers",
+        "promotes_from": "Dancer",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 100,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 100,
+            "RES": 100,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 96,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Arcane_Drain"
+            ],
+            [
+                15,
+                "Dragons_Gift"
+            ],
+            [
+                5,
+                "Arcane_Drain_Refresh_hide"
+            ],
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                300,
+                480
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Angel",
+        "combat_anim_nid": "T3_War_Angel",
+        "fields": []
+    },
+    {
+        "nid": "T3_Spirit_Dragon_Human_Second",
+        "name": "Arcane Shifter",
+        "desc": "A form for those who know the ancient ways. <icon>Infantry</><icon>Dragon</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Dancer",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 100,
+            "STR": 100,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 70,
+            "DEF": 100,
+            "RES": 100,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 96,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Arcane_Drain"
+            ],
+            [
+                15,
+                "Dragons_Gift"
+            ],
+            [
+                5,
+                "Arcane_Drain_Refresh_hide"
+            ],
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                0,
+                480
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Angel",
+        "combat_anim_nid": "T3_War_Angel",
+        "fields": []
+    },
+    {
+        "nid": "T3_Mage_Dragon_Vespera_First",
+        "name": "Mage Shifter",
+        "desc": "A manakete who has evolved into a wise Mage Dragon. <icon>Magic</><icon>Dragon</><icon>Monster</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 38,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 225,
+            "STR": 80,
+            "MAG": 150,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 75,
+            "DEF": 90,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 6,
+            "STR": 0,
+            "MAG": 3,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 3,
+            "DEF": 4,
+            "RES": 5,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Magic_Rend"
+            ],
+            [
+                15,
+                "Magic_Blast"
+            ],
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                480
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                60,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Magic {L95}-stand",
+        "combat_anim_nid": "T3_Mage_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "T3_Mage_Dragon_Vespera_Second",
+        "name": "Mage Shifter",
+        "desc": "A manakete who has evolved into a wise Mage Dragon. <icon>Magic</><icon>Dragon</><icon>Monster</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 38,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 225,
+            "STR": 80,
+            "MAG": 150,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 75,
+            "DEF": 90,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Magic_Rend"
+            ],
+            [
+                15,
+                "Magic_Blast"
+            ],
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                true,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dragon (U) Magic {L95}-stand",
+        "combat_anim_nid": "T3_Mage_Dragon",
+        "fields": []
+    },
+    {
+        "nid": "T3_Mage_Dragon_Vespera_Human_First",
+        "name": "Mage Shifter",
+        "desc": "A manakete who has evolved into a wise Mage Dragon. <icon>Magic</><icon>Dragon</><icon>Monster</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 38,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 225,
+            "STR": 80,
+            "MAG": 150,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 75,
+            "DEF": 90,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Magic_Rend"
+            ],
+            [
+                15,
+                "Magic_Blast"
+            ],
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                300
+            ],
+            "Anima": [
+                true,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Warbird (F) {Unknown, Alexsplode}-stand",
+        "combat_anim_nid": "T3_Sky_Guard",
+        "fields": []
+    },
+    {
+        "nid": "T3_Mage_Dragon_Vespera_Human_Second",
+        "name": "Mage Shifter",
+        "desc": "A manakete who has evolved into a wise Mage Dragon. <icon>Magic</><icon>Dragon</><icon>Monster</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "T2_Wyvern_Amelia_First",
+        "turns_into": [],
+        "tags": [
+            "Dragon",
+            "Monster",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 38,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 18,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 75,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 225,
+            "STR": 80,
+            "MAG": 150,
+            "SKL": 75,
+            "SPD": 75,
+            "LCK": 75,
+            "DEF": 90,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 90,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 94,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Formshift"
+            ],
+            [
+                1,
+                "Flying_hide"
+            ],
+            [
+                5,
+                "Magic_Rend"
+            ],
+            [
+                15,
+                "Magic_Blast"
+            ],
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                0,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                0,
+                480
+            ],
+            "Anima": [
+                true,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Manakete (U) {MeatOfJustice}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Warbird (F) {Unknown, Alexsplode}-stand",
+        "combat_anim_nid": "T3_Sky_Guard",
+        "fields": []
+    },
+    {
+        "nid": "Snag",
+        "name": "Snag",
+        "desc": "A sentient snag that dreams of becoming more. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Armors",
+        "promotes_from": null,
+        "turns_into": [
+            "Valni_Wall",
+            "Trent",
+            "Nature_Dancer_Wally"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 9,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 2,
+            "CON": 8,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 15,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                1,
+                "Wally_Pair_Up_hide"
+            ],
+            [
+                5,
+                "Trip"
+            ],
+            [
+                15,
+                "Sturdy_Foundation"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                240
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Myrmidon",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Evergrim (U) {Almirage, Jj09}-stand",
+        "combat_anim_nid": "Snag",
+        "fields": []
+    },
+    {
+        "nid": "Valni_Wall",
+        "name": "Valni Wall",
+        "desc": "A wall made from the materials found in the Tower of Valni. <icon>Infantry</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Armors",
+        "promotes_from": "Snag",
+        "turns_into": [
+            "Ruins_Wall"
+        ],
+        "tags": [
+            "Armor",
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 2,
+            "MAG": 12,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 4,
+            "RES": 12,
+            "CON": 6,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 70,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 60,
+            "DEF": 60,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 8,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 5,
+            "DEF": 8,
+            "RES": 8,
+            "CON": 8,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 60,
+            "MAG": 60,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 70,
+            "RES": 70,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Wally_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Enticement"
+            ],
+            [
+                15,
+                "Stone_Wall"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                360
+            ],
+            "Light": [
+                false,
+                0,
+                360
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Box (U) {Pikmin1211 4}-stand",
+        "combat_anim_nid": "Ruins_Wall",
+        "fields": []
+    },
+    {
+        "nid": "Ruins_Wall",
+        "name": "Ruins Wall",
+        "desc": "The ultimate wall made from material of the Lagdou Ruins. <icon>Infantry</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Armors",
+        "promotes_from": "Valni_Wall",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 0
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 300,
+            "STR": 10,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 150,
+            "DEF": 200,
+            "RES": 200,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 10,
+            "STR": 1,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 8,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 10,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 880,
+            "STR": 90,
+            "MAG": 90,
+            "SKL": 90,
+            "SPD": 90,
+            "LCK": 100,
+            "DEF": 150,
+            "RES": 150,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Wally_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Obstruct"
+            ],
+            [
+                15,
+                "Self_Repair"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                480
+            ],
+            "Light": [
+                false,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Box (U) {Pikmin1211 4}-stand",
+        "combat_anim_nid": "Valni_Wall",
+        "fields": []
+    },
+    {
+        "nid": "Trent",
+        "name": "Trent",
+        "desc": "A wall made from the materials found in the Tower of Valni. <icon>Infantry</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Armors",
+        "promotes_from": "Snag",
+        "turns_into": [
+            "Archtrent"
+        ],
+        "tags": [
+            "Armor",
+            "AutoPromote",
+            "Monster",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 2,
+            "MAG": 12,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 4,
+            "RES": 12,
+            "CON": 6,
+            "MOV": 1
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 5,
+            "STR": 100,
+            "MAG": 15,
+            "SKL": 80,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 30,
+            "RES": 30,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 40,
+            "MAG": 2,
+            "SKL": 40,
+            "SPD": 20,
+            "LCK": 4,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 70,
+            "MAG": 60,
+            "SKL": 65,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 65,
+            "RES": 65,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Wally_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Crushing_Grip"
+            ],
+            [
+                15,
+                "Haunted_Call"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                360
+            ],
+            "Light": [
+                false,
+                0,
+                360
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                120,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Treant {U} {Dutch Introvert}-stand",
+        "combat_anim_nid": "Trent",
+        "fields": []
+    },
+    {
+        "nid": "Archtrent",
+        "name": "Archtrent",
+        "desc": "Captivating guardians of nature with fearsome magical prowess. <icon>Infantry</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Trent",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Monster",
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 200,
+            "STR": 140,
+            "MAG": 80,
+            "SKL": 100,
+            "SPD": 60,
+            "LCK": 100,
+            "DEF": 130,
+            "RES": 130,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 8,
+            "STR": 8,
+            "MAG": 1,
+            "SKL": 3,
+            "SPD": 3,
+            "LCK": 1,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 120,
+            "MAG": 90,
+            "SKL": 98,
+            "SPD": 91,
+            "LCK": 100,
+            "DEF": 95,
+            "RES": 95,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Wally_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Destructive_Grip"
+            ],
+            [
+                15,
+                "Call_Of_The_Haunted"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                480
+            ],
+            "Light": [
+                false,
+                0,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                60,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Treant {U} {Dutch Introvert}-stand",
+        "combat_anim_nid": "Archtrent",
+        "fields": []
+    },
+    {
+        "nid": "Nature_Dancer_Wally",
+        "name": "Nature Dancer",
+        "desc": "A mystical dancer to encourage allies. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Snag",
+        "turns_into": [
+            "Archdryad_Wally"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Monster",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 2,
+            "MAG": 12,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 10,
+            "DEF": 4,
+            "RES": 12,
+            "CON": 6,
+            "MOV": 1
+        },
+        "growths": {
+            "HP": 45,
+            "STR": 45,
+            "MAG": 45,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 70,
+            "DEF": 0,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 100,
+            "SKL": 30,
+            "SPD": 60,
+            "LCK": 10,
+            "DEF": 10,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 1,
+            "MAG": 40,
+            "SKL": 20,
+            "SPD": 40,
+            "LCK": 4,
+            "DEF": 2,
+            "RES": 3,
+            "CON": 2,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 65,
+            "MAG": 70,
+            "SKL": 65,
+            "SPD": 68,
+            "LCK": 70,
+            "DEF": 64,
+            "RES": 70,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                1,
+                "Refresh"
+            ],
+            [
+                5,
+                "Heal_Plus"
+            ],
+            [
+                15,
+                "Lucky_Dance"
+            ],
+            [
+                1,
+                "Wally_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                120,
+                360
+            ],
+            "Light": [
+                true,
+                120,
+                360
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dancer",
+        "combat_anim_nid": "Dryad_Dancer",
+        "fields": []
+    },
+    {
+        "nid": "Archdryad_Wally",
+        "name": "Archdryad",
+        "desc": "Captivating guardians of nature with fearsome magical prowess. <icon>Infantry</><icon>Monster</><icon>Magic</><icon>Staff</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Nature_Dancer_Wally",
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 6,
+            "RES": 8,
+            "CON": 13,
+            "MOV": 2
+        },
+        "growths": {
+            "HP": 50,
+            "STR": 5,
+            "MAG": 55,
+            "SKL": 25,
+            "SPD": 25,
+            "LCK": 35,
+            "DEF": 20,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 200,
+            "STR": 10,
+            "MAG": 140,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 150,
+            "DEF": 100,
+            "RES": 100,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 1,
+            "MAG": 8,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 5,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 120,
+            "SKL": 95,
+            "SPD": 96,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 93,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Archdryads_Blessing"
+            ],
+            [
+                15,
+                "All_Tangling_Roots"
+            ],
+            [
+                1,
+                "Wally_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Archdryads_Blessing_Art_hide"
+            ],
+            [
+                5,
+                "Archdryads_Blessing_EP_hide"
+            ],
+            [
+                15,
+                "Magnum_Opus_1"
+            ],
+            [
+                1,
+                "Transform_Test_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                60,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dancer (F) {Orihara_Saki}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Dryad-stand",
+        "combat_anim_nid": "Dryad_T3",
+        "fields": []
+    },
+    {
+        "nid": "Bulwark_Knight_Eterna",
+        "name": "Bulwark Knight",
+        "desc": "Mighty knights who mastered their craft of offense and defense.<icon>Armor</><icon>Infantry</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Armors",
+        "promotes_from": "Tarnished_Knight",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 5,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 120,
+            "STR": 120,
+            "MAG": 120,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 80,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 4,
+            "MAG": 4,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 2,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 6,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 100,
+            "MAG": 100,
+            "SKL": 92,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 98,
+            "RES": 98,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Mage_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Bulwark_Guard"
+            ],
+            [
+                15,
+                "Overwhelming_Aura"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                true,
+                60,
+                null
+            ],
+            "Axe": [
+                true,
+                60,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                true,
+                300,
+                null
+            ],
+            "Anima": [
+                false,
+                60,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "King (U) T3 Style v1 {Huichelaar, Seal, Der, Mobile21, flasuban}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Marshall (U) Capeless Sword {Nuramon}-stand",
+        "combat_anim_nid": "Bulwark_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Elden_Lord",
+        "name": "Elden Lord",
+        "desc": "A Tarnished who completed their goals, granted steel and responsibility atop their spectral steed. <icon>Armor</><icon>Horse</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Tarnished_Knight",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Armor",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 42,
+            "STR": 9,
+            "MAG": 6,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 6,
+            "DEF": 12,
+            "RES": 5,
+            "CON": 5,
+            "MOV": 9
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 130,
+            "STR": 105,
+            "MAG": 120,
+            "SKL": 70,
+            "SPD": 60,
+            "LCK": 75,
+            "DEF": 120,
+            "RES": 120,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 4,
+            "MAG": 4,
+            "SKL": 2,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 6,
+            "MOV": 3
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 95,
+            "MAG": 100,
+            "SKL": 95,
+            "SPD": 93,
+            "LCK": 100,
+            "DEF": 110,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Blessing_of_the_Erdtree"
+            ],
+            [
+                5,
+                "Blessing_of_the_Erdtree_Selfish"
+            ],
+            [
+                15,
+                "Ash_of_War"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                true,
+                60,
+                null
+            ],
+            "Axe": [
+                true,
+                60,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                true,
+                300,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Forest Knight (U) Sword {Leo_Link, DerTheVaporeon}-stand",
+        "combat_anim_nid": "Elden_Lord",
+        "fields": []
+    },
+    {
+        "nid": "Great_Knight_Eterna",
+        "name": "Great Knight",
+        "desc": "Veteran horse knights clad in thick armor. <icon>Horse</><icon>Armor</>",
+        "tier": 2,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Cavalier",
+        "turns_into": [
+            "T3_Gold_Knight",
+            "T3_Elephant_Rider",
+            "T3_Magic_Tank_Eterna"
+        ],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 32,
+            "STR": 8,
+            "MAG": 2,
+            "SKL": 6,
+            "SPD": 8,
+            "LCK": 0,
+            "DEF": 12,
+            "RES": 2,
+            "CON": 13,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 20,
+            "STR": 10,
+            "MAG": 5,
+            "SKL": 10,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 5,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 40,
+            "STR": 25,
+            "MAG": 0,
+            "SKL": 15,
+            "SPD": 5,
+            "LCK": 10,
+            "DEF": 25,
+            "RES": 15,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 4,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 68,
+            "MAG": 60,
+            "SKL": 66,
+            "SPD": 65,
+            "LCK": 70,
+            "DEF": 69,
+            "RES": 66,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Pivot"
+            ],
+            [
+                15,
+                "Armored_Blow"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                360
+            ],
+            "Lance": [
+                true,
+                60,
+                360
+            ],
+            "Axe": [
+                true,
+                120,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Great_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Great_Knight",
+        "combat_anim_nid": "Great_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Knight_Eterna",
+        "name": "Knight",
+        "desc": "Heavily armored knights with poor movement. <icon>Infantry</><icon>Armor</>",
+        "tier": 1,
+        "movement_group": "Armors",
+        "promotes_from": null,
+        "turns_into": [
+            "General",
+            "Great_Knight_Eterna",
+            "Tarnished_Knight"
+        ],
+        "tags": [
+            "Armor",
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 23,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 1,
+            "LCK": 0,
+            "DEF": 9,
+            "CON": 13,
+            "MOV": 5,
+            "RES": 1
+        },
+        "growths": {
+            "HP": 80,
+            "STR": 40,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 15,
+            "LCK": 25,
+            "DEF": 28,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 20
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
+        },
+        "promotion": {
+            "HP": 4,
+            "STR": 3,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 4,
+            "CON": 3,
+            "MOV": 0,
+            "RES": 3
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
+        },
+        "learned_skills": [
+            [
+                5,
+                "Knights_Rush"
+            ],
+            [
+                15,
+                "Wary_Fighter"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                31,
+                240
+            ],
+            "Lance": [
+                true,
+                31,
+                240
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Knight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Knight (U) Sword {Agro}-stand",
+        "combat_anim_nid": "T1_V3_Knight",
+        "fields": []
+    },
+    {
+        "nid": "T3_Magic_Tank_Eterna",
+        "name": "Barrier Knight",
+        "desc": "Mounted knights that strive for the ultimate magic defense. <icon>Horse</><icon>Armor</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Great_Knight_Eterna",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 5,
+            "MAG": 6,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 6,
+            "DEF": 7,
+            "RES": 8,
+            "CON": 12,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -56,
+            "MAG": -28,
+            "SKL": -25,
+            "SPD": -28,
+            "LCK": -21,
+            "DEF": -35,
+            "RES": -53,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 180,
+            "STR": 160,
+            "MAG": 80,
+            "SKL": 70,
+            "SPD": 80,
+            "LCK": 60,
+            "DEF": 100,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 8,
+            "MAG": 4,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 6,
+            "RES": 10,
+            "CON": 3,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 94,
+            "MAG": 98,
+            "SKL": 91,
+            "SPD": 90,
+            "LCK": 100,
+            "DEF": 91,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Magic_Wall_Aura"
+            ],
+            [
+                15,
+                "Magical_Ignition_Seared"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Drench_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Stun_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Frozen_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Shadowblight_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Rock_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                60,
+                480
+            ],
+            "Axe": [
+                true,
+                60,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                480
+            ],
+            "Light": [
+                true,
+                300,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dark Knight (M) Sword {Pikmin, Jj09} 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Magic_Tank",
+        "combat_anim_nid": "T3_Barrier_Knight_Female",
+        "fields": []
+    },
+    {
+        "nid": "T3_Terror_Knight_Eterna",
+        "name": "Terror Knight",
+        "desc": "Generals who have turned to dark powers to resist mighty spells. <icon>Infantry</><icon>Magic</><icon>Armor</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "General",
+        "turns_into": [],
+        "tags": [
+            "Armor",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 6,
+            "MAG": 6,
+            "SKL": 5,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 7,
+            "RES": 7,
+            "CON": 14,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -25,
+            "MAG": -68,
+            "SKL": -25,
+            "SPD": -18,
+            "LCK": -14,
+            "DEF": -25,
+            "RES": -70,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 160,
+            "STR": 70,
+            "MAG": 180,
+            "SKL": 70,
+            "SPD": 50,
+            "LCK": 40,
+            "DEF": 70,
+            "RES": 200,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 8,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 8,
+            "CON": 3,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 92,
+            "MAG": 100,
+            "SKL": 93,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 93,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Magic_Counter"
+            ],
+            [
+                15,
+                "Dark_Storm_Shadowblight"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                60,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                true,
+                300,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Baron (U) Axe no chain {SamirPlayz}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Marshall (U) Axe {Nuramon}-stand",
+        "combat_anim_nid": "Terror_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Tarnished_Knight",
+        "name": "Tarnished",
+        "desc": "An indomitable fighter clad in armor, granted a sacred mission.\n<icon>Armor</><icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Armors",
+        "promotes_from": "Knight_Eterna",
+        "turns_into": [
+            "Bulwark_Knight_Eterna",
+            "Elden_Lord",
+            "T3_Terror_Knight_Eterna"
+        ],
+        "tags": [
+            "Armor",
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 36,
+            "STR": 9,
+            "MAG": 4,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 4,
+            "DEF": 16,
+            "RES": 4,
+            "CON": 12,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 35,
+            "STR": 15,
+            "MAG": 5,
+            "SKL": 10,
+            "SPD": 5,
+            "LCK": 0,
+            "DEF": 10,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 20,
+            "STR": 25,
+            "MAG": 5,
+            "SKL": 5,
+            "SPD": 10,
+            "LCK": 5,
+            "DEF": 30,
+            "RES": 10,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 3,
+            "SPD": 1,
+            "LCK": 1,
+            "DEF": 3,
+            "RES": 2,
+            "CON": 2,
+            "MOV": 1
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 67,
+            "MAG": 65,
+            "SKL": 67,
+            "SPD": 68,
+            "LCK": 70,
+            "DEF": 71,
+            "RES": 67,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Poiseful_Blow"
+            ],
+            [
+                15,
+                "Block_Counter"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                null
+            ],
+            "Lance": [
+                true,
+                60,
+                null
+            ],
+            "Axe": [
+                true,
+                120,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Knight (U) Helmetless Sword {SALVAGED, BoneSethMan}-stand",
+        "combat_anim_nid": "Tarnished_Female",
         "fields": []
     }
 ]

@@ -295,7 +295,7 @@
             "if;game.level_vars['SkipTalkLarachel'] != True",
             "add_portrait;Larachel;Left;no_block",
             "add_portrait;Eirika;Right",
-            "if;game.check_alive(\"Rennac\")",
+            "if;game.check_alive(\"Rennac\") or game.current_mode.permadeath != True",
             "speak;Eirika;What are you doing over here L'Arachel?",
             "speak;Larachel;I'm trying to make sure Rennac doesn't escape again!|This rascal can't be let out of my sight!|So I'm letting him stay in the treasure room here where I can keep an eye on him!",
             "speak;Eirika;I see...|Good luck with that...|Oh Rennac...",

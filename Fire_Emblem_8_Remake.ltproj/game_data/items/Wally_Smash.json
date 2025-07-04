@@ -1,0 +1,78 @@
+[
+    {
+        "nid": "Wally_Smash",
+        "name": "Wally Smash",
+        "desc": "Use Wally as an axe.\nUses DEF + CON (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "map_cast_sfx",
+                "Horse Step 1"
+            ],
+            [
+                "map_cast_anim",
+                "CritSpark"
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_CON_STRONG"
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    }
+]

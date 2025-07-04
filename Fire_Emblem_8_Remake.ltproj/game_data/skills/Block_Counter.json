@@ -1,0 +1,43 @@
+[
+    {
+        "nid": "Block_Counter",
+        "name": "Block Counter",
+        "desc": "+15 DEF & RES and grants 2 bonus attacks on defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

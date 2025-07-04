@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Destructive_Grip",
+        "name": "Destructive Grip",
+        "desc": "Unit gains 2 bonus attack when unit's SPD < enemy's SPD, and add unit's STR x3 to attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') <= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('STR') * 3"
+            ],
+            [
+                "dynamic_attacks",
+                "2"
+            ]
+        ]
+    }
+]

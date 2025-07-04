@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Superior_Burden_Strike",
+        "name": "Superior Burden Strike",
+        "desc": "If unit's DEF >= to enemy's DEF, unit gains +3 Bonus attacks (+6 if doubling).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') >= target.get_stat('DEF')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "3"
+            ]
+        ]
+    }
+]

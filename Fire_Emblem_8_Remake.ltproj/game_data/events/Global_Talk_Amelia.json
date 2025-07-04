@@ -537,7 +537,7 @@
             "elif;game.level.nid == '10B'",
             "",
             "if;game.level_vars['SkipTalkAmelia'] != True",
-            "if;game.check_alive('Duessel')",
+            "if;game.check_alive('Duessel') or game.current_mode.permadeath != True",
             "add_portrait;Amelia;Left;no_block",
             "add_portrait;Ephraim;Right",
             "speak;Ephraim;Why do you look so stunned, Amelia?",

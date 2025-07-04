@@ -1,0 +1,86 @@
+[
+    {
+        "nid": "Lordsworns_Straight_Sword",
+        "name": "Lordsworn's Straight Sword",
+        "desc": "Well-crafted straight sword with an illustrious design, wielded by regulars of a lord's army.\n<green>Skills:</>Burden Strike\n<pink>Misc:</>STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Burden_Strike"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Sword'] >= 120 and u(\"Eterna\").wexp['Sword'] < 240"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Breached_8"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ]
+        ]
+    }
+]

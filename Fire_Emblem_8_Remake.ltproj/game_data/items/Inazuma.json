@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Inazuma",
+        "name": "Inazuma",
+        "desc": "A katana that can slices anything from both sides.\n<green>Skills:</>Risky Vantage, Flash Step\n<orange>Element:</><icon>Thunder</><icon>Fire</>\n<red>Effective:</><icon>Armor</><icon>Drenched</><icon>Horse</>\n<pink>Misc:</>SPD + MAG (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MAG')))}</>), +10 SPD.",
+        "icon_nid": "Fajar Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Risky_Vantage"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Fajar"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "eval_available",
+                "u(\"Fajar\").wexp['Sword'] >= 420 and u(\"Fajar\").wexp['Sword'] < 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder",
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

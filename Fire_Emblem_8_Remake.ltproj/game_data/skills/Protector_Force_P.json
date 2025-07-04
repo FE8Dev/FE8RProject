@@ -14,15 +14,15 @@
                 [
                     [
                         "STR",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "MAG",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SKL",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SPD",
@@ -48,7 +48,7 @@
             ],
             [
                 "eval_regeneration",
-                "20*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "20 * (unit_funcs.check_focus(unit, 3))"
             ]
         ]
     }

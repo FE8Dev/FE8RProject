@@ -10830,7 +10830,7 @@
     {
         "nid": "Jonathan",
         "name": "Jonathan",
-        "desc": "",
+        "desc": "The old king's general who is bound by loyalty and duty. Unit by Machado De Assis.\nPortrait by Machado De Assis and Momin.",
         "variant": "",
         "level": 5,
         "klass": "Royal_General",
@@ -10859,7 +10859,7 @@
             "DEF": 65,
             "RES": 65,
             "CON": 10,
-            "MOV": 20
+            "MOV": 10
         },
         "stat_cap_modifiers": {},
         "starting_items": [
@@ -10882,12 +10882,12 @@
         "wexp_gain": {
             "Sword": [
                 false,
-                180,
+                60,
                 null
             ],
             "Axe": [
                 false,
-                180,
+                120,
                 null
             ]
         },
@@ -10899,15 +10899,44 @@
     {
         "nid": "Vespera",
         "name": "Vespera",
-        "desc": "",
+        "desc": "A mysterious, but kind woman. A fierce fighter on the battlefield.\nUnit submitted by Xiakil. Portrait by Halone_Fenriel.",
         "variant": "",
         "level": 1,
-        "klass": "Citizen",
-        "tags": [],
-        "bases": {},
-        "growths": {},
+        "klass": "Maiden",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 32,
+            "STR": 7,
+            "MAG": 5,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 14,
+            "DEF": 7,
+            "RES": 5,
+            "CON": 9,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 100,
+            "STR": 60,
+            "MAG": 45,
+            "SKL": 60,
+            "SPD": 50,
+            "LCK": 85,
+            "DEF": 45,
+            "RES": 45,
+            "CON": 20,
+            "MOV": 1
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Vespera_Arsenal",
+                false
+            ]
+        ],
         "learned_skills": [
             [
                 1,
@@ -10923,22 +10952,51 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Halone_Fenriel_F2E",
+        "portrait_nid": "Halone_Fenriel_F2E_1",
         "affinity": "Light",
         "fields": []
     },
     {
         "nid": "Fajar",
         "name": "Fajar",
-        "desc": "",
-        "variant": null,
+        "desc": "A young woman full of life. Unit and portrait submitted by Momin.",
+        "variant": "",
         "level": 1,
-        "klass": "Citizen",
-        "tags": [],
-        "bases": {},
-        "growths": {},
+        "klass": "Myrmidon_Fajar",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 5,
+            "MAG": 8,
+            "SKL": 10,
+            "SPD": 13,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 4,
+            "CON": 6,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 60,
+            "STR": 30,
+            "MAG": 80,
+            "SKL": 60,
+            "SPD": 80,
+            "LCK": 40,
+            "DEF": 25,
+            "RES": 25,
+            "CON": 20,
+            "MOV": 1
+        },
         "stat_cap_modifiers": {},
-        "starting_items": [],
+        "starting_items": [
+            [
+                "Fajars_Arsenal",
+                false
+            ]
+        ],
         "learned_skills": [
             [
                 1,
@@ -10954,8 +11012,151 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Momin_FajarOC2_T1_FE8R",
+        "portrait_nid": "Momin_FajarOC2_T1_FE8R_1",
         "affinity": "Thunder",
+        "fields": []
+    },
+    {
+        "nid": "Wally",
+        "name": "Wally",
+        "desc": "A snag who dreams of becoming a wall. Unit submitted by Pokeball97.\nTemp. portrait by Dutch Introvert.",
+        "variant": null,
+        "level": 1,
+        "klass": "Snag",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 50,
+            "STR": 1,
+            "SPD": 3,
+            "MAG": 1,
+            "SKL": 1,
+            "LCK": 13,
+            "DEF": 13,
+            "RES": 13,
+            "CON": 20
+        },
+        "growths": {
+            "HP": 200,
+            "STR": 10,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 100,
+            "DEF": 200,
+            "RES": 200,
+            "CON": 40,
+            "MOV": 1
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Wally_Arsenal",
+                false
+            ],
+            [
+                "Spiky_Rubble",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Pair_Up_Affinity_Anima"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {},
+        "alternate_classes": [],
+        "portrait_nid": "Treant {Dutch introvert}",
+        "affinity": "Anima",
+        "fields": []
+    },
+    {
+        "nid": "Eterna",
+        "name": "Eterna",
+        "desc": "A knight from a land between realms. Accustomed to difficult battles and struggle, but rather shy in conversations. \nPortrait spliced from MeatofJustice & TrezVG. Unit created by Pew.",
+        "variant": "Eterna",
+        "level": 1,
+        "klass": "Knight_Eterna",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 35,
+            "STR": 6,
+            "MAG": 4,
+            "SKL": 7,
+            "SPD": 4,
+            "LCK": 5,
+            "DEF": 12,
+            "RES": 3,
+            "CON": 14,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 180,
+            "STR": 65,
+            "MAG": 50,
+            "SKL": 55,
+            "SPD": 30,
+            "LCK": 45,
+            "DEF": 80,
+            "RES": 60,
+            "CON": 20,
+            "MOV": 1
+        },
+        "stat_cap_modifiers": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "starting_items": [
+            [
+                "Eterna_Arsenal",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Pair_Up_Affinity_Light"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                1,
+                null
+            ],
+            "Lance": [
+                false,
+                1,
+                null
+            ],
+            "Light": [
+                false,
+                1,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Lin Eterna V3 (Spliced from {MeatofJustice} F2E OC 25 and {TrezVG} Hatsune Miku )-1.png",
+        "affinity": "Light",
         "fields": []
     },
     {

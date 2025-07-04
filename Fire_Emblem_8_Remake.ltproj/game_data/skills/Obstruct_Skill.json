@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Obstruct_Skill",
+        "name": "Obstruct",
+        "desc": "When defending, enemies have this unit's LCK% chance to take double recoil damage on attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            22
+        ],
+        "components": [
+            [
+                "lifelink",
+                -10.0
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]

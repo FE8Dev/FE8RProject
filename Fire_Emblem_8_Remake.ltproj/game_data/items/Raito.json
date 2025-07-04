@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Raito",
+        "name": "Raito",
+        "desc": "A katana that produces sparks on contact.\n<green>Skills:</>Risky Vantage, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>SPD + MAG/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MAG')//2))}</>), +3 SPD.",
+        "icon_nid": "Fajar Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                7
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Risky_Vantage"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Fajar"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_MAG_MID"
+            ],
+            [
+                "eval_available",
+                "u(\"Fajar\").wexp['Sword'] >= 120 and u(\"Fajar\").wexp['Sword'] < 240"
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ]
+        ]
+    }
+]

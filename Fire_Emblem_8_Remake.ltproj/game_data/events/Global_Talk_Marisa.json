@@ -581,7 +581,7 @@
             "elif;game.level.nid == '13B'",
             "",
             "if;game.level_vars['SkipTalkMarisa'] != True",
-            "if;game.check_alive('Gerik')",
+            "if;game.check_alive('Gerik') or game.current_mode.permadeath != True",
             "add_portrait;Marisa;Left;no_block",
             "add_portrait;Ephraim;Right",
             "speak;Marisa;.....Sir.",

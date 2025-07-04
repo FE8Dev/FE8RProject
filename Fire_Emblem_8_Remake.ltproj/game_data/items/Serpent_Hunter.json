@@ -1,0 +1,107 @@
+[
+    {
+        "nid": "Serpent_Hunter",
+        "name": "Serpent Hunter",
+        "desc": "A weapon that serves as both greatsword and spear, it can manifest a long blade of wind\n<green>Skills:</>Lance Guard (SS), G.L. Mastery\n<orange>Element:</><icon>Wind</>\n<pink>Misc:</>DEF+ RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                19
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Lance'] >= 360"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_RES_STRONG"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Seared",
+                        "Flying",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eirika"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

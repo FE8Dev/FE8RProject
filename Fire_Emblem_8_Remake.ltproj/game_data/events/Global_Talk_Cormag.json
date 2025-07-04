@@ -525,7 +525,7 @@
             "elif;game.level.nid == '10B'",
             "",
             "if;game.level_vars['SkipTalkCormag'] != True",
-            "if;game.check_alive(\"Duessel\")",
+            "if;game.check_alive(\"Duessel\") or game.current_mode.permadeath != True",
             "add_portrait;Cormag;Left;no_block",
             "add_portrait;Ephraim;Right",
             "speak;Ephraim;A Grado wyvern!|A soldier must have survived!|I will take you down!",

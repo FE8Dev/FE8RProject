@@ -2,7 +2,7 @@
     {
         "nid": "Arcane_Barrier",
         "name": "Arcane Barrier",
-        "desc": "Reduce damage this unit takes by MAG/2 (<red>{e: (unit.get_stat('MAG')//2)}</>) when being attacked.",
+        "desc": "Reduce damage this unit takes by MAG (<red>{e: (unit.get_stat('MAG'))}</>) when being attacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -19,7 +19,7 @@
             ],
             [
                 "dynamic_resist",
-                "unit.get_stat('MAG') // 2"
+                "unit.get_stat('MAG')"
             ]
         ]
     }

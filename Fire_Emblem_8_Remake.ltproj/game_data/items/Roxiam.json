@@ -1,0 +1,120 @@
+[
+    {
+        "nid": "Roxiam",
+        "name": "Roxiam",
+        "desc": "This sword is starting to grow in light and power.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), +3 SPD.",
+        "icon_nid": "Swords Sheet",
+        "icon_index": [
+            6,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vespera"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Sagittae"
+            ],
+            [
+                "eval_available",
+                "u(\"Vespera\").wexp['Sword'] >= 120 and u(\"Vespera\").wexp['Sword'] < 240"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures"
+                ]
+            ],
+            [
+                "self_status_on_hit",
+                "Rock_AOE_Splash"
+            ],
+            [
+                "item_tags",
+                [
+                    "Earth",
+                    "Light"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_MID"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

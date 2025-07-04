@@ -1,0 +1,107 @@
+[
+    {
+        "nid": "Spiked_Spear",
+        "name": "Spiked Spear",
+        "desc": "Weapon of the Marionette Soldiers employed by sorcerers.\n<green>Skills:</>Lance Guard (A), G.L. Mastery\n<orange>Element:</><icon>Wind</>\n<pink>Misc:</></>DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_A",
+                    "Greatlance_Mastery"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Lance'] >= 120 and u(\"Eterna\").wexp['Lance'] < 360"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_RES_MID"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Seared",
+                        "Flying",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ]
+        ]
+    }
+]

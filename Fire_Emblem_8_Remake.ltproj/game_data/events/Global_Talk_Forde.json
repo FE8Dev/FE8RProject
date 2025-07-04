@@ -173,7 +173,7 @@
             "if;game.level_vars['SkipTalkForde'] != True",
             "add_portrait;Forde;Left;no_block",
             "add_portrait;Eirika;Right",
-            "if;game.check_alive(\"Franz\")",
+            "if;game.check_alive(\"Franz\") or game.current_mode.permadeath != True",
             "speak;Eirika;You must be Franz's brother, right?",
             "speak;Forde;Yes!|Princess Eirika!|It's a pleasure to see you alive!",
             "speak;Eirika;He he!|Thank you!|I hope my brother hasn't pushed you too hard!",

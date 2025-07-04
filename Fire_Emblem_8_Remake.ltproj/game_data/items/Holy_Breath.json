@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Holy_Breath",
+        "name": "Holy Breath",
+        "desc": "A breath that emits holy fire.\n<orange>Element:</><icon>Fire</><icon>Light</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>",
+        "icon_nid": "Icon Sheet Oliver",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                0
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Solaris"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "prf_unit",
+                [
+                    "Vespera"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Vespera\").wexp['Monster'] >= 300 and u(\"Vespera\").wexp['Monster'] < 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Shielded_Fists",
+        "name": "Shielded Fists",
+        "desc": "Thick fists that protect the wielder.\n<violet>Inflicts:</>Breach (2), Curse (2)\n<pink>Misc:</>+3/+3 DEF/RES on Equip.",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                70
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Wally"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Wally\").wexp['Monster'] < 180"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_2",
+                    "Cursed_2"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ]
+        ]
+    }
+]

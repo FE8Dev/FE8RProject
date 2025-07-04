@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Inspire_GiverPPP",
+        "name": "Inspire+++",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +40% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'InspirePPP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "InspirePPP"
+            ]
+        ]
+    }
+]

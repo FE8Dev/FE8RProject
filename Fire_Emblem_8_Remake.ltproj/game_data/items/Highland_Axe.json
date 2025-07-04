@@ -1,0 +1,93 @@
+[
+    {
+        "nid": "Highland_Axe",
+        "name": "Highland Axe",
+        "desc": "Single-sided axe used by the warriors of the highlands.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</></>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                21
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_A"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Axe'] >= 180 and u(\"Eterna\").wexp['Axe'] < 360"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_MID"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_8",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ]
+        ]
+    }
+]

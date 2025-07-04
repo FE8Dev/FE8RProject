@@ -2,7 +2,7 @@
     {
         "nid": "Fear_FeederPPP",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit.\nThis unit cannot die during the Player Phase.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10,8 +10,16 @@
         ],
         "components": [
             [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",

@@ -1,0 +1,93 @@
+[
+    {
+        "nid": "Gargoyles_Black_Axe",
+        "name": "Gargoyle's Black Axe",
+        "desc": "Bronze greataxe wielded by Valiant Gargoyles, marked by those who serve Maliketh\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</></>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                26
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Axe'] >= 360"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_STRONG"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_15",
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ]
+        ]
+    }
+]

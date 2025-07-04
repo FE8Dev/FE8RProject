@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Self_Repair",
+        "name": "Self Repair",
+        "desc": "Unit regenerates (DEF + LCK) amount of HP at the beginning of each turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "eval_regeneration",
+                "unit.stats[\"DEF\"] + unit.stats[\"LCK\"]"
+            ]
+        ]
+    }
+]

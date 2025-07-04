@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathVespera",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Vespera'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Vespera;FarRight",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Vespera;I failed in my mission...|To bring light to humanity's darkness...|I am sorry...",
+            "else",
+            "speak;Vespera;The light cannot burn out now...|I must rest...|Just for a while...",
+            "end",
+            "expression;Vespera;CloseEyes",
+            "remove_portrait;Vespera",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathVespera"
+    }
+]

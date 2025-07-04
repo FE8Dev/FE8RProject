@@ -3,9 +3,9 @@
         "nid": "The_Enforcer",
         "name": "The Enforcer",
         "desc": "An axe used by the king's most trusted general to repress rebelions and keep the peace.\n<green>Skills:</>Power Chop (A), Fear Feeder+\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>STR + DEF + RES/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF') + unit.get_stat('RES')//2)}</>).",
-        "icon_nid": "Axe",
+        "icon_nid": "Jonathan Weapons 06-24-25",
         "icon_index": [
-            0,
+            3,
             0
         ],
         "components": [
@@ -56,13 +56,13 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Fear_FeederP",
+                    "Fear_Feeder_GiverP",
                     "Power_Chop_A"
                 ]
             ],
             [
                 "eval_available",
-                "u(\"Jonathan\").wexp['Axe'] >= 240 and u(\"Jonathan\").wexp['Axe'] < 360"
+                "u(\"Jonathan\").wexp['Axe'] >= 240 and u(\"Jonathan\").wexp['Axe'] < 420"
             ],
             [
                 "wexp",

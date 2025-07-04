@@ -1,0 +1,36 @@
+[
+    {
+        "name": "WeaponEvolution",
+        "trigger": "unit_weapon_rank_up",
+        "level_nid": null,
+        "condition": "False",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;unit.nid == 'Franz'",
+            "",
+            "    if;u(\"Franz\").wexp['Sword'] >= 120 and u(\"Franz\").wexp['Sword'] < 240",
+            "    ",
+            "    alert;Franz's sword evolved!;Burning_Longsword_Melee_Franz",
+            "    remove_item_from_multiitem;Franz;Franzs_Arsenal;Squires_Sword",
+            "    add_item_to_multiitem;Franz;Franzs_Arsenal;Burning_Longsword_Melee_Franz",
+            "    ",
+            "    elif;u(\"Franz\").wexp['Sword'] >= 240 and u(\"Franz\").wexp['Sword'] < 420",
+            "    ",
+            "    alert;Franz's sword evolved!;Arcane_Sword",
+            "    remove_item_from_multiitem;Franz;Franzs_Arsenal;Burning_Longsword_Melee_Franz",
+            "    add_item_to_multiitem;Franz;Franzs_Arsenal;Arcane_Sword",
+            "    ",
+            "    else",
+            "    ",
+            "    alert;error!",
+            "    end",
+            "    ",
+            "else",
+            "alert;error!",
+            "end"
+        ],
+        "nid": "Global WeaponEvolution"
+    }
+]

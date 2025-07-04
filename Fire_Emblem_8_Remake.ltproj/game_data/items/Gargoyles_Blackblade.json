@@ -1,0 +1,108 @@
+[
+    {
+        "nid": "Gargoyles_Blackblade",
+        "name": "Gargoyle's Blackblade",
+        "desc": "Bronze greatsword wielded by the Valiant Gargoyles, forged with blackened corpse wax.\n<green>Skills:</>Blade Sweep, Superior Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</><icon>Infantry</>\n<pink>Misc:</>Heavy, but still strikes first, STR + DEF + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))(unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "weight",
+                18
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Burden_Strike",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Sword'] >= 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Monster",
+                        "Infantry",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

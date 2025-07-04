@@ -2,7 +2,7 @@
     {
         "nid": "Fear_FeederP",
         "name": "Fear Feeder+",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10,8 +10,16 @@
         ],
         "components": [
             [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",

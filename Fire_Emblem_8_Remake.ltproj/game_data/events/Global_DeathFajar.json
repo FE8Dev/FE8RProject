@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathFajar",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Fajar'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Fajar;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Fajar;But...|I'm just a girl...",
+            "else",
+            "speak;Fajar;No...|This girl is just gonna take a little nap...",
+            "end",
+            "expression;Fajar;CloseEyes",
+            "remove_portrait;Fajar",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathFajar"
+    }
+]

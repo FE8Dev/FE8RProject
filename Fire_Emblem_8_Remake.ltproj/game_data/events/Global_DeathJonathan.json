@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathJonathan",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Jonathan'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Jonathan;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Jonathan;Curses...|How could i lose to such weak soldiers?|Uh....Maria...I'm sorry...",
+            "else",
+            "speak;Jonathan;Pathetic!|To lose against such weak soldiers?!...|I need to rest my old bones for a bit...",
+            "end",
+            "expression;Jonathan;CloseEyes",
+            "remove_portrait;Jonathan",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathJonathan"
+    }
+]

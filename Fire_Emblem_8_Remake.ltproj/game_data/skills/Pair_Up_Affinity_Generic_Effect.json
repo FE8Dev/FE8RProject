@@ -10,6 +10,14 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.team == 'enemy' or unit.team == 'enemy2'"
+            ],
+            [
                 "damage_multiplier",
                 1.5
             ]

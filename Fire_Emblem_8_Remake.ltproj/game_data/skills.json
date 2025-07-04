@@ -38,6 +38,14 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.team == 'enemy' or unit.team == 'enemy2'"
+            ],
+            [
                 "damage_multiplier",
                 1.5
             ]
@@ -6429,7 +6437,7 @@
     {
         "nid": "Arcane_Barrier",
         "name": "Arcane Barrier",
-        "desc": "Reduce damage this unit takes by MAG/2 (<red>{e: (unit.get_stat('MAG')//2)}</>) when being attacked.",
+        "desc": "Reduce damage this unit takes by MAG (<red>{e: (unit.get_stat('MAG'))}</>) when being attacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -6446,14 +6454,14 @@
             ],
             [
                 "dynamic_resist",
-                "unit.get_stat('MAG') // 2"
+                "unit.get_stat('MAG')"
             ]
         ]
     },
     {
         "nid": "Reckless_Swing_Skill",
         "name": "Reckless Swing",
-        "desc": "Add +6 Damage and +15 Crit to attack,\nbut take 15 damage after combat.",
+        "desc": "Add +6 Damage and +15 Crit to attack,\nbut take 15% of Max HP as non-lethal damage after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -6465,8 +6473,8 @@
                 "15"
             ],
             [
-                "recoil",
-                15
+                "recoil_percent",
+                0.15
             ],
             [
                 "dynamic_damage",
@@ -6486,7 +6494,7 @@
     {
         "nid": "Reckless_Swing_Art",
         "name": "Reckless Swing",
-        "desc": "<red>CA:</>Add +6 Damage and +15 Crit to attack,\nbut take 15 damage after combat. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add +6 Damage and +15 Crit to attack,\nbut take 15% of Max HP as non-lethal damage. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -9358,6 +9366,26 @@
                 "class_skill",
                 null
             ],
+            [
+                "combat_condition",
+                "(combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0)"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ]
+        ]
+    },
+    {
+        "nid": "Triangle_Expert_Item",
+        "name": "Triangle Expert",
+        "desc": "+1 bonus attack when unit has Weapon Triangle Advantage.\nDouble Weapon Triangle effects when initiating attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            33
+        ],
+        "components": [
             [
                 "combat_condition",
                 "(combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0)"
@@ -18097,7 +18125,7 @@
     {
         "nid": "Call_From_The_Grave_Ewan",
         "name": "Call From The Grave",
-        "desc": "<red>CA:</>Summon 4 phantoms to fight for you. This is a free action. <green>CD:4 Turns</>",
+        "desc": "<red>CA:</>Summon 4 phantoms to fight for you. This is a free action. <green>CD:3 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -18129,7 +18157,7 @@
     {
         "nid": "Call_From_The_Grave_Knoll",
         "name": "Call From The Grave",
-        "desc": "<red>CA:</>Summon 4 phantoms to fight for you. This is a free action. <green>CD:4 Turns</> ",
+        "desc": "<red>CA:</>Summon 4 phantoms to fight for you. This is a free action. <green>CD:3 Turns</> ",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -25040,7 +25068,7 @@
     {
         "nid": "Lance_Guard_E",
         "name": "Lance Guard (E)",
-        "desc": "Reduce damage taken by SKL/4 (<red>{e: (unit.get_stat('SKL')//4)}</>).",
+        "desc": "Reduce damage taken by SKL/3 (<red>{e: (unit.get_stat('SKL')//3)}</>).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -25049,7 +25077,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "unit.get_stat('SKL') // 4"
+                "(unit.get_stat('SKL') // 3)"
             ],
             [
                 "lost_on_endstep",
@@ -25060,7 +25088,7 @@
     {
         "nid": "Lance_Guard_C",
         "name": "Lance Guard (C)",
-        "desc": "Reduce damage taken by ((SKL/4) + 4) (<red>{e: (unit.get_stat('SKL')//4)+4}</>).",
+        "desc": "Reduce damage taken by SKL/2 (<red>{e: (unit.get_stat('SKL')//2)}</>).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -25069,7 +25097,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "(unit.get_stat('SKL') // 4) + 4"
+                "(unit.get_stat('SKL') // 2)"
             ],
             [
                 "lost_on_endstep",
@@ -25080,7 +25108,7 @@
     {
         "nid": "Lance_Guard_A",
         "name": "Lance Guard (A)",
-        "desc": "Reduce damage taken by ((SKL/4) + 10) (<red>{e: (unit.get_stat('SKL')//4)+10}</>).",
+        "desc": "Reduce damage taken by unit's SKL (<red>{e: (unit.get_stat('SKL'))}</>).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -25089,7 +25117,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "(unit.get_stat('SKL') // 4) + 10"
+                "(unit.get_stat('SKL'))"
             ],
             [
                 "lost_on_endstep",
@@ -25100,7 +25128,7 @@
     {
         "nid": "Lance_Guard_SS",
         "name": "Lance Guard (SS)",
-        "desc": "Reduce damage taken by ((SKL/4) + 25) (<red>{e: (unit.get_stat('SKL')//2)+25}</>).",
+        "desc": "Reduce damage taken by (SKL x1.5) (<red>{e: (unit.get_stat('SKL')*1.5)</>.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -25109,7 +25137,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "(unit.get_stat('SKL') // 4) + 25"
+                "(unit.get_stat('SKL') * 1.5)"
             ],
             [
                 "lost_on_endstep",
@@ -25120,7 +25148,7 @@
     {
         "nid": "Lance_Guard_X",
         "name": "Lance Guard (X)",
-        "desc": "Reduce damage taken by ((SKL/4) + 50) (<red>{e: (unit.get_stat('SKL')//2)+50}</>).",
+        "desc": "Reduce damage taken by (SKL x2) (<red>{e: (unit.get_stat('SKL')*2)}</>).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -25129,7 +25157,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "(unit.get_stat('SKL') // 4) + 50"
+                "(unit.get_stat('SKL') * 2)"
             ],
             [
                 "lost_on_endstep",
@@ -26068,7 +26096,7 @@
     {
         "nid": "Arcane_Barrier_Item",
         "name": "Arcane Barrier",
-        "desc": "Reduce damage this unit takes by MAG/2 (<red>{e: (unit.get_stat('MAG')//2)}</>) when being attacked.",
+        "desc": "Reduce damage this unit takes by MAG (<red>{e: (unit.get_stat('MAG'))}</>) when being attacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -26081,7 +26109,7 @@
             ],
             [
                 "dynamic_resist",
-                "unit.get_stat('MAG') // 2"
+                "unit.get_stat('MAG')"
             ]
         ]
     },
@@ -29674,7 +29702,7 @@
     {
         "nid": "Lance_Guard_C_Item",
         "name": "Lance Guard (A)",
-        "desc": "Reduce damage taken by ((SKL/4) + 4).\nStackable with other Lance Guards.",
+        "desc": "Reduce damage taken by (SKL/2).\nStackable with other Lance Guards.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             2,
@@ -29683,7 +29711,7 @@
         "components": [
             [
                 "dynamic_resist",
-                "(unit.get_stat('SKL') // 4) + 4"
+                "(unit.get_stat('SKL') // 2)"
             ],
             [
                 "lost_on_end_chapter",
@@ -44071,7 +44099,7 @@
         ]
     },
     {
-        "nid": "EarthB_T1",
+        "nid": "EarthB",
         "name": "Earthen Armor",
         "desc": "A thin covering of mineral based armor, colored to match the user's skin tone.\nMAG% chance to halve damage received from Swords, Lances, Axes, or Bows.\n",
         "icon_nid": "Skills",
@@ -44099,7 +44127,7 @@
         ]
     },
     {
-        "nid": "SupremeMasteryofCombat_T2",
+        "nid": "SupremeMasteryofCombat",
         "name": "SupremeMastery of Combat",
         "desc": "Your superior reflexes allows you to mantain the upper hand in combat.\nUnit cannot be doubled.",
         "icon_nid": "Skills",
@@ -44119,7 +44147,7 @@
         ]
     },
     {
-        "nid": "SupremeMasteryofMagic_T3",
+        "nid": "SupremeMasteryofMagic",
         "name": "Supreme Mastery of Magic",
         "desc": "Your control over the elements lets you overpower mundane magical users.\nUnit gains effective damage against Magic enemies.",
         "icon_nid": "Skills",
@@ -48321,15 +48349,15 @@
                 [
                     [
                         "STR",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "MAG",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SKL",
-                        "2*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SPD",
@@ -48355,7 +48383,7 @@
             ],
             [
                 "eval_regeneration",
-                "20*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "20 * (unit_funcs.check_focus(unit, 3))"
             ]
         ]
     },
@@ -48374,15 +48402,15 @@
                 [
                     [
                         "STR",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "MAG",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SKL",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "SPD",
@@ -48408,7 +48436,7 @@
             ],
             [
                 "eval_regeneration",
-                "10*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "10 * (unit_funcs.check_focus(unit, 3))"
             ]
         ]
     },
@@ -49261,7 +49289,7 @@
         ]
     },
     {
-        "nid": "Transform_Test",
+        "nid": "Transform_Test_hide",
         "name": "Transform Test",
         "desc": "",
         "icon_nid": "Affinity",
@@ -49578,9 +49606,9 @@
         ]
     },
     {
-        "nid": "Fear_Feeder",
+        "nid": "Fear_Feeder_Giver",
         "name": "Fear Feeder",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (35%) and enemies within 3 spaces gain -15 Avoid/Hit.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 3 spaces gain -15 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49588,8 +49616,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe' and not has_skill(unit, 'Fear_Feeder')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Fear_Feeder"
+            ]
+        ]
+    },
+    {
+        "nid": "Fear_Feeder",
+        "name": "Fear Feeder",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 3 spaces gain -15 Avoid/Hit while wielding axes.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49614,9 +49674,9 @@
         ]
     },
     {
-        "nid": "Fear_FeederP",
+        "nid": "Fear_Feeder_GiverP",
         "name": "Fear Feeder+",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49624,8 +49684,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe' and not has_skill(unit, 'Fear_FeederP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Fear_FeederP"
+            ]
+        ]
+    },
+    {
+        "nid": "Fear_FeederP",
+        "name": "Fear Feeder+",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit while wielding axes.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49650,9 +49742,9 @@
         ]
     },
     {
-        "nid": "Fear_FeederPP",
+        "nid": "Fear_Feeder_GiverPP",
         "name": "Fear Feeder++",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (45%) and enemies within 3 spaces gain -30 Avoid/Hit.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 3 spaces gain -30 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49660,8 +49752,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe' and not has_skill(unit, 'Fear_FeederPP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Fear_FeederPP"
+            ]
+        ]
+    },
+    {
+        "nid": "Fear_FeederPP",
+        "name": "Fear Feeder++",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 3 spaces gain -30 Avoid/Hit while wielding axes.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "False"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49686,9 +49810,9 @@
         ]
     },
     {
-        "nid": "Fear_FeederPPP",
+        "nid": "Fear_Feeder_GiverPPP",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit.\nThis unit cannot die during the Player Phase.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49696,8 +49820,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe' and not has_skill(unit, 'Fear_FeederPPP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Fear_FeederPPP"
+            ]
+        ]
+    },
+    {
+        "nid": "Fear_FeederPPP",
+        "name": "Fear Feeder+++",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            34
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49724,7 +49880,7 @@
     {
         "nid": "Fear_FeederPPP_Immortality",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit.\nThis unit cannot die during the Player Phase.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49834,9 +49990,9 @@
         ]
     },
     {
-        "nid": "Inspire",
+        "nid": "Inspire_Giver",
         "name": "Inspire",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +10% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +10% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -49844,8 +50000,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'Inspire')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Inspire"
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire",
+        "name": "Inspire",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +10% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49866,9 +50054,9 @@
         ]
     },
     {
-        "nid": "InspireP",
+        "nid": "Inspire_GiverP",
         "name": "Inspire+",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +20% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +20% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -49876,8 +50064,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'InspireP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "InspireP"
+            ]
+        ]
+    },
+    {
+        "nid": "InspireP",
+        "name": "Inspire+",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +20% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49898,9 +50118,9 @@
         ]
     },
     {
-        "nid": "InspirePP",
+        "nid": "Inspire_GiverPP",
         "name": "Inspire++",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +30% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +30% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -49908,8 +50128,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'InspirePP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "InspirePP"
+            ]
+        ]
+    },
+    {
+        "nid": "InspirePP",
+        "name": "Inspire++",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +30% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49930,9 +50182,9 @@
         ]
     },
     {
-        "nid": "InspirePPP",
+        "nid": "Inspire_GiverPPP",
         "name": "Inspire+++",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +40% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +40% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -49940,8 +50192,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'InspirePPP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "InspirePPP"
+            ]
+        ]
+    },
+    {
+        "nid": "InspirePPP",
+        "name": "Inspire+++",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +40% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -49962,9 +50246,9 @@
         ]
     },
     {
-        "nid": "InspirePPPP",
+        "nid": "Inspire_GiverPPPP",
         "name": "Inspire++++",
-        "desc": "After this unit kills 5 enemies, allies within 3 spaces gain +50% DEF/RES.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +50% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -49972,8 +50256,40 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'InspirePPPP')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "InspirePPPP"
+            ]
+        ]
+    },
+    {
+        "nid": "InspirePPPP",
+        "name": "Inspire++++",
+        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +50% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "build_charge",
-                5
+                4
             ],
             [
                 "kill_charge_increase",
@@ -50119,8 +50435,8 @@
         ]
     },
     {
-        "nid": "Celerity",
-        "name": "Celerity",
+        "nid": "Full_Rush",
+        "name": "Full Rush",
         "desc": "Unit deals 10% more damage for each tile moved.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -50128,10 +50444,6 @@
             40
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "dynamic_damage_multiplier",
                 "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
@@ -50367,10 +50679,10 @@
         "nid": "Heavy_Boots_Skill",
         "name": "Heavy Boots Skill",
         "desc": "-2 MOV, +10% MOV growth, changes movement to Armor.",
-        "icon_nid": "skill_icons",
+        "icon_nid": "Jonathan Weapons 06-24-25",
         "icon_index": [
-            1,
-            31
+            6,
+            0
         ],
         "components": [
             [
@@ -50394,6 +50706,918 @@
                         10
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Vault",
+        "name": "Vault",
+        "desc": "Unit moves across the enemy after battle and unit gains Canter (5). Attacks don't work if impassible terrain prevents unit from moving.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            44
+        ],
+        "components": [
+            [
+                "item_override",
+                "Vault"
+            ],
+            [
+                "canter",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Trip",
+        "name": "Trip",
+        "desc": "When defending, unit has a LCK% chance to avoid all attacks of that combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "proc_rate",
+                "LUCK_PROC"
+            ],
+            [
+                "defense_proc",
+                "Trip_Skill"
+            ]
+        ]
+    },
+    {
+        "nid": "Trip_Skill",
+        "name": "Trip",
+        "desc": "When defending, unit has a LCK% chance to avoid all attacks of that combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            43
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_avoid",
+                "999"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Sturdy_Foundation",
+        "name": "Sturdy Foundation",
+        "desc": "Unit's base DEF x1.5 is added to unit's Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "unit.stats[\"DEF\"] * 1.5"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Enticement",
+        "name": "Enticement",
+        "desc": "Enemies are more likely to target this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "AIProvoke"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stone_Wall",
+        "name": "Stone Wall",
+        "desc": "Unit's base DEF x3 is added to unit's Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "unit.stats[\"DEF\"] * 3"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Obstruct",
+        "name": "Obstruct",
+        "desc": "When defending, enemies take x10 recoil damage if they damage this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            22
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Obstruct_Skill",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Obstruct_Skill",
+        "name": "Obstruct",
+        "desc": "When defending, enemies have this unit's LCK% chance to take double recoil damage on attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            22
+        ],
+        "components": [
+            [
+                "lifelink",
+                -10.0
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Self_Repair",
+        "name": "Self Repair",
+        "desc": "Unit regenerates (DEF + LCK) amount of HP at the beginning of each turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "eval_regeneration",
+                "unit.stats[\"DEF\"] + unit.stats[\"LCK\"]"
+            ]
+        ]
+    },
+    {
+        "nid": "Crushing_Grip",
+        "name": "Crushing Grip",
+        "desc": "Unit gains a bonus attack when unit's SPD < enemy's SPD, and add unit's STR x1.5 to attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') <= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('STR') * 1.5"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ]
+        ]
+    },
+    {
+        "nid": "Haunted_Call",
+        "name": "Haunted Call",
+        "desc": "Summons a snag to aid you. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('snag_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_Wally"
+            ]
+        ]
+    },
+    {
+        "nid": "Destructive_Grip",
+        "name": "Destructive Grip",
+        "desc": "Unit gains 2 bonus attack when unit's SPD < enemy's SPD, and add unit's STR x3 to attacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') <= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('STR') * 3"
+            ],
+            [
+                "dynamic_attacks",
+                "2"
+            ]
+        ]
+    },
+    {
+        "nid": "Call_Of_The_Haunted",
+        "name": "Call Of The Haunted",
+        "desc": "<red>CA:</>Summon 4 snags to fight for you. This is a free action. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "not game.check_alive('Snag1_' + unit.nid) and (not game.check_alive('Snag2_' + unit.nid)) and (not game.check_alive('Snag3_' + unit.nid)) and (not game.check_alive('Snag4_' + unit.nid))"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "ability",
+                "Summon_Snags"
+            ]
+        ]
+    },
+    {
+        "nid": "Spiky_Trap",
+        "name": "Spiky Trap",
+        "desc": "When defending, enemies are inflicted with Rock Punctures.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            35
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Rock_Punctures",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "event_after_combat",
+                "Global Wally_EXP"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Smash",
+        "name": "Wally Smash",
+        "desc": "When Wally is paired up with an Axe user, they gain access to Wally Smash.\nUses DEF + CON (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "pairup_bonus",
+                "Wally_Smash_Skill"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Smash_Skill",
+        "name": "Wally Smash",
+        "desc": "When Wally is paired up with an Axe user, they gain access to Wally Smash.\nUses DEF + CON (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            28
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "ability",
+                "Wally_Smash"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Axe'"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_hide",
+        "name": "Wally Pair Up hide",
+        "desc": "Gives Paired up unit Wally Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "pairup_bonus",
+                "Wally_Pair_Up_Booster"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_T2_hide",
+        "name": "Wally Pair Up T2 hide",
+        "desc": "Gives Paired up unit Wally Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "pairup_bonus",
+                "Wally_Pair_Up_Booster_T2"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_T3_hide",
+        "name": "Wally Pair Up T3 hide",
+        "desc": "Gives Paired up unit Wally Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "pairup_bonus",
+                "Wally_Pair_Up_Booster_T3"
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_Booster",
+        "name": "Wally Pair Up",
+        "desc": "Gives Paired up unit Knight Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        13
+                    ],
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "regeneration",
+                0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_Booster_T2",
+        "name": "Wally Pair Up T2",
+        "desc": "Gives Paired up unit Wally Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        13
+                    ],
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "regeneration",
+                0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Wally_Pair_Up_Booster_T3",
+        "name": "Wally Pair Up T3",
+        "desc": "Gives Paired up unit Wally Pair up Boost.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        13
+                    ],
+                    [
+                        "STR",
+                        1
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "regeneration",
+                0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Ash_of_War",
+        "name": "Ash of War",
+        "desc": "<red>CA:</>Strike with force against many dark souls. +30 damage, +50 hit, +50 crit, effective damage against monsters, dragons, and horses. Half damage taken while doing so. <green>CD:4 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Ash_of_War_Activate"
+            ],
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Ash_of_War_Activate",
+        "name": "Ash of War",
+        "desc": "<red>CA:</>Strike with force against many dark souls. +30 damage, +50 hit, +50 crit, effective damage against monsters, dragons, and horses. Half damage taken while doing so. <green>CD:4 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "30"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "50"
+            ],
+            [
+                "item_override",
+                "Ash_of_War"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Erdtree",
+        "name": "Blessing of the Erdtree",
+        "desc": "Grants unit and allies within 3 spaces +1 bonus attack, +15 STR, MAG, & +30 Hit and Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            5
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Blessing_of_the_Erdtree_Aura"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Erdtree_Aura",
+        "name": "Blessing of the Erdtree",
+        "desc": "Grants unit and allies within 3 spaces +1 bonus attack, +15 STR, MAG, & +30 Hit and Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        15
+                    ],
+                    [
+                        "MAG",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Erdtree_Selfish",
+        "name": "Blessing of the Erdtree",
+        "desc": "Grants unit and allies within 3 spaces +1 bonus attack, +15 STR, MAG, & +30 Hit and Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            5
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        15
+                    ],
+                    [
+                        "MAG",
+                        15
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Block_Counter",
+        "name": "Block Counter",
+        "desc": "+15 DEF & RES and grants 2 bonus attacks on defense.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Burden_Strike",
+        "name": "Burden Strike",
+        "desc": "If unit's DEF >= to enemy's DEF, unit gains +1 Bonus attacks (+2 if doubling).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') >= target.get_stat('DEF')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
+            ]
+        ]
+    },
+    {
+        "nid": "Improved_Burden_Strike",
+        "name": "Improved Burden Strike",
+        "desc": "If unit's DEF >= to enemy's DEF, unit gains +2 Bonus attacks (+4 if doubling).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') >= target.get_stat('DEF')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ]
+        ]
+    },
+    {
+        "nid": "Superior_Burden_Strike",
+        "name": "Superior Burden Strike",
+        "desc": "If unit's DEF >= to enemy's DEF, unit gains +3 Bonus attacks (+6 if doubling).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            18
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('DEF') >= target.get_stat('DEF')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "3"
+            ]
+        ]
+    },
+    {
+        "nid": "Poiseful_Blow",
+        "name": "Poiseful Blow",
+        "desc": "Unit deals additional damage equal to the unit's DEF/3 \nwhen unit initiates attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            47
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('DEF') // 3"
             ]
         ]
     },
@@ -51199,7 +52423,7 @@
     {
         "nid": "Arcane_Barrier_T1",
         "name": "Arcane Barrier",
-        "desc": "Reduce damage this unit takes by MAG/2 (<red>{e: (unit.get_stat('MAG')//2)}</>) when being attacked.",
+        "desc": "Reduce damage this unit takes by MAG (<red>{e: (unit.get_stat('MAG'))}</>) when being attacked.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -51212,7 +52436,7 @@
             ],
             [
                 "dynamic_resist",
-                "unit.get_stat('MAG') // 2"
+                "unit.get_stat('MAG')"
             ],
             [
                 "feat",
@@ -51362,7 +52586,32 @@
             [
                 "copysafe",
                 [
-                    "Feeling_Lucky_DBLBuff_hide"
+                    "Feeling_Lucky_MyUnit_DBLBuff_hide"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Feeling_Lucky_MyUnit_DBLBuff_hide",
+        "name": "Feeling Lucky",
+        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            45
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        2.0
+                    ]
                 ]
             ]
         ]

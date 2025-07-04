@@ -2,7 +2,7 @@
     {
         "nid": "Triangle_Sword",
         "name": "Triangle Sword",
-        "desc": "A special sword made for Triangle Adept fighters.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), doubles Triangle effects.",
+        "desc": "A special sword made for Triangle Expert fighters.\n<green>Skills:</>Flash Step, Triangle Expert\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -68,6 +68,14 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Triangle_Expert_Item",
+                    "Triangle_Expert_WT_hide"
+                ]
             ]
         ]
     }

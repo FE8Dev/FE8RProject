@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Surge_O_Flame",
+        "name": "Surge, O Flame",
+        "desc": "Superior incantation of the Fire Monks.\n<orange>Element:</><icon>Fire</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Horse</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)\n<pink>Misc:</>MAG + STR/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Light'] >= 360 and u(\"Eterna\").wexp['Light'] < 420"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Flame_Sweep"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared_AOE_Splash"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_STR_MID"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]
