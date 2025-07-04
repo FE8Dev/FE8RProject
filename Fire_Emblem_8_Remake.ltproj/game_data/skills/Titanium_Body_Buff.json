@@ -1,6 +1,6 @@
 [
     {
-        "nid": "Titanium_Body",
+        "nid": "Titanium_Body_Buff",
         "name": "Titanium Body",
         "desc": "Gain 10% damage reduction when damaged, stacks up to 9 times. resets at the start of the round",
         "icon_nid": "skill_icons",
@@ -10,12 +10,16 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
+                "resist_multiplier",
+                0.9
             ],
             [
-                "gain_skill_after_take_damage",
-                "Titanium_Body_Buff"
+                "stack",
+                9
+            ],
+            [
+                "lost_on_upkeep",
+                null
             ]
         ]
     }
