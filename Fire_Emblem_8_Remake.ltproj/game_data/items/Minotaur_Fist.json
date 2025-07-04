@@ -2,7 +2,7 @@
     {
         "nid": "Minotaur_Fist",
         "name": "Minotaur Fist",
-        "desc": "Fist forged with the skin of the legendary Minotaur.\n<pink>Misc:</>Uses STR+CON/2,Brave.",
+        "desc": "Fist forged with the skin of the legendary Minotaur.\n<pink>Misc:</>STR + CON/2 (<red>{e:(unit.get_stat('CON') + (unit.get_stat('STR')//2))}</>), Brave.",
         "icon_nid": "{EldritchA, Indogutsu Tenbuki} (Tactics Ogre) Item 55",
         "icon_index": [
             0,
@@ -69,7 +69,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_CON_MID"
+                "CON_STR_MID"
             ],
             [
                 "brave",

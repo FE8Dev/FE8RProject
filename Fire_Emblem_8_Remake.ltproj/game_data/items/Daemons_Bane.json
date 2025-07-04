@@ -2,7 +2,7 @@
     {
         "nid": "Daemons_Bane",
         "name": "Daemons Bane",
-        "desc": "Demons fear meeting this gauntlet in melee combat.\n<red>Effective:</><icon>Monster</><pink>Misc:</>Uses STR+SKL+CON/2,Brave.",
+        "desc": "Demons fear meeting this gauntlet in melee combat.\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>STR + SKL/2 + CON*1.5 (<red>{e:((unit.get_stat('CON')*1.5) + (unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), Brave.",
         "icon_nid": "Killer Knuckle {VelvetKitsune, LordGlenn}",
         "icon_index": [
             0,

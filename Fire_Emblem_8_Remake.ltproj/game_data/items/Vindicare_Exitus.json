@@ -2,7 +2,7 @@
     {
         "nid": "Vindicare_Exitus",
         "name": "Vindicare Exitus",
-        "desc": "A weapon created with future knowledge, inspired by legends, a single shot is fatal.\n<green>Skills:</>Lethal_Aim\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Uses SKL+SKL.",
+        "desc": "A weapon created with future knowledge, inspired by legends, a single shot is fatal.\n<green>Skills:</>Lethal Aim\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Uses SKL*2 + STR (<red>{e:((unit.get_stat('SKL')*2) + (unit.get_stat('STR')))}</>)..",
         "icon_nid": "{Ryan914, VelvetKitsune} Lights Out",
         "icon_index": [
             0,
@@ -94,7 +94,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "SKL_SKL"
+                "SKL_SKL_STR"
             ]
         ]
     }

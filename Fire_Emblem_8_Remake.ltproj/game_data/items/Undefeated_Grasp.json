@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Shielded_Fists",
-        "name": "Shielded Fists",
-        "desc": "Thick fists that protect the wielder.\n<violet>Inflicts:</>Breach (2), Curse (2)\n<pink>Misc:</>+3/+3 DEF/RES on Equip.",
+        "nid": "Undefeated_Grasp",
+        "name": "Undefeated Grasp",
+        "desc": "The hands of a champion.\n<violet>Inflicts:</>Breach (25), Curse (25)\n<pink>Misc:</>+16/+16 DEF/RES on Equip, +DEF/4, +RES/4 to damage (<red>{e:(unit.get_stat('DEF')//4) + (unit.get_stat('RES')//4)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
-            0,
+            3,
             1
         ],
         "components": [
@@ -23,15 +23,15 @@
             ],
             [
                 "damage",
-                8
+                19
             ],
             [
                 "hit",
-                70
+                100
             ],
             [
                 "weight",
-                10
+                23
             ],
             [
                 "wexp",
@@ -39,7 +39,7 @@
             ],
             [
                 "crit",
-                3
+                15
             ],
             [
                 "min_range",
@@ -55,7 +55,7 @@
             ],
             [
                 "weapon_rank",
-                "E"
+                "X"
             ],
             [
                 "prf_unit",
@@ -65,13 +65,13 @@
             ],
             [
                 "eval_available",
-                "u(\"Wally\").wexp['Monster'] < 180"
+                "u(\"Wally\").wexp['Monster'] >= 480"
             ],
             [
                 "statuses_on_hit",
                 [
-                    "Breached_2",
-                    "Cursed_2"
+                    "Breached_25",
+                    "Cursed_25"
                 ]
             ],
             [
@@ -79,12 +79,18 @@
                 [
                     [
                         "DEF",
-                        3
+                        16
                     ],
                     [
                         "RES",
-                        3
+                        16
                     ]
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Runeguard_Claws"
                 ]
             ]
         ]
