@@ -51664,7 +51664,7 @@
     {
         "nid": "Titanium_Body",
         "name": "Titanium Body",
-        "desc": "Increment in 100 the Growth of HP;CON and STR.Reduce the Exp Gain in 50%. The user regenerate a 30% of Max HP at iniating turn.The user gains +30% of STR;DEF;RES and SKL and reduce the SPD in 75% and LCK in 100%",
+        "desc": "Gain 10% damage reduction when damaged, stacks up to 9 times. resets at the start of the round",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -51676,58 +51676,32 @@
                 null
             ],
             [
-                "growth_change",
-                [
-                    [
-                        "HP",
-                        100
-                    ],
-                    [
-                        "STR",
-                        100
-                    ],
-                    [
-                        "CON",
-                        100
-                    ]
-                ]
+                "gain_skill_after_take_damage",
+                "Titanium_Body_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Titanium_Body_Buff",
+        "name": "Titanium Body",
+        "desc": "Gain 10% damage reduction when damaged, stacks up to 9 times. resets at the start of the round",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            50
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.9
             ],
             [
-                "exp_multiplier",
-                0.5
+                "stack",
+                9
             ],
             [
-                "regeneration",
-                1.3
-            ],
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "STR",
-                        1.3
-                    ],
-                    [
-                        "SKL",
-                        1.3
-                    ],
-                    [
-                        "DEF",
-                        1.3
-                    ],
-                    [
-                        "RES",
-                        1.3
-                    ],
-                    [
-                        "SPD",
-                        0.25
-                    ],
-                    [
-                        "LCK",
-                        0.0
-                    ]
-                ]
+                "lost_on_upkeep",
+                null
             ]
         ]
     },
