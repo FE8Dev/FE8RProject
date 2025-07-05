@@ -3,7 +3,7 @@
         "name": "DestroyVillage3",
         "trigger": "Destructible",
         "level_nid": "5",
-        "condition": "region.nid == 'Village3'",
+        "condition": "region.nid == 'Village3' and unit.team == 'enemy'",
         "commands": [],
         "only_once": true,
         "priority": 20,

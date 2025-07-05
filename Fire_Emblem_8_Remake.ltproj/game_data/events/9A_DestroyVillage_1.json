@@ -1,9 +1,9 @@
 [
     {
         "name": "DestroyVillage_1",
-        "trigger": "Destructible",
+        "trigger": "unit_wait",
         "level_nid": "9A",
-        "condition": "region.nid == 'VillageD_1'",
+        "condition": "region.nid == 'VillageD_1' and unit.team == 'enemy'",
         "commands": [],
         "only_once": true,
         "priority": 20,
