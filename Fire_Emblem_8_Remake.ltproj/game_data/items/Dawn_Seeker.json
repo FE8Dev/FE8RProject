@@ -2,7 +2,7 @@
     {
         "nid": "Dawn_Seeker",
         "name": "Dawn Seeker",
-        "desc": "A blade that looks for brightness of the future.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Light</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), Heavy.",
+        "desc": "A blade that looks for brightness of the future.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Light</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), Heavy, Reaver.",
         "icon_nid": "Fajar Weapons",
         "icon_index": [
             6,
@@ -109,6 +109,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_STRONG"
+            ],
+            [
+                "reaver",
+                null
             ]
         ]
     }

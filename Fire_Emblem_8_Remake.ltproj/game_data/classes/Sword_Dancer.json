@@ -1,13 +1,13 @@
 [
     {
-        "nid": "Swordmaster_Fajar",
-        "name": "Swordmaster",
+        "nid": "Sword_Dancer",
+        "name": "Sword Dancer",
         "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
-        "tier": 2,
+        "tier": 1,
         "movement_group": "Light Foot",
-        "promotes_from": "Myrmidon_Female",
+        "promotes_from": null,
         "turns_into": [
-            "Sword_Blossom_Fajar"
+            "Blade_Hime"
         ],
         "tags": [
             "AutoPromote",
@@ -16,88 +16,84 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 32,
-            "STR": 6,
-            "MAG": 4,
-            "SKL": 12,
-            "SPD": 12,
-            "LCK": 5,
-            "DEF": 6,
-            "RES": 4,
-            "CON": 9,
-            "MOV": 6
+            "HP": 21,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 9,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 2,
+            "CON": 8,
+            "MOV": 5,
+            "RES": 1
         },
         "growths": {
-            "HP": 10,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 5,
-            "SPD": 5,
-            "LCK": 5,
-            "DEF": 5,
-            "RES": 5,
+            "HP": 70,
+            "STR": 35,
+            "MAG": 17,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 30,
+            "DEF": 15,
             "CON": 0,
-            "MOV": 0
+            "MOV": 0,
+            "RES": 20
         },
         "growth_bonus": {
-            "HP": 15,
-            "STR": 5,
-            "MAG": 5,
-            "SKL": 15,
-            "SPD": 15,
-            "LCK": 10,
-            "DEF": 5,
-            "RES": 5,
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
             "CON": 0,
-            "MOV": 0
+            "MOV": 0,
+            "RES": 0
         },
         "promotion": {
-            "HP": 5,
-            "STR": 2,
-            "MAG": 1,
-            "SKL": 3,
-            "SPD": 3,
-            "LCK": 2,
-            "DEF": 2,
-            "RES": 1,
-            "CON": 2,
-            "MOV": -97
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
+            "RES": 0
         },
         "max_stats": {
-            "HP": 480,
-            "STR": 62,
-            "MAG": 64,
-            "SKL": 69,
-            "SPD": 70,
-            "LCK": 70,
-            "DEF": 62,
-            "RES": 65,
-            "CON": 50,
-            "MOV": 15
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "CON": 40,
+            "MOV": 15,
+            "RES": 40
         },
         "learned_skills": [
             [
                 5,
-                "Swordmasters_Dance"
+                "Reckless_Swing_Art"
             ],
             [
                 15,
-                "Astra_Art"
+                "Desperation"
             ],
             [
                 1,
-                "Myrmidon_Pair_Up_T2_hide"
-            ],
-            [
-                1,
-                "Crit_P10"
+                "Myrmidon_Pair_Up_hide"
             ]
         ],
         "wexp_gain": {
             "Sword": [
-                2,
-                60,
-                360
+                true,
+                1,
+                240
             ],
             "Lance": [
                 false,
@@ -145,13 +141,13 @@
                 null
             ]
         },
-        "icon_nid": "Generic_Portrait_Swordmaster",
+        "icon_nid": "Generic_Portrait_Myrmidon",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "Blade Lord (F) Kawaii Blader Sword {blood}-stand",
-        "combat_anim_nid": "Fajar_T2",
+        "map_sprite_nid": "MyrmidonFemale",
+        "combat_anim_nid": "Fajar_T1",
         "fields": []
     }
 ]

@@ -2,7 +2,7 @@
     {
         "nid": "Dawn_Blade",
         "name": "Dawn Blade",
-        "desc": "A magical blade that is easy to wield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Light</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), Heavy.",
+        "desc": "A unique magical blade that is easy to wield against lances.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Light</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), Heavy, Reaver.",
         "icon_nid": "Fajar Weapons",
         "icon_index": [
             5,
@@ -109,6 +109,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_MID"
+            ],
+            [
+                "reaver",
+                null
             ]
         ]
     }

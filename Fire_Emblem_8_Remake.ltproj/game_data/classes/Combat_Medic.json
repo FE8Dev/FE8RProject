@@ -1,19 +1,21 @@
 [
     {
-        "nid": "Rogue_Natasha",
-        "name": "Rogue",
-        "desc": "A skilled thief that can open doors and chests with ease. <icon>Infantry</><icon>Steal</><icon>Staff</>",
+        "nid": "Combat_Medic",
+        "name": "Combat_Medic",
+        "desc": "A medic that fights beautifully on the battlefield. <icon>Infantry</><icon>Staff</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Thief",
+        "promotes_from": "Cleric",
         "turns_into": [
-            "T3_Djinn",
-            "T3_Trickster",
-            "T3_Dual_Blade_Rouge"
+            "T3_Seraph_Knight",
+            "Guardian",
+            "Mahou_Shoujo"
         ],
         "tags": [
             "AutoPromote",
-            "Infantry"
+            "Support",
+            "Infantry",
+            "Magic"
         ],
         "max_level": 20,
         "bases": {
@@ -42,8 +44,8 @@
         },
         "growth_bonus": {
             "HP": 15,
-            "STR": 5,
-            "MAG": 15,
+            "STR": 10,
+            "MAG": 10,
             "SKL": 10,
             "SPD": 15,
             "LCK": 15,
@@ -79,31 +81,15 @@
         "learned_skills": [
             [
                 1,
-                "Steal_hide"
-            ],
-            [
-                1,
-                "Locktouch_hide"
+                "Myrmidon_Pair_Up_Booster_T2"
             ],
             [
                 5,
-                "Treasure_Hunter"
+                "Closer_Healing"
             ],
             [
                 15,
-                "Sight_P"
-            ],
-            [
-                1,
-                "Crit_P10"
-            ],
-            [
-                1,
-                "Thief_Pair_Up_T2_hide"
-            ],
-            [
-                5,
-                "Treasure_Hunter_Buff_hide"
+                "Swift_Combatant"
             ]
         ],
         "wexp_gain": {
@@ -163,8 +149,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Rogue",
-        "combat_anim_nid": "RogueV2",
+        "map_sprite_nid": "Lord (F) Lucina Sword {BatimaTheBat}-stand",
+        "combat_anim_nid": "Combat_Medic",
         "fields": []
     }
 ]
