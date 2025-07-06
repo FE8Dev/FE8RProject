@@ -11,7 +11,7 @@
             "choice;shopper;Who will shop?;{eval:[unit.nid for unit in game.get_units_in_party()]};64;v;top_left;menu_bg_base;;type_unit;3,3;;expression;backable",
             "if;game.get_unit('{eval:game.game_vars.get('_last_choice')}').team == 'player'",
             "music;56- Armories Orchestral Cover;500",
-            "shop;{eval:game.game_vars.get('_last_choice')};Slim Sword,Slim Lance,Javelin,Slim_Axe,Hand Axe,Slim_Bow,Iron_Dagger,Knights_Gauntlet,Magic_Bracelet,Blood_Ring,Treasure_Box,Barbed_Choker,Beacon_Signet,Mending_Flame,Mending_Stone,Thief_Bag,Hexing_Talisman,Balance_Belt,Fire_Gem,Ice_Gem,Dark_Gem,Storm_Gem,Wrath_Gem,Earth_Gem;armory",
+            "shop;{eval:game.game_vars.get('_last_choice')};Slim_Sword,Slim_Lance,Javelin,Slim_Axe,Hand_Axe,Slim_Bow,Iron_Dagger,Knights_Gauntlet,Magic_Bracelet,Blood_Ring,Treasure_Box,Barbed_Choker,Beacon_Signet,Mending_Flame,Mending_Stone,Thief_Bag,Hexing_Talisman,Balance_Belt,Fire_Gem,Ice_Gem,Dark_Gem,Storm_Gem,Wrath_Gem,Earth_Gem;armory",
             "music_fade_back",
             "game_var;_last_choice;False",
             "else",
