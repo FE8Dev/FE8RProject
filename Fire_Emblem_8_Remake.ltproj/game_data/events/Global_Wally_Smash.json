@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Wally_Smash",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;is_dead(unit2)",
+            "reset;{unit}",
+            "give_skill;{unit};Exhuasted;no_banner",
+            "else",
+            "end"
+        ],
+        "nid": "Global Wally_Smash"
+    }
+]

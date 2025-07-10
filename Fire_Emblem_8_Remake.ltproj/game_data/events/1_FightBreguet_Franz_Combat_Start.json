@@ -1,0 +1,29 @@
+[
+    {
+        "name": "FightBreguet_Franz_Combat_Start",
+        "trigger": "combat_start",
+        "level_nid": "1",
+        "condition": "check_pair('Franz', 'Breguet')",
+        "commands": [],
+        "only_once": true,
+        "priority": 19,
+        "_source": [
+            "add_portrait;Breguet;Left",
+            "add_portrait;Franz;Right;no_block",
+            "speak;Breguet;What is this?|A small dog that yearns to be slaughtered?",
+            "speak;Franz;I...I am Franz of Renais!|I will not f-fall here!",
+            "speak;Breguet;Ha ha!|Such a fool!|I could fight you with my eyes closed, worthless pup!",
+            "expression;Breguet;CloseEyes",
+            "wait;300",
+            "bop_portrait;Breguet",
+            "speak;Breguet;Woah!|Ahhh!",
+            "remove_portrait;Breguet",
+            "bop_portrait;Franz",
+            "speak;Franz;He tripped!|Now is my chance!",
+            "give_skill;Franz;Lucky_Hit;no_banner",
+            "give_skill;Breguet;Stunned;no_banner",
+            "remove_portrait;Franz"
+        ],
+        "nid": "1 FightBreguet_Franz_Combat_Start"
+    }
+]

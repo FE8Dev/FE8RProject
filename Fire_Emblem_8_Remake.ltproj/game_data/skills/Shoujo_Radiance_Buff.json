@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Shoujo_Radiance_Buff",
+        "name": "Shoujo Radiance",
+        "desc": "+15 MAG, +15 RES, +20 Crit and +50 Crit damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            19
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "20"
+            ],
+            [
+                "eval_crit_additional",
+                "50"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

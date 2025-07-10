@@ -2,7 +2,7 @@
     {
         "nid": "Trip",
         "name": "Trip",
-        "desc": "When defending, unit has a LCK% chance to avoid all attacks of that combat.",
+        "desc": "<red>CA:</>-999 Hit to enemy. <green>CD:3 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -14,11 +14,15 @@
                 null
             ],
             [
-                "proc_rate",
-                "LUCK_PROC"
+                "build_charge",
+                3
             ],
             [
-                "defense_proc",
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "combat_art",
                 "Trip_Skill"
             ]
         ]

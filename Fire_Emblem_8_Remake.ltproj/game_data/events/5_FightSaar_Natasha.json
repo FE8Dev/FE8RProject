@@ -1,0 +1,30 @@
+[
+    {
+        "name": "FightSaar_Natasha",
+        "trigger": "combat_start",
+        "level_nid": "5",
+        "condition": "check_pair('Natasha', 'Saar')",
+        "commands": [],
+        "only_once": true,
+        "priority": 19,
+        "_source": [
+            "add_portrait;Saar;Left",
+            "add_portrait;Natasha;Right",
+            "speak;Saar;Finally, you show up cleric wench!",
+            "speak;Natasha;I am of Grado too!|Why are you doing this to me?!",
+            "speak;Saar;That doesn't matter to a dead woman.|Now be a good girl and face your end!",
+            "speak;Natasha;No!|I cannot die yet!|Grado needs my help!",
+            "speak;Saar;Grado doesn't need help from a traitor!|Charge!",
+            "speak;Natasha;Get back!",
+            "sound;Fimbulvetr2",
+            "speak;Saar;Hey!|I'm frozen!|What did you do?!",
+            "speak;Natasha;H-heaven help me!|Save me from this evil!",
+            "give_skill;Natasha;Divine_Strike;;no_banner",
+            "give_skill;Saar;Stunned;;no_banner",
+            "give_skill;Saar;Frozen;;no_banner",
+            "remove_portrait;Saar",
+            "remove_portrait;Natasha"
+        ],
+        "nid": "5 FightSaar_Natasha"
+    }
+]

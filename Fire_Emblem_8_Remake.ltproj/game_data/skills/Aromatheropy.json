@@ -1,0 +1,47 @@
+[
+    {
+        "nid": "Aromatheropy",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 60% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "LCK",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ],
+                    [
+                        "DEF",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ],
+                    [
+                        "RES",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ]
+                ]
+            ],
+            [
+                "aura",
+                "Aromatheropy_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Aromatheropy_Staff_Skill",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 25% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "give_status_after_hit",
+                "Aromatheropy_Staff_Buff"
+            ]
+        ]
+    }
+]

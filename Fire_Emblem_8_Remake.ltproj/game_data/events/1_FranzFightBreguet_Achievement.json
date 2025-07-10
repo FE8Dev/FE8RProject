@@ -1,6 +1,6 @@
 [
     {
-        "name": "FranzFightBreguet",
+        "name": "FranzFightBreguet_Achievement",
         "trigger": "combat_end",
         "level_nid": "1",
         "condition": "check_pair('Franz', 'Breguet')",
@@ -8,9 +8,10 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "remove_skill;Breguet;Stun;no_banner",
             "complete_achievement;ch1b;true;banner",
             "give_item;convoy;Dragonshield_Consumable"
         ],
-        "nid": "1 FranzFightBreguet"
+        "nid": "1 FranzFightBreguet_Achievement"
     }
 ]

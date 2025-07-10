@@ -3690,7 +3690,7 @@
     {
         "nid": "Steal_hide",
         "name": "Steal",
-        "desc": "Can steal items from enemies with lower speed.",
+        "desc": "Can steal items and weapons from enemies with lower SPD.",
         "icon_nid": "Skills",
         "icon_index": [
             7,
@@ -3710,10 +3710,6 @@
                 3
             ],
             [
-                "hidden",
-                null
-            ],
-            [
                 "steal_icon",
                 null
             ],
@@ -3728,7 +3724,7 @@
     {
         "nid": "Fetch",
         "name": "Fetch",
-        "desc": "Can steal items from enemies with lower speed.",
+        "desc": "Can steal items and weapons from enemies with lower SPD.",
         "icon_nid": "Skills",
         "icon_index": [
             7,
@@ -3746,10 +3742,6 @@
             [
                 "sight_range_bonus",
                 3
-            ],
-            [
-                "hidden",
-                null
             ],
             [
                 "steal_icon",
@@ -3794,7 +3786,7 @@
     {
         "nid": "Locktouch_hide",
         "name": "Locktouch",
-        "desc": "Unit can open locks without a key.",
+        "desc": "Unit can open locks and chests without a key.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -3804,9 +3796,21 @@
             [
                 "locktouch",
                 null
-            ],
+            ]
+        ]
+    },
+    {
+        "nid": "Skeleton_Key",
+        "name": "Skeleton Key",
+        "desc": "Unit can open locks and chests without a key.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
             [
-                "hidden",
+                "locktouch",
                 null
             ]
         ]
@@ -4157,8 +4161,8 @@
                 8
             ],
             [
-                "lost_on_endstep",
-                null
+                "time",
+                1
             ]
         ]
     },
@@ -4679,6 +4683,27 @@
             [
                 "lost_on_end_chapter",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Chained_Down",
+        "name": "Chained Down",
+        "desc": "Unit cannot move. Who knows how long it will last though?...",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            43
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -6
+                    ]
+                ]
             ]
         ]
     },
@@ -25080,7 +25105,7 @@
                 "(unit.get_stat('SKL') // 3)"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -25100,7 +25125,7 @@
                 "(unit.get_stat('SKL') // 2)"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -25120,7 +25145,7 @@
                 "(unit.get_stat('SKL'))"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -25140,7 +25165,7 @@
                 "(unit.get_stat('SKL') * 1.5)"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -25160,7 +25185,7 @@
                 "(unit.get_stat('SKL') * 2)"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -26132,12 +26157,18 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "dynamic_attacks",
                 "1"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -26394,7 +26425,7 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28111,7 +28142,7 @@
                 2
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28147,7 +28178,7 @@
                 "not has_skill(unit, 'Steal')"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28290,7 +28321,7 @@
                 "10"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28314,7 +28345,7 @@
                 "20"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28338,7 +28369,7 @@
                 "30"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28362,7 +28393,7 @@
                 "40"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -28386,7 +28417,7 @@
                 "50"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -36794,6 +36825,43 @@
         ]
     },
     {
+        "nid": "Lucky_Hit",
+        "name": "Lucky Hit",
+        "desc": "+14 Damage, +999 Hit, +999 Crit against the chapter 1 boss with Franz.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            18
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "14"
+            ],
+            [
+                "dynamic_accuracy",
+                "999"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "999"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
         "nid": "Provoke_Weak",
         "name": "Provoke",
         "desc": "Enemies will have higher chance to target unit when unit is above 75% Max HP. Gain a stack of Counter Point each time unit is damaged in combat. (x1.2 bonus damage for each stack, +2 DEF/RES. Max 5 stacks. Lost on turn.)",
@@ -37083,7 +37151,7 @@
                 "1"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -37787,6 +37855,24 @@
         ]
     },
     {
+        "nid": "Medical_Tools",
+        "name": "Medical Tools",
+        "desc": "Allows Natasha access to her special medical Daggers, no matter the class.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            29
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Medic_Dagger"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Holy_Radiance",
         "name": "Holy Radiance",
         "desc": "Reduce damage taken by monsters and Dark magic by 80%",
@@ -37948,6 +38034,271 @@
             [
                 "stack",
                 10
+            ]
+        ]
+    },
+    {
+        "nid": "Anotomy_Master",
+        "name": "Anotomy Master",
+        "desc": "Attacks deal very effective damage against Infantry enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "item_override",
+                "Anti_Infantry_Rounds"
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 60% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "LCK",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ],
+                    [
+                        "DEF",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ],
+                    [
+                        "RES",
+                        "(8*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                    ]
+                ]
+            ],
+            [
+                "aura",
+                "Aromatheropy_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy_Other_Aura_hide",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 25% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "aura",
+                "Aromatheropy_Staff_Skill"
+            ],
+            [
+                "aura_range",
+                50
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hide_aura",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy_Buff",
+        "name": "Aromatheropy",
+        "desc": "+50% LCK.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        1.5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy_Staff_Skill",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 25% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "give_status_after_hit",
+                "Aromatheropy_Staff_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy_Staff_Buff",
+        "name": "Sweet Smell",
+        "desc": "+60% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        1.6
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Shoujo_Radiance",
+        "name": "Shoujo Radiance",
+        "desc": "+15 MAG, +15 RES, +20 Crit and +50 Crit damage to all allies within 2 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Watchful_Radiance_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Shoujo_Radiance_Buff",
+        "name": "Shoujo Radiance",
+        "desc": "+15 MAG, +15 RES, +20 Crit and +50 Crit damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            19
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        15
+                    ],
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "20"
+            ],
+            [
+                "eval_crit_additional",
+                "50"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Divine_Strike",
+        "name": "Divine Strike",
+        "desc": "+30 Damage, +999 Hit, +999 Crit against the chapter 5 boss with Natasha.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            18
+        ],
+        "components": [
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "30"
+            ],
+            [
+                "guaranteed_crit",
+                null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
             ]
         ]
     },
@@ -45626,7 +45977,7 @@
                 null
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -45654,7 +46005,7 @@
                 "0 if attack_info[0] == 0 else -20"
             ],
             [
-                "lost_on_endstep",
+                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -49596,7 +49947,7 @@
     {
         "nid": "Fear_Feeder_Giver",
         "name": "Fear Feeder",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 3 spaces gain -15 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 9 spaces gain -15 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49620,7 +49971,7 @@
     {
         "nid": "Fear_Feeder",
         "name": "Fear Feeder",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 3 spaces gain -15 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (35%) and enemies within 9 spaces gain -15 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49653,7 +50004,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -49664,7 +50015,7 @@
     {
         "nid": "Fear_Feeder_GiverP",
         "name": "Fear Feeder+",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 9 spaces gain -20 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49688,7 +50039,7 @@
     {
         "nid": "Fear_FeederP",
         "name": "Fear Feeder+",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 3 spaces gain -20 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (40%) and enemies within 9 spaces gain -20 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49721,7 +50072,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -49732,7 +50083,7 @@
     {
         "nid": "Fear_Feeder_GiverPP",
         "name": "Fear Feeder++",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 3 spaces gain -30 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 9 spaces gain -30 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49756,7 +50107,7 @@
     {
         "nid": "Fear_FeederPP",
         "name": "Fear Feeder++",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 3 spaces gain -30 Avoid/Hit while wielding axes.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (45%) and enemies within 9 spaces gain -30 Avoid/Hit while wielding axes.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49789,7 +50140,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -49800,7 +50151,7 @@
     {
         "nid": "Fear_Feeder_GiverPPP",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\n",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 9 spaces gain -40 Avoid/Hit while wielding axes.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49824,7 +50175,7 @@
     {
         "nid": "Fear_FeederPPP",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 9 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49857,7 +50208,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -49868,7 +50219,7 @@
     {
         "nid": "Fear_FeederPPP_Immortality",
         "name": "Fear Feeder+++",
-        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 3 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
+        "desc": "After this unit kills 5 enemies with an axe, unit gains HP Absorb (50%) and enemies within 9 spaces gain -40 Avoid/Hit while wielding axes.\nThis unit cannot die during the Player Phase.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -49980,7 +50331,7 @@
     {
         "nid": "Inspire_Giver",
         "name": "Inspire",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +10% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50004,7 +50355,7 @@
     {
         "nid": "Inspire",
         "name": "Inspire",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +10% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50033,7 +50384,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -50044,7 +50395,7 @@
     {
         "nid": "Inspire_GiverP",
         "name": "Inspire+",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +20% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +20% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50097,7 +50448,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -50108,7 +50459,7 @@
     {
         "nid": "Inspire_GiverPP",
         "name": "Inspire++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +30% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +30% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50132,7 +50483,7 @@
     {
         "nid": "InspirePP",
         "name": "Inspire++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +30% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +30% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50161,7 +50512,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -50172,7 +50523,7 @@
     {
         "nid": "Inspire_GiverPPP",
         "name": "Inspire+++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +40% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +40% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50196,7 +50547,7 @@
     {
         "nid": "InspirePPP",
         "name": "Inspire+++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +40% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +40% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50225,7 +50576,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -50236,7 +50587,7 @@
     {
         "nid": "Inspire_GiverPPPP",
         "name": "Inspire++++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +50% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +50% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50260,7 +50611,7 @@
     {
         "nid": "InspirePPPP",
         "name": "Inspire++++",
-        "desc": "After this unit kills 5 enemies with swords, allies within 3 spaces gain +50% DEF/RES while weilding swords.",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +50% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -50289,7 +50640,7 @@
             ],
             [
                 "aura_range",
-                3
+                9
             ],
             [
                 "aura_target",
@@ -51440,7 +51791,7 @@
         ]
     },
     {
-        "nid": "Blessing_of_the_Erdtree_Selfish",
+        "nid": "Blessing_of_the_Erdtree_Selfish_hide",
         "name": "Blessing of the Erdtree",
         "desc": "Grants unit and allies within 3 spaces +1 bonus attack, +15 STR, MAG, & +30 Hit and Avoid.",
         "icon_nid": "skill_icons",
@@ -54529,7 +54880,7 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Staff'"
+                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
             ],
             [
                 "combat_art",
@@ -54537,7 +54888,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Staff'"
+                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
             ],
             [
                 "feat",
@@ -65967,11 +66318,11 @@
     {
         "nid": "Guts",
         "name": "Guts",
-        "desc": "If unit is at least under one negative status, increases unit's Strength and Magic by 50%.",
-        "icon_nid": "SkillIcons",
+        "desc": "If unit is at least under one negative status, increases unit's STR, MAG and SPD by 100%.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            3,
-            13
+            15,
+            40
         ],
         "components": [
             [
@@ -65983,11 +66334,15 @@
                 [
                     [
                         "STR",
-                        1.5
+                        2.0
                     ],
                     [
                         "MAG",
-                        1.5
+                        2.0
+                    ],
+                    [
+                        "SPD",
+                        2.0
                     ]
                 ]
             ],
@@ -65998,9 +66353,9 @@
         ]
     },
     {
-        "nid": "Wonderful_Skin",
-        "name": "Wonderful Skin",
-        "desc": "If unit is at least under one negative status, increases unit's Defense and Resistance by 50%.",
+        "nid": "Pinch_Fighter",
+        "name": "Pinch Fighter",
+        "desc": "If unit is at least under one negative status, increases unit's DEF, RES, SKL by 100%.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -66016,11 +66371,15 @@
                 [
                     [
                         "DEF",
-                        1.5
+                        2.0
                     ],
                     [
                         "RES",
-                        1.5
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2.0
                     ]
                 ]
             ],
