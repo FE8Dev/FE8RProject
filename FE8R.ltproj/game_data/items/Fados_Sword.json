@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Fados_Sword",
+        "name": "Fado's Sword",
+        "desc": "The personal side arm of King Fado himself, given to its most trusted general after a successful campaign.\n<green>Skills:</>Flash Step, Mercy, Inspire++\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SPD/2 + RES/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SPD')//2 + unit.get_stat('RES')//2)}</>), +5 SPD.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            13
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Jonathan\").wexp['Sword'] >= 240 and u(\"Jonathan\").wexp['Sword'] < 360"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Purge"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_RES_MID"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Mercy_Seth_Art",
+                    "Inspire_GiverPP"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Jonathan"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    }
+]

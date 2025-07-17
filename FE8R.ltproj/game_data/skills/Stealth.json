@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Stealth",
+        "name": "Stealth",
+        "desc": "Unit gains +50 avoid while an Allies is within 3 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "condition",
+                "unit_funcs.check_focus(unit, 3) >= 1\n"
+            ],
+            [
+                "avoid",
+                50
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

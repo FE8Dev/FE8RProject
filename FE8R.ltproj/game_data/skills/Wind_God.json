@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Wind_God",
+        "name": "Wind God",
+        "desc": "<red>CA:</>Uses Bows. +2 max range, multi-target 4 <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            19
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Wind_God_Skill"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ]
+        ]
+    }
+]

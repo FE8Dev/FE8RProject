@@ -1,0 +1,57 @@
+[
+    {
+        "nid": "Cryonic_Cast_DG",
+        "name": "Cryonic Cast",
+        "desc": "Boosts Ice attacks and raises Ice Resistance by 50% for 4 turns. This is a free action.\nItem submitted by Saragl728.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Cryonic_Cast_Buff"
+            ]
+        ]
+    }
+]

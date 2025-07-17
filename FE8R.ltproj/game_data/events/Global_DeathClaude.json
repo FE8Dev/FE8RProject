@@ -1,0 +1,25 @@
+[
+    {
+        "name": "DeathClaude",
+        "trigger": "unit_death",
+        "level_nid": null,
+        "condition": "unit.nid == 'Claude'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "music;64- Game Over Orchestral Cover;500",
+            "add_portrait;Claude;Right",
+            "unhappy_chatter;{unit}",
+            "if;game.current_mode.permadeath == True",
+            "speak;Claude;The dreams of men don't amount to much.|Sorry, but... it's up to you now.",
+            "else",
+            "speak;Claude;So much for my schemes. I'm bowing out.",
+            "end",
+            "expression;Claude;CloseEyes",
+            "remove_portrait;Claude",
+            "music_fade_back;500"
+        ],
+        "nid": "Global DeathClaude"
+    }
+]

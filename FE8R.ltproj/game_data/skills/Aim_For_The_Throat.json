@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Aim_For_The_Throat",
+        "name": "Aim For The Throat",
+        "desc": "Attacks inflict Silence after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Silence"
+            ]
+        ]
+    }
+]

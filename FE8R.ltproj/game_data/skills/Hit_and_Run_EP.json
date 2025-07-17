@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Hit_and_Run_EP",
+        "name": "Hit and Run",
+        "desc": "<red>CA:</>Uses Bows. +2 max range, always active on EP. Also gain Canto+",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            29
+        ],
+        "components": [
+            [
+                "eval_max_range",
+                "2"
+            ],
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ]
+        ]
+    }
+]

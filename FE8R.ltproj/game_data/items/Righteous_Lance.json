@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Righteous_Lance",
+        "name": "Righteous Lance",
+        "desc": "The weight of righteous fury burdens this lance.\n<green>Skills:</>Lance Guard (C) <orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared </><red>Effective:</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>), Splash DMG (40%).",
+        "icon_nid": "New Prof Weapons Sheets",
+        "icon_index": [
+            5,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                18
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "status_on_equip",
+                "Lance_Guard_A"
+            ],
+            [
+                "battle_cast_anim",
+                "Javelin"
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_A"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_STR_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Franz\").wexp['Lance'] >= 240 and u(\"Franz\").wexp['Lance'] < 420"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

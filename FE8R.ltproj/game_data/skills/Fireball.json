@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Fireball",
+        "name": "Fireball",
+        "desc": "Your Wyvern spews a firebal at a group of enemies. 2 uses per chapter.\nRange: 2-4, AoE 3, cannot double, no DS, inflicts seared, effective against Horses, STR + CON*2.5\n(<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "ability",
+                "Fireball"
+            ],
+            [
+                "drain_charge",
+                2
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

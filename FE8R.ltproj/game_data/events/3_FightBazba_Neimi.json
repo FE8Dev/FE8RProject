@@ -1,0 +1,33 @@
+[
+    {
+        "name": "FightBazba_Neimi",
+        "trigger": "combat_start",
+        "level_nid": "3",
+        "condition": "check_pair('Neimi', 'Bazba')",
+        "commands": [],
+        "only_once": true,
+        "priority": 19,
+        "_source": [
+            "add_portrait;Bazba;Left",
+            "add_portrait;Neimi;Right;no_block",
+            "speak;Bazba;Little brat, what are you doing here?|Get lost before I chop you to bits!",
+            "speak;Neimi;.....;no_talk",
+            "expression;Neimi;HalfCloseEyes",
+            "speak;Neimi;G-give it back...",
+            "speak;Bazba;What you say, girl?",
+            "speak;Neimi;G...Give it back...",
+            "speak;Bazba;Are you mute, brat?!|Speak up!",
+            "expression;Neimi;CloseEyes",
+            "bop_portrait;Neimi",
+            "dialogue_voice;NeimiCrit1",
+            "speak;Neimi;GIVE IT BACK!!!",
+            "bop_portrait;Bazba",
+            "speak;Bazba;Woah!|My ears!|They're ringing!",
+            "speak;Neimi;GIVE IT BACK NOW!|WAHHHHHH!",
+            "give_skill;Neimi;Lucky_Hit;no_banner",
+            "remove_portrait;Bazba",
+            "remove_portrait;Neimi"
+        ],
+        "nid": "3 FightBazba_Neimi"
+    }
+]

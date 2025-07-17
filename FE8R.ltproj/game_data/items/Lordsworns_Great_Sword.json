@@ -1,0 +1,107 @@
+[
+    {
+        "nid": "Lordsworns_Great_Sword",
+        "name": "Lordsworn's Great Sword",
+        "desc": "A masterfully-crafted straight greatsword, kept in a serviceable condition.\n<green>Skills:</>Improved Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</>\n<pink>Misc:</>Heavy, but still strikes first, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "icon_nid": "Eterna Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Speed_Swing",
+                    "Blade_Sweep"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Eterna\").wexp['Sword'] >= 420 and u(\"Eterna\").wexp['Sword'] < 480"
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow",
+                        "Monster",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eterna"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Lightning"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ]
+        ]
+    }
+]

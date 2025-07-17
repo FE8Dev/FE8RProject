@@ -1,0 +1,826 @@
+[
+    {
+        "nid": "HITPOINTS",
+        "expression": "HP"
+    },
+    {
+        "nid": "ASSIST_DMG_DIV",
+        "expression": "1 if unit.get_skill(\"Vagabond\") else 2"
+    },
+    {
+        "nid": "MOVEMENT",
+        "expression": "MOV"
+    },
+    {
+        "nid": "ATTACK_SPEED",
+        "expression": "SPD"
+    },
+    {
+        "nid": "ATTACK_SPEED_1P5",
+        "expression": "SPD*1.5"
+    },
+    {
+        "nid": "ATTACK_SPEED_HALF",
+        "expression": "SPD//2"
+    },
+    {
+        "nid": "DEFENSE_SPEED",
+        "expression": "SPD"
+    },
+    {
+        "nid": "HIT",
+        "expression": "SKL*2 + LCK//2"
+    },
+    {
+        "nid": "AVOID",
+        "expression": "SPD*2 + LCK"
+    },
+    {
+        "nid": "CRIT_HIT",
+        "expression": "SKL//2"
+    },
+    {
+        "nid": "CRIT_AVOID",
+        "expression": "LCK"
+    },
+    {
+        "nid": "DAMAGE",
+        "expression": "STR"
+    },
+    {
+        "nid": "DAMAGE_2X",
+        "expression": "STR*2"
+    },
+    {
+        "nid": "DEFENSE",
+        "expression": "DEF"
+    },
+    {
+        "nid": "MAGIC_DAMAGE",
+        "expression": "MAG"
+    },
+    {
+        "nid": "MAGIC_DEFENSE",
+        "expression": "RES"
+    },
+    {
+        "nid": "MAGIC_RANGE",
+        "expression": "max(5, MAG//2)"
+    },
+    {
+        "nid": "CRIT_ADD",
+        "expression": "0"
+    },
+    {
+        "nid": "CRIT_MULT",
+        "expression": "3"
+    },
+    {
+        "nid": "CRIT_MULT_EXTREME",
+        "expression": "5"
+    },
+    {
+        "nid": "CRIT_MULT_THRUD",
+        "expression": "7"
+    },
+    {
+        "nid": "SPEED_TO_DOUBLE",
+        "expression": "4"
+    },
+    {
+        "nid": "RATING",
+        "expression": "(HP - 10)//2 + max(STR, MAG) + SKL + SPD + LCK//2 + DEF + RES"
+    },
+    {
+        "nid": "RESCUE_AID",
+        "expression": "max(0, 25 - CON) if 'Mounted' in unit.tags else max(0, CON - 1)"
+    },
+    {
+        "nid": "RESCUE_WEIGHT",
+        "expression": "CON"
+    },
+    {
+        "nid": "STEAL_ATK",
+        "expression": "SPD"
+    },
+    {
+        "nid": "STEAL_DEF",
+        "expression": "SPD"
+    },
+    {
+        "nid": "HEAL",
+        "expression": "MAG + 10"
+    },
+    {
+        "nid": "MEND",
+        "expression": "MAG + 20"
+    },
+    {
+        "nid": "CONSTITUTION",
+        "expression": "CON"
+    },
+    {
+        "nid": "INITIATIVE",
+        "expression": "SPD"
+    },
+    {
+        "nid": "ZERO",
+        "expression": "0"
+    },
+    {
+        "nid": "SKILL_PROC_D2",
+        "expression": "SKL//2"
+    },
+    {
+        "nid": "SKILL_PROC",
+        "expression": "SKL"
+    },
+    {
+        "nid": "SWIFT_STRIKE",
+        "expression": "DAMAGE + SPD"
+    },
+    {
+        "nid": "LUCK_PROC",
+        "expression": "LCK"
+    },
+    {
+        "nid": "LUCK_PROC_D1P5",
+        "expression": "LCK//1.5"
+    },
+    {
+        "nid": "DEADLY_FORCE_CRIT",
+        "expression": "SKL"
+    },
+    {
+        "nid": "LETHALITY_PROC",
+        "expression": "SKL//5"
+    },
+    {
+        "nid": "LETHALITY_DMG",
+        "expression": "999"
+    },
+    {
+        "nid": "MAG_RANGE_SHORT",
+        "expression": "max(5, MAG//4)"
+    },
+    {
+        "nid": "SOL",
+        "expression": "HP // 3"
+    },
+    {
+        "nid": "STR_MAG_MID",
+        "expression": "STR + MAG//2"
+    },
+    {
+        "nid": "STR_MAG_STRONG",
+        "expression": "STR + MAG"
+    },
+    {
+        "nid": "STR_MAG_WEAK",
+        "expression": "STR + MAG//3"
+    },
+    {
+        "nid": "MAG_STR_WEAK",
+        "expression": "STR//3 + MAG"
+    },
+    {
+        "nid": "MAG_STR_MID",
+        "expression": "STR//2 + MAG"
+    },
+    {
+        "nid": "MAG_STR_STRONG",
+        "expression": "STR + MAG"
+    },
+    {
+        "nid": "DEVILAXE",
+        "expression": "41 - LCK"
+    },
+    {
+        "nid": "STR_SPD_WEAK",
+        "expression": "STR + SPD//3"
+    },
+    {
+        "nid": "STR_SPD_MID",
+        "expression": "STR + SPD//2"
+    },
+    {
+        "nid": "STR_SPD_STRONG",
+        "expression": "STR + SPD"
+    },
+    {
+        "nid": "STR_DEF_WEAK",
+        "expression": "STR + DEF//3"
+    },
+    {
+        "nid": "STR_DEF_MID",
+        "expression": "STR + DEF//2"
+    },
+    {
+        "nid": "STR_DEF_STRONG",
+        "expression": "STR + DEF"
+    },
+    {
+        "nid": "STR_SKL_MID",
+        "expression": "STR + SKL//2"
+    },
+    {
+        "nid": "STR_SKL_WEAK",
+        "expression": "STR + SKL//3"
+    },
+    {
+        "nid": "STR_SKL_STRONG",
+        "expression": "STR + SKL"
+    },
+    {
+        "nid": "SLIM",
+        "expression": "STR//2 + SPD//2"
+    },
+    {
+        "nid": "LATONA",
+        "expression": "MAG * 5"
+    },
+    {
+        "nid": "STR_RES_MID",
+        "expression": "STR + RES//2"
+    },
+    {
+        "nid": "STR_LCK_MID",
+        "expression": "STR + LCK//2"
+    },
+    {
+        "nid": "STR_LCK_WEAK",
+        "expression": "STR + LCK//3"
+    },
+    {
+        "nid": "STR_LCK_STRONG",
+        "expression": "STR + LCK"
+    },
+    {
+        "nid": "MAG_SPD_MID",
+        "expression": "MAG + SPD//2"
+    },
+    {
+        "nid": "Affinity_Strke_Enemy",
+        "expression": "50"
+    },
+    {
+        "nid": "Affinity_Strke_Player",
+        "expression": "100"
+    },
+    {
+        "nid": "STR_SKL_MAG_WEAK",
+        "expression": "STR + SKL//2 + MAG//2"
+    },
+    {
+        "nid": "STR_SKL_MAG_MID",
+        "expression": "STR + SKL//2 + MAG"
+    },
+    {
+        "nid": "STR_SKL_MAG_STRONG",
+        "expression": "STR + SKL + MAG"
+    },
+    {
+        "nid": "X2",
+        "expression": "2"
+    },
+    {
+        "nid": "LCK_STR_WEAK",
+        "expression": "LCK + STR//3"
+    },
+    {
+        "nid": "LCK_STR_MID",
+        "expression": "LCK + STR//2"
+    },
+    {
+        "nid": "LCK_STR_STRONG",
+        "expression": "LCK + STR"
+    },
+    {
+        "nid": "STR_RES_WEAK",
+        "expression": "STR + RES//3"
+    },
+    {
+        "nid": "STR_RES_STRONG",
+        "expression": "STR + RES"
+    },
+    {
+        "nid": "MAG_SKL_WEAK",
+        "expression": "MAG + SKL//3"
+    },
+    {
+        "nid": "MAG_SKL_MID",
+        "expression": "MAG + SKL//2"
+    },
+    {
+        "nid": "MAG_SKL_STRONG",
+        "expression": "MAG + SKL"
+    },
+    {
+        "nid": "STR_MID_SPD_MID",
+        "expression": "STR//2 + SPD//2"
+    },
+    {
+        "nid": "LICH_HEAL_WEAK",
+        "expression": "HP // 2"
+    },
+    {
+        "nid": "MAG_MOV_HEAL_WEAK",
+        "expression": "MAG//2 + MOV"
+    },
+    {
+        "nid": "MAG_MOV_HEAL_MID",
+        "expression": "MAG + MOV"
+    },
+    {
+        "nid": "MAG_MOV_HEAL_STRONG",
+        "expression": "MAG + MOV*2"
+    },
+    {
+        "nid": "STR_DOUBLE",
+        "expression": "STR * 2"
+    },
+    {
+        "nid": "STR_DOUBLE_MAG_MID",
+        "expression": "STR * 2 + MAG//2"
+    },
+    {
+        "nid": "STR_DOUBLE_MAG_STRONG",
+        "expression": "STR * 2 + MAG"
+    },
+    {
+        "nid": "STR_DOUBLE_DEF_STRONG",
+        "expression": "STR * 2 + DEF"
+    },
+    {
+        "nid": "STR_DOUBLE_LCK_STRONG",
+        "expression": "STR * 2 + LCK"
+    },
+    {
+        "nid": "STR_HP_WEAK",
+        "expression": "STR + HP//5"
+    },
+    {
+        "nid": "STR_HP_MID",
+        "expression": "STR + HP//3"
+    },
+    {
+        "nid": "STR_HP_STRONG",
+        "expression": "STR + HP//2"
+    },
+    {
+        "nid": "SPD_STR_WEAK",
+        "expression": "SPD + STR//3"
+    },
+    {
+        "nid": "SPD_STR_MID",
+        "expression": "SPD + STR//2"
+    },
+    {
+        "nid": "MAG_SPD_WEAK",
+        "expression": "MAG + SPD//3"
+    },
+    {
+        "nid": "MAG_SPD_STRONG",
+        "expression": "MAG + SPD"
+    },
+    {
+        "nid": "SPD_SKL_WEAK",
+        "expression": "SPD + SKL//3"
+    },
+    {
+        "nid": "SPD_SKL_MID",
+        "expression": "SPD + SKL//2"
+    },
+    {
+        "nid": "SPD_SKL_STRONG",
+        "expression": "SPD + SKL"
+    },
+    {
+        "nid": "MAG_RES_WEAK",
+        "expression": "MAG + RES//3"
+    },
+    {
+        "nid": "MAG_RES_MID",
+        "expression": "MAG + RES//2"
+    },
+    {
+        "nid": "MAG_RES_STRONG",
+        "expression": "MAG + RES"
+    },
+    {
+        "nid": "MAG_MOV_WEAK_ALT",
+        "expression": "MAG + MOV*2"
+    },
+    {
+        "nid": "MAG_MOV_MID_ALT",
+        "expression": "MAG + MOV*3"
+    },
+    {
+        "nid": "MAG_MOV_STRONG",
+        "expression": "MAG + MOV*5"
+    },
+    {
+        "nid": "STR_CON_WEAK",
+        "expression": "STR + CON"
+    },
+    {
+        "nid": "STR_CON_MID",
+        "expression": "STR + CON*1.5"
+    },
+    {
+        "nid": "STR_CON_STRONG",
+        "expression": "STR + CON*2.5"
+    },
+    {
+        "nid": "SKL_MAG_WEAK",
+        "expression": "SKL + MAG//3"
+    },
+    {
+        "nid": "SKL_MAG_MID",
+        "expression": "SKL + MAG//2"
+    },
+    {
+        "nid": "SPD_MOV_WEAK",
+        "expression": "SPD + MOV*2"
+    },
+    {
+        "nid": "SPD_MOV_MID",
+        "expression": "SPD + MOV*3"
+    },
+    {
+        "nid": "SPD_MOV_STRONG",
+        "expression": "SPD + MOV*5"
+    },
+    {
+        "nid": "RES_CON_WEAK",
+        "expression": "RES + CON"
+    },
+    {
+        "nid": "RES_CON_MID",
+        "expression": "RES + CON*1.5"
+    },
+    {
+        "nid": "RES_CON_STRONG",
+        "expression": "RES + CON*2.5"
+    },
+    {
+        "nid": "DEF_RES_WEAK",
+        "expression": "DEF + RES//3"
+    },
+    {
+        "nid": "DEF_RES_MID",
+        "expression": "DEF + RES//2"
+    },
+    {
+        "nid": "DEF_RES_STRONG",
+        "expression": "DEF + RES"
+    },
+    {
+        "nid": "LCK_SKL_WEAK",
+        "expression": "LCK + SKL//3"
+    },
+    {
+        "nid": "LCK_SKL_MID",
+        "expression": "LCK + SKL//2"
+    },
+    {
+        "nid": "LCK_SKL_STRONG",
+        "expression": "LCK + SKL"
+    },
+    {
+        "nid": "DEF_CON_WEAK",
+        "expression": "DEF + CON"
+    },
+    {
+        "nid": "DEF_CON_MID",
+        "expression": "DEF + CON*1.5"
+    },
+    {
+        "nid": "DEF_CON_STRONG",
+        "expression": "DEF + CON*2.5"
+    },
+    {
+        "nid": "RES_SKL_WEAK",
+        "expression": "RES + SKL//3"
+    },
+    {
+        "nid": "RES_SKL_MID",
+        "expression": "RES + SKL//2"
+    },
+    {
+        "nid": "RES_SKL_STRONG",
+        "expression": "RES + SKL"
+    },
+    {
+        "nid": "LCK_SPD_WEAK",
+        "expression": "LCK + SPD//3"
+    },
+    {
+        "nid": "LCK_SPD_MID",
+        "expression": "LCK + SPD//2"
+    },
+    {
+        "nid": "LCK_SPD_STRONG",
+        "expression": "LCK + SPD"
+    },
+    {
+        "nid": "MAG_CON_WEAK",
+        "expression": "MAG + CON"
+    },
+    {
+        "nid": "MAG_CON_MID",
+        "expression": "MAG + CON*1.5"
+    },
+    {
+        "nid": "MAG_CON_STRONG",
+        "expression": "MAG + CON*2.5"
+    },
+    {
+        "nid": "SKL_MOV_WEAK",
+        "expression": "SKL + MOV*2"
+    },
+    {
+        "nid": "SKL_MOV_MID",
+        "expression": "SKL + MOV*3"
+    },
+    {
+        "nid": "SKL_MOV_STRONG",
+        "expression": "SKL + MOV*5"
+    },
+    {
+        "nid": "RES_SPD_WEAK",
+        "expression": "RES + SPD//3"
+    },
+    {
+        "nid": "RES_SPD_MID",
+        "expression": "RES + SPD//2"
+    },
+    {
+        "nid": "RES_SPD_STRONG",
+        "expression": "RES + SPD"
+    },
+    {
+        "nid": "LCK_MAG_WEAK",
+        "expression": "LCK + MAG//3"
+    },
+    {
+        "nid": "LCK_MAG_MID",
+        "expression": "LCK + MAG//2"
+    },
+    {
+        "nid": "LCK_MAG_STRONG",
+        "expression": "LCK + MAG"
+    },
+    {
+        "nid": "SKL_CON_WEAK",
+        "expression": "SKL + CON"
+    },
+    {
+        "nid": "SKL_CON_MID",
+        "expression": "SKL + CON*1.5"
+    },
+    {
+        "nid": "SKL_CON_STRONG",
+        "expression": "SKL + CON*2.5"
+    },
+    {
+        "nid": "MAG_DEF_WEAK",
+        "expression": "MAG + DEF//3"
+    },
+    {
+        "nid": "MAG_DEF_MID",
+        "expression": "MAG + DEF//2"
+    },
+    {
+        "nid": "MAG_DEF_STRONG",
+        "expression": "MAG + DEF"
+    },
+    {
+        "nid": "STR_MOV_WEAK",
+        "expression": "STR + MOV*2"
+    },
+    {
+        "nid": "STR_MOV_MID",
+        "expression": "STR + MOV*3"
+    },
+    {
+        "nid": "STR_MOV_STRONG",
+        "expression": "STR + MOV*5"
+    },
+    {
+        "nid": "SPD_LCK_WEAK",
+        "expression": "SPD + LCK//3"
+    },
+    {
+        "nid": "SPD_LCK_MID",
+        "expression": "SPD + LCK//2"
+    },
+    {
+        "nid": "SKL_STR_WEAK",
+        "expression": "SKL + STR//3"
+    },
+    {
+        "nid": "SKL_STR_MID",
+        "expression": "SKL + STR//2"
+    },
+    {
+        "nid": "DEF_SKL_WEAK",
+        "expression": "DEF + SKL//3"
+    },
+    {
+        "nid": "DEF_SKL_MID",
+        "expression": "DEF + SKL//2"
+    },
+    {
+        "nid": "DEF_SKL_STRONG",
+        "expression": "DEF + SKL"
+    },
+    {
+        "nid": "STR_SPD_RES_MID",
+        "expression": "STR//2 + SPD//2 + RES//2"
+    },
+    {
+        "nid": "STR_SPD_RES_STRONG",
+        "expression": "STR + SPD + RES"
+    },
+    {
+        "nid": "MAG_SKL_SPD_MID",
+        "expression": "MAG//2 + SKL//2 + SPD//2"
+    },
+    {
+        "nid": "MAG_SKL_SPD_STRONG",
+        "expression": "MAG + SKL + SPD"
+    },
+    {
+        "nid": "MAG_DEF_RES_MID",
+        "expression": "MAG//2 + DEF//2 + RES//2"
+    },
+    {
+        "nid": "MAG_DEF_RES_STRONG",
+        "expression": "MAG + DEF + RES"
+    },
+    {
+        "nid": "STR_SKL_LCK_MID",
+        "expression": "STR//2 + SKL//2 + LCK//2"
+    },
+    {
+        "nid": "STR_SKL_LCK_STRONG",
+        "expression": "STR + SKL + LCK"
+    },
+    {
+        "nid": "DEF_SPD_SKL_MID",
+        "expression": "DEF//2 + SPD//2 + SKL//2"
+    },
+    {
+        "nid": "DEF_SPD_SKL_STRONG",
+        "expression": "DEF + SPD + SKL"
+    },
+    {
+        "nid": "MAG_LCK_DEF_MID",
+        "expression": "MAG//2 + LCK//2 + DEF//2"
+    },
+    {
+        "nid": "MAG_LCK_DEF_STRONG",
+        "expression": "MAG + LCK + DEF"
+    },
+    {
+        "nid": "MAG_SKL_CON_MID",
+        "expression": "MAG//2 + SKL//2 + CON*1.5"
+    },
+    {
+        "nid": "MAG_SKL_CON_STRONG",
+        "expression": "MAG + SKL + CON*2.5"
+    },
+    {
+        "nid": "STR_SPD_SKL_STRONG",
+        "expression": "STR + SPD + SKL"
+    },
+    {
+        "nid": "SKL_SPD_RES_STRONG",
+        "expression": "SKL + SPD + RES"
+    },
+    {
+        "nid": "STR_DEF_RES_STRONG",
+        "expression": "STR + DEF + RES"
+    },
+    {
+        "nid": "STR_MAG_MOV_MID",
+        "expression": "STR + MAG//2 + MOV*3"
+    },
+    {
+        "nid": "STR_MAG_MOV_STRONG",
+        "expression": "STR + MAG + MOV*5"
+    },
+    {
+        "nid": "STR_SKL_CON_MID",
+        "expression": "STR + SKL//2 + CON*1.5"
+    },
+    {
+        "nid": "STR_SKL_CON_STRONG",
+        "expression": "STR + SKL + CON*2.5"
+    },
+    {
+        "nid": "MAG_LCK_MID",
+        "expression": "MAG + LCK//2"
+    },
+    {
+        "nid": "MAG_LCK_WEAK",
+        "expression": "MAG + LCK//3"
+    },
+    {
+        "nid": "MAG_LCK_STRONG",
+        "expression": "MAG + LCK"
+    },
+    {
+        "nid": "STR_MAG_MAX",
+        "expression": "max(STR, MAG)"
+    },
+    {
+        "nid": "DEF_RES_MIN",
+        "expression": "min(DEF, RES)"
+    },
+    {
+        "nid": "DEF_SPD_MIN",
+        "expression": "min(DEF, SPD)"
+    },
+    {
+        "nid": "RES_SPD_MIN",
+        "expression": "min(RES, SPD)"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_WEAK",
+        "expression": "MAG/2 + SPD/4"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_MID",
+        "expression": "MAG/2 + SPD/3"
+    },
+    {
+        "nid": "MAG_SPD_HEAL_STRONG",
+        "expression": "MAG + SPD/2"
+    },
+    {
+        "nid": "SKL_SPD_WEAK",
+        "expression": "SKL + SPD//3"
+    },
+    {
+        "nid": "SKL_SPD_MID",
+        "expression": "SKL + SPD//2"
+    },
+    {
+        "nid": "SKL_SPD_STRONG",
+        "expression": "SKL + SPD"
+    },
+    {
+        "nid": "SKL_SPD_LCK_STRONG",
+        "expression": "SKL + SPD + LCK"
+    },
+    {
+        "nid": "SKL_SPD_DEF_MID",
+        "expression": "SKL//2 + SPD//2 + DEF//2"
+    },
+    {
+        "nid": "SKL_SPD_DEF_STRONG",
+        "expression": "SKL + SPD + DEF"
+    },
+    {
+        "nid": "SPDDOUBLE",
+        "expression": "SPD + SPD"
+    },
+    {
+        "nid": "SKLP5",
+        "expression": "SKL*1.5"
+    },
+    {
+        "nid": "SKL_SKL",
+        "expression": "SKL*2"
+    },
+    {
+        "nid": "SKL_SKL_STR",
+        "expression": "SKL*2 + STR"
+    },
+    {
+        "nid": "STR_DEF_RES_WEAK",
+        "expression": "STR + DEF//2 + RES//2"
+    },
+    {
+        "nid": "STR_DEF_RES_MID",
+        "expression": "STR + DEF + RES//2"
+    },
+    {
+        "nid": "SPD_MAG_WEAK",
+        "expression": "SPD + MAG//3"
+    },
+    {
+        "nid": "SPD_MAG_MID",
+        "expression": "SPD + MAG//2"
+    },
+    {
+        "nid": "CON_STR_WEAK",
+        "expression": "CON + STR//3"
+    },
+    {
+        "nid": "CON_STR_MID",
+        "expression": "CON + STR//2"
+    }
+]

@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Dahaka",
+        "name": "Dahaka",
+        "desc": "A legendary weapon of the Almyran royal family, said to have slain many fierce warriors.\n<green>Skills:</>Power Chop (SS), Pride of Almyra\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>+10 DEF/RES, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Claude Icons",
+        "icon_index": [
+            11,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Claude"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Claude\").wexp['Axe'] >= 420"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS",
+                    "Pride_of_Almyra"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "name": "Summon Phantom Azuth",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;game.check_dead('phantom_' + unit.nid)",
+            "    resurrect;phantom_{e:unit.nid}",
+            "    for;item;u('phantom_' + unit.nid).items",
+            "        remove_item;phantom_{e:unit.nid};{item};no_banner",
+            "    endf",
+            "else",
+            "    make_generic;phantom_{e:unit.nid};Phantom_Azuth;{e:unit.level};player",
+            "    give_wexp;phantom_{e:unit.nid};Axe;{e:181 - u('phantom_' + unit.nid).wexp.get('Axe')};no_banner",
+            "end",
+            "give_item;phantom_{e:unit.nid};Killer_Axe_P;no_banner",
+            "give_item;phantom_{e:unit.nid};Tomahawk_P;no_banner",
+            "give_item;phantom_{e:unit.nid};Iron_Axe_P;no_banner",
+            "give_item;phantom_{e:unit.nid};Devil_Axe_P;no_banner",
+            "add_unit;phantom_{e:unit.nid};{e:target_pos};warp",
+            "wait;200"
+        ],
+        "nid": "Global Summon Phantom Azuth"
+    }
+]

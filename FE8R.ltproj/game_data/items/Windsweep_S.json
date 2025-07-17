@@ -1,0 +1,103 @@
+[
+    {
+        "nid": "Windsweep_S",
+        "name": "Windsweep (<icon>Blast</>)",
+        "desc": "A swift combat art that prevents counters and grants 20 avoid for 1 turn. <green>CD:2</>\n<green>Skills:</>Flash Step\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +20 crit damage",
+        "icon_nid": "Claude Icons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Claude"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Claude\").wexp['Sword'] >= 300 and u(\"Claude\").wexp['Sword'] < 420"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Crit_Damage_Bonus_20",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
+            ],
+            [
+                "lifelink",
+                0.3
+            ],
+            [
+                "self_status_on_hit",
+                "Avoid_20"
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "no_equip",
+                null
+            ]
+        ]
+    }
+]

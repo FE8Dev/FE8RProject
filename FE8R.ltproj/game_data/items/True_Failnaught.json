@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "True_Failnaught",
+        "name": "True Failnaught",
+        "desc": "One of the heroes' reclics. The Crest of Riegan has awakened its true power.\n<green>Skills:</>Close Counter, Fallen Star\n<orange>Element:</></><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</> \n<red>Effective:</><icon>Flying</><icon>Dragon</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK + SKL (<red>{e:(unit.get_stat('STR') + unit.get_stat('LCK') + unit.get_stat('SKL'))}</>).",
+        "icon_nid": "Claude Icons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                35
+            ],
+            [
+                "hit",
+                200
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Claude"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Claude\").wexp['Bow'] >= 480"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Dragon",
+                        "Monster",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Close_Counter",
+                    "Fallen_Star",
+                    "Bow_and_Light_Range_Penalty"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark",
+                    "Light"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Shadow_Blight"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_LCK_STRONG"
+            ]
+        ]
+    }
+]

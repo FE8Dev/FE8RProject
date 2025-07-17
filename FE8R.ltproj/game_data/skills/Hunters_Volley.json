@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Hunters_Volley",
+        "name": "Hunter's Volley",
+        "desc": "<red>CA:</>Uses Bows. Brave, +1 max range, +15 hit, +10 crit",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Hunters_Volley_Skill"
+            ],
+            [
+                "build_charge",
+                2
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+            ]
+        ]
+    }
+]

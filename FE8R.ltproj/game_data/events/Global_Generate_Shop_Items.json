@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Generate_Shop_Items",
+        "trigger": "level_start",
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "# Generate unique shop ID",
+            "if;not v('armory_nids')",
+            "    game_var;armory_nids;100",
+            "else",
+            "    inc_game_var;armory_nids;1",
+            "end",
+            "",
+            "# Pull all items with \"_DG\" in their ID",
+            "level_var;dg_item_pool;[item.nid for item in DB.items if item and '_DG' in item.nid]",
+            "",
+            "# Generate up to 10 unique items from the pool",
+            "level_var;armory_items;[]",
+            "for;gamba;range(10)",
+            "    level_var;available_items;[i for i in {v:dg_item_pool} if i not in {v:armory_items}]",
+            "    if;len({v:available_items}) == 0",
+            "        break",
+            "    end",
+            "    level_var;selection;game.get_random_choice({v:available_items})",
+            "    level_var;armory_items;{v:armory_items} + ['{v:selection}']",
+            "endf",
+            "",
+            "# Optional debug line",
+            "#speak;Seth;DG Items chosen: {v:armory_items}"
+        ],
+        "nid": "Global Generate_Shop_Items"
+    }
+]

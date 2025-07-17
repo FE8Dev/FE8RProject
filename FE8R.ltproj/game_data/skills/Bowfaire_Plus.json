@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Bowfaire_Plus",
+        "name": "Bowfaire+",
+        "desc": "Double Damage given when using Bows.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            29
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

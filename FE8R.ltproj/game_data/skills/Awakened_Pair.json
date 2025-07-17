@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Awakened_Pair",
+        "name": "Awakened Pair",
+        "desc": "This unit and paired up units increase stats based on support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.traveler != None"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "MAG",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SKL",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SPD",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "LCK",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "DEF",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "RES",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ]
+                ]
+            ],
+            [
+                "pairup_bonus",
+                "Awakened_Pair"
+            ]
+        ]
+    }
+]

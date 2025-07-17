@@ -1,0 +1,67 @@
+[
+    {
+        "nid": "Lucky_Seven",
+        "name": "Lucky Seven",
+        "desc": "<red>CA:</>Unit can act again on kill. 7 Uses per chapter. Grants +7 to most stats while it still has charges left.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            45
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Lucky_Seven_Galeforce"
+            ],
+            [
+                "drain_charge",
+                7
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        7
+                    ],
+                    [
+                        "MAG",
+                        7
+                    ],
+                    [
+                        "SKL",
+                        7
+                    ],
+                    [
+                        "SPD",
+                        7
+                    ],
+                    [
+                        "LCK",
+                        7
+                    ],
+                    [
+                        "DEF",
+                        7
+                    ],
+                    [
+                        "RES",
+                        7
+                    ],
+                    [
+                        "CON",
+                        7
+                    ]
+                ]
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Talk_Anna_Next_Building",
+        "trigger": "on_talk",
+        "level_nid": "Dragons_Gate_Eirika",
+        "condition": "check_pair('Eirika', 'Anna_S')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Anna;Right",
+            "speak;Anna;Hello sweetheart!|Welcome to the Dragon's Gate latest building!|Not sure what we will do here yet....",
+            "speak;Anna;.....;no_talk",
+            "speak;Anna;Well, should hopefully be operational soon!|Please keep your excitment high and your wallets full!|Thank you and I look forward to grand opening!",
+            "remove_portrait;Anna"
+        ],
+        "nid": "Dragons_Gate_Eirika Talk_Anna_Next_Building"
+    }
+]

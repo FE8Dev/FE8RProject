@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Sacred_Healing",
+        "name": "Sacred Healing",
+        "desc": "Unit is immune to status and heals for 30% of max HP at the start of the turn. Allies within 2 spaces heal for 30% of max HP at the start of the turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            38
+        ],
+        "components": [
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "regeneration",
+                0.3
+            ],
+            [
+                "aura",
+                "Sacred_Healing_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    }
+]

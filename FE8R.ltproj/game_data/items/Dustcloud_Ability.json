@@ -1,0 +1,33 @@
+[
+    {
+        "nid": "Dustcloud_Ability",
+        "name": "Dustcloud Ability",
+        "desc": "Imbues all weapons used by this unit with the wind element.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            44
+        ],
+        "components": [
+            [
+                "item_tags",
+                [
+                    "Wind"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

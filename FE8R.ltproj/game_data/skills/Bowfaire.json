@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Bowfaire",
+        "name": "Bowfaire",
+        "desc": "When using bows add SKL/2 to Damage given.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            28
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "eval_damage",
+                "unit.get_stat('SKL') // 2"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]
