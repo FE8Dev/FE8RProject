@@ -2,7 +2,7 @@
     {
         "nid": "True_Failnaught",
         "name": "True Failnaught",
-        "desc": "One of the heroes' reclics. The Crest of Riegan has awakened its true power.\n<green>Skills:</>Close Counter, Fallen Star\n<orange>Element:</></><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</> \n<red>Effective:</><icon>Flying</><icon>Dragon</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK + SKL (<red>{e:(unit.get_stat('STR') + unit.get_stat('LCK') + unit.get_stat('SKL'))}</>).",
+        "desc": "One of the heroes' reclics. The Crest of Riegan has awakened its true power.\n<green>Skills:</>Close Counter, Fallen Star\n<orange>Element:</><icon>Dark</><icon>Light</>\n<violet>Inflicts:</><icon>Shadowblight</> \n<red>Effective:</><icon>Flying</><icon>Dragon</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK + SKL (<red>{e:(unit.get_stat('STR') + unit.get_stat('LCK') + unit.get_stat('SKL'))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             1,
@@ -104,6 +104,10 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_LCK_STRONG"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     }

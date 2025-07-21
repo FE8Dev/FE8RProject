@@ -10,12 +10,12 @@
         ],
         "components": [
             [
-                "grey_if_inactive",
+                "hidden_if_inactive",
                 null
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Sword'"
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'Inspire_Aura')"
             ],
             [
                 "build_charge",
@@ -26,20 +26,12 @@
                 1
             ],
             [
-                "aura",
-                "Inspired"
-            ],
-            [
-                "aura_range",
-                9
-            ],
-            [
-                "aura_target",
-                "ally"
-            ],
-            [
                 "lost_on_end_chapter",
                 null
+            ],
+            [
+                "combat_art",
+                "Inspire_Skill"
             ]
         ]
     }

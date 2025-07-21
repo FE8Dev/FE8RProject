@@ -2,7 +2,7 @@
     {
         "nid": "Dormant_Failnaught",
         "name": "Dormant Failnaught",
-        "desc": "One of the heroes' reclics. The ominous power radiating from it might be tied to its dark origin.\n<green>Skills:</>Close Counter, Fallen Star\n<orange>Element:</></><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</> \n<red>Effective:</><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
+        "desc": "One of the heroes' reclics. The ominous power radiating from it might be tied to its dark origin.\n<green>Skills:</>Close Counter, Fallen Star\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</> \n<red>Effective:</><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             2,
@@ -102,6 +102,10 @@
             [
                 "alternate_damage_formula",
                 "STR_LCK_STRONG"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     }

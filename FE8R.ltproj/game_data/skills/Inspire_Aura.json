@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Inspire_Aura",
+        "name": "Inspire",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "aura",
+                "Inspired"
+            ],
+            [
+                "aura_range",
+                9
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

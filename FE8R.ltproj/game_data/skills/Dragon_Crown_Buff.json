@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Dragon_Crown_Buff",
+        "name": "Dragon Crown",
+        "desc": "The dragon crown has empowered this dragon. +10 to most stats.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "'Dragon' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ],
+                    [
+                        "CON",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    }
+]

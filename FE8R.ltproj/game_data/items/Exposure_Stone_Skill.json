@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Exposure_Stone_Skill",
+        "name": "Exposure Stone",
+        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lowest of the enemy's stat, but attacks cost half of current HP to cast.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "alternate_resist_formula",
+                "MIN_EVERYTHING"
+            ],
+            [
+                "eval_hp_cost_midbattle",
+                "unit.get_hp() * 0.5"
+            ]
+        ]
+    }
+]

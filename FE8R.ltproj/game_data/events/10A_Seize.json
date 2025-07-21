@@ -8,7 +8,7 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.turncount <= 16",
+            "16,2if;game.turncount <= 16",
             "    give_bexp;2000",
             "    else",
             "    give_bexp;1000",
@@ -57,7 +57,7 @@
             "add_unit;Joshua;12,6;immediate;closest",
             "add_unit;Forde;9,12;immediate;closest",
             "add_unit;Kyle;12,12;immediate;closest",
-            "add_unit;Tana;16,2;immediate;closest",
+            "add_unit;Tana;15,3;immediate;closest",
             "add_unit;Amelia;15,26;immediate;closest",
             "if;game.get_unit('Innes').team == 'other'",
             "change_team;Innes;player",

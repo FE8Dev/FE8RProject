@@ -8,10 +8,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;unit.nid == 'Neimi'",
+            "if;unit.nid == 'Neimi' and game.level_vars['Training'] != True",
             "give_item;{unit};Mag_Long_Ballista",
-            "else",
+            "elif;unit.nid != 'Neimi' and game.level_vars['Training'] != True",
             "give_item;{unit};Long Ballista",
+            "else",
             "end"
         ],
         "nid": "Global Ballista_Get_Weapon_Long"

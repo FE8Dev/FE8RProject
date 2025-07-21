@@ -1,0 +1,71 @@
+[
+    {
+        "nid": "Dragon_Crown_Aura",
+        "name": "Dragon Crown",
+        "desc": "Gain +10 to most stats. Dragon Allies within 5 spaces also gain the buff.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "'Dragon' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ],
+                    [
+                        "CON",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "aura",
+                "Dragon_Crown_Buff"
+            ],
+            [
+                "aura_range",
+                5
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Exposure_Stone",
+        "name": "Exposure Stone",
+        "desc": "For the Exposure Stone item.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "item_override",
+                "Exposure_Stone_Skill"
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    }
+]

@@ -1448,3 +1448,37 @@ class MultiAttacksOnAttack(ItemComponent):
 
     def dynamic_multiattacks(self, unit, item, target, item2, mode, attack_info, base_value):
         return self.value if mode == 'attack' else 0
+
+class EvalHPCostMidBattle(ItemComponent):
+    nid = 'eval_hp_cost_midbattle'
+    desc = "Item subtracts the specified amount of HP upon use. If the subtraction would kill the unit the item becomes unusable."
+    tag = ItemTags.CUSTOM
+
+    expose = ComponentType.String
+    value = ""
+
+    def _check_value(self, unit, item) -> int:
+        from app.engine import evaluate
+        try:
+            return int(evaluate.evaluate(self.value, unit, local_args={'item': item}))
+        except Exception as e:
+            print(f"Couldn't evaluate eval_hp_cost value: {e}")
+            return 0
+
+    def available(self, unit, item) -> bool:
+        return unit.get_hp() > self._check_value(unit, item)
+
+    def on_hit(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
+        value = self._check_value(unit, item)
+        if value:
+            action.do(action.ChangeHP(unit, -value))
+
+    def on_miss(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
+        value = self._check_value(unit, item)
+        if value:
+            action.do(action.ChangeHP(unit, -value))
+
+    def reverse_use(self, unit, item):
+        value = self._check_value(unit, item)
+        if value:
+            action.do(action.ChangeHP(unit, value))

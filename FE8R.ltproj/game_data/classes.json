@@ -80989,7 +80989,7 @@
         "learned_skills": [
             [
                 1,
-                "Paragon"
+                "Discipline_Item"
             ],
             [
                 1,
@@ -81112,7 +81112,7 @@
         "growth_bonus": {
             "HP": 20,
             "STR": 5,
-            "MAG": 5,
+            "MAG": 15,
             "SKL": 0,
             "SPD": 0,
             "LCK": 0,
@@ -81263,7 +81263,7 @@
         "growth_bonus": {
             "HP": 15,
             "STR": 5,
-            "MAG": 20,
+            "MAG": 30,
             "SKL": 5,
             "SPD": 5,
             "LCK": 5,
@@ -89934,7 +89934,7 @@
     {
         "nid": "Diana_T3_Adventurer",
         "name": "Adventurer",
-        "desc": "Explorers that seek loot in places  no one else dares to reach <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Explorers that seek loot in places no one else dares to reach. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Diana_T2_Hunter",
@@ -102909,7 +102909,7 @@
         "desc": "Brave brawler with major weapons is his body. <icon>Monster</><icon>Infantry</>",
         "tier": 2,
         "movement_group": "Regular",
-        "promotes_from": null,
+        "promotes_from": "Fighter",
         "turns_into": [
             "Myth_Forger"
         ],
@@ -103208,7 +103208,7 @@
         "desc": "Soldier who fights on the front line in the future millennium using firearms. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": null,
+        "promotes_from": "Archer",
         "turns_into": [
             "Arbitres"
         ],
@@ -104437,7 +104437,7 @@
     {
         "nid": "Barbarossa_Claude_T3",
         "name": "Barbarossa",
-        "desc": "Only Almyran royalty may ride on one of thos majestic white wyverns. <icon>Flying</><icon>Dragon</>",
+        "desc": "Only Almyran royalty may ride on one of those majestic white wyverns. <icon>Flying</><icon>Dragon</>",
         "tier": 3,
         "movement_group": "Fliers",
         "promotes_from": "Wyvern_Master_Claude_T2",
@@ -104585,6 +104585,1330 @@
         ],
         "map_sprite_nid": "Wyvern Lord (U) Sword {Knabepicer}-stand",
         "combat_anim_nid": "Barbarossa",
+        "fields": []
+    },
+    {
+        "nid": "Fletchling",
+        "name": "Fletchling",
+        "desc": "One who is starting to learn to fight with bows. <icon>Infantry</>",
+        "tier": 0,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Female_Archer",
+            "Outlaw",
+            "Kyudoka"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 18,
+            "STR": 4,
+            "MAG": 0,
+            "SKL": 3,
+            "SPD": 4,
+            "LCK": 0,
+            "DEF": 3,
+            "RES": 0,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 0,
+            "SKL": 40,
+            "SPD": 32,
+            "LCK": 35,
+            "DEF": 15,
+            "RES": 20,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 60,
+            "STR": 20,
+            "MAG": 20,
+            "SKL": 20,
+            "SPD": 20,
+            "LCK": 30,
+            "DEF": 20,
+            "RES": 20,
+            "CON": 20,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Paragon"
+            ],
+            [
+                1,
+                "Super_Trainee"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                true,
+                1,
+                240
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Archer",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Archer (F) Improved {Der}-stand",
+        "combat_anim_nid": "Fletchling",
+        "fields": []
+    },
+    {
+        "nid": "Outlaw",
+        "name": "Outlaw",
+        "desc": "Expert in stealth and subterfuge. Possess weak attacks but many other skills. <icon>Infantry</><icon>Steal</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "Assassin_Female",
+            "Shugosha",
+            "Nomad"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 21,
+            "STR": 7,
+            "MAG": 7,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 17,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 35,
+            "MAG": 35,
+            "SKL": 45,
+            "SPD": 45,
+            "LCK": 70,
+            "DEF": 25,
+            "RES": 25,
+            "CON": 20,
+            "MOV": 1
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 50,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_hide"
+            ],
+            [
+                5,
+                "Within_Shadows"
+            ],
+            [
+                15,
+                "Pass"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                1,
+                240
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Thief (F) Bow {Alice}-stand",
+        "combat_anim_nid": "Thief_Bow",
+        "fields": []
+    },
+    {
+        "nid": "Kyudoka",
+        "name": "Kyudoka",
+        "desc": "An archer who uses ancient techniques lost to Jehanna. <icon>Infantry</>",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [
+            "T2_Ballista_Neimi",
+            "Shugosha",
+            "Nomad"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Mage_Pair_Up_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                true,
+                1,
+                240
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sniper",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Archer",
+        "combat_anim_nid": "Kyudoka",
+        "fields": []
+    },
+    {
+        "nid": "Shugosha",
+        "name": "Shugosha",
+        "desc": "A mystical archer with strange magic. <icon>Infantry</><icon>Magic</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Kyudoka",
+        "turns_into": [
+            "T3_Silver_Knight_Sniper",
+            "T3_Female_Marksmen",
+            "Mahou_Shoujo"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Infantry"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 10,
+            "STR": 10,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 40,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 4,
+            "SPD": 3,
+            "LCK": 7,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 65,
+            "MAG": 55,
+            "SKL": 73,
+            "SPD": 70,
+            "LCK": 77,
+            "DEF": 57,
+            "RES": 57,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Mage_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                360
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                true,
+                120,
+                360
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sniper",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Sniper",
+        "combat_anim_nid": "Shugosha",
+        "fields": []
+    },
+    {
+        "nid": "Nomad",
+        "name": "Nomad",
+        "desc": "An archer that has taken to horseback. <icon>Horse</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Outlaw",
+        "turns_into": [
+            "Swift_Rider",
+            "Nomad_Trooper",
+            "Bow_Knight"
+        ],
+        "tags": [
+            "Horse",
+            "AutoPromote"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 10,
+            "STR": 10,
+            "MAG": 0,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 40,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 0,
+            "SKL": 4,
+            "SPD": 3,
+            "LCK": 7,
+            "DEF": 0,
+            "RES": 1,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 65,
+            "MAG": 55,
+            "SKL": 73,
+            "SPD": 70,
+            "LCK": 77,
+            "DEF": 57,
+            "RES": 57,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Lord_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Hunters_Volley"
+            ],
+            [
+                15,
+                "Bowfaire"
+            ],
+            [
+                1,
+                "Crit_P10"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                360
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sniper",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Nomad (F) {IS}-stand",
+        "combat_anim_nid": "Nomad",
+        "fields": []
+    },
+    {
+        "nid": "Swift_Rider",
+        "name": "Swift Rider",
+        "desc": "One who rides the fastest bred horse of all Magvel. <icon>Horse</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Nomad",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 130,
+            "MAG": 30,
+            "SKL": 200,
+            "SPD": 120,
+            "LCK": 140,
+            "DEF": 60,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 7,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 70,
+            "SKL": 110,
+            "SPD": 100,
+            "LCK": 110,
+            "DEF": 90,
+            "RES": 95,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                true,
+                300,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Ranger",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Eirika_T3_Bow_Lord",
+        "combat_anim_nid": "Swift_Rider",
+        "fields": []
+    },
+    {
+        "nid": "Nomad_Trooper",
+        "name": "Nomad Trooper",
+        "desc": "A leader of a nomadic tribe with grace and power.\n<icon>Horse</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Nomad",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 130,
+            "MAG": 30,
+            "SKL": 200,
+            "SPD": 120,
+            "LCK": 140,
+            "DEF": 60,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 7,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 70,
+            "SKL": 110,
+            "SPD": 100,
+            "LCK": 110,
+            "DEF": 90,
+            "RES": 95,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                300,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Ranger",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Nomad_Trooper",
+        "combat_anim_nid": "Nomad_Trooper",
+        "fields": []
+    },
+    {
+        "nid": "Bow_Knight",
+        "name": "Bow Knight",
+        "desc": "A leader of a nomadic tribe with grace and power.\n<icon>Horse</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Nomad",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 130,
+            "MAG": 30,
+            "SKL": 200,
+            "SPD": 120,
+            "LCK": 140,
+            "DEF": 60,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 7,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 70,
+            "SKL": 110,
+            "SPD": 100,
+            "LCK": 110,
+            "DEF": 90,
+            "RES": 95,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cav_Pair_Up_T3_hide"
+            ],
+            [
+                1,
+                "Crit_P20"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Ranger",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Bow_Knight",
+        "combat_anim_nid": "Bow_Knight",
+        "fields": []
+    },
+    {
+        "nid": "Yabusame",
+        "name": "Yabusame",
+        "desc": "A leader of a nomadic tribe with grace and power.\n<icon>Horse</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Shugosha",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "AutoPromote"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 80,
+            "STR": 130,
+            "MAG": 30,
+            "SKL": 200,
+            "SPD": 120,
+            "LCK": 140,
+            "DEF": 60,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 7,
+            "STR": 4,
+            "MAG": 1,
+            "SKL": 7,
+            "SPD": 7,
+            "LCK": 7,
+            "DEF": 3,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 90,
+            "MAG": 70,
+            "SKL": 110,
+            "SPD": 100,
+            "LCK": 110,
+            "DEF": 90,
+            "RES": 95,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                360
+            ],
+            "Bow": [
+                true,
+                60,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                true,
+                300,
+                null
+            ],
+            "Anima": [
+                true,
+                60,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Ranger",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Nomad_Trooper",
+        "combat_anim_nid": "Yabusame",
         "fields": []
     }
 ]

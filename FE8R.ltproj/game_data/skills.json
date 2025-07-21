@@ -6742,7 +6742,7 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')"
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')) and (unit2.team == 'enemy' or unit2.team == 'enemy2') "
             ],
             [
                 "give_status_after_hit",
@@ -7857,7 +7857,7 @@
     {
         "nid": "Slayer",
         "name": "Slayer",
-        "desc": "Light magic and Staves deals x3 damage against Monsters.",
+        "desc": "Light magic and Staves attacks become Effective against Monsters.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -10282,7 +10282,7 @@
     {
         "nid": "Exterminator",
         "name": "Exterminator",
-        "desc": "Deal deadly Effective Damage to Monsters",
+        "desc": "Attacks become Very Effective against Monsters.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -14975,7 +14975,7 @@
     {
         "nid": "Savage_Blow",
         "name": "Savage Strike",
-        "desc": "Add MAG/2 to initiating attacks.\nEnemy is dealt 50% of their max HP after initiating combat.\nEnemies within 3 spaces are dealt 20% of thier max HP as damage.",
+        "desc": "Add MAG/2 to initiating attacks.\nEnemy is dealt 50% of their max HP after initiating combat.\nEnemies within 3 spaces are dealt 20% of their max HP as damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -19759,7 +19759,7 @@
     {
         "nid": "Creeping_Darkness",
         "name": "Creeping Darkness",
-        "desc": "-50 Hit/Dodge, -15 STR/MAG/DEF/RES to all enemies\nwithin 5 spaces.",
+        "desc": "-50 Hit/Dodge, -15 STR/MAG/DEF/RES to all enemies within 5 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -25451,7 +25451,7 @@
     {
         "nid": "Lance_Guard_SS",
         "name": "Lance Guard (SS)",
-        "desc": "Reduce damage taken by (SKL x1.5) (<red>{e: (unit.get_stat('SKL')*1.5)</>.",
+        "desc": "Reduce damage taken by (SKL x1.5) (<red>{e: (unit.get_stat('SKL')*1.5)}</>).",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -28561,11 +28561,11 @@
             ],
             [
                 "dynamic_multiattacks",
-                "-10"
+                "-20"
             ],
             [
                 "dynamic_attacks",
-                "-10"
+                "-20"
             ]
         ]
     },
@@ -30938,9 +30938,9 @@
         ]
     },
     {
-        "nid": "Mending_Stone",
-        "name": "Mending Stone",
-        "desc": "For the Mending Stone item.",
+        "nid": "Exposure_Stone",
+        "name": "Exposure Stone",
+        "desc": "For the Exposure Stone item.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             4,
@@ -30952,21 +30952,12 @@
                 null
             ],
             [
-                "resist_status",
-                null
+                "condition",
+                "item_funcs.is_magic(unit, unit.get_weapon())"
             ],
             [
-                "stat_multiplier",
-                [
-                    [
-                        "STR",
-                        0.85
-                    ],
-                    [
-                        "MAG",
-                        0.85
-                    ]
-                ]
+                "item_override",
+                "Exposure_Stone_Skill"
             ],
             [
                 "lost_on_endstep",
@@ -37035,7 +37026,7 @@
                 "3*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
             ],
             [
-                "dynamic_multiattacks",
+                "dynamic_attacks",
                 "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])) // 3"
             ],
             [
@@ -37209,7 +37200,7 @@
             ],
             [
                 "combat_condition",
-                "unit2.team == 'enemy'"
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "gain_skill_after_take_damage",
@@ -37919,7 +37910,7 @@
             ],
             [
                 "combat_condition",
-                "unit2.team == 'enemy'"
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "gain_skill_after_take_damage",
@@ -38614,6 +38605,10 @@
             5
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "combat_condition",
                 "unit.get_stat('SPD') > target.get_stat('SPD')"
@@ -50818,7 +50813,7 @@
         ]
     },
     {
-        "nid": "Inspire_Giver",
+        "nid": "Inspire",
         "name": "Inspire",
         "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
@@ -50833,16 +50828,78 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'Inspire')"
+                "item_system.weapon_type(unit, item) == 'Sword' and not has_skill(unit, 'Inspire_Aura')"
             ],
             [
-                "gain_skill_after_kill",
-                "Inspire"
+                "build_charge",
+                4
+            ],
+            [
+                "kill_charge_increase",
+                1
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "combat_art",
+                "Inspire_Skill"
             ]
         ]
     },
     {
-        "nid": "Inspire",
+        "nid": "Inspire_Skill",
+        "name": "Inspire",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "gain_skill_after_combat",
+                "Inspire_Aura"
+            ],
+            [
+                "item_override",
+                "Rider_Strike"
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Inspire_Aura",
         "name": "Inspire",
         "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
         "icon_nid": "skill_icons",
@@ -50858,14 +50915,6 @@
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
-                "build_charge",
-                4
-            ],
-            [
-                "kill_charge_increase",
-                1
             ],
             [
                 "aura",
@@ -51672,13 +51721,34 @@
                 "999"
             ],
             [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
             ]
         ]
     },
@@ -53465,7 +53535,7 @@
     {
         "nid": "Fireball",
         "name": "Fireball",
-        "desc": "Your Wyvern spews a firebal at a group of enemies. 2 uses per chapter.\nRange: 2-4, AoE 3, cannot double, no DS, inflicts seared, effective against Horses, STR + CON*2.5\n(<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "<red>CA:</>A wyvern fireball attack. <green>2 times per chapter.</>\nRange: 2-4, AoE 3, cannot double, no DS, inflicts seared, effective against Horses, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -55961,7 +56031,7 @@
         "components": [
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')"
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')) and (unit2.team == 'enemy' or unit2.team == 'enemy2') "
             ],
             [
                 "give_status_after_hit",
@@ -56708,7 +56778,7 @@
     {
         "nid": "Slayer_T2",
         "name": "Slayer",
-        "desc": "Light magic and Staves deals x3 damage against Monsters.",
+        "desc": "Light magic and Staves attacks become Effective against Monsters.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -64097,7 +64167,7 @@
     {
         "nid": "Creeping_Darkness_T3",
         "name": "Creeping Darkness",
-        "desc": "-50 Hit/Dodge, -15 STR/MAG/DEF/RES to all enemies\nwithin 5 spaces.",
+        "desc": "-50 Hit/Dodge, -15 STR/MAG/DEF/RES to all enemies within 5 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -67825,6 +67895,517 @@
             [
                 "enemy_exp_multiplier",
                 0
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Knights_Armor_Buff",
+        "name": "Dark Knight's Armor Buff",
+        "desc": "Gives the Proper Change to Growth Rates",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        -30
+                    ],
+                    [
+                        "STR",
+                        35
+                    ],
+                    [
+                        "SPD",
+                        40
+                    ],
+                    [
+                        "LCK",
+                        -15
+                    ],
+                    [
+                        "CON",
+                        30
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Demon_Skull_Buff",
+        "name": "Demon Skull",
+        "desc": "This monster gains +66 HP and 66% HP Absorb.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        66
+                    ]
+                ]
+            ],
+            [
+                "lifelink",
+                0.66
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "condition",
+                "'Monster' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Crown_Aura",
+        "name": "Dragon Crown",
+        "desc": "Gain +10 to most stats. Dragon Allies within 5 spaces also gain the buff.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "'Dragon' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ],
+                    [
+                        "CON",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "aura",
+                "Dragon_Crown_Buff"
+            ],
+            [
+                "aura_range",
+                5
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Crown_Buff",
+        "name": "Dragon Crown",
+        "desc": "The dragon crown has empowered this dragon. +10 to most stats.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            8,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "'Dragon' in unit.tags"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "MAG",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ],
+                    [
+                        "LCK",
+                        10
+                    ],
+                    [
+                        "DEF",
+                        10
+                    ],
+                    [
+                        "RES",
+                        10
+                    ],
+                    [
+                        "CON",
+                        10
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Gamblers_Ace_Buff",
+        "name": "Gambler's Ace Buff",
+        "desc": "Gives the Proper Change to Growth Rates",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        30
+                    ],
+                    [
+                        "LCK",
+                        40
+                    ],
+                    [
+                        "SKL",
+                        -10
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Giant_Slayer_Scroll_Buff",
+        "name": "Giant Slayer Scroll Buff",
+        "desc": "Attacks add 20% of enemy's current HP to attacks but halve your DEF/RES/CON\n",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.2"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.5
+                    ],
+                    [
+                        "RES",
+                        0.5
+                    ],
+                    [
+                        "CON",
+                        0.5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Bruised",
+        "name": "Bruised",
+        "desc": "Has been hit by a pebble. -4 STR/SPD/DEF/RES\nLasts 2 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            34
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -4
+                    ],
+                    [
+                        "SPD",
+                        -4
+                    ],
+                    [
+                        "DEF",
+                        -4
+                    ],
+                    [
+                        "RES",
+                        -4
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "negative",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Gold_Ingot_Buff",
+        "name": "Gold Ingot Buff",
+        "desc": "",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "growth_change_expression",
+                [
+                    [
+                        "HP",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "STR",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "MAG",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "SKL",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "SPD",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "LCK",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "DEF",
+                        "game.get_money() // 2000"
+                    ],
+                    [
+                        "RES",
+                        "game.get_money() // 2000"
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Philosphers_Stone_Buff",
+        "name": "Philospher's Stone Buff",
+        "desc": "Give the Proper Change to Growth Rates",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "MAG",
+                        35
+                    ],
+                    [
+                        "SKL",
+                        15
+                    ],
+                    [
+                        "RES",
+                        20
+                    ],
+                    [
+                        "DEF",
+                        -20
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sandals_Buff",
+        "name": "Sandals Buff",
+        "desc": "Gives the Proper change to Growth Rates",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        -10
+                    ],
+                    [
+                        "STR",
+                        -5
+                    ],
+                    [
+                        "MAG",
+                        -5
+                    ],
+                    [
+                        "SKL",
+                        -5
+                    ],
+                    [
+                        "SPD",
+                        -5
+                    ],
+                    [
+                        "LCK",
+                        -5
+                    ],
+                    [
+                        "DEF",
+                        -5
+                    ],
+                    [
+                        "RES",
+                        -5
+                    ],
+                    [
+                        "CON",
+                        -5
+                    ],
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Warding_Bracelet_Buff",
+        "name": "Warding Bracelet Buff",
+        "desc": "Gives the Proper Change to Growth Rates",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        20
+                    ],
+                    [
+                        "STR",
+                        -10
+                    ],
+                    [
+                        "MAG",
+                        -10
+                    ],
+                    [
+                        "SPD",
+                        -10
+                    ],
+                    [
+                        "DEF",
+                        35
+                    ],
+                    [
+                        "RES",
+                        35
+                    ]
+                ]
             ]
         ]
     },

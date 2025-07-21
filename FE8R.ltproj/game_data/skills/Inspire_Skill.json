@@ -1,0 +1,52 @@
+[
+    {
+        "nid": "Inspire_Skill",
+        "name": "Inspire",
+        "desc": "After this unit kills 5 enemies with swords, allies within 9 spaces gain +10% DEF/RES while weilding swords.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "gain_skill_after_combat",
+                "Inspire_Aura"
+            ],
+            [
+                "item_override",
+                "Rider_Strike"
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

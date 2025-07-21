@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Giant_Slayer_Scroll_Buff",
+        "name": "Giant Slayer Scroll Buff",
+        "desc": "Attacks add 20% of enemy's current HP to attacks but halve your DEF/RES/CON\n",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.2"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        0.5
+                    ],
+                    [
+                        "RES",
+                        0.5
+                    ],
+                    [
+                        "CON",
+                        0.5
+                    ]
+                ]
+            ]
+        ]
+    }
+]

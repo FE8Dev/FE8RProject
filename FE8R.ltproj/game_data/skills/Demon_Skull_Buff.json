@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Demon_Skull_Buff",
+        "name": "Demon Skull",
+        "desc": "This monster gains +66 HP and 66% HP Absorb.",
+        "icon_nid": "New DG Items",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        66
+                    ]
+                ]
+            ],
+            [
+                "lifelink",
+                0.66
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "condition",
+                "'Monster' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    }
+]

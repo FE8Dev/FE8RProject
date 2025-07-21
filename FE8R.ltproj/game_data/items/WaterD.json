@@ -2,7 +2,7 @@
     {
         "nid": "WaterD",
         "name": "Water Whip",
-        "desc": "A lash of water that strikes enemies at range.\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>, Restrained\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), (AOE:1), Splash DMG (20%) targets the weaker of DEF or RES.",
+        "desc": "A lash of water that strikes enemies at range. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>, Restrained\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), (AOE:1), Splash DMG (20%) targets the weaker of DEF or RES.",
         "icon_nid": "Affinity",
         "icon_index": [
             0,
@@ -19,15 +19,15 @@
             ],
             [
                 "min_range",
-                1
+                3
             ],
             [
                 "max_range",
-                2
+                4
             ],
             [
                 "damage",
-                5
+                3
             ],
             [
                 "hit",
@@ -91,6 +91,14 @@
             [
                 "battle_cast_anim",
                 "Aqua"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     }
