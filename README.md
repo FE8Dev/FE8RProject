@@ -1,6 +1,6 @@
 
 
-#SAVE AS CHUNKS OR IT WILL BREAK THE REPO
+#SAVE AS CHUNKS OR IT WILL BREAK THE REPO/INCREASE GAME PERFORMANCE
 
 
 
@@ -14,17 +14,14 @@
 ##To do - high priority on top
 
 
-*Add Tareon
+*add Neimi Trainee
 
 
-
-*add new trainees
-
-
-*add correct music and sfx to bloodmoon
+*Update weapon evolution
 
 
+*Update Item/Skill UI to multi-page format.
 
 
-*add unarmed animations to queen slime(for promotion screen)
+*Finish weapon rebalance for Ephraim route
 
