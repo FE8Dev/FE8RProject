@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Resonance",
+        "name": "Resonance",
+        "desc": "Adds half of magic to damage dealt by tomes and combat staves, but take 5 damage after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 2"
+            ],
+            [
+                "recoil",
+                5
+            ]
+        ]
+    }
+]
