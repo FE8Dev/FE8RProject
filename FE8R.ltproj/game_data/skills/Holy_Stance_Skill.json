@@ -1,0 +1,27 @@
+[
+    {
+        "nid": "Holy_Stance_Skill",
+        "name": "Holy Stance",
+        "desc": "Monster enemies take half the damage they have dealt when they initiate combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            22
+        ],
+        "components": [
+            [
+                "lifelink",
+                -0.5
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    }
+]
