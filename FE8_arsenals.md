@@ -57,7 +57,7 @@ Ignores weapon triangle.
 Its last form, grants Permanent Miracle, inmunity to negative status, but lowers all stats except Mov and Con by 15.
 
 ## Sword
-Shadow Sword that causes the user to suffer a % of the damage dealt. The % of damage increases with the upgrades.
+Shadow Sword that has an HP cost. Each version has a higher cost.
 
 ### Earliest access
 Gets it in all T2.
@@ -146,14 +146,14 @@ Siege Knight
 A staff that uses Attack and Defense instead of Magic. It inflicts Rock Punctures. After reaching its second stage, it raises Moulder's Defense. After reaching its third stage, if Moulder's Strength is higher or equal than enemy's Strength, he gets an extra attack.
 
 ## Light
-A tome that uses Attack instead of Magic.
+A tome that uses Strength and Luck instead of Magic for damage.
 ### Earliest access
 Gets it in all T2
 
 ## Axe
 An axe that is effective against Shadow, Armor and Drenched enemies.
 
-Its last version recovers 50% of damage dealt.
+From its third version onwards, it recovers part of damage dealt.
 
 ### Earliest access
 Paladin
@@ -225,7 +225,7 @@ On its first form, it gives more Wexp. On later forms, it's a magical breath tha
 
 ### Access
 
-* Water Dragon(from Pirate -> Lizard Pirate)
+* Water Shifter(from Pirate -> Lizard Pirate)
 * Black Shifter(from Pirate -> Lizard Pirate)
 
 ---
@@ -318,9 +318,9 @@ Trickster(from Rogue)
 
 ## Axe
 
-An axe that uses Strength and Speed and inflicts Venom. It starts with 1-3 range and its latest form has 1-4 range.
+An axe that uses Strength and Speed for damage and inflicts Venom. It starts with 1-3 range and its latest form has 1-4 range.
 
-It should inflick Rock Punctures.
+It inflicts Rock Punctures and Venom. It inflicts more Venom stacks with each version.
 
 ### Earliest access
 
@@ -340,7 +340,7 @@ A tome that is also effective against Pirates and inflicts Frozen status. Its fi
 
 ## Staff
 
-A 1-4 range staff that drenches enemies. From its second version onwards, it gains the Wind element and becomes effective against Flying and Seared enemies.
+A 1-4 range staff that drenches enemies. From its second version onwards, it gains the Wind element and becomes effective against Flying and Seared enemies. Its third version has 1-5 range.
 
 ### Earliest access
 
@@ -352,7 +352,7 @@ A 1-4 range staff that drenches enemies. From its second version onwards, it gai
 
 ## Lance
 
-A lance that deals extra damage and receives less damage based on Artur's luck. In the latest form, gets extra attacks based on Artur's luck.
+A Light lance that deals extra damage and receives less damage based on Artur's luck. In the latest form, gets extra attacks based on Artur's luck.
 
 ### Earliest access
 
@@ -443,7 +443,8 @@ Medic(have Natasha start as a Trainee)
 
 ## *Sword*
 
-1. Sword that is effective against Flying and Seared units and uses Speed instead of Attack for damage. Range increases in later versions. Its last version is also effective against Monsters and Infantry enemies and gains 2 extra attacks if Joshua's Attack Speed is at least  enemy's Attack Speed + 5.
+1. Sword that is effective against Flying and Seared units and uses Speed instead of Attack for damage. Range increases in later versions.
+Its last version is also effective against Monsters and Infantry enemies and gains 2 extra attacks if Joshua's Attack Speed is at least enemy's Attack Speed + 5. It uses Strength, Speed and Resistance and raises both Speed and Resistance.
 
 2. Sword that is effective against Magic units and also uses Luck for damage. Has a 50/50 chance of getting another attack or the enemy getting another attack. On later versions, the chance is 75/25.
 
@@ -479,7 +480,7 @@ Effective against Horses and Armor units. Inflicts Seared. Targets the weaker of
 After Chapter 16, it uses Strength, Skill and Con for damage.
 
 ## Axe
-1-4 range brave axe that is effective against Horses and inflicts Seared.
+3 range brave axe that is effective against Horses and inflicts Seared.
 
 ### Earliest access
 * Trooper Lord
@@ -566,7 +567,7 @@ Dark Knight
 # Tana
 
 ## *Lance*
-A magic lance that drenches the enemy and gives access to Tana's Stash. Its last version is effective against Monsters and uses both Strength and Magic for damage.
+A magic lance that drenches the enemy and gives access to Tana's Stash. Its last version is effective against Monsters, uses Magic, Defense and Resistance for damage and raises both Defense and Resistance.
 
 ## Bow
 A bow that uses Magic and Skill for damage instead of Strength, inflicts Frozen on the enemy and is also effective against Seared enemies. Last version always hits. Effective against Pirates.
@@ -578,7 +579,7 @@ Wyvern Knight
 Sky Guard(from Pegasus Knight)
 
 ## Anima
-A siege tome that is effective against Fliers and Seared enemies that can Confuse and move the enemy(can't move Bosses). It has a cooldown.
+A 3-6 range tome tome that is effective against Fliers and Seared enemies that can Confuse and move the enemy(can't move Bosses). It has a cooldown.
 
 ### Earliest access
 Wyvern Knight
@@ -640,7 +641,7 @@ Wyvern Shifter(from Wyvern Rider)
 # Innes
 
 ## *Bow*
-A bow with a minimum 6 range. At higher stages becomes brave and never misses. On its last version it uses Strength and Skill for damage and also does effective damage against Monsters and Seared units.
+A bow with a minimum 6 range. At higher stages becomes brave and never misses. On its last version it uses Strength, Skill and Luck for damage and also does effective damage against Monsters and Shadow units.
 
 ## Lance
 1-2 range lance that Drenches the enemy and also uses Magic for damage. In its last stage it also inflicts Shadow and Curse.
@@ -756,10 +757,13 @@ Effective against Monsters. It has two versions.
 1. Staff that deals Area of Effect damage to the enemy. Has a cooldown.
 2. Regular offensive staff.
 
+After reaching X rank, she unlocks a staff with a cooldown that does the following:
+Heals all HP of all allies and raises their Def/Res by 20.
+
 ## Light
 A tome that makes Mounted tome users and Light magic users receive less damage, increase Avoid and get extra attacks(1, later 2).
 
-On its last version it becomes effective against Monsters, inflicts Silence on enemies and makes them unable to act for 2 turns.
+On its last version it becomes effective against Monsters, inflicts Silence on enemies and makes them unable to act for 2 turns. This version uses Magic, Luck and Defense for damage and raises both Luck and Defense.
 
 ### Earliest access
 
@@ -935,6 +939,7 @@ Executioner(from Assassin)
 
 ## *Axe*
 An axe that is super effective against Infantry units. It uses Defense and Skill for damage instead of Strength. It inflicts Rock Punctures on the enemy and from the second version onwards, it also Drenches the enemy.
+On its fourth version, it's also effective against Monsters, uses Defense, Skill and Speed for damage and raises Skill and Speed.
 
 
 ## Lance
@@ -1246,6 +1251,9 @@ A 2-3 range lance that inflicts Venom and Drenches the enemy. It also uses Magic
 
 It has a skill that increases Hit and Avoid when initiating combat and beginning from the second version it gives extra attacks.
 
+On its fourth version, it gains a skill that makes the following:
+When unit's HP is below 50% Max HP, all attacks become Brave, and reduce the stats of all enemies within 3 spaces by 10%.
+
 ### Access
 
 Mermaid
@@ -1263,7 +1271,7 @@ Lamia
 # Cyclops
 
 ## *Axe*
-A heave axe with a cooldown. It uses Strength x 2 for damage. It has the following effect:
+An earth heavy axe with a cooldown. It uses Strength x 2 for damage. It has the following effect:
 
 When unit kills an enemy when using this weapon, gains Galeforce but reduces Strength by 75% for the rest of the turn.
 
@@ -1283,7 +1291,7 @@ A heavy bow that inflicts Rock Punctures and is also effective against Armor ene
 
 From the second version onwards, it also uses Magic for damage.
 
-On its last version, it also inflicts Shadow and Curse on the enemy.
+From its third version onwards, it also inflicts Shadow and Curse on the enemy.
 
 ### Access
 
