@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Closer_Healing_T1",
+        "name": "Closer Healing",
+        "desc": "When healing an ally, increases healing output based on unit and ally's support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

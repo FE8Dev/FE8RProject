@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Talk_Anna",
+        "trigger": "on_talk",
+        "level_nid": "6",
+        "condition": "check_pair('Eirika','Anna')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "music_clear;500",
+            "add_portrait;Anna;Left;;NoSmile;mirror;no_block",
+            "",
+            "speak;Anna;.....;no_talk",
+            "speak;Anna;...Can you hear me, Dev?|Hello?|Is your communication stone working?|Dev, I can hear you now.|...This is Anna 8L, ready to give my status report.|I'm here in Magvel L and things are...Interesting...|How are things going on your end?|.....You're monitering adjustments?|Huh, I see.|No wonder things are very...different here.|.....Tell me about it...|Yeah, I got in contact with this world's Eirika.|Got her the Master Seal.|.....Uh huh, I'll keep my eye out.|I don't know why, but <red>something feels off</>.|.....Sure, this Magvel has a lot of power flowing through.|But it feels...<red>Unnatural...</>",
+            "expression;Anna;HalfCloseEyes",
+            "bop_portrait;Anna",
+            "speak;Anna;.....I'm not crazy!|You're the one who sent me to this weird Magvel!|I almost spilled some top secrets!|I could've changed <red>history</> thanks to your little prank!|Well, whatever.|I'll let you know if I notice anything dangerous.|....Alright, I understand.|Bye.",
+            "",
+            "remove_portrait;Anna",
+            "add_portrait;Eirika;Right",
+            "speak;Eirika;.....;no_talk",
+            "speak;Eirika;What was that red headed merchant doing here?",
+            "remove_portrait;Eirika",
+            "remove_unit;Anna;swoosh;fade",
+            "remove_talk;Eirika;Anna",
+            "music_fade_back;500"
+        ],
+        "nid": "6 Talk_Anna"
+    }
+]

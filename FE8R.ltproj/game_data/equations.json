@@ -144,8 +144,8 @@
         "expression": "LCK"
     },
     {
-        "nid": "LUCK_PROC_D1P5",
-        "expression": "LCK//1.5"
+        "nid": "LUCK_PROC_75",
+        "expression": "LCK * 0.75"
     },
     {
         "nid": "DEADLY_FORCE_CRIT",
@@ -357,15 +357,15 @@
     },
     {
         "nid": "STR_HP_WEAK",
-        "expression": "STR + HP//5"
+        "expression": "STR + unit.current_hp//5"
     },
     {
         "nid": "STR_HP_MID",
-        "expression": "STR + HP//3"
+        "expression": "STR + unit.current_hp//3"
     },
     {
         "nid": "STR_HP_STRONG",
-        "expression": "STR + HP//2"
+        "expression": "STR + unit.current_hp//2"
     },
     {
         "nid": "SPD_STR_WEAK",

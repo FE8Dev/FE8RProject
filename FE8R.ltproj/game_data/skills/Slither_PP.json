@@ -2,17 +2,13 @@
     {
         "nid": "Slither_PP",
         "name": "Slither++",
-        "desc": "Add unit's MAG x2 to Avoid when initiating attacks.",
+        "desc": "Add unit's MAG x2 to Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             44
         ],
         "components": [
-            [
-                "combat_condition",
-                "mode == 'attack'"
-            ],
             [
                 "dynamic_avoid",
                 "unit.get_stat('MAG') * 2"

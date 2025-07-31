@@ -36,7 +36,11 @@
             "change_ai;Amelia;None",
             "remove_talk;Franz;Amelia",
             "music_fade_back;300",
-            "add_lore;Amelia"
+            "add_lore;Amelia",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Amelia;Feat_Unit",
+            "else",
+            "end"
         ],
         "nid": "9B AmeliaRecruitFranz"
     }

@@ -28,7 +28,12 @@
             "change_team;Ewan;player",
             "music_fade_back;100",
             "add_unit;Ewan;5,11;fade;closest;north",
-            "autolevel_to;Ewan;9",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Ewan;Feat_Unit",
+            "    autolevel_to;Ewan;9",
+            "else",
+            "    autolevel_to;Ewan;9",
+            "end",
             "give_bexp;1000",
             "has_traded;{unit}",
             "add_lore;Ewan"

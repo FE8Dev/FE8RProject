@@ -19,7 +19,10 @@
             "remove_skill;Marisa;Crimson_Snow_Giver;no_banner",
             "remove_portrait;Marisa",
             "give_skill;Marisa;Crimson_Snow_Stop;no_banner",
-            "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
+            "for;enemy_unit;({u for u in game.level.units if u.team in ['enemy','enemy2']})",
+            "give_skill;{enemy_unit};Crimson_Snow_Global;no_banner",
+            "endf",
+            "for;enemy_unit;{u for u in game.units if u.position and u.team in ['enemy', 'enemy2']}",
             "give_skill;{enemy_unit};Crimson_Snow_Global;no_banner",
             "endf"
         ],

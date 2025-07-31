@@ -28,7 +28,14 @@
             "add_talk;Ewan;Marisa",
             "give_bexp;1000",
             "has_traded;{unit}",
-            "add_lore;Ewan"
+            "add_lore;Ewan",
+            "",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Ewan;Feat_Unit",
+            "    ",
+            "else",
+            "   ",
+            "end"
         ],
         "nid": "12B House_1"
     }

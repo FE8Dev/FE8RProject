@@ -5165,7 +5165,7 @@
     {
         "nid": "Ghostly_Dagger",
         "name": "Ghostly_Dagger",
-        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\nEffective vs pirate and water\n<pink>Misc:</>Magical, MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>), +40 Crit damage,<icon>Steal</>.",
+        "desc": "A dagger of a pirate long dead, legends say its soul is trapped on this dagger.\n<green>Skills:</>Ghostly Alliance\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>\n<red>Effective:</><icon>Pirate</><icon>Drenched</>\n<pink>Misc:</>Magical, MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD'))))}</>), +40 Crit damage,<icon>Steal</>.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             1,
@@ -25124,8 +25124,8 @@
         ]
     },
     {
-        "nid": "Holy_Nosferatu",
-        "name": "Holy Nosferatu",
+        "nid": "Resire",
+        "name": "Resire",
         "desc": "A Nosferatu that has been purged of darkness and is used by righteous wielders.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>), HP Absorb (20%), +20 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
@@ -39427,7 +39427,7 @@
     {
         "nid": "Exposure_Stone",
         "name": "Exposure Stone",
-        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lowest of the enemy's main stats, but attacks cost half of current HP to cast.",
+        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but attacks cost half of current HP to cast.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             4,
@@ -41586,7 +41586,7 @@
     },
     {
         "nid": "Flawless_Lens",
-        "name": "Flawless_Lens",
+        "name": "Flawless Lens",
         "desc": "A one of a kind lens that makes the microscopic world crystal clear.\n<blue>On Hold:</>Grants +10 SKL, +10 LCK, +30 Hit, and +15 Crit.",
         "icon_nid": "03-29-25 New Accessories Icons",
         "icon_index": [
@@ -44116,14 +44116,8 @@
                 "Arrow"
             ],
             [
-                "magic",
-                null
-            ],
-            [
-                "multi_desc_skill",
-                [
-                    "Flash_Step"
-                ]
+                "shove_flex_stops",
+                4
             ]
         ]
     },
@@ -44221,7 +44215,7 @@
     {
         "nid": "Slim_Sword",
         "name": "Slim Sword",
-        "desc": "A lightweight sword that crits more often.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR/2 +SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP, +1 SPD.",
+        "desc": "A lightweight sword that crits more often.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR/2 +SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>) +1 SPD, x2 WEXP gain.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -46103,7 +46097,7 @@
     {
         "nid": "Slim_Javelin",
         "name": "Slim Javelin",
-        "desc": "A javelin for inexperienced soldiers. Easier to Crit.\n<green>Skills:</>Lance Guard (E)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP.",
+        "desc": "A javelin for inexperienced soldiers. Easier to Crit.\n<green>Skills:</>Lance Guard (E)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             9,
@@ -46189,7 +46183,7 @@
     {
         "nid": "Slim_Lance",
         "name": "Slim Lance",
-        "desc": "Easy to use lance.\n<green>Skills:</>Lance Guard (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP.",
+        "desc": "Easy to use lance.\n<green>Skills:</>Lance Guard (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -47576,7 +47570,7 @@
     {
         "nid": "Slim_Axe",
         "name": "Slim Axe",
-        "desc": "An easy to use axe for beginners.\n<violet>Inflicts:</>Breach (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP.",
+        "desc": "An easy to use axe for beginners.\n<violet>Inflicts:</>Breach (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -49395,7 +49389,7 @@
     {
         "nid": "Slim_Bow",
         "name": "Slim Bow",
-        "desc": "An easy to Hit and Crit Bow.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), bonus WEXP.",
+        "desc": "An easy to Hit and Crit Bow.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             6,
@@ -58065,7 +58059,7 @@
     },
     {
         "nid": "Training_Stone",
-        "name": "Training Stone.",
+        "name": "Training Stone",
         "desc": "A special stone for those learning the ways of the Dragon.\n<pink>Misc:</>Bonus WEXP.",
         "icon_nid": "Neutral",
         "icon_index": [
@@ -63580,7 +63574,7 @@
     {
         "nid": "Squires_Sword",
         "name": "Squire's Sword",
-        "desc": "For those with great potential.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), bonus WEXP, +1 SPD.",
+        "desc": "For those with great potential.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), +1 SPD, x2 WEXP gain.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -65172,7 +65166,7 @@
     {
         "nid": "Heavy_Impact",
         "name": "Heavy Impact",
-        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (A)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>Heavy.",
+        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (A) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>Heavy.",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             0,
@@ -67796,7 +67790,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "DAMAGE_2X"
+                "STR_DOUBLE_DEF_STRONG"
             ]
         ]
     },
@@ -68921,7 +68915,6 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Lightweight",
                     "Power_Chop_SS"
                 ]
             ],
@@ -69028,7 +69021,6 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Lightweight",
                     "Hope_Herald",
                     "Power_Chop_X"
                 ]
@@ -69395,7 +69387,7 @@
             ],
             [
                 "damage",
-                10
+                13
             ],
             [
                 "hit",
@@ -69407,7 +69399,7 @@
             ],
             [
                 "weight",
-                16
+                10
             ],
             [
                 "level_exp",
@@ -69522,7 +69514,7 @@
             ],
             [
                 "damage",
-                18
+                20
             ],
             [
                 "hit",
@@ -69534,7 +69526,7 @@
             ],
             [
                 "weight",
-                18
+                13
             ],
             [
                 "level_exp",
@@ -69816,7 +69808,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Ross\").wexp['Monster'] < 300"
+                "u(\"Ross\").wexp['Monster'] < 360"
             ]
         ]
     },
@@ -80102,6 +80094,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -80211,6 +80207,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -80309,7 +80309,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SPD_STRONG"
+                "STR_SPD_RES_STRONG"
             ],
             [
                 "prf_unit",
@@ -80326,6 +80326,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -87861,7 +87865,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Innes\").wexp['Bow'] < 180"
+                "u(\"Innes\").wexp['Bow'] < 240"
             ]
         ]
     },
@@ -87889,11 +87893,11 @@
             ],
             [
                 "damage",
-                14
+                16
             ],
             [
                 "hit",
-                90
+                100
             ],
             [
                 "weapon_type",
@@ -87901,15 +87905,15 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "A"
             ],
             [
                 "weight",
-                15
+                17
             ],
             [
                 "crit",
-                8
+                10
             ],
             [
                 "min_range",
@@ -87943,7 +87947,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Innes\").wexp['Bow'] >= 180 and u(\"Innes\").wexp['Bow'] < 300"
+                "u(\"Innes\").wexp['Bow'] >= 240 and u(\"Innes\").wexp['Bow'] < 300"
             ]
         ]
     },
@@ -89481,7 +89485,8 @@
                     "Blade_Vantage_Effect",
                     "One_Man_Army",
                     "Money_BlowP",
-                    "Desert_Tiger_Giver"
+                    "Desert_Tiger_Giver",
+                    "Blade_Sweep"
                 ]
             ],
             [
@@ -96348,7 +96353,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Dozla\").wexp['Monster'] < 300"
+                "u(\"Dozla\").wexp['Monster'] < 360"
             ]
         ]
     },
@@ -96455,7 +96460,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Dozla\").wexp['Monster'] >= 300 and u(\"Dozla\").wexp['Monster'] < 420"
+                "u(\"Dozla\").wexp['Monster'] >= 360 and u(\"Dozla\").wexp['Monster'] < 420"
             ],
             [
                 "item_tags",
@@ -115670,16 +115675,16 @@
                 ]
             ],
             [
-                "shove",
-                2
-            ],
-            [
                 "eval_available",
                 "u(\"HorseyBoy\").wexp['Axe'] < 120"
             ],
             [
                 "wexp",
                 3
+            ],
+            [
+                "shove_flex_stops",
+                2
             ]
         ]
     },
@@ -115785,15 +115790,15 @@
                 ]
             ],
             [
-                "shove",
-                3
-            ],
-            [
                 "eval_available",
                 "u(\"HorseyBoy\").wexp['Axe'] >= 120 and u(\"HorseyBoy\").wexp['Axe'] < 240"
             ],
             [
                 "wexp",
+                3
+            ],
+            [
+                "shove_flex_stops",
                 3
             ]
         ]
@@ -115903,16 +115908,16 @@
                 ]
             ],
             [
-                "shove",
-                4
-            ],
-            [
                 "eval_available",
                 "u(\"HorseyBoy\").wexp['Axe'] >= 240 and u(\"HorseyBoy\").wexp['Axe'] < 420"
             ],
             [
                 "wexp",
                 3
+            ],
+            [
+                "shove_flex_stops",
+                4
             ]
         ]
     },
@@ -116021,16 +116026,16 @@
                 ]
             ],
             [
-                "shove",
-                5
-            ],
-            [
                 "eval_available",
                 "u(\"HorseyBoy\").wexp['Axe'] >= 420"
             ],
             [
                 "wexp",
                 3
+            ],
+            [
+                "shove_flex_stops",
+                5
             ]
         ]
     },
@@ -120428,7 +120433,7 @@
     {
         "nid": "Gigantic",
         "name": "Gigantic",
-        "desc": "A big club used for practice by cyclops. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2.",
+        "desc": "A big club used for practice by cyclops. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2.",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -120519,7 +120524,6 @@
                 [
                     "War_Blow",
                     "Circle_Swing",
-                    "Blade_Vantage_Effect",
                     "Circle_Swing_Debuffer"
                 ]
             ],
@@ -120554,7 +120558,7 @@
     {
         "nid": "Colossal",
         "name": "Colossal",
-        "desc": "Clubs used by adult cyclops. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2.",
+        "desc": "Clubs used by adult cyclops. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -120646,7 +120650,6 @@
                     "War_Blow",
                     "Circle_Swing_P",
                     "Circle_Swing_P_Buffer",
-                    "Blade_Vantage_Effect",
                     "Circle_Swing_P_Debuffer"
                 ]
             ],
@@ -120681,7 +120684,7 @@
     {
         "nid": "Titanic",
         "name": "Titanic",
-        "desc": "A club which creates magical sparks. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2 + MAG/2 (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG')//2)}</>).",
+        "desc": "A club which creates magical sparks. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2 + MAG/2 (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG')//2)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -120773,7 +120776,6 @@
                     "War_Blow",
                     "Circle_Swing_P",
                     "Circle_Swing_P_Buffer",
-                    "Blade_Vantage_Effect",
                     "Circle_Swing_P_Debuffer"
                 ]
             ],
@@ -120808,7 +120810,7 @@
     {
         "nid": "Chronos",
         "name": "Chronos",
-        "desc": "A club of an ancient Deity. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, uses STR x2 + MAG (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG'))}</>).",
+        "desc": "A club of an ancient Deity. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2 + MAG (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG'))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -120900,7 +120902,6 @@
                     "War_Blow",
                     "Circle_Swing_P",
                     "Circle_Swing_P_Buffer",
-                    "Blade_Vantage_Effect",
                     "Circle_Swing_P_Debuffer"
                 ]
             ],
@@ -156096,7 +156097,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Eterna\").wexp['Axe'] <= 120"
+                "u(\"Eterna\").wexp['Axe'] <= 180"
             ],
             [
                 "wexp",
@@ -156132,7 +156133,7 @@
     {
         "nid": "Highland_Axe",
         "name": "Highland Axe",
-        "desc": "Single-sided axe used by the warriors of the highlands.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</></>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "Single-sided axe used by the warriors of the highlands.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</>DEF + SKL/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             2,
@@ -156223,7 +156224,7 @@
     {
         "nid": "Gargoyles_Black_Axe",
         "name": "Gargoyle's Black Axe",
-        "desc": "Bronze greataxe wielded by Valiant Gargoyles, marked by those who serve Maliketh\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</></>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
+        "desc": "Bronze greataxe wielded by Valiant Gargoyles, marked by those who serve Maliketh\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:2)\n<pink>Misc:</>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             3,
@@ -156399,7 +156400,7 @@
     {
         "nid": "Spiked_Spear",
         "name": "Spiked Spear",
-        "desc": "Weapon of the Marionette Soldiers employed by sorcerers.\n<green>Skills:</>Lance Guard (A), G.L. Mastery\n<orange>Element:</><icon>Wind</>\n<pink>Misc:</></>DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
+        "desc": "Weapon of the Marionette Soldiers employed by sorcerers.\n<green>Skills:</>Lance Guard (A), G.L. Mastery\n<orange>Element:</><icon>Wind</>\n<pink>Misc:</>DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             9,
@@ -160781,12 +160782,12 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
-            ],
-            [
                 "no_double",
                 null
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -160829,8 +160830,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -160873,8 +160874,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -160969,8 +160970,8 @@
                 "32- Tethys Orchestral Cover"
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161017,8 +161018,8 @@
                 "33- Healing Orchestral Cover"
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161089,8 +161090,8 @@
                 "AOE_Reinforce"
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161157,8 +161158,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161225,8 +161226,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161293,8 +161294,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161361,8 +161362,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161429,8 +161430,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161481,8 +161482,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161533,8 +161534,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161585,8 +161586,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161637,8 +161638,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161689,8 +161690,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161757,8 +161758,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161825,8 +161826,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161877,8 +161878,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -161929,8 +161930,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -164401,16 +164402,16 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
-            ],
-            [
                 "menu_after_combat",
                 null
             ],
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -164777,8 +164778,8 @@
                 1
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -165349,12 +165350,12 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
-            ],
-            [
                 "no_double",
                 null
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -165371,8 +165372,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss"
+                    "Venomous_Effect"
                 ]
             ]
         ]
@@ -165976,12 +165976,12 @@
                 1
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
-            ],
-            [
                 "event_after_combat_on_hit",
                 "Global Pass_Remove_EXP"
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -166149,8 +166149,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -166217,8 +166217,8 @@
                 null
             ],
             [
-                "self_status_on_hit",
-                "Prevent_Steal_Crash"
+                "event_before_combat",
+                "Global Steal_Prevent"
             ]
         ]
     },
@@ -166321,7 +166321,7 @@
     {
         "nid": "Exposure_Stone_Skill",
         "name": "Exposure Stone",
-        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lowest of the enemy's stat, but attacks cost half of current HP to cast.",
+        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but attacks cost half of current HP to cast.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             4,
@@ -166330,7 +166330,7 @@
         "components": [
             [
                 "alternate_resist_formula",
-                "MIN_EVERYTHING"
+                "DEF_RES_MIN"
             ],
             [
                 "eval_hp_cost_midbattle",
@@ -167892,7 +167892,7 @@
     {
         "nid": "Trainee_Seed_DG",
         "name": "Trainee Seed",
-        "desc": "Levels up a T0 unit and slightly raises weapon rank.\nItem submitted by Saragl728.",
+        "desc": "Levels up a T0 unit and slightly raises weapon rank.\nWill promote a trainee if they are level 10.\nItem submitted by Saragl728.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             40,
@@ -168460,7 +168460,7 @@
             ],
             [
                 "wexp",
-                5
+                1
             ],
             [
                 "status_on_hit",
@@ -168820,6 +168820,164 @@
             [
                 "status_on_equip",
                 "Warding_Bracelet_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Send_DG",
+        "name": "Send",
+        "desc": "Move an ally to another square and heals half ally's HP. <green>CD:8</>\n<pink>Misc:</>Support classes only.",
+        "icon_nid": "Staff",
+        "icon_index": [
+            0,
+            9
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                12000
+            ],
+            [
+                "wexp",
+                7
+            ],
+            [
+                "eval_healing",
+                "target.get_max_hp() // 2"
+            ],
+            [
+                "sequence_item",
+                [
+                    "Warp1",
+                    "Warp2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "exp",
+                50
+            ],
+            [
+                "cooldown",
+                8
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Salvage_DG",
+        "name": "Salvage",
+        "desc": "Bring an ally to a space adjacent to the user and heals half ally's HP. <green>CD:3</>\n<pink>Misc:</>Support classes only.",
+        "icon_nid": "Staff",
+        "icon_index": [
+            0,
+            10
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                2500
+            ],
+            [
+                "wexp",
+                7
+            ],
+            [
+                "eval_healing",
+                "target.get_max_hp() // 2"
+            ],
+            [
+                "sequence_item",
+                [
+                    "Rescue1",
+                    "Rescue2"
+                ]
+            ],
+            [
+                "no_ai",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_equation_range",
+                "MAGIC_RANGE"
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "exp",
+                30
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_tags",
+                [
+                    "Support"
+                ]
             ]
         ]
     }

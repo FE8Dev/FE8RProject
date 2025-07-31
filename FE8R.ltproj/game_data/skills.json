@@ -4294,7 +4294,7 @@
     {
         "nid": "Dark_Ward",
         "name": "Dark Ward",
-        "desc": "Reduces damage by 90% and increases Avoid by 100\nwhen attacked from more than 4 tiles away.",
+        "desc": "Reduces damage by 90% and increases Avoid by 100 when attacked from more than 4 tiles away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -4745,8 +4745,8 @@
         ]
     },
     {
-        "nid": "Eloquent_Form",
-        "name": "Eloquent Form",
+        "nid": "Elegant_Form",
+        "name": "Elegant Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -4760,13 +4760,13 @@
             ],
             [
                 "gain_skill_after_take_miss",
-                "Eloquent_Form_Buff"
+                "Elegant_Form_Buff"
             ]
         ]
     },
     {
-        "nid": "Eloquent_Form_Buff",
-        "name": "Eloquent Form",
+        "nid": "Elegant_Form_Buff",
+        "name": "Elegant Form",
         "desc": "x1.2 damage boost for each stack.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -6442,7 +6442,7 @@
     {
         "nid": "Rally_Attack",
         "name": "Rally Attack",
-        "desc": "Grants +6 STR/SPD, +6 AS to allies within 3 spaces.",
+        "desc": "<red>CA:</>Grants +6 STR/SPD, +6 AS to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -7081,7 +7081,7 @@
     {
         "nid": "Rally_Tech",
         "name": "Rally Tech",
-        "desc": "+10 SKL, SPD, and LCK to allies within 3 spaces.",
+        "desc": "<red>CA:</>+10 SKL, SPD, and LCK to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -7989,7 +7989,7 @@
     {
         "nid": "Rally_Mages",
         "name": "Rally Mages",
-        "desc": "Give +10 MAG, RES, SPD to allies within 3 spaces.",
+        "desc": "<red>CA:</>Give +10 MAG, RES, SPD to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -9199,7 +9199,7 @@
     {
         "nid": "Rally_Morale",
         "name": "Rally Morale",
-        "desc": "+15 LCK, +50 Hit, and Avoid to allies within 3 spaces.",
+        "desc": "<red>CA:</>+15 LCK, +50 Hit, and Avoid to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -11963,7 +11963,7 @@
     {
         "nid": "Galeforce",
         "name": "Galeforce",
-        "desc": "% Luck chance to gain Galeforce after this unit kills an enemy.",
+        "desc": "(LCK * 0.75)% chance to gain Galeforce after this unit kills an enemy, up to 4 times a turn.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -11971,12 +11971,20 @@
         ],
         "components": [
             [
-                "proc_rate",
-                "LUCK_PROC_D1P5"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "Endstep_charge_increase",
+                4
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
+                "proc_rate",
+                "LUCK_PROC_75"
             ],
             [
                 "attack_pre_proc",
@@ -12695,7 +12703,7 @@
     {
         "nid": "Rally_Move",
         "name": "Rally Move",
-        "desc": "+2 MOV and +10 SPD to allies within 3 spaces.",
+        "desc": "<red>CA:</>+2 MOV and +10 SPD to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -15762,7 +15770,7 @@
     {
         "nid": "Rally_Barrier",
         "name": "Rally Barrier",
-        "desc": "+20 DEF and RES to allies within 5 spaces.",
+        "desc": "<red>CA:</>+20 DEF and RES to allies within 5 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -19665,6 +19673,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",
@@ -29333,7 +29345,7 @@
         "components": [
             [
                 "proc_rate",
-                "LUCK_PROC_D1P5"
+                "LUCK_PROC_75"
             ],
             [
                 "attack_pre_proc",
@@ -37026,7 +37038,7 @@
                 "3*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
             ],
             [
-                "dynamic_attacks",
+                "dynamic_multiattacks",
                 "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])) // 3"
             ],
             [
@@ -38236,7 +38248,7 @@
     {
         "nid": "Aim_For_The_Throat",
         "name": "Aim For The Throat",
-        "desc": "Attacks inflict Silence after combat.",
+        "desc": "Attacks inflict Silence to enemies on hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -38252,7 +38264,7 @@
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
-                "give_status_after_combat_on_hit",
+                "give_status_after_hit",
                 "Silence"
             ]
         ]
@@ -38260,7 +38272,7 @@
     {
         "nid": "Bloodletting",
         "name": "Bloodletting",
-        "desc": "+5 crit dmg on crit, stacks, last per chapter",
+        "desc": "+5 bonus Crit damage per stack each time this unit Crits.\nStacks infinitely.\nLost on end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -38276,7 +38288,7 @@
     {
         "nid": "Bloodletting_Buff",
         "name": "Bloodletting",
-        "desc": "+5 crit dmg on crit, stacks, last per chapter",
+        "desc": "+5 bonus Crit damage per stack.\nStacks infinitely.\nLost on end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -43495,17 +43507,13 @@
     {
         "nid": "Slither",
         "name": "Slither",
-        "desc": "Add unit's MAG to Avoid when initiating attacks.",
+        "desc": "Add unit's MAG to Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             44
         ],
         "components": [
-            [
-                "combat_condition",
-                "mode == 'attack'"
-            ],
             [
                 "dynamic_avoid",
                 "unit.get_stat('MAG')"
@@ -43515,17 +43523,13 @@
     {
         "nid": "Slither_P",
         "name": "Slither+",
-        "desc": "Add unit's MAG x1.5 to Avoid when initiating attacks.",
+        "desc": "Add unit's MAG x1.5 to Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             44
         ],
         "components": [
-            [
-                "combat_condition",
-                "mode == 'attack'"
-            ],
             [
                 "dynamic_avoid",
                 "unit.get_stat('MAG') * 1.5"
@@ -43535,17 +43539,13 @@
     {
         "nid": "Slither_PP",
         "name": "Slither++",
-        "desc": "Add unit's MAG x2 to Avoid when initiating attacks.",
+        "desc": "Add unit's MAG x2 to Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             44
         ],
         "components": [
-            [
-                "combat_condition",
-                "mode == 'attack'"
-            ],
             [
                 "dynamic_avoid",
                 "unit.get_stat('MAG') * 2"
@@ -43555,17 +43555,13 @@
     {
         "nid": "Slither_PPP",
         "name": "Slither+++",
-        "desc": "Add unit's MAG x2.5 to Avoid when initiating attacks.",
+        "desc": "Add unit's MAG x2.5 to Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             44
         ],
         "components": [
-            [
-                "combat_condition",
-                "mode == 'attack'"
-            ],
             [
                 "dynamic_avoid",
                 "unit.get_stat('MAG') * 2.5"
@@ -45801,102 +45797,6 @@
         ]
     },
     {
-        "nid": "Scintilla_T1_1st",
-        "name": "Scintilla T1 1st",
-        "desc": "To give Scintilla the T1 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scintilla_T1_2nd",
-        "name": "Scintilla T1 2nd",
-        "desc": "To give Scintilla the T1 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scintilla_T2_1st",
-        "name": "Scintilla T2 1st",
-        "desc": "To give Scintilla the T2 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scintilla_T2_2nd",
-        "name": "Scintilla_T2_2nd",
-        "desc": "To give Scintilla the T2 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scintilla_T3_1st",
-        "name": "Scintilla_T3_1st",
-        "desc": "To give Scintilla the T3 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Scintilla_T3_2nd",
-        "name": "Scintilla T3 2nd",
-        "desc": "To give Scintilla the T3 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Constricted",
         "name": "Constricted",
         "desc": "-30 Avoid, reduce SPD and SKL by 25% and unit takes 25% of damage dealt for 2 turns or after next combat.",
@@ -46519,102 +46419,6 @@
             [
                 "proc_rate",
                 "LUCK_PROC"
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T1_1st",
-        "name": "Lindsey T1 1st",
-        "desc": "To give Lindsey the T1 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T1_2nd",
-        "name": "Lindsey T1 2nd",
-        "desc": "To give Lindsey the T1 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T2_1st",
-        "name": "Lindsey T2 1st",
-        "desc": "To give Lindsey the T2 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T2_2nd",
-        "name": "Lindsey T2 2nd",
-        "desc": "To give Lindsey the T2 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T3_1st",
-        "name": "Lindsey T3 1st",
-        "desc": "To give Lindsey the T3 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Lindsey_T3_2nd",
-        "name": "Lindsey T3 2nd",
-        "desc": "To give Lindsey the T3 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
             ]
         ]
     },
@@ -47616,102 +47420,6 @@
             [
                 "ability",
                 "Summon_Slime"
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T1_1st",
-        "name": "Suu T1 1st",
-        "desc": "To give Suu the T1 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T1_2nd",
-        "name": "Suu T1 2nd",
-        "desc": "To give Suu the T1 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T2_1st",
-        "name": "Suu T2 1st",
-        "desc": "To give Suu the T2 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T2_2nd",
-        "name": "Suu T2 2nd",
-        "desc": "To give Suu the T2 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T3_1st",
-        "name": "Suu T3 1st",
-        "desc": "To give Suu the T3 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Suu_T3_2nd",
-        "name": "Suu T3 2nd",
-        "desc": "To give Suu the T3 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
             ]
         ]
     },
@@ -49988,102 +49696,6 @@
         ]
     },
     {
-        "nid": "Tyrande_T1_1st",
-        "name": "Tyrande T1 1st",
-        "desc": "To give the MyUnit the T1 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tyrande_T1_2nd",
-        "name": "Tyrande T1 2nd",
-        "desc": "To give the MyUnit the T1 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tyrande_T2_1st",
-        "name": "Tyrande T2 1st",
-        "desc": "To give the MyUnit the T2 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tyrande_T2_2nd",
-        "name": "Tyrande T2 2nd",
-        "desc": "To give the MyUnit the T2 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tyrande_T3_1st",
-        "name": "Tyrande T3 1st",
-        "desc": "To give the MyUnit the T3 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tyrande_T3_2nd",
-        "name": "Tyrande T3 2nd",
-        "desc": "To give the MyUnit the T3 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "Divine_Presence_Tyrande",
         "name": "Divine Presence",
         "desc": "Allows unit to warp to any ally on the map. +10% buff to adj. allies stats.",
@@ -50224,102 +49836,6 @@
             [
                 "item_override",
                 "Lance_Advantage"
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T1_1st",
-        "name": "Jack T1 1st",
-        "desc": "To give Jack the T1 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T1_2nd",
-        "name": "Jack T1 2nd",
-        "desc": "To give Jack the T1 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T2_1st",
-        "name": "Jack T2 1st",
-        "desc": "To give Jack the T2 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T2_2nd",
-        "name": "Jack T2 2nd",
-        "desc": "To give Jack the T2 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T3_1st",
-        "name": "Jack T3 1st",
-        "desc": "To give Jack the T3 1st feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Jack_T3_2nd",
-        "name": "Jack T3 2nd",
-        "desc": "To give Jack the T3 2nd feat skill",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
             ]
         ]
     },
@@ -54368,8 +53884,8 @@
         ]
     },
     {
-        "nid": "Eloquent_Form_T1",
-        "name": "Eloquent Form",
+        "nid": "Elegant_Form_T1",
+        "name": "Elegant Form",
         "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -54379,7 +53895,7 @@
         "components": [
             [
                 "gain_skill_after_take_miss",
-                "Eloquent_Form_Buff"
+                "Elegant_Form_Buff"
             ],
             [
                 "feat",
@@ -55897,7 +55413,7 @@
     {
         "nid": "Rally_Attack_T1",
         "name": "Rally Attack",
-        "desc": "Grants +6 STR/SPD, +6 AS to allies within 3 spaces.",
+        "desc": "<red>CA:</>Grants +6 STR/SPD, +6 AS to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -55907,6 +55423,34 @@
             [
                 "ability",
                 "Rally_Attack"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Closer_Healing_T1",
+        "name": "Closer Healing",
+        "desc": "When healing an ally, increases healing output based on unit and ally's support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
             ],
             [
                 "feat",
@@ -56190,7 +55734,7 @@
     {
         "nid": "Rally_Tech_T2",
         "name": "Rally Tech",
-        "desc": "+10 SKL, SPD, and LCK to allies within 3 spaces.",
+        "desc": "<red>CA:</>+10 SKL, SPD, and LCK to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -56862,7 +56406,7 @@
     {
         "nid": "Rally_Mages_T2",
         "name": "Rally Mages",
-        "desc": "Give +10 MAG, RES, SPD to allies within 3 spaces.",
+        "desc": "<red>CA:</>Give +10 MAG, RES, SPD to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -57409,7 +56953,7 @@
     {
         "nid": "Rally_Morale_T2",
         "name": "Rally Morale",
-        "desc": "+15 LCK, +50 Hit, and Avoid to allies within 3 spaces.",
+        "desc": "<red>CA:</>+15 LCK, +50 Hit, and Avoid to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -59489,6 +59033,94 @@
         ]
     },
     {
+        "nid": "Triage_T2",
+        "name": "Triage",
+        "desc": "When healing an ally, add half their missing HP to the heal done",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 2"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Aim_For_The_Throat_T2",
+        "name": "Aim For The Throat",
+        "desc": "Attacks inflict Silence to enemies on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            39
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_status_after_hit",
+                "Silence"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Swift_Combatant_T2",
+        "name": "Swift Combatant",
+        "desc": "If unit's Speed is higher than enemy's Speed, increases damage given and decreases damage received based on the difference between unit and enemy's Speed.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') > target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1-(unit.get_stat('SPD') - target.get_stat('SPD'))/100"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
         "nid": "Overcome_T3",
         "name": "Overcome",
         "desc": "x2 damage if enemy's DEF >= unit's DEF.",
@@ -59713,7 +59345,7 @@
     {
         "nid": "Galeforce_T3",
         "name": "Galeforce",
-        "desc": "% Luck chance to gain Galeforce after this unit kills an enemy.",
+        "desc": "(LCK * 0.75)% chance to gain Galeforce after this unit kills an enemy, up to 4 times a turn.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -59721,8 +59353,16 @@
         ],
         "components": [
             [
+                "Endstep_charge_increase",
+                4
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
                 "proc_rate",
-                "LUCK_PROC_D1P5"
+                "LUCK_PROC_75"
             ],
             [
                 "attack_pre_proc",
@@ -60126,7 +59766,7 @@
     {
         "nid": "Rally_Move_T3",
         "name": "Rally Move",
-        "desc": "+2 MOV and +10 SPD to allies within 3 spaces.",
+        "desc": "<red>CA:</>+2 MOV and +10 SPD to allies within 3 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -62013,7 +61653,7 @@
     {
         "nid": "Rally_Barrier_T3",
         "name": "Rally Barrier",
-        "desc": "+20 DEF and RES to allies within 5 spaces.",
+        "desc": "<red>CA:</>+20 DEF and RES to allies within 5 spaces. <green>CD:0 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -64054,6 +63694,10 @@
             21
         ],
         "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
             [
                 "give_status_after_hit",
                 "Burned"
@@ -66834,6 +66478,288 @@
         ]
     },
     {
+        "nid": "Anotomy_Master_T3",
+        "name": "Anotomy Master",
+        "desc": "Attacks deal very effective damage against Infantry enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            39
+        ],
+        "components": [
+            [
+                "item_override",
+                "Anti_Infantry_Rounds"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Aromatheropy_T3",
+        "name": "Aromatheropy",
+        "desc": "This unit gets +10 LCK/DEF/RES for each ally within 2 spaces.\nAllies within 2 spaces gain +50% LCK.\nWhen an ally interacts with this unit (I.e: targets them with a staff) they gain 60% LCK for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            41
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "LCK",
+                        "10 * unit_funcs.check_focus(unit, 2)"
+                    ],
+                    [
+                        "DEF",
+                        "10 * unit_funcs.check_focus(unit, 2)"
+                    ],
+                    [
+                        "RES",
+                        "10 * unit_funcs.check_focus(unit, 2)"
+                    ]
+                ]
+            ],
+            [
+                "aura",
+                "Aromatheropy_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Aromatheropy_Other_Aura_hide"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Shoujo_Radiance_T3",
+        "name": "Shoujo Radiance",
+        "desc": "+15 MAG, +15 RES, +20 Crit and +50 Crit damage to all allies within 2 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            19
+        ],
+        "components": [
+            [
+                "aura",
+                "Shoujo_Radiance_Buff"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "ally"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Awakened_Pair_T3",
+        "name": "Awakened Pair",
+        "desc": "This unit and paired up units increase stats based on support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            51
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.traveler != None"
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "MAG",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SKL",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "SPD",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "LCK",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "DEF",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ],
+                    [
+                        "RES",
+                        "20 if get_support_rank(unit, unit.traveler) == 'A' else 10 if get_support_rank(unit, unit.traveler) == 'B' else 5 if get_support_rank(unit, unit.traveler) == 'C' else 0"
+                    ]
+                ]
+            ],
+            [
+                "pairup_bonus",
+                "Awakened_Pair"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Guts_T3",
+        "name": "Guts",
+        "desc": "If unit is at least under one negative status, increases unit's STR, MAG and SPD by 100%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            40
+        ],
+        "components": [
+            [
+                "condition",
+                "get_debuff_count(unit) > 0"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "STR",
+                        2.0
+                    ],
+                    [
+                        "MAG",
+                        2.0
+                    ],
+                    [
+                        "SPD",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Pinch_Fighter_T3",
+        "name": "Pinch Fighter",
+        "desc": "If unit is at least under one negative status, increases unit's DEF, RES, SKL by 100%.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            3,
+            3
+        ],
+        "components": [
+            [
+                "condition",
+                "get_debuff_count(unit) > 0"
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "DEF",
+                        2.0
+                    ],
+                    [
+                        "RES",
+                        2.0
+                    ],
+                    [
+                        "SKL",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Canto_Sharp_T3",
+        "name": "Canto Sharp",
+        "desc": "Unit can move after attacking if unit hasn't moved yet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            32
+        ],
+        "components": [
+            [
+                "canto_sharp",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
         "nid": "Feat_Enabler",
         "name": "Feat Enabler",
         "desc": "Makes MyUnit a Feat_Unit Tag.",
@@ -68406,6 +68332,111 @@
                         35
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Holy_Stance",
+        "name": "Holy Stance",
+        "desc": "If a Monster initiates combat, receives 50% of damage dealt back.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            22
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and 'Monster' in target.tags"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Holy_Stance_Skill",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Holy_Stance_Skill",
+        "name": "Holy Stance",
+        "desc": "Monster enemies take half the damage they have dealt when they initiate combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            22
+        ],
+        "components": [
+            [
+                "lifelink",
+                -0.5
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Resonance",
+        "name": "Resonance",
+        "desc": "Adds half of magic to damage dealt by tomes and combat staves, but take 5 damage after combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            28
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MAG') // 2"
+            ],
+            [
+                "recoil",
+                5
+            ]
+        ]
+    },
+    {
+        "nid": "Tome_Precision",
+        "name": "Tome Precision",
+        "desc": "Raises Hit/Avoid by 30 when using a Tome.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            2
+        ],
+        "components": [
+            [
+                "condition",
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark'))"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
             ]
         ]
     },

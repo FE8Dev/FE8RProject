@@ -12,7 +12,7 @@
             "chapter_title",
             "change_background;Courtyard_Past",
             "transition;open;2000",
-            "music;44 Lyon;500",
+            "music;44- Lyon Orchestral Cover;500",
             "location_card;2 years ago",
             "multi_add_portrait;EirikaSepia;Left;LyonF;Right",
             "speak;LyonF;...I yield.|The point is yours, Eirika.|You're swift, aren't you?|Compared to you, I'm-|I've been bested at fencing by a woman.|Pitiful crown prince, am I not?",
@@ -87,7 +87,7 @@
             "add_tag;174;Boss",
             "give_skill;174;Revival_Stone;no_banner",
             "give_skill;174;SleepI;no_banner",
-            "autolevel_to;Rennac;20",
+            "",
             "add_base_convo;Hidden Passage***",
             "if;game.check_alive(\"Ross\") and game.check_alive(\"Dozla\")",
             "add_base_convo;Desert Challenge***",
@@ -136,7 +136,17 @@
             "transition;open;500",
             "music_fade_back",
             "add_talk;Eirika;Rennac",
-            "add_talk;Larachel;Rennac"
+            "add_talk;Larachel;Rennac",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Rennac;Feat_Unit",
+            "    autolevel_to;Rennac;4",
+            "    give_exp;Rennac;100",
+            "    autolevel_to;Rennac;14",
+            "    give_exp;Rennac;100",
+            "    autolevel_to;Rennac;20",
+            "else",
+            "    autolevel_to;Rennac;20",
+            "end"
         ],
         "nid": "14A Intro"
     }

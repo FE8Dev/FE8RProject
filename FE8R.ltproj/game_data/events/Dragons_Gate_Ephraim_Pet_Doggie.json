@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Pet_Doggie",
+        "trigger": "on_talk",
+        "level_nid": "Dragons_Gate_Ephraim",
+        "condition": "check_pair('Ephraim', 'Doggie')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;DoggiePet;Do you want to pet the dog?;Yes,No",
+            "",
+            "if;game.game_vars['DoggiePet'] == 'Yes'",
+            "if;game.get_random(0,20) == 20",
+            "speak;;The dog happily wags its tail!|It seems to really like you!|You feel great now!",
+            "else",
+            "speak;;The dog lets out a little happy bark.|You smile a little bit at your decision.",
+            "end",
+            "",
+            "else",
+            "speak;;Maybe later...",
+            "end"
+        ],
+        "nid": "Dragons_Gate_Ephraim Pet_Doggie"
+    }
+]

@@ -30,6 +30,10 @@
             "else",
             "sound;ItemBreak",
             "alert;The Trainee Seed failed...",
+            "end",
+            "if;{e:game.get_unit('{unit}').level} == 10",
+            "promote;{unit}",
+            "else",
             "end"
         ],
         "nid": "Global Trainee_Seed"

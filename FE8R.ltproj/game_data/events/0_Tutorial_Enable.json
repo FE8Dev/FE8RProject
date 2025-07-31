@@ -38,7 +38,24 @@
             "        game_var;TutorialNewMech;False",
             "    end",
             "end",
-            "remove_portrait;Anna"
+            "remove_portrait;Anna",
+            "",
+            "#enable feats",
+            "textbox;FeatTextbox;Enabling this will give all your units access to Feat skills. Feats are special multiclass skills that you can pick from a random list at level 5 and 15. These skills stack ontop of your normal class skills. <red>Warning these will make your units very OP, so note that if you chose this mode.</>;bottom;235;6",
+            "",
+            "choice;FeatEnabler;Enable All Units Feat Mode?;Yes,No;;h;top",
+            "",
+            "remove_table;FeatTextbox",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Eirika;Feat_Unit",
+            "    add_tag;Seth;Feat_Unit",
+            "    set_unit_level;Seth;4",
+            "    give_exp;Seth;100",
+            "    set_unit_level;Seth;14",
+            "    give_exp;Seth;100",
+            "else",
+            "end",
+            ""
         ],
         "nid": "0 Tutorial_Enable"
     }

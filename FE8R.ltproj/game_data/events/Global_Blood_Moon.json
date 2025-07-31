@@ -22,6 +22,9 @@
             "give_skill;Jaffar;Blood_Moon_Stop;no_banner",
             "for;enemy_unit;{u for u in game.level.units if u.team in ['enemy','enemy2']}",
             "give_skill;{enemy_unit};Blood_Moon_Global;no_banner",
+            "endf",
+            "for;enemy_unit;{u for u in game.units if u.position and u.team in ['enemy', 'enemy2']}",
+            "give_skill;{enemy_unit};Blood_Moon_Global;no_banner",
             "endf"
         ],
         "nid": "Global Blood_Moon"

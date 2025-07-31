@@ -16,8 +16,17 @@
             "speak;Cormag;Where is she?|Where is she?!|I will avenge my brother!",
             "remove_portrait;Cormag",
             "change_ai;Cormag;Pursue",
-            "autolevel_to;Cormag;20",
-            "set_unit_level;Cormag;20"
+            "",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Cormag;Feat_Unit",
+            "    autolevel_to;Cormag;4",
+            "    give_exp;Cormag;100",
+            "    autolevel_to;Cormag;14",
+            "    give_exp;Cormag;100",
+            "    autolevel_to;Cormag;20",
+            "else",
+            "    autolevel_to;Cormag;20",
+            "end"
         ],
         "nid": "13A ReinT5Cormag"
     }

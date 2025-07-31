@@ -1,15 +1,18 @@
 [
     {
         "name": "Ch5aAchievement",
-        "trigger": "unit_death",
+        "trigger": "combat_end",
         "level_nid": "5",
-        "condition": "unit.nid == '127' and check_pair('Joshua', '127')",
+        "condition": "check_pair('Joshua', '127')",
         "commands": [],
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;(is_dead(unit2) and unit.nid == 'Joshua') or (is_dead(unit) and unit2.nid == 'Joshua')",
             "complete_achievement;ch5a;true;banner",
-            "give_money;2000"
+            "give_money;2000",
+            "else",
+            "end"
         ],
         "nid": "5 Ch5aAchievement"
     }

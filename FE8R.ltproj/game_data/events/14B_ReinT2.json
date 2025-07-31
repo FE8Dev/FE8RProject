@@ -17,7 +17,21 @@
             "add_portrait;Rennac;Right",
             "speak;Rennac;Ha ha!|The spectacular capital of Grado.|The richest city on the continent.|With my expert eye, I judge this card to be an incomparable treasure.|Once this is all done, I think I'll just scamper off on my own...",
             "remove_portrait;Rennac",
-            "add_group;ReinT2;ReinT2;fade;closest"
+            "add_group;ReinT2;ReinT2;fade;closest",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Rennac;Feat_Unit",
+            "    autolevel_to;Rennac;4",
+            "    give_exp;Rennac;100",
+            "    autolevel_to;Rennac;14",
+            "    give_exp;Rennac;100",
+            "    autolevel_to;Rennac;20",
+            "    ",
+            "else",
+            "    ",
+            "    ",
+            "    autolevel_to;Rennac;20",
+            "    ",
+            "end"
         ],
         "nid": "14B ReinT2"
     }

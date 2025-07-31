@@ -31,7 +31,13 @@
             "remove_portrait;Gilliam",
             "music_clear",
             "autolevel_to;Gilliam;4",
-            "add_lore;Gilliam"
+            "add_lore;Gilliam",
+            "if;game.game_vars['FeatEnabler'] == 'Yes'",
+            "    add_tag;Franz;Feat_Unit",
+            "    add_tag;Gilliam;Feat_Unit",
+            "else",
+            "end",
+            ""
         ],
         "nid": "1 GilliamFranzArrive"
     }

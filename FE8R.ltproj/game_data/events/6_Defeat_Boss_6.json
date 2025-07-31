@@ -1,7 +1,7 @@
 [
     {
         "name": "Defeat Boss_6",
-        "trigger": "unit_death",
+        "trigger": "combat_end",
         "level_nid": "6",
         "condition": "game.check_dead(\"Novala\")",
         "commands": [],
@@ -57,6 +57,10 @@
             "add_unit;101;7,16;immediate;closest",
             "add_unit;102;6,15;immediate;closest",
             "add_unit;103;7,15;immediate;closest",
+            "if;game.turncount <= 8",
+            "add_unit;Anna;0,6;immediate;closest",
+            "else",
+            "end",
             "if;game.level_vars['Village1'] == True",
             "make_generic;Civ1;Citizen;1;other;None",
             "add_unit;Civ1;11,18;immediate;closest",
@@ -81,6 +85,7 @@
             "add_talk;Eirika;101",
             "add_talk;Eirika;102",
             "add_talk;Eirika;103",
+            "add_talk;Eirika;Anna",
             "level_var;Training;True",
             "game_var;TrainingIndicator;0",
             "if;game.check_alive('Lute')",

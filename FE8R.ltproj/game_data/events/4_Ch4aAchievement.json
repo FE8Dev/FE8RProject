@@ -3,7 +3,7 @@
         "name": "Ch4aAchievement",
         "trigger": "combat_end",
         "level_nid": "4",
-        "condition": "game.level_vars['LuteStrike'] == 6",
+        "condition": "game.level_vars['LuteStrike'] == 5 and (unit.nid == 'Lute' or unit2.nid == 'Lute')",
         "commands": [],
         "only_once": true,
         "priority": 10,
