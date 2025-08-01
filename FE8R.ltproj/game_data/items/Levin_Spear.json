@@ -2,7 +2,7 @@
     {
         "nid": "Levin_Spear",
         "name": "Levin Spear",
-        "desc": "A lance charged with thunder. <green>CD:2</>\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>SPD + MOV*2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*2))}</>).",
+        "desc": "A lance charged with thunder. <green>CD:1</>\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>SPD + MOV*2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*2))}</>),targets weaker of DEF or RES.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             16,
@@ -65,7 +65,7 @@
             ],
             [
                 "cooldown",
-                2
+                1
             ],
             [
                 "battle_cast_anim",
@@ -97,6 +97,10 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
             ]
         ]
     }
