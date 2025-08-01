@@ -2,7 +2,7 @@
     {
         "nid": "Glacier_Lance",
         "name": "Glacier Lance",
-        "desc": "A frozen lance that send shivers down the enemy's spine.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON*1.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "A frozen lance that send shivers down the enemy's spine.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON*1.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             6,
@@ -96,6 +96,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     }

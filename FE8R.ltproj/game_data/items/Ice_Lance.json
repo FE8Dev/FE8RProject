@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Lance",
         "name": "Ice Lance",
-        "desc": "A lance cold to the touch.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')))}</>).",
+        "desc": "A lance cold to the touch.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             13,
@@ -96,6 +96,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     }
