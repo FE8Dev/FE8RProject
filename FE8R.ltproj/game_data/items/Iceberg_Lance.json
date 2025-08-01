@@ -2,7 +2,7 @@
     {
         "nid": "Iceberg_Lance",
         "name": "Iceberg Lance",
-        "desc": "A lance found on an iceberg.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON*2.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A lance found on an iceberg.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON*2.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             5,
@@ -96,6 +96,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     }

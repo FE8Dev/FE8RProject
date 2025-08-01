@@ -2,7 +2,7 @@
     {
         "nid": "Yuki_Onna_Bow",
         "name": "Yuki-Onna Bow",
-        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical, RES + SPD (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered, RES + SPD (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -107,6 +107,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     }
