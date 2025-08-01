@@ -84089,6 +84089,14 @@
             [
                 "cooldown",
                 2
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84139,6 +84147,14 @@
             [
                 "cooldown",
                 2
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84284,6 +84300,14 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84338,6 +84362,14 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84483,6 +84515,14 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84682,6 +84722,14 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -84736,6 +84784,14 @@
             [
                 "attack_after_combat",
                 null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
             ]
         ]
     },
@@ -142774,11 +142830,11 @@
             ],
             [
                 "damage",
-                3
+                5
             ],
             [
                 "hit",
-                80
+                90
             ],
             [
                 "crit",
@@ -142842,11 +142898,11 @@
             ],
             [
                 "damage",
-                6
+                8
             ],
             [
                 "hit",
-                90
+                95
             ],
             [
                 "crit",
@@ -142922,11 +142978,11 @@
             ],
             [
                 "damage",
-                10
+                12
             ],
             [
                 "hit",
-                100
+                110
             ],
             [
                 "crit",
@@ -143004,15 +143060,15 @@
             ],
             [
                 "damage",
-                13
+                17
             ],
             [
                 "hit",
-                110
+                125
             ],
             [
                 "crit",
-                25
+                30
             ],
             [
                 "weight",
@@ -143095,7 +143151,7 @@
             ],
             [
                 "hit",
-                70
+                80
             ],
             [
                 "crit",
@@ -143103,7 +143159,7 @@
             ],
             [
                 "weight",
-                8
+                6
             ],
             [
                 "level_exp",
@@ -143197,7 +143253,7 @@
             ],
             [
                 "hit",
-                80
+                85
             ],
             [
                 "crit",
@@ -143555,6 +143611,10 @@
             [
                 "status_on_equip",
                 "Bow_and_Light_Range_Penalty"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -143636,6 +143696,10 @@
                     "Nomad_Strike",
                     "Bow_and_Light_Range_Penalty"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -143726,6 +143790,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_MID"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -143826,6 +143894,10 @@
             [
                 "pre_combat_effect",
                 "Legend"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -167917,7 +167989,7 @@
             ],
             [
                 "eval_target_restrict_2",
-                "DB.classes.get('{e:game.get_unit('{unit}').klass}').tier == 0"
+                "get_klass(unit).tier == 0"
             ],
             [
                 "uses_options",
