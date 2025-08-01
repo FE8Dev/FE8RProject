@@ -3617,7 +3617,7 @@
     {
         "nid": "Frost_Sword",
         "name": "Frost Sword",
-        "desc": "A superchilled sword.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +1 SPD.",
+        "desc": "A superchilled sword.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +1 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             8,
@@ -3724,13 +3724,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Shiver_Sword",
         "name": "Shiver Sword",
-        "desc": "A sword crafted with reinforced ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3 SPD.",
+        "desc": "A sword crafted with reinforced ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered,  MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             9,
@@ -3843,13 +3847,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Glacier_Blade",
         "name": "Glacier Sword",
-        "desc": "A heavy blade composed of magical pure ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), +10 SPD.",
+        "desc": "A heavy blade composed of magical pure ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered , MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), +10 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             2,
@@ -3960,6 +3968,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -5819,7 +5831,7 @@
             ],
             [
                 "max_range",
-                2
+                1
             ],
             [
                 "damage",
@@ -5852,10 +5864,6 @@
             [
                 "battle_cast_anim",
                 "Elfire"
-            ],
-            [
-                "cooldown",
-                2
             ],
             [
                 "value",
@@ -5937,7 +5945,7 @@
             ],
             [
                 "max_range",
-                2
+                1
             ],
             [
                 "damage",
@@ -6016,10 +6024,6 @@
                 1500
             ],
             [
-                "cooldown",
-                2
-            ],
-            [
                 "ignore_line_of_sight",
                 null
             ],
@@ -6055,7 +6059,7 @@
             ],
             [
                 "max_range",
-                2
+                1
             ],
             [
                 "damage",
@@ -6088,10 +6092,6 @@
             [
                 "battle_cast_anim",
                 "Volcano"
-            ],
-            [
-                "cooldown",
-                1
             ],
             [
                 "magic",
@@ -6286,7 +6286,7 @@
             ],
             [
                 "max_range",
-                1
+                2
             ],
             [
                 "damage",
@@ -6399,7 +6399,7 @@
             ],
             [
                 "max_range",
-                1
+                3
             ],
             [
                 "damage",
@@ -7390,7 +7390,7 @@
     {
         "nid": "Ice_Lance",
         "name": "Ice Lance",
-        "desc": "A lance cold to the touch.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')))}</>).",
+        "desc": "A lance cold to the touch.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             13,
@@ -7484,13 +7484,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Glacier_Lance",
         "name": "Glacier Lance",
-        "desc": "A frozen lance that send shivers down the enemy's spine.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON*1.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "A frozen lance that send shivers down the enemy's spine.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON*1.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             6,
@@ -7584,13 +7588,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Iceberg_Lance",
         "name": "Iceberg Lance",
-        "desc": "A lance found on an iceberg.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + CON*2.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A lance found on an iceberg.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:2)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + CON*2.5 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             5,
@@ -7684,6 +7692,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -11320,7 +11332,7 @@
     {
         "nid": "Ice_Axe",
         "name": "Ice Axe",
-        "desc": "An axe made with some magical snow. <green>CD:2</>\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + SKL/3 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')//3))}</>).",
+        "desc": "An axe made with some magical snow. <green>CD:2</>\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SKL/3 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,
@@ -11429,13 +11441,17 @@
                 [
                     "Power_Chop_E"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Glacier_Axe",
         "name": "Glacier Axe",
-        "desc": "A magical axe naturally formed from the zenith of a mountain. <green>CD:2</>\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + SKL/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A magical axe naturally formed from the zenith of a mountain. <green>CD:2</>\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SKL/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -11544,13 +11560,17 @@
                 [
                     "Power_Chop_C"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Avalanche_Axe",
         "name": "Avalanche Axe",
-        "desc": "A long forgotten axe formed during a cataclysmic frozen disaster. <green>CD:1</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>RES + SKL (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A long forgotten axe formed during a cataclysmic frozen disaster. <green>CD:1</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SKL (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             9,
@@ -11659,6 +11679,10 @@
                 [
                     "Power_Chop_SS"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -13635,7 +13659,7 @@
             ],
             [
                 "damage",
-                9
+                14
             ],
             [
                 "hit",
@@ -13750,7 +13774,7 @@
             ],
             [
                 "damage",
-                14
+                19
             ],
             [
                 "hit",
@@ -13865,7 +13889,7 @@
             ],
             [
                 "damage",
-                22
+                27
             ],
             [
                 "hit",
@@ -13980,7 +14004,7 @@
             ],
             [
                 "damage",
-                7
+                12
             ],
             [
                 "hit",
@@ -14078,7 +14102,7 @@
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -14176,7 +14200,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -14274,7 +14298,7 @@
             ],
             [
                 "damage",
-                7
+                12
             ],
             [
                 "hit",
@@ -14389,7 +14413,7 @@
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -14504,7 +14528,7 @@
             ],
             [
                 "damage",
-                17
+                22
             ],
             [
                 "hit",
@@ -14619,7 +14643,7 @@
             ],
             [
                 "damage",
-                11
+                16
             ],
             [
                 "hit",
@@ -14721,7 +14745,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -14823,7 +14847,7 @@
             ],
             [
                 "damage",
-                22
+                27
             ],
             [
                 "hit",
@@ -14896,7 +14920,7 @@
     {
         "nid": "Ice_Bow",
         "name": "Ice Bow",
-        "desc": "A bow imbued with an ice gem.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>RES + SPD/3 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//3))}</>).",
+        "desc": "A bow imbued with an ice gem.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SPD/3 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             0,
@@ -14925,7 +14949,7 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
@@ -14993,13 +15017,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Glacier_Bow",
         "name": "Glacier Bow",
-        "desc": "A bow crafted by the most beautiful ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>RES + SPD/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A bow crafted by the most beautiful ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SPD/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             9,
@@ -15028,7 +15056,7 @@
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -15096,13 +15124,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Yuki_Onna_Bow",
         "name": "Yuki-Onna Bow",
-        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical, RES + SPD (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A Bow used by a woman with control over ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered, RES + SPD (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -15131,7 +15163,7 @@
             ],
             [
                 "damage",
-                17
+                22
             ],
             [
                 "hit",
@@ -15207,6 +15239,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -15234,7 +15270,7 @@
             ],
             [
                 "damage",
-                23
+                28
             ],
             [
                 "hit",
@@ -15346,7 +15382,7 @@
             ],
             [
                 "damage",
-                28
+                33
             ],
             [
                 "hit",
@@ -15458,7 +15494,7 @@
             ],
             [
                 "damage",
-                36
+                41
             ],
             [
                 "hit",
@@ -15578,7 +15614,7 @@
             ],
             [
                 "damage",
-                4
+                9
             ],
             [
                 "hit",
@@ -15691,7 +15727,7 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
@@ -15804,7 +15840,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -15909,7 +15945,7 @@
             ],
             [
                 "damage",
-                24
+                29
             ],
             [
                 "hit",
@@ -16024,7 +16060,7 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
@@ -16131,7 +16167,7 @@
             ],
             [
                 "damage",
-                18
+                23
             ],
             [
                 "hit",
@@ -16238,7 +16274,7 @@
             ],
             [
                 "damage",
-                25
+                30
             ],
             [
                 "hit",
@@ -17782,7 +17818,7 @@
     {
         "nid": "Ice_Staff",
         "name": "Ice Staff",
-        "desc": "Staff that's cold to the touch.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>).",
+        "desc": "Staff that's cold to the touch.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, cannot be countered, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             4,
@@ -17876,13 +17912,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Frozen_Staff",
         "name": "Frozen Staff",
-        "desc": "Staff that freezes anything it touches.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>).",
+        "desc": "Staff that freezes anything it touches.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, cannot be countered, MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             5,
@@ -17976,13 +18016,17 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
     {
         "nid": "Shiva_Staff",
         "name": "Shiva Staff",
-        "desc": "A staff that has been touched by a forgotten legend.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
+        "desc": "A staff that has been touched by a forgotten legend.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, cannot be countered, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), cannot be countered.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             6,
@@ -18076,6 +18120,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -20719,6 +20767,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -20845,6 +20897,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -20971,6 +21027,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -21097,6 +21157,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -23024,6 +23088,10 @@
                 [
                     "Ancient_Pact_E"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -23151,6 +23219,10 @@
                 [
                     "Ancient_Pact_C"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -23280,6 +23352,10 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -23418,6 +23494,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cannot_be_countered",
                 null
             ]
         ]
@@ -26179,7 +26259,7 @@
             ],
             [
                 "cooldown",
-                2
+                4
             ],
             [
                 "menu_after_combat",
@@ -26210,6 +26290,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -26296,7 +26380,7 @@
             ],
             [
                 "cooldown",
-                2
+                4
             ],
             [
                 "effective_damage",
@@ -26358,6 +26442,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -26456,7 +26544,7 @@
             ],
             [
                 "cooldown",
-                2
+                4
             ],
             [
                 "exempt_from_dual_strike",
@@ -26508,6 +26596,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -28986,7 +29078,7 @@
             ],
             [
                 "damage",
-                19
+                24
             ],
             [
                 "hit",
@@ -29080,7 +29172,7 @@
             ],
             [
                 "damage",
-                15
+                20
             ],
             [
                 "hit",
@@ -30608,7 +30700,7 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
@@ -30793,7 +30885,7 @@
             ],
             [
                 "damage",
-                25
+                30
             ],
             [
                 "hit",
@@ -32262,7 +32354,7 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
@@ -32348,7 +32440,7 @@
             ],
             [
                 "damage",
-                11
+                16
             ],
             [
                 "hit",
@@ -42975,7 +43067,7 @@
             ],
             [
                 "damage",
-                9
+                14
             ],
             [
                 "hit",
@@ -43062,7 +43154,7 @@
             ],
             [
                 "damage",
-                13
+                19
             ],
             [
                 "hit",
@@ -49418,7 +49510,7 @@
             ],
             [
                 "damage",
-                3
+                9
             ],
             [
                 "hit",
@@ -49508,7 +49600,7 @@
             ],
             [
                 "damage",
-                4
+                9
             ],
             [
                 "hit",
@@ -49586,7 +49678,7 @@
             ],
             [
                 "damage",
-                7
+                12
             ],
             [
                 "hit",
@@ -49672,7 +49764,7 @@
             ],
             [
                 "damage",
-                11
+                16
             ],
             [
                 "hit",
@@ -49850,7 +49942,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -49950,7 +50042,7 @@
             ],
             [
                 "damage",
-                11
+                16
             ],
             [
                 "hit",
@@ -50139,7 +50231,7 @@
             ],
             [
                 "damage",
-                2
+                7
             ],
             [
                 "hit",
@@ -50231,7 +50323,7 @@
             ],
             [
                 "damage",
-                4
+                9
             ],
             [
                 "hit",
@@ -65742,7 +65834,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -65852,7 +65944,7 @@
             ],
             [
                 "damage",
-                26
+                31
             ],
             [
                 "hit",
@@ -65962,7 +66054,7 @@
             ],
             [
                 "damage",
-                33
+                38
             ],
             [
                 "hit",
@@ -66072,7 +66164,7 @@
             ],
             [
                 "damage",
-                40
+                45
             ],
             [
                 "weapon_type",
@@ -67064,7 +67156,7 @@
             ],
             [
                 "damage",
-                9
+                14
             ],
             [
                 "hit",
@@ -67175,7 +67267,7 @@
             ],
             [
                 "damage",
-                14
+                19
             ],
             [
                 "hit",
@@ -67286,7 +67378,7 @@
             ],
             [
                 "damage",
-                22
+                27
             ],
             [
                 "hit",
@@ -69073,7 +69165,7 @@
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -69180,7 +69272,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -69283,7 +69375,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -71367,7 +71459,7 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
@@ -71483,7 +71575,7 @@
             ],
             [
                 "damage",
-                15
+                20
             ],
             [
                 "hit",
@@ -71599,7 +71691,7 @@
             ],
             [
                 "damage",
-                22
+                27
             ],
             [
                 "hit",
@@ -71757,7 +71849,7 @@
             ],
             [
                 "damage",
-                3
+                8
             ],
             [
                 "hit",
@@ -71853,7 +71945,7 @@
             ],
             [
                 "damage",
-                6
+                11
             ],
             [
                 "hit",
@@ -71958,7 +72050,7 @@
             ],
             [
                 "damage",
-                9
+                14
             ],
             [
                 "hit",
@@ -73300,6 +73392,10 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -73545,6 +73641,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -74227,7 +74327,7 @@
             ],
             [
                 "damage",
-                7
+                20
             ],
             [
                 "hit",
@@ -74328,7 +74428,7 @@
             ],
             [
                 "damage",
-                13
+                25
             ],
             [
                 "hit",
@@ -74442,7 +74542,7 @@
             ],
             [
                 "damage",
-                22
+                30
             ],
             [
                 "hit",
@@ -75037,7 +75137,7 @@
     {
         "nid": "Cold_Light",
         "name": "Cold Light",
-        "desc": "A pillar of ice that destroys evil.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1), Reduced Vision\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>+50 Crit damage.",
+        "desc": "A pillar of ice that destroys evil.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1), Reduced Vision\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>(AOE:1), +50 Crit damage.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             8,
@@ -77728,6 +77828,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -85053,6 +85157,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -85185,6 +85293,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -85317,6 +85429,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -85416,7 +85532,7 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
@@ -85527,7 +85643,7 @@
             ],
             [
                 "damage",
-                13
+                18
             ],
             [
                 "hit",
@@ -85638,7 +85754,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "weapon_type",
@@ -85862,6 +85978,10 @@
             [
                 "eval_available",
                 "u(\"Amelia\").wexp['Lance'] < 120"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -85958,6 +86078,10 @@
             [
                 "eval_available",
                 "u(\"Amelia\").wexp['Lance'] >= 120 and u(\"Amelia\").wexp['Lance'] < 240"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -86054,6 +86178,10 @@
             [
                 "eval_available",
                 "u(\"Amelia\").wexp['Lance'] >= 240 and u(\"Amelia\").wexp['Lance'] < 420"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -86169,6 +86297,10 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -86284,6 +86416,10 @@
                 [
                     "Thunder"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -87210,6 +87346,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -87326,6 +87466,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -87442,6 +87586,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -87867,11 +88015,11 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
-                80
+                100
             ],
             [
                 "weapon_type",
@@ -87949,11 +88097,11 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
-                100
+                110
             ],
             [
                 "weapon_type",
@@ -88031,11 +88179,11 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
-                110
+                120
             ],
             [
                 "weapon_type",
@@ -88117,7 +88265,7 @@
             ],
             [
                 "damage",
-                30
+                35
             ],
             [
                 "weapon_type",
@@ -88199,7 +88347,7 @@
             ],
             [
                 "damage",
-                35
+                40
             ],
             [
                 "weapon_type",
@@ -88410,6 +88558,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -88535,6 +88687,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -88660,6 +88816,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -91705,6 +91865,10 @@
             [
                 "eval_available",
                 "u(\"Marisa\").wexp['Sword'] >= 480"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -98220,6 +98384,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -98905,6 +99073,10 @@
             [
                 "alternate_damage_formula",
                 "MAG_SKL_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99057,6 +99229,10 @@
             [
                 "alternate_damage_formula",
                 "MAG_SKL_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99197,6 +99373,10 @@
             [
                 "alternate_damage_formula",
                 "MAG_SKL_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99339,6 +99519,10 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99481,6 +99665,10 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99623,6 +99811,10 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99760,6 +99952,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -99897,6 +100093,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -100034,6 +100234,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_STRONG"
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -102672,6 +102876,10 @@
                 [
                     "Ancient_Pact_E"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -102786,6 +102994,10 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -102900,6 +103112,10 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -111010,6 +111226,10 @@
                 [
                     "Ancient_Pact_E"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -111128,6 +111348,10 @@
                 [
                     "Ancient_Pact_C"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -111246,6 +111470,10 @@
                 [
                     "Ancient_Pact_A"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -111364,6 +111592,10 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -111476,6 +111708,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -114939,7 +115175,7 @@
             ],
             [
                 "damage",
-                10
+                15
             ],
             [
                 "hit",
@@ -115044,7 +115280,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -115150,7 +115386,7 @@
             ],
             [
                 "damage",
-                22
+                27
             ],
             [
                 "hit",
@@ -116119,7 +116355,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -116237,7 +116473,7 @@
             ],
             [
                 "damage",
-                25
+                30
             ],
             [
                 "hit",
@@ -116357,7 +116593,7 @@
             ],
             [
                 "damage",
-                30
+                35
             ],
             [
                 "hit",
@@ -116477,7 +116713,7 @@
             ],
             [
                 "damage",
-                35
+                40
             ],
             [
                 "hit",
@@ -118299,10 +118535,6 @@
                 }
             ],
             [
-                "shove",
-                2
-            ],
-            [
                 "ignore_line_of_sight",
                 null
             ],
@@ -118318,6 +118550,10 @@
                 [
                     "Frozen_AOE_Splash"
                 ]
+            ],
+            [
+                "shove_flex_stops",
+                2
             ]
         ]
     },
@@ -118418,10 +118654,6 @@
                 }
             ],
             [
-                "shove",
-                4
-            ],
-            [
                 "ignore_line_of_sight",
                 null
             ],
@@ -118437,6 +118669,10 @@
                 [
                     "Frozen_AOE_Splash"
                 ]
+            ],
+            [
+                "shove_flex_stops",
+                4
             ]
         ]
     },
@@ -118539,10 +118775,6 @@
                 }
             ],
             [
-                "shove",
-                6
-            ],
-            [
                 "ignore_line_of_sight",
                 null
             ],
@@ -118560,6 +118792,10 @@
                     "Frozen_AOE_Splash",
                     "Shadowblight_AOE_Splash"
                 ]
+            ],
+            [
+                "shove_flex_stops",
+                6
             ]
         ]
     },
@@ -121013,7 +121249,7 @@
             ],
             [
                 "damage",
-                30
+                35
             ],
             [
                 "hit",
@@ -121135,7 +121371,7 @@
             ],
             [
                 "damage",
-                38
+                43
             ],
             [
                 "hit",
@@ -121261,7 +121497,7 @@
             ],
             [
                 "damage",
-                46
+                51
             ],
             [
                 "hit",
@@ -121390,7 +121626,7 @@
             ],
             [
                 "damage",
-                52
+                57
             ],
             [
                 "hit",
@@ -126165,6 +126401,10 @@
             [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -127312,7 +127552,7 @@
             ],
             [
                 "damage",
-                15
+                20
             ],
             [
                 "hit",
@@ -127395,7 +127635,7 @@
             ],
             [
                 "damage",
-                17
+                22
             ],
             [
                 "hit",
@@ -127470,6 +127710,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -127497,7 +127741,7 @@
             ],
             [
                 "damage",
-                23
+                28
             ],
             [
                 "hit",
@@ -127575,6 +127819,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -128094,6 +128342,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -128325,6 +128577,10 @@
             ],
             [
                 "allow_less_than_max_targets",
+                null
+            ],
+            [
+                "cannot_be_countered",
                 null
             ]
         ]
@@ -128586,6 +128842,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -137648,7 +137908,7 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
@@ -137744,7 +138004,7 @@
             ],
             [
                 "damage",
-                13
+                18
             ],
             [
                 "hit",
@@ -137840,7 +138100,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -137932,7 +138192,7 @@
             ],
             [
                 "damage",
-                30
+                35
             ],
             [
                 "hit",
@@ -138024,7 +138284,7 @@
             ],
             [
                 "damage",
-                42
+                47
             ],
             [
                 "hit",
@@ -140439,7 +140699,7 @@
             ],
             [
                 "damage",
-                4
+                9
             ],
             [
                 "hit",
@@ -140562,7 +140822,7 @@
             ],
             [
                 "damage",
-                8
+                13
             ],
             [
                 "hit",
@@ -140681,7 +140941,7 @@
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -140804,7 +141064,7 @@
             ],
             [
                 "damage",
-                18
+                23
             ],
             [
                 "hit",
@@ -140928,7 +141188,7 @@
             ],
             [
                 "damage",
-                25
+                30
             ],
             [
                 "hit",
@@ -142830,7 +143090,7 @@
             ],
             [
                 "damage",
-                5
+                7
             ],
             [
                 "hit",
@@ -142898,7 +143158,7 @@
             ],
             [
                 "damage",
-                8
+                9
             ],
             [
                 "hit",
@@ -142978,7 +143238,7 @@
             ],
             [
                 "damage",
-                12
+                14
             ],
             [
                 "hit",
@@ -143060,7 +143320,7 @@
             ],
             [
                 "damage",
-                17
+                19
             ],
             [
                 "hit",
@@ -143147,7 +143407,7 @@
             ],
             [
                 "damage",
-                3
+                6
             ],
             [
                 "hit",
@@ -143249,7 +143509,7 @@
             ],
             [
                 "damage",
-                7
+                10
             ],
             [
                 "hit",
@@ -143348,7 +143608,7 @@
             ],
             [
                 "damage",
-                12
+                15
             ],
             [
                 "hit",
@@ -143449,7 +143709,7 @@
             ],
             [
                 "damage",
-                16
+                19
             ],
             [
                 "hit",
@@ -143560,7 +143820,7 @@
             ],
             [
                 "damage",
-                4
+                12
             ],
             [
                 "hit",
@@ -143642,7 +143902,7 @@
             ],
             [
                 "damage",
-                8
+                16
             ],
             [
                 "hit",
@@ -143727,7 +143987,7 @@
             ],
             [
                 "damage",
-                16
+                24
             ],
             [
                 "hit",
@@ -143821,7 +144081,7 @@
             ],
             [
                 "damage",
-                20
+                28
             ],
             [
                 "hit",
@@ -145904,7 +146164,7 @@
             ],
             [
                 "damage",
-                15
+                20
             ],
             [
                 "weight",
@@ -146148,6 +146408,10 @@
             [
                 "allow_same_target",
                 null
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -146273,6 +146537,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cannot_be_countered",
                 null
             ]
         ]
@@ -146400,6 +146668,10 @@
             [
                 "exempt_from_dual_strike",
                 null
+            ],
+            [
+                "cannot_be_countered",
+                null
             ]
         ]
     },
@@ -146525,6 +146797,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "cannot_be_countered",
                 null
             ]
         ]
@@ -158001,7 +158277,7 @@
             ],
             [
                 "damage",
-                3
+                8
             ],
             [
                 "hit",
@@ -158091,7 +158367,7 @@
             ],
             [
                 "damage",
-                11
+                16
             ],
             [
                 "hit",
@@ -158184,7 +158460,7 @@
             ],
             [
                 "damage",
-                16
+                21
             ],
             [
                 "hit",
@@ -158283,7 +158559,7 @@
             ],
             [
                 "damage",
-                24
+                29
             ],
             [
                 "hit",
@@ -158393,7 +158669,7 @@
             ],
             [
                 "damage",
-                35
+                40
             ],
             [
                 "hit",
@@ -158501,7 +158777,7 @@
             ],
             [
                 "damage",
-                24
+                29
             ],
             [
                 "hit",
@@ -158611,7 +158887,7 @@
             ],
             [
                 "damage",
-                5
+                10
             ],
             [
                 "hit",

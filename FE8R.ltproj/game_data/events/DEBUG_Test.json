@@ -1,14 +1,18 @@
 [
     {
         "name": "Test",
-        "trigger": "unit_wait",
+        "trigger": "level_start",
         "level_nid": "DEBUG",
         "condition": "True",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
-            "happy_chatter;Eirika"
+            "if;get_subitem('Eirika', 'Eirikas_Arsenal', 'Rapier')",
+            "speak;Eirika;Yes",
+            "else",
+            "speak;Eirika;No",
+            "end"
         ],
         "nid": "DEBUG Test"
     }
