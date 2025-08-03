@@ -1,15 +1,15 @@
 [
     {
-        "nid": "Fletchling",
-        "name": "Fletchling",
-        "desc": "One who is starting to learn to fight with bows. <icon>Infantry</>",
-        "tier": 0,
+        "nid": "Holy_Maiden",
+        "name": "Holy Maiden",
+        "desc": "An archer who uses ancient techniques lost to Jehanna. <icon>Infantry</>",
+        "tier": 1,
         "movement_group": "Light Foot",
         "promotes_from": null,
         "turns_into": [
-            "Female_Archer",
-            "Outlaw",
-            "Kyudoka"
+            "T2_Ballista_Neimi",
+            "Hierophant",
+            "Nomad"
         ],
         "tags": [
             "AutoPromote",
@@ -17,26 +17,26 @@
         ],
         "max_level": 20,
         "bases": {
-            "HP": 18,
-            "STR": 4,
-            "MAG": 0,
-            "SKL": 3,
-            "SPD": 4,
-            "LCK": 0,
-            "DEF": 3,
-            "RES": 0,
-            "CON": 7,
+            "HP": 26,
+            "STR": 12,
+            "MAG": 5,
+            "SKL": 12,
+            "SPD": 10,
+            "LCK": 8,
+            "DEF": 6,
+            "RES": 4,
+            "CON": 9,
             "MOV": 5
         },
         "growths": {
-            "HP": 70,
-            "STR": 35,
-            "MAG": 0,
-            "SKL": 40,
-            "SPD": 32,
-            "LCK": 35,
-            "DEF": 15,
-            "RES": 20,
+            "HP": 85,
+            "STR": 55,
+            "MAG": 25,
+            "SKL": 90,
+            "SPD": 75,
+            "LCK": 70,
+            "DEF": 40,
+            "RES": 35,
             "CON": 0,
             "MOV": 0
         },
@@ -65,46 +65,46 @@
             "MOV": 0
         },
         "max_stats": {
-            "HP": 60,
-            "STR": 20,
-            "MAG": 20,
-            "SKL": 20,
-            "SPD": 20,
-            "LCK": 30,
-            "DEF": 20,
-            "RES": 20,
-            "CON": 20,
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 40,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
             "MOV": 15
         },
         "learned_skills": [
             [
                 1,
-                "Paragon"
+                "Monk_Pair_Up_hide"
             ],
             [
-                1,
-                "Super_Trainee"
+                5,
+                "Old_Faith"
             ],
             [
-                1,
-                "Thief_Pair_Up_hide"
+                15,
+                "Shimmering_Barrier"
             ]
         ],
         "wexp_gain": {
             "Sword": [
                 false,
                 0,
-                300
+                null
             ],
             "Lance": [
                 false,
                 0,
-                300
+                null
             ],
             "Axe": [
                 false,
                 0,
-                300
+                null
             ],
             "Bow": [
                 true,
@@ -114,27 +114,27 @@
             "Staff": [
                 false,
                 0,
-                300
+                null
             ],
             "Light": [
                 false,
                 0,
-                300
+                null
             ],
             "Anima": [
                 false,
                 0,
-                300
+                null
             ],
             "Dark": [
                 false,
                 0,
-                300
+                null
             ],
             "Default": [
                 false,
                 0,
-                300
+                null
             ],
             "Monster": [
                 false,
@@ -142,13 +142,13 @@
                 null
             ]
         },
-        "icon_nid": "Generic_Portrait_Archer",
+        "icon_nid": "Generic_Portrait_Sniper",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "Archer (F) Improved {Der}-stand",
-        "combat_anim_nid": "Fletchling",
+        "map_sprite_nid": "Archer",
+        "combat_anim_nid": "Kyudoka",
         "fields": []
     }
 ]

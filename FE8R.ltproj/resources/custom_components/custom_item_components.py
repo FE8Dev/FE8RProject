@@ -1134,7 +1134,7 @@ class RestoreNoRestriction(ItemComponent):
 
 class MultiDescSkill(ItemComponent):
     nid = 'multi_desc_skill'
-    desc = "Define a list of Skill NIDs whose info boxes should be attached to this skill's multi desc info box."
+    desc = "Define a list of Skill NIDs whose info boxes should be attached to this item's multi desc info box."
     tag = ItemTags.UTILITY
     author = 'Eretein'
     
@@ -1145,7 +1145,7 @@ class MultiDescSkill(ItemComponent):
 
 class MultiDescItem(ItemComponent):
     nid = 'multi_desc_item'
-    desc = "Define a list of Item NIDs whose info boxes should be attached to this skill's multi desc info box."
+    desc = "Define a list of Item NIDs whose info boxes should be attached to this item's multi desc info box."
     tag = ItemTags.UTILITY
     
     author = "Eretein"
@@ -1156,6 +1156,20 @@ class MultiDescItem(ItemComponent):
         return self.value, self.expose[1]
         
         
+
+   
+class MultiDescLore(ItemComponent):
+    nid = 'multi_desc_lore'
+    desc = "Define a list of Lore NIDs whose info boxes should be attached to this item's multi desc info box."
+    tag = SkillTags.ADVANCED
+    
+    author = "Eretein"
+    
+    expose = (ComponentType.List, ComponentType.Lore)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]
+
 
 class StatusAfterCombat(ItemComponent):
     nid = 'status_after_combat'

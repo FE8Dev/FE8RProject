@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Crit_P10",
-        "name": "+10 Crit",
-        "desc": "Grants +10 bonus Crit.",
+        "nid": "Crit_Damage_Bonus_10_hide",
+        "name": "Crit Damage Bonus 10 hide",
+        "desc": "Gives +10 bonus Crit damage.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -14,12 +14,12 @@
                 null
             ],
             [
-                "stack",
-                999
+                "eval_crit_additional",
+                "10"
             ],
             [
-                "dynamic_crit_accuracy",
-                "10"
+                "lost_on_end_chapter",
+                null
             ]
         ]
     }

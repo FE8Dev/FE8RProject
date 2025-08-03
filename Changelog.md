@@ -1,8 +1,21 @@
+## TBR
+```
+gave discipline to Pro as a personal skill
+
+
+added oni mask, and gave it to Garcia
+
+
+
+
+
+
+```
 ## 02/aug/25
 ```
 Fixed Doggo recruitment crash
 
-
+Fixed trainees not getting feats
 
 
 

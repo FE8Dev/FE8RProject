@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Crit_Damage_Bonus_50",
-        "name": "Crit Damage Bonus 50",
-        "desc": "Gives +50 bonus Crit damage.",
+        "nid": "Crit_P20_hide",
+        "name": "+20 Crit",
+        "desc": "Grants +20 bonus Crit.\nEffect accumulates with +10 Crit Bonus.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            5,
+            3,
             12
         ],
         "components": [
@@ -14,12 +14,12 @@
                 null
             ],
             [
-                "eval_crit_additional",
-                "50"
+                "stack",
+                999
             ],
             [
-                "lost_on_end_chapter",
-                null
+                "dynamic_crit_accuracy",
+                "20"
             ]
         ]
     }
