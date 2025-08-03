@@ -1,0 +1,29 @@
+[
+    {
+        "nid": "Fireball_Splash",
+        "name": "Fireball",
+        "desc": "<red>CA:</>A wyvern fireball attack. <green>2 times per chapter.</>\nRange: 2-4, AoE 3, cannot double, no DS, inflicts seared, effective against Horses, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "savage_blow_fates_Fifty_Per",
+                3
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Seared",
+                    "range": 3
+                }
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "name": "DevDesc",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "game_var;RNG;game.get_random(1,5)",
+            "",
+            "if;{v:RNG}==1",
+            "    game_var;DEV;\"When DEV was born, he spanked the doctor\"",
+            "elif;{v:RNG}==2",
+            "    game_var;DEV;\"DEV was once bitten by a snake.after 10 days of agonizing pain, the snake died\"",
+            "elif;{v:RNG}==3",
+            "    game_var;DEV;\"When DEV says something wrong, the universe makes it become real by fear.\"",
+            "elif;{v:RNG}==4",
+            "    game_var;DEV;\"DEV one cried a single tear. That's how the oceans were made.\"",
+            "elif;{v:RNG}==5",
+            "    game_var;DEV;\"DEV is immortal, because death is afraid of what will happen if he meets DEV\"",
+            "end",
+            ""
+        ],
+        "nid": "Global DevDesc"
+    }
+]

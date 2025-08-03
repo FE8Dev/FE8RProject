@@ -2,7 +2,7 @@
     {
         "nid": "Stun",
         "name": "Stun",
-        "desc": "Cannot move/attack for a turn while stunned.",
+        "desc": "Cannot move/attack for 1 round of combat or 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -47,7 +47,37 @@
                 "MapFlying"
             ],
             [
-                "end_time",
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "3",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "time",
                 1
             ]
         ]

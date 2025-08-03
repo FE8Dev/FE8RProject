@@ -33526,7 +33526,7 @@
     {
         "nid": "Sleep",
         "name": "Sleep",
-        "desc": "Unit is asleep for 2 turns.",
+        "desc": "Unit cannot move/attack for 2 rounds of combat or 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -33534,8 +33534,12 @@
         ],
         "components": [
             [
+                "hidden_if_inactive",
+                null
+            ],
+            [
                 "condition",
-                "'Boss' not in unit.tags"
+                "not has_skill(unit, 'SleepI')"
             ],
             [
                 "negative",
@@ -33545,7 +33549,7 @@
                 "unit_flickering_tint",
                 [
                     0,
-                    0,
+                    85,
                     255
                 ]
             ],
@@ -33574,6 +33578,36 @@
                 "has_tags",
                 [
                     "Sleep"
+                ]
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "3",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
                 ]
             ],
             [
@@ -34153,7 +34187,7 @@
     {
         "nid": "Stun",
         "name": "Stun",
-        "desc": "Cannot move/attack for a turn while stunned.",
+        "desc": "Cannot move/attack for 1 round of combat or 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -34198,7 +34232,37 @@
                 "MapFlying"
             ],
             [
-                "end_time",
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "3",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "time",
                 1
             ]
         ]
@@ -52961,7 +53025,7 @@
     {
         "nid": "Dustcloud",
         "name": "Dustcloud",
-        "desc": "Imbues all weapons used by this unit with the wind element.",
+        "desc": "Imbues all weapons used by this unit with the wind element.\nGrants units +5 SPD.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -52975,6 +53039,15 @@
             [
                 "item_override",
                 "Dustcloud_Ability"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
             ]
         ]
     },
@@ -53068,6 +53141,33 @@
             ],
             [
                 "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Fireball_Splash",
+        "name": "Fireball",
+        "desc": "<red>CA:</>A wyvern fireball attack. <green>2 times per chapter.</>\nRange: 2-4, AoE 3, cannot double, no DS, inflicts seared, effective against Horses, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            35
+        ],
+        "components": [
+            [
+                "savage_blow_fates_Fifty_Per",
+                3
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Seared",
+                    "range": 3
+                }
+            ],
+            [
+                "hidden",
                 null
             ]
         ]
@@ -68508,6 +68608,22 @@
                     "Horse",
                     "Armor"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "DevEmblem",
+        "name": "Dev Emblem",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "upkeep_event",
+                "Global DevDesc"
             ]
         ]
     }
