@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Shimmering_Barrier",
+        "name": "Shimmering_Barrier",
+        "desc": "Reduce damage this unit takes by LCK (<red>{e: (unit.get_stat('LCK'))}</>) when attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode =='defense'"
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('LCK')"
+            ]
+        ]
+    }
+]

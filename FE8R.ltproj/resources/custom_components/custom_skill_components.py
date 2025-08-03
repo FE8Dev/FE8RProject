@@ -1703,6 +1703,22 @@ class MultiDescItem(SkillComponent):
     def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
         return self.value, self.expose[1]
 
+
+    
+class MultiDescLore(SkillComponent):
+    nid = 'multi_desc_lore'
+    desc = "Define a list of Lore NIDs whose info boxes should be attached to this skill's multi desc info box."
+    tag = SkillTags.ADVANCED
+    
+    author = "Eretein"
+    
+    expose = (ComponentType.List, ComponentType.Lore)
+    
+    def multi_desc(self, unit, skill) ->  tuple[list[str], ComponentType]:
+        return self.value, self.expose[1]
+
+
+
 class EndstepChargeIncrease(SkillComponent):
     nid = 'Endstep_charge_increase'
     desc = "Increases charge of skill by the *value* set here each endstep. Usually used in conjunction with `Build Charge` skill component. Will not go below 0 or above `total_charge`"

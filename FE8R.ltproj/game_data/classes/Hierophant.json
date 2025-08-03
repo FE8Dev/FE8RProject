@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Shugosha",
-        "name": "Shugosha",
+        "nid": "Hierophant",
+        "name": "Hierophant",
         "desc": "A mystical archer with strange magic. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Kyudoka",
+        "promotes_from": "Holy_Maiden",
         "turns_into": [
             "T3_Silver_Knight_Sniper",
             "T3_Female_Marksmen",
@@ -79,7 +79,15 @@
         "learned_skills": [
             [
                 1,
-                "Mage_Pair_Up_T2_hide"
+                "Monk_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Mana_Strike_Proc"
+            ],
+            [
+                15,
+                "Class Skills_1"
             ]
         ],
         "wexp_gain": {
@@ -109,13 +117,13 @@
                 null
             ],
             "Light": [
-                false,
-                0,
+                true,
+                120,
                 null
             ],
             "Anima": [
-                true,
-                120,
+                false,
+                0,
                 360
             ],
             "Dark": [
