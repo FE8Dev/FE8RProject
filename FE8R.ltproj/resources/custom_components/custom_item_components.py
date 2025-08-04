@@ -1161,7 +1161,7 @@ class MultiDescItem(ItemComponent):
 class MultiDescLore(ItemComponent):
     nid = 'multi_desc_lore'
     desc = "Define a list of Lore NIDs whose info boxes should be attached to this item's multi desc info box."
-    tag = SkillTags.ADVANCED
+    tag = ItemTags.ADVANCED
     
     author = "Eretein"
     

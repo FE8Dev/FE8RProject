@@ -1,4 +1,4 @@
-## TBR
+## 08-03-25
 ```
 gave discipline to Pro as a personal skill
 
@@ -6,12 +6,17 @@ gave discipline to Pro as a personal skill
 added oni mask, and gave it to Garcia
 
 
+Death Blow replaces Fury for fighters and visa verca for Brigands
+
+
+Additional fixes for feat system for all units feat mode
+
 
 
 
 
 ```
-## 02/aug/25
+## 08-02-25
 ```
 Fixed Doggo recruitment crash
 
@@ -26,7 +31,7 @@ Fixed trainees not getting feats
 ```
 
 
-## 01/aug/25
+## 08-01-25
 ```
 Added tons of items to the DG shop
 
