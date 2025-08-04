@@ -2,12 +2,25 @@
     {
         "nid": "Fell_Arrow",
         "name": "Fell Arrow",
-        "desc": "magic is X5 effective vs fliers",
-        "icon_nid": null,
+        "desc": "Bows are X5 effective vs fliers and light",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            14,
+            25
         ],
-        "components": []
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "item_override",
+                "Fell_Arrow_item"
+            ]
+        ]
     }
 ]
