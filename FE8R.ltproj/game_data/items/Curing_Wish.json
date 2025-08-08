@@ -1,0 +1,49 @@
+[
+    {
+        "nid": "Curing_Wish",
+        "name": "Curing Wish",
+        "desc": "Restores 75% HP of all allies and removes all negative statuses, but at the cost of 75% of unit's current HP. One use per chapter.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_heal_and_restore",
+                "target.get_max_hp() * 0.75"
+            ],
+            [
+                "all_allies_except_self_aoe",
+                null
+            ],
+            [
+                "eval_hp_cost_midbattle",
+                "unit.get_hp() * 0.75"
+            ]
+        ]
+    }
+]

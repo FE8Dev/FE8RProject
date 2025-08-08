@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Blinding_Wave_Effect",
+        "name": "Blinding Wave",
+        "desc": "Attacks get  (AOE:2) range and inflict Reduced Vision for one turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            33
+        ],
+        "components": [
+            [
+                "enemy_oversplash",
+                2
+            ],
+            [
+                "give_status_after_hit",
+                "Reduced_Vision"
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    }
+]
