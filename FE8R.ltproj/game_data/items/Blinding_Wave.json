@@ -1,0 +1,49 @@
+[
+    {
+        "nid": "Blinding_Wave",
+        "name": "Blinding Wave",
+        "desc": "Makes attacks on this turn have an AOE effect and inflict Reduced Vision on enemies. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            33
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    139,
+                    255,
+                    139
+                ]
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Blinding_Wave_Effect"
+            ]
+        ]
+    }
+]

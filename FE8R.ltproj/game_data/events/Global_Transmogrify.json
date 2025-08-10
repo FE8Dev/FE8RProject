@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Transmogrify",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "choice;type_choice;Add which unit type?;Infantry,Magic,Mounted,Armor,Flying,Monster,Dragon;",
+            "",
+            "for;_skills;{s for s in unit2.skills if 'Tag_' in s.nid}",
+            "remove_skill;{unit2};{_skills};no_banner",
+            "endf",
+            "",
+            "",
+            "speak;Eirika;{v:type_choice}",
+            "give_skill;{unit2};Tag_{v:type_choice};no_banner",
+            "speak;Eirika;{v:type_choice}",
+            "",
+            "",
+            ""
+        ],
+        "nid": "Global Transmogrify"
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "nid": "Protect",
+        "name": "Protect",
+        "desc": "Makes allies inmune to damage and status effects during one turn. One use per chapter.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Protected"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_anim",
+                "StatUpSpark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "SkillActivate"
+            ]
+        ]
+    }
+]
