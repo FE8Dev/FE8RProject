@@ -2,7 +2,7 @@
     {
         "nid": "Super_Trainee",
         "name": "Super Trainee",
-        "desc": "This unit gains Crit equal to the unit's level.",
+        "desc": "This unit gains Crit equal to the unit's level/2.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "dynamic_crit_accuracy",
-                "unit.get_internal_level()"
+                "unit.get_internal_level() // 2"
             ]
         ]
     }

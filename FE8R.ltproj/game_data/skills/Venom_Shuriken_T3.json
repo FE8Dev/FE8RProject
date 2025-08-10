@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "Venom_Shuriken_T3",
+        "name": "Venom Shuriken",
+        "desc": "+3 Sword range.\nSword attacks inflict the Venom to enemies on hit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            29
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "modify_maximum_range",
+                3
+            ],
+            [
+                "item_override",
+                "Kunai_Effect"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Venom_Shuriken_Venom_hide"
+                ]
+            ]
+        ]
+    }
+]

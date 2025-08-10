@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Bowrange_P1_T1",
+        "name": "Bowrange +1",
+        "desc": "+1 range to Bows.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            29
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "copysafe",
+                []
+            ],
+            [
+                "feat",
+                null
+            ]
+        ]
+    }
+]

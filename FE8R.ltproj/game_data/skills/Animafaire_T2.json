@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Animafaire_T2",
+        "name": "Animafaire",
+        "desc": "+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima.",
+        "icon_nid": "Anima",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Anima'"
+            ],
+            [
+                "dynamic_damage",
+                "6"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "15"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

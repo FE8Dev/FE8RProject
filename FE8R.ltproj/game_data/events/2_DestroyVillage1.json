@@ -3,7 +3,7 @@
         "name": "DestroyVillage1",
         "trigger": "unit_wait",
         "level_nid": "2",
-        "condition": "region.nid == 'DestroyVillage1' and unit.team == 'enemy'",
+        "condition": "region.nid == 'DestroyVillage1' and unit.team == 'enemy' and unit.klass == 'Brigand'",
         "commands": [],
         "only_once": true,
         "priority": 20,

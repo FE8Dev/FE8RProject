@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dark_Sight",
+        "name": "Dark Sight",
+        "desc": "+2 range to Dark magic.\nAttacks ignore enemy's RES when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ]
+        ]
+    }
+]

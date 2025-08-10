@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Dark_Sight_T3",
+        "name": "Dark Sight",
+        "desc": "+2 to Dark range.\nAttacks ignore enemy's RES when unit is at Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Dark_Sight_Buff_hide"
+                ]
+            ]
+        ]
+    }
+]

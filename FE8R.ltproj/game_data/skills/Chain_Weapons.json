@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Chain_Weapons",
+        "name": "Chain Weapons",
+        "desc": "+1 range to Swords, Lances, and Axes.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) in ('Sword', 'Lance', 'Axe')"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ]
+        ]
+    }
+]

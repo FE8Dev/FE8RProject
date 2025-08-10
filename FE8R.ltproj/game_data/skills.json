@@ -440,7 +440,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -980,7 +981,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -1009,7 +1011,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -1038,7 +1041,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -1067,7 +1071,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -1096,7 +1101,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -1247,7 +1253,7 @@
             ],
             [
                 "combat_condition",
-                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Sword', 'Axe', 'Lance', 'Bow')"
+                "item_system.weapon_type(target, target.get_weapon()) in ('Sword', 'Axe', 'Lance', 'Bow')"
             ]
         ]
     },
@@ -2437,7 +2443,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -2528,7 +2535,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -3241,7 +3249,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -3277,7 +3286,7 @@
         "components": [
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark')"
+                "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
                 "item_override",
@@ -4708,7 +4717,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -4913,6 +4923,56 @@
             [
                 "item_override",
                 "Drenched_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Neutrality_Book",
+        "name": "Neutrality Book",
+        "desc": "For Neutrality Book item.",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_art",
+                "Neutrality_Book_CA"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ]
+        ]
+    },
+    {
+        "nid": "Neutrality_Book_CA",
+        "name": "Neutrality Book",
+        "desc": "For Neutrality Book item.",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "item_override",
+                "Neutrality_Book_CA"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
             ]
         ]
     },
@@ -6414,7 +6474,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -6439,7 +6500,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -6464,7 +6526,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -6489,7 +6552,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -6514,7 +6578,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -9792,7 +9857,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -10475,7 +10541,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -10508,7 +10575,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -10616,7 +10684,7 @@
     {
         "nid": "Super_Trainee",
         "name": "Super Trainee",
-        "desc": "This unit gains Crit equal to the unit's level.",
+        "desc": "This unit gains Crit equal to the unit's level/2.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -10625,7 +10693,7 @@
         "components": [
             [
                 "dynamic_crit_accuracy",
-                "unit.get_internal_level()"
+                "unit.get_internal_level() // 2"
             ]
         ]
     },
@@ -10705,7 +10773,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -12384,9 +12453,9 @@
         ]
     },
     {
-        "nid": "Bowrange_P1_Art",
+        "nid": "Bowrange_P1",
         "name": "Bowrange +1",
-        "desc": "<red>CA:</>Increase maximum bow range by 1. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -12402,65 +12471,8 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Bowrange_P1_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
-            ]
-        ]
-    },
-    {
-        "nid": "Bowrange_P1_Skill",
-        "name": "Bowrange +1",
-        "desc": "<red>CA:</>Increase maximum bow range by 1. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            29
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "1"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Bowrange_P1_EP_hide",
-        "name": "Bowrange +1",
-        "desc": "<red>CA:</>Increase maximum bow range by 1. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "1"
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -12764,7 +12776,7 @@
     },
     {
         "nid": "Royal_Peace_Decree_Aura",
-        "name": "Royal Peace Decree Aura",
+        "name": "Royal Peace Decree",
         "desc": "Enemies within 2 spaces cannot Double normally.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -13131,7 +13143,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -14197,9 +14210,9 @@
         ]
     },
     {
-        "nid": "Staff_Range_P1_Art",
+        "nid": "Staff_Range_P1",
         "name": "Staff Range +1",
-        "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Staves.",
         "icon_nid": "Skills",
         "icon_index": [
             2,
@@ -14212,64 +14225,11 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) not in ('Anima', 'Light', 'Dark', 'Sword', 'Lance', 'Axe', 'Bow', 'Monster')"
+                "item_system.weapon_type(unit, item) == 'Staff'"
             ],
             [
-                "combat_art",
-                "Staff_Range_P1_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) not in ('Anima', 'Light', 'Dark', 'Sword', 'Lance', 'Axe', 'Bow', 'Monster')"
-            ]
-        ]
-    },
-    {
-        "nid": "Staff_Range_P1_Skill",
-        "name": "Staff Range +1",
-        "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            2,
-            6
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "1 if unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) not in ('Anima', 'Light', 'Dark', 'Sword', 'Lance', 'Axe', 'Bow', 'Monster') else 0"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Staff_Range_P1_EP_hide",
-        "name": "Staff Range +1",
-        "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            2,
-            6
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "1 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -14701,9 +14661,9 @@
         ]
     },
     {
-        "nid": "Animafaire_Art",
+        "nid": "Animafaire",
         "name": "Animafaire",
-        "desc": "<red>CA:</>+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima.\n",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -14719,93 +14679,20 @@
                 "item_system.weapon_type(unit, item) == 'Anima'"
             ],
             [
-                "combat_art",
-                "Animafaire_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Anima'"
-            ]
-        ]
-    },
-    {
-        "nid": "Animafaire_Skill",
-        "name": "Animafaire",
-        "desc": "<red>CA:</>+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
                 "dynamic_damage",
                 "6"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "15"
-            ],
-            [
-                "dynamic_avoid",
-                "15"
             ],
             [
                 "dynamic_accuracy",
                 "30"
             ],
             [
-                "modify_maximum_range",
-                1
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Animafaire_EP_hide",
-        "name": "Animafaire",
-        "desc": "<red>CA:</>+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Anima",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Anima'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "dynamic_damage",
-                "6"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "15"
-            ],
-            [
                 "dynamic_avoid",
                 "15"
             ],
             [
-                "dynamic_accuracy",
-                "30"
+                "dynamic_crit_accuracy",
+                "15"
             ],
             [
                 "modify_maximum_range",
@@ -14890,9 +14777,9 @@
         ]
     },
     {
-        "nid": "Light_Range_P1_Art_Light",
+        "nid": "Light_Range_P1_Light",
         "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Light tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14905,47 +14792,18 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+                "item_system.weapon_type(unit, item) == 'Light'"
             ],
-            [
-                "combat_art",
-                "Light_Range_P1_Skill_Light"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
-            ]
-        ]
-    },
-    {
-        "nid": "Light_Range_P1_Skill_Light",
-        "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            29
-        ],
-        "components": [
             [
                 "modify_maximum_range",
                 1
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
             ]
         ]
     },
     {
-        "nid": "Light_Range_P1_EP_Light_hide",
-        "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "nid": "Light_Range_P1_Staff_hide",
+        "name": "Knowledge of Justice (<icon>Staff</>)",
+        "desc": "+1 range to Light tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14958,112 +14816,11 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
+                "item_system.weapon_type(unit, item) == 'Staff'"
             ],
             [
                 "modify_maximum_range",
-                1
-            ]
-        ]
-    },
-    {
-        "nid": "Light_Range_P1_Art_Staff_hide",
-        "name": "Knowledge of Justice (<icon>Staff</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
-            ],
-            [
-                "combat_art",
-                "Light_Range_P1_Skill_Staff"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
-            ]
-        ]
-    },
-    {
-        "nid": "Light_Range_P1_Skill_Staff",
-        "name": "Knowledge of Justice (<icon>Staff</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            29
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Light_Range_P1_EP_Staff_hide",
-        "name": "Knowledge of Justice (<icon>Staff</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Combat Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
-            ]
-        ]
-    },
-    {
-        "nid": "Staff_Range_P2_hide",
-        "name": "Staff Range +2",
-        "desc": "+2 Range to Staves.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            2,
-            6
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+                2
             ]
         ]
     },
@@ -15155,7 +14912,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -15431,9 +15189,9 @@
         ]
     },
     {
-        "nid": "Chain_Weapons_Art",
+        "nid": "Chain_Weapons",
         "name": "Chain Weapons",
-        "desc": "<red>CA: </>Give +1 Range to Swords, Axes, and Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Swords, Lances, and Axes.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -15446,68 +15204,11 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
+                "item_system.weapon_type(unit, item) in ('Sword', 'Lance', 'Axe')"
             ],
             [
-                "combat_art",
-                "Chain_Weapons_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
-            ]
-        ]
-    },
-    {
-        "nid": "Chain_Weapons_Skill",
-        "name": "Chain Weapons",
-        "desc": "<red>CA: </>Give +1 Range to Swords, Axes, and Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            8,
-            6
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "1"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Chain_Weapons_EP_hide",
-        "name": "Chain Weapons",
-        "desc": "<red>CA: </>Give +1 Range to Swords, Axes, and Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            8,
-            6
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
-            ],
-            [
-                "eval_max_range",
-                "1"
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -16177,7 +15878,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -16291,7 +15993,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -16469,6 +16172,10 @@
             [
                 "combat_condition",
                 "(unit2.team == 'enemy' or unit2.team == 'enemy2') and not has_skill(target, 'Venomous_Effect')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
             ]
         ]
     },
@@ -16763,9 +16470,9 @@
         ]
     },
     {
-        "nid": "Long_Throw_Art",
+        "nid": "Long_Throw",
         "name": "Long Throw",
-        "desc": "<red>CA: </>+1 Lance Range. +40 Crit damage when using Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Lances. +40 Crit damage when using Lances.",
         "icon_nid": "Skills",
         "icon_index": [
             5,
@@ -16779,67 +16486,6 @@
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Lance'"
-            ],
-            [
-                "combat_art",
-                "Long_Throw_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance'"
-            ]
-        ]
-    },
-    {
-        "nid": "Long_Throw_Skill",
-        "name": "Long Throw",
-        "desc": "<red>CA: </>+1 Lance Range. +40 Crit damage when using Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            5,
-            7
-        ],
-        "components": [
-            [
-                "modify_maximum_range",
-                1
-            ],
-            [
-                "eval_crit_additional",
-                "40"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Long_Throw_EP_hide",
-        "name": "Long Throw",
-        "desc": "<red>CA: </>+1 Lance Range. +40 Crit damage when using Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            5,
-            7
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Lance'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
             ],
             [
                 "modify_maximum_range",
@@ -17879,7 +17525,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -18144,7 +17791,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -18523,7 +18171,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -18613,9 +18262,9 @@
         ]
     },
     {
-        "nid": "Magiteck_Blanks_Art",
+        "nid": "Magiteck_Blanks",
         "name": "Magiteck Blanks",
-        "desc": "<red>CA: </>Reduces bows minimum range by 1. <green>CD:0 Turns</>\nEffect is active during EP. Enemy kills increase STR/MAG by 2.\nMax 30 stacks.\n\n",
+        "desc": "Reduces bows minimum range by 1.\nEnemy kills increase STR/MAG by 2.\nMax 30 stacks.\n\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -18631,12 +18280,8 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Magiteck_Blanks_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "modify_minimum_range",
+                -1
             ]
         ]
     },
@@ -18660,36 +18305,9 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
-            ]
-        ]
-    },
-    {
-        "nid": "Magiteck_Blanks_EP_hide",
-        "name": "Magiteck Blanks",
-        "desc": "<red>CA: </>Reduces bows minimum range by 1. <green>CD:0 Turns</>\nEffect is active during EP. Enemy kills increase STR/MAG by 2.\nMax 30 stacks.\n\n",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            40
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "modify_minimum_range",
-                -1
             ]
         ]
     },
@@ -18959,9 +18577,9 @@
         ]
     },
     {
-        "nid": "Bowrange_P2_Art",
+        "nid": "Bowrange_P2",
         "name": "Bowrange +2",
-        "desc": "<red>CA: </>Increase the range of Bows by 2. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+2 range to Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -18977,65 +18595,8 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Bowrange_P2_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
-            ]
-        ]
-    },
-    {
-        "nid": "Bowrange_P2_Skill",
-        "name": "Bowrange +2",
-        "desc": "<red>CA: </>Increase the range of Bows by 2. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            29
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Bowrange_P2_EP_hide",
-        "name": "Bowrange +2",
-        "desc": "<red>CA: </>Increase the range of Bows by 2. <green>CD:0 Turns</>\nThis effect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2"
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -19534,7 +19095,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -19620,7 +19182,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -20489,7 +20052,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -21114,10 +20678,6 @@
                 null
             ],
             [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow', 'Anima', 'Sword', 'Light', 'Dark', 'Lance'"
-            ],
-            [
                 "eval_max_range",
                 "unit.get_stat('MAG') // 30"
             ]
@@ -21138,10 +20698,6 @@
                 null
             ],
             [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow', 'Anima', 'Sword', 'Light', 'Dark', 'Lance'"
-            ],
-            [
                 "eval_max_range",
                 "unit.get_stat('MAG') // 30"
             ]
@@ -21160,10 +20716,6 @@
             [
                 "class_skill",
                 null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow', 'Anima', 'Sword', 'Light', 'Dark', 'Lance'"
             ],
             [
                 "eval_max_range",
@@ -21543,7 +21095,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -21661,9 +21214,9 @@
         ]
     },
     {
-        "nid": "Gungnir_Art",
+        "nid": "Gungnir",
         "name": "Gungnir",
-        "desc": "<red>CA: </>Add DEF to attacks and increases lance/bow range by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
+        "desc": "Add DEF to attacks and +2 range when using Lances or Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -21676,76 +21229,15 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Lance', 'Bow'"
-            ],
-            [
-                "combat_art",
-                "Gungnir_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance', 'Bow'"
-            ]
-        ]
-    },
-    {
-        "nid": "Gungnir_Skill",
-        "name": "Gungnir",
-        "desc": "<red>CA: </>Add DEF to attacks and increases lance/bow range by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            28
-        ],
-        "components": [
-            [
-                "dynamic_damage",
-                "unit.get_stat('DEF')"
+                "item_system.weapon_type(unit, item) in ('Bow', 'Lance')"
             ],
             [
                 "modify_maximum_range",
                 2
             ],
             [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Gungnir_EP_hide",
-        "name": "Gungnir",
-        "desc": "<red>CA: </>Add DEF to attacks and increases lance/bow range by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            9,
-            28
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Lance', 'Bow'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
                 "dynamic_damage",
                 "unit.get_stat('DEF')"
-            ],
-            [
-                "modify_maximum_range",
-                2
             ]
         ]
     },
@@ -22250,11 +21742,11 @@
     {
         "nid": "Magic_RangeP1",
         "name": "Magical Overcharge",
-        "desc": "All magic attacks gain (AOE:2).",
+        "desc": "All Magical attacks gain (AOE:2).",
         "icon_nid": "skill_icons",
         "icon_index": [
-            12,
-            29
+            13,
+            42
         ],
         "components": [
             [
@@ -22263,7 +21755,7 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima', 'Staff'"
+                "item_funcs.is_magic(unit, unit.get_weapon())"
             ],
             [
                 "smart_oversplash",
@@ -22615,9 +22107,9 @@
         ]
     },
     {
-        "nid": "Dark_Mastery_Art",
+        "nid": "Dark_Mastery",
         "name": "Dark Mastery",
-        "desc": "<red>CA: </>+2 range on Dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.",
+        "desc": "+2 range with Dark magic.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -22633,65 +22125,8 @@
                 "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
-                "combat_art",
-                "Dark_Mastery_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark'"
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Mastery_Skill",
-        "name": "Dark Mastery",
-        "desc": "<red>CA: </>+2 range on Dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            38
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Mastery_EP_hide",
-        "name": "Dark Mastery",
-        "desc": "<red>CA: </>+2 range on Dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            38
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Dark'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2"
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -23002,9 +22437,9 @@
         ]
     },
     {
-        "nid": "Chains_of_Death_Art",
+        "nid": "Chains_of_Death",
         "name": "Chains of Death",
-        "desc": "<red>CA: </>+1 Sword range. <green>CD:0 Turns</>\nEffect is active during EP. Unit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
+        "desc": "+1 Sword range.\nUnit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -23020,12 +22455,8 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "combat_art",
-                "Chains_of_Death_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Sword'"
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -23049,36 +22480,9 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
-            ]
-        ]
-    },
-    {
-        "nid": "Chains_of_Death_EP_hide",
-        "name": "Chains of Death",
-        "desc": "<red>CA: </>+1 Sword range. <green>CD:0 Turns</>\nEffect is active during EP. Unit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            4,
-            43
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "1"
             ]
         ]
     },
@@ -23412,9 +22816,9 @@
         ]
     },
     {
-        "nid": "Venom_Shuriken_Art",
+        "nid": "Venom_Shuriken",
         "name": "Venom Shuriken",
-        "desc": "<red>CA: </>+3 Sword range. <green>CD:0 Turns</>\nEffect is always active during EP.\nSword attacks inflict the Venom to enemies on hit.",
+        "desc": "+3 Sword range.\nSword attacks inflict the Venom to enemies on hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -23430,16 +22834,12 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "combat_art",
-                "Venom_Shuriken_Skill"
+                "modify_maximum_range",
+                3
             ],
             [
                 "item_override",
                 "Kunai_Effect"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Sword'"
             ]
         ]
     },
@@ -23491,44 +22891,9 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
-            ]
-        ]
-    },
-    {
-        "nid": "Venom_Shuriken_EP_hide",
-        "name": "Venom Shuriken",
-        "desc": "<red>CA: </>+3 Sword range. <green>CD:0 Turns</>\nEffect is always active during EP.\nSword attacks inflict the Venom to enemies on hit.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "3"
-            ],
-            [
-                "item_override",
-                "Kunai_Effect"
-            ],
-            [
-                "give_status_after_hit",
-                "Venomous_Effect"
             ]
         ]
     },
@@ -23863,7 +23228,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -25688,9 +25054,9 @@
         ]
     },
     {
-        "nid": "Dragoons_Spear_Art",
+        "nid": "Dragoons_Spear",
         "name": "Dragoon's Spear",
-        "desc": "<red>CA: </>Increase the range of lances by 2. <green>CD:0 Turns</>\nEffect is always active during EP.\nIf enemy is Seared, attack becomes (AOE:1).",
+        "desc": "+2 range to Lances.\nIf enemy is Seared, attacks become (AOE:1).",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -25706,12 +25072,8 @@
                 "item_system.weapon_type(unit, item) == 'Lance'"
             ],
             [
-                "combat_art",
-                "Dragoons_Spear_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.weapon_type(unit, item) == 'Lance'"
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -25736,59 +25098,6 @@
             [
                 "enemy_oversplash",
                 1
-            ]
-        ]
-    },
-    {
-        "nid": "Dragoons_Spear_Skill",
-        "name": "Dragoon's Spear",
-        "desc": "<red>CA: </>Increase the range of lances by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            36
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Dragoons_Spear_EP_hide",
-        "name": "Dragoon's Spear",
-        "desc": "<red>CA: </>Increase the range of lances by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            1,
-            36
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Lance'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2"
             ]
         ]
     },
@@ -26060,9 +25369,9 @@
         ]
     },
     {
-        "nid": "Dark_Blessing_Art",
+        "nid": "Dark_Blessing",
         "name": "Dark Blessing",
-        "desc": "<red>CA: </>+1 range to axes and dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.\nImmune to Negative status effects.",
+        "desc": "+1 range to Axes and Dark magic.\nImmune to Negative status effects.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -26079,72 +25388,11 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Dark', 'Axe'"
+                "item_system.weapon_type(unit, item) in ('Dark', 'Axe')"
             ],
             [
-                "combat_art",
-                "Dark_Blessing_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark', 'Axe'"
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Blessing_Skill",
-        "name": "Dark Blessing",
-        "desc": "<red>CA: </>+1 range to axes and dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.\nImmune to Negative status effects.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            24
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "1"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Blessing_EP_hide",
-        "name": "Dark Blessing",
-        "desc": "<red>CA: </>+1 range to axes and dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.\nImmune to Negative status effects.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            24
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "immune_status",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Dark', 'Axe'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "1"
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -26464,7 +25712,7 @@
     {
         "nid": "Aegis_Stab",
         "name": "Aegis Stab",
-        "desc": "<red>CA:</>A powerful magical lunge that deals damage to all units between the unit and the target. <green>CD:4 Turns</>\nUses MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>).",
+        "desc": "<red>CA:</>A powerful magical lunge that deals damage to all units between the unit and the target. <green>CD:4 Turns</>\nUses MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD'))))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -27332,7 +26580,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -28563,9 +27812,9 @@
         ]
     },
     {
-        "nid": "Dark_Sight_Art",
+        "nid": "Dark_Sight",
         "name": "Dark Sight",
-        "desc": "<red>CA: </>+2 to Dark range. <green>CD:0 Turns</>\nEffect is always active during EP.\nAttacks ignore enemy's RES when unit is at Max HP.",
+        "desc": "+2 range to Dark magic.\nAttacks ignore enemy's RES when unit is at Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -28581,65 +27830,8 @@
                 "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
-                "combat_art",
-                "Dark_Sight_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark'"
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Sight_Skill",
-        "name": "Dark Sight",
-        "desc": "<red>CA: </>+2 to Dark range. <green>CD:0 Turns</>\nEffect is always active during EP.\nAttacks ignore enemy's RES when unit is at Max HP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            34
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Sight_EP_hide",
-        "name": "Dark Sight",
-        "desc": "<red>CA: </>+2 to Dark range. <green>CD:0 Turns</>\nEffect is always active during EP.\nAttacks ignore enemy's RES when unit is at Max HP.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            34
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Dark'"
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2"
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -28854,7 +28046,7 @@
     {
         "nid": "Fiendish_Blessing",
         "name": "Fiendish Blessing",
-        "desc": "<red>CA: </>Staff Range +2. <green>CD:0 Turns</>\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
+        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -28898,12 +28090,8 @@
                 "item_system.weapon_type(unit, item) == 'Staff'"
             ],
             [
-                "combat_art",
-                "Fiendish_Blessing_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Staff'"
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -28927,32 +28115,9 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
-            ]
-        ]
-    },
-    {
-        "nid": "Fiendish_Blessing_EP_hide",
-        "name": "Fiendish Blessing",
-        "desc": "<red>CA: </>Staff Range +2. <green>CD:0 Turns</>\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            5,
-            38
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
             ]
         ]
     },
@@ -31411,7 +30576,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -31443,7 +30609,7 @@
     {
         "nid": "Supportive_Recharge",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.\nDoes not work with Multiheal staves.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV and EXP gain by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -31471,7 +30637,7 @@
     {
         "nid": "Supportive_Recharge_Debuff",
         "name": "Spent",
-        "desc": "-75% MOV for 1 turn.",
+        "desc": "-75% MOV and EXP gain for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -31486,6 +30652,10 @@
                         0.25
                     ]
                 ]
+            ],
+            [
+                "exp_multiplier",
+                0.25
             ],
             [
                 "time",
@@ -31549,7 +30719,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -31747,7 +30918,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -32969,7 +32141,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -32998,7 +32171,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -33023,7 +32197,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -33052,7 +32227,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -33081,7 +32257,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -33152,7 +32329,7 @@
     },
     {
         "nid": "Stunned",
-        "name": "Stunned",
+        "name": "Lucky Stun",
         "desc": "Unit cannot act.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -33276,7 +32453,7 @@
             ],
             [
                 "time",
-                2
+                3
             ]
         ]
     },
@@ -33927,7 +33104,7 @@
             ],
             [
                 "time",
-                1
+                2
             ]
         ]
     },
@@ -36339,7 +35516,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -36620,7 +35798,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -36649,7 +35828,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -36674,7 +35854,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -36848,7 +36029,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -36885,7 +36067,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -38330,7 +37513,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -38598,7 +37782,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -38623,7 +37808,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -38902,7 +38088,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -38935,7 +38122,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -41014,7 +40202,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -44455,7 +43644,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -45525,6 +44715,34 @@
         ]
     },
     {
+        "nid": "Gale_Claw",
+        "name": "Gale Claw",
+        "desc": "Killing an enemy grants Galeforce up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "Endstep_charge_increase",
+                4
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Constricted",
         "name": "Constricted",
         "desc": "-30 Avoid, reduce SPD and SKL by 25% and unit takes 25% of damage dealt for 2 turns or after next combat.",
@@ -46153,7 +45371,7 @@
     {
         "nid": "Damage_Void",
         "name": "Damage Void",
-        "desc": "Reduce damage taken by 50%. Unit is immune to negative status effects while equipped.\nNegate damage from enemies below lvl 15.",
+        "desc": "Reduce damage taken by 50%. Unit is immune to negative status effects while equipped.\nNegate damage from enemies below T3.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -46192,7 +45410,7 @@
             ],
             [
                 "combat_condition",
-                "unit.get_internal_level() < 55"
+                "unit.get_internal_level() < 40"
             ],
             [
                 "ignore_damage",
@@ -46643,7 +45861,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -47674,7 +46893,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -47896,7 +47116,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -48093,7 +47314,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -49000,7 +48222,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -49418,7 +48641,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -50791,7 +50015,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ],
             [
@@ -51120,7 +50345,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -53300,7 +52526,7 @@
     {
         "nid": "Minor_Crest_of_Riegan",
         "name": "Minor Crest of Riegan",
-        "desc": "The power of this Crest allows the user to heal for 30% of Damage given with Combar Arts.",
+        "desc": "The power of this Crest allows the user to heal for 30% of Damage given with Combat Arts.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -54036,9 +53262,9 @@
         ]
     },
     {
-        "nid": "Bowrange_P1_Art_T1",
+        "nid": "Bowrange_P1_T1",
         "name": "Bowrange +1",
-        "desc": "<red>CA:</>Increase maximum bow range by 1. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -54050,22 +53276,16 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Bowrange_P1_Skill"
+                "modify_maximum_range",
+                1
             ],
             [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "copysafe",
+                []
             ],
             [
                 "feat",
                 null
-            ],
-            [
-                "copysafe",
-                [
-                    "Bowrange_P1_EP_hide"
-                ]
             ]
         ]
     },
@@ -55109,7 +54329,7 @@
     {
         "nid": "Supportive_Recharge_T1",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV and EXP gain by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -55187,34 +54407,6 @@
             [
                 "ability",
                 "Rally_Attack"
-            ],
-            [
-                "feat",
-                null
-            ],
-            [
-                "copysafe",
-                []
-            ]
-        ]
-    },
-    {
-        "nid": "Closer_Healing_T1",
-        "name": "Closer Healing",
-        "desc": "When healing an ally, increases healing output based on unit and ally's support rank.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            3,
-            24
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit2.team == 'player'"
-            ],
-            [
-                "eval_empower_heal",
-                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
             ],
             [
                 "feat",
@@ -55909,7 +55101,7 @@
         ]
     },
     {
-        "nid": "Staff_Range_P1_Art_T2",
+        "nid": "Staff_Range_P1_T2",
         "name": "Staff Range +1",
         "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
         "icon_nid": "Skills",
@@ -55920,15 +55112,11 @@
         "components": [
             [
                 "condition",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
+                "item_system.weapon_type(unit, item) == 'Staff'"
             ],
             [
-                "combat_art",
-                "Staff_Range_P1_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Staff')"
+                "modify_maximum_range",
+                1
             ],
             [
                 "feat",
@@ -55936,9 +55124,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Staff_Range_P1_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -56192,9 +55378,9 @@
         ]
     },
     {
-        "nid": "Animafaire_Art_T2",
+        "nid": "Animafaire_T2",
         "name": "Animafaire",
-        "desc": "<red>CA:</>+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range, +6 damage, +30 Hit, and +15 Avoid/Crit when using Anima.",
         "icon_nid": "Anima",
         "icon_index": [
             0,
@@ -56206,12 +55392,20 @@
                 "item_system.weapon_type(unit, item) == 'Anima'"
             ],
             [
-                "combat_art",
-                "Animafaire_Skill"
+                "dynamic_damage",
+                "6"
             ],
             [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Anima'"
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "15"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
             ],
             [
                 "feat",
@@ -56219,9 +55413,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Animafaire_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -56260,7 +55452,7 @@
     {
         "nid": "Light_Range_P1_Art_Light_T2",
         "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "<red>CA: </>Gives +1 range to Light tomes, or +2 range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Light tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -56269,15 +55461,7 @@
         "components": [
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
-            ],
-            [
-                "combat_art",
-                "Light_Range_P1_Skill_Light"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+                "item_system.weapon_type(unit, item) == 'Light'"
             ],
             [
                 "feat",
@@ -56286,10 +55470,32 @@
             [
                 "copysafe",
                 [
-                    "Light_Range_P1_EP_Light_hide",
-                    "Light_Range_P1_Art_Staff_hide",
-                    "Light_Range_P1_EP_Staff_hide"
+                    "Light_Range_P1_Staff_Feat_hide"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Light_Range_P1_Staff_Feat_hide",
+        "name": "Knowledge of Justice (<icon>Light</>)",
+        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -56511,9 +55717,9 @@
         ]
     },
     {
-        "nid": "Chain_Weapons_Art_T2",
+        "nid": "Chain_Weapons_T2",
         "name": "Chain Weapons",
-        "desc": "<red>CA: </>Give +1 Range to Swords, Axes, and Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Swords, Lances, and Axes.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -56522,15 +55728,11 @@
         "components": [
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
+                "item_system.weapon_type(unit, item) in ('Sword', 'Lance', 'Axe')"
             ],
             [
-                "combat_art",
-                "Chain_Weapons_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword', 'Axe', 'Lance')"
+                "modify_maximum_range",
+                1
             ],
             [
                 "feat",
@@ -56538,9 +55740,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Chain_Weapons_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -57226,9 +56426,9 @@
         ]
     },
     {
-        "nid": "Long_Throw_Art_T2",
+        "nid": "Long_Throw_T2",
         "name": "Long Throw",
-        "desc": "<red>CA: </>+1 Lance Range. +40 Crit damage when using Lances. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+1 range to Lances. +40 Crit damage when using Lances.",
         "icon_nid": "Skills",
         "icon_index": [
             5,
@@ -57240,12 +56440,12 @@
                 "item_system.weapon_type(unit, item) == 'Lance'"
             ],
             [
-                "combat_art",
-                "Long_Throw_Skill"
+                "modify_maximum_range",
+                1
             ],
             [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance'"
+                "eval_crit_additional",
+                "40"
             ],
             [
                 "feat",
@@ -57253,9 +56453,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Long_Throw_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -58885,6 +58083,34 @@
         ]
     },
     {
+        "nid": "Closer_Healing_T2",
+        "name": "Closer Healing",
+        "desc": "When healing an ally, increases healing output based on unit and ally's support rank.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            24
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'player'"
+            ],
+            [
+                "eval_empower_heal",
+                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
         "nid": "Overcome_T3",
         "name": "Overcome",
         "desc": "x2 damage if enemy's DEF >= unit's DEF.",
@@ -59143,9 +58369,9 @@
         ]
     },
     {
-        "nid": "Magiteck_Blanks_Art_T3",
+        "nid": "Magiteck_Blanks_T3",
         "name": "Magiteck Blanks",
-        "desc": "<red>CA: </>Reduces bows minimum range by 1. <green>CD:0 Turns</>\nEffect is active during EP. Enemy kills increase STR/MAG by 2.\nMax 30 stacks\n\n",
+        "desc": "Reduces bows minimum range by 1.\nEffect is active during EP. Enemy kills increase STR/MAG by 2.\nMax 30 stacks\n\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -59157,23 +58383,12 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Magiteck_Blanks_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
-            ],
-            [
                 "feat",
                 null
             ],
             [
-                "copysafe",
-                [
-                    "Magiteck_Blanks_EP_hide",
-                    "Magiteck_Blanks_Giver_hide"
-                ]
+                "modify_minimum_range",
+                -1
             ]
         ]
     },
@@ -59328,9 +58543,9 @@
         ]
     },
     {
-        "nid": "Bowrange_P2_Art_T3",
+        "nid": "Bowrange_P2_T3",
         "name": "Bowrange +2",
-        "desc": "<red>CA: </>Increase the range of Bows by 2. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "desc": "+2 range to Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -59342,12 +58557,8 @@
                 "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
-                "combat_art",
-                "Bowrange_P2_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "modify_maximum_range",
+                2
             ],
             [
                 "feat",
@@ -59355,9 +58566,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Bowrange_P2_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -60487,10 +59696,6 @@
         ],
         "components": [
             [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Bow', 'Anima', 'Sword', 'Light', 'Dark', 'Lance'"
-            ],
-            [
                 "eval_max_range",
                 "unit.get_stat('MAG') // 30"
             ],
@@ -60869,9 +60074,9 @@
         ]
     },
     {
-        "nid": "Gungnir_Art_T3",
+        "nid": "Gungnir_T3",
         "name": "Gungnir",
-        "desc": "<red>CA: </>Add DEF to attacks and increases lance/bow range by 2. <green>CD:0 Turns</>\nEffect is always active during EP.",
+        "desc": "Add DEF to attacks and +2 range when using Lances or Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -60880,15 +60085,15 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Lance', 'Bow'"
+                "item_system.weapon_type(unit, item) in ('Bow', 'Lance')"
             ],
             [
-                "combat_art",
-                "Gungnir_Skill"
+                "modify_maximum_range",
+                2
             ],
             [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance', 'Bow'"
+                "dynamic_damage",
+                "unit.get_stat('DEF')"
             ],
             [
                 "feat",
@@ -60896,9 +60101,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Gungnir_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -61289,28 +60492,28 @@
     {
         "nid": "Magic_RangeP1_T3",
         "name": "Magical Overcharge",
-        "desc": "All magic attacks gain (AOE:2).",
+        "desc": "All Magical attacks gain (AOE:2).",
         "icon_nid": "skill_icons",
         "icon_index": [
-            12,
-            29
+            13,
+            42
         ],
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima', 'Staff'"
+                "item_funcs.is_magic(unit, unit.get_weapon())"
             ],
             [
                 "feat",
                 null
             ],
             [
-                "copysafe",
-                []
-            ],
-            [
                 "smart_oversplash",
                 2
+            ],
+            [
+                "copysafe",
+                []
             ]
         ]
     },
@@ -61475,9 +60678,9 @@
         ]
     },
     {
-        "nid": "Dark_Mastery_Art_T3",
+        "nid": "Dark_Mastery_T3",
         "name": "Dark Mastery",
-        "desc": "<red>CA: </>+2 range on Dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.",
+        "desc": "+2 range with Dark magic.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -61489,12 +60692,8 @@
                 "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
-                "combat_art",
-                "Dark_Mastery_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark'"
+                "modify_maximum_range",
+                2
             ],
             [
                 "feat",
@@ -61502,9 +60701,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Dark_Mastery_EP_hide"
-                ]
+                []
             ]
         ]
     },
@@ -61578,9 +60775,9 @@
         ]
     },
     {
-        "nid": "Chains_of_Death_Art_T3",
+        "nid": "Chains_of_Death_T3",
         "name": "Chains of Death",
-        "desc": "<red>CA: </>+1 Sword range. <green>CD:0 Turns</>\nEffect is active during EP. Unit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
+        "desc": "+1 Sword range. \nUnit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -61592,21 +60789,16 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "combat_art",
-                "Chains_of_Death_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
                 "feat",
                 null
             ],
             [
+                "modify_maximum_range",
+                1
+            ],
+            [
                 "copysafe",
                 [
-                    "Chains_of_Death_EP_hide",
                     "Chain_Sword_Damage_Buff_hide",
                     "Chain_Sword_Damage_Galeforce_hide"
                 ]
@@ -61770,9 +60962,9 @@
         ]
     },
     {
-        "nid": "Venom_Shuriken_Art_T3",
+        "nid": "Venom_Shuriken_T3",
         "name": "Venom Shuriken",
-        "desc": "<red>CA: </>+3 Sword range. <green>CD:0 Turns</>\nEffect is always active during EP.\nSword attacks inflict the Venom to enemies on hit.",
+        "desc": "+3 Sword range.\nSword attacks inflict the Venom to enemies on hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -61784,12 +60976,8 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "combat_art",
-                "Venom_Shuriken_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Sword'"
+                "modify_maximum_range",
+                3
             ],
             [
                 "item_override",
@@ -61802,7 +60990,6 @@
             [
                 "copysafe",
                 [
-                    "Venom_Shuriken_EP_hide",
                     "Venom_Shuriken_Venom_hide"
                 ]
             ]
@@ -62895,7 +62082,7 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Anima' or item_system.weapon_type(unit, item) == 'Dark'"
+                "item_system.weapon_type(unit, item) in ('Dark', 'Anima')"
             ],
             [
                 "gain_skill_after_kill",
@@ -63149,9 +62336,9 @@
         ]
     },
     {
-        "nid": "Dragoons_Spear_Art_T3",
+        "nid": "Dragoons_Spear_T3",
         "name": "Dragoon's Spear",
-        "desc": "<red>CA: </>Increase the range of lances by 2. <green>CD:0 Turns</>\nEffect is always active during EP.\nIf enemy is Seared, attack becomes (AOE:1).",
+        "desc": "+2 range to Lances.\nIf enemy is Seared, attack becomes (AOE:1).",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -63163,12 +62350,8 @@
                 "item_system.weapon_type(unit, item) == 'Lance'"
             ],
             [
-                "combat_art",
-                "Dragoons_Spear_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Lance'"
+                "modify_maximum_range",
+                2
             ],
             [
                 "feat",
@@ -63177,7 +62360,6 @@
             [
                 "copysafe",
                 [
-                    "Dragoons_Spear_EP_hide",
                     "Dragoons_Spear_Seared_hide"
                 ]
             ]
@@ -63315,9 +62497,9 @@
         ]
     },
     {
-        "nid": "Dark_Blessing_Art_T3",
+        "nid": "Dark_Blessing_T3",
         "name": "Dark Blessing",
-        "desc": "<red>CA: </>+1 range to axes and dark magic. <green>CD:0 Turns</>\nEffect is always active during EP.\nImmune to Negative status effects.",
+        "desc": "+1 range to axes and dark magic.\nEffect is always active during EP.\nImmune to Negative status effects.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -63330,11 +62512,11 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Dark', 'Axe'"
+                "item_system.weapon_type(unit, item) in ('Dark', 'Axe')"
             ],
             [
-                "combat_art",
-                "Dark_Blessing_Skill"
+                "modify_maximum_range",
+                1
             ],
             [
                 "feat",
@@ -63342,13 +62524,7 @@
             ],
             [
                 "copysafe",
-                [
-                    "Dark_Blessing_EP_hide"
-                ]
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark', 'Axe'"
+                []
             ]
         ]
     },
@@ -63607,7 +62783,7 @@
     {
         "nid": "Aegis_Stab_T3",
         "name": "Aegis Stab",
-        "desc": "<red>CA:</>A powerful magical lunge that deals damage to all units between the unit and the target. <green>CD:4 Turns</>\nUses MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>).",
+        "desc": "<red>CA:</>A powerful magical lunge that deals damage to all units between the unit and the target. <green>CD:4 Turns</>\nUses MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL') + (unit.get_stat('SPD'))))}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -64732,9 +63908,9 @@
         ]
     },
     {
-        "nid": "Dark_Sight_Art_T3",
+        "nid": "Dark_Sight_T3",
         "name": "Dark Sight",
-        "desc": "<red>CA: </>+2 to Dark range. <green>CD:0 Turns</>\nEffect is always active during EP.\nAttacks ignore enemy's RES when unit is at Max HP.",
+        "desc": "+2 to Dark range.\nAttacks ignore enemy's RES when unit is at Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -64746,12 +63922,8 @@
                 "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
-                "combat_art",
-                "Dark_Sight_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Dark'"
+                "modify_maximum_range",
+                2
             ],
             [
                 "feat",
@@ -64760,7 +63932,6 @@
             [
                 "copysafe",
                 [
-                    "Dark_Sight_EP_hide",
                     "Dark_Sight_Buff_hide"
                 ]
             ]
@@ -64898,8 +64069,7 @@
             [
                 "copysafe",
                 [
-                    "Fiendish_Blessing_Art_hide",
-                    "Fiendish_Blessing_EP_hide"
+                    "Fiendish_Blessing_Art_hide"
                 ]
             ]
         ]
@@ -66693,7 +65863,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66722,7 +65893,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66751,7 +65923,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66780,7 +65953,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66809,7 +65983,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66838,7 +66013,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66867,7 +66043,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66896,7 +66073,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66925,7 +66103,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -66954,7 +66133,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -68195,7 +67375,8 @@
                     "lost_on_self": true,
                     "lost_on_ally": true,
                     "lost_on_enemy": true,
-                    "lost_on_splash": true
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
                 }
             ]
         ]
@@ -68628,7 +67809,7 @@
     {
         "nid": "True_Hit",
         "name": "True Hit",
-        "desc": "Attacks that miss with Bows do 1/2 damage.",
+        "desc": "Attacks that miss do 1/2 damage.",
         "icon_nid": "Skills",
         "icon_index": [
             5,
@@ -68641,7 +67822,7 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow)"
+                "unit.get_weapon()"
             ],
             [
                 "item_override",
@@ -68779,8 +67960,8 @@
         ]
     },
     {
-        "nid": "Blasphemy_1",
-        "name": "Blasphemy",
+        "nid": "Prophecy",
+        "name": "Prophecy",
         "desc": "Light magic becomes effective damage against Magical units.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -68809,11 +67990,35 @@
     {
         "nid": "Fell_Arrow",
         "name": "Fell Arrow",
-        "desc": "magic is X5 effective vs fliers",
-        "icon_nid": null,
+        "desc": "Bows are X5 effective vs fliers and light",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            14,
+            25
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "item_override",
+                "Fell_Arrow_item"
+            ]
+        ]
+    },
+    {
+        "nid": "Clarity",
+        "name": "Clarity",
+        "desc": "Deal full damage during dual strike, paired partner gains +LCK to avoid",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            44
         ],
         "components": []
     }

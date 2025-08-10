@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Neutrality_Book_CA",
+        "name": "Neutrality Book",
+        "desc": "For Neutrality Book item.",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "item_override",
+                "Neutrality_Book_CA"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dragoons_Spear",
+        "name": "Dragoon's Spear",
+        "desc": "+2 range to Lances.\nIf enemy is Seared, attacks become (AOE:1).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Lance'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ]
+        ]
+    }
+]

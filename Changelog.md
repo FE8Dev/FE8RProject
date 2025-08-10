@@ -1,6 +1,14 @@
 ## tbr
 ```
 fixed avatar medic
+Hellhound line is now weak to fire
+Replaced Stone Blade chest with Holy Greatlance
+Swapped Iron Scythe for Stone Blade for ch.3 mini boss.
+Boosted Dozla's Base HP to 100
+Boosted Dozla's HP Growth to 320
+Skill that increase range are now passive instead of Combat Arts.
+The main Vanilla cast now have the new weapon evolution code to boost performance.
+
 
 
 

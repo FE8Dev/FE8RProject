@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Staff_Range_P1",
+        "name": "Staff Range +1",
+        "desc": "+1 range to Staves.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ]
+        ]
+    }
+]

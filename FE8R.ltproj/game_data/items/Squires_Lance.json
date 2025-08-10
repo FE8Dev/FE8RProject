@@ -2,7 +2,7 @@
     {
         "nid": "Squires_Lance",
         "name": "Squire's Lance",
-        "desc": "A training lance for Franz.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), Splash DMG (20%).",
+        "desc": "A training lance for Franz.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), Splash DMG (20%), x2 WEXP gain.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             12,
@@ -43,7 +43,7 @@
             ],
             [
                 "wexp",
-                1
+                2
             ],
             [
                 "crit",
@@ -90,10 +90,6 @@
                 [
                     "Franz"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Lance'] < 120"
             ],
             [
                 "item_tags",

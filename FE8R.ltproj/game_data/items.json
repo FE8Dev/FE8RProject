@@ -7868,7 +7868,7 @@
     {
         "nid": "Shielder_Lance",
         "name": "Shielder G.L.",
-        "desc": "A heavy lance made for those who specialize in defense.\n<green>Skills:</>Lance Guard (C), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
+        "desc": "A heavy lance made for those who specialize in defense.\n<green>Skills:</>Lance Guard (C), G.L. Mastery, Arcane Barrier <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES/2 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             5,
@@ -7983,7 +7983,7 @@
     {
         "nid": "Burning_Greatlance_Shop",
         "name": "Bulwark G.L.",
-        "desc": "A lance for those who protect till the end.\n<green>Skills:</>Lance Guard (A), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "desc": "A lance for those who protect till the end.\n<green>Skills:</>Lance Guard (A), G.L. Mastery, Arcane Barrier  <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -8039,7 +8039,8 @@
                 [
                     "Lance_Guard_SS",
                     "Blade_Vantage_Effect",
-                    "Greatlance_Mastery"
+                    "Greatlance_Mastery",
+                    "Arcane_Barrier_Item"
                 ]
             ],
             [
@@ -8091,7 +8092,7 @@
     {
         "nid": "Gradivus",
         "name": "Gradivus",
-        "desc": "The lance of a mysterious warrior with an enigmatic past.\n<green>Skills:</>Lance Guard (X), G.L. Mastery <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "desc": "The lance of a mysterious warrior with an enigmatic past.\n<green>Skills:</>Lance Guard (X), G.L. Mastery, Arcane Barrier  <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             4,
@@ -8147,7 +8148,8 @@
                 [
                     "Lance_Guard_X",
                     "Blade_Vantage_Effect",
-                    "Greatlance_Mastery"
+                    "Greatlance_Mastery",
+                    "Arcane_Barrier_Item"
                 ]
             ],
             [
@@ -21964,7 +21966,7 @@
     },
     {
         "nid": "Iceshock",
-        "name": "Iceshock",
+        "name": "Fimbulvetr",
         "desc": "A strong ice spell. Inflicts the Frozen status on hit.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Splash DMG (40%), MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
@@ -22038,7 +22040,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Iceshock"
+                "Fimbulvetr"
             ],
             [
                 "ignore_line_of_sight",
@@ -22331,7 +22333,7 @@
     {
         "nid": "Spire",
         "name": "Spire",
-        "desc": "Basic earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (5), +5 DEF, MAG + DEF/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//3))}</>).",
+        "desc": "Basic earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (20%), +5 DEF, MAG + DEF/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -22426,7 +22428,7 @@
     {
         "nid": "Stalagmite",
         "name": "Stalagmite",
-        "desc": "Intermediate earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (15), +10 DEF, MAG + DEF/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "Intermediate earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (30%), +10 DEF, MAG + DEF/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             15,
@@ -22521,7 +22523,7 @@
     {
         "nid": "Fissure",
         "name": "Fissure",
-        "desc": "Advanced earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (30), +15 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "desc": "Advanced earth magic. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (40%), +15 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             16,
@@ -22616,7 +22618,7 @@
     {
         "nid": "Chasm",
         "name": "Chasm",
-        "desc": "A tome that splits the earth. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (50), +20 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "desc": "A tome that splits the earth. \n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (50%), +20 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             17,
@@ -22711,7 +22713,7 @@
     {
         "nid": "Upheaval",
         "name": "Upheaval",
-        "desc": "Tremendous movements reshape the world.\n<green>Skills:</>Counter\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (70), +30 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
+        "desc": "Tremendous movements reshape the world.\n<green>Skills:</>Counter\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>Splash DMG (60%), +30 DEF, MAG + DEF (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             19,
@@ -39337,28 +39339,6 @@
         ]
     },
     {
-        "nid": "Wind_Scroll",
-        "name": "Wind Scroll",
-        "desc": "A scroll that lets one harness the essence of wind.\n<blue>On Hold:</>Attacks gain effectiveness against Seared/Flying enemies, but reduce DEF/RES by 25%.",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
-        "icon_index": [
-            4,
-            5
-        ],
-        "components": [
-            [
-                "multi_status_on_hold",
-                [
-                    "Wind_Scroll_Skill"
-                ]
-            ],
-            [
-                "value",
-                1000
-            ]
-        ]
-    },
-    {
         "nid": "Thunder_Scroll",
         "name": "Thunder Scroll",
         "desc": "Only the brave can handle the power of lightning.\n<blue>On Hold:</>Attacks become effective against Drenched/Armored enemies, but reduce SKL/CON by 25%.",
@@ -39372,6 +39352,28 @@
                 "multi_status_on_hold",
                 [
                     "Thunder_Scroll_Skill"
+                ]
+            ],
+            [
+                "value",
+                1000
+            ]
+        ]
+    },
+    {
+        "nid": "Wind_Scroll",
+        "name": "Wind Scroll",
+        "desc": "A scroll that let's one harness the essence of wind.\n<blue>On Hold:</>Attacks gain effectiveness against Seared/Flying enemies, but reduce DEF/RES by 25%.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            4,
+            5
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Wind_Scroll_Skill"
                 ]
             ],
             [
@@ -39417,6 +39419,28 @@
                 [
                     "Water_Scroll",
                     "Drench_Debuff_Item"
+                ]
+            ],
+            [
+                "value",
+                1000
+            ]
+        ]
+    },
+    {
+        "nid": "Neutrality_Book",
+        "name": "Neutrality Book",
+        "desc": "A book that lets one fight on neutral ground with the enemy.\n<blue>On Hold:</><red>CA:</>Removes the Weapon Triangle from the battle. <green>CD:0 Turns</>",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "multi_status_on_hold",
+                [
+                    "Neutrality_Book"
                 ]
             ],
             [
@@ -59400,21 +59424,7 @@
             [
                 "multi_item",
                 [
-                    "Rapier",
-                    "Gold_Estoc",
-                    "Noble_Rapier",
-                    "Royal_Rapier",
-                    "Sieglinde",
-                    "Grand_Sieglinde",
-                    "Gentle_Light",
-                    "Bright_Burst",
-                    "Royal_Nova",
-                    "Chaos_Rend",
-                    "Chaos_Ripple",
-                    "Chaos_Unbound",
-                    "Bolt_Stab",
-                    "Compressed_Bolt",
-                    "Aegis_Flash"
+                    "Rapier"
                 ]
             ],
             [
@@ -59523,10 +59533,6 @@
                         1
                     ]
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Sword'] < 120"
             ],
             [
                 "item_tags",
@@ -59648,10 +59654,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Sword'] >= 120 and u(\"Eirika\").wexp['Sword'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -59767,10 +59769,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Sword'] >= 240 and u(\"Eirika\").wexp['Sword'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -59883,10 +59881,6 @@
                         10
                     ]
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Sword'] >= 360 and not has_skill(unit, 'Eirika_Legend')"
             ],
             [
                 "item_tags",
@@ -60016,10 +60010,6 @@
                 }
             ],
             [
-                "eval_available",
-                "has_skill(unit, 'Eirika_Legend') and not has_skill(unit, 'Eirika_Ultimate')"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -60132,10 +60122,6 @@
             [
                 "locked",
                 null
-            ],
-            [
-                "eval_available",
-                "has_skill(unit, 'Eirika_Ultimate')"
             ],
             [
                 "stat_change",
@@ -60263,10 +60249,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Light'] < 180"
-            ],
-            [
                 "alternate_damage_formula",
                 "SPD_LCK_MID"
             ],
@@ -60371,10 +60353,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Light'] >= 180 and u(\"Eirika\").wexp['Light'] < 360"
-            ],
-            [
                 "alternate_damage_formula",
                 "SPD_LCK_MID"
             ],
@@ -60477,10 +60455,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Light'] >= 360"
             ],
             [
                 "alternate_damage_formula",
@@ -60591,10 +60565,6 @@
                     "Cursed_2",
                     "Shadow_Blight"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Dark'] < 180"
             ],
             [
                 "brave",
@@ -60708,10 +60678,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Dark'] >= 180 and u(\"Eirika\").wexp['Dark'] < 360"
-            ],
-            [
                 "brave",
                 null
             ],
@@ -60823,10 +60789,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Dark'] >= 360"
-            ],
-            [
                 "brave",
                 null
             ],
@@ -60867,15 +60829,15 @@
             ],
             [
                 "damage",
-                8
+                11
             ],
             [
                 "hit",
-                90
+                100
             ],
             [
                 "crit",
-                13
+                17
             ],
             [
                 "weight",
@@ -60945,10 +60907,6 @@
                 "E"
             ],
             [
-                "eval_available",
-                "u(\"Eirika\").wexp['Anima'] < 300"
-            ],
-            [
                 "self_status_on_hit",
                 "AnimaSplash_E"
             ],
@@ -60963,7 +60921,7 @@
     {
         "nid": "Compressed_Bolt",
         "name": "Compressed Bolt",
-        "desc": "Compressed thunder unleashes powerful blows.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>STR + MAG, +1 SPD, Splash DMG (40%).",
+        "desc": "Compressed thunder unleashes powerful blows.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>STR + MAG, +10 SPD, Splash DMG (40%).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             34,
@@ -60988,7 +60946,7 @@
             ],
             [
                 "damage",
-                13
+                17
             ],
             [
                 "hit",
@@ -61049,7 +61007,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        10
                     ]
                 ]
             ],
@@ -61063,11 +61021,7 @@
             ],
             [
                 "weapon_rank",
-                "S"
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Anima'] >= 300 and u(\"Eirika\").wexp['Anima'] < 360"
+                "SS"
             ],
             [
                 "self_status_on_hit",
@@ -61109,7 +61063,7 @@
             ],
             [
                 "damage",
-                18
+                22
             ],
             [
                 "hit",
@@ -61117,7 +61071,7 @@
             ],
             [
                 "crit",
-                25
+                30
             ],
             [
                 "weight",
@@ -61184,11 +61138,7 @@
             ],
             [
                 "weapon_rank",
-                "SS"
-            ],
-            [
-                "eval_available",
-                "u(\"Eirika\").wexp['Anima'] >= 360"
+                "SSS"
             ],
             [
                 "self_status_on_hit",
@@ -61219,20 +61169,7 @@
             [
                 "multi_item",
                 [
-                    "Reginleif",
-                    "Eldur",
-                    "Einherjar",
-                    "Beowulf",
-                    "Siegmund",
-                    "Grand_Siegmund",
-                    "Ephraim_Magic_Lance_Anima",
-                    "Ephraim_Magic_Lance_Dark",
-                    "Ward_Sword_Ephraim",
-                    "Spell_Bane",
-                    "Spell_Cutter",
-                    "Lava_Axe_Ephraim",
-                    "Scorch_Axe",
-                    "Nova_Axe_Ephraim"
+                    "Reginleif"
                 ]
             ],
             [
@@ -61327,10 +61264,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Lance'] < 120"
             ],
             [
                 "weapon_rank",
@@ -61443,10 +61376,6 @@
                 "C"
             ],
             [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Lance'] >= 120 and u(\"Ephraim\").wexp['Lance'] < 240"
-            ],
-            [
                 "alternate_resist_formula",
                 "DEF_SPD_MIN"
             ],
@@ -61553,10 +61482,6 @@
                 "A"
             ],
             [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Lance'] >= 240 and u(\"Ephraim\").wexp['Lance'] < 360"
-            ],
-            [
                 "alternate_resist_formula",
                 "DEF_SPD_MIN"
             ],
@@ -61661,10 +61586,6 @@
             [
                 "weapon_rank",
                 "SS"
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Lance'] >= 360 and not has_skill(unit, 'Ephraim_Legend')"
             ],
             [
                 "alternate_resist_formula",
@@ -61776,10 +61697,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "has_skill(unit, 'Ephraim_Legend') and not has_skill(unit, 'Ephraim_Ultimate')"
             ],
             [
                 "stat_change",
@@ -61910,10 +61827,6 @@
             [
                 "battle_animation_music",
                 "31- Sacred Strength Orchestral Cover"
-            ],
-            [
-                "eval_available",
-                "has_skill(unit, 'Ephraim_Ultimate')"
             ],
             [
                 "statuses_on_hit",
@@ -62223,10 +62136,6 @@
                 [
                     "Ephraim"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Sword'] < 180"
             ]
         ]
     },
@@ -62324,10 +62233,6 @@
                 [
                     "Ephraim"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Sword'] >= 180 and u(\"Ephraim\").wexp['Sword'] < 360"
             ]
         ]
     },
@@ -62425,10 +62330,6 @@
                 [
                     "Ephraim"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Sword'] >= 360"
             ]
         ]
     },
@@ -62525,10 +62426,6 @@
                 [
                     "Ephraim"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Axe'] < 180"
             ],
             [
                 "brave",
@@ -62643,10 +62540,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Axe'] >= 180 and u(\"Ephraim\").wexp['Axe'] < 360"
-            ],
-            [
                 "brave",
                 null
             ],
@@ -62759,10 +62652,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ephraim\").wexp['Axe'] >= 360"
-            ],
-            [
                 "brave",
                 null
             ],
@@ -62793,16 +62682,7 @@
             [
                 "multi_item",
                 [
-                    "Guiding_Lance",
-                    "Regal_Lance",
-                    "Silvers_Champion",
-                    "Eternal_Duty",
-                    "Silvers_Light",
-                    "Silvers_Burst",
-                    "Silvers_Aura",
-                    "Wound_Sword",
-                    "Blood_Sword",
-                    "High_Expectations"
+                    "Guiding_Lance"
                 ]
             ],
             [
@@ -62902,10 +62782,6 @@
                 null
             ],
             [
-                "eval_available",
-                "not has_skill(unit, 'Seths_Personal')"
-            ],
-            [
                 "self_status_on_hit",
                 "Water_AOE_Splash"
             ],
@@ -62998,10 +62874,6 @@
             [
                 "ignore_weapon_disadvantage",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Seth\").wexp['Lance'] < 420 and has_skill(unit, 'Seths_Personal')"
             ],
             [
                 "self_status_on_hit",
@@ -63102,10 +62974,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Seth\").wexp['Lance'] >= 420 and u(\"Seth\").wexp['Lance'] < 480 and has_skill(unit, 'Seths_Personal')"
-            ],
-            [
                 "self_status_on_hit",
                 "Water_AOE_Splash"
             ],
@@ -63195,10 +63063,6 @@
                 [
                     "Seth"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Seth\").wexp['Lance'] >= 480 and has_skill(unit, 'Seths_Personal')"
             ],
             [
                 "ignore_weapon_advantage",
@@ -63327,10 +63191,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Seth\").wexp['Light'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -63437,10 +63297,6 @@
                 [
                     "Seth"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Seth\").wexp['Light'] >= 180 and u(\"Seth\").wexp['Light'] < 360"
             ],
             [
                 "item_tags",
@@ -63551,10 +63407,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Seth\").wexp['Light'] >= 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -63640,10 +63492,6 @@
                 [
                     "Seth"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Seth\").wexp['Sword'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -63748,10 +63596,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Seth\").wexp['Sword'] >= 180 and u(\"Seth\").wexp['Sword'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
@@ -63854,10 +63698,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Seth\").wexp['Sword'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
@@ -63897,18 +63737,7 @@
             [
                 "multi_item",
                 [
-                    "Squires_Sword",
-                    "Burning_Longsword_Melee_Franz",
-                    "Arcane_Sword",
-                    "Excel_Sword",
-                    "Ashbringer",
-                    "Mage_Shine_Franz",
-                    "Sage_Knights_Light",
-                    "Arcadia",
-                    "Squires_Lance",
-                    "Paladins_Lance",
-                    "Righteous_Lance",
-                    "Seraph_Lance"
+                    "Squires_Sword"
                 ]
             ],
             [
@@ -64009,10 +63838,6 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_WEAK"
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Sword'] < 120"
             ]
         ]
     },
@@ -64126,10 +63951,6 @@
                 [
                     "Fire"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Sword'] >= 120 and u(\"Franz\").wexp['Sword'] < 240"
             ]
         ]
     },
@@ -64243,10 +64064,6 @@
                 [
                     "Fire"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Sword'] >= 240 and u(\"Franz\").wexp['Sword'] < 420"
             ]
         ]
     },
@@ -64356,10 +64173,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Franz\").wexp['Sword'] >= 420 and u(\"Franz\").wexp['Sword'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -64445,10 +64258,6 @@
             [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Sword'] >= 480"
             ],
             [
                 "effective_damage",
@@ -64576,10 +64385,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Franz\").wexp['Anima'] < 180"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_10_hide"
@@ -64680,10 +64485,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Anima'] >= 180 and u(\"Franz\").wexp['Anima'] < 360"
             ],
             [
                 "multi_status_on_equip",
@@ -64788,10 +64589,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Franz\").wexp['Anima'] >= 360"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_40_hide"
@@ -64808,7 +64605,7 @@
     {
         "nid": "Squires_Lance",
         "name": "Squire's Lance",
-        "desc": "A training lance for Franz.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), Splash DMG (20%).",
+        "desc": "A training lance for Franz.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), Splash DMG (20%), x2 WEXP gain.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             12,
@@ -64849,7 +64646,7 @@
             ],
             [
                 "wexp",
-                1
+                2
             ],
             [
                 "crit",
@@ -64896,10 +64693,6 @@
                 [
                     "Franz"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Lance'] < 120"
             ],
             [
                 "item_tags",
@@ -65001,10 +64794,6 @@
                 [
                     "Franz"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Franz\").wexp['Lance'] >= 120 and u(\"Franz\").wexp['Lance'] < 240"
             ],
             [
                 "statuses_on_hit",
@@ -65115,10 +64904,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Franz\").wexp['Lance'] >= 240 and u(\"Franz\").wexp['Lance'] < 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Seared"
@@ -65227,10 +65012,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Franz\").wexp['Lance'] >= 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Seared"
@@ -65263,16 +65044,7 @@
                 "multi_item",
                 [
                     "Guards_Greatlance",
-                    "Stoic_Guard",
-                    "Heavy_Impact",
-                    "Immovable",
-                    "Claymore",
-                    "Armor_Ripper",
-                    "Armors_Bane",
-                    "Siege_Bow",
-                    "Wallbreaker",
-                    "Thunders_Rage",
-                    "Caladbolg"
+                    "Claymore"
                 ]
             ],
             [
@@ -65390,10 +65162,6 @@
             [
                 "wexp",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Lance'] < 120"
             ]
         ]
     },
@@ -65497,10 +65265,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Lance'] >= 120 and u(\"Gilliam\").wexp['Lance'] < 240"
             ],
             [
                 "wexp",
@@ -65617,10 +65381,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Lance'] >= 240 and u(\"Gilliam\").wexp['Lance'] < 420"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -65735,10 +65495,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Lance'] >= 420"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -65845,10 +65601,6 @@
                 [
                     "Gilliam"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Sword'] < 180"
             ]
         ]
     },
@@ -65947,10 +65699,6 @@
                 [
                     "Gilliam"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Sword'] >= 180 and u(\"Gilliam\").wexp['Sword'] < 360"
             ],
             [
                 "statuses_on_hit",
@@ -66058,10 +65806,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Sword'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Breached_15",
@@ -66163,10 +65907,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Bow'] < 180"
             ],
             [
                 "wexp",
@@ -66275,10 +66015,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Bow'] >= 180 and u(\"Gilliam\").wexp['Bow'] < 360"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -66385,10 +66121,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Bow'] >= 360 and u(\"Gilliam\").wexp['Bow'] < 480"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -66484,10 +66216,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gilliam\").wexp['Bow'] >= 480"
-            ],
-            [
                 "no_double",
                 null
             ],
@@ -66520,17 +66248,7 @@
             [
                 "multi_item",
                 [
-                    "Winds_Shard",
-                    "Winds_Guide",
-                    "Gale_Spear",
-                    "Wings_Of_Duty",
-                    "Chastiefol",
-                    "Fales_Wind",
-                    "Fales_Storm",
-                    "Fales_Tempest",
-                    "Heatrock_Bow",
-                    "Magma_Bow",
-                    "Eruption_Bow"
+                    "Winds_Shard"
                 ]
             ],
             [
@@ -66633,10 +66351,6 @@
                 "STR_SPD_WEAK"
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] < 120"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -66736,10 +66450,6 @@
                 "STR_SPD_WEAK"
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] >= 120 and u(\"Vanessa\").wexp['Lance'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -66835,10 +66545,6 @@
                 "STR_SPD_MID"
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] >= 240 and u(\"Vanessa\").wexp['Lance'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -66932,10 +66638,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SPD_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] >= 420 and u(\"Vanessa\").wexp['Lance'] < 480"
             ],
             [
                 "item_tags",
@@ -67037,10 +66739,6 @@
                 0.25
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Lance'] >= 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -67140,10 +66838,6 @@
                 [
                     "Vanessa"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Sword'] < 180"
             ],
             [
                 "multi_status_on_equip",
@@ -67252,10 +66946,6 @@
                 [
                     "Vanessa"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Sword'] >= 180 and u(\"Vanessa\").wexp['Sword'] < 360"
             ],
             [
                 "multi_status_on_equip",
@@ -67370,10 +67060,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Sword'] >= 360"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Fales_Ward",
@@ -67478,10 +67164,6 @@
             [
                 "alternate_damage_formula",
                 "STR_RES_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Bow'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -67591,10 +67273,6 @@
                 "STR_RES_MID"
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Bow'] >= 180 and u(\"Vanessa\").wexp['Bow'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Seared",
@@ -67702,10 +67380,6 @@
                 "STR_RES_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Vanessa\").wexp['Bow'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Seared",
@@ -67742,17 +67416,7 @@
             [
                 "multi_item",
                 [
-                    "Wooden_Staff",
-                    "Wiseman_Staff",
-                    "Masters_Staff",
-                    "Journeys_End",
-                    "Light_Blades",
-                    "Shining_Blades_Moulder",
-                    "Rain_Of_Blades",
-                    "Light_Axe",
-                    "Smite_Axe",
-                    "Judgement_Axe",
-                    "Sacred_Ritta"
+                    "Wooden_Staff"
                 ]
             ],
             [
@@ -67826,10 +67490,6 @@
                 [
                     "Moulder"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Staff'] < 120"
             ],
             [
                 "statuses_on_hit",
@@ -67923,10 +67583,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moulder\").wexp['Staff'] >= 120 and u(\"Moulder\").wexp['Staff'] < 240"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -68011,10 +67667,6 @@
             [
                 "status_on_equip",
                 "Rolling_Stone"
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Staff'] >= 240 and u(\"Moulder\").wexp['Staff'] < 420"
             ],
             [
                 "stat_change",
@@ -68110,10 +67762,6 @@
             [
                 "status_on_equip",
                 "Rolling_Stone"
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Staff'] >= 420"
             ],
             [
                 "stat_change",
@@ -68234,10 +67882,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moulder\").wexp['Light'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -68339,10 +67983,6 @@
                 [
                     "Moulder"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Light'] >= 180 and u(\"Moulder\").wexp['Light'] < 360"
             ],
             [
                 "item_tags",
@@ -68448,10 +68088,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moulder\").wexp['Light'] >= 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -68530,10 +68166,6 @@
                 [
                     "Moulder"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Axe'] < 180"
             ],
             [
                 "weapon_rank",
@@ -68633,10 +68265,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moulder\").wexp['Axe'] >= 180 and u(\"Moulder\").wexp['Axe'] < 360"
-            ],
-            [
                 "weapon_rank",
                 "B"
             ],
@@ -68732,10 +68360,6 @@
                 [
                     "Moulder"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Moulder\").wexp['Axe'] >= 360 and u(\"Moulder\").wexp['Axe'] < 480"
             ],
             [
                 "weapon_rank",
@@ -68839,10 +68463,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moulder\").wexp['Axe'] >=480"
-            ],
-            [
                 "weapon_rank",
                 "X"
             ],
@@ -68896,20 +68516,7 @@
             [
                 "multi_item",
                 [
-                    "Hatchet",
-                    "Thin_Axe_Ross",
-                    "Throwing_Axe",
-                    "Heros_Tomahawk",
-                    "Hopebringer",
-                    "Torch_Bow_Ross",
-                    "Hotwood_Bow",
-                    "Ifrit_Bow",
-                    "Tribal_Fire",
-                    "Inner_Pain",
-                    "Asunas_Wrath",
-                    "Training_Stone_Ross",
-                    "Aether_Breath",
-                    "Void_Breath"
+                    "Hatchet"
                 ]
             ],
             [
@@ -68991,10 +68598,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Axe'] < 120"
             ],
             [
                 "status_on_equip",
@@ -69081,10 +68684,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Axe'] >= 120 and u(\"Ross\").wexp['Axe'] < 240"
-            ],
-            [
                 "status_on_equip",
                 "Lightweight"
             ],
@@ -69169,10 +68768,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Axe'] >= 240 and u(\"Ross\").wexp['Axe'] < 420"
-            ],
-            [
                 "status_on_equip",
                 "Lightweight"
             ],
@@ -69255,10 +68850,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Axe'] >= 420 and u(\"Ross\").wexp['Axe'] < 480"
             ],
             [
                 "brave",
@@ -69361,10 +68952,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Axe'] >= 480"
             ],
             [
                 "brave",
@@ -69489,10 +69076,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Bow'] < 180"
-            ],
-            [
                 "damage_on_miss",
                 0.5
             ],
@@ -69590,10 +69173,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Bow'] >= 180 and u(\"Ross\").wexp['Bow'] < 360"
             ],
             [
                 "damage_on_miss",
@@ -69694,10 +69273,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Bow'] >= 360"
             ],
             [
                 "damage_on_miss",
@@ -69814,10 +69389,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Dark'] < 180"
             ],
             [
                 "item_tags",
@@ -69943,10 +69514,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Dark'] >= 180 and u(\"Ross\").wexp['Dark'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire",
@@ -70070,10 +69637,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Dark'] >= 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire",
@@ -70157,10 +69720,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Monster'] < 360"
             ]
         ]
     },
@@ -70252,10 +69811,6 @@
                 [
                     "Ross"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ross\").wexp['Monster'] >= 360 and u(\"Ross\").wexp['Monster'] < 420"
             ],
             [
                 "lifelink",
@@ -70371,10 +69926,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ross\").wexp['Monster'] >= 420"
-            ],
-            [
                 "lifelink",
                 0.5
             ]
@@ -70397,20 +69948,7 @@
             [
                 "multi_item",
                 [
-                    "Charred_Axe",
-                    "Boom_Axe_Garcia_Blast",
-                    "Boom_Axe_Garcia",
-                    "Burst_Axe_Blast",
-                    "Burst_Axe",
-                    "Doom_Axe_Blast",
-                    "Doom_Axe",
-                    "Minds_Edge_Garcia",
-                    "Degradation",
-                    "Hysteria_Garcia",
-                    "Rage_Storm",
-                    "Bowgun",
-                    "Crossbow",
-                    "Arbalest"
+                    "Charred_Axe"
                 ]
             ],
             [
@@ -70502,10 +70040,6 @@
                     "Sear_Explosion",
                     "Power_Chop_E"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] < 120"
             ],
             [
                 "item_tags",
@@ -70620,10 +70154,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 120 and u(\"Garcia\").wexp['Axe'] < 240"
             ],
             [
                 "exp",
@@ -70744,10 +70274,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 120 and u(\"Garcia\").wexp['Axe'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -70860,10 +70386,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 240 and u(\"Garcia\").wexp['Axe'] < 420"
             ],
             [
                 "exp",
@@ -70983,10 +70505,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 240 and u(\"Garcia\").wexp['Axe'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -71099,10 +70617,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 420"
             ],
             [
                 "exp",
@@ -71223,10 +70737,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Axe'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -71331,10 +70841,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Sword'] < 180"
             ],
             [
                 "wexp",
@@ -71447,10 +70953,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Sword'] >= 180 and u(\"Garcia\").wexp['Sword'] < 360"
             ],
             [
                 "wexp",
@@ -71573,10 +71075,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Sword'] >= 360 and u(\"Garcia\").wexp['Sword'] < 480"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -71678,10 +71176,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Sword'] >= 480"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Confuse",
@@ -71780,10 +71274,6 @@
                 [
                     "Garcia"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Garcia\").wexp['Bow'] < 180"
             ],
             [
                 "menu_after_combat",
@@ -71898,10 +71388,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Bow'] >= 180 and u(\"Garcia\").wexp['Bow'] < 360"
-            ],
-            [
                 "menu_after_combat",
                 null
             ],
@@ -72014,10 +71500,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Garcia\").wexp['Bow'] >= 360"
-            ],
-            [
                 "menu_after_combat",
                 null
             ],
@@ -72086,17 +71568,7 @@
             [
                 "multi_item",
                 [
-                    "Manawood_Bow",
-                    "Firetip_Bow",
-                    "Emberwood_Bow",
-                    "Zethlas_Legacy",
-                    "Sylvania",
-                    "Gem_Sword",
-                    "Diamond_Sword",
-                    "Soul_Sword",
-                    "Heat_Ray",
-                    "Wyrms_Breath",
-                    "Disintegrator"
+                    "Manawood_Bow"
                 ]
             ],
             [
@@ -72198,10 +71670,6 @@
                 "STR_SKL_MID"
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Bow'] < 120"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -72293,10 +71761,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MAG_WEAK"
-            ],
-            [
-                "eval_available",
-                "u(\"Neimi\").wexp['Bow'] >= 120 and u(\"Neimi\").wexp['Bow'] < 240"
             ],
             [
                 "statuses_on_hit",
@@ -72398,10 +71862,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MAG_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Neimi\").wexp['Bow'] >= 240 and u(\"Neimi\").wexp['Bow'] < 420"
             ],
             [
                 "statuses_on_hit",
@@ -72506,10 +71966,6 @@
                 "STR_SKL_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Bow'] >= 420 and u(\"Neimi\").wexp['Bow'] < 480"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Seared"
@@ -72608,10 +72064,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MAG_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Neimi\").wexp['Bow'] >= 480"
             ],
             [
                 "level_exp",
@@ -72718,10 +72170,6 @@
                 "Sagittae"
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Sword'] < 180"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -72825,10 +72273,6 @@
                 "Sagittae"
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Sword'] >= 180 and u(\"Neimi\").wexp['Sword'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -72926,10 +72370,6 @@
                 "Sagittae"
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Sword'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -73024,10 +72464,6 @@
                 [
                     "Seared"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Neimi\").wexp['Anima'] < 180"
             ],
             [
                 "effective_damage",
@@ -73148,10 +72584,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Anima'] >= 180 and u(\"Neimi\").wexp['Anima'] < 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -73270,10 +72702,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Neimi\").wexp['Anima'] >= 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -73324,20 +72752,7 @@
             [
                 "multi_item",
                 [
-                    "Shiny_Dagger",
-                    "Bright_Dagger",
-                    "Glimmer_Dagger_Multi",
-                    "Glimmer_Dagger",
-                    "Flash_Point_Multi",
-                    "Flash_Point",
-                    "Swap_Dagger",
-                    "Necro_Fang",
-                    "Warped_Axe",
-                    "Serpent_Axe",
-                    "Python_Axe",
-                    "Smoke_Bow",
-                    "Hidden_Bow",
-                    "Ghost_Bow"
+                    "Shiny_Dagger"
                 ]
             ],
             [
@@ -73442,10 +72857,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] < 120"
-            ],
-            [
                 "added_crit_damage",
                 30
             ]
@@ -73539,10 +72950,6 @@
                 [
                     "Crit_Damage_Bonus_20_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 120 and u(\"Colm\").wexp['Sword'] < 240"
             ],
             [
                 "effective_damage",
@@ -73660,10 +73067,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 240 and u(\"Colm\").wexp['Sword'] < 420"
-            ],
-            [
                 "cooldown",
                 2
             ],
@@ -73773,10 +73176,6 @@
                 [
                     "Crit_Damage_Bonus_30_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 240 and u(\"Colm\").wexp['Sword'] < 420"
             ],
             [
                 "effective_damage",
@@ -73901,10 +73300,6 @@
                 [
                     "Crit_Damage_Bonus_40_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 420"
             ],
             [
                 "cooldown",
@@ -74033,10 +73428,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -74147,10 +73538,6 @@
                 [
                     "Crit_Damage_Bonus_30_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 240 and u(\"Colm\").wexp['Sword'] < 480"
             ]
         ]
     },
@@ -74255,10 +73642,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Sword'] >= 480"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50_hide"
@@ -74345,10 +73728,6 @@
                 [
                     "Colm"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Axe'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -74453,10 +73832,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Axe'] >= 180 and u(\"Colm\").wexp['Axe'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Venomous_Effect",
@@ -74559,10 +73934,6 @@
                 [
                     "Colm"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Axe'] >= 360"
             ],
             [
                 "statuses_on_hit",
@@ -74683,10 +74054,6 @@
                 [
                     "Colm"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Bow'] < 180"
             ]
         ]
     },
@@ -74784,10 +74151,6 @@
                 [
                     "Colm"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Colm\").wexp['Bow'] >= 180 and u(\"Colm\").wexp['Bow'] < 360"
             ],
             [
                 "statuses_on_hit",
@@ -74900,10 +74263,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Colm\").wexp['Bow'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
@@ -74935,17 +74294,7 @@
             [
                 "multi_item",
                 [
-                    "Ice_Smite",
-                    "Frostsweep",
-                    "Crusade_of_Ice_Artur",
-                    "Aura_Glacier_Artur",
-                    "Cold_Light",
-                    "Grace_Lance",
-                    "Angel_Lance",
-                    "Goddess_Lance",
-                    "Rain_Staff",
-                    "Storm_Staff",
-                    "Typhoon_Staff"
+                    "Ice_Smite"
                 ]
             ],
             [
@@ -75059,10 +74408,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Light'] < 120"
-            ],
-            [
                 "self_status_on_hit",
                 "Frozen_AOE_Splash"
             ],
@@ -75172,10 +74517,6 @@
                 [
                     "Artur"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Artur\").wexp['Light'] >= 120 and u(\"Artur\").wexp['Light'] < 240"
             ],
             [
                 "self_status_on_hit",
@@ -75289,10 +74630,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Light'] >= 240 and u(\"Artur\").wexp['Light'] < 420"
-            ],
-            [
                 "self_status_on_hit",
                 "Frozen_AOE_Splash"
             ],
@@ -75404,10 +74741,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Light'] >= 420 and u(\"Artur\").wexp['Light'] < 480"
-            ],
-            [
                 "self_status_on_hit",
                 "Frozen_AOE_Splash"
             ],
@@ -75515,10 +74848,6 @@
                 [
                     "Artur"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Artur\").wexp['Light'] >= 480"
             ],
             [
                 "self_status_on_hit",
@@ -75633,10 +74962,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Lance'] < 180"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -75726,10 +75051,6 @@
                     "Lance_Guard_C",
                     "Goddess_Luck"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Artur\").wexp['Lance'] >= 180 and u(\"Artur\").wexp['Lance'] < 360"
             ],
             [
                 "effective_damage",
@@ -75823,10 +75144,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Lance'] >= 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -75909,10 +75226,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Staff'] < 180"
-            ],
-            [
                 "self_status_on_hit",
                 "Water_AOE_Splash"
             ],
@@ -75987,10 +75300,6 @@
             [
                 "status_on_hit",
                 "Drench_Debuff"
-            ],
-            [
-                "eval_available",
-                "u(\"Artur\").wexp['Staff'] >= 180 and u(\"Artur\").wexp['Staff'] < 360"
             ],
             [
                 "self_status_on_hit",
@@ -76091,10 +75400,6 @@
                 "Drench_Debuff"
             ],
             [
-                "eval_available",
-                "u(\"Artur\").wexp['Staff'] >= 360"
-            ],
-            [
                 "self_status_on_hit",
                 "Water_AOE_Splash"
             ],
@@ -76152,21 +75457,7 @@
                 "multi_item",
                 [
                     "Nazonians_Lure",
-                    "Nazonians_Trap",
-                    "Nazonians_Pull",
-                    "Nazonians_Grasp",
-                    "Falibrian_Lure",
-                    "Falibrian_Trap",
-                    "Falibrian_Snare",
-                    "Falibrian_Clutch",
-                    "Level_158",
-                    "Dark_Shot",
-                    "Dark_Burst",
-                    "Dark_Meteor",
-                    "Wind_Edge",
-                    "Storm_Edge",
-                    "Tempest_Edge",
-                    "Exphyr"
+                    "Falibrian_Lure"
                 ]
             ],
             [
@@ -76261,10 +75552,6 @@
                     "Cursed_2",
                     "Shadow_Blight"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] < 120"
             ],
             [
                 "multi_status_on_equip",
@@ -76365,10 +75652,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 120 and u(\"Lute\").wexp['Dark'] < 240"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Allure_Human",
@@ -76467,10 +75750,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 240 and u(\"Lute\").wexp['Dark'] < 420"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Allure_Human",
@@ -76567,10 +75846,6 @@
                     "Cursed_15",
                     "Shadow_Blight"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 420"
             ],
             [
                 "multi_status_on_equip",
@@ -76672,10 +75947,6 @@
                 [
                     "Seared"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Anima'] < 120"
             ],
             [
                 "multi_status_on_equip",
@@ -76791,10 +76062,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Anima'] >= 120 and u(\"Lute\").wexp['Anima'] < 240"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Allure_Monster",
@@ -76908,10 +76175,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Anima'] >= 240 and u(\"Lute\").wexp['Anima'] < 420"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Allure_Monster",
@@ -77023,10 +76286,6 @@
                 [
                     "Seared"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Anima'] >= 420"
             ],
             [
                 "multi_status_on_equip",
@@ -77149,10 +76408,6 @@
                 "AnimaSplash_A"
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Anima'] >= 300"
-            ],
-            [
                 "prf_unit",
                 [
                     "Lute"
@@ -77258,10 +76513,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 240 and u(\"Lute\").wexp['Dark'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -77360,10 +76611,6 @@
                 [
                     "Lute"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 360  and u(\"Lute\").wexp['Dark'] < 480"
             ],
             [
                 "effective_damage",
@@ -77479,10 +76726,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Dark'] >= 480"
-            ],
-            [
                 "enemy_blast_aoe",
                 3
             ],
@@ -77593,10 +76836,6 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Lute\").wexp['Sword'] < 180"
             ],
             [
                 "effective_damage",
@@ -77711,10 +76950,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Sword'] >= 180 and u(\"Lute\").wexp['Sword'] < 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -77827,10 +77062,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Sword'] >= 360 and u(\"Lute\").wexp['Sword'] < 480"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -77926,10 +77157,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Lute\").wexp['Sword'] >= 480"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -77980,25 +77207,7 @@
             [
                 "multi_item",
                 [
-                    "Frost_Staff",
-                    "Fairy_Staff_Blast",
-                    "Fairy_Staff",
-                    "Blizzard_Staff_Blast",
-                    "Blizzard_Staff",
-                    "Snowfairy_Staff_Blast",
-                    "Snowfairy_Staff",
-                    "Pure_Devotion",
-                    "Innocent_Light",
-                    "Divine_Reward",
-                    "Heavens_Tome",
-                    "Righteous_Wind",
-                    "Holy_Tempest",
-                    "Joyous_Victory",
-                    "Natasha_Dagger_E",
-                    "Natasha_Dagger_C",
-                    "Natasha_Dagger_A",
-                    "Natasha_Dagger_SSS",
-                    "Natasha_Dagger_X"
+                    "Frost_Staff"
                 ]
             ],
             [
@@ -78098,10 +77307,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] < 120"
             ],
             [
                 "prf_unit",
@@ -78222,10 +77427,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 120 and u(\"Natasha\").wexp['Staff'] < 240"
             ],
             [
                 "prf_unit",
@@ -78350,10 +77551,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 120 and u(\"Natasha\").wexp['Staff'] < 240"
             ],
             [
                 "prf_unit",
@@ -78486,10 +77683,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 240 and u(\"Natasha\").wexp['Staff'] < 420"
-            ],
-            [
                 "exp",
                 3
             ],
@@ -78612,10 +77805,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 240 and u(\"Natasha\").wexp['Staff'] < 420"
             ],
             [
                 "multi_target",
@@ -78742,10 +77931,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 420"
-            ],
-            [
                 "exp",
                 3
             ],
@@ -78870,10 +78055,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Staff'] >= 420"
-            ],
-            [
                 "multi_target",
                 5
             ],
@@ -78990,10 +78171,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Light'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -79100,10 +78277,6 @@
                 [
                     "Natasha"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Light'] >= 180 and u(\"Natasha\").wexp['Light'] < 360"
             ],
             [
                 "item_tags",
@@ -79214,10 +78387,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Light'] >= 360 and u(\"Natasha\").wexp['Light'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -79322,10 +78491,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Light'] >= 480"
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -79424,10 +78589,6 @@
             [
                 "alternate_damage_formula",
                 "STR_LCK_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Lance'] < 180"
             ],
             [
                 "ignore_line_of_sight",
@@ -79531,10 +78692,6 @@
                 "STR_LCK_MID"
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Lance'] >= 180 and u(\"Natasha\").wexp['Lance'] < 360"
-            ],
-            [
                 "ignore_line_of_sight",
                 null
             ],
@@ -79634,10 +78791,6 @@
             [
                 "alternate_damage_formula",
                 "STR_LCK_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Lance'] >= 360"
             ],
             [
                 "ignore_line_of_sight",
@@ -79741,10 +78894,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Sword'] < 120"
-            ],
-            [
                 "prf_tags",
                 [
                     "Medic_Dagger"
@@ -79844,10 +78993,6 @@
                 [
                     "Crit_Damage_Bonus_20_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Sword'] >= 120 and u(\"Natasha\").wexp['Sword'] < 240"
             ],
             [
                 "prf_tags",
@@ -79950,10 +79095,6 @@
                     "Crit_Damage_Bonus_30_hide",
                     "Bloodletting"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Natasha\").wexp['Sword'] >= 240 and u(\"Natasha\").wexp['Sword'] < 420"
             ],
             [
                 "prf_tags",
@@ -80067,10 +79208,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Sword'] >= 420"
-            ],
-            [
                 "prf_tags",
                 [
                     "Medic_Dagger"
@@ -80179,10 +79316,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Natasha\").wexp['Sword'] >= 480"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50_hide",
@@ -80246,19 +79379,7 @@
                 "multi_item",
                 [
                     "Katana_Joshua",
-                    "Kaze_No_Ken",
-                    "Fuujinto",
-                    "True_Audhulma",
-                    "Kakeruken",
-                    "Taicho_No_Ken",
-                    "Kachi_No_Ken",
-                    "Swift_Axe",
-                    "Swift_Death",
-                    "Dark_Death",
-                    "Sand_Naginata",
-                    "Desert_Naginata",
-                    "Royal_Naginata",
-                    "True_Excalibur"
+                    "Kakeruken"
                 ]
             ],
             [
@@ -80371,10 +79492,6 @@
                 "ATTACK_SPEED"
             ],
             [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -80478,10 +79595,6 @@
             [
                 "alternate_damage_formula",
                 "ATTACK_SPEED"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 240 and u(\"Joshua\").wexp['Sword'] < 420"
             ],
             [
                 "item_tags",
@@ -80593,10 +79706,6 @@
                 "ATTACK_SPEED"
             ],
             [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 420  and u(\"Joshua\").wexp['Sword'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -80611,7 +79720,7 @@
     {
         "nid": "True_Audhulma",
         "name": "True Audhulma",
-        "desc": "True form of legendary sword of Jehanna. \n<green>Skills:</>Risky Vantage, Flash Slash <orange>Element:</><icon>Wind</>\n<red>Very Effective:</><icon>Monster</></><icon>Flying</></><icon>Infantry</><icon>Seared</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES'))}</>), +20 SPD, +20 RES.",
+        "desc": "True form of legendary sword of Jehanna. \n<green>Skills:</>Risky Vantage, Flash Slash <orange>Element:</><icon>Wind</>\n<red>Very Effective:</><icon>Monster</><icon>Flying</><icon>Infantry</><icon>Seared</>\n<pink>Misc:</>STR + SPD + RES (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('RES'))}</>), +20 SPD, +20 RES.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             8,
@@ -80710,10 +79819,6 @@
                 [
                     "Joshua"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 480"
             ],
             [
                 "item_tags",
@@ -80823,10 +79928,6 @@
             [
                 "alternate_damage_formula",
                 "LCK_STR_WEAK"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] < 180"
             ]
         ]
     },
@@ -80926,10 +80027,6 @@
             [
                 "alternate_damage_formula",
                 "LCK_STR_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 180 and u(\"Joshua\").wexp['Sword'] < 360"
             ]
         ]
     },
@@ -81029,10 +80126,6 @@
             [
                 "alternate_damage_formula",
                 "LCK_STR_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 360"
             ]
         ]
     },
@@ -81103,10 +80196,6 @@
                 [
                     "Joshua"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Axe'] < 180"
             ],
             [
                 "weapon_rank",
@@ -81198,10 +80287,6 @@
                 [
                     "Joshua"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Axe'] >= 180 and u(\"Joshua\").wexp['Axe'] < 360"
             ],
             [
                 "weapon_rank",
@@ -81298,10 +80383,6 @@
                 [
                     "Joshua"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Axe'] >= 360"
             ],
             [
                 "weapon_rank",
@@ -81418,10 +80499,6 @@
                 "STR_SKL_MID"
             ],
             [
-                "eval_available",
-                "u(\"Joshua\").wexp['Lance'] < 180"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -81521,10 +80598,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Lance'] >= 180 and u(\"Joshua\").wexp['Lance'] < 360"
             ],
             [
                 "stat_change",
@@ -81639,10 +80712,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Lance'] >= 360"
             ],
             [
                 "stat_change",
@@ -81800,10 +80869,6 @@
             [
                 "weapon_type_exempt",
                 "Anima"
-            ],
-            [
-                "eval_available",
-                "u(\"Joshua\").wexp['Sword'] >= 480"
             ]
         ]
     },
@@ -81824,17 +80889,7 @@
             [
                 "multi_item",
                 [
-                    "Painting_Sword",
-                    "Unrefined_Art",
-                    "Pastel_Sword",
-                    "Shade_Of_Blue",
-                    "Arts_Death",
-                    "Shaver_Forde",
-                    "Aircalibur_Forde",
-                    "Rexcalibur",
-                    "Reinforced_Scythe",
-                    "Redwood_Scythe",
-                    "Ebony_Scythe"
+                    "Painting_Sword"
                 ]
             ],
             [
@@ -81934,10 +80989,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_WEAK"
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Sword'] < 120"
             ]
         ]
     },
@@ -82026,10 +81077,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Sword'] >= 120 and u(\"Forde\").wexp['Sword'] < 240"
             ]
         ]
     },
@@ -82118,10 +81165,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MID"
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Sword'] >= 240 and u(\"Forde\").wexp['Sword'] < 420"
             ]
         ]
     },
@@ -82210,10 +81253,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Sword'] >= 420 and u(\"Forde\").wexp['Sword'] < 480"
             ]
         ]
     },
@@ -82305,10 +81344,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_MAG_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Sword'] >= 480 "
             ],
             [
                 "level_exp",
@@ -82418,10 +81453,6 @@
                 [
                     "Forde"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Dark'] < 180"
             ],
             [
                 "cooldown",
@@ -82547,10 +81578,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Forde\").wexp['Dark'] >= 180 and u(\"Forde\").wexp['Dark'] < 360"
-            ],
-            [
                 "cooldown",
                 2
             ],
@@ -82674,10 +81701,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Forde\").wexp['Dark'] >= 360"
-            ],
-            [
                 "cooldown",
                 2
             ],
@@ -82784,10 +81807,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Forde\").wexp['Lance'] < 180"
-            ],
-            [
                 "alternate_damage_formula",
                 "STR_SKL_MID"
             ]
@@ -82872,10 +81891,6 @@
                 [
                     "Forde"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Forde\").wexp['Lance'] >= 180 and u(\"Forde\").wexp['Lance'] < 360"
             ],
             [
                 "alternate_damage_formula",
@@ -82964,10 +81979,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Forde\").wexp['Lance'] >= 360"
-            ],
-            [
                 "alternate_damage_formula",
                 "STR_SKL_STRONG"
             ],
@@ -83003,17 +82014,7 @@
             [
                 "multi_item",
                 [
-                    "Ice_Pick_Kyle",
-                    "Ice_Club",
-                    "Ice_Tomahawk",
-                    "Frozen_Tundra",
-                    "Jottum_Maze",
-                    "Simple_Greatlance",
-                    "Careful_One",
-                    "Reliable_One",
-                    "Blastblade",
-                    "Punisher",
-                    "Lionheart"
+                    "Ice_Pick_Kyle"
                 ]
             ],
             [
@@ -83119,10 +82120,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Kyle\").wexp['Axe'] < 120"
             ],
             [
                 "multi_status_on_equip",
@@ -83240,10 +82237,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Axe'] >= 120 and u(\"Kyle\").wexp['Axe'] < 240"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "War_Blow",
@@ -83357,10 +82350,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Kyle\").wexp['Axe'] >= 240 and u(\"Kyle\").wexp['Axe'] < 420"
             ],
             [
                 "multi_status_on_equip",
@@ -83478,10 +82467,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Axe'] >= 420 and u(\"Kyle\").wexp['Axe'] < 480"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "War_Blow",
@@ -83501,7 +82486,7 @@
     {
         "nid": "Jottum_Maze",
         "name": "Jottum Maze",
-        "desc": "A hammer from an ancient cyclops.\n<green>Skills:</>War Blow, Heavy Impulse<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</><red>Effective:</><icon>Frozen</><icon>Infantry</>\n<pink>Misc:</>Heavy, STR + HP.",
+        "desc": "A hammer from an ancient cyclops that Kyle keeps....Just in case.\n<green>Skills:</>War Blow, Heavy Impulse<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</><red>Effective:</><icon>Frozen</><icon>Infantry</>\n<pink>Misc:</>Heavy, STR + HP.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             3,
@@ -83588,10 +82573,6 @@
                 [
                     "Kyle"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Kyle\").wexp['Axe'] >= 480"
             ],
             [
                 "multi_status_on_equip",
@@ -83711,10 +82692,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Lance'] < 180"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -83821,10 +82798,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Kyle\").wexp['Lance'] >= 180 and u(\"Kyle\").wexp['Lance'] < 360"
             ],
             [
                 "wexp",
@@ -83942,10 +82915,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Lance'] >= 360"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -84036,10 +83005,6 @@
                 [
                     "Kyle"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Kyle\").wexp['Sword'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -84140,10 +83105,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Sword'] >= 180 and u(\"Kyle\").wexp['Sword'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -84242,10 +83203,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Kyle\").wexp['Sword'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures",
@@ -84281,17 +83238,7 @@
             [
                 "multi_item",
                 [
-                    "Crab_Claw_Tana",
-                    "Urchin_Lance",
-                    "Lobster_Lance",
-                    "Sea_Queens_Trident",
-                    "True_Vidofnir",
-                    "Tornado",
-                    "Hurricane",
-                    "Royal_Scorn",
-                    "Cold_Breeze",
-                    "Arctic_Wind",
-                    "Ice_Queen"
+                    "Crab_Claw_Tana"
                 ]
             ],
             [
@@ -84324,13 +83271,7 @@
                 "multi_item",
                 [
                     "Crab_Leg_Heal",
-                    "Crab_Leg_Buff",
-                    "Urchin_Soup_Heal",
-                    "Urchin_Soup_Buff",
-                    "Lobster_Claw_Heal",
-                    "Lobster_Claw_Buff",
-                    "Ruler_Of_The_Sea_Heal",
-                    "Ruler_Of_The_Sea_Buff"
+                    "Crab_Leg_Buff"
                 ]
             ],
             [
@@ -84423,10 +83364,6 @@
                 [
                     "Tana"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] < 120"
             ],
             [
                 "item_tags",
@@ -84632,10 +83569,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 120 and u(\"Tana\").wexp['Lance'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Water"
@@ -84678,10 +83611,6 @@
                 [
                     "ItemNonCombat"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 120"
             ],
             [
                 "cooldown",
@@ -84740,10 +83669,6 @@
             [
                 "self_status_on_hit",
                 "Delicious_Urchin"
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 120"
             ],
             [
                 "cooldown",
@@ -84847,10 +83772,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 240 and u(\"Tana\").wexp['Lance'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Water"
@@ -84897,10 +83818,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 240"
             ],
             [
                 "menu_after_combat",
@@ -84959,10 +83876,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 240"
             ],
             [
                 "menu_after_combat",
@@ -85054,10 +83967,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 420 and u(\"Tana\").wexp['Lance'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Water"
@@ -85104,10 +84013,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 420"
             ],
             [
                 "menu_after_combat",
@@ -85166,10 +84071,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 420"
             ],
             [
                 "menu_after_combat",
@@ -85270,10 +84171,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Lance'] >= 480"
             ],
             [
                 "statuses_on_hit",
@@ -85439,10 +84336,6 @@
                 6
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Anima'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -85575,10 +84468,6 @@
                 "AOE_Blizzard"
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Anima'] >= 180 and u(\"Tana\").wexp['Anima'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -85709,10 +84598,6 @@
             [
                 "map_target_cast_anim",
                 "AOE_Blizzard"
-            ],
-            [
-                "eval_available",
-                "u(\"Tana\").wexp['Anima'] >= 360"
             ],
             [
                 "item_tags",
@@ -85887,10 +84772,6 @@
                 "MAG_SKL_MID"
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Bow'] < 180"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Frozen"
@@ -85998,10 +84879,6 @@
                 "MAG_SKL_MID"
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Bow'] >= 180 and u(\"Tana\").wexp['Bow'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Frozen"
@@ -86105,10 +84982,6 @@
                 "MAG_SKL_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Tana\").wexp['Bow'] >= 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Frozen"
@@ -86144,23 +85017,7 @@
             [
                 "multi_item",
                 [
-                    "Amelias_Lance",
-                    "Rising_Star",
-                    "Prodigy_Lance",
-                    "Battle_Maiden",
-                    "Bolt_Valkyrie",
-                    "Pulse_Axe_Blast",
-                    "Pulse_Axe",
-                    "Charged_Axe_Blast",
-                    "Charged_Axe",
-                    "Blitz_Axe_Blast",
-                    "Blitz_Axe",
-                    "Flintcrack_Bow",
-                    "Scatterflint_Bow",
-                    "Gaia_Bow",
-                    "Training_Stone_Amelia",
-                    "Thunder_Breath",
-                    "Black_Thunder_Breath"
+                    "Amelias_Lance"
                 ]
             ],
             [
@@ -86266,10 +85123,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Lance'] < 120"
-            ],
-            [
                 "cannot_be_countered",
                 null
             ]
@@ -86366,10 +85219,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Lance'] >= 120 and u(\"Amelia\").wexp['Lance'] < 240"
-            ],
-            [
                 "cannot_be_countered",
                 null
             ]
@@ -86464,10 +85313,6 @@
             [
                 "no_double",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Amelia\").wexp['Lance'] >= 240 and u(\"Amelia\").wexp['Lance'] < 420"
             ],
             [
                 "cannot_be_countered",
@@ -86577,10 +85422,6 @@
             [
                 "no_double",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Amelia\").wexp['Lance'] >= 420 and u(\"Amelia\").wexp['Lance'] < 480"
             ],
             [
                 "item_tags",
@@ -86698,10 +85539,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Lance'] >= 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -86754,10 +85591,6 @@
             [
                 "weight",
                 7
-            ],
-            [
-                "level_exp",
-                null
             ],
             [
                 "weapon_type",
@@ -86829,10 +85662,6 @@
                 2
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] < 180"
-            ],
-            [
                 "start_cooldown",
                 null
             ],
@@ -86855,6 +85684,10 @@
                 [
                     "Power_Chop_E"
                 ]
+            ],
+            [
+                "exp",
+                3
             ]
         ]
     },
@@ -86966,10 +85799,6 @@
                 "STR_MAG_MID"
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -87024,10 +85853,6 @@
             [
                 "weight",
                 11
-            ],
-            [
-                "level_exp",
-                null
             ],
             [
                 "weapon_type",
@@ -87099,10 +85924,6 @@
                 "STR_MAG_MID"
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] >= 180 and u(\"Amelia\").wexp['Axe'] < 360"
-            ],
-            [
                 "start_cooldown",
                 null
             ],
@@ -87125,6 +85946,10 @@
                 [
                     "Power_Chop_E"
                 ]
+            ],
+            [
+                "exp",
+                3
             ]
         ]
     },
@@ -87236,10 +86061,6 @@
                 "STR_MAG_MID"
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] >= 180 and u(\"Amelia\").wexp['Axe'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -87294,10 +86115,6 @@
             [
                 "weight",
                 15
-            ],
-            [
-                "level_exp",
-                null
             ],
             [
                 "weapon_type",
@@ -87369,10 +86186,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] >= 360"
-            ],
-            [
                 "start_cooldown",
                 null
             ],
@@ -87395,6 +86208,10 @@
                 [
                     "Power_Chop_SS"
                 ]
+            ],
+            [
+                "exp",
+                3
             ]
         ]
     },
@@ -87506,10 +86323,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Axe'] >= 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -87614,10 +86427,6 @@
                 [
                     "Rock_Punctures"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Amelia\").wexp['Bow'] < 180"
             ],
             [
                 "multi_target",
@@ -87736,10 +86545,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Bow'] >= 180 and u(\"Amelia\").wexp['Bow'] < 360"
-            ],
-            [
                 "exempt_from_dual_strike",
                 null
             ],
@@ -87856,10 +86661,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Bow'] >= 360"
-            ],
-            [
                 "exempt_from_dual_strike",
                 null
             ],
@@ -87948,10 +86749,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "eval_available",
-                "u(\"Amelia\").wexp['Monster'] < 300"
             ]
         ]
     },
@@ -88073,10 +86870,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Monster'] >= 300 and u(\"Amelia\").wexp['Monster'] < 420"
-            ],
-            [
                 "cannot_counter",
                 null
             ],
@@ -88195,10 +86988,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Amelia\").wexp['Monster'] >= 420"
-            ],
-            [
                 "cannot_counter",
                 null
             ],
@@ -88256,17 +87045,7 @@
             [
                 "multi_item",
                 [
-                    "Innes_Bow",
-                    "Party_Trick",
-                    "Serious_Shot",
-                    "Perfect_Shot",
-                    "True_Nidhogg",
-                    "Iceflame_Sword",
-                    "Wave_Sword_Innes",
-                    "Icecalibur",
-                    "Tide_Lance",
-                    "Sea_Royalty",
-                    "Dark_Ocean"
+                    "Innes_Bow"
                 ]
             ],
             [
@@ -88356,10 +87135,6 @@
                 [
                     "Innes"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Bow'] < 240"
             ]
         ]
     },
@@ -88438,10 +87213,6 @@
                 [
                     "Innes"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Bow'] >= 240 and u(\"Innes\").wexp['Bow'] < 300"
             ]
         ]
     },
@@ -88524,10 +87295,6 @@
             [
                 "brave",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Bow'] >= 300 and u(\"Innes\").wexp['Bow'] < 420"
             ]
         ]
     },
@@ -88606,10 +87373,6 @@
             [
                 "brave",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Bow'] >= 420 and u(\"Innes\").wexp['Bow'] < 480"
             ]
         ]
     },
@@ -88696,10 +87459,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_LCK_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Bow'] >= 480"
             ],
             [
                 "brave",
@@ -88828,10 +87587,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Sword'] < 180"
             ],
             [
                 "prf_unit",
@@ -88965,10 +87720,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Innes\").wexp['Sword'] >= 180 and u(\"Innes\").wexp['Sword'] < 360"
-            ],
-            [
                 "no_double",
                 null
             ],
@@ -89094,10 +87845,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Innes\").wexp['Sword'] >= 360"
-            ],
-            [
                 "no_double",
                 null
             ],
@@ -89182,10 +87929,6 @@
             [
                 "ignore_line_of_sight",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Innes\").wexp['Lance'] < 180"
             ],
             [
                 "weapon_rank",
@@ -89284,10 +88027,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Innes\").wexp['Lance'] >= 180 and u(\"Innes\").wexp['Lance'] < 360"
-            ],
-            [
                 "weapon_rank",
                 "B"
             ],
@@ -89384,10 +88123,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Innes\").wexp['Lance'] >= 360"
-            ],
-            [
                 "weapon_rank",
                 "SS"
             ],
@@ -89420,9 +88155,9 @@
         "nid": "Geriks_Arsenal",
         "name": "Gerik's Arsenal",
         "desc": "Gerik's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Axe</><icon>Lance</>",
-        "icon_nid": "Swords Sheet",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            7,
+            5,
             1
         ],
         "components": [
@@ -89433,17 +88168,7 @@
             [
                 "multi_item",
                 [
-                    "Odd_Job",
-                    "Big_Job",
-                    "Tough_Job",
-                    "Desert_Tiger",
-                    "Tiger_King",
-                    "Jolt_Axe",
-                    "Power_Axe",
-                    "Surge_Axe",
-                    "Massive_Lance",
-                    "Power_Lance",
-                    "World_Breaker"
+                    "Odd_Job"
                 ]
             ],
             [
@@ -89557,10 +88282,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Sword'] < 180"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -89663,10 +88384,6 @@
                 [
                     "Gerik"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gerik\").wexp['Sword'] >= 180 and u(\"Gerik\").wexp['Sword'] < 300"
             ],
             [
                 "wexp",
@@ -89773,10 +88490,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Sword'] >= 300 and u(\"Gerik\").wexp['Sword'] < 420"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -89881,10 +88594,6 @@
                 [
                     "Gerik"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gerik\").wexp['Sword'] >= 420 and u(\"Gerik\").wexp['Sword'] < 480"
             ],
             [
                 "wexp",
@@ -90002,10 +88711,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Sword'] >= 480 "
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -90097,10 +88802,6 @@
                 [
                     "Gerik"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gerik\").wexp['Axe'] < 180"
             ],
             [
                 "item_tags",
@@ -90202,10 +88903,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Axe'] >= 180 and u(\"Gerik\").wexp['Axe'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -90303,10 +89000,6 @@
                 [
                     "Gerik"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Gerik\").wexp['Axe'] >= 360"
             ],
             [
                 "item_tags",
@@ -90424,10 +89117,6 @@
             [
                 "wexp",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Gerik\").wexp['Lance'] < 360"
             ],
             [
                 "statuses_on_hit",
@@ -90552,10 +89241,6 @@
                 3
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Lance'] >= 360 and u(\"Gerik\").wexp['Lance'] < 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -90678,10 +89363,6 @@
                 3
             ],
             [
-                "eval_available",
-                "u(\"Gerik\").wexp['Lance'] >= 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -90710,13 +89391,7 @@
             [
                 "multi_item",
                 [
-                    "Sun_Dance",
-                    "Deserts_Spite",
-                    "Desert_Nova",
-                    "Desert_Climax",
-                    "Arcane_Breath",
-                    "Ancient_Breath",
-                    "Mythologic_Breath"
+                    "Sun_Dance"
                 ]
             ],
             [
@@ -90835,10 +89510,6 @@
                 2
             ],
             [
-                "eval_available",
-                "u(\"Tethys\").wexp['Light'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -90948,10 +89619,6 @@
             [
                 "attack_after_combat",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Tethys\").wexp['Light'] >= 180 and u(\"Tethys\").wexp['Light'] < 300"
             ],
             [
                 "item_tags",
@@ -91065,10 +89732,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Tethys\").wexp['Light'] >= 300 and u(\"Tethys\").wexp['Light'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -91178,10 +89841,6 @@
             [
                 "menu_after_combat",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Tethys\").wexp['Light'] >= 420"
             ],
             [
                 "item_tags",
@@ -91297,10 +89956,6 @@
                 [
                     "Tethys"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tethys\").wexp['Monster'] < 360"
             ]
         ]
     },
@@ -91418,10 +90073,6 @@
                 [
                     "T3_Arcane_Dragon"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tethys\").wexp['Monster'] >= 360 and u(\"Tethys\").wexp['Monster'] < 480"
             ]
         ]
     },
@@ -91533,10 +90184,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Tethys\").wexp['Monster'] >= 480"
-            ],
-            [
                 "level_exp",
                 null
             ]
@@ -91560,20 +90207,7 @@
                 "multi_item",
                 [
                     "Nibui_Hyoutou",
-                    "Seitou",
-                    "Hisame",
-                    "Yukiryuu_No_Ken",
-                    "Crimson_Flash",
-                    "Poison_Dagger_Marisa",
-                    "Venom_Moth",
-                    "Cinquedea_Marisa",
-                    "Murasame",
-                    "Iron_Club",
-                    "Steel_Club",
-                    "Silver_Club",
-                    "Primal_Aqua",
-                    "Dark_Downpour",
-                    "Blood_Spikes"
+                    "Poison_Dagger_Marisa"
                 ]
             ],
             [
@@ -91692,10 +90326,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Ice"
@@ -91805,10 +90435,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 180 and u(\"Marisa\").wexp['Sword'] < 300"
             ],
             [
                 "item_tags",
@@ -91922,10 +90548,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 300 and u(\"Marisa\").wexp['Sword'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Ice"
@@ -92037,10 +90659,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Ice"
@@ -92100,7 +90718,7 @@
             ],
             [
                 "weapon_rank",
-                "SSS"
+                "X"
             ],
             [
                 "multi_status_on_equip",
@@ -92151,10 +90769,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 480"
             ],
             [
                 "cannot_be_countered",
@@ -92244,10 +90858,6 @@
                 [
                     "Crit_Damage_Bonus_10_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] < 180"
             ]
         ]
     },
@@ -92333,10 +90943,6 @@
                 [
                     "Crit_Damage_Bonus_20_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 180 and u(\"Marisa\").wexp['Sword'] < 420"
             ]
         ]
     },
@@ -92428,10 +91034,6 @@
                 [
                     "Crit_Damage_Bonus_40_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 420 and u(\"Marisa\").wexp['Sword'] < 480"
             ]
         ]
     },
@@ -92514,10 +91116,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Sword'] >= 480"
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -92597,10 +91195,6 @@
                 [
                     "Marisa"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Axe'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -92697,10 +91291,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Axe'] >= 180 and u(\"Marisa\").wexp['Axe'] < 360"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Breached_5",
@@ -92793,10 +91383,6 @@
                 [
                     "Marisa"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Axe'] >= 360"
             ],
             [
                 "statuses_on_hit",
@@ -92909,10 +91495,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Dark'] < 360"
-            ],
-            [
                 "alternate_damage_formula",
                 "MAG_SPD_MID"
             ],
@@ -93014,10 +91596,6 @@
                 [
                     "Marisa"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Marisa\").wexp['Dark'] >= 360 and u(\"Marisa\").wexp['Dark'] < 420"
             ],
             [
                 "alternate_damage_formula",
@@ -93123,10 +91701,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Marisa\").wexp['Dark'] >= 420"
-            ],
-            [
                 "alternate_damage_formula",
                 "MAG_SPD_STRONG"
             ],
@@ -93167,22 +91741,7 @@
                 "multi_item",
                 [
                     "Boom_Staff_Larachel_Blast",
-                    "Boom_Staff_Larachel",
-                    "Kaboom_Staff_Blast",
-                    "Kaboom_Staff",
-                    "Kaboomle_Staff_Blast",
-                    "Kaboomle_Staff",
-                    "Big_Bang_Blast",
-                    "Big_Bang",
-                    "True_Latona",
-                    "Valkyries_Light",
-                    "Valkyries_Stride",
-                    "Valkyries_Grace",
-                    "True_Ivaldi",
-                    "Exhaust_Evil",
-                    "Drain_Corruption",
-                    "Evil_Conversion",
-                    "Aymr"
+                    "Boom_Staff_Larachel"
                 ]
             ],
             [
@@ -93229,7 +91788,7 @@
             ],
             [
                 "exp",
-                15
+                3
             ],
             [
                 "magic",
@@ -93292,10 +91851,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] < 180"
             ],
             [
                 "start_cooldown",
@@ -93406,10 +91961,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] < 180"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -93461,7 +92012,7 @@
             ],
             [
                 "exp",
-                15
+                3
             ],
             [
                 "magic",
@@ -93524,10 +92075,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 180 and u(\"Larachel\").wexp['Staff'] < 300"
             ],
             [
                 "start_cooldown",
@@ -93638,10 +92185,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 180 and u(\"Larachel\").wexp['Staff'] < 300"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -93693,7 +92236,7 @@
             ],
             [
                 "exp",
-                15
+                3
             ],
             [
                 "magic",
@@ -93756,10 +92299,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 300 and u(\"Larachel\").wexp['Staff'] < 420"
             ],
             [
                 "start_cooldown",
@@ -93870,10 +92409,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 300 and u(\"Larachel\").wexp['Staff'] < 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -93925,7 +92460,7 @@
             ],
             [
                 "exp",
-                15
+                3
             ],
             [
                 "magic",
@@ -93988,10 +92523,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 420"
             ],
             [
                 "start_cooldown",
@@ -94102,10 +92633,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -94192,10 +92719,6 @@
                 [
                     "Larachel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Staff'] >= 420"
             ]
         ]
     },
@@ -94298,10 +92821,6 @@
                 [
                     "Larachel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Light'] < 180"
             ],
             [
                 "item_tags",
@@ -94412,10 +92931,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Light'] >= 180 and u(\"Larachel\").wexp['Light'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -94524,10 +93039,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Light'] >= 360  and u(\"Larachel\").wexp['Light'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -94632,10 +93143,6 @@
                 [
                     "Larachel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Light'] >= 480 "
             ],
             [
                 "level_exp",
@@ -94770,10 +93277,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Dark'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -94891,10 +93394,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Larachel\").wexp['Dark'] >= 180 and u(\"Larachel\").wexp['Dark'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -95010,10 +93509,6 @@
                 [
                     "Larachel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Larachel\").wexp['Dark'] >= 360"
             ],
             [
                 "item_tags",
@@ -95137,23 +93632,7 @@
             [
                 "multi_item",
                 [
-                    "Veteran_Hammer",
-                    "Gift_Hammer",
-                    "Atlas_Dozla",
-                    "Dragonbone_Dozla",
-                    "Stormy_Sword",
-                    "Captains_Sword",
-                    "World_Traveler",
-                    "Admiral_Pride",
-                    "Dark_Rain",
-                    "Dark_Aqua",
-                    "Dark_Storm",
-                    "Dark_Stream",
-                    "Maelstrom",
-                    "Dark_WaterFall",
-                    "Training_Stone_Dozla",
-                    "Fog_Breath",
-                    "Stream_Breath"
+                    "Veteran_Hammer"
                 ]
             ],
             [
@@ -95274,10 +93753,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Axe'] < 180"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -95387,10 +93862,6 @@
             [
                 "shove",
                 1
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Axe'] >= 180 and u(\"Dozla\").wexp['Axe'] < 300"
             ],
             [
                 "wexp",
@@ -95504,10 +93975,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Axe'] >= 300 and u(\"Dozla\").wexp['Axe'] < 420"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -95619,10 +94086,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Axe'] >= 420"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -95721,10 +94184,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Sword'] < 180"
             ],
             [
                 "item_tags",
@@ -95830,10 +94289,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Sword'] >= 180 and u(\"Dozla\").wexp['Sword'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Water",
@@ -95937,10 +94392,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Sword'] >= 360 and u(\"Dozla\").wexp['Sword'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Water",
@@ -96037,10 +94488,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Sword'] >= 480"
             ],
             [
                 "item_tags",
@@ -96140,10 +94587,6 @@
                 [
                     "Dozla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] < 180"
             ],
             [
                 "cooldown",
@@ -96261,10 +94704,6 @@
                 [
                     "Dozla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] < 180"
             ],
             [
                 "min_range",
@@ -96387,10 +94826,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] >= 180 and u(\"Dozla\").wexp['Dark'] < 360"
-            ],
-            [
                 "cooldown",
                 6
             ],
@@ -96506,10 +94941,6 @@
                 [
                     "Dozla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] >= 180 and u(\"Dozla\").wexp['Dark'] < 360"
             ],
             [
                 "min_range",
@@ -96632,10 +95063,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] >= 360"
-            ],
-            [
                 "cooldown",
                 6
             ],
@@ -96753,10 +95180,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Dark'] >= 360"
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -96860,10 +95283,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Monster'] < 360"
             ]
         ]
     },
@@ -96967,10 +95386,6 @@
                 [
                     "Dozla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Dozla\").wexp['Monster'] >= 360 and u(\"Dozla\").wexp['Monster'] < 420"
             ],
             [
                 "item_tags",
@@ -97082,10 +95497,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Dozla\").wexp['Monster'] >= 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -97132,21 +95543,7 @@
                 "multi_item",
                 [
                     "Meditation_Wind",
-                    "Sleeping_Draft_Blast",
-                    "Sleeping_Draft",
-                    "Heavy_Eyes_Blast",
-                    "Heavy_Eyes",
-                    "Angels_Lullaby_Blast",
-                    "Angels_Lullaby",
-                    "Veil_Of_Torment",
-                    "Eternal_Night",
-                    "Death_Plague",
-                    "Life_Extinction",
-                    "Venom_Staff",
-                    "Plague_Staff_Saleh_Blast",
-                    "Plague_Staff_Saleh",
-                    "Venom_Thorn_Blast",
-                    "Venom_Thorn"
+                    "Veil_Of_Torment"
                 ]
             ],
             [
@@ -97263,10 +95660,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] < 180"
             ],
             [
                 "item_tags",
@@ -97398,10 +95791,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 180 and u(\"Saleh\").wexp['Anima'] < 300"
             ],
             [
                 "exp",
@@ -97539,10 +95928,6 @@
                 "AOE_Reinforce"
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 180 and u(\"Saleh\").wexp['Anima'] < 300"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -97672,10 +96057,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 300 and u(\"Saleh\").wexp['Anima'] < 420"
             ],
             [
                 "exp",
@@ -97813,10 +96194,6 @@
                 "AOE_Reinforce"
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 300 and u(\"Saleh\").wexp['Anima'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -97946,10 +96323,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 420"
             ],
             [
                 "exp",
@@ -98091,10 +96464,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Anima'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -98196,10 +96565,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Dark'] < 180"
             ],
             [
                 "effective_damage",
@@ -98317,10 +96682,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Dark'] >= 180 and u(\"Saleh\").wexp['Dark'] < 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -98436,10 +96797,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Dark'] >= 360"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -98540,10 +96897,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Dark'] >= 480"
             ],
             [
                 "min_range",
@@ -98668,10 +97021,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Staff'] < 180"
-            ],
-            [
                 "exempt_from_dual_strike",
                 null
             ],
@@ -98770,10 +97119,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Staff'] >= 180 and u(\"Saleh\").wexp['Staff'] < 360"
             ],
             [
                 "menu_after_combat",
@@ -98882,10 +97227,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Staff'] >= 180 and u(\"Saleh\").wexp['Staff'] < 360"
             ],
             [
                 "menu_after_combat",
@@ -99000,10 +97341,6 @@
                 [
                     "Saleh"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Saleh\").wexp['Staff'] >= 360"
             ],
             [
                 "menu_after_combat",
@@ -99126,10 +97463,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Saleh\").wexp['Staff'] >= 360"
-            ],
-            [
                 "menu_after_combat",
                 null
             ],
@@ -99190,16 +97523,7 @@
             [
                 "multi_item",
                 [
-                    "Sear",
-                    "Scorch",
-                    "Inferno",
-                    "Beam",
-                    "Sun_Ray",
-                    "Envelop",
-                    "Bite",
-                    "Chomp",
-                    "Crunch",
-                    "Ragnarok_Ewan"
+                    "Sear"
                 ]
             ],
             [
@@ -99339,10 +97663,6 @@
             [
                 "self_status_on_hit",
                 "AnimaSplash_E"
-            ],
-            [
-                "eval_available",
-                "u(\"Ewan\").wexp['Anima'] < 240"
             ],
             [
                 "item_tags",
@@ -99497,10 +97817,6 @@
                 "AnimaSplash_A"
             ],
             [
-                "eval_available",
-                "u(\"Ewan\").wexp['Anima'] >= 240 and u(\"Ewan\").wexp['Anima'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -99635,10 +97951,6 @@
                 [
                     "Seared"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ewan\").wexp['Anima'] >= 420"
             ],
             [
                 "self_status_on_hit",
@@ -99793,10 +98105,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ewan\").wexp['Light'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -99937,10 +98245,6 @@
                 [
                     "Crit_Damage_Bonus_30_hide"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ewan\").wexp['Light'] >= 240 and u(\"Ewan\").wexp['Light'] < 420"
             ],
             [
                 "item_tags",
@@ -100085,10 +98389,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ewan\").wexp['Light'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -100218,10 +98518,6 @@
                     "Cursed_2",
                     "Shadow_Blight"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ewan\").wexp['Dark'] < 240"
             ],
             [
                 "item_tags",
@@ -100361,10 +98657,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ewan\").wexp['Dark'] >= 240 and u(\"Ewan\").wexp['Dark'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -100500,10 +98792,6 @@
                     "Cursed_15",
                     "Shadow_Blight"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Ewan\").wexp['Dark'] >= 420"
             ],
             [
                 "item_tags",
@@ -100649,10 +98937,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Ewan\").wexp['Anima'] >= 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire",
@@ -100684,23 +98968,7 @@
             [
                 "multi_item",
                 [
-                    "Memento_Axe",
-                    "Boil_Axe",
-                    "Thermal_Axe",
-                    "Steam_Crusher",
-                    "Fire_Lance",
-                    "Inferno_Lance",
-                    "Bloodfire_Lance",
-                    "Gae_Bolg",
-                    "Marsh",
-                    "Worm",
-                    "Swamp",
-                    "Slug",
-                    "Endless_Bog",
-                    "Undead_Breath",
-                    "Training_Stone_Cormag",
-                    "Dark_Flame_Breath",
-                    "Hellfire_Breath"
+                    "Memento_Axe"
                 ]
             ],
             [
@@ -100782,10 +99050,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Axe'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -100899,10 +99163,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Axe'] >= 180 and u(\"Cormag\").wexp['Axe'] < 300"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -101010,10 +99270,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Axe'] >= 300 and u(\"Cormag\").wexp['Axe'] < 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -101119,10 +99375,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Axe'] >= 420"
             ],
             [
                 "effective_damage",
@@ -101241,10 +99493,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Lance'] < 180"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -101339,10 +99587,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Lance'] >= 180 and u(\"Cormag\").wexp['Lance'] < 360"
             ],
             [
                 "item_tags",
@@ -101447,10 +99691,6 @@
                 "STR_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Lance'] >= 360 and u(\"Cormag\").wexp['Lance'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -101545,10 +99785,6 @@
                 "STR_SKL_MAG_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Lance'] >= 480"
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -101641,10 +99877,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] < 360"
             ],
             [
                 "cooldown",
@@ -101758,10 +99990,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] < 360"
             ],
             [
                 "min_range",
@@ -101878,10 +100106,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] >= 360 and u(\"Cormag\").wexp['Dark'] < 420"
             ],
             [
                 "cooldown",
@@ -102001,10 +100225,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] >= 360 and u(\"Cormag\").wexp['Dark'] < 420"
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -102119,10 +100339,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] >= 420"
             ],
             [
                 "global_range",
@@ -102242,10 +100458,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Dark'] >= 420"
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -102344,10 +100556,6 @@
             [
                 "weapon_rank",
                 "E"
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Monster'] < 300"
             ]
         ]
     },
@@ -102446,10 +100654,6 @@
                 [
                     "Cormag"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cormag\").wexp['Monster'] >= 300 and u(\"Cormag\").wexp['Monster'] < 420"
             ],
             [
                 "item_tags",
@@ -102558,10 +100762,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cormag\").wexp['Monster'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark",
@@ -102587,16 +100787,7 @@
             [
                 "multi_item",
                 [
-                    "Dusk_Dagger",
-                    "Void_Dagger_Rennac",
-                    "Ebony_Dagger",
-                    "Oblivions_Maw",
-                    "Twin_Snake",
-                    "Darkvoid_Snakes",
-                    "Voidserpent_Triad",
-                    "Golden_Forge",
-                    "Golden_Burst",
-                    "Golden_Wave"
+                    "Dusk_Dagger"
                 ]
             ],
             [
@@ -102714,10 +100905,6 @@
                 3
             ],
             [
-                "eval_available",
-                "u(\"Rennac\").wexp['Sword'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -102822,10 +101009,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Rennac\").wexp['Sword'] >= 360 and u(\"Rennac\").wexp['Sword'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -102928,10 +101111,6 @@
             [
                 "eclipse",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Rennac\").wexp['Sword'] >= 420 and u(\"Rennac\").wexp['Sword'] < 480"
             ],
             [
                 "item_tags",
@@ -103044,10 +101223,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Rennac\").wexp['Sword'] >= 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -103058,7 +101233,7 @@
     {
         "nid": "Twin_Snake",
         "name": "Twin Snake",
-        "desc": "A flux that summons snakes from the abyss.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>(Multi-target:4).",
+        "desc": "A flux that summons snakes from the abyss.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>Cannot be countered, (Multi-target:4).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             5,
@@ -103152,10 +101327,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Rennac\").wexp['Dark'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -103176,7 +101347,7 @@
     {
         "nid": "Darkvoid_Snakes",
         "name": "Darkvoid Snakes",
-        "desc": "Deadly snakes that feed upon the dregs of the abyss.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>(Multi-target:6).",
+        "desc": "Deadly snakes that feed upon the dregs of the abyss.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>Cannot be countered, (Multi-target:6).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             6,
@@ -103270,10 +101441,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Rennac\").wexp['Dark'] >= 360 and u(\"Rennac\").wexp['Dark'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -103294,7 +101461,7 @@
     {
         "nid": "Voidserpent_Triad",
         "name": "Voidserpent Triad",
-        "desc": "Deady twinheaded voidserpents whose bites never heal.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>(Multi-target:8).",
+        "desc": "Deady twinheaded voidserpents whose bites never heal.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>Cannot be countered, (Multi-target:9).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             0,
@@ -103381,15 +101548,11 @@
             ],
             [
                 "multi_target",
-                8
+                9
             ],
             [
                 "allow_less_than_max_targets",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Rennac\").wexp['Dark'] >= 420"
             ],
             [
                 "item_tags",
@@ -103498,10 +101661,6 @@
                 [
                     "Gold_Finger"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Rennac\").wexp['Anima'] < 360"
             ]
         ]
     },
@@ -103594,10 +101753,6 @@
                 [
                     "Gold_Finger"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Rennac\").wexp['Anima'] >= 360 and u(\"Rennac\").wexp['Anima'] < 420"
             ]
         ]
     },
@@ -103710,10 +101865,6 @@
             [
                 "exempt_from_dual_strike",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Rennac\").wexp['Anima'] >= 420"
             ]
         ]
     },
@@ -103734,18 +101885,7 @@
             [
                 "multi_item",
                 [
-                    "Dull_Obsidian",
-                    "Refined_Obsidian",
-                    "Bright_Obsidian",
-                    "Gavaleus",
-                    "Defenders_Blade",
-                    "Guardians_Blade",
-                    "Obsidians_Oath",
-                    "Emperor_Blade",
-                    "Leg_Chopper",
-                    "Man_Killer",
-                    "Widow_Maker",
-                    "True_Garm"
+                    "Dull_Obsidian"
                 ]
             ],
             [
@@ -103829,10 +101969,6 @@
                 [
                     "Duessel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Lance'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -103921,10 +102057,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Duessel\").wexp['Lance'] >= 180 and u(\"Duessel\").wexp['Lance'] < 300"
-            ],
-            [
                 "statuses_on_hit",
                 [
                     "Rock_Punctures"
@@ -104009,10 +102141,6 @@
                 [
                     "Duessel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Lance'] >= 300 and u(\"Duessel\").wexp['Lance'] < 420"
             ],
             [
                 "statuses_on_hit",
@@ -104112,10 +102240,6 @@
                 [
                     "Duessel"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Lance'] >= 420"
             ],
             [
                 "statuses_on_hit",
@@ -104248,10 +102372,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Duessel\").wexp['Sword'] < 180"
-            ],
-            [
                 "wexp",
                 3
             ]
@@ -104359,10 +102479,6 @@
                     "Grados_Wall_GainP",
                     "Blade_Sweep"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Sword'] >= 180 and u(\"Duessel\").wexp['Sword'] < 360"
             ],
             [
                 "wexp",
@@ -104475,10 +102591,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Duessel\").wexp['Sword'] >= 360 and u(\"Duessel\").wexp['Sword'] < 480"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -104585,10 +102697,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Duessel\").wexp['Sword'] >= 480"
-            ],
-            [
                 "level_exp",
                 null
             ],
@@ -104691,10 +102799,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Axe'] < 180"
             ],
             [
                 "statuses_on_hit",
@@ -104803,10 +102907,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Axe'] >= 180 and u(\"Duessel\").wexp['Axe'] < 360"
             ],
             [
                 "statuses_on_hit",
@@ -104921,10 +103021,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Duessel\").wexp['Axe'] >= 360"
             ],
             [
                 "statuses_on_hit",
@@ -105104,17 +103200,7 @@
             [
                 "multi_item",
                 [
-                    "Times_Sight",
-                    "Twisting_Time",
-                    "Cracking_Time",
-                    "True_Gleipnir",
-                    "Upstream_Staff",
-                    "River_Of_Death",
-                    "Downstream_Staff",
-                    "River_Of_Life",
-                    "Wolf_Spirit",
-                    "Snake_Spirit",
-                    "Oni_Spirit"
+                    "Times_Sight"
                 ]
             ],
             [
@@ -105225,10 +103311,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Knoll\").wexp['Dark'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -105332,10 +103414,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Knoll\").wexp['Dark'] >= 360 and u(\"Knoll\").wexp['Dark'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -105437,10 +103515,6 @@
                 [
                     "Knoll"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Dark'] >= 420 and u(\"Knoll\").wexp['Dark'] < 480"
             ],
             [
                 "item_tags",
@@ -105550,10 +103624,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Knoll\").wexp['Dark'] >= 480"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -105653,10 +103723,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Staff'] < 360"
             ]
         ]
     },
@@ -105723,10 +103789,6 @@
             [
                 "cooldown",
                 3
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Staff'] >= 360"
             ]
         ]
     },
@@ -105781,10 +103843,6 @@
                 [
                     "Downstream_Body"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Staff'] < 420"
             ]
         ]
     },
@@ -105843,10 +103901,6 @@
                 [
                     "Downstream_BodyP"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Staff'] >= 420"
             ]
         ]
     },
@@ -105933,10 +103987,6 @@
                 [
                     "Rock_Punctures"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Knoll\").wexp['Anima'] < 360"
             ],
             [
                 "stat_change",
@@ -106076,10 +104126,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Knoll\").wexp['Anima'] >= 360 and u(\"Knoll\").wexp['Anima'] < 420"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -106217,10 +104263,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Knoll\").wexp['Anima'] >= 420"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -106290,16 +104332,7 @@
             [
                 "multi_item",
                 [
-                    "Trusty_Spear",
-                    "Battalion_Spear",
-                    "Mythril_Spear",
-                    "Valkyrie_Queen",
-                    "Lightning_Sword",
-                    "Fales_Fury",
-                    "Fales_Bolt",
-                    "Sleet",
-                    "Hailstorm",
-                    "Bolt_Hail"
+                    "Trusty_Spear"
                 ]
             ],
             [
@@ -106388,10 +104421,6 @@
                     "Lance_Guard_E",
                     "Wrath_Of_The_Valkyries_Aura"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Syrene\").wexp['Lance'] < 360"
             ],
             [
                 "effective_damage",
@@ -106494,10 +104523,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Syrene\").wexp['Lance'] >= 360 and u(\"Syrene\").wexp['Lance'] < 420"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -106598,10 +104623,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Syrene\").wexp['Lance'] >= 420 and u(\"Syrene\").wexp['Lance'] < 480"
-            ],
-            [
                 "effective_damage",
                 {
                     "effective_tags": [
@@ -106700,10 +104721,6 @@
                     "Lance_Guard_X",
                     "Wrath_Of_The_Valkyries_AuraP"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Syrene\").wexp['Lance'] >= 480"
             ],
             [
                 "effective_damage",
@@ -106825,10 +104842,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Syrene\").wexp['Sword'] < 360"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -106929,10 +104942,6 @@
                 [
                     "Syrene"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Syrene\").wexp['Sword'] >= 360 and u(\"Syrene\").wexp['Sword'] < 420"
             ],
             [
                 "item_tags",
@@ -107037,10 +105046,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Syrene\").wexp['Sword'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Thunder"
@@ -107122,10 +105127,6 @@
                 [
                     "Syrene"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Syrene\").wexp['Anima'] < 360"
             ],
             [
                 "min_range",
@@ -107271,10 +105272,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Syrene\").wexp['Anima'] >= 360 and u(\"Syrene\").wexp['Anima'] < 420"
-            ],
-            [
                 "min_range",
                 1
             ],
@@ -107416,10 +105413,6 @@
                 [
                     "Syrene"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Syrene\").wexp['Anima'] >= 420"
             ],
             [
                 "min_range",
@@ -116388,7 +114381,7 @@
     {
         "nid": "Charging_Bull",
         "name": "Charging Bull",
-        "desc": "Play with the bull, get the horns.\n<green>Skills:</>War Blow, Charger++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</></><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (4)",
+        "desc": "Play with the bull, get the horns.\n<green>Skills:</>War Blow, Charger++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (4)",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -116506,7 +114499,7 @@
     {
         "nid": "Raging_Demon",
         "name": "Raging Demon",
-        "desc": "A rage filled warhammer that vaporizes enemies.\n<green>Skills:</>War Blow, Charger+++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</></><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (5)",
+        "desc": "A rage filled warhammer that vaporizes enemies.\n<green>Skills:</>War Blow, Charger+++\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Stun</><icon>Seared</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, Shove (5)",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -135961,7 +133954,7 @@
             ],
             [
                 "damage",
-                5
+                8
             ],
             [
                 "hit",
@@ -142551,7 +140544,7 @@
     {
         "nid": "Broken_Edge",
         "name": "Broken Edge",
-        "desc": "An edge of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), bonus WEXP.",
+        "desc": "An edge of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), triple WEXP gain.",
         "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
             0,
@@ -142707,7 +140700,7 @@
     {
         "nid": "Anointed_Daggers",
         "name": "Anointed Daggers",
-        "desc": "Ritual razors consecrated between blood and rust, for eternity.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x1\n<pink>Misc:</>SPD+ SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//3}</>),gains 10% lifesteal,+20Crit damage .",
+        "desc": "Ritual razors consecrated between blood and rust, for eternity.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x1\n<pink>Misc:</>SPD+ SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//3}</>), HP Absorb (10%),+20 Crit damage.",
         "icon_nid": "{SacredStones} Item 006 Spy s Dagger",
         "icon_index": [
             0,
@@ -142810,7 +140803,7 @@
     {
         "nid": "Deadly_Edge",
         "name": "Deadly Edge",
-        "desc": "Blade said to have taken several lives. Not to be confused with a Killing Edge.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//2}</>) .",
+        "desc": "Blade said to have taken several lives. Not to be confused with a Killing Edge.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>STR+SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))//2}</>).",
         "icon_nid": "{Batima} Scarlet Sword",
         "icon_index": [
             0,
@@ -142892,7 +140885,7 @@
     {
         "nid": "Basiliscos_teeth",
         "name": "Basiliscos teeth",
-        "desc": "Daggers forged from the teeth of a basilisk, the most poisonous living creature.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x3\n<pink>Misc:</>SPD+ SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//2}</>),gains 20% lifesteal,+30 Crit Damage",
+        "desc": "Daggers forged from the teeth of a basilisk, the most poisonous living creature.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x3\n<pink>Misc:</>SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//2}</>), HP Absorb (20%), +30 Crit Damage.",
         "icon_nid": "{FuriousHaunter} Duel Slashers",
         "icon_index": [
             0,
@@ -143085,7 +141078,7 @@
     {
         "nid": "Hassan_Aspect",
         "name": "Hassan Aspect",
-        "desc": "Daggers said to belong to the master of assassins, their lethal poison corrodes any defense and their edge drains all life.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x5\n<pink>Misc:</>SPD+ SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>)Gains 40%lifesteal,+40 Crit Damage.",
+        "desc": "Daggers said to belong to the master of assassins, their lethal poison corrodes any defense and their edge drains all life.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x5\n<pink>Misc:</>SPD+ SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>) HP Absorb (40%), +40 Crit Damage.",
         "icon_nid": "{Batima} Scarlet Sword",
         "icon_index": [
             0,
@@ -166995,6 +164988,26 @@
         ]
     },
     {
+        "nid": "Neutrality_Book_CA",
+        "name": "Neutrality Book",
+        "desc": "<red>CA:</>Removes the Weapon Triangle from the battle. <green>CD:0 Turns</>",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "ignore_weapon_advantage",
+                null
+            ],
+            [
+                "ignore_weapon_disadvantage",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Drop_Of_Youth",
         "name": "Drop of Youth",
         "desc": "Resets any unit's LV to 16 if they are above LV 16. Consumed on use.",
@@ -169419,7 +167432,7 @@
         "components": [
             [
                 "value",
-                15000
+                3000
             ],
             [
                 "equippable_accessory",
@@ -169634,6 +167647,31 @@
                 [
                     "Support"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Arrow_item",
+        "name": "Fell Arrow item",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Light"
+                    ],
+                    "effective_multiplier": 5.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

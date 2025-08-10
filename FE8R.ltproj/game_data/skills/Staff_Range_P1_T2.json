@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Staff_Range_P1_T2",
+        "name": "Staff Range +1",
+        "desc": "<red>CA:</>+1 Range to Staves. <green>CD:0 Turns</>\nThis effect is always active during EP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            2,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

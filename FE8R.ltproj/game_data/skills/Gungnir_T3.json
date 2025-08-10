@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Gungnir_T3",
+        "name": "Gungnir",
+        "desc": "Add DEF to attacks and +2 range when using Lances or Bows.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            28
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) in ('Bow', 'Lance')"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('DEF')"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

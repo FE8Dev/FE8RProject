@@ -2,28 +2,28 @@
     {
         "nid": "Magic_RangeP1_T3",
         "name": "Magical Overcharge",
-        "desc": "All magic attacks gain (AOE:2).",
+        "desc": "All Magical attacks gain (AOE:2).",
         "icon_nid": "skill_icons",
         "icon_index": [
-            12,
-            29
+            13,
+            42
         ],
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light', 'Dark', 'Anima', 'Staff'"
+                "item_funcs.is_magic(unit, unit.get_weapon())"
             ],
             [
                 "feat",
                 null
             ],
             [
-                "copysafe",
-                []
-            ],
-            [
                 "smart_oversplash",
                 2
+            ],
+            [
+                "copysafe",
+                []
             ]
         ]
     }

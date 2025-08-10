@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Dark_Blessing_T3",
+        "name": "Dark Blessing",
+        "desc": "+1 range to axes and dark magic.\nEffect is always active during EP.\nImmune to Negative status effects.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) in ('Dark', 'Axe')"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

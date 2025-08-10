@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Chains_of_Death",
+        "name": "Chains of Death",
+        "desc": "+1 Sword range.\nUnit deals x2 Damage against enemies below 50% HP.\nKilling enemies not at Max HP grants Galeforce up to 3 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ]
+        ]
+    }
+]

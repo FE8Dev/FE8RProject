@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Light_Range_P1_Staff_Feat_hide",
+        "name": "Knowledge of Justice (<icon>Light</>)",
+        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Dark_Mastery_T3",
+        "name": "Dark Mastery",
+        "desc": "+2 range with Dark magic.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Dark'"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Chain_Weapons_T2",
+        "name": "Chain Weapons",
+        "desc": "+1 range to Swords, Lances, and Axes.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) in ('Sword', 'Lance', 'Axe')"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

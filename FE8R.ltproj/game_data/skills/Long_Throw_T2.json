@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Long_Throw_T2",
+        "name": "Long Throw",
+        "desc": "+1 range to Lances. +40 Crit damage when using Lances.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            7
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Lance'"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "eval_crit_additional",
+                "40"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]
