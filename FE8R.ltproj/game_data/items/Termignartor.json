@@ -1,12 +1,12 @@
 [
     {
-        "nid": "Infernal_Sword",
-        "name": "Infernal Sword",
-        "desc": "A powerful sword bathed in flames of the underworld.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2), Extremely Burned\n<red>Very effective:</><icon>Horse</><icon>Monster</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), +15 SPD.",
-        "icon_nid": "Swords Sheet",
+        "nid": "Termignartor",
+        "name": "Termignartor",
+        "desc": "A blade for those who know what they are doing\nscale with: STR+MAG+SKL+(HP/2)+SPD+LCK+DEF+RES+CON+MOV\n",
+        "icon_nid": "{2WB} (Icon Blitz 1) Durandal (Ablaze)",
         "icon_index": [
-            9,
-            5
+            0,
+            0
         ],
         "components": [
             [
@@ -27,19 +27,19 @@
             ],
             [
                 "damage",
-                27
+                0
             ],
             [
                 "hit",
-                110
+                100
             ],
             [
                 "crit",
-                16
+                0
             ],
             [
                 "weight",
-                15
+                6
             ],
             [
                 "level_exp",
@@ -79,7 +79,7 @@
                         "Horse"
                     ],
                     "effective_multiplier": 3,
-                    "effective_bonus_damage": 32,
+                    "effective_bonus_damage": 5,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
@@ -93,21 +93,21 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_STRONG"
-            ],
-            [
-                "self_status_on_hit",
-                "Seared_AOE_Splash"
+                "T3RM"
             ],
             [
                 "value",
-                5000
+                80000
             ],
             [
                 "item_tags",
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
             ]
         ]
     }

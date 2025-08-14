@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Summon Rally Standart",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "",
+            "if;game.check_dead('Rally_Standart_' + unit.nid)",
+            "    resurrect;Rally_Standart_{e:unit.nid}",
+            "else",
+            "    make_generic;Rally_Standart_{e:unit.nid};Rally_Standart;{e:unit.level};player",
+            "end",
+            "",
+            "",
+            "add_unit;Rally_Standart_{e:unit.nid};{e:target_pos};warp",
+            "wait;200"
+        ],
+        "nid": "Global Summon Rally Standart"
+    }
+]

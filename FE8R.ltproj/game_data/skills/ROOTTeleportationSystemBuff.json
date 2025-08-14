@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "ROOTTeleportationSystemBuff",
+        "name": "ROOTTeleportationSystemBuff",
+        "desc": "set character move to 1. this unit can teleport to the adjacente square to any ally unit",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "witch_warp",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MOV",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    }
+]
