@@ -1,8 +1,13 @@
-tbr
+08-15-25
 
 Bloodhound 1st skill has been reworked/buffed.
 Succubus 1st skill has been buffed
 All monster enemies weapon evolution code has been done.
+HP bar speed has been tripled.
+EXP and level up speed has been doubled.
+Heavy weapons have been made simple. No class or HP requirement.
+Shop UI has been updated.
+Some new items added to DG (Items need to be finalized with credits, etc.)
 
 
 
