@@ -10,6 +10,10 @@
         ],
         "components": [
             [
+                "hidden",
+                null
+            ],
+            [
                 "condition",
                 "(game.tilemap.get_terrain(unit.position) in ('10' , '11', '12')) and (not 'Flying' in unit.tags)"
             ],
@@ -65,10 +69,6 @@
             [
                 "dynamic_crit_accuracy",
                 "15"
-            ],
-            [
-                "hidden",
-                null
             ]
         ]
     }

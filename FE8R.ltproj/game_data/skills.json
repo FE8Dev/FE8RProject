@@ -86,10 +86,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL') // 3)"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -106,10 +102,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL') // 2)"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -126,10 +118,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL'))"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -146,10 +134,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL') * 1.5)"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -166,10 +150,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL') * 2)"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -369,10 +349,6 @@
             [
                 "vantage",
                 null
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -388,10 +364,6 @@
         "components": [
             [
                 "vantage",
-                null
-            ],
-            [
-                "lost_on_end_chapter",
                 null
             ]
         ]
@@ -433,16 +405,6 @@
             [
                 "hidden",
                 null
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -1154,10 +1116,6 @@
                 [
                     "Flash_Step"
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -1412,10 +1370,6 @@
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -2438,16 +2392,6 @@
                 999
             ],
             [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -2455,6 +2399,10 @@
                         20
                     ]
                 ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
             ]
         ]
     },
@@ -2528,16 +2476,6 @@
             [
                 "dynamic_accuracy",
                 "-5 * (utils.calculate_distance(unit.position, target.position) -2) if target and utils.calculate_distance(unit.position, target.position) > 2 and utils.calculate_distance(unit.position, target.position) in item_funcs.get_range(unit, unit.get_weapon()) else 0"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -3109,7 +3047,7 @@
     {
         "nid": "Greatlance_Mastery",
         "name": "G.L. Mastery",
-        "desc": "+2 range to greatlances if used by a Horse or Armored unit during Enemy Phase. Does not work if there is any wall/doors in between unit and enemy, or if unit is below 75% Max HP.",
+        "desc": "+2 range to greatlances during Enemy Phase. Does not work if there is any wall/doors in between unit and enemy.",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             3,
@@ -3117,31 +3055,19 @@
         ],
         "components": [
             [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "('Horse' in unit.tags or 'Armor' in unit.tags) and (item_system.weapon_type(unit, item) == 'Lance') and (unit.get_hp() >= unit.get_max_hp() // 1.3333)"
-            ],
-            [
                 "combat_condition",
                 "mode == 'defense'"
             ],
             [
                 "modify_maximum_range",
                 2
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
     {
         "nid": "Blade_Sweep",
         "name": "Blade Sweep",
-        "desc": "Blades Cleave all around them at x1.2 damage if used by an Infantry or Armored unit. Does not work if unit is below 95% Max HP.",
+        "desc": "Blades Cleave.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -3149,53 +3075,25 @@
         ],
         "components": [
             [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "('Infantry' in unit.tags or 'Armor' in unit.tags) and (unit.get_hp() >= unit.get_max_hp() * 0.95) "
-            ],
-            [
                 "Cleave",
                 null
             ],
             [
-                "damage_multiplier",
-                1.2
-            ],
-            [
                 "allowed_weapons",
                 "not has_skill(unit, 'Steal')"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
     {
         "nid": "War_Blow",
         "name": "War Blow",
-        "desc": "Warhammers deal 20% max HP damage and inflict Stun to enemies within 2 spaces of target if used by a Pirate or Dragon unit. Does not work if unit is not above 95% Max HP.",
+        "desc": "Warhammers inflict Stun to enemies within 2 spaces of target.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
             4
         ],
         "components": [
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "condition",
-                "('Pirate' in unit.tags or 'Dragon' in unit.tags) and (unit.get_hp() >= unit.get_max_hp() * 0.95)"
-            ],
-            [
-                "savage_blow_fates",
-                2
-            ],
             [
                 "savage_status",
                 {
@@ -3206,10 +3104,6 @@
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -3311,10 +3205,6 @@
             [
                 "eval_crit_additional",
                 "10"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -3335,10 +3225,6 @@
             [
                 "eval_crit_additional",
                 "20"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -3359,10 +3245,6 @@
             [
                 "eval_crit_additional",
                 "30"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -3383,10 +3265,6 @@
             [
                 "eval_crit_additional",
                 "40"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -3407,10 +3285,6 @@
             [
                 "eval_crit_additional",
                 "50"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4008,10 +3882,6 @@
             [
                 "dynamic_damage",
                 "((unit.get_hp() - unit.get_max_hp()) // -1)"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -4080,10 +3950,6 @@
             [
                 "dynamic_accuracy",
                 "-25"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4116,10 +3982,6 @@
             [
                 "dynamic_accuracy",
                 "-10"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4154,10 +4016,6 @@
                         0.5
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4192,10 +4050,6 @@
                         0.75
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4220,10 +4074,6 @@
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4248,10 +4098,6 @@
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4310,10 +4156,6 @@
                         -1
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4354,10 +4196,6 @@
                         0.6
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4398,10 +4236,6 @@
                         0.7
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4439,10 +4273,6 @@
                         0.5
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4467,10 +4297,6 @@
             [
                 "give_status_after_hit",
                 "Shadow_Blight"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4495,10 +4321,6 @@
             [
                 "give_status_after_hit",
                 "Cursed_8"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4542,10 +4364,6 @@
             [
                 "unit_anim",
                 "MapFrostbite"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4736,10 +4554,6 @@
             [
                 "dynamic_resist",
                 "(unit.get_stat('SKL') // 2)"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -4764,10 +4578,6 @@
             [
                 "damage_multiplier",
                 0.5
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ],
             [
                 "dynamic_attacks",
@@ -4796,10 +4606,6 @@
             [
                 "damage_multiplier",
                 0.75
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ],
             [
                 "dynamic_attacks",
@@ -4895,10 +4701,6 @@
                         -1
                     ]
                 ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -5541,10 +5343,6 @@
             [
                 "dynamic_avoid",
                 "-50"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5573,10 +5371,6 @@
             [
                 "dynamic_avoid",
                 "-50"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5609,10 +5403,6 @@
             [
                 "dynamic_crit_accuracy",
                 "-25"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5675,10 +5465,6 @@
             [
                 "canto_plus",
                 null
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5703,10 +5489,6 @@
             [
                 "item_override",
                 "Exposure_Stone_Skill"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5748,10 +5530,6 @@
             [
                 "aura_target",
                 "enemy"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5813,10 +5591,6 @@
             [
                 "damage_multiplier",
                 0.75
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5841,10 +5615,6 @@
             [
                 "give_status_after_hit",
                 "Cursed_2"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5869,10 +5639,6 @@
             [
                 "give_status_after_hit",
                 "Instructors_Horn_Discipline"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5897,10 +5663,6 @@
             [
                 "give_status_after_hit",
                 "Forgotten_Grimoire_Discipline"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5930,10 +5692,6 @@
                         0.8
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -5963,10 +5721,6 @@
                         0.5
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6065,10 +5819,6 @@
                         1.3
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6094,10 +5844,6 @@
             [
                 "exp_multiplier",
                 2.0
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6131,10 +5877,6 @@
                         0.7
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6168,10 +5910,6 @@
                         0.7
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6203,10 +5941,6 @@
                         0.7
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6232,10 +5966,6 @@
                         0.75
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6256,10 +5986,6 @@
             [
                 "dynamic_accuracy",
                 "0 if attack_info[0] == 0 else 20"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6280,10 +6006,6 @@
             [
                 "dynamic_accuracy",
                 "15"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6304,10 +6026,6 @@
             [
                 "dynamic_accuracy",
                 "30"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ],
             [
                 "stat_change",
@@ -6367,10 +6085,6 @@
                         0.7
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6395,10 +6109,6 @@
             [
                 "dynamic_resist_multiplier",
                 "2"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6447,10 +6157,6 @@
             [
                 "dynamic_attacks",
                 "2"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -6467,16 +6173,6 @@
             [
                 "dynamic_damage",
                 "target.get_hp() * 0.1"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -6493,16 +6189,6 @@
             [
                 "dynamic_damage",
                 "target.get_hp() * 0.2"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -6519,16 +6205,6 @@
             [
                 "dynamic_damage",
                 "target.get_hp() * 0.3"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -6545,16 +6221,6 @@
             [
                 "dynamic_damage",
                 "target.get_hp() * 0.4"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -6571,16 +6237,6 @@
             [
                 "dynamic_damage",
                 "target.get_hp() * 0.5"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -11522,10 +11178,6 @@
             [
                 "pcc_static",
                 2.0
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -11594,10 +11246,6 @@
             [
                 "exp_multiplier",
                 1.7500000000000004
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -12112,10 +11760,6 @@
             [
                 "dynamic_resist",
                 "unit.get_stat('LCK') // 4"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -12767,10 +12411,6 @@
             [
                 "dynamic_attack_speed",
                 "-999"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -12812,6 +12452,10 @@
             48
         ],
         "components": [
+            [
+                "hidden",
+                null
+            ],
             [
                 "condition",
                 "(game.tilemap.get_terrain(unit.position) in ('10' , '11', '12')) and (not 'Flying' in unit.tags)"
@@ -12868,10 +12512,6 @@
             [
                 "dynamic_crit_accuracy",
                 "15"
-            ],
-            [
-                "hidden",
-                null
             ]
         ]
     },
@@ -12964,10 +12604,6 @@
             [
                 "dynamic_avoid",
                 "unit.get_stat('LCK') * -1"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -12982,6 +12618,10 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
                 "aura",
                 "Hex_Debuff"
             ],
@@ -12992,10 +12632,6 @@
             [
                 "aura_target",
                 "enemy"
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
@@ -13012,10 +12648,6 @@
             [
                 "dynamic_crit_avoid",
                 "unit.get_stat('LCK') // -2"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -28354,7 +27986,7 @@
     {
         "nid": "Bloody_Feast",
         "name": "Bloody Feast",
-        "desc": "Attacks inflict an additional stack of Bleed and heal 25% of damage given.\nAdd unit's current HP/5 to Crit.",
+        "desc": "Attacks inflict an additional stack of Bleed.\nAdd unit's missing HP/2 to Crit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -28367,22 +27999,18 @@
             ],
             [
                 "dynamic_crit_accuracy",
-                "(unit.get_hp()) // 5"
+                "((unit.get_hp() - unit.get_max_hp()) // -2)"
             ],
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "lifelink",
-                0.25
             ]
         ]
     },
     {
         "nid": "Hemorrhage_Burst",
         "name": "Hemorrhage Burst",
-        "desc": "+100 bonus Crit damage against enemies inflicted with Bleed.\n+5 Temp. Max HP when unit Crits against Bleeding enemies.\nTemp. Max HP lasts until end of chapter.",
+        "desc": "+100 bonus Crit damage against enemies inflicted with Bleed.\n+15 Temp. Max HP when unit Crits against Bleeding enemies.\nTemp. Max HP lasts until end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -28426,7 +28054,7 @@
                 [
                     [
                         "HP",
-                        5
+                        15
                     ]
                 ]
             ],
@@ -28711,8 +28339,8 @@
     },
     {
         "nid": "Charm_Proc",
-        "name": "Charm",
-        "desc": "Attacks have a chance to inflict Charm on hit.\n+15 Avoid.",
+        "name": "Deadly Charm",
+        "desc": "Attacks have a LCK% chance to inflict Charm on hit.\nx3 damage against enemies inflicted with Charm.\n+50 Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -28729,7 +28357,7 @@
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "50"
             ],
             [
                 "attack_proc",
@@ -28738,6 +28366,30 @@
             [
                 "proc_rate",
                 "LUCK_PROC"
+            ]
+        ]
+    },
+    {
+        "nid": "Charm_Proc_Crit_hide",
+        "name": "Deadly Charm",
+        "desc": "Attacks have a LCK% chance to inflict Charm on hit.\nx3 damage against enemies inflicted with Charm.\n+50 Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Charmed')"
+            ],
+            [
+                "guaranteed_crit",
+                null
             ]
         ]
     },
@@ -28760,7 +28412,7 @@
     {
         "nid": "Dark_Beauty",
         "name": "Dark Beauty",
-        "desc": "-20 DEF/-20 RES to all enemies within 4 spaces.",
+        "desc": "-25 DEF/-25 RES to all enemies within 4 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -28804,11 +28456,11 @@
                 [
                     [
                         "DEF",
-                        -20
+                        -25
                     ],
                     [
                         "RES",
-                        -20
+                        -25
                     ]
                 ]
             ],
@@ -64141,7 +63793,7 @@
     {
         "nid": "Bloody_Feast_T3",
         "name": "Bloody Feast",
-        "desc": "Attacks inflict an additional stack of Bleed and heal 25% of damage given.\nAdd unit's current HP/5 to Crit.",
+        "desc": "Attacks inflict an additional stack of Bleed.\nAdd unit's missing HP/2 to Crit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -64150,15 +63802,11 @@
         "components": [
             [
                 "dynamic_crit_accuracy",
-                "(unit.get_hp()) // 5"
+                "((unit.get_hp() - unit.get_max_hp()) // -2)"
             ],
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
             ],
             [
                 "feat",
@@ -68021,5 +67669,231 @@
             44
         ],
         "components": []
+    },
+    {
+        "nid": "Protected",
+        "name": "Protected",
+        "desc": "Unit is immune to damage and status effects for one turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "ignore_damage",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Wave_Effect",
+        "name": "Blinding Wave",
+        "desc": "Attacks get  (AOE:2) range and inflict Reduced Vision for one turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            33
+        ],
+        "components": [
+            [
+                "enemy_oversplash",
+                2
+            ],
+            [
+                "give_status_after_hit",
+                "Reduced_Vision"
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Transmogrify",
+        "name": "Transmogrify",
+        "desc": "Add a temporal tag of choice to the target",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Transmogrify"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Infantry",
+        "name": "Tag Infantry",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Infantry"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Magic",
+        "name": "Tag Magic",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Magic"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Mounted",
+        "name": "Tag Mounted",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Mounted"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Armor",
+        "name": "Tag Armor",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Armor"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Flying",
+        "name": "Tag Flying",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Flying"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Dragon",
+        "name": "Tag Dragon",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Dragon"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Monster",
+        "name": "Tag Monster",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Monster"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
     }
 ]

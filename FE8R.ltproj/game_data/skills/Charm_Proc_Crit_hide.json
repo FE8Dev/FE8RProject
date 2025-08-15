@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Charm_Proc_Crit_hide",
+        "name": "Deadly Charm",
+        "desc": "Attacks have a LCK% chance to inflict Charm on hit.\nx3 damage against enemies inflicted with Charm.\n+50 Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Charmed')"
+            ],
+            [
+                "guaranteed_crit",
+                null
+            ]
+        ]
+    }
+]

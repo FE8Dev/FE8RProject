@@ -1,4 +1,14 @@
-## tbr
+tbr
+
+Bloodhound 1st skill has been reworked/buffed.
+Succubus 1st skill has been buffed
+All monster enemies weapon evolution code has been done.
+
+
+
+
+
+08-10-25
 ```
 fixed avatar medic
 Hellhound line is now weak to fire

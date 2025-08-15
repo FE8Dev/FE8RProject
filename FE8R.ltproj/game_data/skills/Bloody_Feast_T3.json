@@ -2,7 +2,7 @@
     {
         "nid": "Bloody_Feast_T3",
         "name": "Bloody Feast",
-        "desc": "Attacks inflict an additional stack of Bleed and heal 25% of damage given.\nAdd unit's current HP/5 to Crit.",
+        "desc": "Attacks inflict an additional stack of Bleed.\nAdd unit's missing HP/2 to Crit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -11,15 +11,11 @@
         "components": [
             [
                 "dynamic_crit_accuracy",
-                "(unit.get_hp()) // 5"
+                "((unit.get_hp() - unit.get_max_hp()) // -2)"
             ],
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
             ],
             [
                 "feat",
