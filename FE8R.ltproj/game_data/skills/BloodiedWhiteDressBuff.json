@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "BloodiedWhiteDressBuff",
+        "name": "BloodiedWhiteDressBuff",
+        "desc": "+50% damage taken and given vs infantry",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            5,
+            5
+        ],
+        "components": [
+            [
+                "dynamic_resist_multiplier",
+                "1.5 if \"Infantry\" in unit2.tags "
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.5 if \"Infantry\" in unit2.tags "
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Rally_Standart_Buff",
+        "name": "Rally Standart Buff",
+        "desc": "",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Standart_Summon"
+            ],
+            [
+                "condition",
+                "not game.check_alive('Rally_Standart__' + unit.nid)"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    }
+]
