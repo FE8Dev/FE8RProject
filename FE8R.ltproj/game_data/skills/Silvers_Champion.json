@@ -11,19 +11,19 @@
         "components": [
             [
                 "dynamic_damage",
-                "3*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "3 * (unit_funcs.check_focus(unit, 3))"
             ],
             [
                 "dynamic_resist",
-                "3*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "3 * (unit_funcs.check_focus(unit, 3))"
             ],
             [
                 "dynamic_crit_accuracy",
-                "3*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                "3 * (unit_funcs.check_focus(unit, 3))"
             ],
             [
                 "dynamic_multiattacks",
-                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])) // 3"
+                "(unit_funcs.check_focus(unit, 3)) // 3"
             ],
             [
                 "lost_on_endstep",
