@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Ora_Ora_Ora",
+        "name": "Ora Ora Ora...",
+        "desc": "If the user SPD is >=  SPD of enemies unit gains +4 attacks additionals((+8 if doubling),every consecutive attack in the same combat gains +3 damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "4"
+            ],
+            [
+                "gain_on_strike",
+                "Ora_Ora_Ora_Buff"
+            ]
+        ]
+    }
+]

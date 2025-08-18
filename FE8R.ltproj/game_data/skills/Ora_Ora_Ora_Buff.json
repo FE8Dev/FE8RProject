@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Ora_Ora_Ora_Buff",
+        "name": "Ora Ora Ora...",
+        "desc": "+3 damage for each attack of this unit to hit an enemy in combat.\nLost on end combat",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "stack",
+                99
+            ],
+            [
+                "dynamic_damage",
+                "3"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Physical_Change_Plus_Plus",
+        "name": "Physical Change++",
+        "desc": "Reduce the stats of the enemies in 6 except HP and MOV for hit,last for twice turns and the user gains 30% of lifesteal.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Physical_Change_Debuff_Plus_Plus"
+            ],
+            [
+                "lifelink",
+                0.3
+            ]
+        ]
+    }
+]

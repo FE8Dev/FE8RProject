@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Stardust_Platinum",
+        "name": "Stardust Platinum",
+        "desc": "Guardian figure that executes the user's blows while protecting him.\n<green>Skills:</>Ora Ora Ora...\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Uses SPD*2",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            7,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPDDOUBLE"
+            ],
+            [
+                "status_on_equip",
+                "Ora_Ora_Ora"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Monster'] >=480"
+            ]
+        ]
+    }
+]

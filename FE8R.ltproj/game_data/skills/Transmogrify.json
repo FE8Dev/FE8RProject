@@ -2,7 +2,7 @@
     {
         "nid": "Transmogrify",
         "name": "Transmogrify",
-        "desc": "Add a temporal tag of choice to the target",
+        "desc": "Add a temporal tag of choice to the target.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -10,12 +10,16 @@
         ],
         "components": [
             [
-                "ability",
-                "Transmogrify"
+                "class_skill",
+                null
             ],
             [
-                "hidden",
-                null
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon())"
+            ],
+            [
+                "ability",
+                "Transmogrify"
             ]
         ]
     }

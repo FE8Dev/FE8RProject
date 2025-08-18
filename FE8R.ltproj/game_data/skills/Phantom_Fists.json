@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Phantom_Fists",
+        "name": "Phantom Fists",
+        "desc": "The user attacks ignore 50% of enemy defense a melee range, increased the STR;SPD and SKL in 10 if there are no allies within 3 squares of distance or less.Increases the attack range by 1.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "utils.calculate_distance(unit.position, target.position) == 1"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    }
+]
