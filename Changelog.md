@@ -1,5 +1,9 @@
-08-17-25
+## tbr
 
+
+
+## 08-17-25
+```
 Bloodhound 1st skill has been reworked/buffed.
 Succubus 1st skill has been buffed
 All monster enemies weapon evolution code has been done.
@@ -18,8 +22,8 @@ Chapter 5x Zonta recieves -100 Avoid and negate healing when drenched from lever
 
 
 
-
-08-10-25
+```
+## 08-10-25
 ```
 fixed avatar medic
 Hellhound line is now weak to fire
