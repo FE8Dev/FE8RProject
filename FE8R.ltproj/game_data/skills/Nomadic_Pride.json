@@ -2,7 +2,7 @@
     {
         "nid": "Nomadic_Pride",
         "name": "Nomadic Pride",
-        "desc": "When at full HP, every second attack this unit makes has doubled Crit chance.",
+        "desc": "When at full HP, Crits deal x5 damage instead of x3.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -18,8 +18,8 @@
                 "unit.get_hp() == unit.get_max_hp()"
             ],
             [
-                "pcc_static",
-                2.0
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
             ]
         ]
     }

@@ -14,8 +14,12 @@
                 null
             ],
             [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "allowed_weapons",
-                "not has_skill(unit, 'Steal')"
+                "item_system.is_weapon(unit, item)"
             ]
         ]
     }

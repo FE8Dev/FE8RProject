@@ -12,9 +12,9 @@
             "if;game.game_vars['FirstShopTalk'] != True",
             "speak;Anna;Hello sweetheart!|Welcome to the Dragon's Gate vendor!|Here you can buy items and accessories submitted by the FE8R community!|Items are randomly generated each time you enter!|Who knows what you will find!",
             "remove_portrait;Anna",
-            "shop;{unit};{e:','.join([i for i in {v:armory_items}])};vendor;{e:','.join(['1']*len({v:armory_items}))}",
+            "shop;{unit};{e:','.join([i for i in {v:armory_items}])};vendor",
             "else",
-            "shop;{unit};{e:','.join([i for i in {v:armory_items}])};vendor;{e:','.join(['1']*len({v:armory_items}))}",
+            "shop;{unit};{e:','.join([i for i in {v:armory_items}])};vendor",
             "end",
             ""
         ],

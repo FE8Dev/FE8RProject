@@ -1480,19 +1480,34 @@ class EvalHPCostMidBattle(ItemComponent):
             return 0
 
     def available(self, unit, item) -> bool:
+        # Only usable if cost leaves > 0 HP
         return unit.get_hp() > self._check_value(unit, item)
 
+    def on_equip(self, unit, item):
+        # Do nothing, don't apply HP cost here
+        return
+
+    def on_unequip(self, unit, item):
+        # Do nothing, don't apply HP cost here
+        return
+
+    def _safe_hp_cost(self, unit, value: int) -> int:
+        """Ensure we never reduce HP below 1."""
+        return max(0, min(value, unit.get_hp() - 1))
+
     def on_hit(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
-        value = self._check_value(unit, item)
+        value = self._safe_hp_cost(unit, self._check_value(unit, item))
         if value:
-            action.do(action.ChangeHP(unit, -value))
+            actions.append(action.ChangeHP(unit, -value))
 
     def on_miss(self, actions, playback, unit, item, target, item2, target_pos, mode, attack_info):
-        value = self._check_value(unit, item)
+        value = self._safe_hp_cost(unit, self._check_value(unit, item))
         if value:
-            action.do(action.ChangeHP(unit, -value))
+            actions.append(action.ChangeHP(unit, -value))
 
     def reverse_use(self, unit, item):
         value = self._check_value(unit, item)
         if value:
-            action.do(action.ChangeHP(unit, value))
+            actions = [action.ChangeHP(unit, value)]
+            return actions
+        return []

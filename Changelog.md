@@ -1,4 +1,4 @@
-08-15-25
+08-17-25
 
 Bloodhound 1st skill has been reworked/buffed.
 Succubus 1st skill has been buffed
@@ -8,6 +8,12 @@ EXP and level up speed has been doubled.
 Heavy weapons have been made simple. No class or HP requirement.
 Shop UI has been updated.
 Some new items added to DG (Items need to be finalized with credits, etc.)
+New magic slim weapons added to chapter 2 shop.
+Made Dragon Gate items stock infinite.
+Fixes to Heavy Weapons.
+Fix to discard state.
+Warhammers area stun nerfed to new status Flinch that is removed on upkeep.
+Chapter 5x Zonta recieves -100 Avoid and negate healing when drenched from lever.
 
 
 

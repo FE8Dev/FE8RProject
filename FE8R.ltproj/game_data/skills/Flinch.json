@@ -1,0 +1,85 @@
+[
+    {
+        "nid": "Flinch",
+        "name": "Flinched",
+        "desc": "Cannot move/attack for 1 round of combat or until next upkeep.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            51
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    }
+]

@@ -405,6 +405,16 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
             ]
         ]
     },
@@ -3079,15 +3089,19 @@
                 null
             ],
             [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
                 "allowed_weapons",
-                "not has_skill(unit, 'Steal')"
+                "item_system.is_weapon(unit, item)"
             ]
         ]
     },
     {
         "nid": "War_Blow",
         "name": "War Blow",
-        "desc": "Warhammers inflict Stun to enemies within 2 spaces of target.",
+        "desc": "Warhammers inflict Stun to main enemy on hit and inflict Flinch to enemies within 2 spaces of target.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -3097,7 +3111,7 @@
             [
                 "savage_status",
                 {
-                    "status": "Stun",
+                    "status": "Flinch",
                     "range": 2
                 }
             ],
@@ -6011,7 +6025,7 @@
     },
     {
         "nid": "Flawless_Lens",
-        "name": "Flawless_Lens",
+        "name": "Flawless Lens",
         "desc": "For the Flawless Lens item.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
@@ -9823,6 +9837,10 @@
         ],
         "components": [
             [
+                "condition",
+                "not has_skill(unit, 'Wet_Throne')"
+            ],
+            [
                 "regeneration",
                 0.19999999999999998
             ],
@@ -11049,6 +11067,22 @@
                         -6
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Wet_Throne",
+        "name": "Wet Throne",
+        "desc": "-100 Avoid and no longer recieve healing from thrones.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            20
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "-100"
             ]
         ]
     },
@@ -13508,13 +13542,21 @@
             [
                 "aura_target",
                 "ally"
+            ],
+            [
+                "dynamic_damage",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "dynamic_resist",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
             ]
         ]
     },
     {
         "nid": "Odd_Command_Buff",
         "name": "Odd Tempo+",
-        "desc": "Unit adds MAG/3 to Physical Weapons attacks on Odd numbered turns.\nDouble units WEXP gain during Even numbered turns.",
+        "desc": "Unit adds MAG/3 to Physical Weapons attacks on Odd numbered turns.\nDouble units WEXP gain during Odd numbered turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -13587,7 +13629,7 @@
             ],
             [
                 "dynamic_attack_speed",
-                "12"
+                "10"
             ],
             [
                 "dynamic_damage",
@@ -13595,7 +13637,7 @@
             ],
             [
                 "dynamic_resist",
-                "10"
+                "12"
             ]
         ]
     },
@@ -17265,6 +17307,10 @@
             [
                 "condition",
                 "unit.get_hp() == unit.get_max_hp()"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",
@@ -24943,7 +24989,7 @@
     {
         "nid": "Nomadic_Pride",
         "name": "Nomadic Pride",
-        "desc": "When at full HP, every second attack this unit makes has doubled Crit chance.",
+        "desc": "When at full HP, Crits deal x5 damage instead of x3.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -24959,8 +25005,8 @@
                 "unit.get_hp() == unit.get_max_hp()"
             ],
             [
-                "pcc_static",
-                2.0
+                "alternate_critical_multiplier_formula",
+                "CRIT_MULT_EXTREME"
             ]
         ]
     },
@@ -27012,7 +27058,7 @@
     {
         "nid": "The_Bone_Zone",
         "name": "The Bone Zone",
-        "desc": "+1 bonus attack for every 5 allies and or enemies within 5 spaces.",
+        "desc": "+1 bonus attack for every 5 allies and/or enemies within 5 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -27025,7 +27071,7 @@
             ],
             [
                 "dynamic_attacks",
-                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 5])) // 5"
+                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other enemy enemy2' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 5])) // 5"
             ]
         ]
     },
@@ -32729,7 +32775,7 @@
                 [
                     [
                         "NumberOfCombats (X)",
-                        "3",
+                        "2",
                         "Number of combats before expiration"
                     ],
                     [
@@ -32757,6 +32803,89 @@
             [
                 "time",
                 2
+            ]
+        ]
+    },
+    {
+        "nid": "Flinch",
+        "name": "Flinched",
+        "desc": "Cannot move/attack for 1 round of combat or until next upkeep.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            51
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "not has_skill(unit, 'SleepI')"
+            ],
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -99
+                    ]
+                ]
+            ],
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ],
+            [
+                "unit_anim",
+                "MapFlying"
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
             ]
         ]
     },
@@ -34941,10 +35070,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -34965,10 +35090,6 @@
             [
                 "regeneration",
                 0.1
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -34993,10 +35114,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35017,10 +35134,6 @@
             [
                 "regeneration",
                 0.30000000000000004
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -35045,10 +35158,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35069,10 +35178,6 @@
             [
                 "regeneration",
                 0.5
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -35129,52 +35234,6 @@
             [
                 "eval_crit_additional",
                 "50"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Raiper_Eirika_Animation",
-        "name": "Raiper Animation",
-        "desc": "",
-        "icon_nid": "Skills",
-        "icon_index": [
-            1,
-            7
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "utils.calculate_distance(unit.position, target.position) == 1"
-            ],
-            [
-                "lost_on_upkeep",
-                null
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
-            ],
-            [
-                "alternate_battle_anim",
-                "Rapier"
             ]
         ]
     },
@@ -35195,10 +35254,6 @@
             [
                 "gain_skill_after_active_kill",
                 "Momentum_Buff"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35219,10 +35274,6 @@
             [
                 "gain_skill_after_active_kill",
                 "Momentum_Buff_Plus"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35243,10 +35294,6 @@
             [
                 "gain_skill_after_active_kill",
                 "Momentum_Buff_Plus_Plus"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35387,10 +35434,6 @@
             [
                 "desperation",
                 null
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -35443,16 +35486,6 @@
             [
                 "allowed_weapons",
                 "item_system.is_weapon(unit, item)"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -35533,10 +35566,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35569,10 +35598,6 @@
             [
                 "dynamic_crit_accuracy",
                 "5"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -35601,10 +35626,6 @@
             [
                 "dynamic_multiattacks",
                 "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])) // 3"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35674,16 +35695,6 @@
             [
                 "immune_status",
                 null
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
             ]
         ]
     },
@@ -35752,10 +35763,6 @@
             [
                 "modify_ai_priority",
                 20.0
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35780,10 +35787,6 @@
             [
                 "gain_skill_after_take_damage",
                 "Counter_Point"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35841,10 +35844,6 @@
             [
                 "dynamic_damage",
                 "((combat_calcs.attack_speed(target, item)) - ((combat_calcs.attack_speed(unit, item)) // 3) * 2)"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35861,10 +35860,6 @@
             [
                 "dynamic_damage",
                 "((combat_calcs.attack_speed(target, item)) - ((combat_calcs.attack_speed(unit, item)) // 3) * 4)"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35881,10 +35876,6 @@
             [
                 "dynamic_damage",
                 "((combat_calcs.attack_speed(target, item)) - ((combat_calcs.attack_speed(unit, item)) // 3) * 6)"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35913,10 +35904,6 @@
             [
                 "charges_per_turn",
                 3
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -35937,10 +35924,6 @@
             [
                 "dynamic_attacks",
                 "1"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36013,10 +35996,6 @@
             [
                 "dynamic_attacks",
                 "1"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -36041,10 +36020,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ],
             [
                 "regeneration",
@@ -36106,10 +36081,6 @@
                     ],
                     "range": 3
                 }
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36135,10 +36106,6 @@
                     ],
                     "range": 5
                 }
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36244,10 +36211,6 @@
             [
                 "gain_skill_after_active_kill",
                 "Hawkeye"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36293,10 +36256,6 @@
                         8
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36346,10 +36305,6 @@
                         16
                     ]
                 ]
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36390,10 +36345,6 @@
             [
                 "dynamic_avoid",
                 "50"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36410,10 +36361,6 @@
             [
                 "dynamic_avoid",
                 "100"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36434,10 +36381,6 @@
             [
                 "dynamic_resist",
                 "unit.get_stat('LCK') // 2"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36462,10 +36405,6 @@
             [
                 "dynamic_attacks",
                 "unit.get_stat('LCK') // 20"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36490,10 +36429,6 @@
             [
                 "gain_skill_after_take_damage",
                 "M_Counter_Point"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36561,10 +36496,6 @@
                 "enemy"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "has_tags",
                 [
                     "LuteProvoke"
@@ -36595,10 +36526,6 @@
                 "enemy"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "has_tags",
                 [
                     "LuteProvoke"
@@ -36627,10 +36554,6 @@
             [
                 "change_ai",
                 "AttackLute"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36655,10 +36578,6 @@
             [
                 "change_ai",
                 "AttackLute"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36683,10 +36602,6 @@
             [
                 "damage_multiplier",
                 1.5
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36711,10 +36626,6 @@
             [
                 "damage_multiplier",
                 1.5
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36753,10 +36664,6 @@
             [
                 "resist_multiplier",
                 0.20000000000000004
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -36776,10 +36683,6 @@
             ],
             [
                 "ignore_damage",
-                null
-            ],
-            [
-                "lost_on_endstep",
                 null
             ]
         ]
@@ -37295,6 +37198,10 @@
                 null
             ],
             [
+                "grey_if_inactive",
+                null
+            ],
+            [
                 "condition",
                 "get_debuff_count(unit) > 0"
             ],
@@ -37314,10 +37221,6 @@
                         2.0
                     ]
                 ]
-            ],
-            [
-                "grey_if_inactive",
-                null
             ]
         ]
     },
@@ -37333,6 +37236,10 @@
         "components": [
             [
                 "class_skill",
+                null
+            ],
+            [
+                "grey_if_inactive",
                 null
             ],
             [
@@ -37355,10 +37262,6 @@
                         2.0
                     ]
                 ]
-            ],
-            [
-                "grey_if_inactive",
-                null
             ]
         ]
     },
@@ -37379,10 +37282,6 @@
             [
                 "event_before_combat",
                 "Global Gamble"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -37403,10 +37302,6 @@
             [
                 "event_before_combat",
                 "Global Gamble_Plus"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -37453,6 +37348,10 @@
             [
                 "display_skill_icon_in_combat",
                 null
+            ],
+            [
+                "dynamic_attacks",
+                "2"
             ],
             [
                 "lost_on_end_combat2",
@@ -37677,10 +37576,6 @@
             [
                 "allowed_weapons",
                 "item.nid == 'Painting_Sword' or item.nid == 'Unrefined_Art' or item.nid == 'Pastel_Sword' or item.nid == 'Shade_Of_Blue'"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -37705,10 +37600,6 @@
             [
                 "allowed_weapons",
                 "item.nid == 'Arts_Death' or item.nid == 'Shade_Of_Blue'"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -37857,10 +37748,6 @@
             [
                 "damage_multiplier",
                 1.5
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -37893,10 +37780,6 @@
             [
                 "damage_multiplier",
                 1.5
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38074,10 +37957,6 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "dynamic_attacks",
                 "2"
             ]
@@ -38100,10 +37979,6 @@
             [
                 "condition",
                 "item_system.weapon_type(unit, item) == 'Sword'"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ],
             [
                 "dynamic_attacks",
@@ -38130,10 +38005,6 @@
                 "item_system.weapon_type(unit, item) == 'Sword'"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "dynamic_attacks",
                 "4"
             ]
@@ -38156,10 +38027,6 @@
             [
                 "crit_event",
                 "Global Money_Blow"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38180,10 +38047,6 @@
             [
                 "crit_event",
                 "Global Money_Blow_Plus"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38208,10 +38071,6 @@
             [
                 "gain_skill_after_kill",
                 "Desert_Tiger"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38325,10 +38184,6 @@
             [
                 "modify_maximum_range",
                 3
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38377,10 +38232,6 @@
             [
                 "gain_skill_after_kill",
                 "Crimson_Snow"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38502,10 +38353,6 @@
             [
                 "dynamic_avoid",
                 "15"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38542,10 +38389,6 @@
             [
                 "dynamic_multiattacks",
                 "1"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38578,10 +38421,6 @@
             [
                 "dynamic_attacks",
                 "1"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38614,10 +38453,6 @@
             [
                 "dynamic_attacks",
                 "2"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38638,10 +38473,6 @@
             [
                 "dynamic_accuracy",
                 "15*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2])"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38662,10 +38493,6 @@
             [
                 "dynamic_accuracy",
                 "(unit.get_stat('STR'))*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2])"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -38690,10 +38517,6 @@
             [
                 "gain_skill_after_kill",
                 "Torrential_Rain"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38847,10 +38670,6 @@
             [
                 "gain_skill_after_kill",
                 "Dream_Siphon_Main"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -38875,10 +38694,6 @@
             [
                 "gain_skill_after_kill",
                 "Dream_Siphon_Buffer"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -39040,10 +38855,6 @@
             [
                 "dynamic_accuracy",
                 "25"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39080,10 +38891,6 @@
             [
                 "change_ai",
                 "Berserk"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39184,10 +38991,6 @@
             [
                 "give_status_after_hit",
                 "Shadow_Snare_Debuff"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39237,10 +39040,6 @@
             [
                 "proc_rate",
                 "LUCK_PROC"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39403,10 +39202,6 @@
             [
                 "aura_target",
                 "enemy"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39439,10 +39234,6 @@
             [
                 "aura_target",
                 "enemy"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39471,10 +39262,6 @@
                     "recipient": "self",
                     "allegiance": "ally"
                 }
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39503,10 +39290,6 @@
                     "recipient": "self",
                     "allegiance": "ally"
                 }
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39593,10 +39376,6 @@
             [
                 "change_ai",
                 "AttackDuessel"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -39775,10 +39554,6 @@
             [
                 "dynamic_crit_avoid",
                 "((unit2.get_stat('LCK')) - (unit.get_stat('LCK'))) * 3"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39803,10 +39578,6 @@
             [
                 "dynamic_crit_avoid",
                 "((unit2.get_stat('LCK')) - (unit.get_stat('LCK'))) * 4"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -39827,10 +39598,6 @@
             [
                 "gain_skill_after_kill",
                 "Foresight_Skill_Knoll"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -40093,10 +39860,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -40125,10 +39888,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -40162,10 +39921,6 @@
             [
                 "dynamic_accuracy",
                 "30"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -40199,10 +39954,6 @@
             [
                 "dynamic_accuracy",
                 "60"
-            ],
-            [
-                "lost_on_end_chapter",
-                null
             ]
         ]
     },
@@ -40391,10 +40142,6 @@
             [
                 "change_ai",
                 "AttackDoggo"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -40542,10 +40289,6 @@
                 "enemy"
             ],
             [
-                "lost_on_endstep",
-                null
-            ],
-            [
                 "has_tags",
                 [
                     "BaelBabyProvoke"
@@ -40574,10 +40317,6 @@
             [
                 "change_ai",
                 "AttackBaelBaby"
-            ],
-            [
-                "lost_on_endstep",
-                null
             ]
         ]
     },
@@ -52944,7 +52683,7 @@
     {
         "nid": "Shot_Assistance_T1",
         "name": "Shot Assistance",
-        "desc": "+5 Crit for each adj. ally by this unit.",
+        "desc": "+5 Crit for each ally within 2 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -52953,7 +52692,7 @@
         "components": [
             [
                 "dynamic_crit_accuracy",
-                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2])"
             ],
             [
                 "feat",
@@ -54454,6 +54193,14 @@
                 null
             ],
             [
+                "dynamic_accuracy",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "dynamic_avoid",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
                 "copysafe",
                 []
             ]
@@ -54486,6 +54233,14 @@
                 null
             ],
             [
+                "dynamic_damage",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
+                "dynamic_resist",
+                "5*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+            ],
+            [
                 "copysafe",
                 []
             ]
@@ -54507,7 +54262,7 @@
             ],
             [
                 "dynamic_attack_speed",
-                "12"
+                "10"
             ],
             [
                 "dynamic_damage",
@@ -54515,7 +54270,7 @@
             ],
             [
                 "dynamic_resist",
-                "10"
+                "12"
             ],
             [
                 "feat",
@@ -63365,7 +63120,7 @@
     {
         "nid": "The_Bone_Zone_T3",
         "name": "The Bone Zone",
-        "desc": "+1 bonus attack for every 5 allies and or enemies within 5 spaces.",
+        "desc": "+1 bonus attack for every 5 allies and/or enemies within 5 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -63378,7 +63133,7 @@
             ],
             [
                 "dynamic_attacks",
-                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 5])) // 5"
+                "(len([unitx for unitx in game.get_all_units() if unitx.team in 'player other enemy enemy2' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 5])) // 5"
             ],
             [
                 "copysafe",
@@ -67439,22 +67194,6 @@
         ]
     },
     {
-        "nid": "DevEmblem",
-        "name": "Dev Emblem",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "upkeep_event",
-                "Global DevDesc"
-            ]
-        ]
-    },
-    {
         "nid": "True_Hit",
         "name": "True Hit",
         "desc": "Attacks that miss do 1/2 damage.",
@@ -67892,6 +67631,352 @@
             ],
             [
                 "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "DevEmblem",
+        "name": "Dev Emblem",
+        "desc": "",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "upkeep_event",
+                "Global DevDesc"
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        200
+                    ],
+                    [
+                        "STR",
+                        200
+                    ],
+                    [
+                        "MAG",
+                        200
+                    ],
+                    [
+                        "SKL",
+                        200
+                    ],
+                    [
+                        "SPD",
+                        200
+                    ],
+                    [
+                        "LCK",
+                        200
+                    ],
+                    [
+                        "DEF",
+                        200
+                    ],
+                    [
+                        "RES",
+                        200
+                    ],
+                    [
+                        "CON",
+                        200
+                    ]
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "TalkingGreataxeBuff",
+        "name": "TalkingGreataxeBuff",
+        "desc": "-30 avoid/crit avoid for both units",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "skill_before_combat",
+                {
+                    "skill": "TalkingGreataxeBuff_2",
+                    "recipient": "both",
+                    "allegiance": "both"
+                }
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "TalkingGreataxeBuff_2",
+        "name": "TalkingGreataxeBuff",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "-30"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "-30"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "AnnoyingLittleGhostBuff",
+        "name": "AnnoyingLittleGhostBuff",
+        "desc": "-50 avoid/crit avoid for both units",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "skill_before_combat",
+                {
+                    "skill": "AnnoyingLittleGhostBuff_1",
+                    "recipient": "both",
+                    "allegiance": "both"
+                }
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "AnnoyingLittleGhostBuff_1",
+        "name": "AnnoyingLittleGhostBuff",
+        "desc": "-50 avoid/crit avoid for both units",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "50"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "WeaksStrengthRingBuff",
+        "name": "WeaksStrengthRingBuff",
+        "desc": "triple the unit's worse stat",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": []
+    },
+    {
+        "nid": "LightBootsBuff",
+        "name": "LightBootsBuff",
+        "desc": "+2 move\n-6 move growth",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            5,
+            9
+        ],
+        "components": [
+            [
+                "growth_change",
+                [
+                    [
+                        "MOV",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -6
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "WeightedBootsBuff",
+        "name": "WeightedBootsBuff",
+        "desc": "-1 move\n+4 move growth",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        -1
+                    ]
+                ]
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "MOV",
+                        4
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "RegeneratingConcoctionHeal",
+        "name": "RegeneratingConcoctionHeal",
+        "desc": "Heals 20%HP per turn, for 3 turns\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "regeneration",
+                0.2
+            ],
+            [
+                "time",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "RegeneratingConcoctionBuff",
+        "name": "RegeneratingConcoctionBuff",
+        "desc": " reduces damage taken by 20% for 2 rounds\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "resist_multiplier",
+                0.8
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "ROOTTeleportationSystemBuff",
+        "name": "ROOTTeleportationSystemBuff",
+        "desc": "set character move to 1. this unit can teleport to the adjacente square to any ally unit",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "witch_warp",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MOV",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "BloodiedWhiteDressBuff",
+        "name": "BloodiedWhiteDressBuff",
+        "desc": "+50% damage taken and given vs infantry",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            5,
+            5
+        ],
+        "components": [
+            [
+                "dynamic_resist_multiplier",
+                "1.5 if \"Infantry\" in unit2.tags "
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.5 if \"Infantry\" in unit2.tags "
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Standart_Buff",
+        "name": "Rally Standart Buff",
+        "desc": "",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "ability",
+                "Rally_Standart_Summon"
+            ],
+            [
+                "condition",
+                "not game.check_alive('Rally_Standart__' + unit.nid)"
+            ],
+            [
+                "hidden",
                 null
             ]
         ]

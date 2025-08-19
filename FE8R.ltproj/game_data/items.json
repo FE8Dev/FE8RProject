@@ -2,7 +2,7 @@
     {
         "nid": "DevEmblem",
         "name": "Dev Emblem",
-        "desc": "{v:FULLERGA}",
+        "desc": "{v:FULLERGA}\n+200% to every single growth rate\ncost: 100000G",
         "icon_nid": "Consumables",
         "icon_index": [
             2,
@@ -16,6 +16,32 @@
             [
                 "status_on_hold",
                 "DevEmblem"
+            ]
+        ]
+    },
+    {
+        "nid": "Weaks_Strength_Ring",
+        "name": "Weak's Strength Ring",
+        "desc": "triple the unit's worse stat\ncost:1000",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                10000
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "WeaksStrengthRingBuff"
+                ]
+            ],
+            [
+                "accessory",
+                null
             ]
         ]
     },
@@ -1014,7 +1040,6 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster",
                         "Horse"
                     ],
                     "effective_multiplier": 3,
@@ -16432,6 +16457,102 @@
         ]
     },
     {
+        "nid": "Kneader",
+        "name": "Kneader",
+        "desc": "A cleric's first staff.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Staffs Sheet",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Flame_Sling"
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SLIM_MAG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Magefire_Staff",
         "name": "Magefire Staff",
         "desc": "Staff of a beginner mage.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG + STR/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')//2))}</>).",
@@ -20226,6 +20347,117 @@
                 "multi_status_on_equip",
                 [
                     "Seared_AOE_Splash"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Gust",
+        "name": "Gust",
+        "desc": "A mages first spell.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>), Splash DMG (20%), x3 WEXP gain.",
+        "icon_nid": "Anima Tomes Sheet.",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                2
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                1
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    0
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Wind Sword"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_E"
+            ],
+            [
+                "alternate_damage_formula",
+                "SLIM_MAG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Wind"
                 ]
             ]
         ]
@@ -25051,6 +25283,115 @@
         ]
     },
     {
+        "nid": "Curse",
+        "name": "Curse",
+        "desc": "A beginner tome of curses.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<pink>Misc:</>MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
+        "icon_nid": "Dark Tomes Sheet",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Stone"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_2",
+                    "Shadow_Blight",
+                    "Venomous_Effect",
+                    "Venomous_Effect"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SLIM_MAG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_E"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Unending_Eclipse",
         "name": "Unending Eclipse",
         "desc": "A tome used to reduce giants to their knees. <green>CD:2</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<pink>Misc:</>Eclipse, Brave.",
@@ -25289,6 +25630,111 @@
                 "multi_status_on_equip",
                 [
                     "Ancient_Pact_X"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Flash",
+        "name": "Flash",
+        "desc": "A tome for beginner monks.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>), +20 Crit damage, x3 WEXP gain.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                500
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                1
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                3
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Light Brand"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Crit_Damage_Bonus_20_hide"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "SLIM_MAG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
                 ]
             ]
         ]
@@ -44425,7 +44871,7 @@
     {
         "nid": "Slim_Sword",
         "name": "Slim Sword",
-        "desc": "A lightweight sword that crits more often.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR/2 +SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>) +1 SPD, x2 WEXP gain.",
+        "desc": "A lightweight sword that crits more often.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR/2 +SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>) +1 SPD, x3 WEXP gain.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -46473,7 +46919,7 @@
     {
         "nid": "Slim_Javelin",
         "name": "Slim Javelin",
-        "desc": "A javelin for inexperienced soldiers. Easier to Crit.\n<green>Skills:</>Lance Guard (E)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
+        "desc": "A javelin for inexperienced soldiers. Easier to Crit.\n<green>Skills:</>Lance Guard (E)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             9,
@@ -46559,7 +47005,7 @@
     {
         "nid": "Slim_Lance",
         "name": "Slim Lance",
-        "desc": "Easy to use lance.\n<green>Skills:</>Lance Guard (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
+        "desc": "Easy to use lance.\n<green>Skills:</>Lance Guard (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -47946,7 +48392,7 @@
     {
         "nid": "Slim_Axe",
         "name": "Slim Axe",
-        "desc": "An easy to use axe for beginners.\n<violet>Inflicts:</>Breach (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
+        "desc": "An easy to use axe for beginners.\n<violet>Inflicts:</>Breach (2)\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -49765,7 +50211,7 @@
     {
         "nid": "Slim_Bow",
         "name": "Slim Bow",
-        "desc": "An easy to Hit and Crit Bow.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x2 WEXP gain.",
+        "desc": "An easy to Hit and Crit Bow.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR/2 + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             6,
@@ -59503,8 +59949,7 @@
                 "multi_status_on_equip",
                 [
                     "Vantage_Plus_Item",
-                    "Flash_Step",
-                    "Raiper_Eirika_Animation"
+                    "Flash_Step"
                 ]
             ],
             [
@@ -59612,8 +60057,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Vantage_Plus_Item",
-                    "Raiper_Eirika_Animation"
+                    "Vantage_Plus_Item"
                 ]
             ],
             [
@@ -59727,8 +60171,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Vantage_Plus_Item",
-                    "Raiper_Eirika_Animation"
+                    "Vantage_Plus_Item"
                 ]
             ],
             [
@@ -128250,7 +128693,7 @@
     {
         "nid": "Air_Blade",
         "name": "Air Blade",
-        "desc": "Arno's innate wind magic. Weak, but incredibly swift. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Brave, targets foe's SPD.",
+        "desc": "Arno's innate wind magic. Weak, but incredibly swift. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Brave, targets foe's SPD, this is a free action.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -128348,7 +128791,7 @@
     {
         "nid": "Sonic_Boom",
         "name": "Sonic Boom",
-        "desc": "A more tightly-focused blade of wind. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Brave, targets foe's SPD.",
+        "desc": "A more tightly-focused blade of wind. <green>CD:3</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), Brave, targets foe's SPD, this is a free action.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -128446,7 +128889,7 @@
     {
         "nid": "Divine_Sandstorm",
         "name": "Divine Sandstorm",
-        "desc": "Arno's full might, channeled into a tempest unrivalled. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Brave, targets foe's SPD/2.",
+        "desc": "Arno's full might, channeled into a tempest unrivalled. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Brave, targets foe's SPD/2, this is a free action.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -128548,7 +128991,7 @@
     {
         "nid": "Divine_Sandstorm_Line",
         "name": "Divine Sandstorm (<icon>skill_icons 5, 36</>)",
-        "desc": "Arno's full might, channeled into a tempest unrivalled. Now striking in a line! <green>CD:4</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(Line attack:5), MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Brave, targets foe's SPD/2.",
+        "desc": "Arno's full might, channeled into a tempest unrivalled. Now striking in a line! <green>CD:4</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(Line attack:5), MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Brave, targets foe's SPD/2, this is a free action.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -138056,7 +138499,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty"
+                    "Bounty_Item"
                 ]
             ],
             [
@@ -138179,7 +138622,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty"
+                    "Bounty_Item"
                 ]
             ],
             [
@@ -138298,7 +138741,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty"
+                    "Bounty_Item"
                 ]
             ],
             [
@@ -138422,7 +138865,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Poaching",
-                    "Bounty"
+                    "Bounty_Item"
                 ]
             ],
             [
@@ -138546,7 +138989,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Poaching",
-                    "Bounty"
+                    "Bounty_Item"
                 ]
             ],
             [
@@ -140994,7 +141437,6 @@
                 [
                     "Crit_Damage_Bonus_40_hide",
                     "Flash_Step",
-                    "Slayer",
                     "Lyn_Light_Sword"
                 ]
             ],
@@ -141092,7 +141534,6 @@
                 [
                     "Crit_Damage_Bonus_50_hide",
                     "Flash_Step",
-                    "Slayer",
                     "Sol_Lyn",
                     "Lyn_Light_Sword"
                 ]
@@ -164019,7 +164460,7 @@
             ],
             [
                 "eval_hp_cost_midbattle",
-                "unit.get_hp() * 0.5"
+                "-15"
             ]
         ]
     },
@@ -166687,34 +167128,9 @@
         ]
     },
     {
-        "nid": "Fell_Arrow_item",
-        "name": "Fell Arrow item",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            25
-        ],
-        "components": [
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Flying",
-                        "Light"
-                    ],
-                    "effective_multiplier": 5.0,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Crystal_Ring",
+        "nid": "Crystal_Ring_DG",
         "name": "Crystal Ring",
-        "desc": "Ring with powers that can only be used once.",
+        "desc": "Ring with powers that can only be used once.\nItem submitted by Saragl728.",
         "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
             12,
@@ -166783,6 +167199,571 @@
             [
                 "eval_hp_cost_midbattle",
                 "unit.get_hp() * 0.75"
+            ]
+        ]
+    },
+    {
+        "nid": "Talking_Greataxe_DG",
+        "name": "Talking Greataxe",
+        "desc": "A talking axe that doesnt know when to shut up\n<pink>Misc:</>STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>) -30 Avoid/Dodge, +30 Hit/Crit.",
+        "icon_nid": "{2WB} (Vanilla + Blitz) Basilikos",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                2000
+            ],
+            [
+                "weapon",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "TalkingGreataxeBuff",
+                    "Power_Chop_C",
+                    "War_Blow"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "item_tags",
+                [
+                    "Warhammer"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Annoying_Little_Ghost_DG",
+        "name": "Annoying Little Ghost",
+        "desc": "An annoying little ghost that loves to pester other people.\n<blue>On Hold:</>-50 Avoid and Crit Avoid to both the attacker and the defender\n",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "value",
+                1800
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "AnnoyingLittleGhostBuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Light_Boots_DG",
+        "name": "Light Boots",
+        "desc": "For lazy soldiers who dont want to march\n<blue>On Hold:</>+2 MOV, -6% MOV growth.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            5,
+            9
+        ],
+        "components": [
+            [
+                "value",
+                1400
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "LightBootsBuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Termignartor_DG",
+        "name": "Termignartor",
+        "desc": "A blade for those who know what they are doing.\n<orange>Element:</><icon>Fire</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG + SKL + (HP/2)\n+ SPD + LCK + DEF + RES + CON + MOV, +15 SPD.",
+        "icon_nid": "{2WB} (Icon Blitz 1) Durandal (Ablaze)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Burned",
+                    "Seared"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "T3RM"
+            ],
+            [
+                "value",
+                80000
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Weighted_Boots_DG",
+        "name": "Weighted Boots",
+        "desc": "For those who want to build their legs\n<blue>On Hold:</>-1 MOV, +4% MOV growth\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "value",
+                2000
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "WeightedBootsBuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Regenerating_Concoction_DG",
+        "name": "Regenerating Concoction",
+        "desc": "A potion known to keep injured soldiers Fighting\neffect 1: Heals 20% HP per turn, lasts for 2 rounds. (2 uses)\neffect 2: Reduces damage taken by 20% for 2 rounds (2 uses)\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "value",
+                600
+            ],
+            [
+                "multi_item",
+                [
+                    "Regenerating_Concoction_1",
+                    "Regenerating_Concoction_2"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Regenerating_Concoction_1",
+        "name": "Regen",
+        "desc": "Heals 20% HP per turn, lasts for 2 rounds. (2 uses)",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Buff"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Regen"
+            ]
+        ]
+    },
+    {
+        "nid": "Regenerating_Concoction_2",
+        "name": "DEF Boost",
+        "desc": "Reduces damage taken by 20% for 2 rounds (2 uses)",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            12
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "c_uses",
+                2
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "status_on_hit",
+                "DEFP"
+            ],
+            [
+                "item_tags",
+                [
+                    "Buff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Bloodied_White_Dress_DG",
+        "name": "Bloodied White Dress",
+        "desc": "A dress of a random serial killer.\n<blue>On Hold:</>50% damage taken and given vs infantry.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            5,
+            5
+        ],
+        "components": [
+            [
+                "value",
+                3500
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "BloodiedWhiteDressBuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "ROOT_Teleportation_System_DG",
+        "name": "R.O.O.T. Teleportation System",
+        "desc": "<blue>On Hold:</>Set unit's MOV to 1, but this unit can teleport to the adjacent tile of any ally unit.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            35
+        ],
+        "components": [
+            [
+                "value",
+                4000
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "ROOTTeleportationSystemBuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Standart_Item_DG",
+        "name": "Rally Standart",
+        "desc": "<blue>On Hold:</>You can use this item to summon a standart with the skill \"Healing song\" and \"Leader presence\", but if this standart unit is killed, the item is destroyed ",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "status_on_hold",
+                "Rally_Standart_Buff"
+            ],
+            [
+                "value",
+                8000
+            ]
+        ]
+    },
+    {
+        "nid": "Rally_Standart_Summon",
+        "name": "Rally Standart",
+        "desc": "<blue>On Hold:</>You can use this item to summon a standart with the skill \"Healing song\" and \"Leader presence\", but if this standart unit is killed, the item is destroyed ",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "event_on_hit",
+                "Global Summon Rally Standart"
+            ],
+            [
+                "map_cast_sfx",
+                "None"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "traversable_tile_target_restrict",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Arrow_item",
+        "name": "Fell Arrow item",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Light"
+                    ],
+                    "effective_multiplier": 5.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },

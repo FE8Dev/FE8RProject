@@ -1,15 +1,15 @@
 [
     {
-        "nid": "Holy_Maiden",
-        "name": "Holy Maiden",
-        "desc": "An archer who uses ancient techniques lost to Jehanna. <icon>Infantry</>",
-        "tier": 1,
+        "nid": "Miko",
+        "name": "Miko",
+        "desc": "A mystical archer with strange magic. <icon>Infantry</><icon>Magic</>",
+        "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": null,
+        "promotes_from": "Kyudoka",
         "turns_into": [
-            "T2_Ballista_Neimi",
-            "Hierophant",
-            "Nomad"
+            "Mahou_Shoujo",
+            "Fatestealer",
+            "Yabusame"
         ],
         "tags": [
             "AutoPromote",
@@ -26,7 +26,7 @@
             "DEF": 6,
             "RES": 4,
             "CON": 9,
-            "MOV": 5
+            "MOV": 6
         },
         "growths": {
             "HP": 85,
@@ -41,53 +41,53 @@
             "MOV": 1
         },
         "growth_bonus": {
-            "HP": 0,
-            "STR": 0,
+            "HP": 10,
+            "STR": 10,
             "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
+            "SKL": 30,
+            "SPD": 30,
+            "LCK": 40,
             "DEF": 0,
             "RES": 0,
             "CON": 0,
             "MOV": 0
         },
         "promotion": {
-            "HP": 0,
-            "STR": 0,
+            "HP": 3,
+            "STR": 2,
             "MAG": 0,
-            "SKL": 0,
-            "SPD": 0,
-            "LCK": 0,
+            "SKL": 4,
+            "SPD": 3,
+            "LCK": 7,
             "DEF": 0,
-            "RES": 0,
-            "CON": 0,
-            "MOV": 0
+            "RES": 1,
+            "CON": 3,
+            "MOV": -97
         },
         "max_stats": {
-            "HP": 240,
-            "STR": 40,
-            "MAG": 40,
-            "SKL": 40,
-            "SPD": 40,
-            "LCK": 40,
-            "DEF": 40,
-            "RES": 40,
-            "CON": 40,
+            "HP": 480,
+            "STR": 65,
+            "MAG": 55,
+            "SKL": 73,
+            "SPD": 70,
+            "LCK": 77,
+            "DEF": 57,
+            "RES": 57,
+            "CON": 50,
             "MOV": 15
         },
         "learned_skills": [
             [
                 1,
-                "Monk_Pair_Up_hide"
+                "Monk_Pair_Up_T2_hide"
             ],
             [
                 5,
-                "Old_Faith"
+                "Mana_Strike_Proc"
             ],
             [
                 15,
-                "Shimmering_Barrier"
+                "Prophecy"
             ]
         ],
         "wexp_gain": {
@@ -104,12 +104,12 @@
             "Axe": [
                 false,
                 0,
-                null
+                360
             ],
             "Bow": [
                 true,
-                1,
-                240
+                60,
+                360
             ],
             "Staff": [
                 false,
@@ -117,14 +117,14 @@
                 null
             ],
             "Light": [
-                false,
-                0,
+                true,
+                120,
                 null
             ],
             "Anima": [
                 false,
                 0,
-                null
+                360
             ],
             "Dark": [
                 false,
@@ -147,8 +147,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Archer",
-        "combat_anim_nid": "Kyudoka",
+        "map_sprite_nid": "Sniper",
+        "combat_anim_nid": "Miko",
         "fields": []
     }
 ]
