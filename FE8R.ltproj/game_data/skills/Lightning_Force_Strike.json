@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Lightning_Force_Strike",
+        "name": "Lightning Force",
+        "desc": "The attacks of the user can be countered and double the damage vs. enemies drenched.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ],
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ]
+        ]
+    }
+]

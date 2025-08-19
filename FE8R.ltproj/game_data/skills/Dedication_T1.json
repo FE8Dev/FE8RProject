@@ -11,7 +11,7 @@
         "components": [
             [
                 "condition",
-                "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 1])"
+                "unit_funcs.check_focus(unit, 1) >= 1"
             ],
             [
                 "pcc_static",

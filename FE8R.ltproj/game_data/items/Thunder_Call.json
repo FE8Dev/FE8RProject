@@ -1,0 +1,89 @@
+[
+    {
+        "nid": "Thunder_Call",
+        "name": "Thunder Call",
+        "desc": "Stuns and drenched all enemies within 8 spaces. This is a free action.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            24
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    99,
+                    99,
+                    74
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "Heavy Foot Steps 1"
+            ],
+            [
+                "enemy_blast_aoe",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "spell",
+                null
+            ]
+        ]
+    }
+]

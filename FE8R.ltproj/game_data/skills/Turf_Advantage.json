@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Turf_Advantage",
+        "name": "Turf Advantage",
+        "desc": "Increases Hit/Avoid based on unit's internal level.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            44
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
+            ],
+            [
+                "dynamic_accuracy",
+                "(unit.get_internal_level()) * 1.5"
+            ],
+            [
+                "dynamic_avoid",
+                "(unit.get_internal_level()) * 1.5"
+            ]
+        ]
+    }
+]

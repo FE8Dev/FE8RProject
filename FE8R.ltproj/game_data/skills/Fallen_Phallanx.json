@@ -18,11 +18,11 @@
                 [
                     [
                         "STR",
-                        "(4*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                        "4 * unit_funcs.check_focus(unit, 2)"
                     ],
                     [
                         "MAG",
-                        "(4*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 2]))"
+                        "4 * unit_funcs.check_focus(unit, 2)"
                     ]
                 ]
             ]

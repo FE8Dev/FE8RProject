@@ -26,23 +26,23 @@
                     ],
                     [
                         "SPD",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "LCK",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "DEF",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "RES",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ],
                     [
                         "CON",
-                        "1*len([unitx for unitx in game.get_all_units() if unitx.team in 'player other' and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
+                        "(unit_funcs.check_focus(unit, 3))"
                     ]
                 ]
             ],
