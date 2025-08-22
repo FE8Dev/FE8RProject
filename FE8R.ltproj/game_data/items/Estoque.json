@@ -1,0 +1,104 @@
+[
+    {
+        "nid": "Estoque",
+        "name": "Estoque",
+        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</></><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>).",
+        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Amiti-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Thief",
+                        "Mounted",
+                        "Flying",
+                        "Dragon",
+                        "Infantry",
+                        "Magic",
+                        "Dark",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 480"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ]
+        ]
+    }
+]

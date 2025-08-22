@@ -8,10 +8,13 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.check_alive(\"Oneill\")",
             "add_portrait;Oneill;Right",
             "speak;Oneill;What was that? Do you think you can take me, wretched lordling?|Come! It's time you high-and-mighty knights learned to respect a true warrior!",
             "remove_portrait;Oneill",
-            "change_ai;Oneill;Defend"
+            "change_ai;Oneill;Defend",
+            "else",
+            "end"
         ],
         "nid": "0 EnemyTurn2"
     }

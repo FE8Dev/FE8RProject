@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Improved_Vision",
+        "name": "Improved Vision",
+        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +50 hit/avoid and + 30 crit/dodge.",
+        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "30"
+            ]
+        ]
+    }
+]

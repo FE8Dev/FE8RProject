@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Humeda",
+        "name": "Humeda",
+        "desc": "A natural first spell for one born near water.\n<green>Skills:</>Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>)",
+        "icon_nid": "{Alice} Surge GBA-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Anima'] < 180"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "E"
+            ]
+        ]
+    }
+]

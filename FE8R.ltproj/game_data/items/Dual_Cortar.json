@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Dual_Cortar",
+        "name": "Dual Cortar",
+        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "{FuriousHaunter} Binding Axe [F2E]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Axe'] >= 180 and u(\"Esperanza\").wexp['Axe'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Breached_15",
+                    "Seared"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    }
+]

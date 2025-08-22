@@ -1,0 +1,55 @@
+[
+    {
+        "nid": "Water_AOE5_Splash",
+        "name": "Water AOE5 Splash",
+        "desc": "Gives Water weapons 5 AOE debuff splash.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Drench_Debuff",
+                    "range": 5
+                }
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

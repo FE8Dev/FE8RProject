@@ -1,0 +1,121 @@
+[
+    {
+        "nid": "Burning_Sword",
+        "name": "Burning Sword",
+        "desc": "A blade that increased in heat.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>)",
+        "icon_nid": "{Batima} Falchion (Ylisse) - Exalted-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Fire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 120 and u(\"Esperanza\").wexp['Sword'] < 240"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEFENSE"
+            ],
+            [
+                "magic_at_range",
+                null
+            ]
+        ]
+    }
+]

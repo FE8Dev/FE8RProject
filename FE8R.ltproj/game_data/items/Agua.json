@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Agua",
+        "name": "Agua",
+        "desc": "An extension of Esperanza's homegrown magic.\n<green>Skills:</>Improved Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:4)\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "{AtelierLabs} Lunar Ray-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Amina'] >= 180 and u(\"Esperanza\").wexp['Amina'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE4_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "AquaShot"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "B"
+            ]
+        ]
+    }
+]

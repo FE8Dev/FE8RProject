@@ -1,4 +1,4 @@
-08-17-25
+08-19-25
 
 Bloodhound 1st skill has been reworked/buffed.
 Succubus 1st skill has been buffed

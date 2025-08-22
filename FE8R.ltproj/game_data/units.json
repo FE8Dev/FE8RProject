@@ -972,29 +972,29 @@
         "desc": "A childhood friend of Colm who hails from Renais. She cries a lot.",
         "variant": "Neimi",
         "level": 1,
-        "klass": "Female_Archer",
+        "klass": "Scout",
         "tags": [
             "AutoPromote"
         ],
         "bases": {
-            "HP": 24,
-            "STR": 7,
-            "MAG": 6,
-            "SKL": 9,
-            "SPD": 7,
-            "LCK": 4,
+            "HP": 20,
+            "STR": 5,
+            "MAG": 4,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 3,
             "DEF": 3,
             "RES": 2,
             "CON": 5,
             "MOV": 5
         },
         "growths": {
-            "HP": 90,
-            "STR": 40,
-            "MAG": 45,
-            "SKL": 55,
-            "SPD": 65,
-            "LCK": 55,
+            "HP": 70,
+            "STR": 35,
+            "MAG": 40,
+            "SKL": 50,
+            "SPD": 60,
+            "LCK": 50,
             "DEF": 20,
             "RES": 40,
             "CON": 20,
@@ -1051,7 +1051,7 @@
             ],
             "Bow": [
                 true,
-                60,
+                1,
                 251
             ],
             "Staff": [
@@ -11134,7 +11134,7 @@
             ]
         },
         "alternate_classes": [],
-        "portrait_nid": "Lin Eterna V3 (Spliced from {MeatofJustice} F2E OC 25 and {TrezVG} Hatsune Miku )-1.png",
+        "portrait_nid": "Lin Eterna V3 (Spliced from{MeatofJustice}F2E OC 25 and{TrezVG}Hatsune Miku)",
         "affinity": "Light",
         "fields": []
     },
@@ -11421,10 +11421,173 @@
         "fields": []
     },
     {
+        "nid": "Kazuma",
+        "name": "Kazuma",
+        "desc": "Only a guy tranmigrated a other world for unknown entity. Portrait by CranJam, Roxannity, Sterling Glovner. Unit created by DaviusBlackBlade",
+        "variant": "",
+        "level": 30,
+        "klass": "Otaku_isekai",
+        "tags": [
+            "Dragon",
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 20,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 5,
+            "SPD": 10,
+            "LCK": 16,
+            "DEF": 5,
+            "RES": 0,
+            "CON": 5,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 70,
+            "STR": 15,
+            "MAG": 0,
+            "SKL": 20,
+            "SPD": 45,
+            "LCK": 80,
+            "DEF": 10,
+            "RES": 0,
+            "CON": 20,
+            "MOV": 1
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Kazuma_Arsenal",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Pair_Up_Affinity_Dark"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                1,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Keiichi Maebara {CranJam, Roxannity, Sterling Glovner}",
+        "affinity": "Dark",
+        "fields": []
+    },
+    {
+        "nid": "Esperanza",
+        "name": "Esperanza",
+        "desc": "A young mercernary looking for glory. Determined to become a bladeswomen known by all. Portait by Corninin, spliced from Sphealnuke, Thorn VelvetKistune, and Levin64. Unit by Pew.",
+        "variant": "Esperanza",
+        "level": 1,
+        "klass": "Myrmidon_Esperanza",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 6,
+            "MAG": 4,
+            "SKL": 9,
+            "SPD": 9,
+            "LCK": 6,
+            "DEF": 5,
+            "RES": 6,
+            "CON": 8,
+            "MOV": 5
+        },
+        "growths": {
+            "MOV": 1,
+            "CON": 20,
+            "RES": 30,
+            "DEF": 30,
+            "LCK": 45,
+            "SPD": 60,
+            "SKL": 60,
+            "MAG": 40,
+            "STR": 45,
+            "HP": 70
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Esperanza_Arsenal",
+                false
+            ],
+            [
+                "Light_Sword",
+                false
+            ],
+            [
+                "Master_Scroll",
+                false
+            ],
+            [
+                "Master_Scroll",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Pair_Up_Affinity_Ice"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                1,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Mercenary_Tau by Corninin",
+        "affinity": "Ice",
+        "fields": []
+    },
+    {
         "nid": "Test",
         "name": "Test",
         "desc": "Test dummy for tryng things, do not delete",
-        "variant": null,
+        "variant": "",
         "level": 1,
         "klass": "Test",
         "tags": [
@@ -11483,7 +11646,7 @@
         "learned_skills": [
             [
                 1,
-                "Transmogrify"
+                "Dragonstone"
             ]
         ],
         "unit_notes": [],
