@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Stalwart_Marksmanship_nadv",
+        "name": "Stalwart Marksmanship",
+        "desc": "Gain Weapon Advantage against Bows, While Unit has weapon advantage, +50% Damage dealt, Otherwise -25% Damage taken.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "not((combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and  combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0))"
+            ],
+            [
+                "resist_multiplier",
+                0.75
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    }
+]

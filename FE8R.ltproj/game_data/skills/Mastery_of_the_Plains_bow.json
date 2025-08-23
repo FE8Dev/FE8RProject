@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Mastery_of_the_Plains_bow",
+        "name": "Mastery of the Plains",
+        "desc": "+1 range when using Bows and add SKL/3 and SPD/3 to damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('SKL')//3 + unit.get_stat('SPD')//3 "
+            ]
+        ]
+    }
+]
