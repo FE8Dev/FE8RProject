@@ -1,0 +1,110 @@
+[
+    {
+        "nid": "Trinity_Katto",
+        "name": "Trinity Katto",
+        "desc": "A powerful axe with that can slash through a trinity of elements.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Frozen</><icon>Seared</></><icon>Thunder</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</></><icon>Stunned</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "{Jubby} [Urvan]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Axe'] >= 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Breached_25",
+                    "Seared",
+                    "Stunned"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    }
+]

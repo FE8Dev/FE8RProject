@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Ocean_Blade",
+        "name": "Ocean Blade",
+        "desc": "Inflicts and effective against Drenched",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "status_on_hit",
+                "Drench"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

@@ -1,0 +1,96 @@
+[
+    {
+        "nid": "Oceano",
+        "name": "Oceano",
+        "desc": "The culmination of a life on the waves.\n<green>Skills:</>Superior Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:5)\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "{VelvetKitsune} Aurion-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Amina'] >= 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE5_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "AquaExplosion"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "SS"
+            ]
+        ]
+    }
+]

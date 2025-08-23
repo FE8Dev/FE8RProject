@@ -1,0 +1,98 @@
+[
+    {
+        "nid": "Hel",
+        "name": "Hel",
+        "desc": "A thin blade that acts like a rapier.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses SKL.",
+        "icon_nid": "{Lisandra Brave} Vorpal Blade [F2E]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] < 120"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKILL_PROC"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    }
+]

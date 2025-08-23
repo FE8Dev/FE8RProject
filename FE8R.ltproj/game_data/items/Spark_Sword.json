@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Spark_Sword",
+        "name": "Spark Sword",
+        "desc": "A sword that can send sparks of fire.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD.",
+        "icon_nid": "{Batima} Bull Blade-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Fire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] < 120"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    }
+]

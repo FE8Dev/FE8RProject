@@ -40077,7 +40077,7 @@
     {
         "nid": "Exposure_Stone",
         "name": "Exposure Stone",
-        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but attacks cost half of current HP to cast.",
+        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but -10 DEF/RES.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             4,
@@ -158162,6 +158162,2888 @@
         ]
     },
     {
+        "nid": "Agua",
+        "name": "Agua",
+        "desc": "An extension of Esperanza's homegrown magic.\n<green>Skills:</>Improved Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:4)\n<pink>Misc:</>MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "{AtelierLabs} Lunar Ray-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Amina'] >= 180 and u(\"Esperanza\").wexp['Amina'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE4_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "AquaShot"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "B"
+            ]
+        ]
+    },
+    {
+        "nid": "Esperanza_Arsenal",
+        "name": "Esperanza's Arsenal",
+        "desc": "Esperanza's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Bow</></><icon>Axe</><icon>Amina</>\n",
+        "icon_nid": "Esperanza Arsenal-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_item",
+                [
+                    "Spark_Sword",
+                    "Burning_Sword",
+                    "Blazing_Sword",
+                    "Wildfire",
+                    "Willful_Inferno",
+                    "Hel",
+                    "Espada",
+                    "Cana",
+                    "Cuchilla",
+                    "Estoque",
+                    "Hacha",
+                    "Dual_Cortar",
+                    "Trinity_Katto",
+                    "Arco",
+                    "Disparar",
+                    "Precisa",
+                    "Humeda",
+                    "Agua",
+                    "Oceano"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spark_Sword",
+        "name": "Spark Sword",
+        "desc": "A sword that can send sparks of fire.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD.",
+        "icon_nid": "{Batima} Bull Blade-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Fire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] < 120"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "ATTACK_SPEED"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    },
+    {
+        "nid": "Burning_Sword",
+        "name": "Burning Sword",
+        "desc": "A blade that increased in heat.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>)",
+        "icon_nid": "{Batima} Falchion (Ylisse) - Exalted-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Fire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 120 and u(\"Esperanza\").wexp['Sword'] < 240"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEFENSE"
+            ],
+            [
+                "magic_at_range",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Blazing_Sword",
+        "name": "Blazing Sword",
+        "desc": "A sword burning with passion.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
+        "icon_nid": "{Batima} Flame Sword-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Elfire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 240 and u(\"Esperanza\").wexp['Sword'] < 420"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "alternate_resist_formula",
+                "DEFENSE"
+            ]
+        ]
+    },
+    {
+        "nid": "Wildfire",
+        "name": "Wildfire",
+        "desc": "Bring forth your will with the sword of flames.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>)",
+        "icon_nid": "{Batima} Swordslayer-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                22
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Elfire"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 420 and u(\"Esperanza\").wexp['Sword'] < 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared_AOE_Splash"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEFENSE"
+            ],
+            [
+                "magic_at_range",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Willful_Inferno",
+        "name": "Willful Inferno",
+        "desc": "A fiery tornado imbued into a blade, with the resolve to never give up.\n<green>Skills:</>Superior Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))(unit.get_stat('SKL')))}</>).",
+        "icon_nid": "{LordGlenn, BwdYeti} (ArchaneaIconProject) Durandal (Blazing)-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Explosion"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 480"
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "status_on_hit",
+                "Seared_AOE4_Splash"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic_at_range",
+                null
+            ],
+            [
+                "alternate_resist_formula",
+                "DEFENSE"
+            ]
+        ]
+    },
+    {
+        "nid": "Hel",
+        "name": "Hel",
+        "desc": "A thin blade that acts like a rapier.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses SKL.",
+        "icon_nid": "{Lisandra Brave} Vorpal Blade [F2E]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                6
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] < 120"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKILL_PROC"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    },
+    {
+        "nid": "Espada",
+        "name": "Espada",
+        "desc": "A sharp weapon that strikes down a variety of foes.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</>\n<pink>Misc:</>SKL + SPD/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>)",
+        "icon_nid": "{Lisandra Brave} (FE5 Recolor) Wind Sword-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                5
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Thief",
+                        "Mounted"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 120 and u(\"Esperanza\").wexp['Sword'] < 240"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ]
+        ]
+    },
+    {
+        "nid": "Cana",
+        "name": "Cana",
+        "desc": "A weapon that finds weakness in many enemies.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Armorsmasher (3x Effectiveness)-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                11
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Thief",
+                        "Mounted",
+                        "Flying",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 240 and u(\"Esperanza\").wexp['Sword'] < 420"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ]
+        ]
+    },
+    {
+        "nid": "Cuchilla",
+        "name": "Cuchilla",
+        "desc": "A masterful blade that slips past the armor and scales of many creatures.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</>\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Colichemarde (Chroma)-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                7
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Thief",
+                        "Mounted",
+                        "Flying",
+                        "Dragon",
+                        "Infantry",
+                        "Magic"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 420 and u(\"Esperanza\").wexp['Sword'] < 480"
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ]
+        ]
+    },
+    {
+        "nid": "Estoque",
+        "name": "Estoque",
+        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</></><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>).",
+        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Amiti-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                50
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Vision",
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Armor",
+                        "Thief",
+                        "Mounted",
+                        "Flying",
+                        "Dragon",
+                        "Infantry",
+                        "Magic",
+                        "Dark",
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Sword'] >= 480"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_SKL"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ]
+        ]
+    },
+    {
+        "nid": "Arco",
+        "name": "Arco",
+        "desc": "A simple bow made for hunting.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</></><icon>Horse</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>)",
+        "icon_nid": "{2WB} (Icon Blitz 1) Steel Arch1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                13
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                9
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Bow'] < 180"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Disparar",
+        "name": "Disparar",
+        "desc": "A warbow made for fighting beasts.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</><icon>Horse</></><icon>Mounted</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>)",
+        "icon_nid": "{2WB} (Icon Blitz 1) Reinfleche",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                4
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Bow'] >= 180 and u(\"Esperanza\").wexp['Bow'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Precisa",
+        "name": "Precisa",
+        "desc": "A bow of killers, raining powerful arrows from afar.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Flying</><icon>Horse</></><icon>Mounted</><icon>Dragon</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SKL')))}</>)",
+        "icon_nid": "{2WB} (Icon Blitz 1) Silver Arch1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                5
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                13
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Bow'] >= 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ]
+        ]
+    },
+    {
+        "nid": "Hacha",
+        "name": "Hacha",
+        "desc": "A nimble axe that cleaves through frost.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>)",
+        "icon_nid": "{Ereshkigal} Steel Axe-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Axe'] < 180"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Breached_5"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Dual_Cortar",
+        "name": "Dual Cortar",
+        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "{FuriousHaunter} Binding Axe [F2E]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Axe'] >= 180 and u(\"Esperanza\").wexp['Axe'] < 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Breached_15",
+                    "Seared"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Trinity_Katto",
+        "name": "Trinity Katto",
+        "desc": "A powerful axe with that can slash through a trinity of elements.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Frozen</><icon>Seared</></><icon>Thunder</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</></><icon>Stunned</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "{Jubby} [Urvan]-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Improved_Vision"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse",
+                        "Flying",
+                        "Mounted",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Axe'] >= 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Breached_25",
+                    "Seared",
+                    "Stunned"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ]
+        ]
+    },
+    {
+        "nid": "Humeda",
+        "name": "Humeda",
+        "desc": "A natural first spell for one born near water.\n<green>Skills:</>Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>)",
+        "icon_nid": "{Alice} Surge GBA-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Anima'] < 180"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_WEAK"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Aqua"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "E"
+            ]
+        ]
+    },
+    {
+        "nid": "Oceano",
+        "name": "Oceano",
+        "desc": "The culmination of a life on the waves.\n<green>Skills:</>Superior Vision\n<orange>Element:</><icon>Anima</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:5)\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>)",
+        "icon_nid": "{VelvetKitsune} Aurion-1.png",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Anima"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Esperanza"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Superior_Vision"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Esperanza\").wexp['Amina'] >= 360"
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ],
+            [
+                "wexp",
+                2
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Water_AOE5_Splash"
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "AquaExplosion"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "magic_weapon_rank",
+                "SS"
+            ]
+        ]
+    },
+    {
+        "nid": "Ocean_Blade",
+        "name": "Ocean Blade",
+        "desc": "Inflicts and effective against Drenched",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "status_on_hit",
+                "Drench"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Kazuma_Arsenal",
+        "name": "Kazuma Arsenal",
+        "desc": "Kazuma personal spells, created to imitate the power of the strongest beings.\n<red>Prof:</><icon>Dark</><icon>Axe</><icon>Monster</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            1
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Transmutation_Corporal",
+                    "Dark_Transmutation",
+                    "Cursed_Transmutation",
+                    "Crimsom_Extinction",
+                    "Storm_Breaker",
+                    "Stardust_Platinum"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Transmutation_Corporal",
+        "name": "Transmutation Corporal",
+        "desc": "Ancient and archaic art that changes the victim's body at the user's will.\n<green>Skills:</>Physical Change\n<orange>Element:</><icon>Dark</>",
+        "icon_nid": "{Zarg} Dark 12",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    127
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Dark_Shine"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Physical_Change"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"_Kazuma\").wexp['Dark'] >=180 and u(\"_Kazuma\").wexp['Dark'] < 300"
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Transmutation",
+        "name": "Dark Transmutation",
+        "desc": "Changes imbued with dark energy, corroding the body and soul.\n<green>Skills:</>Physical Change+\n<orange>Element:</><icon>Dark</>",
+        "icon_nid": "{Zarg} Dark 11",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "S"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    127
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Fenrir_Eclipse"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Physical_Change_Plus"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Dark'] >=300 and u(\"Kazuma\").wexp['Dark'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Transmutation",
+        "name": "Cursed Transmutation",
+        "desc": "The highest level of mastery over body change, cursed as forbidden knowledge.\n<green>Skills:</>Physical Change++\n<orange>Element:</><icon>Dark</>",
+        "icon_nid": "{WhydidImakethisaccount} Dark 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    72,
+                    0,
+                    65
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Nosferatu_Light"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Physical_Change_Plus_Plus"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Dark'] >=420"
+            ]
+        ]
+    },
+    {
+        "nid": "Crimsom_Extinction",
+        "name": "Crimsom Extinction",
+        "desc": "Concentrated spell that reduces everything in its path to nothing.\n<green>Skills:</>Ancient Pact (X)\n<orange>Element:</><icon>Dark</>\n<pink>Misc:Uses MAG+SKL",
+        "icon_nid": "{Peerless} icon 031",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Dark"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    0,
+                    127
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Demon_Light"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Cursed_25",
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_X"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_STRONG"
+            ],
+            [
+                "prf_class",
+                [
+                    "Crimson_Destroyer"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Dark'] >= 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Stardust_Platinum",
+        "name": "Stardust Platinum",
+        "desc": "Guardian figure that executes the user's blows while protecting him.\n<green>Skills:</>Ora Ora Ora...\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Uses SPD*2",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            7,
+            6
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weight",
+                30
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPDDOUBLE"
+            ],
+            [
+                "status_on_equip",
+                "Ora_Ora_Ora"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Monster'] >=480"
+            ]
+        ]
+    },
+    {
+        "nid": "Storm_Breaker",
+        "name": "Stormbreaker",
+        "desc": "The axe of the god of thunder, only the strongest or most worthy can use it.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:Uses STR*2+ MAG.",
+        "icon_nid": "{SacredStones} Guardian's Axe (FEH)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                40
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Kazuma"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Kazuma\").wexp['Axe'] >=480"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_X"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DOUBLE_MAG_STRONG"
+            ]
+        ]
+    },
+    {
+        "nid": "Thunder_Call",
+        "name": "Thunder Call",
+        "desc": "Stuns and drenched all enemies within 8 spaces. This is a free action.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            24
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "map_cast_anim",
+                "AOE_Rally"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    99,
+                    99,
+                    74
+                ]
+            ],
+            [
+                "map_cast_sfx",
+                "Heavy Foot Steps 1"
+            ],
+            [
+                "enemy_blast_aoe",
+                8
+            ],
+            [
+                "hit",
+                80
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Drench_Debuff"
+                ]
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_sfx",
+                "Attack Hit 1"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "crit",
+                0
+            ],
+            [
+                "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "spell",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Transmogrify",
+        "name": "Transmogrify",
+        "desc": "add a temporal tag of choice to the target\n",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "event_on_hit",
+                "Global Transmogrify"
+            ],
+            [
+                "target_unit",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Adaptative_Necessity_Item",
+        "name": "Adaptative_Necessity",
+        "desc": "",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "min_range",
+                0
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Adaptative_Necessity_Buff",
+                    "Adaptative_Necessity_Debuff"
+                ]
+            ],
+            [
+                "eval_target_restrict_2",
+                "unit, target"
+            ]
+        ]
+    },
+    {
+        "nid": "Destruction_Power",
+        "name": "Destruction Power",
+        "desc": "Attacks with Dark Magic that miss do 100% damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            2
+        ],
+        "components": [
+            [
+                "damage_on_miss",
+                0.9999999999999999
+            ]
+        ]
+    },
+    {
         "nid": "Sol_Activate",
         "name": "Sol",
         "desc": "Display the animation",
@@ -164447,7 +167329,7 @@
     {
         "nid": "Exposure_Stone_Skill",
         "name": "Exposure Stone",
-        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but attacks cost half of current HP to cast.",
+        "desc": "A stone that gives off a gentle glow.\n<blue>On Hold:</>Magical attacks now target the lower of enemy's DEF or RES, but -10 DEF/RES.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             4,
@@ -164459,8 +167341,17 @@
                 "DEF_RES_MIN"
             ],
             [
-                "eval_hp_cost_midbattle",
-                "-15"
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -10
+                    ],
+                    [
+                        "RES",
+                        -10
+                    ]
+                ]
             ]
         ]
     },
@@ -167870,38 +170761,48 @@
         ]
     },
     {
-        "nid": "Transmogrify",
-        "name": "Transmogrify",
-        "desc": "add a temporal tag of choice to the target\n",
-        "icon_nid": "Skills",
+        "nid": "Blue_Crown",
+        "name": "Blue Crown",
+        "desc": "Neither unit or any unit in a 4 spaces range can crit.",
+        "icon_nid": "Consumables",
         "icon_index": [
-            10,
-            1
+            1,
+            0
         ],
         "components": [
             [
-                "event_on_hit",
-                "Global Transmogrify"
+                "value",
+                5000
             ],
             [
-                "target_unit",
-                null
+                "status_on_hold",
+                "Misfortune"
+            ]
+        ]
+    },
+    {
+        "nid": "Horse_Chain",
+        "name": "Horse Chain",
+        "desc": "<blue>For Horse units:</>User increases Hit/Avoid based on unit's internal level.",
+        "icon_nid": "12-27-24 Accessories",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                5000
             ],
             [
-                "min_range",
-                0
+                "status_on_hold",
+                "Turf_Advantage"
             ],
             [
-                "max_range",
-                5
-            ],
-            [
-                "menu_after_combat",
-                null
-            ],
-            [
-                "attack_after_combat",
-                null
+                "prf_tags",
+                [
+                    "Horse"
+                ]
             ]
         ]
     }
