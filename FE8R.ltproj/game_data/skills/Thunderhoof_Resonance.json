@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Thunderhoof_Resonance",
+        "name": "Thunderhoof Resonance",
+        "desc": "if MOV>Enemy MOV, +1 Bonus attack and \nafter combat deals 10 damage in an AOE 3 around the user",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            40
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('MOV') >= target.get_stat('MOV')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "post_combat_splash_aoe",
+                3
+            ],
+            [
+                "post_combat_splash",
+                10
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Hunt_the_Wicked_Hunt_the_Beast",
+        "name": "Hunt the Wicked, Hunt the Beast",
+        "desc": "Bows and Swords gain 4x Effectiveness against Monsters; add speed to Crit and Skill/2 to Avoid when initiating.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('SPD') if mode == 'attack' else 0"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SKL')//2 if mode == 'attack' else 0"
+            ],
+            [
+                "multi_skill",
+                [
+                    "Hunt_the_Wicked_Hunt_the_Beast_Eff"
+                ]
+            ]
+        ]
+    }
+]

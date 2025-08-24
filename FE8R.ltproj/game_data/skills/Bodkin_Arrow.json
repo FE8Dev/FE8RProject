@@ -1,0 +1,32 @@
+[
+    {
+        "nid": "Bodkin_Arrow",
+        "name": "Bodkin Arrow",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "-(unit.get_stat('DEF')//2)"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    }
+]

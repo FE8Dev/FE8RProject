@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Bodkin_Arsenal",
+        "name": "Bodkin Arsenal",
+        "desc": "All bows ignore 50% of the target's defense, and apply Def-30 after combat (Does not stack)\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Bodkin_Wound"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Bodkin_Arrow",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

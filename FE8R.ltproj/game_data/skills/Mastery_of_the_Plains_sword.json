@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Mastery_of_the_Plains_sword",
+        "name": "Mastery of the Plains",
+        "desc": "If using Swords add SKL/2 to AS, and launch all attacks before the enemy can counter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword')"
+            ],
+            [
+                "dynamic_attack_speed",
+                "unit.get_stat('SKL')//2"
+            ],
+            [
+                "dynamic_defense_speed",
+                "unit.get_stat('SKL')//2"
+            ],
+            [
+                "desperation",
+                null
+            ]
+        ]
+    }
+]

@@ -1901,3 +1901,108 @@ class EvalEmpowerHeal(SkillComponent):
         except Exception as e:
             logging.error("EvalEmpowerHeal: Couldn't evaluate '%s' (%s)", self.value, e)
             return 0
+
+
+
+
+class AllyLifelinkAOE(SkillComponent):
+    nid = 'ally_lifelink_aoe'
+    desc = "Heals allies in an AoE around target %% of damage dealt"
+    tag = SkillTags.COMBAT2
+
+    expose = (ComponentType.NewMultipleOptions)
+    options = {
+        "percent": ComponentType.Float,
+        "range": ComponentType.Int,
+    }
+
+    def __init__(self, value=None):
+        self.value = {
+            "percent": 0.5,
+            "range": 1,
+        }
+        if value:
+            self.value.update(value)
+
+    def after_strike(self, actions, playback, unit, item, target, item2, mode, attack_info, strike):
+        total_damage_dealt = 0
+        playbacks = [p for p in playback if p.nid in ('damage_hit', 'damage_crit') and p.attacker == unit]
+        for p in playbacks:
+            total_damage_dealt += p.true_damage
+
+        damage = utils.clamp(total_damage_dealt, 0, target.get_hp())
+        true_heal = int(damage * self.value.get("percent", 0.5))
+
+        if true_heal > 0 and target.position:
+            r = set(range(self.value.get("range", 1) + 1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            did_happen = False
+            for loc in locations:
+                other = game.board.get_unit(loc)
+                if other and skill_system.check_ally(other, unit) and unit.nid != other.nid:
+                    actions.append(action.ChangeHP(other, true_heal))
+                    playback.append(pb.HealHit(unit, item, other, true_heal, true_heal))
+                    did_happen = True
+
+            if did_happen:
+                actions.append(action.TriggerCharge(unit, self.skill))
+
+
+class LifelinkAOE(SkillComponent):
+    nid = 'lifelink_aoe'
+    desc = "Heals allies, enemies, or all units in an AoE around target %% of damage dealt"
+    tag = SkillTags.COMBAT2
+
+    expose = (ComponentType.NewMultipleOptions)
+    options = {
+        "percent": ComponentType.Float,
+        "range": ComponentType.Int,
+        "target": (ComponentType.MultipleChoice, ('ally', 'enemy', 'any')),
+        "include_target": ComponentType.Bool,
+    }
+
+    def __init__(self, value=None):
+        self.value = {
+            "percent": 0.5,
+            "range": 1,
+            "target": "ally",
+            "include_target": False,
+        }
+        if value:
+            self.value.update(value)
+
+    def after_strike(self, actions, playback, unit, item, target, item2, mode, attack_info, strike):
+        total_damage_dealt = 0
+        playbacks = [p for p in playback if p.nid in ('damage_hit', 'damage_crit') and p.attacker == unit]
+        for p in playbacks:
+            total_damage_dealt += p.true_damage
+
+        damage = utils.clamp(total_damage_dealt, 0, target.get_hp())
+        true_heal = int(damage * self.value.get("percent", 0.5))
+
+        if true_heal > 0 and target and target.position:
+            r = set(range(self.value.get("range", 1) + 1))
+            locations = game.target_system.get_shell({target.position}, r, game.board.bounds)
+            did_happen = False
+            for loc in locations:
+                other = game.board.get_unit(loc)
+                if other:
+                    if not self.value.get("include_target", False) and other is target:
+                        continue
+                    if other.nid == unit.nid:
+                        continue
+
+
+                    if self.value.get("target") in ["ally", "any"] and skill_system.check_ally(other, unit):
+                        actions.append(action.ChangeHP(other, true_heal))
+                        playback.append(pb.HealHit(unit, item, other, true_heal, true_heal))
+                        did_happen = True
+
+                    elif self.value.get("target") in ["enemy", "any"] and skill_system.check_enemy(other, unit):
+                        actions.append(action.ChangeHP(other, true_heal))
+                        playback.append(pb.HealHit(unit, item, other, true_heal, true_heal))
+                        did_happen = True
+
+            if did_happen:
+                actions.append(action.TriggerCharge(unit, self.skill))
+

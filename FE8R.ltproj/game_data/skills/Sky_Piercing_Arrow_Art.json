@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Sky_Piercing_Arrow_Art",
+        "name": "Sky Piercing Arrow",
+        "desc": "Bow Combat art; A powerful attack with a bow against all enemies in a 7 tile line, cannot Miss or double, Applies flinch on hit. 3 CD",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Sky_Piercing_Arrow_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    }
+]
