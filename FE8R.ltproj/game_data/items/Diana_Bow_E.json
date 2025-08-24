@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Bow_E",
         "name": "Scout's bow",
-        "desc": "Bow given to army scouts, probably stolen.\n<green>Skills:</>Bounty\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
+        "desc": "Bow given to army scouts, probably stolen.\n<green>Skills:</>Mug\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -65,7 +65,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -93,10 +93,6 @@
                 null
             ],
             [
-                "status_on_equip",
-                "Bounty"
-            ],
-            [
                 "eval_available",
                 "u(\"Diana\").wexp['Bow'] < 120"
             ],
@@ -118,7 +114,11 @@
             ],
             [
                 "self_status_on_hit",
-                "Rock_AOE_Splash"
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     }
