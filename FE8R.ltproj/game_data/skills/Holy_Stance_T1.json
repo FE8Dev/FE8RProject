@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Holy_Stance_T1",
+        "name": "Holy Stance",
+        "desc": "If a Monster initiates combat, receives 50% of damage dealt back.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            22
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'defense' and 'Monster' in target.tags"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Holy_Stance_Skill",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ]
+        ]
+    }
+]
