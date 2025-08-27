@@ -103,7 +103,7 @@ Knight
 * Barrier Knight(from Sword Cavalier -> Mage Knight)
 
 ## Anima
-A 1-3 range reaver tome that is effective against Shadow enemies and deals a fixed extra damage on Crits.
+A 1-3 range reaver tome that is effective against Shadow enemies and deals a fixed extra damage on Crits. It also uses Luck for damage.
 
 ### Earliest access
 * Baron(from Knight)
@@ -116,16 +116,29 @@ A 1-3 range reaver tome that is effective against Shadow enemies and deals a fix
 * Barrier Knight(from Knight -> Great Knight)
 * Duke Knight(from Sword Cavalier -> Paladin)
 
+## Axe
+Water and Wind axe that uses Speed and Skill instead of Strength for damage. It shoves enemies and has a cleave effect.
+
+### Earliest access
+* Great Knight(from Knight)
+* General(from Knight)
+* Hero(from Mercenary)
+
+### Other access
+* Blademaster(from Mercenary -> Highlander)
+* Black Knight(from Knight -> Baron)
+* Barrier Knight(from Knight -> Baron)
+
 ---
 # Gilliam
 
 ## *Lance*
-A heavy lance. From its second version onwards, it inflicts Curse and Shadow on the enemy.
+A heavy lance that also uses Defense for damage. It has a Provoke effect. From its second version onwards, it inflicts Curse and Shadow on the enemy.
 
 *If he promotes to Catapult from Siege Knight it will be lost.*
 
 ## *Sword*
-Starts as a normal Blade.
+Starts as a normal Blade that also uses Skill for damage and has a Provoke effect.
 
 From its second version onwards, it also inflicts Breach and Rock Punctures and becomes effective against Armor units.
 
@@ -233,11 +246,11 @@ On its first form, it gives more Wexp. On later forms, it's a magical breath tha
 
 ## *Axe*
 
-An axe that inflicts seared upon the enemy. After the first version, it gets a blast version and a normal version for attacking.
+An axe that inflicts seared upon the enemy. After the first version, it gets a blast version and a normal version for attacking. It also uses Constitution for damage.
 
 ## Sword
 
-A heavy weapon that inflicts Curse and Shadow on the enemy. When hit by an enemy, Strength increases by 8 up to 5 times. From its third version onwards, it inflicts Confuse on the enemy. On its last version, it halves Speed, but doubles Defense and Resistance.
+A heavy weapon that inflicts Curse and Shadow on the enemy. When hit by an enemy, Strength increases by 8 up to 5 times. From its third version onwards, it inflicts Confuse on the enemy. On its last version, it halves Speed, but doubles Defense and Resistance. It also uses HP for damage.
 
 ### Earliest access
 
@@ -267,9 +280,11 @@ Warrior
 
 ## *Bow*
 
-A bow that starts using both Strength and Skill and after the first upgrade gains effectiveness against horses and uses Magic too.
+A bow that uses Magic and Skill for damage instead of Strength and after the first upgrade gains effectiveness against Horses and inflicts Seared.
 
-Its last version also becomes effective against Infantry and Dragon units and has a skill that makes attack always hit if an enemy was killed by initiating combat with this weapon.
+Its fourth version has a skill that makes attack always hit if an enemy was killed by initiating combat with this weapon.
+
+Its last version also becomes effective against Infantry and Dragon units and gets the Wind element(effective against Flying and Seared enemies).
 
 ## Sword
 
@@ -277,14 +292,19 @@ Magical sword that raises Neimi's DEF and RES. It inflicts Rock Punctures and re
 
 ### Earliest access
 
-Ranger
+Ranger(from Archer)
+Assassin(from Outlaw)
 
 ### Other access
 * Magiteck Knight(from Sniper)
+* Nomad Trooper(from Outlaw or Kyudoka -> Nomad)
+* Dragonmaster(from Outlaw -> Warrior)
+* Reaver(from Outlaw -> Warrior)
+* Elephant Rider(from Outlaw -> Warrior)
 
-## Anima
+## Light
 
-A tome that is effective against Horses and inflicts Seared on the enemy. It also uses Skill for damage and can't be countered.
+1 range Light Fire tome that inflicts Seared on the enemy. It also uses Skill for damage and can't be countered. It also deals Splash damage.
 
 ### Earliest access
 
@@ -294,6 +314,19 @@ Sniper
 
 * Magiteck Knight(from Ranger)
 * Sky Guard(from Ranger)
+
+## Lance
+Light and Wind lance with a cleave effect that shoves enemies. It uses Luck and Speed for damage instead of Strength. Its third version gains the Fire element(effective against Horses and inflicts Seared).
+
+### Earliest access
+Miko(from Kyudoka)
+
+### Other access
+* Neotank(from Archer -> Ballista)
+* Silver Knight(from Archer -> Ranger or Sniper)
+* Sky Guard(from Archer -> Ranger)
+* Dragonmaster(from Outlaw -> Warrior)
+* Elephant Rider(from Outlaw -> Warrior)
 
 ---
 
