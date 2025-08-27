@@ -2,7 +2,7 @@
     {
         "nid": "Blinding_Magic_Proc",
         "name": "Blinding Magic",
-        "desc": "When using any magic, enemies lose -60 Hit when hit for 2 turns.",
+        "desc": "Magical weapons inflict Reduced Vision on enemies for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -15,7 +15,11 @@
             ],
             [
                 "condition",
-                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')) and (unit2.team == 'enemy' or unit2.team == 'enemy2') "
+                "item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",

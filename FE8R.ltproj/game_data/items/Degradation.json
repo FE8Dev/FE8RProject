@@ -2,7 +2,7 @@
     {
         "nid": "Degradation",
         "name": "Degradation",
-        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy.",
+        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy, STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             7,
@@ -108,6 +108,10 @@
                     "Shadow_Blight",
                     "Cursed_5"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_MID"
             ]
         ]
     }

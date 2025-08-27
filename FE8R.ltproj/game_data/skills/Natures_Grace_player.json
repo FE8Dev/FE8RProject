@@ -2,13 +2,17 @@
     {
         "nid": "Natures_Grace_player",
         "name": "Nature's Grace",
-        "desc": "Unit and all allies within 3 tiles gain +3 Mov and +30% Speed, All enemies within 3 tiles lose -3 Mov and -30% Speed.",
+        "desc": "Unit and all allies within 3 tiles gain +3 MOV and +30% SPD. All enemies within 3 tiles lose -3 MOV and -30% SPD.",
         "icon_nid": null,
         "icon_index": [
             0,
             0
         ],
         "components": [
+            [
+                "hidden",
+                null
+            ],
             [
                 "aura",
                 "Natures_Grace_pchild"
@@ -20,10 +24,6 @@
             [
                 "aura_target",
                 "ally"
-            ],
-            [
-                "hidden",
-                null
             ]
         ]
     }

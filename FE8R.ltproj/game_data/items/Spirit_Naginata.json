@@ -1,0 +1,115 @@
+[
+    {
+        "nid": "Spirit_Naginata",
+        "name": "Spirit Naginata",
+        "desc": "A naginata infused with a holy wind spirit.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</><icon>Wind</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//3))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Shadow",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_E"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_WEAK"
+            ]
+        ]
+    }
+]

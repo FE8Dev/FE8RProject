@@ -1,9 +1,18 @@
-## TRB
+08-27-25
 ```
 Made trainee seed set you to 0xp after leveling, this allows the use of BXP
-
-
-
+Fixed Warhammer AOE stunning even when missing.
+Gave HorseyBoy and HorseyBoy ranged options for chapter 5x
+Gilliam's Lances and Swords have been giving scaling.
+Neimi is now an optional trainee.
+Neimi's bows have been reduced to only double scaling, but some more MT to compensate.
+Neimi's Anima spells have been changed to Light and also now has lances added to her arsenal.
+Chapter 6 AI aggression has been reduced.
+Axes have been added to Franz's arsenal.
+Franz's Anima magic has been given scaling.
+Scaling has been added to Garcia's Axes and Swords.
+Blade Scroll has been updated.
+Starting level for all units on 5x increased to level 15.
 
 
 

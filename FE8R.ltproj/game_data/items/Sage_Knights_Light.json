@@ -2,7 +2,7 @@
     {
         "nid": "Sage_Knights_Light",
         "name": "Sage's Light",
-        "desc": "Franz's unique spell combines light and anima magic to defeat dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +20 Crit damage.",
+        "desc": "Franz's unique spell combines light and anima magic to defeat dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +20 Crit damage, MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             0,
@@ -98,6 +98,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_MID"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Sylvania",
         "name": "Sylvania",
-        "desc": "A bow for Neimi made by forest faires.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Infantry</><icon>Dragon</><icon>Horse</>\n<pink>Misc:</>STR + SKL + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('MAG'))}</>).",
+        "desc": "A bow for Neimi made by forest faires.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Infantry</><icon>Dragon</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             8,
@@ -19,7 +19,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -60,7 +60,8 @@
                         "Flying",
                         "Infantry",
                         "Dragon",
-                        "Horse"
+                        "Horse",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -83,7 +84,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "MAG_SKL_STRONG"
             ],
             [
                 "level_exp",

@@ -2,7 +2,7 @@
     {
         "nid": "Hunters_Volley",
         "name": "Hunter's Volley",
-        "desc": "<red>CA:</>Uses Bows. Brave, +1 max range, +15 hit, +10 crit",
+        "desc": "<red>CA:</>Brave, +1 max range, +15 hit, +10 Crit. Bows Only. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -27,7 +27,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "item_system.weapon_type(unit, item) == 'Bow'"
             ]
         ]
     }

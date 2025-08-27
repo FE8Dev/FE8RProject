@@ -1,5 +1,199 @@
 [
     {
+        "nid": "Iron_Sword_Test_1",
+        "name": "Iron Sword eff 10",
+        "desc": "Easy to use sword. Can attack 4 times if fast enough.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                300
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                -500
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "shove_flex_stops",
+                4
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Iron_Sword_Test_2",
+        "name": "Iron Sword eff 0",
+        "desc": "Easy to use sword. Can attack 4 times if fast enough.",
+        "icon_nid": "Sword",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "value",
+                300
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                0
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                -500
+            ],
+            [
+                "weight",
+                4
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "shove_flex_stops",
+                4
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Infantry"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
         "nid": "DevEmblem",
         "name": "Dev Emblem",
         "desc": "{v:FULLERGA}\n+200% to every single growth rate\ncost: 100000G",
@@ -8008,7 +8202,7 @@
     {
         "nid": "Burning_Greatlance_Shop",
         "name": "Bulwark G.L.",
-        "desc": "A lance for those who protect till the end.\n<green>Skills:</>Lance Guard (A), G.L. Mastery, Arcane Barrier  <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "desc": "A lance for those who protect till the end.\n<green>Skills:</>Lance Guard (SS), G.L. Mastery, Arcane Barrier  <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -39699,7 +39893,7 @@
     {
         "nid": "Blade_Scroll",
         "name": "Blade Scroll",
-        "desc": "A scroll that utilizes the power of blades.\n<blue>On Hold:</>Allows units to use Blade Sweep, regardless of class. Unit gains Infantry weakness and reduce SPD by 15%.",
+        "desc": "A scroll that utilizes the power of blades.\n<blue>On Hold:</>Attacks deal x1.5 more damage, but cut unit's SPD in half.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             0,
@@ -64166,7 +64360,7 @@
     {
         "nid": "Franzs_Arsenal",
         "name": "Franz's Arsenal",
-        "desc": "Franz's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Anima</><icon>Lance</>",
+        "desc": "Franz's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Anima</><icon>Lance</><icon>Axe</>",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -64742,7 +64936,7 @@
     {
         "nid": "Mage_Shine_Franz",
         "name": "Mage Shine",
-        "desc": "A scholar's variation of Shine magic that counters dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +10 Crit damage.",
+        "desc": "A scholar's variation of Shine magic that counters dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +10 Crit damage, MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             9,
@@ -64838,13 +65032,17 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_attack_speed_formula",
+                "MAG_LCK_WEAK"
             ]
         ]
     },
     {
         "nid": "Sage_Knights_Light",
         "name": "Sage's Light",
-        "desc": "Franz's unique spell combines light and anima magic to defeat dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +20 Crit damage.",
+        "desc": "Franz's unique spell combines light and anima magic to defeat dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +20 Crit damage, MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             0,
@@ -64940,13 +65138,17 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_MID"
             ]
         ]
     },
     {
         "nid": "Arcadia",
         "name": "Arcadia",
-        "desc": "The name of a hidden paradise where magic can thrive.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +40 Crit damage.",
+        "desc": "The name of a hidden paradise where magic can thrive.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +40 Crit damage, MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             37,
@@ -65042,6 +65244,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_STRONG"
             ]
         ]
     },
@@ -65470,6 +65676,339 @@
         ]
     },
     {
+        "nid": "Aqua_Gale",
+        "name": "Aqua Gale",
+        "desc": "An axe that sweeps with both water and wind.\n<green>Skills:</>Power Chop (E) <orange>Element:</><icon>Water</><icon>Wind</>\n <violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), SKL + SPD/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_WEAK"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Raging_Storm",
+        "name": "Raging Strom",
+        "desc": "An axe that brings a storm to the field.\n<green>Skills:</>Power Chop (C) <orange>Element:</><icon>Water</><icon>Wind</>\n <violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_MID"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Typhoon",
+        "name": "Typhoon",
+        "desc": "Drench the battlefield with blood and water.\n<green>Skills:</>Power Chop (SS) <orange>Element:</><icon>Water</><icon>Wind</>\n <violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            5,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weight",
+                28
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_STRONG"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ]
+        ]
+    },
+    {
         "nid": "Gilliams_Arsenal",
         "name": "Gilliam's Arsenal",
         "desc": "Gilliam's personal weapons.\n<red>Prof:</><icon>Lance</><icon>Sword</><icon>Bow</>",
@@ -65505,7 +66044,7 @@
     {
         "nid": "Guards_Greatlance",
         "name": "Guard's G.L.",
-        "desc": "A heavy greatlance that Provokes enemies to attack Gilliam.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (E)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A heavy greatlance that Provokes enemies to attack Gilliam.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (E)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             3,
@@ -65605,13 +66144,17 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
             ]
         ]
     },
     {
         "nid": "Stoic_Guard",
         "name": "Stoic Guard",
-        "desc": "A solemn lance for stoic hands.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (C)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy.",
+        "desc": "A solemn lance for stoic hands.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (C)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             2,
@@ -65719,13 +66262,17 @@
                     "Shadow_Blight",
                     "Cursed_5"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_MID"
             ]
         ]
     },
     {
         "nid": "Heavy_Impact",
         "name": "Heavy Impact",
-        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (A) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>Heavy.",
+        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (A) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))}</>).",
         "icon_nid": "Some Greatlances Sheet",
         "icon_index": [
             0,
@@ -65833,13 +66380,17 @@
                     "Shadow_Blight",
                     "Cursed_8"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
             ]
         ]
     },
     {
         "nid": "Immovable",
         "name": "Immovable",
-        "desc": "Gilliam's ultimate provoking greatlance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (SS)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>Heavy.",
+        "desc": "Gilliam's ultimate provoking greatlance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (SS)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF'))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             0,
@@ -65947,13 +66498,17 @@
                     "Shadow_Blight",
                     "Cursed_15"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_STRONG"
             ]
         ]
     },
     {
         "nid": "Claymore",
         "name": "Claymore",
-        "desc": "A heavy blade used by Gilliam.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A heavy blade used by Gilliam.\n<green>Skills:</>Blade Sweep, Provoke\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             6,
@@ -66024,7 +66579,9 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Sweep",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver"
                 ]
             ],
             [
@@ -66044,13 +66601,17 @@
                 [
                     "Gilliam"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_WEAK"
             ]
         ]
     },
     {
         "nid": "Armor_Ripper",
         "name": "Armor Ripper",
-        "desc": "A unique heavy blade that rips off enemies' armor.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy.",
+        "desc": "A unique heavy blade that rips off enemies' armor.\n<green>Skills:</>Blade Sweep, Provoke <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -66121,7 +66682,9 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Sweep",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver"
                 ]
             ],
             [
@@ -66149,13 +66712,17 @@
                     "Breached_5",
                     "Rock_Punctures"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MID"
             ]
         ]
     },
     {
         "nid": "Armors_Bane",
         "name": "Armor's Bane",
-        "desc": "A heavy blade that renders armor ineffective.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy.",
+        "desc": "A heavy blade that renders armor ineffective.\n<green>Skills:</>Blade Sweep, Provoke <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             43,
@@ -66226,7 +66793,9 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Sweep",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver"
                 ]
             ],
             [
@@ -66254,6 +66823,10 @@
                     "Breached_15",
                     "Rock_Punctures"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     },
@@ -70218,7 +70791,7 @@
             ],
             [
                 "weapon_rank",
-                "S"
+                "SS"
             ],
             [
                 "status_on_hit",
@@ -70409,7 +70982,7 @@
     {
         "nid": "Charred_Axe",
         "name": "Charred Axe",
-        "desc": "An old axe that sends sparks in an area.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)",
+        "desc": "An old axe that sends sparks in an area.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)\n<pink>Misc:</>STR + CON (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON'))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -70489,13 +71062,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_WEAK"
             ]
         ]
     },
     {
         "nid": "Boom_Axe_Garcia_Blast",
         "name": "Boom Axe (<icon>Blast</>)",
-        "desc": "The Charred Axe restored to half its explosive power. Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain.",
+        "desc": "The Charred Axe restored to half its explosive power. Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain, STR + CON * 1.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             3,
@@ -70615,13 +71192,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_MID"
             ]
         ]
     },
     {
         "nid": "Boom_Axe_Garcia",
         "name": "Boom Axe",
-        "desc": "The Charred Axe restored to half its explosive power.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3).",
+        "desc": "The Charred Axe restored to half its explosive power.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3).\n<pink>Misc:</>STR + CON * 1.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             3,
@@ -70721,13 +71302,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_MID"
             ]
         ]
     },
     {
         "nid": "Burst_Axe_Blast",
         "name": "Burst Axe (<icon>Blast</>)",
-        "desc": "The Charred Axe restored to its full explosive power...Possibly... Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain.",
+        "desc": "The Charred Axe restored to its full explosive power...Possibly... Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain, STR + CON * 2.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -70847,13 +71432,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Burst_Axe",
         "name": "Burst Axe",
-        "desc": "The Charred Axe restored to its full explosive power...Possibly...\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4).",
+        "desc": "The Charred Axe restored to its full explosive power...Possibly...\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4).\n<pink>Misc:</>STR + CON * 2.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -70952,13 +71541,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Doom_Axe_Blast",
         "name": "Doom Axe (<icon>Blast</>)",
-        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5)\n<pink>Misc:</>(AOE Blast:5), cannot DS, no WEXP gain.",
+        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5)\n<pink>Misc:</>(AOE Blast:5), cannot DS, no WEXP gain, STR + CON * 2.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -71078,13 +71671,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Doom_Axe",
         "name": "Doom Axe",
-        "desc": "The feared Axe of the mighty general Garcia.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5).",
+        "desc": "The feared Axe of the mighty general Garcia.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5).\n<pink>Misc:</>STR + CON * 2.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -71184,13 +71781,17 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     },
     {
         "nid": "Minds_Edge_Garcia",
         "name": "Mind's Edge",
-        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             7,
@@ -71295,13 +71896,17 @@
                     "Shadow_Blight",
                     "Cursed_2"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_WEAK"
             ]
         ]
     },
     {
         "nid": "Degradation",
         "name": "Degradation",
-        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy.",
+        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy, STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             7,
@@ -71407,13 +72012,17 @@
                     "Shadow_Blight",
                     "Cursed_5"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_MID"
             ]
         ]
     },
     {
         "nid": "Hysteria_Garcia",
         "name": "Hysteria",
-        "desc": "A deadly, heavy blade warped by Garcia's past.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Confuse</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A deadly, heavy blade warped by Garcia's past.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Confuse</><icon>Shadowblight</>, Curse (15)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             6,
@@ -71520,13 +72129,17 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_MID"
             ]
         ]
     },
     {
         "nid": "Rage_Storm",
         "name": "Rage Storm",
-        "desc": "A heavy blade sullied by blood.\n<green>Skills:</>Blade Sweep, Heavy Force, Enrage\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Confuse</><icon>Shadowblight</>, Curse (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A heavy blade sullied by blood.\n<green>Skills:</>Blade Sweep, Heavy Force, Enrage\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Confuse</><icon>Shadowblight</>, Curse (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             6,
@@ -71629,6 +72242,10 @@
             [
                 "shove",
                 1
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_STRONG"
             ]
         ]
     },
@@ -71997,7 +72614,7 @@
     {
         "nid": "Neimis_Arsenal",
         "name": "Neimi's Arsenal",
-        "desc": "Neimi's personal weapons.\n<red>Prof:</><icon>Bow</><icon>Sword</><icon>Anima</>",
+        "desc": "Neimi's personal weapons.\n<red>Prof:</><icon>Bow</><icon>Sword</><icon>Lance</><icon>Light</>",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -72029,7 +72646,7 @@
     {
         "nid": "Manawood_Bow",
         "name": "Manawood Bow",
-        "desc": "A bow Neimi crafted herself from a mysterious tree.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A bow Neimi crafted herself from a mysterious tree.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -72050,7 +72667,7 @@
             ],
             [
                 "damage",
-                8
+                11
             ],
             [
                 "hit",
@@ -72110,7 +72727,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MID"
+                "MAG_SKL_WEAK"
             ],
             [
                 "wexp",
@@ -72121,7 +72738,7 @@
     {
         "nid": "Firetip_Bow",
         "name": "Firetip Bow",
-        "desc": "Neimi's bow that lights the tips of arrows with fire magic.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2) + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "Neimi's bow that lights the tips of arrows with fire magic.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             6,
@@ -72142,7 +72759,7 @@
             ],
             [
                 "damage",
-                11
+                14
             ],
             [
                 "hit",
@@ -72203,7 +72820,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_WEAK"
+                "MAG_SKL_MID"
             ],
             [
                 "statuses_on_hit",
@@ -72222,7 +72839,7 @@
     {
         "nid": "Emberwood_Bow",
         "name": "Emberwood Bow",
-        "desc": "Neimi's special bow that flares to life with magic.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2) + (unit.get_stat('MAG')))}</>).",
+        "desc": "Neimi's special bow that flares to life with magic.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             3,
@@ -72243,7 +72860,7 @@
             ],
             [
                 "damage",
-                14
+                17
             ],
             [
                 "hit",
@@ -72304,7 +72921,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_MID"
+                "MAG_SKL_STRONG"
             ],
             [
                 "statuses_on_hit",
@@ -72323,7 +72940,7 @@
     {
         "nid": "Zethlas_Legacy",
         "name": "Zethla's Legacy",
-        "desc": "The power of Zethla's teachings bursts through wood and string.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('MAG'))}</>).",
+        "desc": "The power of Zethla's teachings bursts through wood and string.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             2,
@@ -72348,7 +72965,7 @@
             ],
             [
                 "damage",
-                15
+                20
             ],
             [
                 "weapon_type",
@@ -72406,7 +73023,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "MAG_SKL_STRONG"
             ],
             [
                 "statuses_on_hit",
@@ -72425,7 +73042,7 @@
     {
         "nid": "Sylvania",
         "name": "Sylvania",
-        "desc": "A bow for Neimi made by forest faires.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Infantry</><icon>Dragon</><icon>Horse</>\n<pink>Misc:</>STR + SKL + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('MAG'))}</>).",
+        "desc": "A bow for Neimi made by forest faires.\n<green>Skills:</>Hawkeye <orange>Element:</><icon>Fire</><icon>Wind</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Infantry</><icon>Dragon</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL'))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             8,
@@ -72442,7 +73059,7 @@
             ],
             [
                 "damage",
-                20
+                25
             ],
             [
                 "hit",
@@ -72483,7 +73100,8 @@
                         "Flying",
                         "Infantry",
                         "Dragon",
-                        "Horse"
+                        "Horse",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -72506,7 +73124,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "MAG_SKL_STRONG"
             ],
             [
                 "level_exp",
@@ -72827,7 +73445,7 @@
     {
         "nid": "Heat_Ray",
         "name": "Heat Ray",
-        "desc": "A magical tome that shoots an intense ray of energy.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), Uncounterable, Splash DMG (20%).",
+        "desc": "A magical tome that shoots an intense ray of energy.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</> <pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), Uncounterable, Splash DMG (20%).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -72872,7 +73490,7 @@
             ],
             [
                 "weapon_type",
-                "Anima"
+                "Light"
             ],
             [
                 "weapon_rank",
@@ -72912,7 +73530,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Horse"
+                        "Horse",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -72931,7 +73550,8 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Light"
                 ]
             ],
             [
@@ -72945,7 +73565,7 @@
     {
         "nid": "Wyrms_Breath",
         "name": "Wyrm's Breath",
-        "desc": "The breath of a fire dragon leaves scars.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), Uncounterable, Splash DMG (30%).",
+        "desc": "The fiery spell that cleanse all impurities.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</> <pink>Misc:</>MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), Uncounterable, Splash DMG (30%).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -72990,7 +73610,7 @@
             ],
             [
                 "weapon_type",
-                "Anima"
+                "Light"
             ],
             [
                 "weapon_rank",
@@ -73030,7 +73650,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Horse"
+                        "Horse",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -73049,7 +73670,8 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Light"
                 ]
             ],
             [
@@ -73063,7 +73685,7 @@
     {
         "nid": "Disintegrator",
         "name": "Disintegrator",
-        "desc": "A massive fire beam that combusts enemies into ash.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), Uncounterable, Splash DMG (50%).",
+        "desc": "A massive fire beam that combusts enemies into ash.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</> <pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), Uncounterable, Splash DMG (50%).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             6,
@@ -73108,7 +73730,7 @@
             ],
             [
                 "weapon_type",
-                "Anima"
+                "Light"
             ],
             [
                 "weapon_rank",
@@ -73148,7 +73770,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Horse"
+                        "Horse",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -73167,7 +73790,8 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Light"
                 ]
             ],
             [
@@ -73175,6 +73799,347 @@
                 [
                     "Seared_AOE_Splash"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Spirit_Naginata",
+        "name": "Spirit Naginata",
+        "desc": "A naginata infused with a holy wind spirit.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Light</><icon>Wind</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//3))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Shadow",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_E"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_WEAK"
+            ]
+        ]
+    },
+    {
+        "nid": "Sacred_Naginata",
+        "name": "Sacred Naginata",
+        "desc": "The spirit within this naginata grows.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Light</><icon>Wind</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                12
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Shadow",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_C"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_MID"
+            ]
+        ]
+    },
+    {
+        "nid": "Amaterasu",
+        "name": "Amaterasu",
+        "desc": "A holy diety that burns with fire.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                19
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Shadow",
+                        "Horse",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind",
+                    "Fire"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_STRONG"
             ]
         ]
     },
@@ -81225,10 +82190,6 @@
             [
                 "hit",
                 130
-            ],
-            [
-                "weapon_type",
-                "Anima"
             ],
             [
                 "magic",
@@ -106309,7 +107270,7 @@
     {
         "nid": "Lone_Howl",
         "name": "Lone Howl",
-        "desc": "The howl that frightens enemies.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled\n<red>Effective:</><icon>Shadowblight</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1).",
+        "desc": "The howl that frightens enemies.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1).",
         "icon_nid": "New Monsters",
         "icon_index": [
             4,
@@ -106409,7 +107370,8 @@
                 {
                     "effective_tags": [
                         "Flying",
-                        "Shadow"
+                        "Shadow",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -106437,7 +107399,7 @@
     {
         "nid": "Pack_Howl",
         "name": "Pack Howl",
-        "desc": "A howl empowered by allies.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled\n<red>Effective:</><icon>Shadowblight</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), +2 MT, +5 Hit for each ally deployed.",
+        "desc": "A howl empowered by allies.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), +2 MT, +5 Hit for each ally deployed.",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -106543,7 +107505,8 @@
                 {
                     "effective_tags": [
                         "Flying",
-                        "Shadow"
+                        "Shadow",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -106571,7 +107534,7 @@
     {
         "nid": "Squad_Howl",
         "name": "Squad Howl",
-        "desc": "The pack that stays together, wins together.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled+\n<red>Effective:</><icon>Shadowblight</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), +4 MT, +10 Hit for each ally deployed.",
+        "desc": "The pack that stays together, wins together.\n<orange>Element:</><icon>Light</><icon>Wind</>\n<violet>Inflicts:</>Crippled+\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), +4 MT, +10 Hit for each ally deployed.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -106677,7 +107640,8 @@
                 {
                     "effective_tags": [
                         "Flying",
-                        "Shadow"
+                        "Shadow",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -138436,7 +139400,7 @@
     {
         "nid": "Diana_Bow_E",
         "name": "Scout's bow",
-        "desc": "Bow given to army scouts, probably stolen.\n<green>Skills:</>Bounty\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
+        "desc": "Bow given to army scouts, probably stolen.\n<green>Skills:</>Mug\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -138499,7 +139463,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -138527,10 +139491,6 @@
                 null
             ],
             [
-                "status_on_equip",
-                "Bounty"
-            ],
-            [
                 "eval_available",
                 "u(\"Diana\").wexp['Bow'] < 120"
             ],
@@ -138552,14 +139512,18 @@
             ],
             [
                 "self_status_on_hit",
-                "Rock_AOE_Splash"
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     },
     {
         "nid": "Diana_Bow_C",
         "name": "Deep Cover",
-        "desc": "Bow given to army scouts, probably stolen. With reinforced limbs for stronger draw.\n<green>Skills:</>Bounty\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
+        "desc": "Bow given to army scouts, probably stolen. With reinforced limbs for stronger draw.\n<green>Skills:</>Mug\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/3  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), targets the weaker of foe's DEF or RES.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -138622,7 +139586,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -138672,13 +139636,17 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     },
     {
         "nid": "Diana_Bow_A",
         "name": "Exquisite Bow",
-        "desc": "Gold coated bow that used to belong to a noble.\n<green>Skills:</>Bounty\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/2  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), targets the weaker of foe's DEF or RES, Brave.",
+        "desc": "Gold coated bow that used to belong to a noble.\n<green>Skills:</>Mug\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD/2  (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), targets the weaker of foe's DEF or RES, Brave.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             4,
@@ -138741,7 +139709,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -138795,13 +139763,17 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     },
     {
         "nid": "Diana_Bow_SS",
         "name": "Remodeled Bow",
-        "desc": "Scraping off most gold results in a stronger weapon, even if it looks this bad.\n<green>Skills:</>Bounty\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
+        "desc": "Scraping off most gold results in a stronger weapon, even if it looks this bad.\n<green>Skills:</>Mug\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             9,
@@ -138865,7 +139837,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Poaching",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -138919,13 +139891,17 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     },
     {
         "nid": "Diana_Bow_X",
         "name": "Royal Heritage",
-        "desc": "Taken from the treasury of a nation that no longer exists.\n<green>Skills:</>Bounty\n<red>Effective:</><icon>Flying</><icon>Shadowblight</>\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD + LCK (<red>{e:(unit.get_stat('SPD') + unit.get_stat('SKL') + unit.get_stat('LCK')))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
+        "desc": "Taken from the treasury of a nation that no longer exists.\n<green>Skills:</>Mug\n<red>Effective:</><icon>Flying</><icon>Shadowblight</>\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD + LCK (<red>{e:(unit.get_stat('SPD') + unit.get_stat('SKL') + unit.get_stat('LCK')))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             0,
@@ -138989,7 +139965,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Poaching",
-                    "Bounty_Item"
+                    "Rob"
                 ]
             ],
             [
@@ -139044,6 +140020,10 @@
             [
                 "self_status_on_hit",
                 "Rock_AOE_Splash"
+            ],
+            [
+                "event_on_hit",
+                "Global Rob_Diana_bow"
             ]
         ]
     },
@@ -140440,7 +141420,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "SPD_SKL_MID"
+                "MAG_MOV_WEAK_ALT"
             ],
             [
                 "multi_status_on_equip",
@@ -158749,7 +159729,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "SPD_STR_STRONG"
+                "STR_SPD_STRONG"
             ],
             [
                 "wexp",
@@ -158868,7 +159848,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SPD_SKL"
+                "STR_SPD_SKL_STRONG"
             ],
             [
                 "wexp",
@@ -159372,7 +160352,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SPD_SKL"
+                "STR_SPD_SKL_STRONG"
             ],
             [
                 "wexp",
@@ -166726,6 +167706,22 @@
         ]
     },
     {
+        "nid": "Flinch_AOE",
+        "name": "Flinch AOE",
+        "desc": "Flinches enemies in an area.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "self_status_on_hit",
+                "Savage_Flinch"
+            ]
+        ]
+    },
+    {
         "nid": "Omni_Status",
         "name": "Omni Status",
         "desc": "Give all Elemental Statuses and Elemental Effectiveness.",
@@ -168929,7 +169925,7 @@
     {
         "nid": "Trainee_Seed_DG",
         "name": "Trainee Seed",
-        "desc": "Levels up a T0 unit and slightly raises weapon rank.\nWill promote a trainee if they are level 10.\nItem submitted by Saragl728.",
+        "desc": "Levels up a T0 unit and slightly raises weapon rank.\nWill promote a trainee if they are level 10. Allows use of BXP if not promoted.\nItem submitted by Saragl728.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             40,
@@ -170634,6 +171630,31 @@
         ]
     },
     {
+        "nid": "The_fools_Ring_DG",
+        "name": "The Fool's Ring",
+        "desc": "It's users wanders trough life without a care about safety, only focusing on the way foward.\n-99%HP and 99%HP Growth, the user gains vantage, desperation; Astra+ and Absolute counter.\ncost:10000\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            11,
+            10
+        ],
+        "components": [
+            [
+                "value",
+                10000
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "Astra_Plus_Art",
+                    "Fool_Debuff",
+                    "VantagenDesperation",
+                    "Absolute_counter"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Fell_Arrow_item",
         "name": "Fell Arrow item",
         "desc": "",
@@ -170803,6 +171824,82 @@
                 [
                     "Horse"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "ADV_vs_BOW",
+        "name": "ADV vs BOW",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon_triangle_override",
+                "VS_BOW"
+            ]
+        ]
+    },
+    {
+        "nid": "Sky_Piercing_Arrow_item",
+        "name": "Sky Piercing Arrow item",
+        "desc": "<red>CA:</>A powerful 7 tile Line Attack, cannot Miss or double, Applies flinch on hit, Bows only. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "line_aoe",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "status_on_hit",
+                "Flinch"
+            ],
+            [
+                "hit",
+                999
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Hunt_the_Wicked_Hunt_the_Beast_Item",
+        "name": "Hunt the Wicked Hunt the Beast Item",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 4.0,
+                    "effective_bonus_damage": 100,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

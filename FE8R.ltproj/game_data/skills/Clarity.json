@@ -2,13 +2,17 @@
     {
         "nid": "Clarity",
         "name": "Clarity",
-        "desc": "Deal full damage during dual strike, paired partner gains +LCK to avoid",
+        "desc": "Unit deals full damage during Dual Strikes.\nIf unit is paired up, partner adds their own LCK to Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
             44
         ],
         "components": [
+            [
+                "class_skill",
+                null
+            ],
             [
                 "has_tags",
                 [
@@ -18,10 +22,6 @@
             [
                 "pairup_bonus",
                 "Clarity_Pair"
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     }

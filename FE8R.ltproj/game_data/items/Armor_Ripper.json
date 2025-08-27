@@ -2,7 +2,7 @@
     {
         "nid": "Armor_Ripper",
         "name": "Armor Ripper",
-        "desc": "A unique heavy blade that rips off enemies' armor.\n<green>Skills:</>Blade Sweep <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy.",
+        "desc": "A unique heavy blade that rips off enemies' armor.\n<green>Skills:</>Blade Sweep, Provoke <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -73,7 +73,9 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Sweep",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver"
                 ]
             ],
             [
@@ -101,6 +103,10 @@
                     "Breached_5",
                     "Rock_Punctures"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_MID"
             ]
         ]
     }

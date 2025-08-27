@@ -367,6 +367,60 @@
         "roam_ai": false
     },
     {
+        "nid": "Defend_Short",
+        "behaviours": [
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Tag",
+                    "AIProvoke"
+                ],
+                "view_range": 3,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Team",
+                    "enemy2"
+                ],
+                "view_range": 3,
+                "invert_targeting": true,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Position",
+                "target_spec": "Starting",
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": "unit.get_hp() <= unit.get_max_hp() * 0.75"
+            },
+            {
+                "action": "Support",
+                "target": "Ally",
+                "target_spec": null,
+                "view_range": -1,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": "unit.get_hp() <= unit.get_max_hp() * 0.50"
+            }
+        ],
+        "priority": 20,
+        "offense_bias": 2.0,
+        "roam_ai": false
+    },
+    {
         "nid": "Defend_Combo",
         "behaviours": [
             {
@@ -385,8 +439,49 @@
             {
                 "action": "Attack",
                 "target": "Enemy",
-                "target_spec": "Starting",
+                "target_spec": null,
                 "view_range": -2,
+                "invert_targeting": true,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Move_to",
+                "target": "Position",
+                "target_spec": "Starting",
+                "view_range": -4,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            }
+        ],
+        "priority": 10,
+        "offense_bias": 2.0,
+        "roam_ai": false
+    },
+    {
+        "nid": "Defend_Combo_Short",
+        "behaviours": [
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Tag",
+                    "AIProvoke"
+                ],
+                "view_range": 3,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": null,
+                "view_range": 3,
                 "invert_targeting": true,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -1128,7 +1223,7 @@
         "nid": "AttackCiv",
         "behaviours": [
             {
-                "action": "Move_to",
+                "action": "Attack",
                 "target": "Enemy",
                 "target_spec": [
                     "Class",
@@ -1145,7 +1240,7 @@
                 "target": "Enemy",
                 "target_spec": [
                     "Class",
-                    "Citizen_Child"
+                    "Citizen_F"
                 ],
                 "view_range": -4,
                 "invert_targeting": false,
@@ -1167,11 +1262,11 @@
                 "condition": ""
             },
             {
-                "action": "Attack",
+                "action": "Move_to",
                 "target": "Enemy",
                 "target_spec": [
                     "Class",
-                    "Citizen_F"
+                    "Citizen_Child"
                 ],
                 "view_range": -4,
                 "invert_targeting": false,

@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Raging_Storm",
+        "name": "Raging Strom",
+        "desc": "An axe that brings a storm to the field.\n<green>Skills:</>Power Chop (C) <orange>Element:</><icon>Water</><icon>Wind</>\n <violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            4,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                17
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Franz"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Water",
+                    "Wind"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_MID"
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
+            ]
+        ]
+    }
+]

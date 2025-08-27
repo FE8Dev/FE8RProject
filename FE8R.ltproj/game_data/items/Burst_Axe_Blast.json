@@ -2,7 +2,7 @@
     {
         "nid": "Burst_Axe_Blast",
         "name": "Burst Axe (<icon>Blast</>)",
-        "desc": "The Charred Axe restored to its full explosive power...Possibly... Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain.",
+        "desc": "The Charred Axe restored to its full explosive power...Possibly... Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain, STR + CON * 2.5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -122,6 +122,10 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     }

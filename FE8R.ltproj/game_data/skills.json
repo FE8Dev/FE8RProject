@@ -3109,11 +3109,12 @@
         ],
         "components": [
             [
-                "savage_status",
-                {
-                    "status": "Flinch",
-                    "range": 2
-                }
+                "item_override",
+                "Flinch_AOE"
+            ],
+            [
+                "give_status_after_hit",
+                "Stun"
             ],
             [
                 "allowed_weapons",
@@ -3765,6 +3766,112 @@
                 {
                     "status": "Drench_Debuff",
                     "range": 3
+                }
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Water_AOE4_Splash",
+        "name": "Water AOE4 Splash",
+        "desc": "Gives Water weapons 4 AOE debuff splash.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Drench_Debuff",
+                    "range": 4
+                }
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Water_AOE5_Splash",
+        "name": "Water AOE5 Splash",
+        "desc": "Gives Water weapons 5 AOE debuff splash.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Drench_Debuff",
+                    "range": 5
                 }
             ],
             [
@@ -4495,9 +4602,13 @@
                 [
                     [
                         "SPD",
-                        0.85
+                        0.5
                     ]
                 ]
+            ],
+            [
+                "damage_multiplier",
+                1.5
             ]
         ]
     },
@@ -6351,6 +6462,28 @@
             [
                 "gain_on_strike",
                 "Shadowblight_AOE_Splash"
+            ]
+        ]
+    },
+    {
+        "nid": "Dagger_hide",
+        "name": "Dagger hide",
+        "desc": "allows the user to use daggers",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -11126,7 +11259,7 @@
     {
         "nid": "Elegant_Form",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each attack dodged for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -11146,7 +11279,7 @@
     {
         "nid": "Elegant_Form_Buff",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each stack.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each stack.\nMax 5 stacks.\nLast 2 turns",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -11163,7 +11296,7 @@
             ],
             [
                 "time",
-                1
+                2
             ]
         ]
     },
@@ -12335,7 +12468,7 @@
     {
         "nid": "Death_Blow",
         "name": "Death Blow",
-        "desc": "Unit deals additional damage equal to the unit's STR/4\nwhen unit initiates attack.",
+        "desc": "Unit deals additional damage equal to the unit's STR/4 (<red>{e: (unit.get_stat('STR')//4)}</>).\nwhen unit initiates attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -12580,7 +12713,7 @@
     {
         "nid": "Lucky_Blow",
         "name": "Lucky Blow",
-        "desc": "Unit deals additional damage equal to the unit's LCK/3\nwhen unit initiates attack.",
+        "desc": "Unit deals additional damage equal to the unit's LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>).\nwhen unit initiates attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -13028,7 +13161,7 @@
     {
         "nid": "Blinding_Magic_Proc",
         "name": "Blinding Magic",
-        "desc": "When using any magic, enemies lose -60 Hit when hit for 2 turns.",
+        "desc": "Magical weapons inflict Reduced Vision on enemies for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -13041,7 +13174,11 @@
             ],
             [
                 "condition",
-                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')) and (unit2.team == 'enemy' or unit2.team == 'enemy2') "
+                "item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",
@@ -30307,7 +30444,7 @@
     {
         "nid": "Supportive_Recharge",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV and EXP gain by 75% for 1 turn.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% and reduce EXP gain by 95% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -30353,7 +30490,7 @@
             ],
             [
                 "exp_multiplier",
-                0.25
+                0.05
             ],
             [
                 "time",
@@ -31980,6 +32117,165 @@
                 "Ghostly_Alliance"
             ]
         ]
+    },
+    {
+        "nid": "Clever_Combatant",
+        "name": "Clever Combatant",
+        "desc": "If unit's Resistance is higher than enemy's Resistance, increases damage given and decreases damage received based on the difference between unit and enemy's Resistance.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            5
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('RES') > target.get_stat('RES')"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_stat('RES') - target.get_stat('RES'))/100"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1-(unit.get_stat('RES') - target.get_stat('RES'))/100"
+            ]
+        ]
+    },
+    {
+        "nid": "Heavier_Hit",
+        "name": "Heavier Hit",
+        "desc": "If unit's weapon is heavier than enemy's weapon, raises Hit, Crit chance and damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_weapon().weight.value > target.get_weapon().weight.value"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "10"
+            ],
+            [
+                "dynamic_accuracy",
+                "20"
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(unit.get_weapon().weight.value - target.get_weapon().weight.value)/100"
+            ]
+        ]
+    },
+    {
+        "nid": "Conquest",
+        "name": "Conquest",
+        "desc": "Cancels Armor/Horse weakness.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            23
+        ],
+        "components": [
+            [
+                "negate_tags",
+                [
+                    "Horse",
+                    "Armor"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "True_Hit",
+        "name": "True Hit",
+        "desc": "Attacks that miss do 1/2 damage.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_weapon()"
+            ],
+            [
+                "item_override",
+                "Seeking_Darkness"
+            ]
+        ]
+    },
+    {
+        "nid": "Rage_item",
+        "name": "Rage",
+        "desc": "+3 in most stats, but take 6 damage after every combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            43
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        3
+                    ],
+                    [
+                        "STR",
+                        3
+                    ],
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "SKL",
+                        3
+                    ],
+                    [
+                        "SPD",
+                        3
+                    ],
+                    [
+                        "LCK",
+                        3
+                    ],
+                    [
+                        "DEF",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "recoil",
+                6
+            ]
+        ]
+    },
+    {
+        "nid": "Rob",
+        "name": "Rob",
+        "desc": "Gains money on hit equal to unit's base LCK",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            9
+        ],
+        "components": []
     },
     {
         "nid": "Poisoned",
@@ -34274,6 +34570,59 @@
         ]
     },
     {
+        "nid": "Savage_Flinch",
+        "name": "Savage Flinch",
+        "desc": "Flinches enemies in an area. ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            42
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Flinch",
+                    "range": 2
+                }
+            ],
+            [
+                "lost_on_end_next_combat",
+                [
+                    [
+                        "NumberOfCombats (X)",
+                        "2",
+                        "Number of combats before expiration"
+                    ],
+                    [
+                        "LostOnSelf (T/F)",
+                        "T",
+                        "Lost after self combat (e.g. vulnerary)"
+                    ],
+                    [
+                        "LostOnAlly (T/F)",
+                        "T",
+                        "Lost after combat with an ally"
+                    ],
+                    [
+                        "LostOnEnemy (T/F)",
+                        "T",
+                        "Lost after combat with an enemy"
+                    ],
+                    [
+                        "LostOnSplash (T/F)",
+                        "T",
+                        "Lost after combat if using an AOE item"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Flying_hide",
         "name": "Flying hide",
         "desc": "Can fly.",
@@ -36329,6 +36678,906 @@
             [
                 "resist_multiplier",
                 0.25
+            ]
+        ]
+    },
+    {
+        "nid": "Old_Faith",
+        "name": "Old Faith",
+        "desc": "+5 Crit and damage increases by LCK/3 when using Bows.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('LCK') // 3"
+            ]
+        ]
+    },
+    {
+        "nid": "Shimmering_Barrier",
+        "name": "Shimmering Barrier",
+        "desc": "Reduce damage this unit takes by LCK (<red>{e: (unit.get_stat('LCK'))}</>) when attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('LCK')"
+            ]
+        ]
+    },
+    {
+        "nid": "Outshine",
+        "name": "Outshine",
+        "desc": "x3 damage if enemy's LCK <= unit's LCK.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('LCK') >= target.get_stat('LCK')"
+            ],
+            [
+                "damage_multiplier",
+                3.0
+            ]
+        ]
+    },
+    {
+        "nid": "Prophecy",
+        "name": "Prophecy",
+        "desc": "Light magic becomes effective damage against Magical units.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Light'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "item_override",
+                "Anti_Magic_Rounds"
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Arrow",
+        "name": "Fell Arrow",
+        "desc": "Bows deal x5 effective damage vs Fliers and enemies equipped with Light weapons.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "item_override",
+                "Fell_Arrow_item"
+            ]
+        ]
+    },
+    {
+        "nid": "Clarity",
+        "name": "Clarity",
+        "desc": "Unit deals full damage during Dual Strikes.\nIf unit is paired up, partner adds their own LCK to Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            44
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "has_tags",
+                [
+                    "Full_Assist_Damage"
+                ]
+            ],
+            [
+                "pairup_bonus",
+                "Clarity_Pair"
+            ]
+        ]
+    },
+    {
+        "nid": "Clarity_Pair",
+        "name": "Clarity",
+        "desc": "Unit deals full damage during Dual Strikes.\nIf unit is paired up, partner adds their own LCK to Avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            44
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Full_Assist_Damage"
+                ]
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('LCK')"
+            ]
+        ]
+    },
+    {
+        "nid": "Thunderhoof_Resonance",
+        "name": "Thunderhoof Resonance",
+        "desc": "If unit's MOV >= Enemy MOV, +1 Bonus attack and after combat deals 50 damage in an AOE 3 around the user",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "unit.get_stat('MOV') >= target.get_stat('MOV')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "post_combat_splash_aoe",
+                3
+            ],
+            [
+                "post_combat_splash",
+                50
+            ]
+        ]
+    },
+    {
+        "nid": "Unrelenting_Horsepower",
+        "name": "Unrelenting Horsepower",
+        "desc": "On kill, unit gains +1 MOV for the rest of the chapter.\nMax 5 stacks.\nAdds 3 * MOV to damage, 2 * MOV to Crit and MOV to Attack speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            43
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "High_Horsepower"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MOV')*3"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('MOV')*2"
+            ],
+            [
+                "dynamic_attack_speed",
+                "unit.get_stat('MOV')"
+            ]
+        ]
+    },
+    {
+        "nid": "High_Horsepower",
+        "name": "High Horsepower",
+        "desc": "+1 MOV per stack, lasts the whole chapter. Max 5 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            43
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        1
+                    ]
+                ]
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Bodkin_Arsenal",
+        "name": "Bodkin Arsenal",
+        "desc": "Bows ignore 50% of the target's DEF or RES, and -30 DEF to enemy after combat on hit for 2 turns. (Does not stack).\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Bodkin_Wound"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "(unit2.get_stat('RES') // 2) if item_funcs.is_magic(unit, unit.get_weapon()) else (unit2.get_stat('DEF') // 2)"
+            ]
+        ]
+    },
+    {
+        "nid": "Bodkin_Wound",
+        "name": "Bodkin Wound",
+        "desc": "-30 DEF for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "DEF",
+                        -30
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Stalwart_Marksmanship_main",
+        "name": "Stalwart Marksmanship",
+        "desc": "Gain Weapon Advantage against Bows. While Unit has weapon advantage, x2 damage dealt, otherwise -50% Damage taken.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Stalwart_Marksmanship_adv",
+                    "Stalwart_Marksmanship_nadv",
+                    "Stalwart_Marksmanship_vsbow"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stalwart_Marksmanship_vsbow",
+        "name": "Stalwart Marksmanship",
+        "desc": "Gain Weapon Advantage against Bows. While Unit has weapon advantage, x2 damage dealt, otherwise -50% Damage taken.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.get_weapon() and item_system.weapon_type(unit2, item) == 'Bow'"
+            ],
+            [
+                "item_override",
+                "ADV_vs_BOW"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Stalwart_Marksmanship_adv",
+        "name": "Stalwart Marksmanship adv",
+        "desc": "Gain Weapon Advantage against Bows. While Unit has weapon advantage, x2 damage dealt, otherwise -50% Damage taken.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "(combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0)"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Stalwart_Marksmanship_nadv",
+        "name": "Stalwart Marksmanship",
+        "desc": "Gain Weapon Advantage against Bows. While Unit has weapon advantage, x2 damage dealt, otherwise -50% Damage taken.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "not((combat_calcs.compute_advantage(unit, target, item, target.get_weapon()) and  combat_calcs.compute_advantage(unit, target, item, target.get_weapon()).accuracy > 0))"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ]
+        ]
+    },
+    {
+        "nid": "Natures_Grace_main",
+        "name": "Nature's Grace",
+        "desc": "Unit and all allies within 3 tiles gain +3 MOV and +30% SPD. All enemies within 3 tiles lose -3 MOV and -30% SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Natures_Grace_player",
+                    "Natures_Grace_enemy"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Natures_Grace_player",
+        "name": "Nature's Grace",
+        "desc": "Unit and all allies within 3 tiles gain +3 MOV and +30% SPD. All enemies within 3 tiles lose -3 MOV and -30% SPD.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "aura",
+                "Natures_Grace_pchild"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Natures_Grace_pchild",
+        "name": "Nature's Grace",
+        "desc": "+3 MOV and +30% SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MOV",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "SPD",
+                        1.3
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Natures_Grace_enemy",
+        "name": "Nature's Grace",
+        "desc": "Unit and all allies within 3 tiles gain +3 MOV and +30% SPD. All enemies within 3 tiles lose -3 MOV and -30% SPD.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "aura",
+                "Natures_Grace_echild"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Natures_Grace_echild",
+        "name": "Nature's Grace",
+        "desc": "-3 MOV and -30% SPD.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            35
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "SPD",
+                        "0.7"
+                    ]
+                ]
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "MOV",
+                        "-3"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Gods",
+        "name": "Blessing of the Gods",
+        "desc": "After attacking, all allies within 4 tiles of the target are healed for 50% of the damage dealt, and all enemies take damage equal to 25% of said damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            36
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Blessing_of_the_Gods_A",
+                    "Blessing_of_the_Gods_E"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Gods_A",
+        "name": "Blessing of the Gods",
+        "desc": "After attacking, all allies within 4 tiles of the target are healed for 50% of their max hp, and all enemies take damage equal to 25% of their max hp.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lifelink_aoe",
+                {
+                    "percent": -0.5,
+                    "range": 4,
+                    "target": "ally",
+                    "include_target": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Blessing_of_the_Gods_E",
+        "name": "Blessing of the Gods",
+        "desc": "After attacking, all allies within 4 tiles of the target are healed for 50% of their max hp, and all enemies take damage equal to 25% of their max hp.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "lifelink_aoe",
+                {
+                    "percent": -1.25,
+                    "range": 4,
+                    "target": "ally",
+                    "include_target": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Storm_Casting",
+        "name": "Storm Casting",
+        "desc": "The First attack with a Tome each turn will refresh the user, with a -75% penalty to MAG and -25% Penalty to SKL and SPD (Lost on end of player phase).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "\"Storm_Casting_CD\" not in unit.skills"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark')"
+            ],
+            [
+                "event_after_initiated_combat",
+                "Global Storm Casting event"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Storm_Casting_CD",
+        "name": "Gathering Energy",
+        "desc": "-75% MAG and -25% SKL and SPD until endstep.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MAG",
+                        0.25
+                    ],
+                    [
+                        "SKL",
+                        0.75
+                    ],
+                    [
+                        "SPD",
+                        0.75
+                    ]
+                ]
+            ],
+            [
+                "lost_on_endstep",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sky_Piercing_Arrow_Art",
+        "name": "Sky Piercing Arrow",
+        "desc": "<red>CA:</>A powerful 7 tile Line Attack, cannot Miss or double, Applies flinch on hit, Bows only. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Sky_Piercing_Arrow_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Sky_Piercing_Arrow_Skill",
+        "name": "Sky Piercing Arrow",
+        "desc": "<red>CA:</>A powerful 7 tile Line Attack, cannot Miss or double, Applies flinch on hit, Bows only. <green>CD:3 Turns</>",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "item_override",
+                "Sky_Piercing_Arrow_item"
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Mastery_of_the_Plains",
+        "name": "Mastery of the Plains",
+        "desc": "On terrain without bonuses gain +1 range when using Bows and add SKL/3 and SPD/3 to damage. If using Swords add SKL/2 to AS, and launch all attacks before the enemy can counter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "multi_skill",
+                [
+                    "Mastery_of_the_Plains_bow",
+                    "Mastery_of_the_Plains_sword"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Mastery_of_the_Plains_bow",
+        "name": "Mastery of the Plains",
+        "desc": "+1 range when using Bows and add SKL/3 and SPD/3 to damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('SKL')//3 + unit.get_stat('SPD')//3 "
+            ]
+        ]
+    },
+    {
+        "nid": "Mastery_of_the_Plains_sword",
+        "name": "Mastery of the Plains",
+        "desc": "If using Swords add SKL/2 to AS, and launch all attacks before the enemy can counter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword')"
+            ],
+            [
+                "dynamic_attack_speed",
+                "unit.get_stat('SKL')//2"
+            ],
+            [
+                "dynamic_defense_speed",
+                "unit.get_stat('SKL')//2"
+            ],
+            [
+                "desperation",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Hunt_the_Wicked_Hunt_the_Beast",
+        "name": "Hunt the Wicked, Hunt the Beast",
+        "desc": "Bows and Swords gain 4x Effectiveness against Monsters. Add SPD to Crit and SKL/2 to Avoid when initiating.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('SPD') if mode == 'attack' else 0"
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('SKL')//2 if mode == 'attack' else 0"
+            ],
+            [
+                "multi_skill",
+                [
+                    "Hunt_the_Wicked_Hunt_the_Beast_Eff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Hunt_the_Wicked_Hunt_the_Beast_Eff",
+        "name": "Hunt the Wicked, Hunt the Beast",
+        "desc": "Bows and Swords gain 4x Effectiveness against Monsters. Add SPD to Crit and SKL/2 to Avoid when initiating.",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) in ('Sword', 'Bow')"
+            ],
+            [
+                "item_override",
+                "Hunt_the_Wicked_Hunt_the_Beast_Item"
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -45419,8 +46668,8 @@
     },
     {
         "nid": "Hunter_Mark",
-        "name": "Hunter Mark",
-        "desc": "Attacks inflict Marked to enemies on hit (-1 MOV, -5 SPD for 2 turns.)\nUnit gains +3 SKL and +15 Hit after combat for 2 turns.",
+        "name": "Hunter's Mark",
+        "desc": "Attacks inflict Marked to enemies on hit (-1 MOV, -5 SPD for 2 turns.)\nUnit gains +3 SKL and +15 Hit after combat for 2 turns.\nMax 5 stacks each.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -45453,7 +46702,7 @@
         "components": [
             [
                 "stack",
-                999
+                5
             ],
             [
                 "stat_change",
@@ -45484,6 +46733,10 @@
             14
         ],
         "components": [
+            [
+                "stack",
+                5
+            ],
             [
                 "stat_change",
                 [
@@ -46264,7 +47517,7 @@
     },
     {
         "nid": "Consecutive_Impact_Buff",
-        "name": " Consecutive Impact",
+        "name": "Consecutive Impact",
         "desc": "+5 damage and +10 Hit for each attack of this unit to hit an enemy in combat.\nLost on end combat",
         "icon_nid": "SkillIcons",
         "icon_index": [
@@ -51536,8 +52789,12 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "item_system.weapon_type(unit, item) == 'Bow'"
             ],
             [
                 "canto_plus",
@@ -51546,10 +52803,6 @@
             [
                 "combat_art",
                 "Hit_and_Run_Skill"
-            ],
-            [
-                "class_skill",
-                null
             ]
         ]
     },
@@ -51564,10 +52817,6 @@
         ],
         "components": [
             [
-                "eval_max_range",
-                "2"
-            ],
-            [
                 "hidden",
                 null
             ],
@@ -51578,6 +52827,10 @@
             [
                 "combat_condition",
                 "mode == 'defense'"
+            ],
+            [
+                "eval_max_range",
+                "2"
             ]
         ]
     },
@@ -51604,7 +52857,7 @@
     {
         "nid": "Hunters_Volley",
         "name": "Hunter's Volley",
-        "desc": "<red>CA:</>Uses Bows. Brave, +1 max range, +15 hit, +10 crit",
+        "desc": "<red>CA:</>Brave, +1 max range, +15 hit, +10 Crit. Bows Only. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -51629,7 +52882,7 @@
             ],
             [
                 "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Bow'"
+                "item_system.weapon_type(unit, item) == 'Bow'"
             ]
         ]
     },
@@ -52271,9 +53524,1187 @@
         ]
     },
     {
+        "nid": "Adaptative_Necessity",
+        "name": "Adaptative Necessity",
+        "desc": "Increases the number of attacks by 1 and damage by 100% and gains desperation,but reduces damage resistance by 50% and evasion by 75.This skill is a free action.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Adaptative_Necessity_Item"
+            ]
+        ]
+    },
+    {
+        "nid": "Adaptative_Necessity_Buff",
+        "name": "Adaptative Necessity",
+        "desc": "Increases the number of attacks by 1 and damage by 100% and gains desperation.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "desperation",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Adaptative_Necessity_Debuff",
+        "name": "Adaptative Necessity",
+        "desc": "Reduces damage resistance by 50% and evasion by 75.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            3
+        ],
+        "components": [
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "resist_multiplier",
+                1.5
+            ],
+            [
+                "avoid",
+                -75
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Pressure",
+        "name": "Dark Pressure",
+        "desc": "The user generates an aura with the effects of decreases de Hit; Evade and Crit Evade of the enemies in the range of 3 spaces in 30.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Dark_Pressure_Debuff"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "enemy"
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Pressure_Debuff",
+        "name": "Dark Pressure",
+        "desc": "Reduce the Hit; Evade and Crit Evade of the enemies in 30.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            1
+        ],
+        "components": [
+            [
+                "hit",
+                -30
+            ],
+            [
+                "avoid",
+                -30
+            ],
+            [
+                "crit_avoid",
+                -30
+            ]
+        ]
+    },
+    {
+        "nid": "Destruction_Power",
+        "name": "Destruction Power",
+        "desc": "If the attack misses,it deals 100% damage and takes recoil damage.Apply 50% splash damage to enemies within two spaces of the attack.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                ""
+            ],
+            [
+                "item_override",
+                "Destruction_Power"
+            ],
+            [
+                "lifelink",
+                -0.15
+            ]
+        ]
+    },
+    {
+        "nid": "Destruction_Power_2",
+        "name": "Destruction Power",
+        "desc": "Apply 50% splash damage to enemies within two spaces of the attack.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "savage_blow_fates_Fifty_Per",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Force",
+        "name": "Lightning Force",
+        "desc": "The user gains +5 at every stats except HP and MOV for 2 turns if kill a unit drenched, the stacks max is 4. The attacks of the user can be countered and double the damage vs. enemies drenched.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "gain_skill_after_kill",
+                "Lightning_Force_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Force_Buff",
+        "name": "Lightning Force",
+        "desc": "+5 at every stats except HP and MOV for 2 turns if kill a unit drenched, the stacks max is 4.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "stack",
+                4
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        5
+                    ],
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "SKL",
+                        5
+                    ],
+                    [
+                        "SPD",
+                        5
+                    ],
+                    [
+                        "LCK",
+                        5
+                    ],
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ],
+                    [
+                        "CON",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Lightning_Force_Strike",
+        "name": "Lightning Force",
+        "desc": "The attacks of the user can be countered and double the damage vs. enemies drenched.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            35
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "has_skill(target, 'Drench_Debuff')"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ],
+            [
+                "item_override",
+                "Sword_Destroyer"
+            ]
+        ]
+    },
+    {
+        "nid": "Ora_Ora_Ora",
+        "name": "Ora Ora Ora...",
+        "desc": "If the user SPD is >=  SPD of enemies unit gains +4 attacks additionals((+8 if doubling),every consecutive attack in the same combat gains +3 damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_multiattacks",
+                "4"
+            ],
+            [
+                "gain_on_strike",
+                "Ora_Ora_Ora_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Ora_Ora_Ora_Buff",
+        "name": "Ora Ora Ora...",
+        "desc": "+3 damage for each attack of this unit to hit an enemy in combat.\nLost on end combat",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            25
+        ],
+        "components": [
+            [
+                "stack",
+                99
+            ],
+            [
+                "dynamic_damage",
+                "3"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Paragon_Plus",
+        "name": "Paragon+",
+        "desc": "Triple EXP earned.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            9
+        ],
+        "components": [
+            [
+                "exp_multiplier",
+                3.0
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Phantom_Fists",
+        "name": "Phantom Fists",
+        "desc": "The user attacks ignore 50% of enemy defense a melee range, increased the STR;SPD and SKL in 10 if there are no allies within 3 squares of distance or less.Increases the attack range by 1.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "utils.calculate_distance(unit.position, target.position) == 1"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    },
+    {
+        "nid": "Phantom_Fists_1",
+        "name": "Phantom Fists",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit_funcs.check_focus(unit, 3) == 0\n"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Phantom_Fists_2",
+        "name": "Phantom Fists",
+        "desc": "The user attacks ignore 50% of enemy defense,a melee range increased the STR;SPD and SKL in 10 if there are no allies within 3 squares of distance or less.Increases the attack range by 1.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "modify_maximum_range",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change",
+        "name": "Physical Change",
+        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit,last for twice turns and the user gains 10% of lifesteal.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Physical_Change_Debuff"
+            ],
+            [
+                "lifelink",
+                0.1
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change_Debuff",
+        "name": "Physical Change",
+        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit.Lost in twice turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -2
+                    ],
+                    [
+                        "MAG",
+                        -2
+                    ],
+                    [
+                        "SKL",
+                        -2
+                    ],
+                    [
+                        "SPD",
+                        -2
+                    ],
+                    [
+                        "LCK",
+                        -2
+                    ],
+                    [
+                        "DEF",
+                        -2
+                    ],
+                    [
+                        "RES",
+                        -2
+                    ],
+                    [
+                        "CON",
+                        -2
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change_Debuff_Plus",
+        "name": "Physical Change",
+        "desc": "Reduce the stats of the enemies in 4 except HP and MOV for hit.Lost in twice turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -4
+                    ],
+                    [
+                        "MAG",
+                        -4
+                    ],
+                    [
+                        "SKL",
+                        -4
+                    ],
+                    [
+                        "SPD",
+                        -4
+                    ],
+                    [
+                        "LCK",
+                        -4
+                    ],
+                    [
+                        "DEF",
+                        -4
+                    ],
+                    [
+                        "RES",
+                        -4
+                    ],
+                    [
+                        "CON",
+                        -4
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change_Debuff_Plus_Plus",
+        "name": "Physical Change",
+        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit.Lost in twice turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -6
+                    ],
+                    [
+                        "MAG",
+                        -6
+                    ],
+                    [
+                        "SKL",
+                        -6
+                    ],
+                    [
+                        "SPD",
+                        -6
+                    ],
+                    [
+                        "LCK",
+                        -6
+                    ],
+                    [
+                        "DEF",
+                        -6
+                    ],
+                    [
+                        "RES",
+                        -6
+                    ],
+                    [
+                        "CON",
+                        -6
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change_Plus",
+        "name": "Physical Change+",
+        "desc": "Reduce the stats of the enemies in 4 except HP and MOV for hit,last for twice turns and the user gains 20% of lifesteal.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Physical_Change_Debuff_Plus"
+            ],
+            [
+                "lifelink",
+                0.2
+            ]
+        ]
+    },
+    {
+        "nid": "Physical_Change_Plus_Plus",
+        "name": "Physical Change++",
+        "desc": "Reduce the stats of the enemies in 6 except HP and MOV for hit,last for twice turns and the user gains 30% of lifesteal.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "give_status_after_hit",
+                "Physical_Change_Debuff_Plus_Plus"
+            ],
+            [
+                "lifelink",
+                0.3
+            ]
+        ]
+    },
+    {
+        "nid": "Protagonist_Luck",
+        "name": "Protagonist Luck",
+        "desc": "Once time for turn the user ignore all damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            1,
+            8
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "charges_per_turn",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Armor",
+        "name": "Tag Armor",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            3
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Armor"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Dragon",
+        "name": "Tag Dragon",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            4
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Dragon"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Flying",
+        "name": "Tag Flying",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            5
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Flying"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Infantry",
+        "name": "Tag Infantry",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Infantry"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Magic",
+        "name": "Tag Magic",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Magic"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Monster",
+        "name": "Tag Monster",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            6
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Monster"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Mounted",
+        "name": "Tag Mounted",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Mounted"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Pirate",
+        "name": "Tag Pirate",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Pirate"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Tag_Thief",
+        "name": "Tag Thief",
+        "desc": "",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Thief"
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Thunder_Call",
+        "name": "Thunder Call",
+        "desc": "<red>CA:</>An attack that inflicts Stun and drenched to enemies hit within 8 spaces. Inflicts 50 damage to enemies hit in 8 spaces.This is a free action. <green>CD:4 Turns</>",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            24
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "ability",
+                "Thunder_Call"
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
+                "build_charge",
+                4
+            ],
+            [
+                "cannot_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Time_Controller",
+        "name": "Time Controller",
+        "desc": "The user obtains vantage. The attacks of the user never miss.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "dynamic_accuracy",
+                "999999"
+            ]
+        ]
+    },
+    {
+        "nid": "Transmogrify",
+        "name": "Transmogrify",
+        "desc": "Add a temporal tag of choice to the target.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon())"
+            ],
+            [
+                "ability",
+                "Transmogrify"
+            ]
+        ]
+    },
+    {
+        "nid": "Misfortune",
+        "name": "Misfortune",
+        "desc": "Unit can't crit. Units in a 4 spaces range can't crit either.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "crit",
+                -1000
+            ],
+            [
+                "aura",
+                "Misfortune_Effect"
+            ],
+            [
+                "aura_range",
+                4
+            ],
+            [
+                "aura_target",
+                "unit"
+            ]
+        ]
+    },
+    {
+        "nid": "Misfortune_Effect",
+        "name": "Misfortune",
+        "desc": "Unit can't crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            49
+        ],
+        "components": [
+            [
+                "crit",
+                -1000
+            ]
+        ]
+    },
+    {
+        "nid": "Turf_Advantage",
+        "name": "Turf Advantage",
+        "desc": "Increases Hit/Avoid based on unit's internal level.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            44
+        ],
+        "components": [
+            [
+                "condition",
+                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
+            ],
+            [
+                "dynamic_accuracy",
+                "(unit.get_internal_level()) * 1.5"
+            ],
+            [
+                "dynamic_avoid",
+                "(unit.get_internal_level()) * 1.5"
+            ]
+        ]
+    },
+    {
+        "nid": "Improved_Vision",
+        "name": "Improved Vision",
+        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +50 hit/avoid and + 30 crit/dodge.",
+        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_accuracy",
+                "50"
+            ],
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "30"
+            ]
+        ]
+    },
+    {
+        "nid": "Ocean_Blade",
+        "name": "Ocean Blade",
+        "desc": "Attacks by this unit both are effective against and inflict Drenched",
+        "icon_nid": "{Maximus} Bushido",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "item_override",
+                "Ocean_Blade"
+            ]
+        ]
+    },
+    {
+        "nid": "Running_Rapids",
+        "name": "Running Rapids",
+        "desc": "+ 30 SPD and + 50 avo/dodge",
+        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Adept",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "dynamic_avoid",
+                "50"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "50"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        30
+                    ]
+                ]
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Superior_Vision",
+        "name": "Superior Vision",
+        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +75 hit/avoid and + 45 crit/dodge.",
+        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_accuracy",
+                "75"
+            ],
+            [
+                "dynamic_avoid",
+                "75"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "45"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "45"
+            ]
+        ]
+    },
+    {
+        "nid": "Vision",
+        "name": "Vision",
+        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +25 hit/avoid and + 15 crit/dodge.",
+        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') >= target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_accuracy",
+                "25"
+            ],
+            [
+                "dynamic_avoid",
+                "25"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "15"
+            ],
+            [
+                "dynamic_crit_avoid",
+                "15"
+            ]
+        ]
+    },
+    {
         "nid": "Elegant_Form_T1",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each attack dodged for 1 turn.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each attack dodged for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -52822,7 +55253,7 @@
     {
         "nid": "Death_Blow_T1",
         "name": "Death Blow",
-        "desc": "Unit deals additional damage equal to the unit's STR/4\nwhen unit initiates attack.",
+        "desc": "Unit deals additional damage equal to the unit's STR/4 (<red>{e: (unit.get_stat('STR')//4)}</>).\nwhen unit initiates attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -52946,7 +55377,7 @@
     {
         "nid": "Lucky_Blow_T1",
         "name": "Lucky Blow",
-        "desc": "Unit deals additional damage equal to the unit's LCK/3\nwhen unit initiates attack.",
+        "desc": "Unit deals additional damage equal to the unit's LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>).\nwhen unit initiates attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -53726,7 +56157,7 @@
     {
         "nid": "Supportive_Recharge_T1",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV and EXP gain by 75% for 1 turn.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% and reduce EXP gain by 95% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -53915,7 +56346,7 @@
     {
         "nid": "Blinding_Magic_Proc_T2",
         "name": "Blinding Magic",
-        "desc": "When using any magic, enemies lose -60 Hit when hit for 2 turns.",
+        "desc": "Magical weapons inflict Reduced Vision on enemies for 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -53924,7 +56355,11 @@
         "components": [
             [
                 "condition",
-                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Dark', 'Light', 'Anima', 'Staff')) and (unit2.team == 'enemy' or unit2.team == 'enemy2') "
+                "item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",
@@ -67103,315 +69538,6 @@
         ]
     },
     {
-        "nid": "Dagger_hide",
-        "name": "Dagger hide",
-        "desc": "allows the user to use daggers",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Thief"
-                ]
-            ],
-            [
-                "hidden",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Clever_Combatant",
-        "name": "Clever Combatant",
-        "desc": "If unit's Resistance is higher than enemy's Resistance, increases damage given and decreases damage received based on the difference between unit and enemy's Resistance.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            9,
-            5
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_stat('RES') > target.get_stat('RES')"
-            ],
-            [
-                "dynamic_damage_multiplier",
-                "1+(unit.get_stat('RES') - target.get_stat('RES'))/100"
-            ],
-            [
-                "dynamic_resist_multiplier",
-                "1-(unit.get_stat('RES') - target.get_stat('RES'))/100"
-            ]
-        ]
-    },
-    {
-        "nid": "Heavier_Hit",
-        "name": "Heavier Hit",
-        "desc": "If unit's weapon is heavier than enemy's weapon, raises Hit, Crit chance and damage.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            4,
-            35
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_weapon().weight.value > target.get_weapon().weight.value"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "10"
-            ],
-            [
-                "dynamic_accuracy",
-                "20"
-            ],
-            [
-                "dynamic_damage_multiplier",
-                "1+(unit.get_weapon().weight.value - target.get_weapon().weight.value)/100"
-            ]
-        ]
-    },
-    {
-        "nid": "Conquest",
-        "name": "Conquest",
-        "desc": "Cancels Armor/Horse weakness.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            7,
-            23
-        ],
-        "components": [
-            [
-                "negate_tags",
-                [
-                    "Horse",
-                    "Armor"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "True_Hit",
-        "name": "True Hit",
-        "desc": "Attacks that miss do 1/2 damage.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            5,
-            10
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "unit.get_weapon()"
-            ],
-            [
-                "item_override",
-                "Seeking_Darkness"
-            ]
-        ]
-    },
-    {
-        "nid": "Rage_item",
-        "name": "Rage",
-        "desc": "+3 in most stats, but take 6 damage after every combat.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            43
-        ],
-        "components": [
-            [
-                "stat_change",
-                [
-                    [
-                        "HP",
-                        3
-                    ],
-                    [
-                        "STR",
-                        3
-                    ],
-                    [
-                        "MAG",
-                        3
-                    ],
-                    [
-                        "SKL",
-                        3
-                    ],
-                    [
-                        "SPD",
-                        3
-                    ],
-                    [
-                        "LCK",
-                        3
-                    ],
-                    [
-                        "DEF",
-                        3
-                    ],
-                    [
-                        "RES",
-                        3
-                    ]
-                ]
-            ],
-            [
-                "recoil",
-                6
-            ]
-        ]
-    },
-    {
-        "nid": "Old_Faith",
-        "name": "Old Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Bows.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            13,
-            37
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
-            ],
-            [
-                "crit",
-                5
-            ],
-            [
-                "dynamic_damage",
-                "unit.get_stat('LCK') // 3"
-            ]
-        ]
-    },
-    {
-        "nid": "Shimmering_Barrier",
-        "name": "Shimmering_Barrier",
-        "desc": "Reduce damage this unit takes by LCK (<red>{e: (unit.get_stat('LCK'))}</>) when attacked.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            36
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode =='defense'"
-            ],
-            [
-                "dynamic_resist",
-                "unit.get_stat('LCK')"
-            ]
-        ]
-    },
-    {
-        "nid": "Outshine",
-        "name": "Outshine",
-        "desc": "x3 damage if enemy's LCK <= unit's LCK.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            4,
-            2
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "unit.get_stat('LCK') >= target.get_stat('LCK')"
-            ],
-            [
-                "damage_multiplier",
-                3.0
-            ]
-        ]
-    },
-    {
-        "nid": "Prophecy",
-        "name": "Prophecy",
-        "desc": "Light magic becomes effective damage against Magical units.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            38
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "item_system.weapon_type(unit, item) == 'Light'"
-            ],
-            [
-                "grey_if_inactive",
-                null
-            ],
-            [
-                "item_override",
-                "Anti_Magic_Rounds"
-            ]
-        ]
-    },
-    {
-        "nid": "Fell_Arrow",
-        "name": "Fell Arrow",
-        "desc": "Bows are X5 effective vs fliers and light",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            25
-        ],
-        "components": [
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Bow')"
-            ],
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "item_override",
-                "Fell_Arrow_item"
-            ]
-        ]
-    },
-    {
-        "nid": "Clarity",
-        "name": "Clarity",
-        "desc": "Deal full damage during dual strike, paired partner gains +LCK to avoid",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            7,
-            44
-        ],
-        "components": []
-    },
-    {
         "nid": "Protected",
         "name": "Protected",
         "desc": "Unit is immune to damage and status effects for one turn.",
@@ -67442,7 +69568,7 @@
     {
         "nid": "Blinding_Wave_Effect",
         "name": "Blinding Wave",
-        "desc": "Attacks get  (AOE:2) range and inflict Reduced Vision for one turn.",
+        "desc": "Attacks get (AOE:2) range and inflict Reduced Vision for one turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             6,
@@ -67810,1180 +69936,120 @@
         ]
     },
     {
-        "nid": "Adaptative_Necessity",
-        "name": "Adaptative Necessity",
-        "desc": "Increases the number of attacks by 1 and damage by 100% and gains desperation,but reduces damage resistance by 50% and evasion by 75.This skill is a free action.",
+        "nid": "Absolute_counter",
+        "name": "Absolute counter",
+        "desc": "Unit counteratack at any range.",
         "icon_nid": "SkillIcons",
         "icon_index": [
-            2,
-            3
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Adaptative_Necessity_Item"
-            ]
-        ]
-    },
-    {
-        "nid": "Adaptative_Necessity_Buff",
-        "name": "Adaptative Necessity",
-        "desc": "Increases the number of attacks by 1 and damage by 100% and gains desperation.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            2,
-            3
-        ],
-        "components": [
-            [
-                "lost_on_end_chapter",
-                null
-            ],
-            [
-                "dynamic_attacks",
-                "1"
-            ],
-            [
-                "damage_multiplier",
-                2.0
-            ],
-            [
-                "desperation",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Adaptative_Necessity_Debuff",
-        "name": "Adaptative Necessity",
-        "desc": "Reduces damage resistance by 50% and evasion by 75.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            2,
-            3
-        ],
-        "components": [
-            [
-                "lost_on_end_chapter",
-                null
-            ],
-            [
-                "resist_multiplier",
-                1.5
-            ],
-            [
-                "avoid",
-                -75
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Pressure",
-        "name": "Dark Pressure",
-        "desc": "The user generates an aura with the effects of decreases de Hit; Evade and Crit Evade of the enemies in the range of 3 spaces in 30.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            1
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "aura",
-                "Dark_Pressure_Debuff"
-            ],
-            [
-                "aura_range",
-                3
-            ],
-            [
-                "aura_target",
-                "enemy"
-            ]
-        ]
-    },
-    {
-        "nid": "Dark_Pressure_Debuff",
-        "name": "Dark Pressure",
-        "desc": "Reduce the Hit; Evade and Crit Evade of the enemies in 30.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            1
-        ],
-        "components": [
-            [
-                "hit",
-                -30
-            ],
-            [
-                "avoid",
-                -30
-            ],
-            [
-                "crit_avoid",
-                -30
-            ]
-        ]
-    },
-    {
-        "nid": "Destruction_Power",
-        "name": "Destruction Power",
-        "desc": "If the attack misses,it deals 100% damage and takes recoil damage.Apply 50% splash damage to enemies within two spaces of the attack.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            29
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                ""
-            ],
-            [
-                "item_override",
-                "Destruction_Power"
-            ],
-            [
-                "lifelink",
-                -0.15
-            ]
-        ]
-    },
-    {
-        "nid": "Destruction_Power_2",
-        "name": "Destruction Power",
-        "desc": "Apply 50% splash damage to enemies within two spaces of the attack.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            29
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "savage_blow_fates_Fifty_Per",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Lightning_Force",
-        "name": "Lightning Force",
-        "desc": "The user gains +5 at every stats except HP and MOV for 2 turns if kill a unit drenched, the stacks max is 4. The attacks of the user can be countered and double the damage vs. enemies drenched.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            4,
-            35
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "has_skill(target, 'Drench_Debuff')"
-            ],
-            [
-                "gain_skill_after_kill",
-                "Lightning_Force_Buff"
-            ]
-        ]
-    },
-    {
-        "nid": "Lightning_Force_Buff",
-        "name": "Lightning Force",
-        "desc": "+5 at every stats except HP and MOV for 2 turns if kill a unit drenched, the stacks max is 4.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            4,
-            35
-        ],
-        "components": [
-            [
-                "stack",
-                4
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        5
-                    ],
-                    [
-                        "MAG",
-                        5
-                    ],
-                    [
-                        "SKL",
-                        5
-                    ],
-                    [
-                        "SPD",
-                        5
-                    ],
-                    [
-                        "LCK",
-                        5
-                    ],
-                    [
-                        "DEF",
-                        5
-                    ],
-                    [
-                        "RES",
-                        5
-                    ],
-                    [
-                        "CON",
-                        5
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Lightning_Force_Strike",
-        "name": "Lightning Force",
-        "desc": "The attacks of the user can be countered and double the damage vs. enemies drenched.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            4,
-            35
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "has_skill(target, 'Drench_Debuff')"
-            ],
-            [
-                "damage_multiplier",
-                2.0000000000000004
-            ],
-            [
-                "item_override",
-                "Sword_Destroyer"
-            ]
-        ]
-    },
-    {
-        "nid": "Ora_Ora_Ora",
-        "name": "Ora Ora Ora...",
-        "desc": "If the user SPD is >=  SPD of enemies unit gains +4 attacks additionals((+8 if doubling),every consecutive attack in the same combat gains +3 damage.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            3,
-            25
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_stat('SPD') >= target.get_stat('SPD')"
-            ],
-            [
-                "dynamic_multiattacks",
-                "4"
-            ],
-            [
-                "gain_on_strike",
-                "Ora_Ora_Ora_Buff"
-            ]
-        ]
-    },
-    {
-        "nid": "Ora_Ora_Ora_Buff",
-        "name": "Ora Ora Ora...",
-        "desc": "+3 damage for each attack of this unit to hit an enemy in combat.\nLost on end combat",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            3,
-            25
-        ],
-        "components": [
-            [
-                "stack",
-                99
-            ],
-            [
-                "dynamic_damage",
-                "3"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Paragon_Plus",
-        "name": "Paragon+",
-        "desc": "Triple EXP earned.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            1,
-            9
-        ],
-        "components": [
-            [
-                "exp_multiplier",
-                3.0
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Phantom_Fists",
-        "name": "Phantom Fists",
-        "desc": "The user attacks ignore 50% of enemy defense a melee range, increased the STR;SPD and SKL in 10 if there are no allies within 3 squares of distance or less.Increases the attack range by 1.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            32
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "combat_condition",
-                "utils.calculate_distance(unit.position, target.position) == 1"
-            ],
-            [
-                "dynamic_damage",
-                "unit2.get_stat('DEF') // 2"
-            ]
-        ]
-    },
-    {
-        "nid": "Phantom_Fists_1",
-        "name": "Phantom Fists",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            32
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "condition",
-                "unit_funcs.check_focus(unit, 3) == 0\n"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        10
-                    ],
-                    [
-                        "SKL",
-                        10
-                    ],
-                    [
-                        "SPD",
-                        10
-                    ]
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Phantom_Fists_2",
-        "name": "Phantom Fists",
-        "desc": "The user attacks ignore 50% of enemy defense,a melee range increased the STR;SPD and SKL in 10 if there are no allies within 3 squares of distance or less.Increases the attack range by 1.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            32
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "modify_maximum_range",
-                1
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change",
-        "name": "Physical Change",
-        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit,last for twice turns and the user gains 10% of lifesteal.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "give_status_after_hit",
-                "Physical_Change_Debuff"
-            ],
-            [
-                "lifelink",
-                0.1
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change_Debuff",
-        "name": "Physical Change",
-        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit.Lost in twice turns.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "stack",
-                999
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -2
-                    ],
-                    [
-                        "MAG",
-                        -2
-                    ],
-                    [
-                        "SKL",
-                        -2
-                    ],
-                    [
-                        "SPD",
-                        -2
-                    ],
-                    [
-                        "LCK",
-                        -2
-                    ],
-                    [
-                        "DEF",
-                        -2
-                    ],
-                    [
-                        "RES",
-                        -2
-                    ],
-                    [
-                        "CON",
-                        -2
-                    ]
-                ]
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change_Debuff_Plus",
-        "name": "Physical Change",
-        "desc": "Reduce the stats of the enemies in 4 except HP and MOV for hit.Lost in twice turns.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "stack",
-                999
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -4
-                    ],
-                    [
-                        "MAG",
-                        -4
-                    ],
-                    [
-                        "SKL",
-                        -4
-                    ],
-                    [
-                        "SPD",
-                        -4
-                    ],
-                    [
-                        "LCK",
-                        -4
-                    ],
-                    [
-                        "DEF",
-                        -4
-                    ],
-                    [
-                        "RES",
-                        -4
-                    ],
-                    [
-                        "CON",
-                        -4
-                    ]
-                ]
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change_Debuff_Plus_Plus",
-        "name": "Physical Change",
-        "desc": "Reduce the stats of the enemies in 2 except HP and MOV for hit.Lost in twice turns.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "stack",
-                999
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -6
-                    ],
-                    [
-                        "MAG",
-                        -6
-                    ],
-                    [
-                        "SKL",
-                        -6
-                    ],
-                    [
-                        "SPD",
-                        -6
-                    ],
-                    [
-                        "LCK",
-                        -6
-                    ],
-                    [
-                        "DEF",
-                        -6
-                    ],
-                    [
-                        "RES",
-                        -6
-                    ],
-                    [
-                        "CON",
-                        -6
-                    ]
-                ]
-            ],
-            [
-                "time",
-                2
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change_Plus",
-        "name": "Physical Change+",
-        "desc": "Reduce the stats of the enemies in 4 except HP and MOV for hit,last for twice turns and the user gains 20% of lifesteal.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "give_status_after_hit",
-                "Physical_Change_Debuff_Plus"
-            ],
-            [
-                "lifelink",
-                0.2
-            ]
-        ]
-    },
-    {
-        "nid": "Physical_Change_Plus_Plus",
-        "name": "Physical Change++",
-        "desc": "Reduce the stats of the enemies in 6 except HP and MOV for hit,last for twice turns and the user gains 30% of lifesteal.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "give_status_after_hit",
-                "Physical_Change_Debuff_Plus_Plus"
-            ],
-            [
-                "lifelink",
-                0.3
-            ]
-        ]
-    },
-    {
-        "nid": "Protagonist_Luck",
-        "name": "Protagonist Luck",
-        "desc": "Once time for turn the user ignore all damage.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            1,
-            8
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ignore_damage",
-                null
-            ],
-            [
-                "charges_per_turn",
-                1
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Armor",
-        "name": "Tag Armor",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            3
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Armor"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Dragon",
-        "name": "Tag Dragon",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            4
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Dragon"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Flying",
-        "name": "Tag Flying",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            5
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Flying"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Infantry",
-        "name": "Tag Infantry",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Infantry"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Magic",
-        "name": "Tag Magic",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
-            1
-        ],
-        "components": [
-            [
-                "has_tags",
-                [
-                    "Magic"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Tag_Monster",
-        "name": "Tag Monster",
-        "desc": "",
-        "icon_nid": "Affinity",
-        "icon_index": [
-            0,
+            5,
             6
         ],
         "components": [
             [
-                "has_tags",
-                [
-                    "Monster"
-                ]
+                "close_counter",
+                null
             ],
             [
-                "lost_on_end_chapter",
+                "distant_counter",
                 null
             ]
         ]
     },
     {
-        "nid": "Tag_Mounted",
-        "name": "Tag Mounted",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "nid": "Astra_Plus_Art",
+        "name": "Astra+",
+        "desc": "SPD% chance to attack 5 times.",
+        "icon_nid": "SkillIcons",
         "icon_index": [
             0,
             2
         ],
         "components": [
             [
-                "has_tags",
-                [
-                    "Mounted"
-                ]
+                "attack_pre_proc",
+                "Astra_Plus"
             ],
             [
-                "lost_on_end_chapter",
-                null
+                "defense_pre_proc",
+                "Astra_Plus"
+            ],
+            [
+                "proc_rate",
+                "INITIATIVE"
             ]
         ]
     },
     {
-        "nid": "Tag_Pirate",
-        "name": "Tag Pirate",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "nid": "Astra_Plus",
+        "name": "Astra+",
+        "desc": "Speed*2 chance to attack 5 times.",
+        "icon_nid": "SkillIcons",
         "icon_index": [
             0,
-            8
+            2
         ],
         "components": [
             [
-                "has_tags",
-                [
-                    "Pirate"
-                ]
+                "display_skill_icon_in_combat",
+                null
             ],
             [
-                "lost_on_end_chapter",
-                null
+                "astra_proc",
+                {
+                    "extra_attacks": 5,
+                    "damage_percent": 0.9999999999999999,
+                    "show_proc_effects": true
+                }
             ]
         ]
     },
     {
-        "nid": "Tag_Thief",
-        "name": "Tag Thief",
-        "desc": "",
-        "icon_nid": "Affinity",
+        "nid": "Fool_Debuff",
+        "name": "Fool Debuff",
+        "desc": "Reduce the maxHP and HP Growth by -99%.",
+        "icon_nid": "SkillIcons",
         "icon_index": [
             0,
+            1
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.01
+                    ]
+                ]
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        -99
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "VantagenDesperation",
+        "name": "Vantage+Desperation",
+        "desc": "Unit always attacks first.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
             7
         ],
         "components": [
-            [
-                "has_tags",
-                [
-                    "Thief"
-                ]
-            ],
-            [
-                "lost_on_end_chapter",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Thunder_Call",
-        "name": "Thunder Call",
-        "desc": "<red>CA:</>An attack that inflicts Stun and drenched to enemies hit within 8 spaces. Inflicts 50 damage to enemies hit in 8 spaces.This is a free action. <green>CD:4 Turns</>",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            2,
-            24
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "ability",
-                "Thunder_Call"
-            ],
-            [
-                "Endstep_charge_increase",
-                1
-            ],
-            [
-                "build_charge",
-                4
-            ],
-            [
-                "cannot_double",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Time_Controller",
-        "name": "Time Controller",
-        "desc": "The user obtains vantage. The attacks of the user never miss.",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            6,
-            15
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "vantage",
                 null
             ],
             [
-                "dynamic_accuracy",
-                "999999"
-            ]
-        ]
-    },
-    {
-        "nid": "Transmogrify",
-        "name": "Transmogrify",
-        "desc": "Add a temporal tag of choice to the target.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            1
-        ],
-        "components": [
-            [
-                "class_skill",
+                "desperation",
                 null
-            ],
-            [
-                "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon())"
-            ],
-            [
-                "ability",
-                "Transmogrify"
-            ]
-        ]
-    },
-    {
-        "nid": "Misfortune",
-        "name": "Misfortune",
-        "desc": "Unit can't crit. Units in a 4 spaces range can't crit either.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            49
-        ],
-        "components": [
-            [
-                "crit",
-                -1000
-            ],
-            [
-                "aura",
-                "Misfortune_Effect"
-            ],
-            [
-                "aura_range",
-                4
-            ],
-            [
-                "aura_target",
-                "unit"
-            ]
-        ]
-    },
-    {
-        "nid": "Misfortune_Effect",
-        "name": "Misfortune",
-        "desc": "Unit can't crit.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            12,
-            49
-        ],
-        "components": [
-            [
-                "crit",
-                -1000
-            ]
-        ]
-    },
-    {
-        "nid": "Turf_Advantage",
-        "name": "Turf Advantage",
-        "desc": "Increases Hit/Avoid based on unit's internal level.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            15,
-            44
-        ],
-        "components": [
-            [
-                "condition",
-                "game.tilemap.get_terrain(unit.position) in ('2' , '3', '8', '20', '21', '30', '31', '32', '33', '34', 'Arena', '35', '38', 'Village Ruins', 'Ruins')"
-            ],
-            [
-                "dynamic_accuracy",
-                "(unit.get_internal_level()) * 1.5"
-            ],
-            [
-                "dynamic_avoid",
-                "(unit.get_internal_level()) * 1.5"
-            ]
-        ]
-    },
-    {
-        "nid": "Improved_Vision",
-        "name": "Improved Vision",
-        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +50 hit/avoid and + 30 crit/dodge.",
-        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_stat('SPD') >= target.get_stat('SPD')"
-            ],
-            [
-                "dynamic_accuracy",
-                "50"
-            ],
-            [
-                "dynamic_avoid",
-                "50"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "30"
-            ],
-            [
-                "dynamic_crit_avoid",
-                "30"
-            ]
-        ]
-    },
-    {
-        "nid": "Ocean_Blade",
-        "name": "Ocean Blade",
-        "desc": "Attacks by this unit both are effective against and inflict Drenched",
-        "icon_nid": "{Maximus} Bushido",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "item_override",
-                "Ocean_Blade"
-            ]
-        ]
-    },
-    {
-        "nid": "Running_Rapids",
-        "name": "Running Rapids",
-        "desc": "+ 30 SPD and + 50 avo/dodge",
-        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Adept",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "dynamic_avoid",
-                "50"
-            ],
-            [
-                "dynamic_crit_avoid",
-                "50"
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        30
-                    ]
-                ]
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "Superior_Vision",
-        "name": "Superior Vision",
-        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +75 hit/avoid and + 45 crit/dodge.",
-        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_stat('SPD') >= target.get_stat('SPD')"
-            ],
-            [
-                "dynamic_accuracy",
-                "75"
-            ],
-            [
-                "dynamic_avoid",
-                "75"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "45"
-            ],
-            [
-                "dynamic_crit_avoid",
-                "45"
-            ]
-        ]
-    },
-    {
-        "nid": "Vision",
-        "name": "Vision",
-        "desc": "If unit's SPD is higher >= to enemy's SPD, unit gains +25 hit/avoid and + 15 crit/dodge.",
-        "icon_nid": "{Stephano, Zane} (FE4 Link Arena) Pursuit",
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
-            [
-                "combat_condition",
-                "unit.get_stat('SPD') >= target.get_stat('SPD')"
-            ],
-            [
-                "dynamic_accuracy",
-                "25"
-            ],
-            [
-                "dynamic_avoid",
-                "25"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "15"
-            ],
-            [
-                "dynamic_crit_avoid",
-                "15"
             ]
         ]
     }

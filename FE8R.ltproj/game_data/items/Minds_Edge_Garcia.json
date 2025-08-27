@@ -2,7 +2,7 @@
     {
         "nid": "Minds_Edge_Garcia",
         "name": "Mind's Edge",
-        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<green>Skills:</>Blade Sweep\n<orange>Element:<icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             7,
@@ -107,6 +107,10 @@
                     "Shadow_Blight",
                     "Cursed_2"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_WEAK"
             ]
         ]
     }

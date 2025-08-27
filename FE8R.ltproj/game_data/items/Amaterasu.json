@@ -1,0 +1,117 @@
+[
+    {
+        "nid": "Amaterasu",
+        "name": "Amaterasu",
+        "desc": "A holy diety that burns with fire.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "icon_nid": "Neimi and others new weapons",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "damage",
+                19
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "wexp",
+                1
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "weapon_type",
+                "Lance"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Neimi"
+                ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Shine"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Shadow",
+                        "Horse",
+                        "Seared"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Wind",
+                    "Fire"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Lance_Guard_SS"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SPD_STRONG"
+            ]
+        ]
+    }
+]

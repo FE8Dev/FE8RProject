@@ -2,7 +2,7 @@
     {
         "nid": "Heat_Ray",
         "name": "Heat Ray",
-        "desc": "A magical tome that shoots an intense ray of energy.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), Uncounterable, Splash DMG (20%).",
+        "desc": "A magical tome that shoots an intense ray of energy.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</> <pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>), Uncounterable, Splash DMG (20%).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -47,7 +47,7 @@
             ],
             [
                 "weapon_type",
-                "Anima"
+                "Light"
             ],
             [
                 "weapon_rank",
@@ -87,7 +87,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Horse"
+                        "Horse",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -106,7 +107,8 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Light"
                 ]
             ],
             [

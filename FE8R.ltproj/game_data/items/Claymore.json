@@ -2,7 +2,7 @@
     {
         "nid": "Claymore",
         "name": "Claymore",
-        "desc": "A heavy blade used by Gilliam.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A heavy blade used by Gilliam.\n<green>Skills:</>Blade Sweep, Provoke\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             6,
@@ -73,7 +73,9 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Sweep",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver"
                 ]
             ],
             [
@@ -93,6 +95,10 @@
                 [
                     "Gilliam"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_WEAK"
             ]
         ]
     }

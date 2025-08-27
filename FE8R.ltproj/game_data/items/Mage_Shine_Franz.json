@@ -2,7 +2,7 @@
     {
         "nid": "Mage_Shine_Franz",
         "name": "Mage Shine",
-        "desc": "A scholar's variation of Shine magic that counters dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +10 Crit damage.",
+        "desc": "A scholar's variation of Shine magic that counters dark magic.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Reaver, +10 Crit damage, MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             9,
@@ -98,6 +98,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_attack_speed_formula",
+                "MAG_LCK_WEAK"
             ]
         ]
     }
