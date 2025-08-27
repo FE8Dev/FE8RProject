@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Tome_Precision_T1",
+        "name": "Tome Precision",
+        "desc": "Raises Hit/Avoid by 30 when using a Tome.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            2
+        ],
+        "components": [
+            [
+                "condition",
+                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark'))"
+            ],
+            [
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_avoid",
+                "30"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]
