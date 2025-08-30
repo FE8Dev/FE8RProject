@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Stone_Wall_T2",
+        "name": "Stone Wall",
+        "desc": "Unit's base DEF x3 is added to unit's Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            34
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "unit.stats[\"DEF\"] * 3"
+                    ]
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Full_Rush_T1",
+        "name": "Full Rush",
+        "desc": "Unit deals 10% more damage for each tile moved.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            0,
+            40
+        ],
+        "components": [
+            [
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))//10"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

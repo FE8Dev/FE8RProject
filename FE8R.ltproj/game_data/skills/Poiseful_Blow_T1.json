@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Poiseful_Blow_T1",
+        "name": "Poiseful Blow",
+        "desc": "Unit deals additional damage equal to the unit's DEF/3 \nwhen unit initiates attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            47
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode == 'attack'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('DEF') // 3"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

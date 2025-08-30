@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Dragon_Pact_T2",
+        "name": "Dragon Pact",
+        "desc": "<red>CA:</>Allows you to trade 10 MAG in exchange for a free action attack. Regain your MAG next turn.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            3
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Dragon_Pact_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "condition",
+                "unit.get_stat('MAG') >= 10"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

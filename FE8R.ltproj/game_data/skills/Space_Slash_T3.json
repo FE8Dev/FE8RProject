@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Space_Slash_T3",
+        "name": "Space Slash",
+        "desc": "<red>CA:</>+10 range attack that pierces enemy's DEF.\nCannot miss. <green>CD:6 Turns</>\n ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            46
+        ],
+        "components": [
+            [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
+                "build_charge",
+                6
+            ],
+            [
+                "combat_art",
+                "Space_Slash"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.is_weapon(unit, item)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

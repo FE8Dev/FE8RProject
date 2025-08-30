@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Advantage_T1",
+        "name": "Advantage",
+        "desc": "Always attack first when unit is above 75% Max HP.\nEnemy cannot counter if unit is above 75% Max HP and unit's SPD >= enemy's SPD + 7.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            2
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_hp() >= unit.get_max_hp() // 1.3333"
+            ],
+            [
+                "display_skill_icon_in_combat",
+                null
+            ],
+            [
+                "vantage",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

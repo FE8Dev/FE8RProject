@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Soul_Taint_T2",
+        "name": "Soul Taint",
+        "desc": "Attacks inflict the Drenched, Poisoned and Seared to enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
+            ],
+            [
+                "give_statuses_after_combat",
+                [
+                    "Poisoned",
+                    "Drench_Debuff",
+                    "Seared"
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Accost_T2",
+        "name": "Accost",
+        "desc": "Adds SKL + SPD/2 to Crit.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('SPD') // 2 + unit.get_stat('SKL') // 2"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

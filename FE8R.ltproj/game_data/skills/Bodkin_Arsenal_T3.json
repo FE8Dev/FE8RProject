@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Bodkin_Arsenal_T3",
+        "name": "Bodkin Arsenal",
+        "desc": "Bows ignore 50% of the target's DEF or RES, and -30 DEF to enemy after combat on hit for 2 turns. (Does not stack).\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            42
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Bow'"
+            ],
+            [
+                "give_status_after_combat_on_hit",
+                "Bodkin_Wound"
+            ],
+            [
+                "dynamic_damage",
+                "(unit2.get_stat('RES') // 2) if item_funcs.is_magic(unit, unit.get_weapon()) else (unit2.get_stat('DEF') // 2)"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

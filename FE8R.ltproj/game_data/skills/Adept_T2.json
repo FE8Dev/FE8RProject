@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Adept_T2",
+        "name": "Adept",
+        "desc": "Gains a bonus attack if unit's SPD > enemy's SPD.",
+        "icon_nid": "lyn_skills",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "unit.get_stat('SPD') > target.get_stat('SPD')"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

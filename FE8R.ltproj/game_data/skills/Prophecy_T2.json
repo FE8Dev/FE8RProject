@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Prophecy_T2",
+        "name": "Prophecy",
+        "desc": "Light magic becomes effective damage against Magical units.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            38
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Light'"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "item_override",
+                "Anti_Magic_Rounds"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

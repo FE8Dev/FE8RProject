@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Defensive_Tactics_T3",
+        "name": "Defensive Tactics",
+        "desc": "Reduce damage taken by 50% for all allies within 2 spaces of this unit.\nIf the ally in this state initiates combat, they have their damage given reduced by 30%.\nIf the ally is attacked during the enemy phase, the ally deals 60% more damage.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            44
+        ],
+        "components": [
+            [
+                "aura",
+                "Defensive_Tactics_child"
+            ],
+            [
+                "aura_range",
+                2
+            ],
+            [
+                "aura_target",
+                "unit"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]
