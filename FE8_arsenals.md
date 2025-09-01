@@ -1270,7 +1270,7 @@ Icegoyal(T3)
 ---
 # Gorgon
 ## *Dark*
-A tome that increases Avoid based on Unit's Magic. On its second stage, it becomes effective against Magic units.
+A tome that increases Avoid based on Unit's Magic. On its second stage, it becomes effective against Magic units. It always hits.
 
 ## Staff
 A staff that is effective against Shadow and Horse units and inflicts Seared on the enemy. It starts with 1-4 range and it increases with each upgrade. It has a skill that reduces Avoid, Defense and Resistance for 2 turns.
