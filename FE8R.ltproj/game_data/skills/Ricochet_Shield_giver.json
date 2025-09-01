@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Ricochet_Shield_giver",
+        "name": "Ricochet Shield status",
+        "desc": "%SLK/2 chance to reflect ranged attacks back to the attacker, only works on enemy phase",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            11,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "give_status_on_take_hit",
+                "Ricochet_Shield_proc"
+            ],
+            [
+                "ignore_damage",
+                null
+            ],
+            [
+                "combat_condition",
+                "(utils.calculate_distance(unit.position, target.position))<= 2 and mode == 'defense'"
+            ]
+        ]
+    }
+]

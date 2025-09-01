@@ -1,7 +1,7 @@
 ## TBR
 ```
 Added missing skills as feats(mostly from Neimi or DG units)
-
+Added Ricochet Shield to the DG shop
 
 
 ```
