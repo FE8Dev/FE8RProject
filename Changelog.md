@@ -12,9 +12,7 @@ Buff to Lute's Base MAG and RES. Small buff to Lute's MAG and RES growths.
 
 
 ```
-08-27-25
-=======
-## TBR
+## 08-27-25
 ```
 Added missing skills as feats(mostly from Neimi or DG units)
 Added Ricochet Shield to the DG shop
