@@ -1,4 +1,4 @@
-tbr
+## tbr
 ```
 Small buffs to Scintilla, Arno, and Moze.
 Adept Eye, Focus Sight, Hex, Anathema, Elegant Form, Dedication, and Shot Assistance have been buffed
@@ -11,7 +11,7 @@ Kyudoka added to MyUnit starting class Roster.
 Buff to Lute's Base MAG and RES. Small buff to Lute's MAG and RES growths.
 
 
-
+```
 08-27-25
 =======
 ## TBR
