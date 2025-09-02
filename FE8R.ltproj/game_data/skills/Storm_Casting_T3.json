@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Storm_Casting_T3",
+        "name": "Storm Casting",
+        "desc": "The First attack with a Tome each turn will refresh the user, with a -75% penalty to MAG and -25% Penalty to SKL and SPD (Lost on end of player phase).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "condition",
+                "\"Storm_Casting_CD\" not in unit.skills"
+            ],
+            [
+                "combat_condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark')"
+            ],
+            [
+                "event_after_initiated_combat",
+                "Global Storm Casting event"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

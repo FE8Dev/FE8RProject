@@ -13,6 +13,15 @@ Buff to Lute's Base MAG and RES. Small buff to Lute's MAG and RES growths.
 
 
 08-27-25
+=======
+## TBR
+```
+Added missing skills as feats(mostly from Neimi or DG units)
+Added Ricochet Shield to the DG shop
+
+
+```
+## 08-27-25
 ```
 Made trainee seed set you to 0xp after leveling, this allows the use of BXP
 Fixed Warhammer AOE stunning even when missing.
@@ -29,11 +38,6 @@ Blade Scroll has been updated.
 Starting level for all units on 5x increased to level 15.
 The dropped item for the achievment for chapter 2 has been moved to be way closer, so Vanessa can participate in the battle more.
 Neimi's Mahou Shoujo class now has proper Bow access.
-
-
-
-
-
 
 
 
@@ -54,10 +58,6 @@ Fixes to Heavy Weapons.
 Fix to discard state.
 Warhammers area stun nerfed to new status Flinch that is removed on upkeep.
 Chapter 5x Zonta recieves -100 Avoid and negate healing when drenched from lever.
-
-
-
-
 ```
 ## 08-10-25
 ```
@@ -69,15 +69,7 @@ Boosted Dozla's Base HP to 100
 Boosted Dozla's HP Growth to 320
 Skill that increase range are now passive instead of Combat Arts.
 The main Vanilla cast now have the new weapon evolution code to boost performance.
-
-
-
-
-
-
-
 ```
-
 ## 08-03-25
 ```
 gave discipline to Pro as a personal skill
@@ -96,7 +88,6 @@ Additional fixes for feat system for all units feat mode
 Fixed Doggo recruitment crash
 
 Fixed trainees not getting feats
-
 
 ```
 ## 08-01-25

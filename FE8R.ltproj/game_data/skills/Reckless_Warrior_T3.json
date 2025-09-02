@@ -1,0 +1,42 @@
+[
+    {
+        "nid": "Reckless_Warrior_T3",
+        "name": "Reckless Warrior",
+        "desc": "Reduce this unit's DEF and RES to 0 as combat starts, but add half of this unit's DEF and RES to Avoid before being reduced.\nUnit can counter enemies at any range (does not work on Siege weapons).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            52
+        ],
+        "components": [
+            [
+                "distant_counter",
+                null
+            ],
+            [
+                "close_counter",
+                null
+            ],
+            [
+                "dynamic_avoid",
+                "unit.get_stat('RES')//2+unit.get_stat('DEF')//2"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Reckless_Warrior_Pierce",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

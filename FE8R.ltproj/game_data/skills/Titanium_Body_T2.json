@@ -1,17 +1,17 @@
 [
     {
-        "nid": "Anotomy_Master_T3",
-        "name": "Anotomy Master",
-        "desc": "Attacks deal very effective damage against Infantry enemies.",
+        "nid": "Titanium_Body_T2",
+        "name": "Titanium Body",
+        "desc": "Gain 10% damage reduction when damaged, stacks up to 9 times. resets at the start of the round",
         "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            39
+            8,
+            50
         ],
         "components": [
             [
-                "item_override",
-                "Anti_Infantry_Rounds"
+                "gain_skill_after_take_damage",
+                "Titanium_Body_Buff"
             ],
             [
                 "feat",

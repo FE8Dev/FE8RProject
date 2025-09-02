@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Summon_T2",
+        "name": "Summon",
+        "desc": "Summons a dark phantom to aid you. This is a free action.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "condition",
+                "not game.check_alive('phantom_' + unit.nid)"
+            ],
+            [
+                "ability",
+                "Summon_MyUnit"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

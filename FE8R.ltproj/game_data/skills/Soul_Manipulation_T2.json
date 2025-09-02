@@ -1,0 +1,63 @@
+[
+    {
+        "nid": "Soul_Manipulation_T2",
+        "name": "Soul Manipulation",
+        "desc": "+2 to most stats for each ally within 3 spaces of unit.\nAttacks restore HP = 20% of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "STR",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "MAG",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "SKL",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "SPD",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "LCK",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "DEF",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "RES",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ]
+                ]
+            ],
+            [
+                "lifelink",
+                0.2
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

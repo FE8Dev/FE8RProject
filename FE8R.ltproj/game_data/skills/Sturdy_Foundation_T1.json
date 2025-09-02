@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Sturdy_Foundation_T1",
+        "name": "Sturdy Foundation",
+        "desc": "Unit's base DEF x1.5 is added to unit's Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            34
+        ],
+        "components": [
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "HP",
+                        "unit.stats[\"DEF\"] * 1.5"
+                    ]
+                ]
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

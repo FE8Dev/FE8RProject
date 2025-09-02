@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "Innate_Pariah_T3",
+        "name": "Innate Pariah",
+        "desc": "Reduces magic damage recieved by 75%.\nAttacks become effective vs. mages and monsters.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            36
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_funcs.is_magic(target, target.get_weapon())"
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "item_override",
+                "Pariah_Gen"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]

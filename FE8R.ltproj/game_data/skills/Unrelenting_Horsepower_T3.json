@@ -1,0 +1,38 @@
+[
+    {
+        "nid": "Unrelenting_Horsepower_T3",
+        "name": "Unrelenting Horsepower",
+        "desc": "On kill, unit gains +1 MOV for the rest of the chapter.\nMax 5 stacks.\nAdds 3 * MOV to damage, 2 * MOV to Crit and MOV to Attack speed.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            43
+        ],
+        "components": [
+            [
+                "gain_skill_after_kill",
+                "High_Horsepower"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_stat('MOV')*3"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "unit.get_stat('MOV')*2"
+            ],
+            [
+                "dynamic_attack_speed",
+                "unit.get_stat('MOV')"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    }
+]
