@@ -1,0 +1,29 @@
+[
+    {
+        "nid": "Medusa_Gaze_DG",
+        "name": "Medusa Gaze",
+        "desc": "<blue>On Hold:</>Attacks inflict Stun, +50% damage against Stunned enemies, but user can no longer counterattack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            51
+        ],
+        "components": [
+            [
+                "value",
+                7500
+            ],
+            [
+                "status_on_hit",
+                "Stun"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Medusa_Gaze_buff",
+                    "Medusa_Gaze_Debuff"
+                ]
+            ]
+        ]
+    }
+]

@@ -2,10 +2,10 @@
     {
         "nid": "Cana",
         "name": "Cana",
-        "desc": "A weapon that finds weakness in many enemies.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>)",
-        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Armorsmasher (3x Effectiveness)-1.png",
+        "desc": "A weapon that finds weakness in many enemies.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), +5 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            0,
+            11,
             0
         ],
         "components": [
@@ -80,10 +80,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 240 and u(\"Esperanza\").wexp['Sword'] < 420"
-            ],
-            [
                 "alternate_damage_formula",
                 "SKL_SPD_MID"
             ],
@@ -94,6 +90,15 @@
             [
                 "weapon_rank",
                 "A"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Sacred_Bow",
         "name": "Sacred Bow",
-        "desc": "A holy bow said to have been made by angels.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>Magical, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), Brave.",
+        "desc": "A holy bow said to have been made by angels. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>Magical, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), Brave.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             0,
@@ -107,6 +107,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     }

@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Hellish_Beast",
+        "name": "Hellish Beast",
+        "desc": "This unit cannot take damage from fire elemental weapons.\nThis Unit gains +15 crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Fire' in target.get_weapon().tags"
+            ],
+            [
+                "resist_multiplier",
+                0.0
+            ]
+        ]
+    }
+]

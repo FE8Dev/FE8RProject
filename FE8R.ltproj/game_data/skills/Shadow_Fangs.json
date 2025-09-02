@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Shadow_Fangs",
+        "name": "Shadow Fangs",
+        "desc": "Unit adds MAG to Critical Damage. Unit gains +15 crit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "eval_crit",
+                "15"
+            ],
+            [
+                "eval_crit_additional",
+                "unit.get_stat('MAG')"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Proud_Beast",
+        "name": "Proud Beast",
+        "desc": "When own HP is above 90% always attack first.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            49
+        ],
+        "components": [
+            [
+                "vantage",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() >= unit.get_max_hp() * 0.9"
+            ]
+        ]
+    }
+]

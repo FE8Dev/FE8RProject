@@ -3,15 +3,15 @@
         "name": "BoneTalk",
         "trigger": "enemy_turn_change",
         "level_nid": "2",
-        "condition": "game.turncount == 2",
+        "condition": "game.turncount == 1",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "add_portrait;Bone;Left",
-            "speak;Bone;... Dang it, it's not in my pockets! I must've left it in the mountains!|I'll have to grab it after this battle.",
+            "speak;Bone;Hmph, the boys better have gotten that <red>treasure</>.|That Ide village is supposed to hold a special book.|If we find it, some scumy book collector might buy it.|I'll search the ruins after we slaughter these guys.",
             "remove_portrait;Bone",
-            "map_anim;Dazzled;14,14;permanent"
+            "map_anim;Dazzled;12,1;permanent"
         ],
         "nid": "2 BoneTalk"
     }

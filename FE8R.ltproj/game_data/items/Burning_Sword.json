@@ -2,10 +2,10 @@
     {
         "nid": "Burning_Sword",
         "name": "Burning Sword",
-        "desc": "A blade that increased in heat.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>)",
-        "icon_nid": "{Batima} Falchion (Ylisse) - Exalted-1.png",
+        "desc": "A blade that increased in heat.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>), +3 SPD.",
+        "icon_nid": "Neimi and others new weapons",
         "icon_index": [
-            0,
+            5,
             0
         ],
         "components": [
@@ -83,10 +83,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 120 and u(\"Esperanza\").wexp['Sword'] < 240"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -115,6 +111,15 @@
             [
                 "magic_at_range",
                 null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
             ]
         ]
     }

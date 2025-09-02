@@ -2,11 +2,11 @@
     {
         "nid": "Dual_Cortar",
         "name": "Dual Cortar",
-        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
-        "icon_nid": "{FuriousHaunter} Binding Axe [F2E]-1.png",
+        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision, Power Chop (C)\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
+        "icon_nid": "Axes Sheet",
         "icon_index": [
-            0,
-            0
+            5,
+            1
         ],
         "components": [
             [
@@ -58,7 +58,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Vision"
+                    "Vision",
+                    "Power_Chop_C"
                 ]
             ],
             [
@@ -75,10 +76,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Axe'] >= 180 and u(\"Esperanza\").wexp['Axe'] < 360"
             ],
             [
                 "alternate_damage_formula",

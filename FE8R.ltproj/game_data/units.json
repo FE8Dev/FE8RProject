@@ -9327,11 +9327,11 @@
             "AutoPromote"
         ],
         "bases": {
-            "HP": 30,
-            "STR": 9,
-            "MAG": 10,
-            "SKL": 7,
-            "SPD": 7,
+            "HP": 50,
+            "STR": 12,
+            "MAG": 12,
+            "SKL": 9,
+            "SPD": 9,
             "LCK": 5,
             "DEF": 12,
             "RES": 10,
@@ -9536,10 +9536,10 @@
         ],
         "bases": {
             "HP": 26,
-            "STR": 5,
-            "MAG": 7,
-            "SKL": 5,
-            "SPD": 7,
+            "STR": 7,
+            "MAG": 10,
+            "SKL": 8,
+            "SPD": 13,
             "LCK": 5,
             "DEF": 4,
             "RES": 2,
@@ -9549,9 +9549,9 @@
         "growths": {
             "HP": 90,
             "STR": 50,
-            "MAG": 50,
+            "MAG": 65,
             "SKL": 45,
-            "SPD": 50,
+            "SPD": 70,
             "LCK": 40,
             "DEF": 40,
             "RES": 40,
@@ -9597,12 +9597,12 @@
             ],
             "Anima": [
                 false,
-                1,
+                60,
                 null
             ],
             "Monster": [
                 false,
-                1,
+                60,
                 null
             ]
         },
@@ -9685,9 +9685,9 @@
             "Feat_Unit"
         ],
         "bases": {
-            "HP": 20,
-            "STR": 6,
-            "MAG": 6,
+            "HP": 40,
+            "STR": 8,
+            "MAG": 8,
             "SKL": 8,
             "SPD": 11,
             "LCK": 7,
@@ -9743,7 +9743,7 @@
             ],
             "Lance": [
                 false,
-                1,
+                60,
                 null
             ],
             "Axe": [
@@ -10057,7 +10057,7 @@
         "bases": {
             "HP": 28,
             "STR": 7,
-            "MAG": 6,
+            "MAG": 10,
             "SKL": 9,
             "SPD": 3,
             "LCK": 3,
@@ -11433,7 +11433,7 @@
         "name": "Kazuma",
         "desc": "Only a guy tranmigrated a other world for unknown entity. Portrait by CranJam, Roxannity, Sterling Glovner. Unit created by DaviusBlackBlade",
         "variant": "",
-        "level": 30,
+        "level": 1,
         "klass": "Otaku_isekai",
         "tags": [
             "Dragon",
@@ -11485,7 +11485,7 @@
             ],
             "Dark": [
                 false,
-                1,
+                0,
                 null
             ],
             "Axe": [
@@ -11510,7 +11510,7 @@
         "desc": "A young mercernary looking for glory. Determined to become a bladeswomen known by all. Portait by Corninin, spliced from Sphealnuke, Thorn VelvetKistune, and Levin64. Unit by Pew.",
         "variant": "Esperanza",
         "level": 1,
-        "klass": "Myrmidon_Esperanza",
+        "klass": "Greenhorn",
         "tags": [
             "AutoPromote"
         ],
@@ -11542,14 +11542,6 @@
         "starting_items": [
             [
                 "Esperanza_Arsenal",
-                false
-            ],
-            [
-                "Light_Sword",
-                false
-            ],
-            [
-                "Master_Scroll",
                 false
             ],
             [
@@ -11589,6 +11581,70 @@
         "alternate_classes": [],
         "portrait_nid": "Mercenary_Tau by Corninin",
         "affinity": "Ice",
+        "fields": []
+    },
+    {
+        "nid": "Garmr",
+        "name": "Garmr",
+        "desc": "The Guardian of Hell. He is trapped in the mortal plane.\nPortrait by Fenriel. Unit submitted by T3rm1gn4rt0r.",
+        "variant": "",
+        "level": 1,
+        "klass": "Hellhound_Garmr",
+        "tags": [
+            "AutoPromote"
+        ],
+        "bases": {
+            "HP": 26,
+            "STR": 6,
+            "MAG": 6,
+            "SKL": 9,
+            "SPD": 13,
+            "LCK": 6,
+            "DEF": 6,
+            "RES": 6,
+            "CON": 9,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 160,
+            "STR": 30,
+            "MAG": 60,
+            "SKL": 60,
+            "SPD": 60,
+            "LCK": 40,
+            "DEF": 30,
+            "RES": 50,
+            "CON": 20,
+            "MOV": 1
+        },
+        "stat_cap_modifiers": {},
+        "starting_items": [
+            [
+                "Garmr_Arsenal",
+                false
+            ],
+            [
+                "Treat",
+                false
+            ]
+        ],
+        "learned_skills": [
+            [
+                1,
+                "Pair_Up_Affinity_Fire"
+            ]
+        ],
+        "unit_notes": [],
+        "wexp_gain": {
+            "Monster": [
+                false,
+                60,
+                null
+            ]
+        },
+        "alternate_classes": [],
+        "portrait_nid": "Ifrit (Part 2) {Fenriel} [F2E] (1)",
+        "affinity": "Fire",
         "fields": []
     },
     {

@@ -2,10 +2,10 @@
     {
         "nid": "Estoque",
         "name": "Estoque",
-        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</></><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>).",
-        "icon_nid": "{LordGlenn} (ArchaneaIconProject) Amiti-1.png",
+        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</></><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>), +15 SPD.",
+        "icon_nid": "Neimi and others new weapons",
         "icon_index": [
-            0,
+            2,
             0
         ],
         "components": [
@@ -84,10 +84,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 480"
-            ],
-            [
                 "alternate_damage_formula",
                 "STR_SPD_SKL_STRONG"
             ],
@@ -98,6 +94,15 @@
             [
                 "weapon_rank",
                 "X"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
             ]
         ]
     }

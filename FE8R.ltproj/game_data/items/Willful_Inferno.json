@@ -2,11 +2,11 @@
     {
         "nid": "Willful_Inferno",
         "name": "Willful Inferno",
-        "desc": "A fiery tornado imbued into a blade, with the resolve to never give up.\n<green>Skills:</>Superior Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))(unit.get_stat('SKL')))}</>).",
-        "icon_nid": "{LordGlenn, BwdYeti} (ArchaneaIconProject) Durandal (Blazing)-1.png",
+        "desc": "A fiery tornado imbued into a blade, with the resolve to never give up.\n<green>Skills:</>Superior Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))(unit.get_stat('SKL')))}</>), +15 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            0,
-            0
+            31,
+            1
         ],
         "components": [
             [
@@ -83,10 +83,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -115,6 +111,15 @@
             [
                 "alternate_resist_formula",
                 "DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
             ]
         ]
     }

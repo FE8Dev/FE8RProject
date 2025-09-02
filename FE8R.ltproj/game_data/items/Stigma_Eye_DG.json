@@ -1,0 +1,29 @@
+[
+    {
+        "nid": "Stigma_Eye_DG",
+        "name": "Stigma Eye",
+        "desc": "<blue>On Hold:</>Attacks inflict Sealed and Reduced Vision, but -50 Avoid and x2 Damage recieved from Bows.",
+        "icon_nid": "Monster-Dragon",
+        "icon_index": [
+            0,
+            1
+        ],
+        "components": [
+            [
+                "value",
+                5000
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Sealed_Davius",
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "status_on_hold",
+                "Stigma_Eyes_debuff"
+            ]
+        ]
+    }
+]

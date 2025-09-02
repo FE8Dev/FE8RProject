@@ -2,7 +2,7 @@
     {
         "nid": "Aqua_Burst",
         "name": "Aqua Burst",
-        "desc": "A magical bow infused with living water.\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "A magical bow infused with living water. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             7,
@@ -111,6 +111,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     }

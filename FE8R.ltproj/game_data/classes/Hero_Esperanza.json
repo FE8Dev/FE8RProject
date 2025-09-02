@@ -5,11 +5,11 @@
         "desc": "An experienced fighter. Fights foes with blade and skill. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Mercenary_Esperanza",
+        "promotes_from": "Mercenary",
         "turns_into": [
-            "T3_Wyvern_Master_Esperanza",
             "T3_Sentinal_Hero",
-            "T3_Vanguard_Cucara"
+            "T3_Vanguard_Cucara",
+            "T3_Wyvern_Master_Esperanza"
         ],
         "tags": [
             "AutoPromote",
@@ -96,7 +96,7 @@
         ],
         "wexp_gain": {
             "Sword": [
-                2,
+                true,
                 120,
                 360
             ],
@@ -144,6 +144,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Vanguard",
@@ -151,8 +156,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Hero (F) Gerik-Style Sword {Nuramon}-stand-stand",
-        "combat_anim_nid": "Hero_E",
+        "map_sprite_nid": "Hero (F) Gerik-Style Sword {Nuramon}",
+        "combat_anim_nid": "Hero_Female",
         "fields": []
     }
 ]

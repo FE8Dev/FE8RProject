@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Stigma_Eyes_debuff",
+        "name": "Stigma_Eyes",
+        "desc": "-50 Avoid, x2 damage taken from Bows.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            9,
+            7
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_system.weapon_type(target, target.get_weapon()) == 'Bow'\n)"
+            ],
+            [
+                "resist_multiplier",
+                2.0
+            ],
+            [
+                "avoid",
+                -50
+            ]
+        ]
+    }
+]

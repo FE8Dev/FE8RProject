@@ -2,8 +2,8 @@
     {
         "nid": "Hel",
         "name": "Hel",
-        "desc": "A thin blade that acts like a rapier.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses SKL.",
-        "icon_nid": "{Lisandra Brave} Vorpal Blade [F2E]-1.png",
+        "desc": "A thin blade that acts like a rapier.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Uses SKL, +1 SPD..",
+        "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             0,
             0
@@ -78,10 +78,6 @@
                 }
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] < 120"
-            ],
-            [
                 "alternate_damage_formula",
                 "SKILL_PROC"
             ],
@@ -92,6 +88,15 @@
             [
                 "weapon_rank",
                 "E"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
             ]
         ]
     }

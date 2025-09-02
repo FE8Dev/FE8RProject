@@ -5,11 +5,10 @@
         "desc": "A skilled thief that can open doors and chests with ease. <icon>Infantry</><icon>Steal</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Thief_Esperanza",
+        "promotes_from": "Thief",
         "turns_into": [
             "T3_Genie_Esperanza",
-            "T3_Trickster_Esperanza",
-            "T3_Pure_Blade"
+            "T3_Trickster_Esperanza"
         ],
         "tags": [
             "AutoPromote",
@@ -95,7 +94,7 @@
             ],
             [
                 1,
-                "Crit_P10"
+                "Crit_P10_hide"
             ],
             [
                 1,
@@ -108,7 +107,7 @@
         ],
         "wexp_gain": {
             "Sword": [
-                2,
+                true,
                 60,
                 360
             ],
@@ -156,6 +155,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -163,8 +167,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Rogue (F) {Unknown}-stand",
-        "combat_anim_nid": "Rogue_E",
+        "map_sprite_nid": "Rogue (F) Trickster-Valkyrie {Aruka, Kenpuhu}-stand",
+        "combat_anim_nid": "Rogue_Female",
         "fields": []
     }
 ]

@@ -2,7 +2,7 @@
     {
         "nid": "Transmutation_Corporal",
         "name": "Transmutation Corporal",
-        "desc": "Ancient and archaic art that changes the victim's body at the user's will.\n<green>Skills:</>Physical Change\n<orange>Element:</><icon>Dark</>",
+        "desc": "Ancient and archaic art that changes the victim's body at the user's will.\n<green>Skills:</>Ancient Pact (E), Physical Change\n<orange>Element:</><icon>Dark</>",
         "icon_nid": "{Zarg} Dark 12",
         "icon_index": [
             0,
@@ -51,7 +51,7 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "E"
             ],
             [
                 "map_hit_add_blend",
@@ -76,7 +76,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Physical_Change"
+                    "Physical_Change",
+                    "Ancient_Pact_E"
                 ]
             ],
             [
@@ -90,10 +91,6 @@
                 [
                     "Dark"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"_Kazuma\").wexp['Dark'] >=180 and u(\"_Kazuma\").wexp['Dark'] < 300"
             ]
         ]
     }

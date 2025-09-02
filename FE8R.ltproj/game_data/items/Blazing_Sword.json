@@ -2,10 +2,10 @@
     {
         "nid": "Blazing_Sword",
         "name": "Blazing Sword",
-        "desc": "A sword burning with passion.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
-        "icon_nid": "{Batima} Flame Sword-1.png",
+        "desc": "A sword burning with passion.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>), +5 SPD.",
+        "icon_nid": "New X rank stuff",
         "icon_index": [
-            0,
+            9,
             0
         ],
         "components": [
@@ -83,10 +83,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 240 and u(\"Esperanza\").wexp['Sword'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -115,6 +111,15 @@
             [
                 "alternate_resist_formula",
                 "DEFENSE"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
             ]
         ]
     }

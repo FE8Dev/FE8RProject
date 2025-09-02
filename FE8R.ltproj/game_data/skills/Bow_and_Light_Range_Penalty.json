@@ -19,7 +19,7 @@
             ],
             [
                 "dynamic_accuracy",
-                "-5 * (utils.calculate_distance(unit.position, target.position) -2) if target and utils.calculate_distance(unit.position, target.position) > 2 and utils.calculate_distance(unit.position, target.position) in item_funcs.get_range(unit, unit.get_weapon()) else 0"
+                "-25 * (utils.calculate_distance(unit.position, target.position) -2) if target and utils.calculate_distance(unit.position, target.position) > 2 and utils.calculate_distance(unit.position, target.position) in item_funcs.get_range(unit, unit.get_weapon()) else 0"
             ]
         ]
     }

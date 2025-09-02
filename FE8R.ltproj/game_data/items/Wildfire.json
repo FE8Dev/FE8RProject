@@ -2,11 +2,11 @@
     {
         "nid": "Wildfire",
         "name": "Wildfire",
-        "desc": "Bring forth your will with the sword of flames.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>)",
-        "icon_nid": "{Batima} Swordslayer-1.png",
+        "desc": "Bring forth your will with the sword of flames.\n<green>Skills:</>Improved Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>), +10 SPD.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
-            0,
-            0
+            36,
+            1
         ],
         "components": [
             [
@@ -83,10 +83,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] >= 420 and u(\"Esperanza\").wexp['Sword'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -115,6 +111,15 @@
             [
                 "magic_at_range",
                 null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
             ]
         ]
     }

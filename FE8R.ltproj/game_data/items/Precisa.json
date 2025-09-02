@@ -3,9 +3,9 @@
         "nid": "Precisa",
         "name": "Precisa",
         "desc": "A bow of killers, raining powerful arrows from afar.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Flying</><icon>Horse</></><icon>Mounted</><icon>Dragon</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SKL')))}</>)",
-        "icon_nid": "{2WB} (Icon Blitz 1) Silver Arch1",
+        "icon_nid": "Bows Sheet",
         "icon_index": [
-            0,
+            3,
             0
         ],
         "components": [
@@ -75,10 +75,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Bow'] >= 360"
             ],
             [
                 "alternate_damage_formula",

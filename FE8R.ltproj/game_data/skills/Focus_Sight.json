@@ -2,7 +2,7 @@
     {
         "nid": "Focus_Sight",
         "name": "Focus Sight",
-        "desc": "+6 MAG when unit is at Max HP.",
+        "desc": "Increase unit's MAG by 25% when unit is at Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -18,11 +18,11 @@
                 "unit.get_hp() == unit.get_max_hp()"
             ],
             [
-                "stat_change",
+                "stat_multiplier",
                 [
                     [
                         "MAG",
-                        6
+                        1.25
                     ]
                 ]
             ]

@@ -5,11 +5,11 @@
         "desc": "Swordfighters with superior speed and skill. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Myrmidon_Esperanza",
+        "promotes_from": "Myrmidon_Female",
         "turns_into": [
             "T3_Salamander_Rider",
-            "T3_Female_Dread_Fighter_Esperanza",
-            "T3_Esperanza_Trueblade"
+            "T3_Esperanza_Trueblade",
+            "T3_Female_Dread_Fighter_Esperanza"
         ],
         "tags": [
             "AutoPromote",
@@ -92,12 +92,12 @@
             ],
             [
                 1,
-                "Crit_P10"
+                "Crit_P10_hide"
             ]
         ],
         "wexp_gain": {
             "Sword": [
-                2,
+                true,
                 60,
                 360
             ],
@@ -145,6 +145,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Swordmaster",
@@ -153,7 +158,7 @@
             0
         ],
         "map_sprite_nid": "Swordmaster (F) {IS}-stand",
-        "combat_anim_nid": "Swordmaster_E",
+        "combat_anim_nid": "Marisa_Swordmaster",
         "fields": []
     }
 ]

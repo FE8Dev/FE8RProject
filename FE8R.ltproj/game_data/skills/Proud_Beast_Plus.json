@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Proud_Beast_Plus",
+        "name": "Proud Beast+",
+        "desc": "When own HP is above 70% always attack first and gain 20 avoid.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            49
+        ],
+        "components": [
+            [
+                "vantage",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() >= unit.get_max_hp() * 0.7"
+            ],
+            [
+                "eval_avoid",
+                "20"
+            ]
+        ]
+    }
+]

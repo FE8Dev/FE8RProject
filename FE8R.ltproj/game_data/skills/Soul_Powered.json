@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Soul_Powered",
+        "name": "Soul Powered",
+        "desc": "Double your Damage given.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            51
+        ],
+        "components": [
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "len([s for s in unit.skills if s.nid == 'Souls']) >= 10"
+            ],
+            [
+                "damage_multiplier",
+                2.0
+            ]
+        ]
+    }
+]

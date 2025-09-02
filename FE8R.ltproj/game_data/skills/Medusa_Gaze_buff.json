@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Medusa_Gaze_buff",
+        "name": "Medusa gaze",
+        "desc": "+50% damage against Stunned enemies.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            6,
+            6
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Stun')"
+            ]
+        ]
+    }
+]

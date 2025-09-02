@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Hellborn",
+        "name": "Hellborn",
+        "desc": "Gain 60% HP Absorb and 20% Damage given against seared enemies.\nUnit can teleport next to any seared unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            8,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "lifelink",
+                0.6
+            ],
+            [
+                "damage_multiplier",
+                1.2
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Seared')"
+            ]
+        ]
+    }
+]

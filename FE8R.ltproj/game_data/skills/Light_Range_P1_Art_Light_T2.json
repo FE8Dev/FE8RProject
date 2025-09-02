@@ -11,17 +11,19 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light'"
+                "item_system.weapon_type(unit, item) in ('Light', 'Staff')"
             ],
             [
                 "feat",
                 null
             ],
             [
+                "modify_maximum_range",
+                2
+            ],
+            [
                 "copysafe",
-                [
-                    "Light_Range_P1_Staff_Feat_hide"
-                ]
+                []
             ]
         ]
     }

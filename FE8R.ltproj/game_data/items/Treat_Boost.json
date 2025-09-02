@@ -1,0 +1,65 @@
+[
+    {
+        "nid": "Treat_Boost",
+        "name": "Treat",
+        "desc": "Gain +50 avoid for 1 turn.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    85,
+                    170,
+                    255
+                ]
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Buff"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Treat_avoid"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garmr"
+                ]
+            ]
+        ]
+    }
+]

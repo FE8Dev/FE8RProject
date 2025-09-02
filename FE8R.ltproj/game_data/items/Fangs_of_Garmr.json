@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Fangs_of_Garmr",
+        "name": "Fangs of Garmr",
+        "desc": "The true power of Hell's Guardian, regained at last.\n<green>Skills:</>Proud Beast+\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</> x3<icon>Seared</> (AOE:3)<icon>Shadowblight</>, Extremely Burned\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "New Monsters",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                24
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                40
+            ],
+            [
+                "weight",
+                16
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garmr"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Proud_Beast_Plus",
+                    "Sear_Explosion"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Bleeding",
+                    "Bleeding",
+                    "Bleeding",
+                    "Burned",
+                    "Burned_Boss"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire",
+                    "Dark"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_STRONG"
+            ]
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Galeforce_Soul",
+        "name": "Galeforce",
+        "desc": "Once per turn refresh yourself after killing an Enemy.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            8,
+            4
+        ],
+        "components": [
+            [
+                "galeforce",
+                null
+            ],
+            [
+                "charges_per_turn",
+                1
+            ],
+            [
+                "condition",
+                "len([s for s in unit.skills if s.nid == 'Souls']) >= 5"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    }
+]

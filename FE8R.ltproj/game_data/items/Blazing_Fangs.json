@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Blazing_Fangs",
+        "name": "Blazing Fangs",
+        "desc": "Fangs that burn everything in their way.\n<green>Skills:</>Proud Beast+\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Bleed</> x2<icon>Seared</> (AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + MAG (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MAG')))}</>).",
+        "icon_nid": "12-29-24 New Monsters",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                30
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Monster"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Garmr"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Proud_Beast_Plus",
+                    "Seared_AOE_Splash"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Seared",
+                    "Bleeding",
+                    "Bleeding"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SPD_STRONG"
+            ]
+        ]
+    }
+]

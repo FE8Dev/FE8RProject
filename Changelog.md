@@ -1,3 +1,17 @@
+tbr
+```
+Small buffs to Scintilla, Arno, and Moze.
+Adept Eye, Focus Sight, Hex, Anathema, Elegant Form, Dedication, and Shot Assistance have been buffed
+Fixed Vanessa's Lance not evolving properly.
+Nerfed, Thunder Bow line (halved MT), Light Bow (On CD:2 now), and changed Water Bow (AOE:2 Blast with CD:2).
+Added MyUnit to post map for DG unit training.
+Increased the light and bow range penalty for 3+ range to 25. So 4 range attacks will be -50 Hit.
+Added new DG units, Esperanza, Kazuma, and Garmr.
+Kyudoka added to MyUnit starting class Roster.
+Buff to Lute's Base MAG and RES. Small buff to Lute's MAG and RES growths.
+
+
+
 08-27-25
 ```
 Made trainee seed set you to 0xp after leveling, this allows the use of BXP
@@ -13,6 +27,10 @@ Franz's Anima magic has been given scaling.
 Scaling has been added to Garcia's Axes and Swords.
 Blade Scroll has been updated.
 Starting level for all units on 5x increased to level 15.
+The dropped item for the achievment for chapter 2 has been moved to be way closer, so Vanessa can participate in the battle more.
+Neimi's Mahou Shoujo class now has proper Bow access.
+
+
 
 
 

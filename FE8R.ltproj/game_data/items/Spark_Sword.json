@@ -2,10 +2,10 @@
     {
         "nid": "Spark_Sword",
         "name": "Spark Sword",
-        "desc": "A sword that can send sparks of fire.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD.",
-        "icon_nid": "{Batima} Bull Blade-1.png",
+        "desc": "A sword that can send sparks of fire.\n<green>Skills:</>Vision, Flash Step\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD, +1 SPD.",
+        "icon_nid": "Neimi and others new weapons",
         "icon_index": [
-            0,
+            3,
             0
         ],
         "components": [
@@ -83,10 +83,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Sword'] < 120"
-            ],
-            [
                 "item_tags",
                 [
                     "Fire"
@@ -107,6 +103,15 @@
             [
                 "weapon_rank",
                 "E"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        1
+                    ]
+                ]
             ]
         ]
     }

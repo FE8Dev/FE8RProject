@@ -5,11 +5,11 @@
         "desc": "A fearsome member of a mercenary guild. Excels in heavy blades. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Mercenary_Esperanza",
+        "promotes_from": "Mercenary",
         "turns_into": [
+            "T3_Spartan",
             "T3_Blademaster_Esperanza",
-            "T3_Gladiator_Esperanza",
-            "T3_Spartan"
+            "T3_Gladiator_Esperanza"
         ],
         "tags": [
             "AutoPromote",
@@ -91,12 +91,12 @@
             ],
             [
                 1,
-                "Crit_P10"
+                "Crit_P10_hide"
             ]
         ],
         "wexp_gain": {
             "Sword": [
-                2,
+                true,
                 60,
                 360
             ],
@@ -144,6 +144,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Vanguard",
@@ -151,8 +156,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Mercenary (F) {FEGirls}-stand",
-        "combat_anim_nid": "Trooper_E",
+        "map_sprite_nid": "Sage (F) Battle Sage Sword {topazlight}-stand",
+        "combat_anim_nid": "Chief_Female",
         "fields": []
     }
 ]

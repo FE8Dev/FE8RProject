@@ -1,0 +1,39 @@
+[
+    {
+        "nid": "Phantom_Fists_1_hide",
+        "name": "Phantom Fists",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "unit_funcs.check_focus(unit, 3) == 0\n"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        10
+                    ],
+                    [
+                        "SKL",
+                        10
+                    ],
+                    [
+                        "SPD",
+                        10
+                    ]
+                ]
+            ]
+        ]
+    }
+]

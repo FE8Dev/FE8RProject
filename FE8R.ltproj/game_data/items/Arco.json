@@ -3,10 +3,10 @@
         "nid": "Arco",
         "name": "Arco",
         "desc": "A simple bow made for hunting.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</></><icon>Horse</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>)",
-        "icon_nid": "{2WB} (Icon Blitz 1) Steel Arch1",
+        "icon_nid": "Neimi and others new weapons",
         "icon_index": [
-            0,
-            0
+            9,
+            1
         ],
         "components": [
             [
@@ -75,10 +75,6 @@
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
-            ],
-            [
-                "eval_available",
-                "u(\"Esperanza\").wexp['Bow'] < 180"
             ],
             [
                 "alternate_damage_formula",
