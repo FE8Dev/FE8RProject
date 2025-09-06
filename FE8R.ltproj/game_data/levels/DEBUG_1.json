@@ -617,11 +617,11 @@
                 "nid": "113",
                 "variant": null,
                 "level": 20,
-                "klass": "T3_Male_Archbishop_Artur",
+                "klass": "T3_Male_War_Monk",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Heat_Dagger",
+                        "Water_Warhammer",
                         false
                     ]
                 ],
@@ -641,27 +641,17 @@
                 "nid": "120",
                 "variant": null,
                 "level": 15,
-                "klass": "Wyvern_Rider",
+                "klass": "Wyvern Knight",
                 "faction": "Soldier",
                 "starting_items": [
                     [
                         "Fire_Axe",
                         false
-                    ],
-                    [
-                        "Vulnerary",
-                        false
-                    ],
-                    [
-                        "Bottled_Lightning",
-                        false
-                    ],
-                    [
-                        "Levin_Spear",
-                        false
                     ]
                 ],
-                "starting_skills": [],
+                "starting_skills": [
+                    "Quick_Arcane_Barrier"
+                ],
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
@@ -791,7 +781,7 @@
                         false
                     ],
                     [
-                        "Elysian_Whip",
+                        "Kneader",
                         false
                     ]
                 ],
@@ -803,8 +793,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    6,
-                    15
+                    11,
+                    19
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -813,21 +803,21 @@
                 "nid": "112",
                 "variant": null,
                 "level": 5,
-                "klass": "Warrior",
+                "klass": "Pirate",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Earth_Bow",
+                        "Earth_Warhammer",
                         false
                     ]
                 ],
                 "starting_skills": [],
                 "team": "enemy",
-                "ai": "None",
+                "ai": "Attack",
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    14,
+                    15,
                     19
                 ],
                 "starting_traveler": null,
@@ -970,8 +960,8 @@
                 "roam_ai": null,
                 "ai_group": "",
                 "starting_position": [
-                    7,
-                    14
+                    10,
+                    19
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1003,7 +993,7 @@
                 "generic": false
             },
             {
-                "nid": "Kazuma",
+                "nid": "Tanaka",
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
@@ -1068,6 +1058,11 @@
             }
         ],
         "unit_groups": [],
-        "ai_groups": []
+        "ai_groups": [
+            {
+                "nid": "",
+                "trigger_threshold": 1
+            }
+        ]
     }
 ]

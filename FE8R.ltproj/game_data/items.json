@@ -14667,6 +14667,10 @@
             [
                 "enemy_blast_aoe",
                 2
+            ],
+            [
+                "cooldown",
+                2
             ]
         ]
     },
@@ -25590,9 +25594,7 @@
                 "statuses_on_hit",
                 [
                     "Cursed_2",
-                    "Shadow_Blight",
-                    "Venomous_Effect",
-                    "Venomous_Effect"
+                    "Shadow_Blight"
                 ]
             ],
             [
@@ -40031,7 +40033,7 @@
     {
         "nid": "Wind_Scroll",
         "name": "Wind Scroll",
-        "desc": "A scroll that let's one harness the essence of wind.\n<blue>On Hold:</>Attacks gain effectiveness against Seared/Flying enemies, but reduce DEF/RES by 25%.",
+        "desc": "A scroll that lets one harness the essence of wind.\n<blue>On Hold:</>Attacks gain effectiveness against Seared/Flying enemies, but reduce DEF/RES by 25%.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             4,
@@ -74063,7 +74065,7 @@
     {
         "nid": "Amaterasu",
         "name": "Amaterasu",
-        "desc": "A holy diety that burns with fire.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A holy deity that burns with fire.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             2,
@@ -141880,7 +141882,7 @@
             ],
             [
                 "crit",
-                10
+                20
             ],
             [
                 "weight",
@@ -141948,7 +141950,7 @@
             ],
             [
                 "crit",
-                15
+                25
             ],
             [
                 "weight",
@@ -142028,7 +142030,7 @@
             ],
             [
                 "crit",
-                20
+                30
             ],
             [
                 "weight",
@@ -142081,7 +142083,7 @@
     {
         "nid": "Mani_Katti",
         "name": "Mani Katti",
-        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Triangle Expert, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), ignores half of enemy's defense, also acts like Anima weapon..",
+        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Triangle Expert, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), ignores half of enemy's defense, also acts like Anima weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -142110,7 +142112,7 @@
             ],
             [
                 "crit",
-                30
+                50
             ],
             [
                 "weight",
@@ -145588,7 +145590,7 @@
     {
         "nid": "Scare",
         "name": "Scare",
-        "desc": "Ominous magic that will leave it's victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Petrify</>",
+        "desc": "Ominous magic that will leave its victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Petrify</>",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             1,
@@ -145695,7 +145697,7 @@
     {
         "nid": "Terrify",
         "name": "Terrify",
-        "desc": "Terifying magic that will leave it's victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Petrify</>Curse(8), (AOE:2)",
+        "desc": "Terifying magic that will leave its victim petrified for one turn. Starts on cooldown. <green>CD:3</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Petrify</>Curse(8), (AOE:2)",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             4,
@@ -145917,7 +145919,7 @@
     {
         "nid": "Reaper_Memento",
         "name": "Reaper's Memento",
-        "desc": "A keepsake of the former Reaper. It's magic hasn't fully faded yet.\n<green>Skills:</>Power Chop (C)\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
+        "desc": "A keepsake of the former Reaper. Its magic hasn't fully faded yet.\n<green>Skills:</>Power Chop (C)\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             11,
@@ -146003,7 +146005,7 @@
     {
         "nid": "Bloodied_Memento",
         "name": "Bloodied Memento",
-        "desc": "The blood of your foes seems to have restored a bit of it's power. It hungers for more.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
+        "desc": "The blood of your foes seems to have restored a bit of its power. It hungers for more.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, uses MAG, targets DEF",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             12,
@@ -146099,7 +146101,7 @@
     {
         "nid": "Mortal_Reminder",
         "name": "Mortal Reminder",
-        "desc": "The Axe has been fully restored to it's former glory. But it hungers still...\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>Cleave AOE attack, MAG + STR (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets DEF",
+        "desc": "The Axe has been fully restored to its former glory. But it hungers still...\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>Cleave AOE attack, MAG + STR (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets DEF",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             8,
@@ -146195,7 +146197,7 @@
     {
         "nid": "Reaper_Revenge",
         "name": "Reaper's Revenge",
-        "desc": "With this last transformation it finally has the power to avenge it's former wielder.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, MAG + STR + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets DEF, HP Absorb(20%)",
+        "desc": "With this last transformation it finally has the power to avenge its former wielder.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>cleave AOE attack, MAG + STR + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets DEF, HP Absorb(20%)",
         "icon_nid": "Icon Sheet Oliver",
         "icon_index": [
             2,
@@ -159244,7 +159246,7 @@
     {
         "nid": "Esperanza_Arsenal",
         "name": "Esperanza's Arsenal",
-        "desc": "Esperanza's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Bow</></><icon>Axe</><icon>Amina</>\n",
+        "desc": "Esperanza's personal weapons.\n<red>Prof:</><icon>Sword</><icon>Bow</><icon>Axe</><icon>Anima</>\n",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             6,
@@ -159820,7 +159822,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Explosion"
+                "Bolganone"
             ],
             [
                 "multi_status_on_equip",
@@ -159990,7 +159992,7 @@
     {
         "nid": "Espada",
         "name": "Espada",
-        "desc": "A sharp weapon that strikes down a variety of foes.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</>\n<pink>Misc:</>SKL + SPD/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), +3 SPD.",
+        "desc": "A sharp weapon that strikes down a variety of foes.\n<green>Skills:</>Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</><icon>Thief</><icon>Mounted</>\n<pink>Misc:</>SKL + SPD/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), +3 SPD.",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             1,
@@ -160091,7 +160093,7 @@
     {
         "nid": "Cana",
         "name": "Cana",
-        "desc": "A weapon that finds weakness in many enemies.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), +5 SPD.",
+        "desc": "A weapon that finds weakness in many enemies.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</><icon>Thief</><icon>Mounted</><icon>Flying</><icon>Dragon</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), +5 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             11,
@@ -160194,7 +160196,7 @@
     {
         "nid": "Cuchilla",
         "name": "Cuchilla",
-        "desc": "A masterful blade that slips past the armor and scales of many creatures.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</>\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>), +10 SPD.",
+        "desc": "A masterful blade that slips past the armor and scales of many creatures.\n<green>Skills:</>Improved Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</><icon>Thief</><icon>Mounted</><icon>Flying</><icon>Dragon</><icon>Infantry</><icon>Magic</>\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))}</>), +10 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             34,
@@ -160299,7 +160301,7 @@
     {
         "nid": "Estoque",
         "name": "Estoque",
-        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</></><icon>Thief</><icon>Mounted</></><icon>Flying</><icon>Dragon</></><icon>Infantry</><icon>Magic</></><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>), +15 SPD.",
+        "desc": "A heavenly weapon, able to find weakness in all who walk the earth.\n<green>Skills:</>Superior Vision, Flash Step\n<red>Effective:</><icon>Armor</><icon>Horse</><icon>Thief</><icon>Mounted</><icon>Flying</><icon>Dragon</><icon>Infantry</><icon>Magic</><icon>Dark</><icon>Monster</>\n<pink>Misc:</>SKL + SPD + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')))(unit.get_stat('STR')))}</>), +15 SPD.",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             2,
@@ -160406,7 +160408,7 @@
     {
         "nid": "Arco",
         "name": "Arco",
-        "desc": "A simple bow made for hunting.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</></><icon>Horse</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>)",
+        "desc": "A simple bow made for hunting.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>)",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             9,
@@ -160501,7 +160503,7 @@
     {
         "nid": "Disparar",
         "name": "Disparar",
-        "desc": "A warbow made for fighting beasts.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</><icon>Horse</></><icon>Mounted</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>)",
+        "desc": "A warbow made for fighting beasts.\n<green>Skills:</>Vision\n<red>Effective:</><icon>Flying</><icon>Horse</><icon>Mounted</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>)",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             8,
@@ -160596,7 +160598,7 @@
     {
         "nid": "Precisa",
         "name": "Precisa",
-        "desc": "A bow of killers, raining powerful arrows from afar.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Flying</><icon>Horse</></><icon>Mounted</><icon>Dragon</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SKL')))}</>)",
+        "desc": "A bow of killers, raining powerful arrows from afar.\n<green>Skills:</>Improved Vision\n<red>Effective:</><icon>Flying</><icon>Horse</><icon>Mounted</><icon>Dragon</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SKL')))}</>)",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             3,
@@ -160691,7 +160693,7 @@
     {
         "nid": "Hacha",
         "name": "Hacha",
-        "desc": "A nimble axe that cleaves through frost.\n<green>Skills:</>Vision, Power Chop (E)\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>)",
+        "desc": "A nimble axe that cleaves through frost.\n<green>Skills:</>Vision, Power Chop (E)\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Frozen</><icon>Breached</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>)",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             6,
@@ -160794,7 +160796,7 @@
     {
         "nid": "Dual_Cortar",
         "name": "Dual Cortar",
-        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision, Power Chop (C)\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
+        "desc": "A stronger axe with powers of both heat and cold.\n<green>Skills:</>Vision, Power Chop (C)\n<red>Effective:</><icon>Frozen</><icon>Seared</>\n<violet>Inflicts:</><icon>Frozen</><icon>Breached</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>)",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             5,
@@ -160898,7 +160900,7 @@
     {
         "nid": "Trinity_Katto",
         "name": "Trinity Katto",
-        "desc": "A powerful axe with that can slash through a trinity of elements.\n<green>Skills:</>Improved Vision, Power Chop (SS)\n<red>Effective:</><icon>Frozen</><icon>Seared</></><icon>Thunder</>\n<violet>Inflicts:</><icon>Frozen</></><icon>Breached</><icon>Seared</></><icon>Stunned</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>)",
+        "desc": "A powerful axe with that can slash through a trinity of elements.\n<green>Skills:</>Improved Vision, Power Chop (SS)\n<red>Effective:</><icon>Frozen</><icon>Seared</><icon>Thunder</>\n<violet>Inflicts:</><icon>Frozen</><icon>Breached</><icon>Seared</><icon>Stunned</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>)",
         "icon_nid": "Jonathan Weapons 06-24-25",
         "icon_index": [
             4,
@@ -161266,7 +161268,7 @@
             ],
             [
                 "battle_cast_anim",
-                "AquaExplosion"
+                "Triple_Burst"
             ],
             [
                 "magic",
@@ -161311,9 +161313,9 @@
         ]
     },
     {
-        "nid": "Kazuma_Arsenal",
-        "name": "Kazuma Arsenal",
-        "desc": "Kazuma personal spells, created to imitate the power of the strongest beings.\n<red>Prof:</><icon>Dark</><icon>Axe</><icon>Monster</>",
+        "nid": "Tanaka_Arsenal",
+        "name": "Tanaka's Arsenal",
+        "desc": "Tanaka's personal spells, created to imitate the power of the strongest beings.\n<red>Prof:</><icon>Dark</><icon>Axe</><icon>Monster</>",
         "icon_nid": "{Zarg} Dark 12",
         "icon_index": [
             0,
@@ -161342,7 +161344,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ]
         ]
@@ -161431,7 +161433,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -161526,7 +161528,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -161621,7 +161623,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -161722,7 +161724,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -161800,7 +161802,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -161886,7 +161888,7 @@
             [
                 "prf_unit",
                 [
-                    "Kazuma"
+                    "Tanaka"
                 ]
             ],
             [
@@ -162123,14 +162125,7 @@
             [
                 "multi_item",
                 [
-                    "Ash_Fangs",
-                    "Reignited_Fangs",
-                    "Blazing_Fangs",
-                    "Fangs_of_Garmr",
-                    "Burning_Chasm",
-                    "Hellish_Eruption",
-                    "Soul_Drain",
-                    "Soul_Reaping"
+                    "Ash_Fangs"
                 ]
             ],
             [
@@ -168187,8 +168182,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster",
-                        "Shadow"
+                        "Drenched",
+                        "Armor"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 32,
@@ -169560,6 +169555,91 @@
             [
                 "ignore_weapon_disadvantage",
                 null
+            ]
+        ]
+    },
+    {
+        "nid": "Sky_Piercing_Arrow_item",
+        "name": "Sky Piercing Arrow item",
+        "desc": "<red>CA:</>A powerful 7 tile Line Attack, cannot Miss or double, Applies flinch on hit, Bows only. <green>CD:3 Turns</>",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            40
+        ],
+        "components": [
+            [
+                "line_aoe",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                7
+            ],
+            [
+                "status_on_hit",
+                "Flinch"
+            ],
+            [
+                "hit",
+                999
+            ],
+            [
+                "no_double",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Hunt_the_Wicked_Hunt_the_Beast_Item",
+        "name": "Hunt the Wicked Hunt the Beast Item",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster"
+                    ],
+                    "effective_multiplier": 4.0,
+                    "effective_bonus_damage": 100,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Fell_Arrow_item",
+        "name": "Fell Arrow item",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            25
+        ],
+        "components": [
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Light"
+                    ],
+                    "effective_multiplier": 5.0,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     },
@@ -172282,6 +172362,128 @@
         ]
     },
     {
+        "nid": "Protect",
+        "name": "Protect",
+        "desc": "Makes allies inmune to damage and status effects during one turn. One use per chapter.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                3
+            ],
+            [
+                "status_on_hit",
+                "Protected"
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": false
+                }
+            ],
+            [
+                "map_cast_anim",
+                "StatUpSpark"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    0,
+                    255,
+                    255
+                ]
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_cast_sfx",
+                "SkillActivate"
+            ]
+        ]
+    },
+    {
+        "nid": "Blinding_Wave",
+        "name": "Blinding Wave",
+        "desc": "Makes attacks on this turn have an AOE effect and inflict Reduced Vision on enemies. One use per chapter.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            33
+        ],
+        "components": [
+            [
+                "usable",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    139,
+                    255,
+                    139
+                ]
+            ],
+            [
+                "c_uses",
+                1
+            ],
+            [
+                "uses_options",
+                {
+                    "lose_uses_on_miss": false,
+                    "one_loss_per_combat": true
+                }
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "status_on_hit",
+                "Blinding_Wave_Effect"
+            ]
+        ]
+    },
+    {
+        "nid": "Blue_Crown_DG",
+        "name": "Blue Crown",
+        "desc": "Neither unit or any unit in a 4 spaces range can crit.",
+        "icon_nid": "Consumables",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "value",
+                5000
+            ],
+            [
+                "status_on_hold",
+                "Misfortune"
+            ]
+        ]
+    },
+    {
         "nid": "Talking_Greataxe_DG",
         "name": "Talking Greataxe",
         "desc": "A talking axe that doesnt know when to shut up\n<pink>Misc:</>STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>) -30 Avoid/Dodge, +30 Hit/Crit.",
@@ -172822,181 +173024,9 @@
         ]
     },
     {
-        "nid": "The_fools_Ring_DG",
-        "name": "The Fool's Ring",
-        "desc": "It's users wanders trough life without a care about safety, only focusing on the way foward.\n-99%HP and 99%HP Growth, the user gains vantage, desperation; Astra+ and Absolute counter.\ncost:10000\n",
-        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
-        "icon_index": [
-            11,
-            10
-        ],
-        "components": [
-            [
-                "value",
-                10000
-            ],
-            [
-                "multi_status_on_hold",
-                [
-                    "Astra_Plus_Art",
-                    "Fool_Debuff",
-                    "VantagenDesperation",
-                    "Absolute_counter"
-                ]
-            ]
-        ]
-    },
-    {
-        "nid": "Fell_Arrow_item",
-        "name": "Fell Arrow item",
-        "desc": "",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            14,
-            25
-        ],
-        "components": [
-            [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Flying",
-                        "Light"
-                    ],
-                    "effective_multiplier": 5.0,
-                    "effective_bonus_damage": 5,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
-            ]
-        ]
-    },
-    {
-        "nid": "Protect",
-        "name": "Protect",
-        "desc": "Makes allies inmune to damage and status effects during one turn. One use per chapter.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            1
-        ],
-        "components": [
-            [
-                "spell",
-                null
-            ],
-            [
-                "ally_blast_aoe",
-                3
-            ],
-            [
-                "status_on_hit",
-                "Protected"
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": false
-                }
-            ],
-            [
-                "map_cast_anim",
-                "StatUpSpark"
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    0,
-                    255,
-                    255
-                ]
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "map_cast_sfx",
-                "SkillActivate"
-            ]
-        ]
-    },
-    {
-        "nid": "Blinding_Wave",
-        "name": "Blinding Wave",
-        "desc": "Makes attacks on this turn have an AOE effect and inflict Reduced Vision on enemies. One use per chapter.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            6,
-            33
-        ],
-        "components": [
-            [
-                "usable",
-                null
-            ],
-            [
-                "target_ally",
-                null
-            ],
-            [
-                "map_hit_add_blend",
-                [
-                    139,
-                    255,
-                    139
-                ]
-            ],
-            [
-                "c_uses",
-                1
-            ],
-            [
-                "uses_options",
-                {
-                    "lose_uses_on_miss": false,
-                    "one_loss_per_combat": true
-                }
-            ],
-            [
-                "attack_after_combat",
-                null
-            ],
-            [
-                "status_on_hit",
-                "Blinding_Wave_Effect"
-            ]
-        ]
-    },
-    {
-        "nid": "Blue_Crown",
-        "name": "Blue Crown",
-        "desc": "Neither unit or any unit in a 4 spaces range can crit.",
-        "icon_nid": "Consumables",
-        "icon_index": [
-            1,
-            0
-        ],
-        "components": [
-            [
-                "value",
-                5000
-            ],
-            [
-                "status_on_hold",
-                "Misfortune"
-            ]
-        ]
-    },
-    {
-        "nid": "Horse_Chain",
+        "nid": "Horse_Chain_DG",
         "name": "Horse Chain",
-        "desc": "<blue>For Horse units:</>User increases Hit/Avoid based on unit's internal level.",
+        "desc": "<blue>On Hold:</>User increases Hit/Avoid based on unit's internal level, Horse units only.",
         "icon_nid": "12-27-24 Accessories",
         "icon_index": [
             9,
@@ -173020,62 +173050,132 @@
         ]
     },
     {
-        "nid": "Sky_Piercing_Arrow_item",
-        "name": "Sky Piercing Arrow item",
-        "desc": "<red>CA:</>A powerful 7 tile Line Attack, cannot Miss or double, Applies flinch on hit, Bows only. <green>CD:3 Turns</>",
-        "icon_nid": "skill_icons",
+        "nid": "The_fools_Ring_DG",
+        "name": "The Fool's Ring",
+        "desc": "Its users wanders trough life without a care about safety, only focusing on the way foward.\n-99%HP and 99%HP Growth, the user gains vantage, desperation; Astra+ and Absolute counter.\ncost:10000\n",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
             11,
-            40
+            10
         ],
         "components": [
             [
-                "line_aoe",
-                null
+                "value",
+                10000
             ],
             [
-                "min_range",
-                1
-            ],
-            [
-                "max_range",
-                7
-            ],
-            [
-                "status_on_hit",
-                "Flinch"
-            ],
-            [
-                "hit",
-                999
-            ],
-            [
-                "no_double",
-                null
+                "multi_status_on_hold",
+                [
+                    "Astra_Plus_Art",
+                    "Fool_Debuff",
+                    "VantagenDesperation",
+                    "Absolute_counter"
+                ]
             ]
         ]
     },
     {
-        "nid": "Hunt_the_Wicked_Hunt_the_Beast_Item",
-        "name": "Hunt the Wicked Hunt the Beast Item",
-        "desc": "",
-        "icon_nid": null,
+        "nid": "Dark_Suit_DG",
+        "name": "Dark Suit",
+        "desc": "<blue>On Hold:</>Unit gains +1% in most stats for every enemy killed until end of chapter, but is always afflicted by Shadowblight and all weapons are considered Dark.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            12,
+            3
+        ],
+        "components": [
+            [
+                "value",
+                15000
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "Dark_Suit",
+                    "Shadow_Blight"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Stigma_Eye_DG",
+        "name": "Stigma Eye",
+        "desc": "<blue>On Hold:</>Attacks inflict Sealed and Reduced Vision, but -50 Avoid and x2 Damage recieved from Bows.",
+        "icon_nid": "Monster-Dragon",
         "icon_index": [
             0,
+            1
+        ],
+        "components": [
+            [
+                "value",
+                5000
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Sealed_Davius",
+                    "Reduced_Vision"
+                ]
+            ],
+            [
+                "status_on_hold",
+                "Stigma_Eyes_debuff"
+            ]
+        ]
+    },
+    {
+        "nid": "Medusa_Gaze_DG",
+        "name": "Medusa Gaze",
+        "desc": "<blue>On Hold:</>Attacks inflict Stun, +50% damage against Stunned enemies, but user can no longer counterattack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            51
+        ],
+        "components": [
+            [
+                "value",
+                7500
+            ],
+            [
+                "status_on_hit",
+                "Stun"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Medusa_Gaze_buff",
+                    "Medusa_Gaze_Debuff"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Ricochet_Shield_DG",
+        "name": "Ricochet Shield DG",
+        "desc": "\"Just parry it lmao\"\n%SLK/2 chance to reflect ranged attacks back to the attacker, only works on enemy phase\nby Rylen Amarian",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            11,
             0
         ],
         "components": [
             [
-                "effective_damage",
-                {
-                    "effective_tags": [
-                        "Monster"
-                    ],
-                    "effective_multiplier": 4.0,
-                    "effective_bonus_damage": 100,
-                    "show_effectiveness_flash": true,
-                    "weapon_effectiveness_multiplied": true
-                }
+                "value",
+                7000
+            ],
+            [
+                "multi_status_on_hold",
+                [
+                    "Ricochet_Shield_status"
+                ]
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Protective_Shade",
         "name": "Protector Shade",
-        "desc": "Unit is more likely to be targeted by enemies.\n+5 STR, SKL, SPD if unit is within 3 spaces of any Lord ally.",
+        "desc": "Unit is more likely to be targeted by enemies when unit is within 3 spaces of any Lord ally.\n+1 STR, SKL, SPD for every ally within 5 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -14,21 +14,8 @@
                 null
             ],
             [
-                "stat_change_expression",
-                [
-                    [
-                        "STR",
-                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
-                    ],
-                    [
-                        "SKL",
-                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
-                    ],
-                    [
-                        "SPD",
-                        "5*len([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
-                    ]
-                ]
+                "grey_if_inactive",
+                null
             ],
             [
                 "has_tags",

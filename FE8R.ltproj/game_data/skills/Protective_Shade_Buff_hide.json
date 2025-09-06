@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Protective_Shade_Buff_hide",
+        "name": "Protector Shade",
+        "desc": "+1 STR, SKL, SPD for every ally within 5 spaces.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            32
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "(unit_funcs.check_focus(unit, 5))"
+                    ],
+                    [
+                        "SKL",
+                        "(unit_funcs.check_focus(unit, 5))"
+                    ],
+                    [
+                        "SPD",
+                        "(unit_funcs.check_focus(unit, 5))"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

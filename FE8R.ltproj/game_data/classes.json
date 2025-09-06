@@ -23457,13 +23457,13 @@
                 300
             ],
             "Light": [
-                false,
-                0,
-                300
-            ],
-            "Anima": [
                 true,
                 300,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
                 480
             ],
             "Dark": [
@@ -33928,6 +33928,162 @@
         "fields": []
     },
     {
+        "nid": "T3_Magiteck_Knight_Ranger_Female",
+        "name": "Magiteck Knight",
+        "desc": "Riders who use recently discovered magical war technology. <icon>Horse</>",
+        "tier": 3,
+        "movement_group": "Light Cav",
+        "promotes_from": "Ranger",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 24,
+            "STR": 5,
+            "MAG": 0,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 5,
+            "DEF": 4,
+            "RES": 5,
+            "CON": 8,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -46,
+            "MAG": -14,
+            "SKL": -35,
+            "SPD": -25,
+            "LCK": -14,
+            "DEF": -32,
+            "RES": -32,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 130,
+            "STR": 90,
+            "MAG": 90,
+            "SKL": 100,
+            "SPD": 70,
+            "LCK": 40,
+            "DEF": 90,
+            "RES": 90,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 1,
+            "STR": 3,
+            "MAG": 3,
+            "SKL": 3,
+            "SPD": 2,
+            "LCK": 2,
+            "DEF": 1,
+            "RES": 3,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 94,
+            "MAG": 94,
+            "SKL": 100,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 90,
+            "RES": 90,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Magiteck_Blanks"
+            ],
+            [
+                15,
+                "Magiteck_Overdrive"
+            ],
+            [
+                1,
+                "Thief_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Magiteck_Blanks_Giver_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                true,
+                60,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                true,
+                300,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                480
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Bow Knight (M) {Der}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Bow_Knight",
+        "combat_anim_nid": "T3_Bow_Knight",
+        "fields": []
+    },
+    {
         "nid": "T3_Magiteck_Knight_Forde",
         "name": "Magiteck Knight",
         "desc": "Riders who use recently discovered magical war technology. <icon>Horse</>",
@@ -44234,7 +44390,7 @@
     {
         "nid": "T3_Male_Archbishop_Artur",
         "name": "Archbishop",
-        "desc": "Those who's faith have been tested and achived heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "Those whose faith have been tested and achieved heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Bishop_Male",
@@ -44387,7 +44543,7 @@
     {
         "nid": "T3_Male_Archbishop_Moulder",
         "name": "Archbishop",
-        "desc": "Those who's faith have been tested and achived heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "Those whose faith have been tested and achieved heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Bishop_Male",
@@ -44540,7 +44696,7 @@
     {
         "nid": "T3_Male_Archbishop_Ewan",
         "name": "Archbishop",
-        "desc": "Those who's faith have been tested and achived heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "Those whose faith have been tested and achieved heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Bishop_Male",
@@ -44693,7 +44849,7 @@
     {
         "nid": "T3_Female_Archbishop",
         "name": "Matriarch",
-        "desc": "Those who's faith have been tested and achived heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "Those whose faith have been tested and achieved heaven's grace. <icon>Infantry</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Bishop_Female",
@@ -55262,13 +55418,13 @@
                 null
             ]
         },
-        "icon_nid": "Vanguard (M) Sword&Axe {flasuban}",
+        "icon_nid": "Vanguard (M) Sword {Nuramon,Der}",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "T3_Vanguard",
-        "combat_anim_nid": "T3_Vanguard",
+        "map_sprite_nid": "Vanguard s",
+        "combat_anim_nid": "Vanguard_V2",
         "fields": []
     },
     {
@@ -55409,13 +55565,13 @@
                 null
             ]
         },
-        "icon_nid": "Vanguard (M) Sword&Axe {flasuban}",
+        "icon_nid": "Vanguard (M) Sword {Nuramon,Der}",
         "icon_index": [
             0,
             0
         ],
-        "map_sprite_nid": "T3_Vanguard",
-        "combat_anim_nid": "Ross_Vanguard",
+        "map_sprite_nid": "Vanguard s",
+        "combat_anim_nid": "Vanguard_V2",
         "fields": []
     },
     {
@@ -55562,7 +55718,7 @@
             0
         ],
         "map_sprite_nid": "T3_Vanguard",
-        "combat_anim_nid": "Ross_Vanguard",
+        "combat_anim_nid": "Vanguard_V2",
         "fields": []
     },
     {
@@ -61218,6 +61374,158 @@
         ],
         "map_sprite_nid": "T3_Sentinal",
         "combat_anim_nid": "T3_Sentinel",
+        "fields": []
+    },
+    {
+        "nid": "Guildmaster",
+        "name": "Guildmaster",
+        "desc": "Master mercenaries that are built for explosive attacks.. <icon>Infantry</>",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Chief",
+        "turns_into": [],
+        "tags": [
+            "Infantry"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 26,
+            "STR": 7,
+            "MAG": 1,
+            "SKL": 8,
+            "SPD": 7,
+            "LCK": 5,
+            "DEF": 7,
+            "RES": 6,
+            "CON": 15,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -35,
+            "MAG": 0,
+            "SKL": -42,
+            "SPD": -42,
+            "LCK": -28,
+            "DEF": -35,
+            "RES": -35,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 140,
+            "STR": 190,
+            "MAG": 100,
+            "SKL": 120,
+            "SPD": 100,
+            "LCK": 110,
+            "DEF": 140,
+            "RES": 130,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 2,
+            "STR": 4,
+            "MAG": 2,
+            "SKL": 2,
+            "SPD": 1,
+            "LCK": 2,
+            "DEF": 4,
+            "RES": 3,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 99,
+            "MAG": 93,
+            "SKL": 96,
+            "SPD": 93,
+            "LCK": 100,
+            "DEF": 98,
+            "RES": 95,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Charge_Blade"
+            ],
+            [
+                15,
+                "SAED"
+            ],
+            [
+                1,
+                "Mercenary_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                480
+            ],
+            "Axe": [
+                true,
+                300,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Halberdier (M) Dragoon Lance {Uncredited}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Vanguard s",
+        "combat_anim_nid": "Guildmaster",
         "fields": []
     },
     {
@@ -73447,7 +73755,7 @@
         "turns_into": [
             "T3_Blademaster_Gerik",
             "T3_Gladiator",
-            "T3_Spartan"
+            "Guildmaster"
         ],
         "tags": [
             "AutoPromote",
@@ -75654,6 +75962,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -77351,6 +77664,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Myrmidon",
@@ -77508,6 +77826,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -77679,6 +78002,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -77824,6 +78152,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -77981,6 +78314,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -78144,6 +78482,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Thief",
@@ -78296,6 +78639,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mercenary",
@@ -78445,6 +78793,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -78601,6 +78954,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -78767,6 +79125,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Wyvern_Lord",
@@ -78922,6 +79285,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -79086,6 +79454,11 @@
                 true,
                 120,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -79243,6 +79616,11 @@
                 true,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -79400,6 +79778,11 @@
                 false,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -79557,6 +79940,11 @@
                 false,
                 1,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -79714,6 +80102,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -79865,6 +80258,11 @@
             ],
             "Monster": [
                 true,
+                0,
+                null
+            ],
+            "VS_BOW": [
+                false,
                 0,
                 null
             ]
@@ -80020,6 +80418,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -80170,6 +80573,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -80334,6 +80742,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -80495,6 +80908,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -80653,6 +81071,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -80817,6 +81240,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -80977,6 +81405,11 @@
             "Monster": [
                 true,
                 60,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -81139,6 +81572,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -81297,6 +81735,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -81461,6 +81904,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -81610,6 +82058,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -81772,6 +82225,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mage (1)",
@@ -81920,6 +82378,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -82074,6 +82537,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dark Druid (M) Magic {CamusZekeSirius}",
@@ -82223,6 +82691,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -82539,6 +83012,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -82692,6 +83170,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -82851,6 +83334,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Vanguard",
@@ -82995,6 +83483,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -83159,6 +83652,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dragon Ashnard (U) Sword CROPPED {SamirPlayz, Huichelaar, Jj09}",
@@ -83310,6 +83808,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -83454,6 +83957,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -83621,6 +84129,11 @@
                 true,
                 1,
                 240
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harpy (U) {Sphealnuke}",
@@ -83791,6 +84304,11 @@
                 true,
                 60,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harpy (U) {Sphealnuke}",
@@ -83958,6 +84476,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harpy (U) {Sphealnuke}",
@@ -84106,6 +84629,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -84260,6 +84788,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sage",
@@ -84408,6 +84941,11 @@
             "Monster": [
                 true,
                 300,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -84559,6 +85097,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -84719,6 +85262,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Summoner (M) {Uncredited}",
@@ -84869,6 +85417,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -85039,6 +85592,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harrier (F) Magic {Melia}",
@@ -85196,6 +85754,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Mermaid (F) {N426}",
@@ -85349,6 +85912,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Mermaid (F) {N426}",
@@ -85496,6 +86064,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -85656,6 +86229,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Oni Chieftain (M) Axe {Dora Drago}",
@@ -85801,6 +86379,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -85954,6 +86537,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -86117,6 +86705,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Succubus Fallen Angel {SkidMarc25}",
@@ -86277,6 +86870,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -86446,6 +87044,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harrier (F) Magic {Melia}",
@@ -86606,6 +87209,11 @@
                 false,
                 0,
                 480
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Gargoyle Strigoi {Seal}",
@@ -86770,6 +87378,11 @@
                 true,
                 300,
                 480
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Succubus Fallen Angel {SkidMarc25}",
@@ -86923,6 +87536,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Shaman",
@@ -87073,6 +87691,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -87233,6 +87856,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Cantor (M) Gaiden, SoV {HyperGammaSpaces}",
@@ -87390,6 +88018,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Summoner (M) {Uncredited}",
@@ -87535,6 +88168,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -87690,6 +88328,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Summoner (M) {Uncredited}_1",
@@ -87842,6 +88485,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Moloch Sorcerer (U) T1 Style {Huichelaar}",
@@ -87989,6 +88637,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -88146,6 +88799,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic Lord (M) Crossbow {Aruka, Yggdra, N426}",
@@ -88290,6 +88948,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -88442,6 +89105,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -88602,6 +89270,11 @@
                 true,
                 120,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Slime",
@@ -88750,6 +89423,11 @@
             "Monster": [
                 true,
                 60,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -88904,6 +89582,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Succubus Fallen Angel {SkidMarc25}",
@@ -89057,6 +89740,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -89221,6 +89909,11 @@
                 true,
                 240,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Slime",
@@ -89372,6 +90065,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -90021,6 +90719,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": null,
@@ -90114,7 +90817,7 @@
             ],
             [
                 5,
-                "Anotomy_Master"
+                "Anatomy_Master"
             ],
             [
                 15,
@@ -90172,6 +90875,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -90322,6 +91030,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -90793,6 +91506,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": null,
@@ -90950,6 +91668,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -91111,6 +91834,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": null,
@@ -91258,6 +91986,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -91415,6 +92148,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -91564,6 +92302,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -91719,6 +92462,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -91879,6 +92627,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -92045,6 +92798,11 @@
                 0,
                 null
             ],
+            "VS_BOW": [
+                false,
+                0,
+                null
+            ],
             "Triangle_Lyn_Sword": [
                 false,
                 0,
@@ -92205,6 +92963,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Knight",
@@ -92360,6 +93123,11 @@
                 false,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -92515,6 +93283,11 @@
                 false,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -92674,6 +93447,11 @@
                 true,
                 120,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -92829,6 +93607,11 @@
                 true,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -92987,6 +93770,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -93151,6 +93939,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -93311,6 +94104,11 @@
             "Monster": [
                 true,
                 60,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -93473,6 +94271,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -93621,6 +94424,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -93775,6 +94583,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_General",
@@ -93923,6 +94736,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "General Shield (U) Cape Sword {Topazlight,SamirPlayz,Nura}",
@@ -94024,6 +94842,10 @@
                 "Protective_Shade"
             ],
             [
+                5,
+                "Protective_Shade_Buff_hide"
+            ],
+            [
                 15,
                 "Instant_Reaction"
             ]
@@ -94075,6 +94897,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -94234,6 +95061,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Trickster (M) Sword {Khrene The Wayfarer}",
@@ -94382,6 +95214,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -94538,6 +95375,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -94699,6 +95541,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Fire Dragon (Purple) {Max Limit}",
@@ -94854,6 +95701,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -95015,6 +95867,11 @@
                 true,
                 300,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Fire Dragon (Purple) {Max Limit}",
@@ -95173,6 +96030,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Fire Dragon (Purple) {Max Limit}",
@@ -95326,6 +96188,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -95487,6 +96354,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -95653,6 +96525,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -96276,6 +97153,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Mercenary",
@@ -96430,6 +97312,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -96590,6 +97477,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Cavalier (M) Helmless Axe {RobertFPY}",
@@ -96744,6 +97636,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -96905,6 +97802,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Great_Knight",
@@ -97060,6 +97962,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -97221,6 +98128,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Great_Knight",
@@ -97375,6 +98287,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Paladin",
@@ -97523,6 +98440,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -97681,6 +98603,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Swordmaster",
@@ -97830,6 +98757,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -97983,6 +98915,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -98140,6 +99077,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -98304,6 +99246,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Falcoknight",
@@ -98465,6 +99412,11 @@
                 true,
                 120,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -98622,6 +99574,11 @@
                 true,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -98775,6 +99732,11 @@
                 false,
                 0,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -98928,6 +99890,11 @@
                 false,
                 1,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete Fiery (M) {N426}",
@@ -99088,6 +100055,11 @@
             "Monster": [
                 true,
                 60,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -99250,6 +100222,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -99404,6 +100381,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -99564,6 +100546,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -99720,6 +100707,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dread Fighter (F) T3 Sword {Nuramon}",
@@ -99865,6 +100857,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -100188,6 +101185,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Harpy (U) {Sphealnuke}",
@@ -100345,6 +101347,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Ophanim (U) {Sphealnuke}",
@@ -100498,6 +101505,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -100658,6 +101670,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -100809,6 +101826,11 @@
             ],
             "Monster": [
                 true,
+                0,
+                null
+            ],
+            "VS_BOW": [
+                false,
                 0,
                 null
             ]
@@ -100964,6 +101986,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -101114,6 +102141,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -101278,6 +102310,11 @@
                 true,
                 60,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -101439,6 +102476,11 @@
                 true,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -101597,6 +102639,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -101761,6 +102808,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Manakete (U) {MeatOfJustice}",
@@ -101917,6 +102969,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Myrmidon",
@@ -102068,6 +103125,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -102213,6 +103275,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -102368,6 +103435,11 @@
                 true,
                 120,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -102516,6 +103588,11 @@
             "Monster": [
                 true,
                 60,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
                 null
             ]
         },
@@ -102675,6 +103752,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -102844,6 +103926,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dancer (F) {Orihara_Saki}",
@@ -102994,6 +104081,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -103150,6 +104242,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -103296,6 +104393,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -103457,6 +104559,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Great_Knight",
@@ -103610,6 +104717,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Citizen",
@@ -103756,6 +104868,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -103933,6 +105050,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Dark Knight (M) Sword {Pikmin, Jj09} 1",
@@ -104032,6 +105154,10 @@
             [
                 15,
                 "Colossal_Impact"
+            ],
+            [
+                1,
+                "Titanium_Body"
             ]
         ],
         "wexp_gain": {
@@ -104084,6 +105210,11 @@
                 true,
                 60,
                 360
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Entombed",
@@ -104232,6 +105363,11 @@
                 true,
                 60,
                 480
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Entombed",
@@ -104386,6 +105522,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Ballistican (U) {Arch}",
@@ -104530,6 +105671,11 @@
                 300
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -104682,6 +105828,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -104848,6 +105999,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Assassin",
@@ -105002,6 +106158,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Generic_Portrait_Sniper",
@@ -105150,6 +106311,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -105315,6 +106481,11 @@
                 false,
                 0,
                 null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
             ]
         },
         "icon_nid": "Trickster (M) Sword T3 {Jj09, Scrazia, Sword of HaE}",
@@ -105461,6 +106632,11 @@
                 null
             ],
             "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
                 false,
                 0,
                 null
@@ -107886,15 +109062,15 @@
             "RES": 0
         },
         "growth_bonus": {
-            "HP": 60,
-            "STR": 30,
+            "HP": 0,
+            "STR": 0,
             "MAG": 0,
-            "SKL": 30,
-            "SPD": 45,
-            "LCK": 60,
-            "DEF": 20,
-            "CON": 20,
-            "MOV": 1,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "CON": 0,
+            "MOV": 0,
             "RES": 0
         },
         "promotion": {
@@ -108686,6 +109862,10 @@
             [
                 1,
                 "Mercenary_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Super_Trainee"
             ]
         ],
         "wexp_gain": {

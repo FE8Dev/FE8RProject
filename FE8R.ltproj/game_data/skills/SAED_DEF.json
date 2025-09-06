@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "SAED_DEF",
+        "name": "SAED",
+        "desc": "Critting with Swords will reduce damage taken by 75%, and make Axe attacks become AOE:3, gain the Thunder element, and inflicts Bleed for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            36
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "resist_multiplier",
+                0.25
+            ],
+            [
+                "multi_skill",
+                [
+                    "SAED_Axe_Blast"
+                ]
+            ],
+            [
+                "item_override",
+                "Fulmination_Thunder"
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]

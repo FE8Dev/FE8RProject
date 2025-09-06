@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "SAED_Axe_Blast",
+        "name": "SAED Buff",
+        "desc": "Reduce damage taken by 75%, and Axe attacks are AOE:3, gain the Thunder element, and inflicts Bleed for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            36
+        ],
+        "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
+            [
+                "enemy_oversplash",
+                3
+            ],
+            [
+                "give_status_after_hit",
+                "Bleeding"
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]
