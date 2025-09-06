@@ -1,9 +1,9 @@
 [
     {
-        "nid": "Morgan",
-        "name": "Morgan",
-        "desc": "A sword buried in epoch of peace,with blood recupering the glory.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + SKL + MAG, (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('MAG'))}</>), +15 SPD.",
-        "icon_nid": "Davius Weapons",
+        "nid": "Soulmourne",
+        "name": "Soulmourne",
+        "desc": "Weapon bound to the user that feeds on souls and serves as a focus for their power.\n<green>Skills:</>Flash Step, Heroic Will, Shadow Sword\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>MAG+SKL+SPD, (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('SPD'))}</>), ignore 100% DEF enemy.",
+        "icon_nid": "{SacredStones} Durandal (old)",
         "icon_index": [
             0,
             0
@@ -19,19 +19,19 @@
             ],
             [
                 "max_range",
-                1
+                3
             ],
             [
                 "damage",
-                25
+                30
             ],
             [
                 "hit",
-                110
+                125
             ],
             [
                 "crit",
-                18
+                25
             ],
             [
                 "weight",
@@ -46,19 +46,15 @@
                 "X"
             ],
             [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Cursed_25"
-                ]
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        15
-                    ]
+                    "Cursed_25",
+                    "Heroic_Will"
                 ]
             ],
             [
@@ -68,22 +64,12 @@
                 ]
             ],
             [
-                "prf_class",
-                [
-                    "Armed_Herald"
-                ]
-            ],
-            [
                 "target_enemy",
                 null
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
-            ],
-            [
-                "eval_available",
-                "u(\"Davius\").wexp['Sword'] >= 480 "
+                "MAG_SKL_SPD_STRONG"
             ],
             [
                 "level_exp",
@@ -99,9 +85,17 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will_Old",
-                    "Scalatin_Work"
+                    "Heroic_Will",
+                    "Shadow_Sword_Item"
                 ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ZERO"
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 480 "
             ]
         ]
     }

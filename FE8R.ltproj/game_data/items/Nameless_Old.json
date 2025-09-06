@@ -1,8 +1,8 @@
 [
     {
-        "nid": "Nameless",
-        "name": "Nameless",
-        "desc": "Sword with a name that has been erased from history.\n<green>Skills:</>Flash Step\n<pink>Misc:</>SKL +MAG/3 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//3)}</>).",
+        "nid": "Nameless_Old",
+        "name": "Nameless Old",
+        "desc": "Sword with a name that has been erased from history.\n<green>Skills:</>Discipline, Flash Step\n<pink>Misc:</>SPD +STR/3 (<red>{e:(unit.get_stat('SPD') + unit.get_stat('STR')//3)}</>).",
         "icon_nid": "New Davius Weapons",
         "icon_index": [
             3,
@@ -27,11 +27,11 @@
             ],
             [
                 "damage",
-                8
+                4
             ],
             [
                 "hit",
-                90
+                80
             ],
             [
                 "crit",
@@ -56,7 +56,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step",
+                    "Discipline_Item"
                 ]
             ],
             [
@@ -71,11 +72,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Davius\").wexp['Sword'] < 120"
-            ],
-            [
-                "wexp",
-                3
+                "u(\"Davius\").wexp['Sword'] <= 120"
             ]
         ]
     }

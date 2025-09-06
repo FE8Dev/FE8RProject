@@ -1,0 +1,91 @@
+[
+    {
+        "nid": "Dragon_Slayer",
+        "name": "Dragon Slayer",
+        "desc": "The Axe forged in lightning for the purpose of felling dragons.\n<green>Skills:</>Power Chop (A),Growing mastery<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR+MAG/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG')//2)}</>).",
+        "icon_nid": "{Zarg} Axe 17",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_A",
+                    "Growing_Mastery"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 240 and u(\"Davius\").wexp['Axe'] < 360"
+            ]
+        ]
+    }
+]

@@ -1,11 +1,11 @@
 [
     {
-        "nid": "Nameless",
-        "name": "Nameless",
-        "desc": "Sword with a name that has been erased from history.\n<green>Skills:</>Flash Step\n<pink>Misc:</>SKL +MAG/3 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//3)}</>).",
-        "icon_nid": "New Davius Weapons",
+        "nid": "Hollow_Axe",
+        "name": "Hollow Axe",
+        "desc": "Axe wielded by a hollow soldier, not very remarkable.\n<green>Skills:</>Power Chop (C)",
+        "icon_nid": "{Celice} Axe 20",
         "icon_index": [
-            3,
+            0,
             0
         ],
         "components": [
@@ -27,19 +27,19 @@
             ],
             [
                 "damage",
-                8
+                18
             ],
             [
                 "hit",
-                90
+                85
             ],
             [
                 "crit",
-                5
+                1
             ],
             [
                 "weight",
-                6
+                15
             ],
             [
                 "level_exp",
@@ -47,21 +47,15 @@
             ],
             [
                 "weapon_type",
-                "Sword"
+                "Axe"
             ],
             [
                 "weapon_rank",
-                "E"
+                "C"
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Flash_Step"
-                ]
-            ],
-            [
-                "alternate_damage_formula",
-                "SPD_STR_WEAK"
+                "status_on_hit",
+                "Breached_8"
             ],
             [
                 "prf_unit",
@@ -70,12 +64,14 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Davius\").wexp['Sword'] < 120"
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
+                ]
             ],
             [
-                "wexp",
-                3
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 180 and u(\"Davius\").wexp['Axe'] < 240"
             ]
         ]
     }

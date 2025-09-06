@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Void_cutter",
+        "name": "Void cutter",
+        "desc": "Negate 50% of enemy's DEF when attacking.\nDoes not work on Bosses.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "not 'Boss' in unit2.tags or not 'Boss' in unit.tags"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    }
+]
