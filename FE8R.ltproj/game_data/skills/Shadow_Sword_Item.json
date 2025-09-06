@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Shadow_Sword_Item",
+        "name": "Shadow Sword",
+        "desc": "Add 1/2 of current HP to attack when this unit uses Swords.\nAttacks heal 30% of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            25
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_hp() // 2"
+            ],
+            [
+                "lifelink",
+                0.3
+            ]
+        ]
+    }
+]

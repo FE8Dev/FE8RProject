@@ -1,9 +1,9 @@
 [
     {
-        "nid": "Morgan",
-        "name": "Morgan",
-        "desc": "A sword buried in epoch of peace,with blood recupering the glory.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR + SKL + MAG, (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('MAG'))}</>), +15 SPD.",
-        "icon_nid": "Davius Weapons",
+        "nid": "Void_Cutter",
+        "name": "Void Cutter",
+        "desc": "A sword that cuts through space with its shadow-covered edge.\n<green>Skills:</>Flash Step, Heroic Will,\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>MAG + SPD + SKL, (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>), ignore 50% DEF enemy.",
+        "icon_nid": "{Ereshkigal} Blade 8",
         "icon_index": [
             0,
             0
@@ -19,7 +19,7 @@
             ],
             [
                 "max_range",
-                1
+                2
             ],
             [
                 "damage",
@@ -27,15 +27,15 @@
             ],
             [
                 "hit",
-                110
+                120
             ],
             [
                 "crit",
-                18
+                20
             ],
             [
                 "weight",
-                20
+                14
             ],
             [
                 "weapon_type",
@@ -43,22 +43,14 @@
             ],
             [
                 "weapon_rank",
-                "X"
+                "SS"
             ],
             [
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Cursed_25"
-                ]
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "SPD",
-                        15
-                    ]
+                    "Cursed_15",
+                    "Heroic_Will"
                 ]
             ],
             [
@@ -68,26 +60,16 @@
                 ]
             ],
             [
-                "prf_class",
-                [
-                    "Armed_Herald"
-                ]
-            ],
-            [
                 "target_enemy",
                 null
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "MAG_SKL_SPD_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Davius\").wexp['Sword'] >= 480 "
-            ],
-            [
-                "level_exp",
-                null
+                "battle_cast_anim",
+                "Arrow"
             ],
             [
                 "item_tags",
@@ -96,12 +78,20 @@
                 ]
             ],
             [
+                "level_exp",
+                null
+            ],
+            [
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will_Old",
-                    "Scalatin_Work"
+                    "Heroic_Will",
+                    "Void_cutter"
                 ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 360 and u(\"Davius\").wexp['Sword'] < 480"
             ]
         ]
     }

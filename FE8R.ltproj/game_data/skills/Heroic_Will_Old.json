@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Heroic_Will_Old",
+        "name": "Heroic Will Old",
+        "desc": "Reduce damage taken by 25% and increase damage given when unit is below 50% Max HP.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            44
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 2"
+            ],
+            [
+                "resist_multiplier",
+                0.75
+            ],
+            [
+                "damage_multiplier",
+                1.25
+            ]
+        ]
+    }
+]

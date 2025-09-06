@@ -2,7 +2,7 @@
     {
         "nid": "Victory",
         "name": "Victory",
-        "desc": "Only answers to the call of winners.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('SPD') + unit.get_stat('STR'))}</>).",
+        "desc": "Sword that follows He who obtains glory.\n<green>Skills:</>Flash Step, Heroic Will<red>Effective:</><icon>Armor</>\n<pink>Misc:</>SKL + MAG (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG'))}</>).",
         "icon_nid": "New Davius Weapons",
         "icon_index": [
             4,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                12
+                20
             ],
             [
                 "hit",
@@ -35,11 +35,11 @@
             ],
             [
                 "crit",
-                14
+                15
             ],
             [
                 "weight",
-                9
+                10
             ],
             [
                 "level_exp",
@@ -57,8 +57,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will",
-                    "Scalatin_Work"
+                    "Heroic_Will"
                 ]
             ],
             [
@@ -73,7 +72,7 @@
             ],
             [
                 "eval_available",
-                "u(\"Davius\").wexp['Sword'] >= 240"
+                "u(\"Davius\").wexp['Sword'] >= 240 and u(\"Davius\").wexp['Sword'] < 360"
             ]
         ]
     }

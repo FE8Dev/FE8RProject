@@ -1,5 +1,8 @@
 ```
 ## 09-02-25
+=======
+## tbr
+>>>>>>> 5d2b165f3b2470c1583f0f4521d0ade181a18b01
 ```
 Small buffs to Scintilla, Arno, and Moze.
 Adept Eye, Focus Sight, Hex, Anathema, Elegant Form, Dedication, and Shot Assistance have been buffed
@@ -10,6 +13,11 @@ Increased the light and bow range penalty for 3+ range to 25. So 4 range attacks
 Added new DG units, Esperanza, Kazuma, and Garmr.
 Kyudoka added to MyUnit starting class Roster.
 Buff to Lute's Base MAG and RES. Small buff to Lute's MAG and RES growths.
+
+
+```
+## 08-27-25
+```
 Added missing skills as feats(mostly from Neimi or DG units)
 Added Ricochet Shield to the DG shop
 

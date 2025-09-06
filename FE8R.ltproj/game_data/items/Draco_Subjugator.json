@@ -1,0 +1,91 @@
+[
+    {
+        "nid": "Draco_Subjugator",
+        "name": "Draco Subjugator",
+        "desc": "This weapon has been bathed in so much divine blood that dragons kneel before it.\n<green>Skills:</>Power Chop (SS),Growing mastery+<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR+MAG(<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG'))}</>).",
+        "icon_nid": "{Beansy} Garm",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS",
+                    "Growing_Mastery_Plus"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 360 and u(\"Davius\").wexp['Axe'] <480"
+            ]
+        ]
+    }
+]
