@@ -1,5 +1,338 @@
 [
     {
+        "nid": "Sealed_Davius",
+        "name": "Curse Seal",
+        "desc": "Unit cannot move and -10 to most stats.\nLasts for 2 turns.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            0
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        -10
+                    ],
+                    [
+                        "MAG",
+                        -10
+                    ],
+                    [
+                        "SKL",
+                        -10
+                    ],
+                    [
+                        "SPD",
+                        -10
+                    ],
+                    [
+                        "LCK",
+                        -10
+                    ],
+                    [
+                        "DEF",
+                        -10
+                    ],
+                    [
+                        "RES",
+                        -10
+                    ],
+                    [
+                        "CON",
+                        -10
+                    ]
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MOV",
+                        0
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Bloody_Prestige",
+        "name": "Bloody Prestige",
+        "desc": "Killing an enemy gives this unit +3/-3 damage given/taken and +5 hit until end of chapter.\nStacks infinitely.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Bloody_Prestige_Buff"
+            ]
+        ]
+    },
+    {
+        "nid": "Bloody_Prestige_Buff",
+        "name": "Blood Prestige",
+        "desc": "+3/-3 damage given/taken and + 5 hit until end of chapter.\nStacks infinitely.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "stack",
+                9999
+            ],
+            [
+                "resist",
+                3
+            ],
+            [
+                "damage",
+                3
+            ],
+            [
+                "hit",
+                5
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Soul_Of_Cinder",
+        "name": "Soul Of Cinder",
+        "desc": "When killing a unit, gain a stack of fragmented soul.\n-15% damage taken and +10 Hit and Crit .\nMax 5 stacks.Lasts 3 turns.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            13,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_skill_after_kill",
+                "Fragmented_Soul"
+            ]
+        ]
+    },
+    {
+        "nid": "Fragmented_Soul",
+        "name": "Fragmented Soul",
+        "desc": "-15% damage taken and +10 Hit and Crit .\nMax 5 stacks. Lasts 3 turns.\n\n\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            41
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "stack",
+                5
+            ],
+            [
+                "resist_multiplier",
+                0.85
+            ],
+            [
+                "hit",
+                10
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Growing_Mastery",
+        "name": "Growing Mastery",
+        "desc": "+1 attack per 20 total levels.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            15
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "unit.get_internal_level() //20"
+            ]
+        ]
+    },
+    {
+        "nid": "Growing_Mastery_Plus",
+        "name": "Growing Mastery+",
+        "desc": "+1 attack per 15 total levels.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            13
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "unit.get_internal_level() //15"
+            ]
+        ]
+    },
+    {
+        "nid": "Growing_Mastery_Plus_Plus",
+        "name": "Growing Mastery++",
+        "desc": "+1 attack per 10 total levels.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            22
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "unit.get_internal_level() //10"
+            ]
+        ]
+    },
+    {
+        "nid": "Heroic_Will",
+        "name": "Heroic Will",
+        "desc": "When belowhalf HP grants 50% damage reducction and deal +20 extra damage.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            6,
+            28
+        ],
+        "components": [
+            [
+                "grey_if_inactive",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_hp() <= unit.get_max_hp() // 2"
+            ],
+            [
+                "resist_multiplier",
+                0.5
+            ],
+            [
+                "damage",
+                20
+            ]
+        ]
+    },
+    {
+        "nid": "Limit_Breaker",
+        "name": "Limit Breaker",
+        "desc": "\"Remove the limits of the mortal body\"\n+100 to all stat caps except HP, MOV and CON.\nGain +10 CON growth and +5 MOV growth",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "CON",
+                        10
+                    ],
+                    [
+                        "MOV",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Limit_Breaker"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Shadow_Sword_Item",
+        "name": "Shadow Sword",
+        "desc": "Add 1/2 of current HP to attack when this unit uses Swords.\nAttacks heal 30% of damage dealt.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            25
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Sword'"
+            ],
+            [
+                "dynamic_damage",
+                "unit.get_hp() // 2"
+            ],
+            [
+                "lifelink",
+                0.3
+            ]
+        ]
+    },
+    {
+        "nid": "Void_cutter",
+        "name": "Void cutter",
+        "desc": "Negate 50% of enemy's DEF when attacking.\nDoes not work on Bosses.",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            3,
+            1
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "not 'Boss' in unit2.tags or not 'Boss' in unit.tags"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('DEF') // 2"
+            ]
+        ]
+    },
+    {
         "nid": "Dragonstone",
         "name": "Dragonstone",
         "desc": "Grants STR +12, SKL +12, DEF +15, RES+20.",
@@ -12342,7 +12675,7 @@
     {
         "nid": "Defiant",
         "name": "Defiant",
-        "desc": "+15 Avoid/Hit, +5 Damage given when not at maximum HP.",
+        "desc": "+25 Avoid/Hit, +7 Damage given when not at maximum HP.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -12359,15 +12692,15 @@
             ],
             [
                 "dynamic_damage",
-                "5"
+                "7"
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "25"
             ],
             [
                 "dynamic_accuracy",
-                "15"
+                "25"
             ]
         ]
     },
@@ -25320,10 +25653,6 @@
             [
                 "give_status_after_hit",
                 "Bleeding"
-            ],
-            [
-                "give_status_after_combat_on_hit",
-                "Bleeding_Boss"
             ]
         ]
     },
@@ -26432,17 +26761,10 @@
                 "Charge_Blade_Phials"
             ],
             [
-                "skill_before_combat",
-                {
-                    "skill": "Charge_Blade_Recoil_hide",
-                    "recipient": "target",
-                    "allegiance": "enemy"
-                }
-            ],
-            [
                 "multi_skill",
                 [
-                    "Charge_Blade_DEF_hide"
+                    "Charge_Blade_DEF_hide",
+                    "Charge_Blade_Giver_hide"
                 ]
             ]
         ]
@@ -26472,7 +26794,7 @@
         ]
     },
     {
-        "nid": "Charge_Blade_Recoil_hide",
+        "nid": "Charge_Blade_Giver_hide",
         "name": "Charge Blade",
         "desc": "Every attack with Swords grants a stack of Charged Phials (x1.5 Axe Damage given for each stack for 2 turns, max 5 stacks).\nWhen defending enemies take 50% Recoil damage, and reduce damage this unit takes by 25%.",
         "icon_nid": "skill_icons",
@@ -26487,7 +26809,31 @@
             ],
             [
                 "combat_condition",
-                "mode == 'attack'"
+                "mode == 'defense'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Charge_Blade_Recoil_hide",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Charge_Blade_Recoil_hide",
+        "name": "Charge Blade",
+        "desc": "Every attack with Swords grants a stack of Charged Phials (x1.5 Axe Damage given for each stack for 2 turns, max 5 stacks).\nWhen defending enemies take 50% Recoil damage, and reduce damage this unit takes by 25%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "hidden",
+                null
             ],
             [
                 "lifelink",
@@ -26515,6 +26861,10 @@
             49
         ],
         "components": [
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Axe'"
+            ],
             [
                 "damage_multiplier",
                 1.5
@@ -44347,8 +44697,8 @@
         ]
     },
     {
-        "nid": "Heroic_Will",
-        "name": "Heroic Will",
+        "nid": "Heroic_Will_Old",
+        "name": "Heroic Will Old",
         "desc": "Reduce damage taken by 25% and increase damage given when unit is below 50% Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -44446,6 +44796,22 @@
             ],
             [
                 "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Limit_Broken",
+        "name": "Limit Broken",
+        "desc": "",
+        "icon_nid": null,
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "hidden",
                 null
             ]
         ]
@@ -46913,6 +47279,10 @@
             [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "give_status_after_hit",
@@ -53115,7 +53485,7 @@
     {
         "nid": "Hunters_Volley",
         "name": "Hunter's Volley",
-        "desc": "<red>CA:</>Brave, +1 max range, +15 hit, +10 Crit. Bows Only. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Brave, +1 max range, +15 hit, +10 Crit, HP Absorb (30%). Bows Only. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -53147,7 +53517,7 @@
     {
         "nid": "Hunters_Volley_Skill",
         "name": "Hunter's Volley",
-        "desc": "<red>CA:</>Uses Bows. Brave, +1 max range, +15 hit, +10 crit",
+        "desc": "<red>CA:</>Uses Bows. Brave, +1 max range, +15 hit, +10 crit, HP Absorb (30%) <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             8,
@@ -55734,6 +56104,42 @@
         ]
     },
     {
+        "nid": "Defiant_T1",
+        "name": "Defiant",
+        "desc": "+25 Avoid/Hit, +7 Damage given when not at maximum HP.",
+        "icon_nid": "Skills",
+        "icon_index": [
+            1,
+            6
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_hp() != unit.get_max_hp()"
+            ],
+            [
+                "dynamic_damage",
+                "7"
+            ],
+            [
+                "dynamic_avoid",
+                "25"
+            ],
+            [
+                "dynamic_accuracy",
+                "25"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
         "nid": "Wary_Fighter_T1",
         "name": "Wary Fighter",
         "desc": "Unit cannot be doubled by normal means.",
@@ -56949,7 +57355,7 @@
     {
         "nid": "Resonance_T1",
         "name": "Resonance",
-        "desc": "Adds half of magic to damage dealt by tomes and combat staves, but take 5 damage after combat.",
+        "desc": "Adds half of MAG to damage dealt by tomes and combat staves, but take 10 non-lethal damage after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -56966,7 +57372,7 @@
             ],
             [
                 "recoil",
-                5
+                10
             ],
             [
                 "feat",
@@ -56981,7 +57387,7 @@
     {
         "nid": "Tome_Precision_T1",
         "name": "Tome Precision",
-        "desc": "Raises Hit/Avoid by 30 when using a Tome.",
+        "desc": "Raises Hit/Avoid by 60 when using a Tome.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -56994,11 +57400,11 @@
             ],
             [
                 "dynamic_accuracy",
-                "30"
+                "60"
             ],
             [
                 "dynamic_avoid",
-                "30"
+                "60"
             ],
             [
                 "feat",
@@ -66009,7 +66415,7 @@
     {
         "nid": "Bloody_Cleaver_T3",
         "name": "Bloody Cleaver",
-        "desc": "When below 75% Max HP, this unit's attacks Cleave around them.",
+        "desc": "When below 75% Max HP, this unit's attacks Cleave around them and attacks inflict the Bleed status on hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -66027,6 +66433,10 @@
             [
                 "Cleave",
                 null
+            ],
+            [
+                "give_status_after_hit",
+                "Bleeding"
             ],
             [
                 "feat",
@@ -71954,29 +72364,9 @@
         ],
         "components": [
             [
-                "skill_before_combat",
-                {
-                    "skill": "TalkingGreataxeBuff_2",
-                    "recipient": "both",
-                    "allegiance": "both"
-                }
-            ],
-            [
                 "hidden",
                 null
-            ]
-        ]
-    },
-    {
-        "nid": "TalkingGreataxeBuff_2",
-        "name": "TalkingGreataxeBuff",
-        "desc": "",
-        "icon_nid": null,
-        "icon_index": [
-            0,
-            0
-        ],
-        "components": [
+            ],
             [
                 "dynamic_avoid",
                 "-30"
@@ -71986,14 +72376,18 @@
                 "-30"
             ],
             [
-                "hidden",
-                null
+                "dynamic_accuracy",
+                "30"
+            ],
+            [
+                "dynamic_crit_accuracy",
+                "30"
             ]
         ]
     },
     {
-        "nid": "AnnoyingLittleGhostBuff",
-        "name": "AnnoyingLittleGhostBuff",
+        "nid": "AnnoyingLittleGhostDebuff",
+        "name": "AnnoyingLittleGhostDebuff",
         "desc": "-50 avoid/crit avoid for both units",
         "icon_nid": "Skills",
         "icon_index": [
@@ -72002,16 +72396,24 @@
         ],
         "components": [
             [
+                "hidden",
+                null
+            ],
+            [
                 "skill_before_combat",
                 {
                     "skill": "AnnoyingLittleGhostBuff_1",
-                    "recipient": "both",
-                    "allegiance": "both"
+                    "recipient": "target",
+                    "allegiance": "enemy"
                 }
             ],
             [
-                "hidden",
-                null
+                "dynamic_crit_avoid",
+                "-50"
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
             ]
         ]
     },
@@ -72027,11 +72429,11 @@
         "components": [
             [
                 "dynamic_avoid",
-                "50"
+                "-50"
             ],
             [
                 "dynamic_crit_avoid",
-                "50"
+                "-50"
             ],
             [
                 "hidden",
@@ -72532,72 +72934,6 @@
             [
                 "item_override",
                 "Prevent_Counterattack"
-            ]
-        ]
-    },
-    {
-        "nid": "Sealed_Davius",
-        "name": "Curse Seal",
-        "desc": "Unit cannot move and -10 to most stats.\nLasts for 2 turns.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            10,
-            0
-        ],
-        "components": [
-            [
-                "negative",
-                null
-            ],
-            [
-                "stat_change",
-                [
-                    [
-                        "STR",
-                        -10
-                    ],
-                    [
-                        "MAG",
-                        -10
-                    ],
-                    [
-                        "SKL",
-                        -10
-                    ],
-                    [
-                        "SPD",
-                        -10
-                    ],
-                    [
-                        "LCK",
-                        -10
-                    ],
-                    [
-                        "DEF",
-                        -10
-                    ],
-                    [
-                        "RES",
-                        -10
-                    ],
-                    [
-                        "CON",
-                        -10
-                    ]
-                ]
-            ],
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "MOV",
-                        0
-                    ]
-                ]
-            ],
-            [
-                "time",
-                2
             ]
         ]
     },

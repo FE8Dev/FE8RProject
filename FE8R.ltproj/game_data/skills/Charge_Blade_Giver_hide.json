@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Charge_Blade_Giver_hide",
+        "name": "Charge Blade",
+        "desc": "Every attack with Swords grants a stack of Charged Phials (x1.5 Axe Damage given for each stack for 2 turns, max 5 stacks).\nWhen defending enemies take 50% Recoil damage, and reduce damage this unit takes by 25%.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            41
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "mode == 'defense'"
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "Charge_Blade_Recoil_hide",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ]
+        ]
+    }
+]

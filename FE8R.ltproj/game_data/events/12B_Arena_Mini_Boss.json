@@ -25,6 +25,8 @@
             "if;'{v:_last_choice}' == 'Yes'",
             "    add_unit;176;7,1;fade;stack",
             "    move_unit;176;7,2;normal;closest",
+            "    add_tag;176;Boss",
+            "    give_skill;176;SleepI",
             "    else",
             "    end",
             "has_traded;{unit}"

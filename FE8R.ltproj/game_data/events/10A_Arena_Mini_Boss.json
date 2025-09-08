@@ -24,6 +24,8 @@
             "music_fade_back;300",
             "if;'{v:_last_choice}' == 'Yes'",
             "    add_unit;169;12,6;fade;stack",
+            "    add_tag;169;Boss",
+            "    give_skill;169;SleepI",
             "    move_unit;169;12,7;normal;closest",
             "    else",
             "    end",

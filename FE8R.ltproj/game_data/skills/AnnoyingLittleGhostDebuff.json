@@ -1,0 +1,34 @@
+[
+    {
+        "nid": "AnnoyingLittleGhostDebuff",
+        "name": "AnnoyingLittleGhostDebuff",
+        "desc": "-50 avoid/crit avoid for both units",
+        "icon_nid": "Skills",
+        "icon_index": [
+            5,
+            10
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "skill_before_combat",
+                {
+                    "skill": "AnnoyingLittleGhostBuff_1",
+                    "recipient": "target",
+                    "allegiance": "enemy"
+                }
+            ],
+            [
+                "dynamic_crit_avoid",
+                "-50"
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
+            ]
+        ]
+    }
+]

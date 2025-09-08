@@ -2,7 +2,7 @@
     {
         "nid": "Reignited_Fangs",
         "name": "Reignited Fangs",
-        "desc": "Fangs that have regained their flame.\n<green>Skills:</>Proud Beast\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Bleed</> <icon>Seared</> (AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD.",
+        "desc": "Fangs that have regained their flame.\n<green>Skills:</>Proud Beast\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Bleed</> <icon>Seared</> (AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + MAG//2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -101,7 +101,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_MAG_MID"
             ]
         ]
     }

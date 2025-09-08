@@ -120851,8 +120851,8 @@
         ]
     },
     {
-        "nid": "Davius_Arsenal",
-        "name": "Davius Arsenal",
+        "nid": "Davius_Arsenal_Old",
+        "name": "Davius Arsenal Old",
         "desc": "Davius weapons when he unlocks his true potential.\n<red>Prof:</><icon>Sword</><icon>Axe</>",
         "icon_nid": "New Davius Weapons",
         "icon_index": [
@@ -120867,9 +120867,9 @@
             [
                 "multi_item",
                 [
-                    "Nameless",
+                    "Nameless_Old",
                     "Hard_Start",
-                    "Victory",
+                    "Victory_Old",
                     "Yamato",
                     "Grawl",
                     "Morgan",
@@ -120889,8 +120889,8 @@
         ]
     },
     {
-        "nid": "Nameless",
-        "name": "Nameless",
+        "nid": "Nameless_Old",
+        "name": "Nameless Old",
         "desc": "Sword with a name that has been erased from history.\n<green>Skills:</>Discipline, Flash Step\n<pink>Misc:</>SPD +STR/3 (<red>{e:(unit.get_stat('SPD') + unit.get_stat('STR')//3)}</>).",
         "icon_nid": "New Davius Weapons",
         "icon_index": [
@@ -121043,8 +121043,8 @@
         ]
     },
     {
-        "nid": "Victory",
-        "name": "Victory",
+        "nid": "Victory_Old",
+        "name": "Victory Old",
         "desc": "Only answers to the call of winners.\n<green>Skills:</>Flash Step, Heroic Will, Scalation Work (on kill)\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('SPD') + unit.get_stat('STR'))}</>).",
         "icon_nid": "New Davius Weapons",
         "icon_index": [
@@ -121100,7 +121100,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will",
+                    "Heroic_Will_Old",
                     "Scalatin_Work"
                 ]
             ],
@@ -121178,7 +121178,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will",
+                    "Heroic_Will_Old",
                     "Scalatin_Work"
                 ]
             ],
@@ -121421,7 +121421,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Step",
-                    "Heroic_Will",
+                    "Heroic_Will_Old",
                     "Scalatin_Work"
                 ]
             ]
@@ -121508,7 +121508,7 @@
                 "multi_status_on_equip",
                 [
                     "Flash_Slash",
-                    "Heroic_Will",
+                    "Heroic_Will_Old",
                     "Scalatin_Work"
                 ]
             ],
@@ -155584,6 +155584,10 @@
                 [
                     "Eterna"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -155689,6 +155693,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -155794,6 +155802,10 @@
                 [
                     "Wind"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -160790,6 +160802,10 @@
             [
                 "battle_cast_anim",
                 "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -160894,6 +160910,10 @@
             [
                 "battle_cast_anim",
                 "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -160999,6 +161019,10 @@
             [
                 "battle_cast_anim",
                 "ThrowingAxe"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     },
@@ -162248,7 +162272,7 @@
     {
         "nid": "Reignited_Fangs",
         "name": "Reignited Fangs",
-        "desc": "Fangs that have regained their flame.\n<green>Skills:</>Proud Beast\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Bleed</> <icon>Seared</> (AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Uses SPD.",
+        "desc": "Fangs that have regained their flame.\n<green>Skills:</>Proud Beast\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Bleed</> <icon>Seared</> (AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + MAG//2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -162347,7 +162371,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_MAG_MID"
             ]
         ]
     },
@@ -163159,6 +163183,834 @@
                 [
                     "Garmr"
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Davius_Arsenal",
+        "name": "Davius Arsenal",
+        "desc": "Davius weapons when he unlocks his true potential.\n<red>Prof:</><icon>Sword</><icon>Axe</>",
+        "icon_nid": "New Davius Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "multi_item_hides_unavailable",
+                null
+            ],
+            [
+                "multi_item",
+                [
+                    "Nameless",
+                    "Knights_Oblivion",
+                    "Victory",
+                    "Void_Cutter",
+                    "Soulmourne",
+                    "Hollow_Axe",
+                    "Dragon_Slayer",
+                    "Draco_Subjugator",
+                    "Faraam"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Nameless",
+        "name": "Nameless",
+        "desc": "Sword with a name that has been erased from history.\n<green>Skills:</>Flash Step\n<pink>Misc:</>SKL + MAG/3 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//3)}</>).",
+        "icon_nid": "New Davius Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                8
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                6
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_WEAK"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] < 120"
+            ],
+            [
+                "wexp",
+                3
+            ]
+        ]
+    },
+    {
+        "nid": "Knights_Oblivion",
+        "name": "Knight's Oblivion",
+        "desc": "The nightmare of the midless hollow knights .\n<green>Skills:</>Flash Step<red>Effective:</><icon>Armor</>\n<pink>Misc:</>SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//2)}</>).",
+        "icon_nid": "Davius Weapons",
+        "icon_index": [
+            1,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                14
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_STR_MID"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 120 and u(\"Davius\").wexp['Sword'] < 240"
+            ]
+        ]
+    },
+    {
+        "nid": "Victory",
+        "name": "Victory",
+        "desc": "Sword that follows He who obtains glory.\n<green>Skills:</>Flash Step, Heroic Will<red>Effective:</><icon>Armor</>\n<pink>Misc:</>SKL + MAG (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG'))}</>).",
+        "icon_nid": "New Davius Weapons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                20
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Heroic_Will"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 240 and u(\"Davius\").wexp['Sword'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Void_Cutter",
+        "name": "Void Cutter",
+        "desc": "A sword that cuts through space with its shadow-covered edge.\n<green>Skills:</>Flash Step, Heroic Will,\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>MAG + SPD + SKL (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>), ignore 50% DEF enemy.",
+        "icon_nid": "{Ereshkigal} Blade 8",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15",
+                    "Heroic_Will"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_STRONG"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Heroic_Will",
+                    "Void_cutter"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 360 and u(\"Davius\").wexp['Sword'] < 480"
+            ]
+        ]
+    },
+    {
+        "nid": "Soulmourne",
+        "name": "Soulmourne",
+        "desc": "Weapon bound to the user that feeds on souls and serves as a focus for their power.\n<green>Skills:</>Flash Step, Heroic Will, Shadow Sword\n<orange>Element:</><icon>Dark</><violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>MAG + SKL + SPD (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('SPD'))}</>), ignore 100% DEF enemy.",
+        "icon_nid": "{SacredStones} Durandal (old)",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                125
+            ],
+            [
+                "crit",
+                25
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_25",
+                    "Heroic_Will"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_SPD_STRONG"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Dark"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Heroic_Will",
+                    "Shadow_Sword_Item"
+                ]
+            ],
+            [
+                "alternate_resist_formula",
+                "ZERO"
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Sword'] >= 480 "
+            ]
+        ]
+    },
+    {
+        "nid": "Hollow_Axe",
+        "name": "Hollow Axe",
+        "desc": "Axe wielded by a hollow soldier, not very remarkable.\n<green>Skills:</>Power Chop (C)",
+        "icon_nid": "{Celice} Axe 20",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                18
+            ],
+            [
+                "hit",
+                85
+            ],
+            [
+                "crit",
+                1
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "status_on_hit",
+                "Breached_8"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_C"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 180 and u(\"Davius\").wexp['Axe'] < 240"
+            ]
+        ]
+    },
+    {
+        "nid": "Dragon_Slayer",
+        "name": "Dragon Slayer",
+        "desc": "The Axe forged in lightning for the purpose of felling dragons.\n<green>Skills:</>Power Chop (A),Growing mastery<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG')//2)}</>).",
+        "icon_nid": "{Zarg} Axe 17",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                23
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                3
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "A"
+            ],
+            [
+                "status_on_hit",
+                "Breached_15"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_A",
+                    "Growing_Mastery"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 240 and u(\"Davius\").wexp['Axe'] < 360"
+            ]
+        ]
+    },
+    {
+        "nid": "Draco_Subjugator",
+        "name": "Draco Subjugator",
+        "desc": "This weapon has been bathed in so much divine blood that dragons kneel before it.\n<green>Skills:</>Power Chop (SS),Growing mastery+<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG'))}</>).",
+        "icon_nid": "{Beansy} Garm",
+        "icon_index": [
+            0,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                30
+            ],
+            [
+                "hit",
+                100
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                15
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "status_on_hit",
+                "Breached_25"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_SS",
+                    "Growing_Mastery_Plus"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 360 and u(\"Davius\").wexp['Axe'] <480"
+            ]
+        ]
+    },
+    {
+        "nid": "Faraam",
+        "name": "Faraam",
+        "desc": "Axe famous for dominating the king of dragons.\n<green>Skills:</>Power Chop (X),Growing mastery++<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR*2 + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR') +(unit.get_stat('MAG')))}</>).",
+        "icon_nid": "Davius Weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                38
+            ],
+            [
+                "hit",
+                110
+            ],
+            [
+                "crit",
+                10
+            ],
+            [
+                "weight",
+                25
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "status_on_hit",
+                "Breached_40"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Davius"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DOUBLE_MAG_STRONG"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_X",
+                    "Growing_Mastery_Plus_Plus"
+                ]
+            ],
+            [
+                "eval_available",
+                "u(\"Davius\").wexp['Axe'] >= 480"
             ]
         ]
     },
@@ -172568,7 +173420,7 @@
     {
         "nid": "Annoying_Little_Ghost_DG",
         "name": "Annoying Little Ghost",
-        "desc": "An annoying little ghost that loves to pester other people.\n<blue>On Hold:</>-50 Avoid and Crit Avoid to both the attacker and the defender\n",
+        "desc": "An annoying little ghost that loves to pester other people.\n<blue>On Hold:</>-50 Avoid and Crit Avoid to both the attacker and the defender\n(Note: Enemy debuff won't appear in battle forecast, but will in battle starts).\n",
         "icon_nid": "Skills",
         "icon_index": [
             5,
@@ -172582,7 +173434,7 @@
             [
                 "multi_status_on_hold",
                 [
-                    "AnnoyingLittleGhostBuff"
+                    "AnnoyingLittleGhostDebuff"
                 ]
             ]
         ]

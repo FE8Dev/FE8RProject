@@ -2,7 +2,7 @@
     {
         "nid": "Bloody_Cleaver_T3",
         "name": "Bloody Cleaver",
-        "desc": "When below 75% Max HP, this unit's attacks Cleave around them.",
+        "desc": "When below 75% Max HP, this unit's attacks Cleave around them and attacks inflict the Bleed status on hit.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -20,6 +20,10 @@
             [
                 "Cleave",
                 null
+            ],
+            [
+                "give_status_after_hit",
+                "Bleeding"
             ],
             [
                 "feat",

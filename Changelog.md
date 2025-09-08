@@ -1,8 +1,22 @@
 ```
-## 09-02-25
-=======
 ## tbr
->>>>>>> 5d2b165f3b2470c1583f0f4521d0ade181a18b01
+
+New class for Gerik in Chief line, Guildmaster.
+Vanguard animation been updated to new one.
+Mercenary's 1st skill Defiant been buffed and added to Feat pool.
+Resonance nerfed to inflict 10 non lethal damage after combat.
+Tome Precision buffed to 60 Hit/Avoid.
+Davius rework.
+ZombieBoy's base HP is now 150, SPD to 10, DEF 8, and RES 6.
+Vanessa now gains +5 STR or MAG on chapter 4 base convo.
+Vanessa also gains an Ice Lance instead of Axereaver in chapter 5 convo.
+Fixed Nomad to have 8 MOV instead of 6.
+
+
+
+=======
+## 09-02-25
+
 ```
 Small buffs to Scintilla, Arno, and Moze.
 Adept Eye, Focus Sight, Hex, Anathema, Elegant Form, Dedication, and Shot Assistance have been buffed

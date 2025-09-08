@@ -641,17 +641,19 @@
                 "nid": "120",
                 "variant": null,
                 "level": 15,
-                "klass": "Wyvern Knight",
+                "klass": "Mage_Male",
                 "faction": "Soldier",
                 "starting_items": [
                     [
-                        "Fire_Axe",
+                        "Ice_Spikes",
+                        false
+                    ],
+                    [
+                        "Annoying_Little_Ghost_DG",
                         false
                     ]
                 ],
-                "starting_skills": [
-                    "Quick_Arcane_Barrier"
-                ],
+                "starting_skills": [],
                 "team": "player",
                 "ai": "None",
                 "roam_ai": null,
@@ -819,6 +821,30 @@
                 "starting_position": [
                     15,
                     19
+                ],
+                "starting_traveler": null,
+                "generic": true
+            },
+            {
+                "nid": "116",
+                "variant": null,
+                "level": 5,
+                "klass": "Pirate",
+                "faction": "Soldier",
+                "starting_items": [
+                    [
+                        "Earth_Warhammer",
+                        false
+                    ]
+                ],
+                "starting_skills": [],
+                "team": "enemy",
+                "ai": "Attack",
+                "roam_ai": null,
+                "ai_group": "",
+                "starting_position": [
+                    15,
+                    18
                 ],
                 "starting_traveler": null,
                 "generic": true
@@ -1058,11 +1084,6 @@
             }
         ],
         "unit_groups": [],
-        "ai_groups": [
-            {
-                "nid": "",
-                "trigger_threshold": 1
-            }
-        ]
+        "ai_groups": []
     }
 ]
