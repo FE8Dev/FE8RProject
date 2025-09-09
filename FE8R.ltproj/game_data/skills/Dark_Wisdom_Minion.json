@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Dark_Wisdom_Minion",
+        "name": "Dark Wisdom",
+        "desc": "Add half the summoner's total level to hit and dmg.\nGive EXP to the summoner after combat",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            7,
+            37
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "unit.get_internal_level()//2"
+            ],
+            [
+                "dynamic_accuracy",
+                "unit.get_internal_level()//2"
+            ],
+            [
+                "item_override",
+                "Undead_Knowledge_Azuth"
+            ]
+        ]
+    }
+]

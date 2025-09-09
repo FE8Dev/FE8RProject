@@ -6,12 +6,12 @@ Vanguard animation been updated to new one.
 Mercenary's 1st skill Defiant been buffed and added to Feat pool.
 Resonance nerfed to inflict 10 non lethal damage after combat.
 Tome Precision buffed to 60 Hit/Avoid.
-Davius rework.
+Davius complete rework.
 ZombieBoy's base HP is now 150, SPD to 10, DEF 8, and RES 6.
 Vanessa now gains +5 STR or MAG on chapter 4 base convo.
 Vanessa also gains an Ice Lance instead of Axereaver in chapter 5 convo.
 Fixed Nomad to have 8 MOV instead of 6.
-
+Revamped Azuth's T1 class, T1 skills, and T1/T2/T3 growhts, changed how his summons work, now each one gives him a Tether equal to its rank, Azuth can have a maximum amount of those equal to MAG/10(including buffs), each tether reduces MAG by 10 and goes away after the summon dies
 
 ```
 

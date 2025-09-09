@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('zombie_' + unit.nid)"
+                "not game.check_dead('Zombie1_' + unit.nid) and game.check_dead('Zombie2_' + unit.nid)"
             ],
             [
                 "ability",

@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('ElderLich_' + unit.nid)"
+                "unit.get_stat('MAG') >= 30"
             ],
             [
                 "ability",
