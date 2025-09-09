@@ -1,16 +1,16 @@
 > Note: if a weapon type is in italics, it means that the unit already has it by default.  
 > Note: with the exception of Myrrh units that join from chapter 14 onwards will reach T3 upon being recruited.  
-> Note: only weapon types whose icons appear in the arsenal description are listed here.
+> Note: only weapons that have evolutions are listed here.
 
 # Eirika
 
 ## *Sword*
-Rapier that has Thunder affinity. Evolves into the legendary weapon after Chapter 16 and gains monster effectiveness.
+Rapier that has Thunder affinity. Evolves into the legendary weapon after Chapter 16 and gains monster effectiveness. It always attacks first.
 
 Uses the stronger of Magic or Strength and targets the weaker of Def or Res.
 
-After Chapter 16 it uses Strength, Magic and Mov for damage and raises Speed, Strength and Magic.
-Unit always attacks first. X2 Crit on second+ attacks, and +50 Crit damage.
+After Chapter 16 it uses Strength, Magic and Mov for damage and raises Speed, Strength and Magic and has a skill that does the following:
+Unit always attacks first. X2 Crit after the first attack, and +50 Crit damage.
 
 ## Light
 
@@ -222,7 +222,7 @@ Oni Brigand
 ## Bow
 A bow that is also effective against horses and inflicts Seared on the enemy. It has a Torch effect and does half damage if it misses. In its last form, it has the following effect:
 
-Gets 5 extra attacks, but takes 70 damage after combat and enemy gets -40 for 3 turns.
+Gets 5 extra attacks, but takes 70 damage after combat and enemy gets -80 Avoid for 3 turns.
 
 ### Earliest access
 Warrior(from Fighter)
@@ -260,7 +260,11 @@ Hero
 
 * Dragonmaster(from Wyvern Lord)
 
-* Blademaster(from Warrior)
+* From Warrior
+  * Blademaster
+  * Reaver
+  * Black Knight
+
 
 ## Bow
 
@@ -273,7 +277,6 @@ Warrior
 ### Other access
 
 * Dragonmaster(from Wyvern Lord)
-
 
 ---
 # Neimi
@@ -292,8 +295,8 @@ Magical sword that raises Neimi's DEF and RES. It inflicts Rock Punctures and re
 
 ### Earliest access
 
-Ranger(from Archer)
-Assassin(from Outlaw)
+* Ranger(from Archer)
+* Assassin(from Outlaw)
 
 ### Other access
 * Magiteck Knight(from Sniper)
@@ -308,12 +311,14 @@ Assassin(from Outlaw)
 
 ### Earliest access
 
-Sniper
+* Sniper(from Archer)
+* Miko(from Kyudoka)
 
 ### Other access
 
 * Magiteck Knight(from Ranger)
 * Sky Guard(from Ranger)
+* Yabusame(from Kyudoka or Outlaw -> Nomad)
 
 ## Lance
 Light and Wind lance with a cleave effect that shoves enemies. It uses Luck and Speed for damage instead of Strength. Its third version gains the Fire element(effective against Horses and inflicts Seared).
@@ -339,7 +344,7 @@ Miko(from Kyudoka)
 
 ## Bow
 
-A 4-6 range Bow that raises Avoid and Speed. From its second version onwards, it inflicts Shadow and Curse.
+A 3-6 range Bow that raises Avoid and Speed. From its second version onwards, it inflicts Shadow and Curse. Its last version has increased range.
 
 ### Earliest access
 
@@ -375,12 +380,10 @@ A tome that is also effective against Pirates and inflicts Frozen status. Its fi
 
 A 1-4 range staff that drenches enemies. From its second version onwards, it gains the Wind element and becomes effective against Flying and Seared enemies. Its third version has 1-5 range.
 
-### Earliest access
+### Access
 
 * Bishop
 * Light Sage
-
-### Other access
 
 
 ## Lance
@@ -427,6 +430,7 @@ Mage Knight
 
 ## *Staff*
 Ice affinity staff that is effective against pirates and inflicts Frozen. Can select more than one target.
+After this weapon's first evolution, it also gets an AOE version that has a cooldown.
 
 ## Light
 Tome that reduces damage from monsters and dark magic. In its final form, nullifies damage from monsters and dark magic.
@@ -464,7 +468,7 @@ Pegasus Medic(from Cleric and Troubador)
 
 ## Sword
 
-Dagger that uses Skill instead of Strength for damage. It targets Speed. From its second version onwards, it inflicts Anesthesia(reduces Skill and Speed by 4 during 3 turns(up to 10 stacks)). From the third version onwards, it has a skill that after dealing a critical hit increases the damage dealt by critical hits. Its fifth version inflicts 3 stacks of Bleeding and Anesthesia, has the Combat Art Mercy and is 1-3 range.
+Dagger that uses Skill instead of Strength for damage. It targets Speed. From its second version onwards, it inflicts Anesthesia(reduces Skill and Speed by 4 during 3 turns(up to 10 stacks)). From the third version onwards, it has a skill that after dealing a critical hit increases the damage dealt by critical hits. From its fourth version onwards, it raises Skill. Its fifth version inflicts 3 stacks of Bleeding and Anesthesia, has the Combat Art Mercy and is 1-3 range.
 
 ### Access
 
@@ -478,6 +482,7 @@ Medic(have Natasha start as a Trainee)
 
 1. Sword that is effective against Flying and Seared units and uses Speed instead of Attack for damage. Range increases in later versions.
 Its last version is also effective against Monsters and Infantry enemies and gains 2 extra attacks if Joshua's Attack Speed is at least enemy's Attack Speed + 5. It uses Strength, Speed and Resistance and raises both Speed and Resistance.
+Unlocking the last version of this sword gives also access to an Anima tome that can be used regardless of class. This tome uses Magic, Speed and Skill for damage, raises Speed and Magic and is effective against Monster, Flying and Seared enemies.
 
 2. Sword that is effective against Magic units and also uses Luck for damage. Has a 50/50 chance of getting another attack or the enemy getting another attack. On later versions, the chance is 75/25.
 
@@ -499,6 +504,7 @@ Wolf Knight
 
 ### Other access
 Salamender Rider(from Swordmaster)
+Executioner(from Assassin)
 
 ---
 
@@ -674,7 +680,7 @@ Wyvern Shifter(from Wyvern Rider)
 # Innes
 
 ## *Bow*
-A bow with a minimum 6 range. At higher stages becomes brave and never misses. On its last version it uses Strength, Skill and Luck for damage and also does effective damage against Monsters and Shadow units.
+A bow with a minimum 6 range. At higher stages becomes brave and never misses. On its last version it uses Strength, Skill and Luck for damage, gains the Light element, does effective damage against Monsters and Shadow units and raises Strength and Luck.
 
 ## Lance
 1-2 range lance that Drenches the enemy and also uses Magic for damage. In its last stage it also inflicts Shadow and Curse.
@@ -684,7 +690,6 @@ Ranger
 
 ### Other access
 * Silver Knight(from Sniper)
-* Magiteck Knight(from Sniper)
 * Neotank(from Ballista)
 
 ## Sword
@@ -723,9 +728,7 @@ A 3-4 range axe that is effective against Armor and Drenched enemies.
 * Blademaster(from Chief)
 
 ## Lance
-1-2 range heavy lance that uses both Strength and Constitution for damage. It inflicts Rock Punctures. Gains +3 range in enemy phase.
-
-*Should be effective against Flying and Seared enemies*
+1-2 range heavy lance that uses both Strength and Constitution for damage. It inflicts Rock Punctures. Gains +3 range in enemy phase. From its second version onwards, it's effective against Flying and Seared enemies.
 
 ### Access
 * Gladiator(from Chief)
@@ -810,7 +813,7 @@ On its last version it becomes effective against Monsters, inflicts Silence on e
 
 ## Dark
 
-A tome that is effective against monsters and has a Nosferatu effect.
+A tome that is effective against monsters and heals part of damage dealt to enemy. Its third version heals 100% of damage dealt to enemy.
 
 ### Earliest access
 
@@ -1011,6 +1014,7 @@ Its last version is also effective against Monster, raises Knoll's Constitution 
 2. A staff that raises an ally's stats. Its second version refreshes ally targeted.
 
 ### Earliest access
+
 * Druid
 * Summoner
 
