@@ -1,6 +1,6 @@
-```
-## tbr
 
+## tbr
+```
 New class for Gerik in Chief line, Guildmaster.
 Vanguard animation been updated to new one.
 Mercenary's 1st skill Defiant been buffed and added to Feat pool.
@@ -13,8 +13,8 @@ Vanessa also gains an Ice Lance instead of Axereaver in chapter 5 convo.
 Fixed Nomad to have 8 MOV instead of 6.
 
 
+```
 
-=======
 ## 09-02-25
 
 ```
