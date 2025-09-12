@@ -1,7 +1,7 @@
 [
     {
         "nid": "Summon_Azuth",
-        "name": "Summon",
+        "name": "Summon Shadow",
         "desc": "Summons a phantom. This is a free action.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -64,6 +64,14 @@
             [
                 "event_before_combat",
                 "Global Steal_Prevent"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "no_equip",
+                null
             ]
         ]
     }

@@ -1,8 +1,8 @@
 [
     {
         "nid": "Summon_Skeleton",
-        "name": "Raise Skeleton",
-        "desc": "Summon a skeleton units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "name": "Raise Skeleton Guard",
+        "desc": "Summon a skeleton units to aid you. Gain 10 EXP after their actions. This is a free action.\nOn T3 they evolve into Death Knights",
         "icon_nid": "Skills",
         "icon_index": [
             9,
@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('Skeleton_' + unit.nid)"
+                "unit.get_stat('MAG') >= 20"
             ],
             [
                 "ability",

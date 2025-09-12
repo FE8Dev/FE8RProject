@@ -1,4 +1,7 @@
 ```
+=======
+
+>>>>>>> 0309e9d6c79f4b43409299fb95e522699509dd86
 ## tbr
 ```
 New class for Gerik in Chief line, Guildmaster.
@@ -7,6 +10,7 @@ Mercenary's 1st skill Defiant been buffed and added to Feat pool.
 Resonance nerfed to inflict 10 non lethal damage after combat.
 Tome Precision buffed to 60 Hit/Avoid.
 Davius rework.
+Davius complete rework.
 ZombieBoy's base HP is now 150, SPD to 10, DEF 8, and RES 6.
 Vanessa now gains +5 STR or MAG on chapter 4 base convo.
 Vanessa also gains an Ice Lance instead of Axereaver in chapter 5 convo.
@@ -24,6 +28,7 @@ Cormag's starting axe rank has been buffed to B
 Innes, Gerik, Tethys, L'Arachel, Dozla, and Saleh's starting main weapon rank has been upped to A rank.
 Adjustments for unit's above weapon's have been made as well.
 
+Revamped Azuth's T1 class, T1 skills, and T1/T2/T3 growhts, changed how his summons work, now each one gives him a Tether equal to its rank, Azuth can have a maximum amount of those equal to MAG/10(including buffs), each tether reduces MAG by 10 and goes away after the summon dies
 
 
 

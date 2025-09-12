@@ -2,7 +2,7 @@
     {
         "nid": "Guild_Ring",
         "name": "Guild Ring",
-        "desc": "Keepsake to remember better times.\n<blue>On Hold:</> Increases MAG growth by 20%, HP/STR/SKL/SPD/DEF/RES growth by 10% and gives the Bookworm skill.",
+        "desc": "Keepsake to remember better times. Given only to those that deserve complete trust.\n<blue>On Hold:</> Increases MAG growth by 10%, and MAG by +5.\nDoes not work for Azuth.",
         "icon_nid": "{Maxim} Vlad's Ring",
         "icon_index": [
             0,
@@ -12,22 +12,15 @@
             [
                 "multi_status_on_hold",
                 [
-                    "Guild_Ring_Skill",
-                    "Book_Worm_Item"
+                    "Guild_Ring_Skill"
                 ]
             ],
             [
                 "prf_unit",
-                [
-                    "Azuth"
-                ]
+                []
             ],
             [
                 "unstealable",
-                null
-            ],
-            [
-                "locked",
                 null
             ]
         ]

@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Double_Maximization_Art",
+        "name": "Double Maximization",
+        "desc": "Double unit's MAG and all attacks become Multi-Target:2 (This is a temporary skill).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_art",
+                "Double_Maximization_Proc"
+            ],
+            [
+                "allowed_weapons",
+                "\nitem_system.is_weapon(unit, item)"
+            ],
+            [
+                "charges_per_turn",
+                1
+            ]
+        ]
+    }
+]
