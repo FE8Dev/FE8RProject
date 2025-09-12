@@ -26,9 +26,8 @@ Adjustments for unit's above weapon's have been made as well.
 
 
 
-
+```
 ## 09-02-25
-
 ```
 Small buffs to Scintilla, Arno, and Moze.
 Adept Eye, Focus Sight, Hex, Anathema, Elegant Form, Dedication, and Shot Assistance have been buffed
