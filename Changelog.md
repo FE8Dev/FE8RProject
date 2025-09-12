@@ -1,4 +1,3 @@
-```
 ## tbr
 ```
 New class for Gerik in Chief line, Guildmaster.
