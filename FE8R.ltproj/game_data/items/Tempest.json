@@ -2,7 +2,7 @@
     {
         "nid": "Tempest",
         "name": "Tempest",
-        "desc": "The most powerful Wind magic. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:4), cannot DS, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), no WEXP gain, Splash DMG (50%).",
+        "desc": "The most powerful Wind magic. Starts on CD. <green>CD:1</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>(AOE Blast:5), MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), no WEXP gain, Splash DMG (50%).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             2,
@@ -104,18 +104,14 @@
             ],
             [
                 "enemy_blast_aoe",
-                4
+                5
             ],
             [
                 "cooldown",
-                2
+                1
             ],
             [
                 "start_cooldown",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
                 null
             ],
             [

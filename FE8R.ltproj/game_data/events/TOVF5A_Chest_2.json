@@ -14,7 +14,7 @@
             "unlock;{unit}",
             "sound;Unlock",
             "show_layer;Chest_2;fade",
-            "level_var;Chest2;game.get_random(1, 8)",
+            "level_var;Chest2;game.get_random(1, 10)",
             "if;game.level_vars['Chest2'] == 1",
             "give_item;{unit};Kame_no_Katana",
             "elif;game.level_vars['Chest2'] == 2",
@@ -31,11 +31,13 @@
             "give_item;{unit};Geyser_Blasts",
             "elif;game.level_vars['Chest2'] == 8",
             "give_item;{unit};Crusade_of_Water",
+            "elif;game.level_vars['Chest2'] == 9",
             "give_item;{unit};Recover",
+            "elif;game.level_vars['Chest2'] == 10",
+            "give_item;{unit};Death_Waterfall",
             "end",
             "has_traded;{unit}",
-            "remove_region;Chest_2",
-            ""
+            "remove_region;Chest_2"
         ],
         "nid": "TOVF5A Chest_2"
     }

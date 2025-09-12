@@ -2,7 +2,7 @@
     {
         "nid": "Aqua_Triple_Burst",
         "name": "Triple Burst",
-        "desc": "A triple blast of high speed water. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), (Multi-target:3).",
+        "desc": "A triple blast of high speed water. <green>CD:1</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), (Multi-target:3).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             4,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                8
+                6
             ],
             [
                 "hit",
@@ -110,12 +110,8 @@
                 "MAG_SKL_MID"
             ],
             [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
                 "cooldown",
-                2
+                1
             ],
             [
                 "item_tags",
@@ -125,6 +121,10 @@
             ],
             [
                 "cannot_be_countered",
+                null
+            ],
+            [
+                "exempt_from_dual_strike",
                 null
             ]
         ]

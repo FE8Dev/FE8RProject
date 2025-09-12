@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Live_To_Serve_T1",
+        "name": "Live To Serve",
+        "desc": "Restore HP to unit equal to amount the unit heals ally.\n+1 AOE to staffs.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "smart_oversplash",
+                1
+            ],
+            [
+                "live_to_serve",
+                1.0
+            ]
+        ]
+    }
+]

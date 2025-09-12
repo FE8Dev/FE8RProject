@@ -2,7 +2,7 @@
     {
         "nid": "Doom_Axe_Blast",
         "name": "Doom Axe (<icon>Blast</>)",
-        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:5)\n<pink>Misc:</>(AOE Blast:5), cannot DS, no WEXP gain, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:5)<icon>Shadowblight</>(AOE:2), Curse 15\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(AOE Blast:5), cannot DS, no WEXP gain, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -85,7 +85,9 @@
                 "statuses_on_hit",
                 [
                     "Breached_15",
-                    "Seared"
+                    "Seared",
+                    "Cursed_15",
+                    "Shadow_Blight"
                 ]
             ],
             [
@@ -120,12 +122,29 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Dark"
                 ]
             ],
             [
                 "alternate_damage_formula",
                 "STR_CON_STRONG"
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

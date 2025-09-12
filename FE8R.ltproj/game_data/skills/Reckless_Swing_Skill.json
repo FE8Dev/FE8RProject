@@ -2,7 +2,7 @@
     {
         "nid": "Reckless_Swing_Skill",
         "name": "Reckless Swing",
-        "desc": "Add +6 Damage and +15 Crit to attack,\nbut take 15% of Max HP as non-lethal damage after combat.",
+        "desc": "Add +25% Damage given and +15 Crit,\nbut take 15% of Max HP as non-lethal damage after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -10,16 +10,16 @@
         ],
         "components": [
             [
+                "damage_multiplier",
+                1.25
+            ],
+            [
                 "dynamic_crit_accuracy",
                 "15"
             ],
             [
                 "recoil_percent",
                 0.15
-            ],
-            [
-                "dynamic_damage",
-                "6"
             ],
             [
                 "lost_on_end_combat2",

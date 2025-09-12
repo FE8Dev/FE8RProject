@@ -2,7 +2,7 @@
     {
         "nid": "Hatchet",
         "name": "Hatchet",
-        "desc": "A Lightweight throwable axe made for Ross.\n<green>Skills:</>Power Chop (E)\n<pink>Misc:</>+1 Bonus attack.",
+        "desc": "A Lightweight axe that carries the hope of Ross.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+1 Bonus attack.",
         "icon_nid": "Axe",
         "icon_index": [
             0,
@@ -76,6 +76,24 @@
                 [
                     "Power_Chop_E"
                 ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

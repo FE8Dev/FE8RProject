@@ -2,7 +2,7 @@
     {
         "nid": "Elegant_Form_T1",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each attack dodged for 2 turns.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each attack or attack dodged for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -11,6 +11,10 @@
         "components": [
             [
                 "gain_skill_after_take_miss",
+                "Elegant_Form_Buff"
+            ],
+            [
+                "gain_on_strike",
                 "Elegant_Form_Buff"
             ],
             [

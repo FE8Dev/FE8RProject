@@ -2,7 +2,7 @@
     {
         "nid": "Sunbeam",
         "name": "Sunbeam",
-        "desc": "A bright light that blinds enemies.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>), +10 Crit damage.",
+        "desc": "A bright light that blinds enemies.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + SPD/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//3))}</>), +10 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             4,
@@ -100,7 +100,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_SPD_WEAK"
+                "LCK_SPD_WEAK"
             ],
             [
                 "item_tags",

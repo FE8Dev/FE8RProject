@@ -2,7 +2,7 @@
     {
         "nid": "Throwing_Axe",
         "name": "Throwing Axe",
-        "desc": "A bigger throwing axe for stronger warriors.\n<green>Skills:</>Power Chop (A)\n<pink>Misc:</>+1 Bonus attack.",
+        "desc": "A bigger throwing axe for stronger warriors.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+1 Bonus attack.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             36,
@@ -80,6 +80,24 @@
                 [
                     "Power_Chop_A"
                 ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

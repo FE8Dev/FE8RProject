@@ -1,12 +1,12 @@
 [
     {
         "nid": "Armors_Bane",
-        "name": "Armor's Bane",
-        "desc": "A heavy blade that renders armor ineffective.\n<green>Skills:</>Blade Sweep, Provoke <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "name": "Stone Storm",
+        "desc": "A heavy blade that cleaves boulders.\n<green>Skills:</>Blade Sweep, Provoke\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "icon_nid": "Swords Sheet",
         "icon_index": [
-            43,
-            1
+            9,
+            3
         ],
         "components": [
             [
@@ -83,7 +83,8 @@
                 {
                     "effective_tags": [
                         "Frozen",
-                        "Armor"
+                        "Flying",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -107,6 +108,14 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_STRONG"
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Wind",
+                    "Earth"
+                ]
             ]
         ]
     }

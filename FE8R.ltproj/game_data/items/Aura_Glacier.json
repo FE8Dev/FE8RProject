@@ -2,7 +2,7 @@
     {
         "nid": "Aura_Glacier",
         "name": "Aura Downpour",
-        "desc": "Water that can purge all of evil. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(AOE:2), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), cannot DS, +40 Crit damage.",
+        "desc": "Water that can purge all of evil. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Light</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3), Purging Waters++\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(AOE:2), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), cannot DS, +40 Crit damage.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             8,
@@ -31,7 +31,7 @@
             ],
             [
                 "damage",
-                16
+                22
             ],
             [
                 "hit",
@@ -83,7 +83,8 @@
             [
                 "statuses_on_hit",
                 [
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Purging_Waters_PP"
                 ]
             ],
             [

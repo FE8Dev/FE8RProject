@@ -1,6 +1,6 @@
 ```
 ## tbr
-
+```
 New class for Gerik in Chief line, Guildmaster.
 Vanguard animation been updated to new one.
 Mercenary's 1st skill Defiant been buffed and added to Feat pool.
@@ -11,6 +11,19 @@ ZombieBoy's base HP is now 150, SPD to 10, DEF 8, and RES 6.
 Vanessa now gains +5 STR or MAG on chapter 4 base convo.
 Vanessa also gains an Ice Lance instead of Axereaver in chapter 5 convo.
 Fixed Nomad to have 8 MOV instead of 6.
+MyUnit now starts at level 4 and some buff to base stats have been adjusted.
+Madness dark spell line has been reworked to Dark Fire line with no CD and cleaves, but no Berserk.
+Dark Water generic weapons have been made.
+Light Venom line has been buffed to be Light Earth Line and now inflicts Rock Punctures, though is still CD:4
+Light Water line has new debuff added that decreases SPD to enemies (even more if monsters), and damage has been boosted.
+Light Wind line has been added.
+Sunbeam line scaling has been swaped from MAG + SPD to LCK + SPD.
+Some generic Anima spell lines like Wind, Aqua, Iceshock have been buffed.
+Some T1 skills have been buffed/reworked.
+Cormag's starting axe rank has been buffed to B
+Innes, Gerik, Tethys, L'Arachel, Dozla, and Saleh's starting main weapon rank has been upped to A rank.
+Adjustments for unit's above weapon's have been made as well.
+
 
 
 

@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Spikes",
         "name": "Ice Spikes",
-        "desc": "Basic ice magic.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Splash DMG (20%), MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>).",
+        "desc": "Basic ice magic.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Splash DMG (20%), +5 RES, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             9,
@@ -31,11 +31,11 @@
             ],
             [
                 "damage",
-                3
+                7
             ],
             [
                 "hit",
-                70
+                75
             ],
             [
                 "crit",
@@ -113,6 +113,15 @@
                 "multi_status_on_equip",
                 [
                     "Frozen_AOE_Splash"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
                 ]
             ]
         ]

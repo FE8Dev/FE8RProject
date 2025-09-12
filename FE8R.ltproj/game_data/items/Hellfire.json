@@ -2,7 +2,7 @@
     {
         "nid": "Hellfire",
         "name": "Hellfire",
-        "desc": "A infernal tome used to counter Light magic. <green>CD:2</>\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Berserk\n<red>Effective:</><icon>Horse</>",
+        "desc": "A infernal tome that has burned many corpses.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>), Cleave.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             2,
@@ -98,8 +98,7 @@
                 [
                     "Cursed_15",
                     "Shadow_Blight",
-                    "Seared",
-                    "Berserk"
+                    "Seared"
                 ]
             ],
             [
@@ -107,13 +106,10 @@
                 "Shadowblight_AOE_Splash"
             ],
             [
-                "cooldown",
-                2
-            ],
-            [
                 "item_tags",
                 [
-                    "Dark"
+                    "Dark",
+                    "Fire"
                 ]
             ],
             [
@@ -121,6 +117,14 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_STRONG"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

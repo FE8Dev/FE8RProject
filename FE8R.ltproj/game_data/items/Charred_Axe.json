@@ -2,7 +2,7 @@
     {
         "nid": "Charred_Axe",
         "name": "Charred Axe",
-        "desc": "An old axe that sends sparks in an area.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:3)\n<pink>Misc:</>STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
+        "desc": "An old dark axe that sends sparks in an area.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:3)<icon>Shadowblight</>(AOE:2), Curse 2\n<red>Effective:</><icon>Horse</> <pink>Misc:</>STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -61,7 +61,9 @@
                 "statuses_on_hit",
                 [
                     "Breached_2",
-                    "Seared"
+                    "Seared",
+                    "Cursed_2",
+                    "Shadow_Blight"
                 ]
             ],
             [
@@ -80,12 +82,29 @@
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Dark"
                 ]
             ],
             [
                 "alternate_damage_formula",
                 "STR_CON_WEAK"
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

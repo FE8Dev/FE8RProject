@@ -2,7 +2,7 @@
     {
         "nid": "Feeling_Lucky_DBLBuff_hide",
         "name": "Feeling Lucky",
-        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "desc": "Double this unit's LCK while healing or while being attacked.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -12,6 +12,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player' or mode == 'defense'"
             ],
             [
                 "stat_multiplier",

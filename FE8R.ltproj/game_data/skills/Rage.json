@@ -2,7 +2,7 @@
     {
         "nid": "Rage",
         "name": "Rage",
-        "desc": "+3 in most stats, but take 6 damage after every combat.",
+        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -10,49 +10,20 @@
         ],
         "components": [
             [
-                "stat_change",
-                [
-                    [
-                        "HP",
-                        3
-                    ],
-                    [
-                        "STR",
-                        3
-                    ],
-                    [
-                        "MAG",
-                        3
-                    ],
-                    [
-                        "SKL",
-                        3
-                    ],
-                    [
-                        "SPD",
-                        3
-                    ],
-                    [
-                        "LCK",
-                        3
-                    ],
-                    [
-                        "DEF",
-                        3
-                    ],
-                    [
-                        "RES",
-                        3
-                    ]
-                ]
-            ],
-            [
-                "recoil",
-                6
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "gain_on_strike",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "recoil_percent",
+                0.1
             ]
         ]
     }

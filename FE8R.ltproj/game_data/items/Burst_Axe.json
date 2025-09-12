@@ -2,7 +2,7 @@
     {
         "nid": "Burst_Axe",
         "name": "Burst Axe",
-        "desc": "The Charred Axe restored to its full explosive power...Possibly...\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:4).\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "The Charred Axe restored to its full explosive power...Possibly...\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:3)<icon>Shadowblight</>(AOE:2), Curse 8\n<red>Effective:</><icon>Horse</> <pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -81,7 +81,9 @@
                 "statuses_on_hit",
                 [
                     "Breached_8",
-                    "Seared"
+                    "Seared",
+                    "Cursed_8",
+                    "Shadow_Blight"
                 ]
             ],
             [
@@ -93,18 +95,36 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Sear_Explosion"
+                    "Sear_Explosion",
+                    "Power_Chop_A"
                 ]
             ],
             [
                 "item_tags",
                 [
-                    "Fire"
+                    "Fire",
+                    "Dark"
                 ]
             ],
             [
                 "alternate_damage_formula",
                 "STR_CON_STRONG"
+            ],
+            [
+                "self_status_on_hit",
+                "Shadowblight_AOE_Splash"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

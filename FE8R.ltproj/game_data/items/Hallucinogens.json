@@ -2,7 +2,7 @@
     {
         "nid": "Hallucinogens",
         "name": "Hallucinogens",
-        "desc": "Emits a foul gust that drives people insane. <green>CD:2</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</>Berserk",
+        "desc": "Emits a fiery burst that drives people to death.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*1.5))}</>). Cleave.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             2,
@@ -23,11 +23,11 @@
             ],
             [
                 "max_range",
-                2
+                1
             ],
             [
                 "damage",
-                10
+                14
             ],
             [
                 "hit",
@@ -75,7 +75,7 @@
             ],
             [
                 "battle_cast_anim",
-                "Aircalibur_Red"
+                "Eclipse_Red"
             ],
             [
                 "ignore_line_of_sight",
@@ -84,9 +84,9 @@
             [
                 "statuses_on_hit",
                 [
-                    "Cursed_5",
+                    "Cursed_8",
                     "Shadow_Blight",
-                    "Berserk"
+                    "Seared"
                 ]
             ],
             [
@@ -94,13 +94,10 @@
                 "Shadowblight_AOE_Splash"
             ],
             [
-                "cooldown",
-                2
-            ],
-            [
                 "item_tags",
                 [
-                    "Dark"
+                    "Dark",
+                    "Fire"
                 ]
             ],
             [
@@ -108,6 +105,26 @@
                 [
                     "Ancient_Pact_A"
                 ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_MID"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

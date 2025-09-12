@@ -1,0 +1,53 @@
+[
+    {
+        "nid": "Plushie",
+        "name": "Plushie",
+        "desc": "Unit cannot use weapons, x2 Max HP, -50 Avoid, Provoke, and 100% HP Regen for 3 turns.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
+            ],
+            [
+                "has_tags",
+                [
+                    "AIProvoke"
+                ]
+            ],
+            [
+                "regeneration",
+                1.0
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ]
+        ]
+    }
+]

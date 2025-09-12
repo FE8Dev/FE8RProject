@@ -2,7 +2,7 @@
     {
         "nid": "Manawood_Bow",
         "name": "Manawood Bow",
-        "desc": "A bow Neimi crafted herself from a mysterious tree.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
+        "desc": "A bow Neimi crafted herself from a mysterious tree.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             5,
@@ -61,7 +61,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Flying"
+                        "Flying",
+                        "Horse"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -88,6 +89,16 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Seared"
             ]
         ]
     }

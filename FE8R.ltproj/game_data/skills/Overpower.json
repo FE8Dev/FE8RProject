@@ -2,7 +2,7 @@
     {
         "nid": "Overpower",
         "name": "Overpower",
-        "desc": "+20 Hit and +3 AS if unit's STR >= to enemy's STR.",
+        "desc": "+30 Hit and +5 AS if unit's STR >= to enemy's STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -10,20 +10,20 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
                 "combat_condition",
                 "unit.get_stat('STR') >= target.get_stat('STR')"
             ],
             [
-                "hit",
-                20
+                "dynamic_accuracy",
+                "30"
             ],
             [
-                "attack_speed",
-                3
-            ],
-            [
-                "class_skill",
-                null
+                "dynamic_attack_speed",
+                "5"
             ]
         ]
     }

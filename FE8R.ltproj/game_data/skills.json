@@ -3418,16 +3418,12 @@
         ],
         "components": [
             [
-                "Cleave",
-                null
-            ],
-            [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Sword'"
+                "'Blade' in unit.get_weapon().tags"
             ],
             [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item)"
+                "item_override",
+                "Wide_Sweep"
             ]
         ]
     },
@@ -3452,10 +3448,6 @@
             [
                 "give_status_after_hit",
                 "Stun"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item)"
             ]
         ]
     },
@@ -10339,7 +10331,7 @@
     },
     {
         "nid": "Forest",
-        "name": "Forest",
+        "name": "Cover",
         "desc": "",
         "icon_nid": "Skills",
         "icon_index": [
@@ -11596,7 +11588,7 @@
     {
         "nid": "Elegant_Form",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each attack dodged for 2 turns.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each attack or attack dodged for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -11609,6 +11601,10 @@
             ],
             [
                 "gain_skill_after_take_miss",
+                "Elegant_Form_Buff"
+            ],
+            [
+                "gain_on_strike",
                 "Elegant_Form_Buff"
             ]
         ]
@@ -11788,7 +11784,7 @@
     {
         "nid": "Outdoor_Fighter",
         "name": "Outdoor Fighter",
-        "desc": "+5/-5 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics until end of chapter when dodging.\nMax 6 stacks.",
+        "desc": "+6/-6 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics (+5 Hit/Avoid for each stack) until end of chapter when dodging.\nMax 6 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -11809,11 +11805,11 @@
             ],
             [
                 "dynamic_damage",
-                "5"
+                "6"
             ],
             [
                 "dynamic_resist",
-                "5"
+                "6"
             ]
         ]
     },
@@ -11848,7 +11844,7 @@
     {
         "nid": "Discipline",
         "name": "Discipline",
-        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks. Lost when hit.",
+        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -11872,7 +11868,7 @@
     {
         "nid": "Discipline_Item",
         "name": "Discipline",
-        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks. Lost when hit.",
+        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -11892,7 +11888,7 @@
     {
         "nid": "Discipline_Buff",
         "name": "Discipline",
-        "desc": "+1 SKL for each stack\nMax 10 stacks. Lost when hit.",
+        "desc": "+1 SKL for each stack\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -11915,10 +11911,6 @@
                         1
                     ]
                 ]
-            ],
-            [
-                "lost_on_take_hit",
-                null
             ]
         ]
     },
@@ -11954,7 +11946,7 @@
     {
         "nid": "Updraft",
         "name": "Updraft",
-        "desc": "Increased movement while on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
+        "desc": "+3 MOV on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -11987,7 +11979,7 @@
     {
         "nid": "Updraft_Crit_hide",
         "name": "Updraft",
-        "desc": "Increased movement while on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
+        "desc": "+3 MOV on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -12007,7 +11999,7 @@
     {
         "nid": "Updraft_Crit_Buff",
         "name": "Updraft",
-        "desc": "+3 Move for 2 turns.",
+        "desc": "+3 MOV for 2 turns.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -12045,7 +12037,7 @@
             ],
             [
                 "dynamic_avoid",
-                "31 - game.turncount if game.turncount <= 30 else 0"
+                "43 - game.turncount if game.turncount <= 30 else 0"
             ],
             [
                 "class_skill",
@@ -12056,7 +12048,7 @@
     {
         "nid": "Adept_Eye",
         "name": "Adept Eye",
-        "desc": "+8 DMG and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
+        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12072,11 +12064,11 @@
                 "game.tilemap.get_terrain(unit.position) in ('20' , '21', '22')\n"
             ],
             [
-                "dynamic_damage",
+                "dynamic_attack_speed",
                 "8"
             ],
             [
-                "dynamic_attack_speed",
+                "dynamic_damage",
                 "8"
             ]
         ]
@@ -12084,7 +12076,7 @@
     {
         "nid": "Adept_Eye_Attack_hide",
         "name": "Adept Eye",
-        "desc": "+8 DMG and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
+        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12104,7 +12096,7 @@
     {
         "nid": "Adept_Eye_Attack_Buff",
         "name": "Adept Eye",
-        "desc": "+8 DMG and +8 AS for 2 turns.\nMax 5 stacks.",
+        "desc": "+8 Damage and +8 AS for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12157,7 +12149,7 @@
     {
         "nid": "Feeling_Lucky",
         "name": "Feeling Lucky",
-        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "desc": "Double this unit's LCK while healing or while being attacked.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -12185,7 +12177,7 @@
     {
         "nid": "Feeling_Lucky_DBLBuff_hide",
         "name": "Feeling Lucky",
-        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "desc": "Double this unit's LCK while healing or while being attacked.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -12195,6 +12187,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player' or mode == 'defense'"
             ],
             [
                 "stat_multiplier",
@@ -12230,7 +12226,7 @@
     {
         "nid": "Faith",
         "name": "Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Light Magic.",
+        "desc": "+5 Crit and damage increases by LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>) when using Light Magic.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -12258,7 +12254,7 @@
     {
         "nid": "Voice_Of_Peace_Buff",
         "name": "Voice Of Peace",
-        "desc": "Reduce Damage taken by unit's LCK/4.",
+        "desc": "Reduce Damage taken by unit's LCK/4 (<red>{e: (unit.get_stat('LCK')//4)}</>).",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -12346,7 +12342,7 @@
     {
         "nid": "Book_Worm",
         "name": "Book Worm",
-        "desc": "Double Magic WEXP.\n+3 Hit for each item in unit's inventory.",
+        "desc": "Double Magic WEXP.\n+5 Hit for each item in unit's inventory.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -12367,14 +12363,14 @@
             ],
             [
                 "dynamic_accuracy",
-                "3*(len(unit.items))"
+                "5*(len(unit.items))"
             ]
         ]
     },
     {
         "nid": "Book_Worm_Item",
         "name": "Book Worm",
-        "desc": "Double Magic WEXP.\n+3 Hit for each item in unit's inventory.",
+        "desc": "Double Magic WEXP.\n+5 Hit for each item in unit's inventory.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -12391,14 +12387,14 @@
             ],
             [
                 "dynamic_accuracy",
-                "3*(len(unit.items))"
+                "5*(len(unit.items))"
             ]
         ]
     },
     {
         "nid": "Within_Shadows",
         "name": "Within Shadows",
-        "desc": "+40 avoid in Terrain with bonus.",
+        "desc": "+50 avoid in Terrain with bonus.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -12411,7 +12407,7 @@
             ],
             [
                 "avoid",
-                40
+                50
             ],
             [
                 "class_skill",
@@ -12490,7 +12486,7 @@
     {
         "nid": "Desperation",
         "name": "Desperation",
-        "desc": "When below 75% HP, unit will follow up before the enemy.",
+        "desc": "+5 SKL and Desperation when this unit is below 75% Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -12512,6 +12508,15 @@
             [
                 "desperation",
                 null
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
             ]
         ]
     },
@@ -12675,7 +12680,7 @@
     {
         "nid": "Defiant",
         "name": "Defiant",
-        "desc": "+25 Avoid/Hit, +7 Damage given when not at maximum HP.",
+        "desc": "+30 Avoid/Hit, +8 Damage given when not at maximum HP.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -12692,7 +12697,7 @@
             ],
             [
                 "dynamic_damage",
-                "7"
+                "8"
             ],
             [
                 "dynamic_avoid",
@@ -12707,7 +12712,7 @@
     {
         "nid": "Rage",
         "name": "Rage",
-        "desc": "+3 in most stats, but take 6 damage after every combat.",
+        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -12715,56 +12720,84 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
+                "gain_on_strike",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "recoil_percent",
+                0.1
+            ]
+        ]
+    },
+    {
+        "nid": "Rage_Stat_Buff",
+        "name": "Rage",
+        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            43
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
                 "stat_change",
                 [
                     [
-                        "HP",
-                        3
-                    ],
-                    [
                         "STR",
-                        3
+                        2
                     ],
                     [
                         "MAG",
-                        3
+                        2
                     ],
                     [
                         "SKL",
-                        3
+                        2
                     ],
                     [
                         "SPD",
-                        3
+                        2
                     ],
                     [
                         "LCK",
-                        3
+                        2
                     ],
                     [
                         "DEF",
-                        3
+                        2
                     ],
                     [
                         "RES",
-                        3
+                        2
+                    ],
+                    [
+                        "CON",
+                        2
                     ]
                 ]
             ],
             [
-                "recoil",
-                6
-            ],
-            [
-                "class_skill",
-                null
+                "time",
+                2
             ]
         ]
     },
     {
         "nid": "Adrenaline",
         "name": "Adrenaline",
-        "desc": "Gain +5 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
+        "desc": "Gain +25 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -12784,7 +12817,7 @@
     {
         "nid": "Adrenaline_Buff",
         "name": "Adrenaline",
-        "desc": "+5 HP for each stack until end of chapter.\nMax 10 stacks.",
+        "desc": "+25 HP for each stack until end of chapter.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -12800,7 +12833,7 @@
                 [
                     [
                         "HP",
-                        5
+                        25
                     ]
                 ]
             ],
@@ -12865,7 +12898,7 @@
     {
         "nid": "Overpower",
         "name": "Overpower",
-        "desc": "+20 Hit and +3 AS if unit's STR >= to enemy's STR.",
+        "desc": "+30 Hit and +5 AS if unit's STR >= to enemy's STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -12873,27 +12906,27 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
                 "combat_condition",
                 "unit.get_stat('STR') >= target.get_stat('STR')"
             ],
             [
-                "hit",
-                20
+                "dynamic_accuracy",
+                "30"
             ],
             [
-                "attack_speed",
-                3
-            ],
-            [
-                "class_skill",
-                null
+                "dynamic_attack_speed",
+                "5"
             ]
         ]
     },
     {
         "nid": "Live_To_Serve",
         "name": "Live To Serve",
-        "desc": "Restore HP to unit equal to amount the unit heals ally.",
+        "desc": "Restore HP to unit equal to amount the unit heals ally.\n+1 AOE to staffs.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -12901,12 +12934,20 @@
         ],
         "components": [
             [
-                "live_to_serve",
-                1.0
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "smart_oversplash",
+                1
+            ],
+            [
+                "live_to_serve",
+                1.0
             ]
         ]
     },
@@ -12929,7 +12970,7 @@
     {
         "nid": "Royal_Peace_Decree_Aura",
         "name": "Royal Peace Decree",
-        "desc": "Enemies within 2 spaces cannot Double normally.",
+        "desc": "Enemies within 4 spaces cannot Double normally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -12946,7 +12987,7 @@
             ],
             [
                 "aura_range",
-                2
+                4
             ],
             [
                 "aura_target",
@@ -13030,7 +13071,7 @@
     {
         "nid": "Man_of_the_Sea",
         "name": "Man of the Sea",
-        "desc": "+10 Crit and +20 Avoid if unit's SPD >= enemy's SPD.\nIn water this units gains +6 to all stats, +6 AS, +15 Crit/Hit/Avoid.",
+        "desc": "+10 Crit and +30 Avoid if unit's SPD >= enemy's SPD.\nIn water this units gains +6 to all stats, +6 AS, +15 Crit/Hit/Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -13051,7 +13092,7 @@
             ],
             [
                 "dynamic_avoid",
-                "20"
+                "30"
             ]
         ]
     },
@@ -13194,7 +13235,7 @@
     {
         "nid": "Fight_or_Flight",
         "name": "Fight or Flight",
-        "desc": "+6 damage given when at full HP.\n-6 damage received when not.",
+        "desc": "+20% damage given when at full HP.\n-20% damage received when not.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -13202,16 +13243,16 @@
         ],
         "components": [
             [
-                "dynamic_damage",
-                "6 if unit.get_hp() == unit.get_max_hp() else 0"
-            ],
-            [
-                "dynamic_resist",
-                "6 if unit.get_hp() != unit.get_max_hp() else 0"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1.20 if unit.get_hp() == unit.get_max_hp() else 1.00"
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1.20 if unit.get_hp() != unit.get_max_hp() else 1.00"
             ]
         ]
     },
@@ -13262,7 +13303,7 @@
     {
         "nid": "Reckless_Swing_Skill",
         "name": "Reckless Swing",
-        "desc": "Add +6 Damage and +15 Crit to attack,\nbut take 15% of Max HP as non-lethal damage after combat.",
+        "desc": "Add +25% Damage given and +15 Crit,\nbut take 15% of Max HP as non-lethal damage after combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -13270,16 +13311,16 @@
         ],
         "components": [
             [
+                "damage_multiplier",
+                1.25
+            ],
+            [
                 "dynamic_crit_accuracy",
                 "15"
             ],
             [
                 "recoil_percent",
                 0.15
-            ],
-            [
-                "dynamic_damage",
-                "6"
             ],
             [
                 "lost_on_end_combat2",
@@ -13296,7 +13337,7 @@
     {
         "nid": "Reckless_Swing_Art",
         "name": "Reckless Swing",
-        "desc": "<red>CA:</>Add +6 Damage and +15 Crit to attack,\nbut take 15% of Max HP as non-lethal damage. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add +25% Damage given and +15 Crit,\nbut take 15% of Max HP as non-lethal damage. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -13304,12 +13345,12 @@
         ],
         "components": [
             [
-                "combat_art",
-                "Reckless_Swing_Skill"
-            ],
-            [
                 "class_skill",
                 null
+            ],
+            [
+                "combat_art",
+                "Reckless_Swing_Skill"
             ],
             [
                 "Endstep_charge_increase",
@@ -13622,7 +13663,7 @@
     {
         "nid": "Paladin_Shield_Skill",
         "name": "Paladin's Shield",
-        "desc": "<red>CA:</>+30 Hit and add enemy's RES/2 to attack.\nDouble unit's RES during attack. <green>CD:3 Turns</>",
+        "desc": "<red>CA:</>+30 Hit and add enemy's unit's RES/2 to attack.\nDouble unit's RES during attack. <green>CD:3 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -21670,7 +21711,7 @@
     {
         "nid": "Axefaith",
         "name": "Axefaith",
-        "desc": "Add unit's MAG/2 and LCK/2 to Axe attacks.",
+        "desc": "Add unit's MAG/2 and LCK/2 (<red>{e: (unit.get_stat('LCK')//2 + unit.get_stat('MAG')//2))}</>) to Axe attacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -25767,7 +25808,7 @@
     {
         "nid": "Shadow_Beam",
         "name": "Shadow Beam",
-        "desc": "<red>CA:</>A powerful, long range Line attack. <green>CD:6 Turns</>\nUses STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "<red>CA:</>A powerful, long range Line attack. <green>CD:6 Turns</>\nUses STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             3,
@@ -26992,7 +27033,7 @@
     {
         "nid": "Frightening_Player",
         "name": "Frightening",
-        "desc": "Reduce STR by 20% and SKL by 10% to enemies 2 spaces away.",
+        "desc": "Reduce STR by 30% and SKL by 30% to enemies 2 spaces away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -27069,7 +27110,7 @@
     {
         "nid": "Poison_Claw",
         "name": "Poison Claw",
-        "desc": "Attacks inflict the Venom status on enemies when hit.\n+15 Hit.\nVenom stacks.",
+        "desc": "Attacks inflict the Venom status on enemies when hit.\n+25 Hit.\nVenom stacks.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -27086,7 +27127,7 @@
             ],
             [
                 "dynamic_accuracy",
-                "15"
+                "25"
             ],
             [
                 "give_status_after_hit",
@@ -27484,7 +27525,7 @@
     {
         "nid": "Stiff_Bones",
         "name": "Stiff Bones",
-        "desc": "+8 DEF, but -4 RES.",
+        "desc": "+12 DEF, but -4 RES.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -27500,7 +27541,7 @@
                 [
                     [
                         "DEF",
-                        8
+                        12
                     ],
                     [
                         "RES",
@@ -27613,7 +27654,7 @@
     {
         "nid": "Cackle_Player",
         "name": "Cackle",
-        "desc": "Reduce enemy's stats within 3 spaces by 20%.",
+        "desc": "Reduce enemy's stats within 3 spaces by 30%.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -27694,7 +27735,7 @@
     {
         "nid": "Cackle_Debuff_Player",
         "name": "Cackle",
-        "desc": "Reduce all stats by 20%.",
+        "desc": "Reduce all stats by 30%.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -27706,43 +27747,43 @@
                 [
                     [
                         "STR",
-                        0.8
+                        0.7
                     ],
                     [
                         "MAG",
-                        0.8
+                        0.7
                     ],
                     [
                         "SKL",
-                        0.8
+                        0.7
                     ],
                     [
                         "SPD",
-                        0.8
+                        0.7
                     ],
                     [
                         "LCK",
-                        0.8
+                        0.7
                     ],
                     [
                         "DEF",
-                        0.8
+                        0.7
                     ],
                     [
                         "RES",
-                        0.8
+                        0.7
                     ],
                     [
                         "CON",
-                        0.8
+                        0.7
                     ],
                     [
                         "MOV",
-                        0.8
+                        0.7
                     ],
                     [
                         "HP",
-                        0.8
+                        0.7
                     ]
                 ]
             ],
@@ -28109,7 +28150,7 @@
     {
         "nid": "Bewitching_Eye",
         "name": "Bewitching Eye",
-        "desc": "Attacks inflict the Confuse status on hit.\n+15 Avoid.",
+        "desc": "Attacks inflict the Confuse status on hit.\n+25 Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -28130,7 +28171,7 @@
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "25"
             ]
         ]
     },
@@ -28593,7 +28634,7 @@
     {
         "nid": "Rabies_Proc",
         "name": "Rabies",
-        "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+15 Avoid",
+        "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+25 Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -28606,7 +28647,7 @@
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "25"
             ],
             [
                 "combat_condition",
@@ -29216,7 +29257,7 @@
     {
         "nid": "Focused_Mind",
         "name": "Focused Mind",
-        "desc": "+20 Avoid/Hit/Damage given each time an enemy misses you for 2 turns.\n",
+        "desc": "+30 Avoid/Hit/Damage given each time an enemy misses you for 2 turns.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -29236,7 +29277,7 @@
     {
         "nid": "Focused_Mind_Buff",
         "name": "Focused Mind",
-        "desc": "+20 Avoid/Hit/Damage for 2 turns.\n",
+        "desc": "+30 Avoid/Hit/Damage for 2 turns.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -29249,15 +29290,15 @@
             ],
             [
                 "dynamic_damage",
-                "20"
+                "30"
             ],
             [
                 "dynamic_accuracy",
-                "20"
+                "30"
             ],
             [
                 "dynamic_avoid",
-                "20"
+                "30"
             ],
             [
                 "end_time",
@@ -31004,7 +31045,7 @@
     {
         "nid": "Supportive_Recharge",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% and reduce EXP gain by 95% for 1 turn.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -31032,7 +31073,7 @@
     {
         "nid": "Supportive_Recharge_Debuff",
         "name": "Spent",
-        "desc": "-75% MOV and EXP gain for 1 turn.",
+        "desc": "-75% MOV gain for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -32800,7 +32841,7 @@
     {
         "nid": "Rage_item",
         "name": "Rage",
-        "desc": "+3 in most stats, but take 6 damage after every combat.",
+        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -32808,45 +32849,16 @@
         ],
         "components": [
             [
-                "stat_change",
-                [
-                    [
-                        "HP",
-                        3
-                    ],
-                    [
-                        "STR",
-                        3
-                    ],
-                    [
-                        "MAG",
-                        3
-                    ],
-                    [
-                        "SKL",
-                        3
-                    ],
-                    [
-                        "SPD",
-                        3
-                    ],
-                    [
-                        "LCK",
-                        3
-                    ],
-                    [
-                        "DEF",
-                        3
-                    ],
-                    [
-                        "RES",
-                        3
-                    ]
-                ]
+                "gain_skill_after_take_damage",
+                "Rage_Stat_Buff"
             ],
             [
-                "recoil",
-                6
+                "gain_on_strike",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "recoil_percent",
+                0.1
             ]
         ]
     },
@@ -35011,7 +35023,7 @@
     {
         "nid": "Frightening_Debuff_Player",
         "name": "Frightening",
-        "desc": "Reduce STR by 20% and SKL by 10%.",
+        "desc": "Reduce STR by 30% and SKL by 30%.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -35023,11 +35035,11 @@
                 [
                     [
                         "STR",
-                        0.8
+                        0.7
                     ],
                     [
                         "SKL",
-                        0.9
+                        0.7
                     ]
                 ]
             ],
@@ -35203,6 +35215,93 @@
                         "Lost after combat if using an AOE item"
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Purging_Waters",
+        "name": "Purging Waters",
+        "desc": "-10 SPD if Monster unit, else -5 SPD for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "SPD",
+                        "-10 if 'Monster' in unit.tags else -5"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Purging_Waters_P",
+        "name": "Purging Waters+",
+        "desc": "-20 SPD if Monster unit, else -10 SPD for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "SPD",
+                        "-20 if 'Monster' in unit.tags else -10"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Purging_Waters_PP",
+        "name": "Purging Waters++",
+        "desc": "-30 SPD if Monster unit, else -20 SPD for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "SPD",
+                        "-30 if 'Monster' in unit.tags else -20"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
             ]
         ]
     },
@@ -37268,7 +37367,7 @@
     {
         "nid": "Old_Faith",
         "name": "Old Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Bows.",
+        "desc": "+5 Crit and damage increases by LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>) when using Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -49960,6 +50059,10 @@
         ],
         "components": [
             [
+                "hidden",
+                null
+            ],
+            [
                 "condition",
                 "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light, Staff, Anima')"
             ],
@@ -51396,7 +51499,7 @@
     {
         "nid": "Sword_Faith",
         "name": "Sword Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Light Magic or Swords.",
+        "desc": "+5 Crit and damage increases by LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>) when using Light Magic or Swords.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -55742,7 +55845,7 @@
     {
         "nid": "Elegant_Form_T1",
         "name": "Elegant Form",
-        "desc": "x1.2 damage boost for each attack dodged for 2 turns.\nMax 5 stacks.",
+        "desc": "x1.2 damage boost for each attack or attack dodged for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -55751,6 +55854,10 @@
         "components": [
             [
                 "gain_skill_after_take_miss",
+                "Elegant_Form_Buff"
+            ],
+            [
+                "gain_on_strike",
                 "Elegant_Form_Buff"
             ],
             [
@@ -55830,7 +55937,7 @@
     {
         "nid": "Outdoor_Fighter_T1",
         "name": "Outdoor Fighter",
-        "desc": "+5/-5 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics until end of chapter when dodging.\nMax 6 stacks.",
+        "desc": "+6/-6 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics (+5 Hit/Avoid for each stack) until end of chapter when dodging.\nMax 6 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -55842,16 +55949,16 @@
                 "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')\n"
             ],
             [
-                "gain_skill_after_take_miss",
-                "Outdoor_Fighter_Buff"
-            ],
-            [
                 "dynamic_damage",
-                "5"
+                "6"
             ],
             [
                 "dynamic_resist",
-                "5"
+                "6"
+            ],
+            [
+                "gain_skill_after_take_miss",
+                "Outdoor_Fighter_Buff"
             ],
             [
                 "feat",
@@ -55866,7 +55973,7 @@
     {
         "nid": "Discipline_T1",
         "name": "Discipline",
-        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks. Lost when hit.",
+        "desc": "Doubles WEXP.\n+1 SKL for each attack dodged.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -55986,7 +56093,7 @@
     {
         "nid": "Book_Worm_T1",
         "name": "Book Worm",
-        "desc": "Double Magic WEXP.\n+3 Hit for each item in unit's inventory.",
+        "desc": "Double Magic WEXP.\n+5 Hit for each item in unit's inventory.",
         "icon_nid": "skill_icons",
         "icon_index": [
             3,
@@ -56003,7 +56110,7 @@
             ],
             [
                 "dynamic_accuracy",
-                "3*(len(unit.items))"
+                "5*(len(unit.items))"
             ],
             [
                 "feat",
@@ -56018,7 +56125,7 @@
     {
         "nid": "Within_Shadows_T1",
         "name": "Within Shadows",
-        "desc": "+40 avoid in Terrain with bonus.",
+        "desc": "+50 avoid in Terrain with bonus.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -56031,7 +56138,7 @@
             ],
             [
                 "avoid",
-                40
+                50
             ],
             [
                 "feat",
@@ -56074,7 +56181,7 @@
     {
         "nid": "Desperation_T1",
         "name": "Desperation",
-        "desc": "When below 75% HP, unit will follow up before the enemy.",
+        "desc": "+5 SKL and Desperation when this unit is below 75% Max HP.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -56094,6 +56201,15 @@
                 null
             ],
             [
+                "stat_change",
+                [
+                    [
+                        "SKL",
+                        5
+                    ]
+                ]
+            ],
+            [
                 "feat",
                 null
             ],
@@ -56106,7 +56222,7 @@
     {
         "nid": "Defiant_T1",
         "name": "Defiant",
-        "desc": "+25 Avoid/Hit, +7 Damage given when not at maximum HP.",
+        "desc": "+30 Avoid/Hit, +8 Damage given when not at maximum HP.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -56119,15 +56235,15 @@
             ],
             [
                 "dynamic_damage",
-                "7"
+                "8"
             ],
             [
                 "dynamic_avoid",
-                "25"
+                "30"
             ],
             [
                 "dynamic_accuracy",
-                "25"
+                "30"
             ],
             [
                 "feat",
@@ -56242,7 +56358,7 @@
     {
         "nid": "Rage_T1",
         "name": "Rage",
-        "desc": "+3 in most stats, but take 6 damage after every combat.",
+        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -56250,45 +56366,16 @@
         ],
         "components": [
             [
-                "stat_change",
-                [
-                    [
-                        "HP",
-                        3
-                    ],
-                    [
-                        "STR",
-                        3
-                    ],
-                    [
-                        "MAG",
-                        3
-                    ],
-                    [
-                        "SKL",
-                        3
-                    ],
-                    [
-                        "SPD",
-                        3
-                    ],
-                    [
-                        "LCK",
-                        3
-                    ],
-                    [
-                        "DEF",
-                        3
-                    ],
-                    [
-                        "RES",
-                        3
-                    ]
-                ]
+                "recoil_percent",
+                0.1
             ],
             [
-                "recoil",
-                6
+                "gain_skill_after_take_damage",
+                "Rage_Stat_Buff"
+            ],
+            [
+                "gain_on_strike",
+                "Rage_Stat_Buff"
             ],
             [
                 "feat",
@@ -56303,7 +56390,7 @@
     {
         "nid": "Adrenaline_T1",
         "name": "Adrenaline",
-        "desc": "Gain +5 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
+        "desc": "Gain +25 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -56387,7 +56474,7 @@
     {
         "nid": "Overpower_T1",
         "name": "Overpower",
-        "desc": "+20 Hit and +3 AS if unit's STR >= to enemy's STR.",
+        "desc": "+30 Hit and +5 AS if unit's STR >= to enemy's STR.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -56399,12 +56486,12 @@
                 "unit.get_stat('STR') >= target.get_stat('STR')"
             ],
             [
-                "hit",
-                20
+                "dynamic_accuracy",
+                "30"
             ],
             [
-                "attack_speed",
-                3
+                "dynamic_attack_speed",
+                "5"
             ],
             [
                 "feat",
@@ -56419,7 +56506,7 @@
     {
         "nid": "Royal_Peace_Decree_Aura_T1",
         "name": "Royal Peace Decree",
-        "desc": "Enemies within 2 spaces cannot Double normally.",
+        "desc": "Enemies within 4 spaces cannot Double normally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -56432,7 +56519,7 @@
             ],
             [
                 "aura_range",
-                2
+                4
             ],
             [
                 "aura_target",
@@ -56543,7 +56630,7 @@
     {
         "nid": "Fight_or_Flight_T1",
         "name": "Fight or Flight",
-        "desc": "+6 damage given when at full HP.\n-6 damage received when not.",
+        "desc": "+20% damage given when at full HP.\n-20% damage received when not.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -56551,12 +56638,12 @@
         ],
         "components": [
             [
-                "dynamic_damage",
-                "6 if unit.get_hp() == unit.get_max_hp() else 0"
+                "dynamic_damage_multiplier",
+                "1.20 if unit.get_hp() == unit.get_max_hp() else 1.00"
             ],
             [
-                "dynamic_resist",
-                "6 if unit.get_hp() != unit.get_max_hp() else 0"
+                "dynamic_resist_multiplier",
+                "1.20 if unit.get_hp() != unit.get_max_hp() else 1.00"
             ],
             [
                 "feat",
@@ -56599,7 +56686,7 @@
     {
         "nid": "Reckless_Swing_Art_T1",
         "name": "Reckless Swing",
-        "desc": "<red>CA:</>Add +6 Damage and +15 Crit to attack,\nbut take 15 damage after combat. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add +25% Damage given and +15 Crit,\nbut take 15% of Max HP as non-lethal damage after combat.. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -56635,7 +56722,7 @@
     {
         "nid": "Updraft_T1",
         "name": "Updraft",
-        "desc": "Increased movement while on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
+        "desc": "+3 MOV while on Mountains, Cliffs, Hills, or Water. Gain this for 2 turns if unit performs a Critical Hit.",
         "icon_nid": "Skills",
         "icon_index": [
             3,
@@ -56674,7 +56761,7 @@
     {
         "nid": "Adept_Eye_T1",
         "name": "Adept Eye",
-        "desc": "+8 DMG and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after dealing a Critical Hit, but lasts only for 2 turns.",
+        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -56767,7 +56854,7 @@
     {
         "nid": "Man_of_the_Sea_T1",
         "name": "Man of the Sea",
-        "desc": "+10 Crit and +20 Avoid if unit's SPD >= enemy's SPD.\nIn water this units gains +6 to all stats, +6 AS, +15 Crit/Hit/Avoid.",
+        "desc": "+10 Crit and +30 Avoid if unit's SPD >= enemy's SPD.\nIn water this units gains +6 to all stats, +6 AS, +15 Crit/Hit/Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -56784,7 +56871,7 @@
             ],
             [
                 "dynamic_avoid",
-                "20"
+                "30"
             ],
             [
                 "feat",
@@ -56801,7 +56888,7 @@
     {
         "nid": "Frightening_Player_T1",
         "name": "Frightening",
-        "desc": "Reduce STR by 20% and SKL by 10% to enemies 2 spaces away.",
+        "desc": "Reduce STR by 30% and SKL by 30% to enemies 2 spaces away.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -57231,7 +57318,7 @@
     {
         "nid": "Supportive_Recharge_T1",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% and reduce EXP gain by 95% for 1 turn.",
+        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -57263,7 +57350,7 @@
     {
         "nid": "Faith_T1",
         "name": "Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Light Magic.",
+        "desc": "+5 Crit and damage increases by LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>) when using Light Magic.",
         "icon_nid": "Skills",
         "icon_index": [
             8,
@@ -57426,10 +57513,6 @@
             44
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "item_override",
                 "Dustcloud_Ability"
@@ -57596,6 +57679,34 @@
         ]
     },
     {
+        "nid": "Live_To_Serve_T1",
+        "name": "Live To Serve",
+        "desc": "Restore HP to unit equal to amount the unit heals ally.\n+1 AOE to staffs.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "smart_oversplash",
+                1
+            ],
+            [
+                "live_to_serve",
+                1.0
+            ]
+        ]
+    },
+    {
         "nid": "Sturdy_Foundation_T1",
         "name": "Sturdy Foundation",
         "desc": "Unit's base DEF x1.5 is added to unit's Max HP.",
@@ -57627,7 +57738,7 @@
     {
         "nid": "Old_Faith_T1",
         "name": "Old Faith",
-        "desc": "+5 Crit and damage increases by LCK/3 when using Bows.",
+        "desc": "+5 Crit and damage increases by LCK/3 (<red>{e: (unit.get_stat('LCK')//3)}</>) when using Bows.",
         "icon_nid": "skill_icons",
         "icon_index": [
             13,
@@ -60643,7 +60754,7 @@
     {
         "nid": "Poison_Claw_T2",
         "name": "Poison Claw",
-        "desc": "Attacks inflict the Venom status on enemies when hit.\n+15 Hit.\nVenom stacks.",
+        "desc": "Attacks inflict the Venom status on enemies when hit.\n+25 Hit.\nVenom stacks.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -60656,7 +60767,7 @@
             ],
             [
                 "dynamic_accuracy",
-                "15"
+                "25"
             ],
             [
                 "give_status_after_hit",
@@ -60764,7 +60875,7 @@
     {
         "nid": "Bewitching_Eye_T2",
         "name": "Bewitching Eye",
-        "desc": "Attacks inflict the Confuse status on hit.\n+15 Avoid.",
+        "desc": "Attacks inflict the Confuse status on hit.\n+25 Avoid.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -60781,7 +60892,7 @@
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "25"
             ],
             [
                 "feat",
@@ -60824,7 +60935,7 @@
     {
         "nid": "Rabies_Proc_T2",
         "name": "Rabies",
-        "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+15 Avoid",
+        "desc": "Attacks have a chance to inflict the Berserk status on hit.\n+35 Avoid",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -60845,7 +60956,7 @@
             ],
             [
                 "dynamic_avoid",
-                "15"
+                "25"
             ],
             [
                 "feat",
@@ -64172,7 +64283,7 @@
     {
         "nid": "Axefaith_T3",
         "name": "Axefaith",
-        "desc": "Add unit's MAG/2 and LCK/2 to Axe attacks.",
+        "desc": "Add unit's MAG/2 and LCK/2 (<red>{e: (unit.get_stat('LCK')//2 + unit.get_stat('MAG')//2))}</>) to Axe attacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -66575,7 +66686,7 @@
     {
         "nid": "Shadow_Beam_T3",
         "name": "Shadow Beam",
-        "desc": "<red>CA:</>A powerful, long range Line attack. <green>CD:6 Turns</>\nUses STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "<red>CA:</>A powerful, long range Line attack. <green>CD:6 Turns</>\nUses STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             3,
@@ -67537,7 +67648,7 @@
     {
         "nid": "Cackle_Player_T3",
         "name": "Cackle",
-        "desc": "Reduce enemy's stats within 3 spaces by 20%.",
+        "desc": "Reduce enemy's stats within 3 spaces by 30%.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -68113,7 +68224,7 @@
     {
         "nid": "Focused_Mind_T3",
         "name": "Focused Mind",
-        "desc": "+20 Avoid/Hit/Damage given each time an enemy misses you for 2 turns.\n",
+        "desc": "+30 Avoid/Hit/Damage given each time an enemy misses you for 2 turns.\n",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -72958,6 +73069,49 @@
             [
                 "avoid",
                 -50
+            ]
+        ]
+    },
+    {
+        "nid": "Plushie",
+        "name": "Plushie",
+        "desc": "Unit cannot use weapons, x2 Max HP, -50 Avoid, Provoke, and 100% HP Regen for 3 turns.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            4,
+            0
+        ],
+        "components": [
+            [
+                "cannot_use_items",
+                null
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        2.0
+                    ]
+                ]
+            ],
+            [
+                "dynamic_avoid",
+                "-50"
+            ],
+            [
+                "has_tags",
+                [
+                    "AIProvoke"
+                ]
+            ],
+            [
+                "regeneration",
+                1.0
+            ],
+            [
+                "time",
+                3
             ]
         ]
     }

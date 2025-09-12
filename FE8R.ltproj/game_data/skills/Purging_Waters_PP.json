@@ -1,0 +1,31 @@
+[
+    {
+        "nid": "Purging_Waters_PP",
+        "name": "Purging Waters++",
+        "desc": "-30 SPD if Monster unit, else -20 SPD for 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            20
+        ],
+        "components": [
+            [
+                "negative",
+                null
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "SPD",
+                        "-30 if 'Monster' in unit.tags else -20"
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ]
+        ]
+    }
+]

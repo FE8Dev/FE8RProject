@@ -1,11 +1,11 @@
 [
     {
         "nid": "Claymore",
-        "name": "Claymore",
-        "desc": "A heavy blade used by Gilliam.\n<green>Skills:</>Blade Sweep, Provoke\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
-        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "name": "Galemore",
+        "desc": "Gilliam's personal heavy blade.\n<green>Skills:</>Blade Sweep, Provoke\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
+        "icon_nid": "New Davius Weapons",
         "icon_index": [
-            6,
+            1,
             0
         ],
         "components": [
@@ -82,7 +82,9 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Frozen"
+                        "Frozen",
+                        "Flying",
+                        "Seared"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -99,6 +101,13 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_WEAK"
+            ],
+            [
+                "item_tags",
+                [
+                    "Blade",
+                    "Wind"
+                ]
             ]
         ]
     }

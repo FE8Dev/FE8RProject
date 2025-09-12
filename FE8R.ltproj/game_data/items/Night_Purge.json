@@ -2,7 +2,7 @@
     {
         "nid": "Night_Purge",
         "name": "Night Purge",
-        "desc": "A strong, corrupted tome discovered by a heretic priest. <green>CD:2</>\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "A strong, corrupted tome discovered by a heretic priest.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             7,
@@ -27,11 +27,11 @@
             ],
             [
                 "damage",
-                13
+                6
             ],
             [
                 "hit",
-                80
+                140
             ],
             [
                 "crit",
@@ -107,10 +107,6 @@
             [
                 "alternate_damage_formula",
                 "LCK_MAG_MID"
-            ],
-            [
-                "cooldown",
-                2
             ],
             [
                 "item_tags",

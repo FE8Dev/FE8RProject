@@ -2,7 +2,7 @@
     {
         "nid": "Outdoor_Fighter_T1",
         "name": "Outdoor Fighter",
-        "desc": "+5/-5 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics until end of chapter when dodging.\nMax 6 stacks.",
+        "desc": "+6/-6 Damage given/taken on no bonus terrain.\nAlso gain a stack of Evade Tactics (+5 Hit/Avoid for each stack) until end of chapter when dodging.\nMax 6 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -14,16 +14,16 @@
                 "game.tilemap.get_terrain(unit.position) in ('1', '0', '4', '5', '6', '7', '25', 'Desert', 'Village Ruins', 'Ruins', 'Flat', 'FloorTemple', 'FloorFinal')\n"
             ],
             [
-                "gain_skill_after_take_miss",
-                "Outdoor_Fighter_Buff"
-            ],
-            [
                 "dynamic_damage",
-                "5"
+                "6"
             ],
             [
                 "dynamic_resist",
-                "5"
+                "6"
+            ],
+            [
+                "gain_skill_after_take_miss",
+                "Outdoor_Fighter_Buff"
             ],
             [
                 "feat",

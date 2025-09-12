@@ -2,7 +2,7 @@
     {
         "nid": "Squires_Sword",
         "name": "Squire's Sword",
-        "desc": "For those with great potential.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), +1 SPD, x2 WEXP gain.",
+        "desc": "Those who show a \"spark\" of potential.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Fire</> \n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), +1 SPD, x2 WEXP gain.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -85,6 +85,28 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_WEAK"
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
             ]
         ]
     }

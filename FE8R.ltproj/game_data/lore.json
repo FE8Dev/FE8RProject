@@ -4,28 +4,28 @@
         "name": "Inventory",
         "title": "Inventory",
         "category": "Guide",
-        "text": "You have 7 inventory slots now. In exchange, the part of the interface that showed things like damage, accuracy, avoid and crit is gone."
-    },
-    {
-        "nid": "Equippable_Accessories",
-        "name": "Equip Accs.",
-        "title": "Equippable Accessories",
-        "category": "Guide",
-        "text": "Similar to Thracia 776, there are scrolls and other accesories that give skills, bonus stats, and/or affect growths. A unit can only have one Equippable accessory at a time."
+        "text": "You have 7 inventory slots now. In exchange, the part of the interface is gone.\nAttack, Accuracy, Avoid, etc. can instead be checked in the small window on the map."
     },
     {
         "nid": "Holdable_Accessories",
         "name": "Holdable Accs.",
         "title": "Holdable Accessories",
         "category": "Guide",
-        "text": "There are accessories that give bonuses just by being in the unit's inventory. They will be marked in the description if they are holdable.{br}\nThese accessories usually have a slight negative effect, but their positive skill compensates for it. A unit has no limit to how many holdable accessories they can carry."
+        "text": "Similar to Thracia 776, there are accessories that give bonuses just by being in the unit's inventory. They will be marked in the description as holdable.{br}\nThese accessories usually have a slight negative effect as well as the positive. The only limit to how many holdable accessories one unit can carry is their inventory space."
+    },
+    {
+        "nid": "Equippable_Accessories",
+        "name": "Equip Accs.",
+        "title": "Equippable Accessories",
+        "category": "Guide",
+        "text": "Some accessories that give skills, bonus stats, and/or affect growths may instead be equippable. A unit can only have one Equippable accessory at a time, on an exclusive inventory slot."
     },
     {
         "nid": "Monster_Weapons",
         "name": "Monster Wep.",
         "title": "Monster Weapons",
         "category": "Guide",
-        "text": "Instead of being items, monster weapons have their own weapon rank."
+        "text": "Instead of being items, monster weapons have their own weapon rank.\n+3/-3 Damage given taken, +25 Hit, +10 Avoid for every rank at S rank and above."
     },
     {
         "nid": "Durability",
@@ -35,25 +35,53 @@
         "text": "This time you don't have to worry about durability. Instead, some weapons have a cooldown system, which makes them unusable for a few turns. Myrrh won't be at risk of losing her Dragonstone."
     },
     {
-        "nid": "Staves",
-        "name": "Staves",
-        "title": "Staves",
+        "nid": "Elements",
+        "name": "Elements",
+        "title": "Elements",
         "category": "Guide",
-        "text": "Staves here don't work like in the original games. There are several kind of staves:{br}\nSupport staves: They can only be used by support classes. Support classes have a staff icon <icon>Staff</> in their description.{br}\nOffensive staves. These staves can be used to attack and don't have the support class restriction. Some of these staves will always hit, giving staff users a safer attack option, but they can't crit."
+        "text": "Magic and some physical weapons have elements associated with them. They can cause statuses and/or deal super effective damage.\nThe elements are:{br}<icon>Light</> Light{br}<icon>Dark</> Dark{br}<icon>Water</> Water{br}<icon>Ice</> Ice\n<icon>Fire</> Fire{br}<icon>Thunder</> Thunder{br}<icon>Wind</> Wind{br}<icon>Earth</> Earth\nSome weapons have multiple elements.{br}If a weapon has an element (or more) associated, the description will indicate it."
     },
     {
-        "nid": "Damage_Formulas",
-        "name": "Damage Form.",
-        "title": "Damage Formulas",
+        "nid": "Effectiveness",
+        "name": "Effectiveness",
+        "title": "Effectiveness",
         "category": "Guide",
-        "text": "Some weapons use damage formulas that aren't Strength for physical weapons and Magic for magical weapons such as Speed instead of Strength. Other weapons have a formula that uses 2 or more stats.\nThere are also combat staves and tomes that use Strength. If a weapon uses a formula that isn't the usual, it will be mentioned in the description."
+        "text": "There are more types of effectiveness in FE8R. We have effectiveness of unit type and effectiveness of status.\nUnit type:{br}<icon>Horse</>Horse{br}<icon>Armor</> Armor{br}<icon>Flying</> Flying{br}<icon>Infantry</> Infantry\n<icon>Sword</> Sword{br}<icon>Magic</> Magic{br}<icon>Pirate</> Pirate{br}<icon>Dragon</> Dragon{br}<icon>Monster</> Monster\nStatus:{br}1. <icon>Drenched</> Drenched{br}2. <icon> Seared</> Seared{br}3. <icon> Shadowblight</>Shadowblight{br}4. <icon>Frozen</> Frozen{br}5. <icon>Rock</> Rock Punctures.\nOf course, this means that elemental weapons can be more dangerous.{br}\nEffective damage deals +5 DMG and x3 Damage Multiplier. Very Effective deals +32 DMG and x3 Damage Multiplier."
+    },
+    {
+        "nid": "Elemental_Combos",
+        "name": "Elemental Combos",
+        "title": "Elemental Combos",
+        "category": "Guide",
+        "text": "Using a certain element or Heavy weapon while a unit is inflicted with a certain element will create an elemental combo and deal Effective Damage.{br}\nCombos (<icon>Wind</> after <icon>Fire</>, <icon>Thunder</> after <icon>Water</>, <icon>LightA</> after <icon>DarkA</>, <red>Heavy</> after <icon>Ice</>){br}\n"
     },
     {
         "nid": "Heavy_Weapons",
         "name": "Heavy Wep.",
         "title": "Heavy Weapons",
         "category": "Guide",
-        "text": "Functioning similarly to Fire Emblem Engage, heavy weapons always attack second and can't double the enemy. Here they're also effective against frozen enemies.{br} \nLike their name suggests, they have a high weight.{br} These weapons will shove the attacked unit.{br}\nIn general, the heavy versions of weapons are the following:{br}Blades(swords){br}Greatlances(lances){br}Warhammers(axes){br}\nHeavy weapons can also come as tomes or bows; they aren't limited to the classic weapon triangle.{br}\nInfantry<icon>Infantry</> units attacks become Cleave attacks when using Blades at above 95% Max HP.{br}\nArmor<icon>Armor</>, and Horse<icon>Horse</> units gain +2 range on Enemy Phase with Greatlances when above 95% Max HP.{br}\nPirate/Brigand<icon>Pirate</>, and Dragon<icon>Dragon</> units deal Stun in an area when attacking with Warhammers when above 95% Max HP."
+        "text": "Functioning similarly to Fire Emblem Engage, heavy weapons always attack second and can't double the enemy by regular means. Here they're also effective against frozen enemies.\nThese weapons will shove the attacked unit.{br}\nAdditionally, in particular: Blade attacks will Cleave when initiating.{br}Greatlances gain +2 Range on Enemy Phase.{br}And Warhammer attacks inflict Flinch on enemies within 2 tiles of target."
+    },
+    {
+        "nid": "Staves",
+        "name": "Staves",
+        "title": "Staves",
+        "category": "Guide",
+        "text": "In this game, there are two kinds of staves:{br}\nSupport staves can only be used by support classes. Support classes have a staff icon <icon>Staff</> in their description.{br}\nOffensive staves can be used to attack and don't have the support class restriction. Some of these staves will always hit, giving staff users a safer attack option, but they can't crit."
+    },
+    {
+        "nid": "Bows",
+        "name": "Bows",
+        "title": "Bows",
+        "category": "Guide",
+        "text": "Bows have better range than in the original. Most bows now have 2-3 range. Bows are also effective against Anima, Light, and Dark magic, on addition to Flying enemies."
+    },
+    {
+        "nid": "Damage_Formulas",
+        "name": "Damage Form.",
+        "title": "Damage Formulas",
+        "category": "Guide",
+        "text": "Some weapons use stats that aren't just Strength and Defense (for physical weapons) or Magic and Resistance (for magical weapons).\nIf a weapon has one of these different damage formulas, it will be noted on the description, if two or more stats are used to calculate Attack, the value will be shown as well (before adding Might)."
     },
     {
         "nid": "Extra_Effects",
@@ -67,105 +95,98 @@
         "name": "Multi Wep.",
         "title": "Multi Weapons",
         "category": "Guide",
-        "text": "There are items that contain more than one weapon. These weapons can't be stolen from enemies."
-    },
-    {
-        "nid": "Bows",
-        "name": "Bows",
-        "title": "Bows",
-        "category": "Guide",
-        "text": "Bows have better range than in the original. Most bows have 2-3 range, and some may have 5, 6, or even more range. Bows also have advantage against Anima, Light, and Dark magic."
+        "text": "Some items (primarily character Arsenals) that contain more than one weapon. These weapons can't be stolen."
     },
     {
         "nid": "Other_Changes",
         "name": "Other Changes",
         "title": "Other Changes",
         "category": "Guide",
-        "text": "Gleipnir does effective damage against monsters. {br}Both the Slim Sword and the Slim Lance give WEXP faster and use Speed in their damage formula. \nFire magic (not only the Fire tome) is effective against Horse units. {br}\nThunder magic (not only the Thunder tome) is effective against Armor units.{br}\nLight magic is usually 3 range.\nLight magic and daggers will do extra damage when doing a critical hit. This means that even if a normal hit would do 0 damage, you'll damage the enemy with a critical hit. {br}\nEirika's Rapier has 1-2 range. {br}Sieglinde and Siegmund are also effective against Armor and Horse enemies."
+        "text": "Slim weapons of every kind can be found in the ch2 shop and grant extra WEXP.{br}\nFire weapons (of any kind) are effective against Horse units.{br}\nThunder weapons (of any kind) are effective against Armor units.{br}\nWind weapons (of any kind) are effective against Flying units.{br}\nLight magic is usually 3 range.\nLight magic and daggers will do extra damage when doing a critical hit. This means that even if a normal hit would do 0 damage, you'll damage the enemy with a critical hit."
     },
     {
         "nid": "Bosses",
         "name": "Bosses",
         "title": "Bosses",
         "category": "Guide",
-        "text": "From chapter 5 onwards, bosses will have an ability that works like in Engage (the boss will revive a number of times). \nThose bosses will also have special weapons with better range and an ability that lets them counter at any distance. You can't steal those weapons nor can you cheese them with bows or light magic."
+        "text": "From chapter 5 onwards, bosses will have an ability that revives them a set amount of times (like in Fire Emblem Engage).{br}\nThey will also, typically, wield weapons that can counter attack at any range and cannot be stolen."
     },
     {
         "nid": "Minibosses",
         "name": "Minibosses",
         "title": "Minibosses",
         "category": "Guide",
-        "text": "Starting in chapter 7, there will be minibosses that drop weapons. Some of these bosses have the revival skill that the boss of the chapter has, but they are weaker."
+        "text": "Starting in chapter 3, there will be minibosses that drop weapons. They may also have Revival Stones."
     },
     {
         "nid": "Weapon_Triangle",
         "name": "Wep. Triangle",
         "title": "Weapon Triangle",
         "category": "Guide",
-        "text": "The weapon triangle's effects can be higher than in the original games.{br}\nThey can affect your critical hit rate against enemies. {br}\nBows are part of the weapon triangle and have an advantage against magic.{br}"
+        "text": "The weapon triangle's effects can be higher than in the original games.{br}\nThey can affect your critical hit rate against enemies.{br}\nBows are part of the weapon triangle and have an advantage against magic.{br}\nSwords and Light vs Axe and Dark: +4 DMG, -2 DMG taken, +10 Hit, +20 Avoid, +5 Crit, +5 Dodge.{br}\nAxe and Dark vs Lances and Anima: + 6 DMG, -2 DMG taken, +20 Hit, +20 Avoid, +3 AS.{br}\nLances and Anima vs Swords and Light: +2 DMG, -4 DMG taken, +5 Hit, +10 Avoid, +20 Dodge.{br}\nBows vs All Tomes/Staves: +15 DMG, -10 DMG taken, +30 Hit, +10 Avoid, +8 Crit.\n"
     },
     {
         "nid": "Weather",
         "name": "Weather",
         "title": "Weather",
         "category": "Guide",
-        "text": "Some unit's have a Prf weapon with a skill that summons a weather effect like a sandstorm. You can stack several weather effects, but it will require effort. Weather doesn't slow down your units."
+        "text": "Some unit's may be able to summon weather effects such as sandstorms through certain weapon skills. They stack with each other freely, and only affect enemies."
     },
     {
         "nid": "Growths",
         "name": "Growths",
         "title": "Growths",
         "category": "Guide",
-        "text": "Growth rates are now visible in your unit's info. Your units' growths can change in several ways:\nPromoting: Now, besides gaining stats, your units get bonus growths upon promoting. A unit that starts purely physical/magic can end up being a mixed attacker.\nConversations: some base convos can improve an unit's growths.\nHeld items: items that used to be stats boosters or promotion items are now held items that among their effects, can improve a unit's growth rates. Metis Tome's effects have been improved.\nAll of your units have Con and Mov growths, so they have a chance to level up those stats. "
+        "text": "Growth rates are now visible in your unit's info. Your units' growths can change in several ways:{br}\nPromoting: Now, besides gaining stats, your units get bonus growths upon promoting, sometimes drastically altering the unit's statline.\nConversations: some base convos can improve an unit's growths.\nHeld items: items that used to be stats boosters or promotion items are now held items that among their effects, typically improve a unit's growth rates. Metis Tome's effects have been improved.{br}\nAll of your units have Con and Mov growths, so they have a chance to level up those stats. "
     },
     {
         "nid": "Pair_Up",
         "name": "Pair Up",
         "title": "Pair Up",
         "category": "Guide",
-        "text": "In Fire Emblem Awakening and Fates, Pair Up is a mechanic that has things in common with Rescue. You combine two units and keep one of the units safe. Pair Up isn't affected by a unit's constitution.\nPair Up gives bonuses to the lead unit, with the bonuses depending on the class of the secondary unit. \nThe higher tier a unit is, the higher the bonus that unit gives will be. The total bonus depends on the unit's current and past classes.\nExamples:{br}Wyvern Knight Tana and Wyvern Knight Cormag give different Pair Up bonuses. \nWhile they both give bonuses from the Wyvern Knight class, Tana also gives bonuses from the Pegasus Knight class and Cormag gives bonuses from the Wyvern Rider class.\nAssassin Joshua and Assassin Colm give bonus from the Assassin class. Joshua gives bonuses from the Myrmidon class and Colm gives bonuses from the Thief class.\nThe type of Pair Up bonuses are the following (if two bonuses are listed together it's because they count as the same):  \nLord/Manakete{br}Knight{br}Cavalier{br}Pegasus{br}Priest/Cleric\nFighter{br}Pirate{br}Archer/Thief{br}Monk/Dancer{br}Mage\nMyrmidon{br}Mercenary{br}Wyvern{br}Shaman\nPriest/Cleric Pair Up makes lead unit inmune to negative status and heals a bit of health at the start of the turn."
+        "text": "This game features Pair Up and Dual Strikes as they function in Fates, only without stat bonuses for pairing up supported units.\nThe higher tier a unit is, the higher the bonus that unit gives when paired up will be. The total bonus depends on the unit's current and past classes.\nThis means that two characters with a different base class will retain that differing pair up even if they promote into the same class.\nThe type of Pair Up bonuses are the following (if two bonuses are listed together it's because they count as the same):  \nLord/Manakete{br}Knight{br}Cavalier{br}Pegasus{br}Priest/Cleric\nFighter{br}Pirate{br}Archer/Thief{br}Monk/Dancer{br}Mage\nMyrmidon{br}Mercenary{br}Wyvern{br}Shaman\nPriest/Cleric Pair Up makes lead unit inmune to negative status and heals a bit of health at the start of the turn."
     },
     {
         "nid": "Defense_Gauge",
         "name": "Defense Gauge",
         "title": "Defense Gauge",
         "category": "Guide",
-        "text": "While paired up, a gauge meter  increases by 2 every time your unit attacks or is attacked (missing counts for this).\nWhen the meter reaches 10, the next attack from the enemy won't hit. "
+        "text": "While paired up, the Guard Gauge increases by 2 every time your unit attacks or is attacked (missing counts for this).\nWhen the meter reaches 10, the next attack from the enemy will be blocked."
     },
     {
         "nid": "Affinity_Strike",
         "name": "Affinity Strike",
         "title": "Affinity Strike",
         "category": "Guide",
-        "text": "When two units are Paired Up, they can use a combat art named Affinity Strike. \nIf the unit kills the enemy, it gains Galeforce, but stats are reduced by 90% for a turn.\nAdditionally, they inflict a status that depends on the Pair Up partner's affinity.\nEnemies can be paired up too. They can also do affinity strikes and in the Lunatic difficulties they can inflict a random status effect.\nAffinity Strike's status effects depending on the affinity are:\n1. <icon>Fire</> -> Seared{br}2. <icon>Wind</> -> Breached(8){br}3. <icon>Thunder</> -> Stunned\n4. <icon>Dark</> -> Cursed/Shadowblight{br}5. <icon>Light</> -> Reduced Vision{br}6. <icon>Ice</> -> Frozen{br}\n7. <icon>Anima</> -> (has a 50% chance of inflicting each of Seared, Drenched, Cursed/Shadowblight, Frozen and Rock Punctures)"
+        "text": "When two units are Paired Up, they can use a combat art named Affinity Strike. \nIf the unit kills the enemy, it gains Galeforce, but stats are reduced by 90% for a turn.\nAdditionally, they inflict a status that depends on the Pair Up partner's affinity.\nEnemies can be paired up too. Though they cannot Affinity Strike, and instead gain a 50% damage increase.\nAffinity Strike's status effects are, by affinity:{br}\n1. <icon>Fire</> -> Seared{br}2. <icon>Wind</> -> Breached(8){br}3. <icon>Thunder</> -> Stunned\n4. <icon>Dark</> -> Cursed/Shadowblight{br}5. <icon>Light</> -> Reduced Vision{br}6. <icon>Ice</> -> Frozen{br}\n7. <icon>Anima</> -> (has a 50% chance of inflicting each of Seared, Drenched, Cursed/Shadowblight, Frozen and Rock Punctures)"
     },
     {
         "nid": "Bonus_Experience",
         "name": "Bonus EXP",
         "title": "Bonus Experience",
         "category": "Guide",
-        "text": "Bonus Experience (BEXP) is a mechanic introduced in FE9. It allows you to give experience to your units with the cost increasing with your unit's level and tier.\nCertain actions like visiting villages or houses (now you have an incentive to visit them) can give you more BEXP.\nClearing a map before a turn limit will give you more BEXP. Clearing a level of the Tower of Valni or the Lagdou Ruins also gives BEXP. "
+        "text": "Bonus Experience (BEXP) is a mechanic that allows you to give experience to your units outside of battle with the cost increasing with your unit's level and tier.\nCertain actions like visiting villages or houses (even those that give you no items) can give you more BEXP.\nClearing a map before a turn limit will give you more BEXP. Clearing a level of the Tower of Valni or the Lagdou Ruins also gives BEXP. "
     },
     {
         "nid": "RNG_Method",
         "name": "RNG Method",
         "title": "RNG Method",
         "category": "Guide",
-        "text": "In Hard and Lunatic mode, there are options of 1RN and 2RN. They correspond to the type of RN (Random Number) in hit rate.\n1RN: Used in FE1-5. No modifications. A 70% displayed chance to hit is exactly a 70% real chance to hit.\n2RN: Used in FE6-13. The engine generates two random numbers and averages them. \nThis makes displayed chances to hit above 50% more likely than expected, and those lower than 50% less likely than expected. A 70% displayed chance to hit is actually 82.3%."
+        "text": "In Hard and Lunatic mode, there are options of 1RN and 2RN. They correspond to the type of RN (Random Number) system used in hit rate.\n1RN: Used in FE1-5. No modifications. A 70% displayed chance to hit is exactly a 70% real chance to hit.\n2RN: Used in FE6-13. The engine generates two random numbers and averages them. \nThis makes displayed chances to hit above 50% more likely than expected, and those lower than 50% less likely than expected. A 70% displayed chance to hit is actually 82.3%."
     },
     {
         "nid": "Growth_Method",
         "name": "Growth Method",
         "title": "Growth Method",
         "category": "Guide",
-        "text": "When you start a new game, you'll be asked to choose a growth method.\nRandom: Truly random growths. For each stat, a random number is rolled between 0 and 99. If the number is less than the growth rate, that stat increases.\nFixed: Units will always have their average stats. A unit with a 50% growth rate is guaranteed to get a stat increase every other level.\nDynamic: Like Random, but it applies a rubberbanding effect to the growth rate. If a unit fails to increase a stat on level-up, next level-up that stat will have a higher effective growth rate.\nAll methods result in the unit having the same average stat as they level up. \nFor instance, a level 1 unit that starts with a Speed stat of 5 and a speed growth of 40, under all three methods, will end up with, on average, a Speed stat of 13 at level 20. \nThe only difference is how wide the variance on the results will be, with the Fixed method having no variance, and the Dynamic method have reduced variance compared to the Random method."
+        "text": "When you start a new game, you'll be asked to choose a growth method.\nRandom: Truly random growths. For each stat, a random number is rolled between 0 and 99. If the number is less than the growth rate, that stat increases.\nFixed: Units will always have their average stats. A unit with a 50% growth rate is guaranteed to get a stat increase every other level.\nDynamic: Like Random, but it applies a rubberbanding effect to the growth rate. If a unit fails to increase a stat on level-up, next level-up that stat will have a higher effective growth rate.\nAll methods result in the unit having the same average stat as they level up. \nFor instance, a level 1 unit that starts with a Speed stat of 5 and a speed growth of 40, under all three methods, will end up with, on average, a Speed stat of 13 at level 20. \nThe only difference is how wide the variance on the results will be, with the Fixed method having no variance, and the Dynamic method having reduced variance compared to the Random method."
     },
     {
         "nid": "The_Lords",
         "name": "The Lords",
         "title": "The Lords",
         "category": "Guide",
-        "text": "Both Eirika and Ephraim will have access to the convoy regardless of which route you chose.\nEirika and Ephraim's classes have higher stat caps than other classes from the same tier.\nThe Lord of the route you didn't choose will return as a Tier 3 unit in chapter 15. That Lord will also have the skills from the Tier 2 class."
+        "text": "Both Eirika and Ephraim will have access to the convoy regardless of which route you chose.\nEirika and Ephraim's classes have higher stat caps than other classes from the same tier.\nThe Lord of the route you didn't choose will return as a Tier 3 unit in chapter 15."
     },
     {
         "nid": "Paragon",
@@ -183,10 +204,10 @@
     },
     {
         "nid": "Franz_Trainee",
-        "name": "Franz Trainee",
-        "title": "Franz Trainee",
+        "name": "Other Trainees",
+        "title": "Other Trainees",
         "category": "Guide",
-        "text": "You have the option to have Franz join as a Sword trainee or a Cavalier. He has some special promotions if he starts as a trainee.\nHis T1 classes besides Sword Cavalier are Knight and Mercenary."
+        "text": "You have the option to have Franz, Neimi and Natasha join as a trainees instead of their usual classes. They'll have some special promotions if they start as a trainee.\nTheir T1 classes options are:{br}Franz: Sword Cavalier, Knight and Mercenary.{br}Neimi: Archer, Outlaw and Kyudoka.{br}Natasha: Cleric, Troubadour and Medic."
     },
     {
         "nid": "Joining_Level",
@@ -200,14 +221,14 @@
         "name": "Hard Mode BNS",
         "title": "Hard Mode Bonuses",
         "category": "Guide",
-        "text": "Like in FE6 and FE7, units that start as enemies are stronger in Hard and Lunatic mode."
+        "text": "Like in FE6 and FE7, units that start as enemies are stronger in Hard, Lunatic and Aria mode."
     },
     {
         "nid": "Proficiencies",
         "name": "Proficiencies",
         "title": "Proficiencies",
         "category": "Guide",
-        "text": "Each unit has an arsenal with their Prf weapons. Your units will unlock and in some cases replace their weapons when they get enough Weapon Experience. \nSome units will replace their Prf weapons after an event.\nSome units have new dialog in their joining chapter that indicates their proficiencies and has them in red text, so you can notice it more easily.\nYour units' arsenals' description includes icons with their proficiencies, which gives a hint of what they can use on some promotions. \nKeep in mind that some units can't promote to classes that let them use the full arsenal.\nJust because two units' arsenals have the same weapon types it doesn't mean that they'll play the same. Their Prf weapons can have different effects/properties."
+        "text": "Each unit has an arsenal with their Prf weapons. Your units will unlock and in some cases replace their weapons when they get enough Weapon Experience. \nSome units will replace their Prf weapons after an event.\nSome units have new dialog in their joining chapter that indicates their proficiencies, in red text, so you can notice it more easily.\nYour units' arsenals' description includes icons with their proficiencies, which gives a hint of what they can use on some promotions. \nKeep in mind that some units can't promote to classes that let them use the full arsenal.\nJust because two units' arsenals have the same weapon types it doesn't mean that they'll play the same. Their Prf weapons can have different effects/properties."
     },
     {
         "nid": "Seth_Hints",
@@ -228,35 +249,35 @@
         "name": "New Units",
         "title": "New Units",
         "category": "Guide",
-        "text": "You can get optional some extra units. They have support bonuses with canon units. You can name them."
+        "text": "There are many more units available to the player than in vanilla FE8, inlcuding community made units, found in the Dragon's Gate."
     },
     {
         "nid": "Playable_Monsters",
         "name": "Playable Mons.",
         "title": "Playable Monsters",
         "category": "Guide",
-        "text": "You can get your own monsters. They're optional and you can obtain them after beating certain maps.\nHowever, a pair of monsters are obtained just before the map starts. They have their own arsenal.\nIf Lute and/or Knoll are alive, they can revive your fallen monsters after falling in combat even in classic mode.\nYour Gorgon starts as a T2 and she counts as being a promoted Shaman. Your Cyclops also starts as a T2 and is considered a promoted Fighter.\nMonsters only get promotion choices for T3 classes.{br}There's a new Monster line: the Tarvadour, a support class that is a horse type."
+        "text": "You can get your own monsters. They're optional and you can obtain them after beating certain maps, with the exception of one pair which joins in a base conversation. They have their own arsenal.\nIf Lute and/or Knoll are alive, they can revive your fallen monsters after falling in combat even in classic mode.\nYour Gorgon starts as a T2 and she counts as being a promoted Shaman. Your Cyclops also starts as a T2 and is considered a promoted Fighter.\nMonsters only get promotion choices for T3 classes.{br}There's a new Monster line: the Tarvadour, a support class that is a horse type."
     },
     {
         "nid": "My_Unit",
         "name": "My Unit",
         "title": "My Unit",
         "category": "Guide",
-        "text": "You have the option of creating your Avatar. After chapter 1, a new location will appear in the world map.\nWhen creating the optional MyUnit, you'll have to choose a Boon (strong point), Bane (weak point)\nand a starting class (only excludes Lord classes) that includes monster classes.\nAt levels 5 and 15 of each tier, MyUnit will gain another skill from a list of 5 skills that belong to a class from the same tier. This skill can be from a Lord class."
+        "text": "You have the option of creating your Avatar. After chapter 1, a new location will appear in the world map.\nWhen creating the optional MyUnit, you'll have to choose a Boon (strong point), Bane (weak point) and a starting class (only excludes Lord classes) that includes monster classes.\nAt levels 5 and 15 of each tier, MyUnit will gain another skill from a list of 10 skills that belong to a class from the same tier."
     },
     {
         "nid": "Free_Actions",
         "name": "Free Actions",
         "title": "Free Actions",
         "category": "Guide",
-        "text": "Unlike the original game, certain actions won't end your turn. Support conversations, Talk and using consumible healing items are free actions."
+        "text": "Unlike the original game, certain actions won't end your turn. Support conversations, Talk and using consumable healing items are free actions."
     },
     {
         "nid": "Supports",
         "name": "Supports",
         "title": "Supports",
         "category": "Guide",
-        "text": "Supports are now easier to obtain, and more similar to how it works in Awakening.\nThe limit of supports is that you can only have one A support. You can have all the B supports you want.\nIf you obtained enough points in the previous map to trigger a conversation you can activate it from the base too.\nThe range for getting support points is now is 2 spaces{br}There are more ways to gain support points besides ending turn near each other:\nBy interacting (using staves or dancing).{br}By battling on range of the partner.{br}By battling on pair up with a partner.\nSupport bonuses have been buffed to compensate the increased enemy power."
+        "text": "Supports are now easier to obtain, and more similar to how it works in Awakening.\nThe limit of supports is that you can only have one A support. You can have all the B supports you want.\nIf you obtained enough points in the previous map to trigger a conversation you can activate it from the base too.\nThe range for getting support points is now is 2 spaces{br}There are more ways to gain support points besides ending turn near each other:\nBy interacting (using staves or dancing).{br}By battling on range of the partner.{br}By battling on pair up with a partner.\nSupport bonuses have been buffed to compensate the increased enemy power.{br}\nFire (C/B/A): +3/6/12 DMG, +5/10/20 Hit, +5/10/20 Avoid, +2/4/6 Crit, +3/6/12 Defense Speed.{br}\nWind (C/B/A): +3/6/12 DMG, +5/10/20 Hit, +2/4/6 Crit, +5/10/20 Dodge, +3/6/12 Attack Speed.{br}\nThunder (C/B/A): -3/6/12 DMG taken, +5/10/20 Avoid, +2/4/6 Crit, +5/10/20 Dodge, +3/6/12 Attack Speed.{br}\nIce (C/B/A): -3/6/12 DMG taken, +5/10/20 Hit, +5/10/20 Avoid, +5/10/20 Dodge, +3/6/12 Defense Speed.{br}\nDark (C/B/A): +3/6/12 DMG, +5/10/20 Hit, +5/10/20 Avoid, +2/4/6 Crit, +5/10/20 Dodge.{br}\nLight (C/B/A): +3/6/12 DMG, -3/6/12 DMG taken, +5/10/20 Hit, +5/10/20 Avoid, +2/4/6 Crit.{br}\nAnima (C/B/A): +3/6/12 DMG, -3/6/12 DMG taken, +5/10/20 Hit, +5/10/20 Avoid, +5/10/20 Dodge.\n"
     },
     {
         "nid": "Tiers",
@@ -270,42 +291,42 @@
         "name": "Promotions",
         "title": "Promotions",
         "category": "Guide",
-        "text": "Some units may start in the same class and/or promote to the same class, but their promotions can use different weapons or promote to different classes.\nWhen you're in the promotion screen, you can see the weapons that promotion uses and the skills it learns.\nBoth the Dancer and Manakete classes are T2 classes, which means that they only promote once.\nT1 and T2 units promote automatically after their level cap, but they can promote earlier if you use a Master Seal at level 15 or later. \nThe Master Seal won't be consumed after being used.\nIn general, promotions are made so that you don't discard weapons, but there are some exceptions."
+        "text": "When you're in the promotion screen, you can see the weapons that each class uses and the skills it learns.\nBoth the Dancer and Manakete classes are T2 classes, which means that they only promote once.\nT1 and T2 units promote automatically after their level cap, but they can promote earlier if you use a Master Seal at level 15 or later. \nThe Master Seal won't be consumed after being used.\nIn general, promotions are made so that you don't discard weapons, but there are some exceptions."
     },
     {
         "nid": "Skills",
         "name": "Skills",
         "title": "Skills",
         "category": "Guide",
-        "text": "All classes learn skills by leveling up. Skills are learned at levels 5 and 15.\nSome classes have level 1 skills like Canto for mounted classes or the thief skills."
+        "text": "All classes learn skills by leveling up. Skills are learned at levels 5 and 15.\nSome classes have level 1 skills like Canto or Steal."
     },
     {
         "nid": "Thieves",
         "name": "Thieves",
         "title": "Thieves",
         "category": "Guide",
-        "text": "Stealing and opening locks is a bit different here.{br}You don't need lockpicks to open chests/doors.{br}You can steal enemy's unequipped weapons.\nThere are certain weapons that you can't steal to prevent cheesing certain enemies.\nYou can steal with a full inventory and they will ask you what item you want to send to the convoy.\nThief units that have sword rank can use daggers. Yes, there are thief classes that don't use swords: Brigands/Barbarians.\nDaggers are in general 1-2 range weapons, so your sword locked thieves have better range than in the original game.\nUnits that have thief skills will retain those skills even if they promote to classes that aren't thief classes.\nYou don't have to worry about choosing promotions for your thieves on fear that they would lose those skills. "
+        "text": "Stealing and opening locks is a bit different here.{br}You don't need lockpicks to open chests/doors.{br}You can steal enemy's unequipped weapons.\nThere are certain weapons that you can't steal to prevent cheesing certain enemies.\nYou can steal with a full inventory and they will ask you what item you want to send to the convoy.\nThief units that have sword rank can use daggers.\nDaggers are in general 1-2 range weapons, so your sword locked thieves have better range than in the original game.\nUnits that have thief skills will retain those skills even if they promote to classes that aren't thief classes.\nYou don't have to worry about choosing promotions for your thieves on fear that they would lose those skills. "
     },
     {
         "nid": "Ballistas",
         "name": "Ballistas",
         "title": "Ballistas",
         "category": "Guide",
-        "text": "Ballistas are units instead of  items that your infantry archers can use if there are enough uses left. \nThey have low movement and your archer units can promote into them."
+        "text": "Ballistas are regular classes instead of features of certain maps.\nYour archers can promote into them, and will receive a ballista item upon promotion."
     },
     {
         "nid": "Cavaliers",
         "name": "Cavaliers",
         "title": "Cavaliers",
         "category": "Guide",
-        "text": "Cavaliers can only use one weapon type. Due to branch promotions that can vary depending on the unit,\nyour cavaliers can end up wielding different weapons even if they start with the same weapon."
+        "text": "Cavaliers can only use one weapon type. Due to branch promotions that can vary depending on the unit.\nYour cavaliers can end up wielding different weapons even if they start with the same weapon."
     },
     {
         "nid": "Class_Changes",
         "name": "Class Changes",
         "title": "Class Changes",
         "category": "Guide",
-        "text": "Some classes, for the purpose of effective damage, had their class type change (or added in some cases). \nIn the early game, you may find that Mogalls count as flyers and that spiders count as Horses. This applies to their promotions too.\nMogalls can use their personal Light Magic.{br}Myrrh's Manakete class has a level cap of 30 instead of 20 like the other classes. \nMage Knights use Anima Magic and Swords instead of Anima Magic and Staves. This means that Mage Knight won't be a promotion option for Troubadour.\nYour Paladins can use Light Magic.{br}Knights can use more than a weapon type.{br}Wyvern Lords have Axes instead of swords.\nEirika's Great Lord class can use both combat and support Staves.{br}Ewan's promotions are special in the sense that he can keep Anima magic after promotion.\nThe dancer class counts as a promotion of Monk (Tethys already comes with T1 Monk skills)."
+        "text": "Some classes, for the purpose of effective damage, had their class type change (or added in some cases). \nIn the early game, you may find that Mogalls count as flyers and that spiders count as Horses. This applies to their promotions too.\nMogalls can use their personal Light Magic.{br}The Manakete class has a level cap of 30 instead of 20 like the other classes. \nMage Knights use Anima Magic and Swords instead of Anima Magic and Staves, and is no longer a promotion option for Troubadour.\nYour Paladins can use Light Magic.{br}Knights can use more than one weapon type.{br}Wyvern Lords have Axes instead of swords.\nEirika's Great Lord class can use both combat and support Staves.{br}Ewan's promotions are special in the sense that he can keep Anima magic after promotion.\nThe dancer class counts as a promotion of Monk (Tethys already comes with T1 Monk skills)."
     },
     {
         "nid": "Base",
@@ -322,39 +343,25 @@
         "text": "The Turnwheel (a mechanic that was introduced in FE15) allows you to rewind to a previous point in a map. You have 7 charges that reset after a map."
     },
     {
-        "nid": "Elements",
-        "name": "Elements",
-        "title": "Elements",
-        "category": "Guide",
-        "text": "Magic and some physical weapons have elements associated with them. They can cause statuses and/or can deal super effective damage.\nThe elements are:{br}<icon>Light</> Light{br}<icon>Dark</> Dark{br}<icon>Water</> Water{br}<icon>Ice</> Ice\n<icon>Fire</> Fire{br}<icon>Thunder</> Thunder{br}<icon>Wind</> Wind{br}<icon>Earth</> Earth\nSome weapons have multiple elements.{br}If a weapon has an element (or more) associated, the description will indicate it."
-    },
-    {
         "nid": "Residual_Damage",
         "name": "Residual Dmg",
         "title": "Residual Damage",
         "category": "Guide",
-        "text": "In this game, poison is potentially more lethal and has been renamed to venom. <icon>Venom</> Venom can stack, so the HP loss at the start of the turn can be deadly. \nThere's also the bleeding<icon>Bleed</> status, that makes you lose HP at the start of the turn and lose speed and it stacks."
-    },
-    {
-        "nid": "Effectiveness",
-        "name": "Effectiveness",
-        "title": "Effectiveness",
-        "category": "Guide",
-        "text": "There are more types of effectiveness in FE8R. We have effectiveness of unit type and effectiveness of status.\nUnit type:{br}<icon>Horse</>Horse{br}<icon>Armor</> Armor{br}<icon>Flying</> Flying{br}<icon>Infantry</> Infantry\n<icon>Sword</> Sword{br}<icon>Magic</> Magic{br}<icon>Pirate</> Pirate{br}<icon>Dragon</> Dragon{br}<icon>Monster</> Monster\nStatus:{br}1. <icon>Drenched</> Drenched{br}2. <icon> Seared</> Seared{br}3. <icon> Shadowblight</>Shadowblight{br}4. <icon>Frozen</> Frozen{br}5. <icon>Rock</> Rock Punctures.\nOf course, this means that elemental weapons can be more dangerous."
+        "text": "In this game, poison is potentially more lethal and has been renamed to venom. <icon>Venom</> Venom can stack, so the HP loss at the start of the turn can be deadly. \nThere's also the bleeding<icon>Bleed</> status, that makes you lose HP at the start of the turn and lose speed and it stacks.\nThese statuses cannot, however, deal lethal damage to player units or bosses."
     },
     {
         "nid": "Arena",
         "name": "Arena",
         "title": "Arena",
         "category": "Guide",
-        "text": "You cannot longer farm EXP and money in the arena. Instead, you'll be able to battle an NPC that drops a weapon upon being defeated."
+        "text": "You can no longer farm EXP and money in the arena. Instead, you'll be able to battle a miniboss that drops a weapon upon being defeated."
     },
     {
         "nid": "Shops",
         "name": "Shops",
         "title": "Shops",
         "category": "Guide",
-        "text": "Armories and vendors have a wider variety of items. You'll find more than the classic iron/steel weapons. You can even buy Poison weapons.\nYou can enter secret shops during the main campaign from the overworld. You don't have to worry about missing out because you skipped a Secret Shop during its chapter."
+        "text": "Armories and vendors have a wider variety of items, instead of regular steel, silver, etc. weapons.\nYou can enter secret shops during the main campaign from the overworld. You don't have to worry about missing out because you skipped a Secret Shop during its chapter."
     },
     {
         "nid": "Discount",
@@ -368,42 +375,42 @@
         "name": "Post Battle",
         "title": "Post Battle",
         "category": "Guide",
-        "text": "Taken from Engage, this mechanic allows you to interact with the map after clearing a map. You can do the following:\nTrain with an ally. You can talk to an ally unit and raise a stat that you want for both your Lord and that unit.\nYou can train up to 4 times for chapter.{br}Talk with NPCs. You can talk with NPCs placed outside their houses that will give you BEXP.\nOther interactions. If you see a shiny spark, and interact with it, it can produce events that can include small reinforcements."
+        "text": "Taken from Engage, this mechanic allows you to interact with the map after clearing a map. You can do the following:\nTrain with an ally. You can talk to an ally unit and raise a stat that you want for both your Lord and that unit.\nYou can train up to 4 times for chapter.{br}Talk with NPCs. You can talk with NPCs placed outside their houses that will give you BEXP.\n(You can also visit villages or houses you didn't during the battle, though doing this will result in less overall BEXP)\nOther interactions. If you see a shiny spark, and interact with it, it can produce events that can include small reinforcements."
     },
     {
         "nid": "Tower_and_Ruins",
         "name": "Tower/Ruins",
         "title": "Tower and Ruins",
         "category": "Guide",
-        "text": "If you cleared a level of the Tower or the Ruins, when you return you'll be given the option to skip that level.\nYou won't have to go through weak enemies when you want to grind in the Tower.{br}Clearing later levels ofthe Ruins will give you random weapons.\nThe Ruins aren't only populated by monsters now. There are human enemies there too. This means that Slayer can't solve all your problems there.\nBoth the Tower and the Ruins are now randomized. Enemy placements, classes, and inventory may vary. Enemies can also drop stat boosters and accessories."
+        "text": "If you cleared a level of the Tower or the Ruins, when you return you'll be given the option to skip that level.\nYou won't have to go through weak enemies when you want to grind in the Tower.{br}Clearing later levels of the Ruins will give you random weapons.\nThe Ruins aren't only populated by monsters now. There are human enemies there too. This means that Slayer can't solve all your problems there.\nBoth the Tower and the Ruins are now randomized. Enemy placements, classes, and inventory may vary. Enemies can also drop stat boosters and accessories."
     },
     {
         "nid": "Eirika",
         "name": "Eirika",
         "title": "Eirika",
         "category": "Units",
-        "text": "The princess of the Kingdom of Renais. She's elegant and kind.\nEirika's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Light</><icon>Dark</><icon>Anima</>\n<icon>Sword</>: A rapier that has <icon>Thunder</> Thunder affinity. Evolves into the legendary weapon after Chapter 16 and gains monster effectiveness.{br}Magic at a distance.\n<icon>Light</>: A tome that reduces the damage nearby allies take and makes them heal a part of their HP at the start of the turn.\n<icon>Dark</>: A tome that inflicts <icon>Shadowblight</> Shadowblight and is effective against <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Anima</>: A tome that has Rapier effectiveness. Uses Str and Mag. It has the skill Flash Step, which swords usually have."
+        "text": "The princess of the Kingdom of Renais. She's elegant and kind.\nEirika's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Light</><icon>Dark</><icon>Anima</>\n<icon>Sword</>: A rapier that has <icon>Thunder</> Thunder affinity and always strikes first. Evolves into the legendary weapon after Chapter 16 and gains monster effectiveness.{br}Magic at a distance.\n<icon>Light</>: A tome that reduces the damage nearby allies take and makes them heal a part of their HP at the start of the turn.\n<icon>Dark</>: A tome that inflicts <icon>Shadowblight</> Shadowblight and is effective against <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Anima</>: A tome that has Rapier effectiveness. Uses Str and Mag. It has the skill Flash Step, which swords usually have."
     },
     {
         "nid": "Seth",
         "name": "Seth",
         "title": "Seth",
         "category": "Units",
-        "text": "A young commander of Renais. He's calm, composed, and skilled.\nSeth's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Light</><icon>Sword</>\n<icon>Lance</>: Ignores weapon triangle.{br}1st stage: A lance that drenches the enemy and ignores the Weapon Triangle. Has Mercy. \nLords and Horse units deal more damage, receive less damage and have +5 Crit. Is replaced after a Base convo in Chapter 9.\n2nd and 3rd stages: +3/-3 damage given/taken, +3 Crit for each ally within 3 spaces. Gains an extra attack for each 3 allies within 3 spaces.\n<icon>Light</>: A light tome with these effects: +3/-3 damage given/taken, +3 Crit for each ally within 3 spaces. Gains an extra attack for each 3 allies within 3 spaces.\n<icon>Sword</>: A <icon>Dark</> Dark elemental Sword that causes the user to suffer a % of the damage dealt and inflicts <icon>Shadowblight</> Shadowblight. The % of damage increases with the upgrades."
+        "text": "A young commander of Renais. He's calm, composed, and skilled.\nSeth's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Light</><icon>Sword</>\n<icon>Lance</>: Ignores weapon triangle.{br}1st stage: A lance that drenches the enemy and ignores the Weapon Triangle. Has Mercy. \nLords and Horse units deal more damage, receive less damage and have +5 Crit. Is replaced after a Base convo in Chapter 9.\n2nd and 3rd stages: +3/-3 damage given/taken, +3 Crit for each ally within 3 spaces. Gains an extra attack for each 3 allies within 3 spaces.\n<icon>Light</>: A light tome with these effects: +3/-3 damage given/taken, +3 Crit for each ally within 3 spaces. Gains an extra attack for each 3 allies within 3 spaces.\n<icon>Sword</>: A <icon>Dark</> Dark elemental Sword that deal damage to the user on hit, and inflicts <icon>Shadowblight</> Shadowblight on target. The damage taken also increases with the upgrades."
     },
     {
         "nid": "Franz",
         "name": "Franz",
         "title": "Franz",
         "category": "Units",
-        "text": "An earnest and compassionate cavalier from Renais. \nFranz's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Anima</>\n<icon>Sword</>: A sword that also uses Magic for damage.{br}First stage gives extra WEXP.{br}Later stages target Res, inflict <icon>Seared</> Seared and are effective against <icon>Horse</> Horses.\n<icon>Lance</>: A lance that also uses Luck for damage, is effective against <icon>Shadowblight</> Shadowblighted enemies and deals Splash damage. Gets increased range in its final stage.\n<icon>Anima</>: A 1-3 range reaver tome that is effective against <icon>Shadowblight</> Shadowblighted enemies and deals fixed extra damage on Crits."
+        "text": "An earnest and compassionate cavalier from Renais. \nFranz's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Anima</>\n<icon>Sword</>: A sword that also uses Magic for damage.{br}First stage gives extra WEXP.{br}Later stages target Res. All stages inflict <icon>Seared</> Seared and are effective against <icon>Horse</> Horses.\n<icon>Lance</>: A lance that also uses Luck for damage, is effective against <icon>Shadowblight</> Shadowblighted enemies and deals Splash damage. Gets increased range in its final stage.\n<icon>Anima</>: A 1-3 range reaver tome that also uses Luck for damage. It is effective against <icon>Shadowblight</> Shadowblighted enemies and deals fixed extra damage on Crits."
     },
     {
         "nid": "Gilliam",
         "name": "Gilliam",
         "title": "Gilliam",
         "category": "Units",
-        "text": "An armored knight from Frelia. He's quiet yet dependable. \nGilliam's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Bow</>\n<icon>Lance</>: A heavy lance that provokes enemies and can counter at a distance.\n<icon>Sword</>: A blade that is effective against <icon>Armor</> Armors.\n<icon>Bow</>: A siege bow that is effective against Armor and Drenched enemies. Gets extra damage based on the difference in the enemy's Attack Speed compared to 1/3 of Gilliam's Attack Speed."
+        "text": "An armored knight from Frelia. He's quiet yet dependable. \nGilliam's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Bow</>\n<icon>Lance</>: A heavy lance that uses Defense for damage, provokes enemies and can counter at a distance. Has <icon>Thunder</> Thunder affinity to start, and gains <icon>Dark</> Dark affinity later.\n<icon>Sword</>: A blade that uses Skill for damage and is effective against <icon>Armor</> Armors. Has <icon>Wind</> Wind affinity to start, and gains <icon>Earth</> Earth affinity later.\n<icon>Bow</>: A siege bow that is effective against Armor and Drenched enemies. Gets extra damage based on the difference in the enemy's Attack Speed compared to 1/3 of Gilliam's Attack Speed."
     },
     {
         "nid": "Vanessa",
@@ -417,42 +424,42 @@
         "name": "Moulder",
         "title": "Moulder",
         "category": "Units",
-        "text": "A mature priest of Frelia. He's gentle and reassuring.\nMoulder's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Axe</>\n<icon>Staff</>: A staff that uses Attack instead of Magic. It inflicts <icon>Rock</> Rock Punctures. After reaching its second stage, it raises Moulder's Defense. \nAfter reaching its third stage, if Moulder's Strength is higher or equal than enemy's Strength, he gets an extra attack.\n<icon>Light</>: A tome that uses Attack instead of Magic and inflicts <icon>Shadowblight</> Shadowblight.\n<icon>Axe</>: An axe that is effective against <icon>Shadowblight</> Shadowblighted, <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies."
+        "text": "A mature priest of Frelia. He's gentle and reassuring.\nMoulder's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Axe</>\n<icon>Staff</>: A staff that uses Strength and Defense instead of Magic. It inflicts <icon>Rock</> Rock Punctures. After reaching its second stage, it raises Moulder's Defense. \nAfter reaching its third stage, if Moulder's Strength is higher or equal than enemy's Strength, he gets an extra attack.\n<icon>Light</>: A tome that uses Strength and Luck instead of Magic and inflicts <icon>Shadowblight</> Shadowblight.\n<icon>Axe</>: An axe that is effective against <icon>Shadowblight</> Shadowblighted, <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies."
     },
     {
         "nid": "Ross",
         "name": "Ross",
         "title": "Ross",
         "category": "Units",
-        "text": "A young villager. He longs to be a warrior, like his father.\nRoss's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Dark</><icon>Bow</>\n<icon>Axe</>: A 1-2 range axe that gives a bonus attack.\n<icon>Dark</>: A tome that is also effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared. Gets the skill Vengeance.\n<icon>Bow</>: A bow that is also effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared on the enemy. It has a Torch effect.\nIn its last form, it has the following effect: Gets 5 extra attacks, but takes 70 damage after combat and enemy gets -40 for 3 turns."
+        "text": "A young villager. He longs to be a warrior, like his father.\nRoss's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Dark</><icon>Bow</><icon>Monster</>\n<icon>Axe</>: A 1-2 range axe that gives a bonus attack and is effective against <icon>Shadowblight</> Shadowblighted enemies. Its fourth version becomes brave.\n<icon>Dark</>: A tome that is also effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared. Costs HP to use, with the cost increasing with each upgrade.\n<icon>Bow</>: A bow that is also effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared on the enemy. It has a Torch effect.\nIn its last form, it has the following effect: Gets 5 extra attacks, but takes 70 damage after combat and enemy gets -40 for 3 turns.\n<icon>Monster</>: On its first form, it gives more Wexp. On later forms, it's a magical breath that is effective against <icon>Magic</> Magic and <icon>Monster</> Monster enemies and Silences enemies. It recovers part of damage dealt."
     },
     {
         "nid": "Garcia",
         "name": "Garcia",
         "title": "Garcia",
         "category": "Units",
-        "text": "A villager from Renais. He was once a feared military leader.\nGarcia's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Sword</><icon>Bow</>\n<icon>Axe</>: An axe that inflicts <icon>Seared</> Seared upon the enemy. After the first version, it gets a blast version and a normal version for attacking.\n<icon>Sword</>: A heavy weapon that confuses the enemy in its latest form.\n<icon>Bow</>: A bow whose use is a free action but has a cooldown."
+        "text": "A villager from Renais. He was once a feared military leader.\nGarcia's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Sword</><icon>Bow</>\n<icon>Axe</>: An axe that inflicts <icon>Seared</> Seared and <icon>Shadowblight</> Shadowblight upon the enemy. After the first version, it gets a blast version and a normal version for attacking. Also uses Constitution for damage.\n<icon>Sword</>: A heavy weapon that inflicts Curse and <icon>Shadowblight</> Shadowblight on the enemy. Increases Strength when hit by an enemy up to 5 times. From its third version onwards, it confuses on the enemy.\nOn its last version, it halves Speed, but doubles Defense and Resistance. It also uses HP for damage.\n<icon>Bow</>: A bow whose use is a free action but has a cooldown, inflicts <icon>Rock</> Rock Punctures."
     },
     {
         "nid": "Neimi",
         "name": "Neimi",
         "title": "Neimi",
         "category": "Units",
-        "text": "A childhood friend of Colm who hails from Renais. She cries a lot.\nNeimi's personal weapons.{br}<red>Proficiency: </><icon>Bow</><icon>Sword</><icon>Anima</>\n<icon>Bow</>: A bow that starts using both Strength and Skill and after the first upgrade gains effectiveness against <icon>Horse</> Horses and uses Magic too.\n<icon>Sword</>: An <icon>Earth</> Earth element sword that raises Neimi's DEF and RES.\n<icon>Anima</>: A tome that is effective against <icon>Horse</> Horses and cannot be countered."
+        "text": "A childhood friend of Colm who hails from Renais. She cries a lot.\nNeimi's personal weapons.{br}<red>Proficiency: </><icon>Bow</><icon>Sword</><icon>Light</><icon>Lance</>\n<icon>Bow</>: A bow that uses Magic and Skill for damage, inflicts <icon>Seared</> Seared and is effective against <icon>Horse</> Horses.\n<icon>Sword</>: A magical <icon>Earth</> Earth element sword that raises Neimi's DEF and RES and reduces her damage taken on enemy phase.\n<icon>Light</>: A 1 Range <icon>Fire</> Fire element tome that uses Skill for damage, is effective against <icon>Horse</> Horses, deals splsh damage and cannot be countered.\n<icon>Lance</>: <icon>Light</> Light and <icon>Wind</> Wind lance with a cleave effect that shoves enemies. It uses Luck and Speed for damage, and gains <icon>Fire</> Fire element on its third version."
     },
     {
         "nid": "Colm",
         "name": "Colm",
         "title": "Colm",
         "category": "Units",
-        "text": "A childhood friend of Neimi who hails from Renais. He can be snide.\nColm's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Bow</><icon>Axe</>\n<icon>Sword</>: Starts as a Dagger that lowers enemy accuracy.\n<icon>Bow</>: A 4-6 range Bow that raises Avoid.\n<icon>Axe</>: An axe that uses Strength and Speed and inflicts <icon>Venom</> Venom. It starts with 1-3 range and its last form has 1-4 range."
+        "text": "A childhood friend of Neimi who hails from Renais. He can be snide.\nColm's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Bow</><icon>Axe</>\n<icon>Sword</>: 1. Starts as a Dagger that lowers enemy accuracy and is effective against <icon>Shadowblight</> Shadowblighted enemies, later on it gains a version that can Multi-Target, but not Dual Strike.\n2. A Dagger that swaps the unit with the target after combat, and its final version applies 3 stacks of both <icon>Venom</> Venom and <icon>Bleed</> Bleed.\n<icon>Bow</>: A 4-6 range Bow that raises Avoid and Speed, eventually it applies <icon>Shadowblight</> Shadowblight and Curse.\n<icon>Axe</>: An axe that uses Strength and Speed and inflicts <icon>Rock</> Rock Punctures and <icon>Venom</> Venom, the amount of stacks increases with upgrades. It starts with 1-3 range and its last form has 1-4 range."
     },
     {
         "nid": "Artur",
         "name": "Artur",
         "title": "Artur",
         "category": "Units",
-        "text": "A young monk from Renais. He is a very forthright and pious man.\nArtur's personal weapons.{br}<red>Proficiency: </><icon>Light</><icon>Staff</><icon>Lance</>\n<icon>Light</>: A tome that is also effective against <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen status.\n<icon>Staff</>: A 1-4 range staff that <icon>Drenched</> Drenches enemies.\n<icon>Lance</>: A lance that deals extra damage and receives less damage based on Artur's luck. In the final form, it gets extra attacks based on Artur's luck."
+        "text": "A young monk from Renais. He is a very forthright and pious man.\nArtur's personal weapons.{br}<red>Proficiency: </><icon>Light</><icon>Staff</><icon>Lance</>\n<icon>Light</>: A tome that is also effective against <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen status. Its final version is also effective against <icon>Monster</> Monsters and inflicts Reduced Vision.\n<icon>Staff</>: A 1-4 range staff that <icon>Drenched</> Drenches enemies, later gains <icon>Wind</> Wind element, more range, and shoves enemies.\n<icon>Lance</>: A lance that deals extra damage and receives less damage based on Artur's luck. In the final form, it gets extra attacks based on Artur's luck."
     },
     {
         "nid": "Lute",
@@ -466,21 +473,21 @@
         "name": "Natasha",
         "title": "Natasha",
         "category": "Units",
-        "text": "A beautiful cleric from the Grado Empire. She's graceful and serious.\nNatasha's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Lance</>\n<icon>Staff</>: An <icon>Ice</> Ice affinity staff that is effective against  <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen. Can select more than one target.\n<icon>Light</>: Tome that reduces damagess from monsters and dark magic. In its final form, nullifies damage from monsters and dark magic.\n<icon>Lance</>: A lance that starts with 7 range, later changes to 8 range and also uses Luck for damage. Effective against <icon>Flying</> Flying, <icon>Seared</> Seared and <icon>Shadowblight</> Shadowblighted enemies."
+        "text": "A beautiful cleric from the Grado Empire. She's graceful and serious.\nNatasha's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Lance</><icon>Sword</>\n<icon>Staff</>: An <icon>Ice</> Ice affinity staff that is effective against  <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen. Can select more than one target, and later gains an AoE version.\n<icon>Light</>: Tome that reduces damagess from monsters and dark magic. In its final form, nullifies damage from monsters and dark magic.\n<icon>Lance</>: A lance that starts with 7 range, later changes to 8 range and also uses Luck for damage. Effective against <icon>Flying</> Flying, <icon>Seared</> Seared and <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Sword></>: Dagger that uses Skill and targets Speed.\nStarting from its second version, it inflicts Anesthesia (reduces Skill and Speed up to 10 stacks). From the third version it will deal extra damage on sequential Critical Hits. Its fifth version inflicts 3 stacks of Bleed and Anesthesia, has 1-3 range and access to Mercy."
     },
     {
         "nid": "Joshua",
         "name": "Joshua",
         "title": "Joshua",
         "category": "Units",
-        "text": "A wandering sword fighter from Jehanna. He loves to gamble.\nJoshua's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Axe</>\n<icon>Sword</>: 1. A sword that is effective against <icon>Flying</> Flying and <icon>Seared</> Seared units and uses Speed instead of Attack for damage. Range increases in later versions.\n2. Sword that is effective against <icon>Magic</> Magic units and also uses Luck for damage. Has a 50/50 chance of getting another attack or the enemy getting another attack. On later versions, the chance is 75/25.\n<icon>Lance</>: An <icon>Earth</> Earth lance that raises Defense and Resistance. Also uses Skill for damage.\n<icon>Axe</>: An Axe that causes <icon>Bleed</> Bleeding and also uses Speed for damage."
+        "text": "A wandering sword fighter from Jehanna. He loves to gamble.{br}{br}Gains two powerful weapons at X rank <icon>Sword</> Swords.\nJoshua's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Axe</>\n<icon>Sword</>: 1. A sword that is effective against <icon>Flying</> Flying and <icon>Seared</> Seared units and uses Speed instead of Attack for damage. Range increases in later versions.\n2. Sword that is effective against <icon>Magic</> Magic units and also uses Luck for damage. Has a 50/50 chance of either unit getting another attack, or the enemy getting another attack. On later versions, the chance is 75/25.\n<icon>Lance</>: An <icon>Earth</> Earth lance that raises Defense and Resistance. Also uses Skill for damage. From its second version onwards, it becomes effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared on the enemy\n<icon>Axe</>: An Axe that causes <icon>Bleed</> Bleeding and also uses Speed for damage. From its second version onwards, it inflicts <icon>Shadowblight</> Shadowblight and Curse on the enemy."
     },
     {
         "nid": "Ephraim",
         "name": "Ephraim",
         "title": "Ephraim",
         "category": "Units",
-        "text": "The prince of Renais. He is a man of great honor and bravery.\nEphraim's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Axe</>\n<icon>Lance</>: Evolves into the legendary weapon after Chapter 16 and gains monster effectiveness.\n<icon>Sword</>: A sword that is effective against magic units and raises Resistance.\n<icon>Axe</>: A 1-2 range axe that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared."
+        "text": "The prince of Renais. He is a man of great honor and bravery.\nEphraim's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Axe</>\n<icon>Lance</>: It has the following skills:{br}Increases damage to all attacks and allies within 3 spaces get a skill that makes them follow up before the enemy if their HP is under 75%.\nFrom its second version onwards, it gets a skill that gives allies in a 3 spaces range +10 Attack Speed\nEvolves into the legendary weapon after Chapter 16 and gains monster effectiveness.\n<icon>Sword</>: A sword that is effective against magic units and raises Resistance.\n<icon>Axe</>: A 3 range axe that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared."
     },
     {
         "nid": "Forde",
@@ -494,84 +501,84 @@
         "name": "Kyle",
         "title": "Kyle",
         "category": "Units",
-        "text": "A steadfast and honourable cavalier in sworn service to Renais.\nKyle's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Sword</>\n<icon>Axe</>: A 1-2 range heavy axe that inflicts <icon>Frozen</> Frozen on the enemy.\n<icon>Lance</>: A heavy lance that is also effective against <icon>Armor</> Armor and <icon>Horse</> Horse units. Can't be countered at full HP.\n<icon>Sword</>: An <icon>Earth</> Earth sword that causes the user to backdash. Deals extra damage on Crit. Last form inflicts <icon>Frozen</> Frozen on the enemy."
+        "text": "A steadfast and honourable cavalier in sworn service to Renais.\nKyle's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Sword</>\n<icon>Axe</>: A 1-2 range heavy axe that inflicts <icon>Frozen</> Frozen on the enemy.\n<icon>Lance</>: A heavy lance that is also effective against <icon>Armor</> Armor and <icon>Horse</> Horse units. Can't be countered at full HP. Its last version is also effective against <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Sword</>: An <icon>Earth</> Earth sword that deals extra damage on Crit. Last form inflicts <icon>Frozen</> Frozen on the enemy."
     },
     {
         "nid": "Tana",
         "name": "Tana",
         "title": "Tana",
         "category": "Units",
-        "text": "A young lady of Frelia. She is both cheery and sociable.\nTana's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Bow</><icon>Anima</>\n<icon>Lance</>: A lance that <icon>Drenched</> Drenches the enemy and gives access to Tana's Stash. Her stash contains food items that heal and give buffs as free actions.\n<icon>Bow</>: A bow that uses Magic and Skill for damage and inflicts <icon>Frozen</> Frozen on the enemy. Last version always hits.\n<icon>Anima</>: A siege tome that is effective against <icon>Flying</> Fliers and <icon>Seared</> Seared enemies that can Confuse and move the enemy. It has a cooldown."
+        "text": "A young lady of Frelia. She is both cheery and sociable.{br}{br}Gains a powerful weapon at X rank <icon>Lance</> Lances.\nTana's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Bow</><icon>Anima</>\n<icon>Lance</>: A lance that <icon>Drenched</> Drenches the enemy and gives access to Tana's Stash. Her stash contains food items that heal and give buffs as free actions.\n<icon>Bow</>: A bow that uses Magic and Skill for damage, inflicts <icon>Frozen</> Frozen on the enemy and is effective against <icon>Seared</> Seared and <icon>Pirate</> Pirate enemies. Last version always hits.\n<icon>Anima</>: A 3-6 range tome that is effective against <icon>Flying</> Fliers and <icon>Seared</> Seared enemies that can Confuse and move non-boss enemies. It has a cooldown."
     },
     {
         "nid": "Amelia",
         "name": "Amelia",
         "title": "Amelia",
         "category": "Units",
-        "text": "A young girl from a small village in Grado. She is honest and sincere.\nAmelia's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Axe</><icon>Bow</>\n<icon>Lance</>: A lance that can target up to 3 enemies. In the last version it can target up to 4 enemies and deals effective damage against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Axe</>: An axe that also uses Magic for damage. Effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies. Has a version with cooldown that deals Area of Effect damage.\n<icon>Bow</>: An <icon>Earth</> Earth bow that can target multiple enemies and inflicts <icon>Rock</> Rock Punctures. With each upgrade, it can target more enemies."
+        "text": "A young girl from a small village in Grado. She is honest and sincere.\nAmelia's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Axe</><icon>Bow</>\n<icon>Lance</>: A lance that can target up to 3 enemies. In the last version it can target up to 4 enemies and deals effective damage against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Axe</>: An axe that also uses Magic for damage. Effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies. Has a version with cooldown that deals Area of Effect damage.\n<icon>Bow</>: An <icon>Earth</> Earth bow that can target multiple enemies and inflicts <icon>Rock</> Rock Punctures. With each upgrade, it can target more enemies.\n<icon>Monster</>: On its first form, it gives more Wexp. Later it's a magical breath that is effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies, raises Speed and Stuns enemies. It can't be countered, but it can't counter.\nIts second form also inflicts Curse and <icon>Shadowblight</> Shadowblight and is also effective against <icon>Dragon</> Dragon enemies.\n<red>This unit may lose access to Lances or Axes in certain promotion paths!</>"
     },
     {
         "nid": "Innes",
         "name": "Innes",
         "title": "Innes",
         "category": "Units",
-        "text": "The prince of Frelia. He's brash and arrogant, but good at heart.\nInnes' personal weapons.{br}<red>Proficiency: </><icon>Bow</><icon>Lance</><icon>Sword</>\n<icon>Bow</>: A bow with a minimum of 6 range. At higher stages it becomes brave and never misses.\n<icon>Lance</>: A 1-2 range lance that <icon>Drenched</> Drenches the enemy and also uses Magic for damage. In its last stage it also inflicts <icon>Shadowblight</> Shadowblight and Curse.\n<icon>Sword</>: A 1-5 range sword that is effective against <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen on the enemy. Gains extra attacks if Attack Speed is high enough compared to enemy's."
+        "text": "The prince of Frelia. He's brash and arrogant, but good at heart.{br}{br}Gains a powerful weapon at X rank <icon>Bow</> Bows.\nInnes' personal weapons.{br}<red>Proficiency: </><icon>Bow</><icon>Lance</><icon>Sword</>\n<icon>Bow</>: A bow with a minimum of 6 range. At higher stages it becomes brave and never misses.\n<icon>Lance</>: A 1-2 range lance that <icon>Drenched</> Drenches the enemy and also uses Magic for damage. In its last stage it also inflicts <icon>Shadowblight</> Shadowblight and Curse.\n<icon>Sword</>: A 1-5 range sword that hits all enemies in a line, is effective against <icon>Pirate</> Pirates and inflicts the <icon>Frozen</> Frozen on the enemy.\nGains extra attacks if Attack Speed is high enough compared to enemy's, but cannot double normally, or Dual Strike."
     },
     {
         "nid": "Gerik",
         "name": "Gerik",
         "title": "Gerik",
         "category": "Units",
-        "text": "A mercenary leader from Jehanna. He's better known as the Desert Tiger.\nGerik's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Axe</><icon>Lance</>\n<icon>Sword</>: A Blade that increases Crit chance based on the party's money and gains money after dealing a critical hit.\n<icon>Axe</>: A 3-4 range axe that is effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Lance</>: A 1-2 range heavy <icon>Earth</> Earth lance that inflicts AOE <icon>Rock</> Rock Punctures."
+        "text": "A mercenary leader from Jehanna. He's better known as the Desert Tiger.\nGerik's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Axe</><icon>Lance</>\n<icon>Sword</>: A Blade that increases Crit chance based on the party's money and gains money after dealing a critical hit.\nFrom its fourth version onwards, it inflicts Rock Punctures and can summon a Sandstorm after enough kills.\nIts last form is also effective against <icon>Dragon</> Dragons and <icon>Monster</> Monsters and has the following effect:{br}Halves damage taken, heals 20% at the start of the turn and negative statuses last 1 turn.\n<icon>Axe</>: A 3-4 range axe that is effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Lance</>: A 1-2 range heavy <icon>Earth</> Earth lance that inflicts AOE <icon>Rock</> Rock Punctures, and is effective against <icon>Seared</> Seared and <icon>Flying</> Flying enemies."
     },
     {
         "nid": "Tethys",
         "name": "Tethys",
         "title": "Tethys",
         "category": "Units",
-        "text": "A beautiful and charming dancer from Jehanna.\nTethys' personal weapons.{br}<red>Proficiency: </><icon>Light</>\n<icon>Light</>: A tome with a cooldown that allows Tethys to perform another action after using it."
+        "text": "A beautiful and charming dancer from Jehanna.\nTethys' personal weapons.{br}<red>Proficiency: </><icon>Light</><icon>Monster</>\n<icon>Light</>: A tome with a cooldown that allows Tethys to perform another action after using it.\n<icon>Monster</>: Magical breath that inflicts <icon>Silence</> Silence on the enemy and is effective against <icon>Magic</> Magic and <icon>Silence</> Silenced enemies. Its final form is also effective against <icon>Dragon</> Dragon and <icon>Monster</> Monster enemies."
     },
     {
         "nid": "Marisa",
         "name": "Marisa",
         "title": "Marisa",
         "category": "Units",
-        "text": "An aloof sword fighter from Jehanna. She's known as the Crimson Flash.\nMarisa's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Axe</><icon>Dark</>\n<icon>Sword</>: 1. A sword that gives a global debuffing skill after 9 kills. Uses Speed for damage instead of Attack, inflicts <icon>Frozen</> Frozen and is effective against <icon>Pirate</> Pirates.\n2. A poisoned Dagger with 1-3 range.{br}3. Unlocked at the highest weapon level. A 1-2 range sword that can select up to 6 enemies, and uses Speed for damage instead of Attack. Has a cooldown.\n<icon>Axe</>: An axe that inflicts <icon>Rock</> Rock Punctures and Stun on the enemy.\n<icon>Dark</>: A tome that <icon>Drenched</> Drenches the enemy and also uses Skill for damage."
+        "text": "An aloof sword fighter from Jehanna. She's known as the Crimson Flash.\nMarisa's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Axe</><icon>Dark</>\n<icon>Sword</>: 1. A sword that can summon a Snowstorm after enough kills. Uses Speed for damage, inflicts <icon>Frozen</> Frozen and is effective against <icon>Pirate</> Pirates.\n2. A poisoned Dagger with 1-3 range.{br}3. Unlocked at the highest weapon level. A 1-2 range sword that can select up to 6 enemies, and uses Speed for damage. Has a cooldown.\n<icon>Axe</>: An axe that uses Skill for damage and inflicts <icon>Rock</> Rock Punctures and Stun on the enemy.\n<icon>Dark</>: A tome that <icon>Drenched</> Drenches the enemy and also uses Skill for damage."
     },
     {
         "nid": "Larachel",
         "name": "L'Arachel",
         "title": "L'Arachel",
         "category": "Units",
-        "text": "A young woman from Rausten. She fights for justice and honour.\nL'Arachel's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Dark</>\n<icon>Staff</>: 1. A staff that deals Area of Effect damage to the enemy. Has a cooldown.{br}2. Regular offensive staff.\n<icon>Light</>: A tome that makes Mounted tome users and Light magic users receive less damage, increases Avoid and gets extra attacks (1, later 2).\n<icon>Dark</>: A tome that is effective against <icon>Monster</> Monsters and has a Nosferatu effect."
+        "text": "A young woman from Rausten. She fights for justice and honour.{br}{br}Gains a powerful weapon at X rank <icon>Light</> Light, and a powerful healing staff at X rank <icon>Staff</> Staves.\nL'Arachel's personal weapons.{br}<red>Proficiency: </><icon>Staff</><icon>Light</><icon>Dark</>\n<icon>Staff</>: 1. A regular offensive staff that has an AoE version on a cooldown.\n<icon>Light</>: A tome that makes Mounted tome users and Light magic users receive less damage, increased Avoid and extra attacks (1, later 2).\n<icon>Dark</>: A tome that is effective against <icon>Monster</> Monsters and has a Nosferatu effect."
     },
     {
         "nid": "Dozla",
         "name": "Dozla",
         "title": "Dozla",
         "category": "Units",
-        "text": "A berserker from Rausten. He's a hearty man with a thirst for life.\nDozla's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Sword</><icon>Dark</>\n<icon>Axe</>: A heavy axe that inflicts Stun, but can go first. It has a Skill that increases Crit damage and Hit for each ally within 2 spaces.\n<icon>Sword</>: A sword that <icon>Drenched</> Drenches the enemy and is effective against <icon>Drenched</> Drenched and <icon>Armor</> Armor units. After killing 9 enemies, gains a skill that debuffs all enemies.\n<icon>Dark</>: 1. A tome that <icon>Drenched</> Drenches the enemy and instead of using Magic for damage, it uses Luck and Strength.\n2. A tome that attacks all enemies and <icon>Drenched</> Drenches them. It starts with cooldown at its max value. Can't double or give wexp."
+        "text": "A berserker from Rausten. He's a hearty man with a thirst for life.\nDozla's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Sword</><icon>Dark</><icon>Monster</>\n<icon>Axe</>: A heavy axe that inflicts Stun, but can go first. It has a Skill that increases Crit damage and Hit for each ally within 2 spaces.\n<icon>Sword</>: A sword that <icon>Drenched</> Drenches the enemy and is effective against <icon>Drenched</> Drenched and <icon>Armor</> Armor units. Can summon a Rainstorm after enough kills.\nIts final form increases the <icon>Drenched</> Drenching radius, ignores terrain and is effective against <icon>Pirate</> Pirates.\n<icon>Dark</>: A tome that <icon>Drenched</> Drenches the enemy and uses Luck and Strength for damage. Has a version, with cooldown, that hits all enemies, but cannot double or give wexp.\n<icon>Monster</>: On its first form, it gives more Wexp. Later it becomes a breath that inflicts <icon>Drenched</> Drenched and <icon>Venom</> Venom on the enemy and is effective against <icon>Flying</> Flying and <icon>Seared</> Seared enemies.\nIts last version is also effective against <icon>Infantry</> Infantry units."
     },
     {
         "nid": "Saleh",
         "name": "Saleh",
         "title": "Saleh",
         "category": "Units",
-        "text": "A sage from the village Caer Pelyn. He's Ewan's solemn, but kind, teacher.\nSaleh's personal weapons.{br}<red>Proficiency: </><icon>Anima</><icon>Dark</><icon>Staff</>\n<icon>Anima</>: A tome that puts enemies to sleep and is effective against <icon>Flying</> Flying and <icon>Seared</> Seared enemies.\nAfter its second stage it gains a variant with a cooldown that deals area damage and can't Dual Strike.\n<icon>Dark</>: A tome that is effective against Sleeping enemies.\n<icon>Staff</>: A staff that poisons enemies. It's a free action with a cooldown. It starts with cooldown at max value. \nOn its first stage, it can select up to 6 targets, on later versions it hits all enemies. {br}On its final version, it's brave and inflicts <icon>Rock</> Rock Punctures."
+        "text": "A sage from the village Caer Pelyn. He's Ewan's solemn, but kind, teacher.\nSaleh's personal weapons.{br}<red>Proficiency: </><icon>Anima</><icon>Dark</><icon>Staff</>\n<icon>Anima</>: A tome that puts enemies to sleep and is effective against <icon>Flying</> Flying and <icon>Seared</> Seared enemies.\nAfter its second stage it gains a variant with a cooldown that deals area damage, but can't Dual Strike.\n<icon>Dark</>: 1. A tome that is effective against Sleeping enemies. Can apply a debuff to all enemies after killing a sleeping enemy, then 5 others.\n2. A tome that is unlocked at X rank. It has one use per chapter. It can't crit, double or do Dual Strikes and hits all enemies on the map. It starts on cooldown.\n<icon>Staff</>: A staff that poisons enemies. It's a free action with a cooldown. It starts with cooldown at max value. \nOn its first stage, it can select up to 6 targets. It eventually gains a second version, on cooldown, that hits all enemies.{br}On its final version, it's brave and inflicts <icon>Rock</> Rock Punctures."
     },
     {
         "nid": "Ewan",
         "name": "Ewan",
         "title": "Ewan",
         "category": "Units",
-        "text": "A sage-in-training from Jehanna. He reveres his teacher, Saleh.\nEwan's personal weapons.{br}<red>Proficiency: </><icon>Anima</><icon>Light</><icon>Dark</>\n<icon>Lance</>: 1. A 1-2 range fire tome that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared. Has a cooldown. Can select up to 3 targets.\n2. An X rank spell that inflicts <icon>Drenched</> Drenched, <icon>Frozen</> Frozen, <icon>Seared</> Seared, <icon>Shadowblight</> Shadowblight and Curse.\nEffective against <icon>Monster</> Monster, <icon>Horse</> Horse, <icon>Armor</> Armor, <icon>Flying</> Flying, <icon>Drenched</> Drenched, <icon>Seared</> Seared, <icon>Pirate</> Pirate and <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Light</>: A 5-6 range spell. Has a cooldown. Can select up to 3 targets.\n<icon>Dark</>: A 3-4 range spell. Has a cooldown. Can select up to 3 targets."
+        "text": "A sage-in-training from Jehanna. He reveres his teacher, Saleh.\nEwan's personal weapons.{br}<red>Proficiency: </><icon>Anima</><icon>Light</><icon>Dark</>\n<icon>Anima</>: 1. A 1-2 range fire tome that uses Skill for damage, is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared. Has a cooldown. Can select up to 3 targets.\n2. An X rank spell that inflicts <icon>Drenched</> Drenched, <icon>Frozen</> Frozen, <icon>Seared</> Seared, <icon>Shadowblight</> Shadowblight and Curse.\nEffective against <icon>Monster</> Monster, <icon>Horse</> Horse, <icon>Armor</> Armor, <icon>Flying</> Flying, <icon>Drenched</> Drenched, <icon>Seared</> Seared, <icon>Pirate</> Pirate and <icon>Shadowblight</> Shadowblighted enemies.\n<icon>Light</>: A 5-6 range spell that uses Luck for damage. Has a cooldown. Can select up to 3 targets.\n<icon>Dark</>: A 3-4 range spell that uses Strength for damage. Has a cooldown. Can select up to 3 targets."
     },
     {
         "nid": "Cormag",
         "name": "Cormag",
         "title": "Cormag",
         "category": "Units",
-        "text": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.\nCormag's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Dark</>\n<icon>Axe</>: An axe that gives Cormag the skill Vengeance.\n<icon>Lance</>: A 1-2 range lance that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared.\nIn its final form, it uses both Strength and Magic for damage and gains the following effect: when at full HP, gains +25 Hit/Avoid, else becomes Berserked, all attacks become brave and heals half of damage dealt.\n<icon>Dark</>: 1. A tome that also uses Skill for damage and inflicts <icon>Venom</> Venom upon the enemy.\n2. A tome that hits all enemies. Starts with cooldown at max value. Inflicts <icon>Venom</> Venom. Can't double or Dual Strike. Doesn't give exp."
+        "text": "A wyvern knight of Grado. A gentle man, but a ferocious warrior.\nCormag's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Dark</><icon>Monster</>\n<icon>Axe</>: An axe that gives Cormag the skill Vengeance.\nFrom the second version onwards, it also inflicts <icon>Drenched</> Drenched on the enemy, attacks become effective against <icon>Drenched</> Drenched and <icon>Seared</> Seared enemies and gets the following effect: +15 Crit and -40 avoid in player phase. -15 Crit + 40 avoid in enemy phase.\n<icon>Lance</>: A 1-2 range lance that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared.\nIn its final form, it uses both Strength and Magic for damage and gains the following effect: when at full HP, gains +25 Hit/Avoid, else becomes Berserked, all attacks become brave and heals half of damage dealt.\nCritical hits deal x5 damage and gains +15 Crit.{br}Loses 75% health at the start of the turn, but has Galeforce twice per turn.\n<icon>Dark</>:A tome that also uses Skill for damage and inflicts <icon>Venom</> Venom upon the enemy. Has a version, on cooldown, that hits all enemies, but can't double or Dual Strike. Doesn't give exp.\n<icon>Monster</>: On its first form, it gives more Wexp. Later, it becomes a breath that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared, Curse and <icon>Shadowblight</> Shadowblight on the enemy. Its second version is also effective against <icon>Infantry</> Infantry enemies."
     },
     {
         "nid": "Rennac",
@@ -585,14 +592,14 @@
         "name": "Duessel",
         "title": "Duessel",
         "category": "Units",
-        "text": "A courageous general in Grado's army. He's better known as Obsidian.\nDuessel's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Sword</>\n<icon>Axe</>: An axe that is super effective against <icon>Infantry</> Infantry units.\n<icon>Lance</>: A lance that after reaching its 2nd stage gets the following effect: when Duessel's HP drop below 75%, his Strength, Speed, Skill and Defense increase a 50%.\nWhen his health drops below 50%, all allies get the same effect.\n<icon>Sword</>: A heavy sword that also uses Defense for damage. It makes enemies within 6 spaces more likely to attack Duessel while he's above 50% health. Boosts his defense for each combat fought."
+        "text": "A courageous general in Grado's army. He's better known as Obsidian.{br}{br}Gains a powerful weapon at X rank <icon>Axe</> Axes.\nDuessel's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Lance</><icon>Sword</>\n<icon>Axe</>: An axe that is super effective against <icon>Infantry</> Infantry units, uses Defense and Skill.\n<icon>Lance</>: A lance that after reaching its 2nd stage gets the following effect: when Duessel's HP drop below 75%, his Strength, Speed, Skill and Defense increase by 50%.\nWhen his health drops below 50%, all allies get the same effect.\n<icon>Sword</>: A heavy sword that also uses Defense for damage. It makes enemies within 6 spaces more likely to attack Duessel while he's above 50% health. Boosts his defense for each combat fought."
     },
     {
         "nid": "Knoll",
         "name": "Knoll",
         "title": "Knoll",
         "category": "Units",
-        "text": "One of Grado's royal mages. He knows the riddle of the Dark Stone.\nKnoll's personal weapons.{br}<red>Proficiency: </><icon>Dark</><icon>Staff</><icon>Anima</>\n<icon>Dark</>: A tome that increases Knoll's Hit, Avoid and Crit avoid based on the difference between the enemy's Luck and his Luck.\nAfter killing an enemy with this spell, gains a skill that makes him take no damage in the next combat.\n<icon>Staff</>: 1. A staff that lowers enemy's stats.{br}2. A staff that raises an ally's stats.\n<icon>Anima</>: A spell that inflicts <icon>Rock</> Rock Punctures. Greatly increases Luck and also raises his Strength, Magic, Skill, Speed, Defense and Resistance to a lesser extent."
+        "text": "One of Grado's royal mages. He knows the riddle of the Dark Stone.{br}{br}Gains a powerful weapon at X rank <icon>Dark</> Dark.\nKnoll's personal weapons.{br}<red>Proficiency: </><icon>Dark</><icon>Staff</><icon>Anima</>\n<icon>Dark</>: A tome that increases Knoll's Hit, Avoid and Crit avoid based on the difference between the enemy's Luck and his Luck.\nAfter killing an enemy with this spell, gains a skill that makes him take no damage in the next combat.\n<icon>Staff</>: 1. A staff that lowers enemy's stats.{br}2. A staff that raises an ally's stats.\n<icon>Anima</>: A spell that inflicts <icon>Rock</> Rock Punctures. Greatly increases Luck and also raises his Strength, Magic, Skill, Speed, Defense and Resistance to a lesser extent."
     },
     {
         "nid": "Myrrh",
@@ -606,26 +613,26 @@
         "name": "Syrene",
         "title": "Syrene",
         "category": "Units",
-        "text": "The dutiful commander of the 3rd battalion of Frelia's pegasus knights.\nSyrene's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Anima</>\n<icon>Lance</>: A 1-2 range lance that is effective against <icon>Pirate</> Pirates and boosts Flying allies' Movement and Hit.\n<icon>Sword</>: A 1-3 range brave sword that is effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Anima</>: A tome that always hits, inflicts <icon>Drenched</> Drenched and <icon>Frozen</> Frozen on the enemy and is effective against <icon>Pirate</> Pirates. Has a cooldown. \nOn its last version it's also effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched units."
+        "text": "The dutiful commander of the 3rd battalion of Frelia's pegasus knights.\nSyrene's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Anima</>\n<icon>Lance</>: A 1-2 range lance that uses Resistance for damage and is effective against <icon>Pirate</> Pirates and boosts Flying allies' Movement and Hit.\n<icon>Sword</>: A 1-3 range brave sword that is effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched enemies.\n<icon>Anima</>: A tome that always hits, inflicts <icon>Drenched</> Drenched and <icon>Frozen</> Frozen on the enemy and is effective against <icon>Pirate</> Pirates. Has a cooldown. \nOn its last version it's also effective against <icon>Armor</> Armor and <icon>Drenched</> Drenched units."
     },
     {
         "nid": "Doggo",
         "name": "Hellhound",
         "title": "Hellhound",
         "category": "Units",
-        "text": "A wolf that has been experimented on for human transformations. Prefers to be in wolf form.\nHellhound's personal weapons.{br}<red>Proficiency: </><icon>Monster</><icon>Light</><icon>Dark</>\n<icon>Monster</>: A fang attack that starts using Speed for damage instead of Attack. It inflicts <icon>Bleed</> Bleeding, with higher versions inflicting more stacks. \nFrom the second version onwards, it also inflicts Breach. Its final version uses both Strength and Speed for damage. It has a skill that gives extra attack(s) when under 75% HP, but takes recoil damage.\n<icon>Light</>: A tome that is also effective against <icon>Flying</> Flying enemies and inflicts Crippled on the enemy, reducing its movement for 3 turns. It has a Cleave effect and shoves the enemy. \nAfter reaching its second version, it gets extra accuracy and damage for each ally.\n<icon>Dark</>: A tome whose use costs HP, with each upgrade requiring more HP."
+        "text": "A wolf that has been experimented on for human transformations. Prefers to be in wolf form.\nHellhound's personal weapons.{br}<red>Proficiency: </><icon>Monster</><icon>Light</><icon>Dark</>\n<icon>Monster</>: A fang attack that starts using Speed for damage. It inflicts <icon>Bleed</> Bleeding, with higher versions inflicting more stacks.\nFrom the second version onwards, it also inflicts Breach. Its final version uses both Strength and Speed for damage.\nIt has a skill that gives extra attack(s), raises avoid and provokes nearby enemies when under 75% HP, but deals recoil damage when above. \n<icon>Light</>: A tome that is also effective against <icon>Flying</> Flying enemies and inflicts Crippled on the enemy, reducing its movement for 3 turns. It has a Cleave effect and shoves the enemy. \nAfter reaching its second version, it gets extra accuracy and damage for each ally.\n<icon>Dark</>: A tome whose use costs HP, with each upgrade requiring more HP."
     },
     {
         "nid": "BaelBaby",
         "name": "Bael",
         "title": "Bael",
         "category": "Units",
-        "text": "An orphaned Bael. She seems to be tame and shy. Loves having her fur scratched.\nBael's personal weapons.{br}<red>Proficiency: </><icon>Monster</><icon>Dark</><icon>Sword</><icon>Bow</>\n<icon>Monster</>: A claw attack that inflicts Breach and Curse on the enemy and raises unit's Defense and Resistance.\nAfter reaching the second version, it increases damage dealt based on unit's Defense and after reaching the third version, it increases damage based on unit's Defense and Resistance.\n<icon>Dark</>: A tome that makes enemies in 5 spaces more likely to attack this unit. Also has the following effect: Reduces enemy's Speed and Mov for 2 turns.\n<icon>Sword</>: A blade that recovers part of damage dealt and inflicts the following effect: Reduces enemy's Speed and Mov for 2 turns. After reaching the second stage, it also inflicts <icon>Bleed</> Bleeding on the enemy.\n<icon>Bow</>: A siege bow that is also effective against <icon>Horse</> Horses. It has a cooldown. It has the following effect: Reduces enemy's Speed and Mov for 2 turns. On its final version, it inflicts Area of Effect damage."
+        "text": "An orphaned Bael. She seems to be tame and shy. Loves having her fur scratched.\nBael's personal weapons.{br}<red>Proficiency: </><icon>Monster</><icon>Dark</><icon>Sword</><icon>Bow</>\n<icon>Monster</>: A claw attack that inflicts Breach and Curse on the enemy and raises unit's Defense and Resistance.\nAfter reaching the second version, it increases damage dealt based on unit's Defense and after reaching the third version, it increases damage based on unit's Defense and Resistance.\n<icon>Dark</>: A tome that makes enemies in 5 spaces more likely to attack this unit. Also reduces enemy's Speed and Mov for 2 turns.\n<icon>Sword</>: A blade that recovers part of damage dealt and reduces enemy's Speed and Mov for 2 turns. After reaching the second stage, it also inflicts <icon>Bleed</> Bleeding on the enemy.\n<icon>Bow</>: A siege bow that is also effective against <icon>Horse</> Horses. It has a cooldown. It reduces enemy's Speed and Mov for 2 turns. On its final version, it inflicts Area of Effect damage."
     },
     {
         "nid": "ZombieBoy",
-        "name": "Reverent",
-        "title": "Reverent",
+        "name": "Revenant",
+        "title": "Revenant",
         "category": "Units",
         "text": "A poor soul reanimated unto this husk. He still has the will to fight though.\nRevenant's personal weapons.{br}<red>Proficiency: </><icon>Monster</><icon>Dark</><icon>Anima</><icon>Staff</>\n<icon>Monster</>: A claw attack that inflicts <icon>Venom</> Venom on the enemy, with each version inflicting more stacks. If unit's Strength is equal or higher than enemy's Strength, increases damage dealt based on unit's Strength.\n<icon>Dark</>: A tome that is effective against <icon>Horse</> Horses and inflicts <icon>Seared</> Seared. After reaching its second stage it becomes effective against <icon>Monster</> Monsters too.\n<icon>Anima</>: A tome that <icon>Drenched</> Drenches the enemy and that with each stage ignores a bigger % of enemy's resistance.\nAt 2nd stage it becomes effective against <icon>Infantry</> Infantry enemies and in its last stage it also becomes effective against Monsters and inflicts 3 stacks of <icon>Venom</> Venom.\n<icon>Staff</>: A healing staff that heals HP equal to half of user's max HP. Buffs the ally after healing. With each stage, it can target one more ally."
     },
@@ -634,21 +641,21 @@
         "name": "Mogall",
         "title": "Mogall",
         "category": "Units",
-        "text": "A mogall who seeks knowledge. His eyes are very perceptive.\nMogall's personal weapons.{br}<red>Proficiency: </><icon>Dark</><icon>Light</><icon>Staff</>\n<icon>Dark</>: A 3 range tome that can't miss, double or do Dual Strikes. It has the following effects: It reduces enemy's Avoid for 2 turns and heals damage dealt.\nAfter reaching the second version, it can choose more than one target.\n<icon>Light</>: A tome that raises Unit's Avoid and inflicts Reduced Vision.\n<icon>Staff</>: A 1-3 range Support staff with a cooldown that buffs target's Hit and range with bows and magic. Its range increases with each version and on the last version, it can select two targets. It's a free action."
+        "text": "A mogall who seeks knowledge. His eyes are very perceptive.\nMogall's personal weapons.{br}<red>Proficiency: </><icon>Dark</><icon>Light</><icon>Staff</>\n<icon>Dark</>: A 3 range tome that can't miss, double or do Dual Strikes. It reduces enemy's Avoid for 2 turns and heals damage dealt.\nAfter reaching the second version, it can choose more than one target.\n<icon>Light</>: A tome that raises Unit's Avoid and inflicts Reduced Vision.\n<icon>Staff</>: A 1-3 range Support staff with a cooldown that buffs target's Hit and range with bows and magic. Its range increases with each version and on the last version, it can select two targets. It's a free action."
     },
     {
         "nid": "GargoyleGirl",
         "name": "Gargoyle",
         "title": "Gargoyle",
         "category": "Units",
-        "text": "A gentle gargoyle that desires to become beautiful and strong. She takes good care of her hair.\nGargoyle's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Anima</>\n<icon>Lance</>: A reaver lance that is effective against Armor enemies and inflicts <icon>Rock</> Rock Punctures. In its last two stages, if it kills an enemy, it raises Def and Avoid. In its last stage, it also uses Defense for damage.\n<icon>Sword</>: A blade that inflicts <icon>Rock</> Rock Punctures and <icon>Bleed</> Bleeding to the enemy. It has a cooldown.\n<icon>Anima</>: A tome that is effective against <icon>Pirate</> Pirates. It inflicts <icon>Frozen</> Frozen and Petrify to the oponent. It has a cooldown. Always hits."
+        "text": "A gentle gargoyle that desires to become beautiful and strong. She takes good care of her hair.\nGargoyle's personal weapons.{br}<red>Proficiency: </><icon>Lance</><icon>Sword</><icon>Anima</>\n<icon>Lance</>: A reaver lance that uses Defense and Constitution, is effective against Armor enemies and inflicts <icon>Rock</> Rock Punctures. In its last two stages, if it kills an enemy, it raises Def and Avoid.\n<icon>Sword</>: A blade that inflicts <icon>Rock</> Rock Punctures and <icon>Bleed</> Bleeding to the enemy. It has a cooldown.\n<icon>Anima</>: A tome that is effective against <icon>Pirate</> Pirates. It inflicts <icon>Frozen</> Frozen and Petrify to the oponent. It has a cooldown. Always hits."
     },
     {
         "nid": "BoneBoy",
         "name": "Bonewalker",
         "title": "Bonewalker",
         "category": "Units",
-        "text": "A dark soul that refused to die. He seeks for a way to return to life.\nBonewalker's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Dark</><icon>Bow</>\n<icon>Sword</>: A blade that inflicts <icon>Shadowblight</> Shadowblight, Curse and reduces enemy's Mov for 3 turns. It targets Resistance.\nAfter reaching its second version, it also uses Magic for damage and has a skill that makes units hit by this weapon more likely to hit this unit. \nOn its third version, it also raises Defense and in the last version, it also raises Resistance.\n<icon>Lance</>: A lance that targets Resistance and inflicts <icon>Shadowblight</> Shadowblight and Curse.\nFrom its second stage onwards, it also uses Magic for damage. On its last stage, it has 1-2 range. If unit's Defense is higher or equal, enemy won't be able to counterattack.\n<icon>Dark</>: A tome that starts with 1 range, with its max range increasing with each version. It also inflicts <icon>Rock</> Rock Punctures and has a Cleave effect.\n<icon>Bow</>: A <icon>Light</> Light element bow that is effective against <icon>Shadowblight</> Shadowblighted enemies and uses Mag and Str. It gains the ability to heal adjacent allies after combat in later forms."
+        "text": "A dark soul that refused to die. He seeks for a way to return to life.\nBonewalker's personal weapons.{br}<red>Proficiency: </><icon>Sword</><icon>Lance</><icon>Dark</><icon>Bow</>\n<icon>Sword</>: A blade that inflicts <icon>Shadowblight</> Shadowblight, Curse and reduces enemy's Mov for 3 turns. It targets Resistance.\nAfter reaching its second version, it also uses Magic for damage and has a skill that makes units hit by this weapon more likely to target this unit. \nOn its third version, it also raises Defense and in the last version, it also raises Resistance.\n<icon>Lance</>: A lance that targets Resistance and inflicts <icon>Shadowblight</> Shadowblight and Curse.\nFrom its second stage onwards, it also uses Magic for damage. On its last stage, it has 1-2 range. If unit's Defense is higher or equal, enemy won't be able to counterattack.\n<icon>Dark</>: A tome that starts with 1 range, with its max range increasing with each version. It also inflicts <icon>Rock</> Rock Punctures and has a Cleave effect.\n<icon>Bow</>: A <icon>Light</> Light element bow that is effective against <icon>Shadowblight</> Shadowblighted enemies and uses Mag and Str. It gains the ability to heal adjacent allies after combat in later forms."
     },
     {
         "nid": "HorseyBoy",
@@ -676,7 +683,7 @@
         "name": "Cyclops",
         "title": "Cyclops",
         "category": "Units",
-        "text": "A cyclops that is the last of his tribe. Doesn't like seeing his friends being hurt.\nCyclop's personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Dark</><icon>Bow</>\n<icon>Axe</>: A heavy axe that can inflict stun and uses Str x2 and eventually adds on Mag. \nGrants the Circle Swing skill which activates Galeforce when unit kills and enemy, but reduces STR by 75% for the rest of the turn. Works once per turn.\n<icon>Dark</>: A tome that inflicts <icon>Shadowblight</> Shadowblight and <icon>Seared</> Seared. It is effective against <icon>Horse</> Horses, <icon>Flying</> Flying, and <icon>Seared</> Seared units.\nGrants the Anger Fuel skill, which adds 1/2 unit's missing HP to damage, and adds unit's Max HP to Hit.\n<icon>Bow</>: A heavy <icon>Earth</> Earth bow that is effective against <icon>Armor</> Armor and inflicts <icon>Rock</> Rock Punctures. Starts off with 2-3 range and increases to 5 range."
+        "text": "A cyclops that is the last of his tribe. Doesn't like seeing his friends being hurt.\nCyclops' personal weapons.{br}<red>Proficiency: </><icon>Axe</><icon>Dark</><icon>Bow</>\n<icon>Axe</>: A heavy axe that can inflict stun and uses Str x2 and eventually adds on Mag. \nGrants the Circle Swing skill which activates Galeforce when unit kills and enemy, but reduces STR by 75% for the rest of the turn. Works once per turn.\n<icon>Dark</>: A tome that inflicts <icon>Shadowblight</> Shadowblight and <icon>Seared</> Seared. It is effective against <icon>Horse</> Horses, <icon>Flying</> Flying, and <icon>Seared</> Seared units.\nGrants the Anger Fuel skill, which adds 1/2 unit's missing HP to damage, and adds unit's Max HP to Hit.\n<icon>Bow</>: A heavy <icon>Earth</> Earth bow that is effective against <icon>Armor</> Armor and inflicts <icon>Rock</> Rock Punctures. Starts off with 2-3 range and increases to 5 range."
     },
     {
         "nid": "Eirika_Route_Achievements",
