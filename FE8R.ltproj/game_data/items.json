@@ -16685,7 +16685,7 @@
     {
         "nid": "Kneader",
         "name": "Kneader",
-        "desc": "A cleric's first staff.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A cleric's first staff.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Always hits, cannot crit, MAG/2 + SPD/2 (<red>{e:((unit.get_stat('MAG')//2) + (unit.get_stat('SPD')//2))}</>), x3 WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             4,
@@ -73628,7 +73628,7 @@
     {
         "nid": "Oni_Mask",
         "name": "Oni Mask",
-        "desc": "Wearing it makes you unnaturally angry.\n<blue>On Hold:</>Rage skill, +3 to most stats but take 6dmg after combat.",
+        "desc": "Wearing it makes you unnaturally angry.\n<blue>On Hold:</>Rage skill, +10% to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.\nMax 5 Stacks.",
         "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
             8,
@@ -91786,7 +91786,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Lance_Guard_A",
+                    "Lance_Guard_SS",
                     "Blade_Vantage_Effect",
                     "Worlds_Strongest"
                 ]
@@ -104460,7 +104460,7 @@
     {
         "nid": "Refined_Obsidian",
         "name": "Refined Obsidian",
-        "desc": "A lance given to Grado's highest ranking generals with mighty valor.\n<green>Skills:</>Sunset's Resolve, Lance Guard (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>",
+        "desc": "A lance given to Grado's highest ranking generals with mighty valor.\n<green>Skills:</>Sunset's Resolve, Lance Guard (A)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             8,
@@ -104485,19 +104485,19 @@
             ],
             [
                 "damage",
-                18
+                30
             ],
             [
                 "hit",
-                95
+                100
             ],
             [
                 "crit",
-                8
+                12
             ],
             [
                 "weight",
-                18
+                21
             ],
             [
                 "level_exp",
@@ -104509,12 +104509,12 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "S"
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Lance_Guard_C",
+                    "Lance_Guard_A",
                     "Sunsets_Resolve",
                     "Sunsets_Resolve_Sunset_Proc"
                 ]
@@ -104546,7 +104546,7 @@
     {
         "nid": "Bright_Obsidian",
         "name": "Bright Obsidian",
-        "desc": "A lance given to Grado's highest ranking generals with mighty valor.\n<green>Skills:</>Sunset's Resolve, Lance Guard (A)\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Shadowblight</>",
+        "desc": "A lance given to Grado's highest ranking generals with mighty valor.\n<green>Skills:</>Sunset's Resolve, Lance Guard (SS)\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Shadowblight</>",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             7,
@@ -104571,19 +104571,19 @@
             ],
             [
                 "damage",
-                21
+                38
             ],
             [
                 "hit",
-                100
+                110
             ],
             [
                 "crit",
-                12
+                15
             ],
             [
                 "weight",
-                21
+                23
             ],
             [
                 "level_exp",
@@ -104595,12 +104595,12 @@
             ],
             [
                 "weapon_rank",
-                "S"
+                "SS"
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Lance_Guard_A",
+                    "Lance_Guard_SS",
                     "Sunsets_Resolve",
                     "Sunsets_Resolve_Sunset_Proc"
                 ]
@@ -104670,19 +104670,19 @@
             ],
             [
                 "damage",
-                28
+                50
             ],
             [
                 "hit",
-                105
+                125
             ],
             [
                 "crit",
-                15
+                25
             ],
             [
                 "weight",
-                25
+                28
             ],
             [
                 "level_exp",
@@ -105325,11 +105325,11 @@
             ],
             [
                 "damage",
-                17
+                22
             ],
             [
                 "hit",
-                95
+                105
             ],
             [
                 "crit",
@@ -105349,7 +105349,7 @@
             ],
             [
                 "weapon_rank",
-                "B"
+                "S"
             ],
             [
                 "wexp",
@@ -105439,11 +105439,11 @@
             ],
             [
                 "damage",
-                24
+                28
             ],
             [
                 "hit",
-                105
+                110
             ],
             [
                 "crit",
@@ -105549,11 +105549,11 @@
             ],
             [
                 "damage",
-                32
+                36
             ],
             [
                 "hit",
-                110
+                120
             ],
             [
                 "weapon_type",
@@ -136058,7 +136058,7 @@
             ],
             [
                 "status_on_equip",
-                "Dark_Wisdom"
+                "Wisdom_Spark"
             ],
             [
                 "effective_damage",
@@ -136383,13 +136383,21 @@
             [
                 "self_status_on_hit",
                 "Prevent_Steal_Crash"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "no_equip",
+                null
             ]
         ]
     },
     {
         "nid": "Summon_Skeleton",
-        "name": "Raise Skeleton",
-        "desc": "Summons a skeleton. This is a free action.",
+        "name": "Raise Skeleton Guard",
+        "desc": "Summons a reanimated skeleton. This is a free action.\nOn T3 they evolve into Death Knights.",
         "icon_nid": "Skills",
         "icon_index": [
             9,
@@ -136451,6 +136459,14 @@
             [
                 "self_status_on_hit",
                 "Prevent_Steal_Crash"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "no_equip",
+                null
             ]
         ]
     },
@@ -137621,7 +137637,7 @@
     {
         "nid": "Guild_Ring",
         "name": "Guild Ring",
-        "desc": "Keepsake to remember better times.\n<blue>On Hold:</> Increases MAG growth by 20%, HP/STR/SKL/SPD/DEF/RES growth by 10% and gives the Bookworm skill.",
+        "desc": "Keepsake to remember better times. Given only to those that deserve complete trust.\n<blue>On Hold:</> Increases MAG growth by 10%, and MAG by +5.\nDoes not work for Azuth.",
         "icon_nid": "{Maxim} Vlad's Ring",
         "icon_index": [
             0,
@@ -137631,22 +137647,15 @@
             [
                 "multi_status_on_hold",
                 [
-                    "Guild_Ring_Skill",
-                    "Book_Worm_Item"
+                    "Guild_Ring_Skill"
                 ]
             ],
             [
                 "prf_unit",
-                [
-                    "Azuth"
-                ]
+                []
             ],
             [
                 "unstealable",
-                null
-            ],
-            [
-                "locked",
                 null
             ]
         ]
@@ -166295,7 +166304,7 @@
     },
     {
         "nid": "Summon_Azuth",
-        "name": "Summon",
+        "name": "Summon Shadow",
         "desc": "Summons a phantom. This is a free action.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -166358,6 +166367,14 @@
             [
                 "event_before_combat",
                 "Global Steal_Prevent"
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "no_equip",
+                null
             ]
         ]
     },
@@ -172556,39 +172573,7 @@
         ]
     },
     {
-        "nid": "_Multishot_1",
-        "name": "Multishot",
-        "desc": "Unit can attack up to 3 targets per combat.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            0,
-            37
-        ],
-        "components": [
-            [
-                "multi_target",
-                3
-            ],
-            [
-                "allow_same_target",
-                null
-            ],
-            [
-                "allow_less_than_max_targets",
-                null
-            ],
-            [
-                "menu_after_combat",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "_Multishot_2",
+        "nid": "Multishot_2",
         "name": "Multishot",
         "desc": "Unit can attack up to 2 targets per combat.",
         "icon_nid": "skill_icons",
@@ -172611,6 +172596,10 @@
             ],
             [
                 "exempt_from_dual_strike",
+                null
+            ],
+            [
+                "menu_after_combat",
                 null
             ]
         ]
@@ -174961,17 +174950,36 @@
     {
         "nid": "Plushie_Tag_DG",
         "name": "Plushie Tag",
-        "desc": "Stick it on your friend for instant marketability. (Soaking and throwing against a wall is optional).\nRestores targeted ally HP to full and gives Plushie for 3 turns.\nUnit cannot use weapons, doubles HP, -50 Avoid, Provoke, and 100% HP Regen while has Plushie status.\nItem created by Haunted Axe/Memae.",
-        "icon_nid": "Garmr icons_1",
+        "desc": "Stick it on your friend or throw it on the grount for instant marketability. (Soaking and throwing against a wall is optional).\nGives ally Plushie for 3 turns.\nUnit cannot use weapons, doubles HP, -50 Avoid, Provoke, and 100% HP Regen while has Plushie status.\nOr throw it to make a plushie decoy.\nItem created by Haunted Axe/Memae.",
+        "icon_nid": "Garmr icons",
         "icon_index": [
-            4,
+            5,
             0
         ],
         "components": [
             [
-                "value",
-                1000
+                "multi_item",
+                [
+                    "Plushie_Tag_Ally",
+                    "Plushie_Tag_Plushie"
+                ]
             ],
+            [
+                "value",
+                2000
+            ]
+        ]
+    },
+    {
+        "nid": "Plushie_Tag_Ally",
+        "name": "Plushie Tag",
+        "desc": "Gives ally Plushie for 3 turns. <green>CD:5</>\nUnit cannot use weapons, doubles HP, -50 Avoid, Provoke, and 100% HP Regen while has Plushie status.\nItem created by Haunted Axe/Memae.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
             [
                 "usable",
                 null
@@ -174989,8 +174997,82 @@
                 3
             ],
             [
-                "status_on_hit",
-                "Plushie"
+                "cooldown",
+                5
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Plushie"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Plushie_Tag_Plushie",
+        "name": "Summon Plushie",
+        "desc": "Creates a plushie decoy that distracts enemies, this is a free action. <green>CD:5</>\nNote: Summon fails if current Plushie is alive on the field.\nItem created by Haunted Axe/Memae.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "target_tile",
+                null
+            ],
+            [
+                "spell",
+                null
+            ],
+            [
+                "empty_tile_target_restrict",
+                null
+            ],
+            [
+                "event_on_hit",
+                "Global Summon Plushie"
+            ],
+            [
+                "map_cast_sfx",
+                "None"
+            ],
+            [
+                "no_map_hp_display",
+                null
+            ],
+            [
+                "map_hit_sub_blend",
+                [
+                    0,
+                    0,
+                    0
+                ]
+            ],
+            [
+                "traversable_tile_target_restrict",
+                null
+            ],
+            [
+                "event_before_combat",
+                "Global Steal_Prevent"
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
             ],
             [
                 "cooldown",

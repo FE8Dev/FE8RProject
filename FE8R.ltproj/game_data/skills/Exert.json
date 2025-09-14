@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Exert",
+        "name": "Exert",
+        "desc": "Unit deals 5% more damage for each tile moved.\nUnit can forfeit all other actions to move 6 more spaces beyond unit's max movement range.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            25
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))/10"
+            ],
+            [
+                "xcom_movement",
+                6
+            ]
+        ]
+    }
+]

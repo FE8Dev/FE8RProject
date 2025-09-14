@@ -22,6 +22,10 @@ Some T1 skills have been buffed/reworked.
 Cormag's starting axe rank has been buffed to B
 Innes, Gerik, Tethys, L'Arachel, Dozla, and Saleh's starting main weapon rank has been upped to A rank.
 Adjustments for unit's above weapon's have been made as well.
+Reworked Pivot to Exert. (+5% damage for each tile moved and Xcom movement 6).
+Lore has been updated.
+Plushie Tag has been added to DG.
+Azuth update.
 
 
 
