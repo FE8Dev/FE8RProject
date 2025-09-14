@@ -12712,7 +12712,7 @@
     {
         "nid": "Rage",
         "name": "Rage",
-        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
+        "desc": "+10% to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.\nMax 5 Stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -12740,7 +12740,7 @@
     {
         "nid": "Rage_Stat_Buff",
         "name": "Rage",
-        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
+        "desc": "+10% to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.\nMax 5 Stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -12749,42 +12749,42 @@
         "components": [
             [
                 "stack",
-                999
+                5
             ],
             [
-                "stat_change",
+                "stat_multiplier",
                 [
                     [
                         "STR",
-                        2
+                        1.1
                     ],
                     [
                         "MAG",
-                        2
+                        1.1
                     ],
                     [
                         "SKL",
-                        2
+                        1.1
                     ],
                     [
                         "SPD",
-                        2
+                        1.1
                     ],
                     [
                         "LCK",
-                        2
+                        1.1
                     ],
                     [
                         "DEF",
-                        2
+                        1.1
                     ],
                     [
                         "RES",
-                        2
+                        1.1
                     ],
                     [
                         "CON",
-                        2
+                        1.1
                     ]
                 ]
             ],
@@ -13252,7 +13252,7 @@
             ],
             [
                 "dynamic_resist_multiplier",
-                "1.20 if unit.get_hp() != unit.get_max_hp() else 1.00"
+                "0.8 if unit.get_hp() != unit.get_max_hp() else 1.00"
             ]
         ]
     },
@@ -13853,9 +13853,9 @@
         ]
     },
     {
-        "nid": "Pivot",
-        "name": "Pivot",
-        "desc": "Move this unit to the other side of an Ally.\nThis is a free action.\nCan only use once per turn.",
+        "nid": "Exert",
+        "name": "Exert",
+        "desc": "Unit deals 5% more damage for each tile moved.\nUnit can forfeit all other actions to move 6 more spaces beyond unit's max movement range.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -13867,12 +13867,12 @@
                 null
             ],
             [
-                "ability",
-                "Pivot"
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))/10"
             ],
             [
-                "charges_per_turn",
-                1
+                "xcom_movement",
+                6
             ]
         ]
     },
@@ -16450,7 +16450,7 @@
     },
     {
         "nid": "Summon_Azuth",
-        "name": "Summon",
+        "name": "Summon Phantom",
         "desc": "Summons a dark phantom to aid you. This is a free action.",
         "icon_nid": "Skills",
         "icon_index": [
@@ -16464,7 +16464,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('phantom_' + unit.nid)"
+                "unit.get_stat('MAG') >= 10"
             ],
             [
                 "ability",
@@ -31546,7 +31546,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('zombie_' + unit.nid)"
+                "not game.check_dead('Zombie1_' + unit.nid) and game.check_dead('Zombie2_' + unit.nid)"
             ],
             [
                 "ability",
@@ -32841,7 +32841,7 @@
     {
         "nid": "Rage_item",
         "name": "Rage",
-        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
+        "desc": "+10% to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.\nMax 5 Stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -32861,17 +32861,6 @@
                 0.1
             ]
         ]
-    },
-    {
-        "nid": "Rob",
-        "name": "Rob",
-        "desc": "Gains money on hit equal to unit's base LCK",
-        "icon_nid": "SkillIcons",
-        "icon_index": [
-            5,
-            9
-        ],
-        "components": []
     },
     {
         "nid": "Poisoned",
@@ -37826,7 +37815,7 @@
         "components": [
             [
                 "aura",
-                "Natures_Grace_echild"
+                "Natures_Grace_penemy"
             ],
             [
                 "aura_range",
@@ -37843,7 +37832,7 @@
         ]
     },
     {
-        "nid": "Natures_Grace_echild",
+        "nid": "Natures_Grace_penemy",
         "name": "Nature's Grace",
         "desc": "-3 MOV and -30% SPD.",
         "icon_nid": "skill_icons",
@@ -37853,20 +37842,20 @@
         ],
         "components": [
             [
-                "stat_multiplier",
+                "stat_change",
                 [
                     [
-                        "SPD",
-                        "0.7"
+                        "MOV",
+                        -3
                     ]
                 ]
             ],
             [
-                "stat_change_expression",
+                "stat_multiplier",
                 [
                     [
-                        "MOV",
-                        "-3"
+                        "SPD",
+                        0.7
                     ]
                 ]
             ]
@@ -46764,7 +46753,7 @@
         ]
     },
     {
-        "nid": "Dark_Wisdom",
+        "nid": "Wisdom_Spark",
         "name": "Wisdom Spark",
         "desc": "Gains a stack of Wisdom Spark whenever unit kills an enemy. Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
         "icon_nid": "Skills",
@@ -46775,12 +46764,12 @@
         "components": [
             [
                 "gain_skill_after_kill",
-                "Dark_Wisdom_Buff"
+                "Dark_Spark_Buff"
             ]
         ]
     },
     {
-        "nid": "Dark_Wisdom_Buff",
+        "nid": "Dark_Spark_Buff",
         "name": "Dark Spark",
         "desc": "Unit gains 10% more WEXP and +1 MAG for each stack of Wisdom Spark. \nStacks infinitely.\nLose one stack per turn.",
         "icon_nid": "Skills",
@@ -46981,7 +46970,7 @@
         ]
     },
     {
-        "nid": "Double_Maximization",
+        "nid": "Double_Maximization_Art",
         "name": "Double Maximization",
         "desc": "Double unit's MAG and all attacks become Multi-Target:2 (This is a temporary skill).",
         "icon_nid": "skill_icons",
@@ -46995,6 +46984,30 @@
                 null
             ],
             [
+                "combat_art",
+                "Double_Maximization_Proc"
+            ],
+            [
+                "allowed_weapons",
+                "\nitem_system.is_weapon(unit, item)"
+            ],
+            [
+                "charges_per_turn",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Double_Maximization_Proc",
+        "name": "Double Maximization Proc",
+        "desc": "Double unit's MAG and all attacks become Multi-Target:2 (This is a temporary skill).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            42
+        ],
+        "components": [
+            [
                 "stat_multiplier",
                 [
                     [
@@ -47005,7 +47018,7 @@
             ],
             [
                 "item_override",
-                "_Multishot_2"
+                "Multishot_2"
             ]
         ]
     },
@@ -47110,7 +47123,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('ElderLich_' + unit.nid)"
+                "unit.get_stat('MAG') >= 30"
             ],
             [
                 "ability",
@@ -47120,8 +47133,8 @@
     },
     {
         "nid": "Summon_Skeleton",
-        "name": "Raise Skeleton",
-        "desc": "Summon a skeleton units to aid you. Gain 10 EXP after their actions. This is a free action.",
+        "name": "Raise Skeleton Guard",
+        "desc": "Summon a skeleton units to aid you. Gain 10 EXP after their actions. This is a free action.\nOn T3 they evolve into Death Knights",
         "icon_nid": "Skills",
         "icon_index": [
             9,
@@ -47134,7 +47147,7 @@
             ],
             [
                 "condition",
-                "not game.check_alive('Skeleton_' + unit.nid)"
+                "unit.get_stat('MAG') >= 20"
             ],
             [
                 "ability",
@@ -47250,36 +47263,90 @@
                 "growth_change",
                 [
                     [
-                        "HP",
+                        "MAG",
                         10
-                    ],
-                    [
-                        "STR",
-                        10
-                    ],
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "unit.nid != 'Azuth'"
+            ],
+            [
+                "stat_change",
+                [
                     [
                         "MAG",
-                        20
-                    ],
+                        5
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Wisdom",
+        "name": "Dark Wisdom",
+        "desc": "Summons add half your total level to hit and dmg.\nGive EXP to the summoner after combat",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            33
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dark_Wisdom_Minion",
+        "name": "Dark Wisdom",
+        "desc": "Add half the summoner's total level to hit and dmg.\nGive EXP to the summoner after combat",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            33
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "unit.get_internal_level()//2"
+            ],
+            [
+                "dynamic_accuracy",
+                "unit.get_internal_level()//2"
+            ],
+            [
+                "item_override",
+                "Undead_Knowledge_Azuth"
+            ]
+        ]
+    },
+    {
+        "nid": "Tethered",
+        "name": "Tethered",
+        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, or on summon death.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            43
+        ],
+        "components": [
+            [
+                "stack",
+                99
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "stat_change",
+                [
                     [
-                        "SKL",
-                        10
-                    ],
-                    [
-                        "SPD",
-                        10
-                    ],
-                    [
-                        "LCK",
-                        10
-                    ],
-                    [
-                        "DEF",
-                        10
-                    ],
-                    [
-                        "RES",
-                        10
+                        "MAG",
+                        -10
                     ]
                 ]
             ]
@@ -47832,6 +47899,17 @@
         ]
     },
     {
+        "nid": "Rob",
+        "name": "Rob",
+        "desc": "Gains money on hit equal to unit's base LCK",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            5,
+            9
+        ],
+        "components": []
+    },
+    {
         "nid": "Anatomy_Murder",
         "name": "Anatomy Expertise",
         "desc": "Apply effective damage vs bleeding enemies, on hit apply a stack of bleed and lethargy to the enemy.",
@@ -47951,7 +48029,7 @@
     {
         "nid": "Embrace_Death",
         "name": "Embrace Death",
-        "desc": "Double unit's damage and +100 Hit.\n-100 Avoid and reduce DEF/RES by 50%.\nThis unit cannot be normally healed.",
+        "desc": "Double unit's damage and +100 Hit.\nThis unit cannot be normally healed.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -47967,28 +48045,11 @@
                 "100"
             ],
             [
-                "dynamic_avoid",
-                "-100"
-            ],
-            [
-                "stat_multiplier",
-                [
-                    [
-                        "DEF",
-                        0.5
-                    ],
-                    [
-                        "RES",
-                        0.5
-                    ]
-                ]
-            ],
-            [
                 "damage_multiplier",
                 2.0
             ],
             [
-                "empower_heal",
+                "empower_heal_received",
                 "-999"
             ]
         ]
@@ -48206,10 +48267,10 @@
         "nid": "Consecutive_Impact",
         "name": "Consecutive Impact",
         "desc": "Every consecutive attack in the same combat gains +10 hit and +5 damage.",
-        "icon_nid": "SkillIcons",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            7,
-            14
+            0,
+            40
         ],
         "components": [
             [
@@ -48222,10 +48283,10 @@
         "nid": "Consecutive_Impact_Buff",
         "name": "Consecutive Impact",
         "desc": "+5 damage and +10 Hit for each attack of this unit to hit an enemy in combat.\nLost on end combat",
-        "icon_nid": "SkillIcons",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            6,
-            34
+            5,
+            47
         ],
         "components": [
             [
@@ -56358,7 +56419,7 @@
     {
         "nid": "Rage_T1",
         "name": "Rage",
-        "desc": "+2 to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.",
+        "desc": "+10% to most stats every time unit attacks or takes damage for 2 turns,\nbut unit takes 10% of Max HP as non-lethal damage after every combat.\nMax 5 Stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -56643,7 +56704,7 @@
             ],
             [
                 "dynamic_resist_multiplier",
-                "1.20 if unit.get_hp() != unit.get_max_hp() else 1.00"
+                "0.8 if unit.get_hp() != unit.get_max_hp() else 1.00"
             ],
             [
                 "feat",
@@ -58067,9 +58128,9 @@
         ]
     },
     {
-        "nid": "Pivot_T2",
-        "name": "Pivot",
-        "desc": "Move this unit to the other side of an Ally.\nThis is a free action.\nCan only use once per turn.",
+        "nid": "Exert_T2",
+        "name": "Exert",
+        "desc": "Unit deals 5% more damage for each tile moved.\nUnit can forfeit all other actions to move 6 more spaces beyond unit's max movement range.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -58077,12 +58138,12 @@
         ],
         "components": [
             [
-                "ability",
-                "Pivot"
+                "dynamic_damage_multiplier",
+                "1+(utils.calculate_distance(unit.position, unit.previous_position))/10"
             ],
             [
-                "charges_per_turn",
-                1
+                "xcom_movement",
+                6
             ],
             [
                 "feat",
@@ -61880,10 +61941,6 @@
                         "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
                     [
-                        "MAG",
-                        "2 * (unit_funcs.check_focus(unit, 3))"
-                    ],
-                    [
                         "SKL",
                         "2 * (unit_funcs.check_focus(unit, 3))"
                     ],
@@ -61901,6 +61958,10 @@
                     ],
                     [
                         "RES",
+                        "2 * (unit_funcs.check_focus(unit, 3))"
+                    ],
+                    [
+                        "MAG",
                         "2 * (unit_funcs.check_focus(unit, 3))"
                     ]
                 ]
@@ -73078,7 +73139,7 @@
         "desc": "Unit cannot use weapons, x2 Max HP, -50 Avoid, Provoke, and 100% HP Regen for 3 turns.",
         "icon_nid": "Garmr icons",
         "icon_index": [
-            4,
+            5,
             0
         ],
         "components": [
@@ -73112,6 +73173,30 @@
             [
                 "time",
                 3
+            ],
+            [
+                "unit_flickering_tint",
+                [
+                    255,
+                    85,
+                    0
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Plushie_Variant",
+        "name": "Plushie",
+        "desc": "Unit cannot use weapons, x2 Max HP, -50 Avoid, Provoke, and 100% HP Regen for 3 turns.",
+        "icon_nid": "Garmr icons",
+        "icon_index": [
+            5,
+            0
+        ],
+        "components": [
+            [
+                "change_variant",
+                "_Plushie"
             ]
         ]
     }

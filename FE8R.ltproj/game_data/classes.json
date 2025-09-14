@@ -6807,7 +6807,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -6965,7 +6965,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -7123,7 +7123,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -7281,7 +7281,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -7439,7 +7439,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -7597,7 +7597,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -7755,7 +7755,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -20476,6 +20476,163 @@
             [
                 1,
                 "Knight_Pair_Up_T2_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                360
+            ],
+            "Lance": [
+                true,
+                60,
+                360
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sword_Wight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Sword_Wight",
+        "combat_anim_nid": "Weight_Sword",
+        "fields": []
+    },
+    {
+        "nid": "Sword_Wight_Azuth",
+        "name": "Old Guard",
+        "desc": "Reanimated elite skeleton. <icon>Monster</><icon>Infantry</>",
+        "tier": 2,
+        "movement_group": "Light Foot",
+        "promotes_from": "Sword_Bonewalker",
+        "turns_into": [
+            "Skull_King_Player",
+            "Specter",
+            "Legion"
+        ],
+        "tags": [
+            "Monster",
+            "Infantry",
+            "Summon"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 26,
+            "STR": 7,
+            "MAG": 3,
+            "SKL": 5,
+            "SPD": 6,
+            "LCK": 0,
+            "DEF": 5,
+            "RES": 2,
+            "CON": 9,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 85,
+            "STR": 40,
+            "MAG": 20,
+            "SKL": 25,
+            "SPD": 17,
+            "LCK": 50,
+            "DEF": 10,
+            "RES": 13,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 15,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 10,
+            "LCK": 0,
+            "DEF": 20,
+            "RES": 5,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 2,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 2,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 64,
+            "MAG": 60,
+            "SKL": 68,
+            "SPD": 66,
+            "LCK": 70,
+            "DEF": 62,
+            "RES": 63,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                5,
+                "Laced_Weapon_Proc"
+            ],
+            [
+                15,
+                "Souless_Husk"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T2_hide"
+            ],
+            [
+                1,
+                "Dark_Wisdom_Minion"
             ]
         ],
         "wexp_gain": {
@@ -62915,16 +63072,16 @@
     },
     {
         "nid": "Phantom_Azuth",
-        "name": "Phantom",
+        "name": "Shadow Demon",
         "desc": "Summoned phantoms that fight for their master. <icon>Infantry</>",
-        "tier": 3,
+        "tier": 1,
         "movement_group": "Fliers",
         "promotes_from": null,
         "turns_into": [],
         "tags": [
             "Infantry"
         ],
-        "max_level": 30,
+        "max_level": 70,
         "bases": {
             "HP": 1,
             "STR": 11,
@@ -62997,6 +63154,10 @@
             [
                 1,
                 "Summon_Status_Immunity"
+            ],
+            [
+                1,
+                "Dark_Wisdom_Minion"
             ]
         ],
         "wexp_gain": {
@@ -64590,6 +64751,165 @@
         "fields": []
     },
     {
+        "nid": "Lich_Azuth",
+        "name": "Elder Lich",
+        "desc": "An abomination that uses dark spells of the undead. <icon>Monster</><icon>Infantry</><icon>Magic</><icon>Support</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Entombed",
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Support",
+            "Infantry",
+            "Magic",
+            "Summon"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 55,
+            "STR": 12,
+            "MAG": 2,
+            "SKL": 10,
+            "SPD": 9,
+            "LCK": 3,
+            "DEF": 8,
+            "RES": 5,
+            "CON": 10,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 200,
+            "STR": 60,
+            "MAG": 140,
+            "SKL": 70,
+            "SPD": 70,
+            "LCK": 40,
+            "DEF": 60,
+            "RES": 50,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 5,
+            "STR": 2,
+            "MAG": 25,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 5,
+            "RES": 20,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 720,
+            "STR": 91,
+            "MAG": 97,
+            "SKL": 90,
+            "SPD": 90,
+            "LCK": 100,
+            "DEF": 91,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Shaman_Pair_Up_T3_hide"
+            ],
+            [
+                1,
+                "Summon_Lich"
+            ],
+            [
+                5,
+                "Dead_Grasp"
+            ],
+            [
+                15,
+                "Shadow_Eruption"
+            ],
+            [
+                1,
+                "Dark_Wisdom_Minion"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                300
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                true,
+                300,
+                480
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                true,
+                300,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                true,
+                60,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Entombed",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Zombie Lich {EldritchAbomination, SkidMarc25, Blood}",
+        "combat_anim_nid": "Lich",
+        "fields": []
+    },
+    {
         "nid": "Beholder",
         "name": "Beholder",
         "desc": "A rare Mogal who has lived for centuries. <icon>Monster</><icon>Flying</><icon>Magic</>",
@@ -65611,6 +65931,163 @@
             [
                 15,
                 "Scorn_Of_The_Slain"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                60,
+                480
+            ],
+            "Axe": [
+                false,
+                0,
+                300
+            ],
+            "Bow": [
+                true,
+                300,
+                480
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sword_Wight",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Bonewalker (U) Legion Sword {Seal}-stand",
+        "combat_anim_nid": "Legion",
+        "fields": []
+    },
+    {
+        "nid": "Legion_Azuth",
+        "name": "Death Knight",
+        "desc": "A Wight that has come back to fight battle, after battle, after battle, after battle... <icon>Monster</><icon>Infantry</>",
+        "tier": 3,
+        "movement_group": "Light Foot",
+        "promotes_from": "Sword_Wight",
+        "turns_into": [],
+        "tags": [
+            "Monster",
+            "Infantry",
+            "Summon"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 11,
+            "MAG": 1,
+            "SKL": 10,
+            "SPD": 12,
+            "LCK": 3,
+            "DEF": 10,
+            "RES": 8,
+            "CON": 11,
+            "MOV": 7
+        },
+        "growths": {
+            "HP": 0,
+            "STR": 0,
+            "MAG": 0,
+            "SKL": 0,
+            "SPD": 0,
+            "LCK": 0,
+            "DEF": 0,
+            "RES": 0,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 130,
+            "STR": 120,
+            "MAG": 60,
+            "SKL": 80,
+            "SPD": 70,
+            "LCK": 50,
+            "DEF": 130,
+            "RES": 130,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 15,
+            "STR": 7,
+            "MAG": 1,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 7,
+            "RES": 7,
+            "CON": 5,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 95,
+            "MAG": 90,
+            "SKL": 92,
+            "SPD": 92,
+            "LCK": 100,
+            "DEF": 98,
+            "RES": 98,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Fallen_Phallanx"
+            ],
+            [
+                5,
+                "Fallen_Phallanx_Aura_hide"
+            ],
+            [
+                15,
+                "Scorn_Of_The_Slain"
+            ],
+            [
+                1,
+                "Dark_Wisdom_Minion"
             ]
         ],
         "wexp_gain": {
@@ -87712,15 +88189,13 @@
     },
     {
         "nid": "Shaman_Azuth",
-        "name": "Shaman",
-        "desc": "Impulsive mages with a tenous grasp on their magic. <icon>Infantry</><icon>Magic</>",
+        "name": "Dark Mage",
+        "desc": "Sinister conjurers who wield dark tomes. <icon>Infantry</><icon>Magic</>",
         "tier": 1,
         "movement_group": "Mages",
         "promotes_from": null,
         "turns_into": [
-            "T2_Druid_Azuth",
-            "T2_Necromant_Azuth",
-            "T2_Summoner_Azuth"
+            "T2_Necromant_Azuth"
         ],
         "tags": [
             "AutoPromote",
@@ -87791,15 +88266,19 @@
         "learned_skills": [
             [
                 5,
-                "Hex_Aura"
+                "Dark_Wisdom"
             ],
             [
                 15,
-                "Anathema_Aura"
+                "Book_Worm"
             ],
             [
                 1,
                 "Shaman_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Summon_Azuth"
             ]
         ],
         "wexp_gain": {
@@ -88069,14 +88548,14 @@
             "MOV": 0
         },
         "growth_bonus": {
-            "HP": 20,
-            "STR": 10,
-            "MAG": 15,
-            "SKL": 15,
-            "SPD": 10,
+            "HP": 200,
+            "STR": 5,
+            "MAG": 10,
+            "SKL": 10,
+            "SPD": 5,
             "LCK": 10,
-            "DEF": 10,
-            "RES": 10,
+            "DEF": 20,
+            "RES": 20,
             "CON": 0,
             "MOV": 0
         },
@@ -88698,14 +89177,14 @@
             "MOV": 0
         },
         "growth_bonus": {
-            "HP": 120,
+            "HP": 160,
             "STR": 25,
-            "MAG": 110,
-            "SKL": 90,
-            "SPD": 80,
+            "MAG": 100,
+            "SKL": 60,
+            "SPD": 60,
             "LCK": 70,
-            "DEF": 50,
-            "RES": 120,
+            "DEF": 120,
+            "RES": 80,
             "CON": 0,
             "MOV": 0
         },
@@ -88748,7 +89227,7 @@
             ],
             [
                 15,
-                "Double_Maximization"
+                "Double_Maximization_Art"
             ]
         ],
         "wexp_gain": {
@@ -98061,7 +98540,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -98224,7 +98703,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -98387,7 +98866,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -104814,7 +105293,7 @@
             ],
             [
                 5,
-                "Pivot"
+                "Exert"
             ],
             [
                 15,
@@ -109339,6 +109818,103 @@
             0
         ],
         "map_sprite_nid": "Sign (U) Link's Awakening {d_h}-stand",
+        "combat_anim_nid": null,
+        "fields": []
+    },
+    {
+        "nid": "_Plushie",
+        "name": "Plushie",
+        "desc": "Plushie decoy.",
+        "tier": 1,
+        "movement_group": "Light Foot",
+        "promotes_from": null,
+        "turns_into": [],
+        "tags": [
+            "Horse"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 10,
+            "STR": 0,
+            "MOV": 3
+        },
+        "growths": {
+            "HP": 200
+        },
+        "growth_bonus": {},
+        "promotion": {},
+        "max_stats": {
+            "HP": 100
+        },
+        "learned_skills": [
+            [
+                1,
+                "Provoke_Weak"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                false,
+                0,
+                null
+            ],
+            "Light": [
+                false,
+                0,
+                null
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ],
+            "VS_BOW": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Citizen",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "plush_Plushie",
         "combat_anim_nid": null,
         "fields": []
     },

@@ -3,7 +3,7 @@
         "name": "ClearValniAchievement",
         "trigger": "level_end",
         "level_nid": "TOVF8B",
-        "condition": "True",
+        "condition": "len(game.get_enemy_units()) == 0",
         "commands": [],
         "only_once": true,
         "priority": 20,
