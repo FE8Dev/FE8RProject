@@ -2,7 +2,7 @@
     {
         "nid": "Prey_Lure",
         "name": "Prey Lure",
-        "desc": "No fear of foes if they are prey.\n<green>Skills:</>Full Allure, Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Webbed, Curse (15)",
+        "desc": "No fear of foes if they are prey.\n<green>Skills:</>Full Allure, Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Webbed, Curse (15)\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -95,6 +95,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_STRONG"
             ]
         ]
     }

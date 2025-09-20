@@ -2,7 +2,7 @@
     {
         "nid": "Royal_Instructor_Buff",
         "name": "Royal Instructor",
-        "desc": "Enemies cannot counter when unit has WTA.\n+1 bonus attack while unit has WTA.",
+        "desc": "Enemies cannot counter when unit has WTA.\n+2 bonus attack while unit has WTA.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -14,12 +14,12 @@
                 "combat_calcs.compute_advantage(unit, target, unit.get_weapon(), target.get_weapon(), True).modification > 0\n"
             ],
             [
-                "item_override",
-                "Weapon_Master"
+                "dynamic_attacks",
+                "2"
             ],
             [
-                "lost_on_end_chapter",
-                null
+                "item_override",
+                "Weapon_Master"
             ]
         ]
     }

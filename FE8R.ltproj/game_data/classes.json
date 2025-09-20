@@ -18111,7 +18111,7 @@
             ],
             [
                 15,
-                "Adept_Eye_Attack_hide"
+                "Adept_Eye_Dodge_hide"
             ],
             [
                 1,
@@ -18277,7 +18277,7 @@
             ],
             [
                 15,
-                "Adept_Eye_Attack_hide"
+                "Adept_Eye_Dodge_hide"
             ],
             [
                 1,
@@ -18443,7 +18443,7 @@
             ],
             [
                 15,
-                "Adept_Eye_Attack_hide"
+                "Adept_Eye_Dodge_hide"
             ],
             [
                 1,
@@ -20638,12 +20638,12 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                60,
+                360,
                 360
             ],
             "Lance": [
                 true,
-                60,
+                360,
                 360
             ],
             "Axe": [
@@ -22794,7 +22794,7 @@
             ],
             [
                 15,
-                "Canto_Sharp"
+                "Royal_Force"
             ],
             [
                 1,
@@ -26035,7 +26035,7 @@
         "growth_bonus": {
             "HP": 120,
             "STR": 125,
-            "MAG": 5,
+            "MAG": 80,
             "SKL": 80,
             "SPD": 105,
             "LCK": 60,
@@ -26083,7 +26083,7 @@
             ],
             [
                 15,
-                "Canto_Sharp"
+                "Royal_Force"
             ],
             [
                 1,
@@ -26193,8 +26193,8 @@
         "growth_bonus": {
             "HP": 150,
             "STR": 150,
-            "MAG": 0,
-            "SKL": 120,
+            "MAG": 80,
+            "SKL": 150,
             "SPD": 70,
             "LCK": 45,
             "DEF": 70,
@@ -26233,7 +26233,7 @@
             ],
             [
                 5,
-                "Sword_Destroyer"
+                "Warfare_Genius"
             ],
             [
                 15,
@@ -26246,10 +26246,6 @@
             [
                 1,
                 "Crit_P20_hide"
-            ],
-            [
-                5,
-                "Sword_Destroyer_Effective_hide"
             ]
         ],
         "wexp_gain": {
@@ -59076,7 +59072,7 @@
         "turns_into": [
             "T3_Magic_Tank",
             "T3_Evil_Knight_Knoll",
-            "T3_Farseer"
+            "T3_Farseer_Forde"
         ],
         "tags": [
             "Horse",
@@ -60102,7 +60098,7 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                300,
+                60,
                 480
             ],
             "Lance": [
@@ -63156,7 +63152,7 @@
                 "Summon_Status_Immunity"
             ],
             [
-                1,
+                5,
                 "Dark_Wisdom_Minion"
             ]
         ],
@@ -66093,12 +66089,12 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                60,
+                480,
                 480
             ],
             "Lance": [
                 true,
-                60,
+                480,
                 480
             ],
             "Axe": [
@@ -66107,7 +66103,7 @@
                 300
             ],
             "Bow": [
-                true,
+                false,
                 300,
                 480
             ],
@@ -97005,7 +97001,7 @@
     {
         "nid": "Nature_Dancer",
         "name": "Nature Dancer",
-        "desc": "A mystical dancer to encourage allies. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "A mystical dancer to encourage allies. <icon>Infantry</><icon>Magic</><icon>Staff</><icon>Monster</>",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Dryad",
@@ -97347,7 +97343,7 @@
         "movement_group": "Armors",
         "promotes_from": "Dummy_T1",
         "turns_into": [
-            "T3_Gold_Knight",
+            "T3_Gold_Knight_Jonathan",
             "Kings_Hand",
             "Juggernaut"
         ],
@@ -104403,7 +104399,7 @@
     {
         "nid": "Nature_Dancer_Wally",
         "name": "Nature Dancer",
-        "desc": "A mystical dancer to encourage allies. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "desc": "A mystical dancer to encourage allies. <icon>Infantry</><icon>Magic</><icon>Staff</><icon>Monster</>",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Snag",
@@ -107767,7 +107763,7 @@
         "desc": "Expert in stealth and subterfuge. Possess weak attacks but many other skills. <icon>Infantry</><icon>Steal</>",
         "tier": 1,
         "movement_group": "Light Foot",
-        "promotes_from": null,
+        "promotes_from": "Scout",
         "turns_into": [
             "Assassin_Neimi",
             "Warrior_Neimi",
@@ -107932,7 +107928,7 @@
         "desc": "An archer who uses ancient techniques lost to Jehanna. <icon>Infantry</>",
         "tier": 1,
         "movement_group": "Light Foot",
-        "promotes_from": null,
+        "promotes_from": "Scout",
         "turns_into": [
             "T2_Ballista_Neimi",
             "Miko",
@@ -108089,7 +108085,7 @@
         "desc": "A mystical archer with strange magic. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Female_Archer",
+        "promotes_from": "Archer",
         "turns_into": [
             "Mahou_Shoujo_Neimi",
             "Shugosha",
@@ -109191,8 +109187,8 @@
         "promotes_from": "Miko",
         "turns_into": [],
         "tags": [
-            "Horse",
             "Mounted",
+            "Flying",
             "Magic"
         ],
         "max_level": 30,
@@ -110086,6 +110082,7 @@
         ],
         "tags": [
             "AutoPromote",
+            "Infantry",
             "Magic"
         ],
         "max_level": 20,
@@ -110160,7 +110157,7 @@
             ],
             [
                 15,
-                "Adaptative_Necessity"
+                "Adaptation"
             ]
         ],
         "wexp_gain": {
@@ -110227,13 +110224,14 @@
     {
         "nid": "Stardust_Crusader",
         "name": "Stardust Crusader ",
-        "desc": "Brawler who fights against dark forces, his aura reinforces his will and blows. <icon>Infantry</><icon>Infantry</>",
+        "desc": "Brawler who fights against dark forces, his aura reinforces his will and blows. <icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Morph_Pupil",
         "turns_into": [],
         "tags": [
-            "Infantry"
+            "Infantry",
+            "Magic"
         ],
         "max_level": 30,
         "bases": {
@@ -110382,13 +110380,14 @@
     {
         "nid": "Crimson_Destroyer",
         "name": "Crimson Destroyer",
-        "desc": "Ruler with the power to reduce all opposition to nothing. <icon>Infantry</><icon>Infantry</>",
+        "desc": "Ruler with the power to reduce all opposition to nothing. <icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Morph_Pupil",
         "turns_into": [],
         "tags": [
-            "Infantry"
+            "Infantry",
+            "Magic"
         ],
         "max_level": 30,
         "bases": {
@@ -110529,13 +110528,14 @@
     {
         "nid": "Thunder_God",
         "name": "Thunder God",
-        "desc": "The embodiment of thunder, the power of lightning in mortal hands. <icon>Infantry</>",
+        "desc": "The embodiment of thunder, the power of lightning in mortal hands. <icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Armors",
         "promotes_from": "Morph_Pupil",
         "turns_into": [],
         "tags": [
-            "Infantry"
+            "Infantry",
+            "Magic"
         ],
         "max_level": 30,
         "bases": {

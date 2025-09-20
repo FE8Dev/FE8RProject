@@ -8,7 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "kill_unit;{unit2}"
+            "if;is_dead(unit2)",
+            "else",
+            "kill_unit;{unit2}",
+            "end"
         ],
         "nid": "Global Destiny_Ender"
     }

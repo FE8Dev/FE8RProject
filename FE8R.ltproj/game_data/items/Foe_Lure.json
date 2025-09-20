@@ -2,7 +2,7 @@
     {
         "nid": "Foe_Lure",
         "name": "Foe Lure",
-        "desc": "Foes struggle to escape once trapped.\n<green>Skills:</>Full Allure, Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Webbed, Curse (15)",
+        "desc": "Foes struggle to escape once trapped.\n<green>Skills:</>Full Allure, Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Webbed, Curse (15)\n<pink>Misc:</>MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -95,6 +95,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_MID"
             ]
         ]
     }

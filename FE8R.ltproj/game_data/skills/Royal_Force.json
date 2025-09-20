@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Royal_Force",
+        "name": "Royal Force",
+        "desc": "Galeforce as long unit hasn't moved yet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.movement_left == unit.get_stat('MOV')"
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    }
+]

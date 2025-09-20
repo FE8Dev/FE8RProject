@@ -1,4 +1,23 @@
-## tbr
+
+## 09-20-05
+```
+Adjusted healing EXP for experimentation. Should usually only give 15 EXP healing unless healing over 60ish HP or so.
+Nerfed skills like Tome Precision, and Adapt Eye.
+Monsters should be available post map to talk with and train with.
+BaelBaby's weapon scaling has been more modernized.
+Artur's Light magic now does full damage in Dual Strike.
+Royal Knight's 2nd skill has been replaced with Royal Force, along with buff to 1st skill.
+Lance Lord's 1st skill has been replaced with Warfare Genius.
+Lead Mercenary in chapter 3 gets Scorch Sword.
+Bazba swapped Stone Axe with Fire Axe.
+
+
+
+
+
+
+```
+## 09-14-25
 ```
 New class for Gerik in Chief line, Guildmaster.
 Vanguard animation been updated to new one.

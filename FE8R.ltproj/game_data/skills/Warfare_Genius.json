@@ -1,0 +1,28 @@
+[
+    {
+        "nid": "Warfare_Genius",
+        "name": "Warfare Genius",
+        "desc": "Attacks deal effective damage against Infantry units.\nUnit can forfeit all other actions to move 8 more spaces beyond unit's max movement range.\nx2 damage if enemy's SKL <= unit's SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            50
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "xcom_movement",
+                8
+            ],
+            [
+                "multi_skill",
+                [
+                    "Warfare_Genius_DMG_hide"
+                ]
+            ]
+        ]
+    }
+]

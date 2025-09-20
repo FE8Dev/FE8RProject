@@ -2,7 +2,7 @@
     {
         "nid": "Webbed_Blade",
         "name": "Webbed Blade",
-        "desc": "A blade covered in draining webs.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</>Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, HP absorb (10%).",
+        "desc": "A blade covered in draining webs.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</>Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), HP absorb (10%).",
         "icon_nid": "New Monsters",
         "icon_index": [
             4,
@@ -109,6 +109,14 @@
             [
                 "lifelink",
                 0.1
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "MAGIC_DEFENSE"
             ]
         ]
     }

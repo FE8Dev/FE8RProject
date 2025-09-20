@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Undefeated_Claws",
+        "name": "Undefeated Claws",
+        "desc": "Adds unit's DEF/2 and RES/2 to damage.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('DEF') // 2) + (unit.get_stat('RES') // 2)"
+            ]
+        ]
+    }
+]

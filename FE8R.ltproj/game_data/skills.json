@@ -4997,7 +4997,7 @@
     },
     {
         "nid": "Lance_Guard_C_Item",
-        "name": "Lance Guard (A)",
+        "name": "Lance Guard (C)",
         "desc": "Reduce damage taken by (SKL/2).\nStackable with other Lance Guards.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
@@ -12048,7 +12048,7 @@
     {
         "nid": "Adept_Eye",
         "name": "Adept Eye",
-        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
+        "desc": "+5 Damage and +5 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every time unit dodges, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12065,18 +12065,18 @@
             ],
             [
                 "dynamic_attack_speed",
-                "8"
+                "5"
             ],
             [
                 "dynamic_damage",
-                "8"
+                "5"
             ]
         ]
     },
     {
-        "nid": "Adept_Eye_Attack_hide",
+        "nid": "Adept_Eye_Dodge_hide",
         "name": "Adept Eye",
-        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
+        "desc": "+5 Damage and +5 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every time unit dodges, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12088,7 +12088,7 @@
                 null
             ],
             [
-                "gain_on_strike",
+                "gain_skill_after_take_miss",
                 "Adept_Eye_Attack_Buff"
             ]
         ]
@@ -12096,7 +12096,7 @@
     {
         "nid": "Adept_Eye_Attack_Buff",
         "name": "Adept Eye",
-        "desc": "+8 Damage and +8 AS for 2 turns.\nMax 5 stacks.",
+        "desc": "+5 Damage and +5 AS for 2 turns.\nMax 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -12109,11 +12109,11 @@
             ],
             [
                 "dynamic_damage",
-                "8"
+                "5"
             ],
             [
                 "dynamic_attack_speed",
-                "8"
+                "5"
             ],
             [
                 "time",
@@ -15468,6 +15468,10 @@
         ],
         "components": [
             [
+                "class_skill",
+                null
+            ],
+            [
                 "combat_art",
                 "Compact_Blast_Powder_Skill"
             ],
@@ -15476,8 +15480,8 @@
                 3
             ],
             [
-                "class_skill",
-                null
+                "Endstep_charge_increase",
+                1
             ],
             [
                 "allowed_weapons",
@@ -16379,7 +16383,7 @@
     {
         "nid": "Lifetaker",
         "name": "Lifetaker",
-        "desc": "Heal 80% of HP on an active kill.",
+        "desc": "Heal 80% of HP on an active kill.\n+1 MAG/SKL for each active kill. \nMax 10 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -18644,7 +18648,7 @@
     {
         "nid": "Royal_Instructor_hide",
         "name": "Royal Instructor hide",
-        "desc": "Enemies cannot counter when unit has WTA.\n+1 bonus attack while unit has WTA.\nAdj. allies gain this skill as well.",
+        "desc": "Enemies cannot counter when unit has WTA.\n+2 bonus attack while unit has WTA.\nAdj. allies gain this skill as well.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -18662,13 +18666,17 @@
             [
                 "item_override",
                 "Weapon_Master"
+            ],
+            [
+                "dynamic_attacks",
+                "2"
             ]
         ]
     },
     {
         "nid": "Royal_Instructor_Buff",
         "name": "Royal Instructor",
-        "desc": "Enemies cannot counter when unit has WTA.\n+1 bonus attack while unit has WTA.",
+        "desc": "Enemies cannot counter when unit has WTA.\n+2 bonus attack while unit has WTA.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -18680,19 +18688,19 @@
                 "combat_calcs.compute_advantage(unit, target, unit.get_weapon(), target.get_weapon(), True).modification > 0\n"
             ],
             [
-                "item_override",
-                "Weapon_Master"
+                "dynamic_attacks",
+                "2"
             ],
             [
-                "lost_on_end_chapter",
-                null
+                "item_override",
+                "Weapon_Master"
             ]
         ]
     },
     {
         "nid": "Royal_Instructor_Aura",
         "name": "Royal Instructor",
-        "desc": "Enemies cannot counter when unit has WTA.\n+1 bonus attack while unit has WTA.\nAdj. allies gain this skill as well.",
+        "desc": "Enemies cannot counter when unit has WTA.\n+2 bonus attacks while unit has WTA.\nAdj. allies gain this skill as well.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -18718,9 +18726,33 @@
         ]
     },
     {
+        "nid": "Royal_Force",
+        "name": "Royal Force",
+        "desc": "Galeforce as long unit hasn't moved yet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.movement_left == unit.get_stat('MOV')"
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Twinblades",
         "name": "Twinblades",
-        "desc": "+1 bonus attack (+2 if unit doubles), but all damage reduced by 25%.",
+        "desc": "+1 bonus attack (+2 if unit doubles) and +1 range.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -18736,15 +18768,15 @@
                 "1"
             ],
             [
-                "damage_multiplier",
-                0.75
+                "modify_maximum_range",
+                1
             ]
         ]
     },
     {
         "nid": "Twinblades_Item_Skill",
         "name": "Twinblades",
-        "desc": "Grants a bonus attacks (+2 if unit doubles).",
+        "desc": "+1 bonus attack (+2 if unit doubles) and +1 range.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -18754,6 +18786,10 @@
             [
                 "dynamic_multiattacks",
                 "1"
+            ],
+            [
+                "modify_maximum_range",
+                1
             ]
         ]
     },
@@ -19974,13 +20010,13 @@
         ]
     },
     {
-        "nid": "Sword_Destroyer",
-        "name": "Sword Destroyer",
-        "desc": "+50 damage, +50 Crit against sword users.\nSword users can't retaliate.\nAttacks deal effective damage against infantry units.",
+        "nid": "Warfare_Genius",
+        "name": "Warfare Genius",
+        "desc": "Attacks deal effective damage against Infantry units.\nUnit can forfeit all other actions to move 8 more spaces beyond unit's max movement range.\nx2 damage if enemy's SKL <= unit's SKL.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            28
+            3,
+            50
         ],
         "components": [
             [
@@ -19988,20 +20024,38 @@
                 null
             ],
             [
+                "xcom_movement",
+                8
+            ],
+            [
+                "multi_skill",
+                [
+                    "Warfare_Genius_DMG_hide"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Warfare_Genius_DMG_hide",
+        "name": "Warfare Genius",
+        "desc": "Attacks deal effective damage against Infantry units.\nUnit can forfeit all other actions to move 8 more spaces beyond unit's max movement range.\nx2 damage if enemy's SKL <= unit's SKL.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            50
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
                 "combat_condition",
-                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) == 'Sword'\n"
+                "unit.get_stat('SKL') >= target.get_stat('SKL')"
             ],
             [
-                "dynamic_damage",
-                "50"
-            ],
-            [
-                "dynamic_crit_accuracy",
-                "50"
-            ],
-            [
-                "item_override",
-                "Sword_Destroyer"
+                "damage_multiplier",
+                2.0
             ]
         ]
     },
@@ -22795,7 +22849,7 @@
             ],
             [
                 "dynamic_damage",
-                "999"
+                "99999"
             ]
         ]
     },
@@ -31045,7 +31099,7 @@
     {
         "nid": "Supportive_Recharge",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
+        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -36032,6 +36086,10 @@
         ],
         "components": [
             [
+                "hidden",
+                null
+            ],
+            [
                 "immune_status",
                 null
             ]
@@ -38277,6 +38335,24 @@
             [
                 "dynamic_attacks",
                 "unit.get_stat('LCK') // 20"
+            ]
+        ]
+    },
+    {
+        "nid": "Cold_Lights_Assistance",
+        "name": "Cold Light's Assistance",
+        "desc": "Unit deals full damage in Dual Strike.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            1,
+            38
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Full_Assist_Damage"
+                ]
             ]
         ]
     },
@@ -42117,7 +42193,7 @@
     {
         "nid": "Plated_Claws",
         "name": "Plated Claws",
-        "desc": "Adds unit's DEF/4 to damage.",
+        "desc": "Adds unit's DEF/2 to damage.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -42137,7 +42213,7 @@
     {
         "nid": "Runeguard_Claws",
         "name": "Runeguard Claws",
-        "desc": "Adds unit's DEF/4 and RES/4 to damage.",
+        "desc": "Adds unit's DEF/3 and RES/3 to damage.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -42150,7 +42226,27 @@
             ],
             [
                 "dynamic_damage",
-                "(unit.get_stat('DEF') // 4) + (unit.get_stat('RES') // 4)"
+                "(unit.get_stat('DEF') // 3) + (unit.get_stat('RES') // 3)"
+            ]
+        ]
+    },
+    {
+        "nid": "Undefeated_Claws",
+        "name": "Undefeated Claws",
+        "desc": "Adds unit's DEF/2 and RES/2 to damage.",
+        "icon_nid": "Neutral",
+        "icon_index": [
+            0,
+            7
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "dynamic_damage",
+                "(unit.get_stat('DEF') // 2) + (unit.get_stat('RES') // 2)"
             ]
         ]
     },
@@ -49462,7 +49558,7 @@
     {
         "nid": "Protective_Shade",
         "name": "Protector Shade",
-        "desc": "Unit is more likely to be targeted by enemies when unit is within 3 spaces of any Lord ally.\n+1 STR, SKL, SPD for every ally within 5 spaces.",
+        "desc": "Unit is more likely to be targeted by enemies if unit is within 3 spaces of any Lord ally.\n+8 STR, SKL, SPD if unit is within 5 spaces of any unit ally.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -49474,14 +49570,14 @@
                 null
             ],
             [
-                "grey_if_inactive",
-                null
-            ],
-            [
                 "has_tags",
                 [
                     "AIProvoke"
                 ]
+            ],
+            [
+                "condition",
+                "([unitx for unitx in game.get_all_units() if 'Lord' in unitx.tags and unitx.nid is not unit.nid and utils.calculate_distance(unit.position,unitx.position) <= 3])"
             ]
         ]
     },
@@ -53241,7 +53337,7 @@
     {
         "nid": "Bowfaire",
         "name": "Bowfaire",
-        "desc": "When using bows add SKL/2 to Damage given.",
+        "desc": "When using bows add SKL/2 (<red>{e: (unit.get_stat('SKL')//2)}</>) to Damage given.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -54316,8 +54412,8 @@
         ]
     },
     {
-        "nid": "Adaptative_Necessity",
-        "name": "Adaptative Necessity",
+        "nid": "Adaptation",
+        "name": "Adaptation",
         "desc": "+1 Bonus attack, x2 Damage, and gain Desperation, but x1.5 damage taken, -75 Avoid until end of chapter. This is a free action.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -54336,8 +54432,8 @@
         ]
     },
     {
-        "nid": "Adaptative_Necessity_Buff",
-        "name": "Adaptative Necessity",
+        "nid": "Adaptation_Buff",
+        "name": "Adaptation",
         "desc": "+1 Bonus attack, x2 Damage, and gain Desperation until end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -54364,8 +54460,8 @@
         ]
     },
     {
-        "nid": "Adaptative_Necessity_Debuff",
-        "name": "Adaptative Necessity",
+        "nid": "Adaptation_Debuff",
+        "name": "Adaptation",
         "desc": "x1.5 damage taken, -75 Avoid until end of chapter.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -54757,10 +54853,6 @@
             0
         ],
         "components": [
-            [
-                "class_skill",
-                null
-            ],
             [
                 "combat_condition",
                 "unit2.team == 'enemy' or unit2.team == 'enemy2'"
@@ -55728,8 +55820,8 @@
     },
     {
         "nid": "Lifetaker_Garmr",
-        "name": "Lifetaker Garmr",
-        "desc": "Heal to full on kill.",
+        "name": "Lifetaker",
+        "desc": "Heal 80% of HP on an active kill.\n+1 MAG/SKL for each active kill. \nMax 10 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -55743,6 +55835,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "gain_skill_after_active_kill",
+                "Lifetaker_Buff"
             ]
         ]
     },
@@ -56822,7 +56918,7 @@
     {
         "nid": "Adept_Eye_T1",
         "name": "Adept Eye",
-        "desc": "+8 Damage and +8 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every attack, but lasts only for 2 turns. Max 5 stacks.",
+        "desc": "+5 Damage and +5 AS if unit is on Mountains, Cliffs, or Hills. Can also gain the buffs after every time unit dodges, but lasts only for 2 turns. Max 5 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             1,
@@ -56835,11 +56931,11 @@
             ],
             [
                 "dynamic_damage",
-                "8"
+                "5"
             ],
             [
                 "dynamic_attack_speed",
-                "8"
+                "5"
             ],
             [
                 "feat",
@@ -56848,7 +56944,7 @@
             [
                 "copysafe",
                 [
-                    "Adept_Eye_Attack_hide"
+                    "Adept_Eye_Dodge_hide"
                 ]
             ]
         ]
@@ -56856,7 +56952,7 @@
     {
         "nid": "Feeling_Lucky_T1",
         "name": "Feeling Lucky",
-        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.",
+        "desc": "Double this unit's LCK while healing or while being attacked.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -56890,7 +56986,7 @@
     {
         "nid": "Feeling_Lucky_MyUnit_DBLBuff_hide",
         "name": "Feeling Lucky",
-        "desc": "Double this unit's LCK.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
+        "desc": "Double this unit's LCK while healing or while being attacked.\nHealing an ally gives the ally +7 Luck until next turn.\nDoes not work with Multiheal staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -56900,6 +56996,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "combat_condition",
+                "unit2.team == 'player' or mode == 'defense'"
             ],
             [
                 "stat_multiplier",
@@ -57379,7 +57479,7 @@
     {
         "nid": "Supportive_Recharge_T1",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff, refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
+        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -57535,7 +57635,7 @@
     {
         "nid": "Tome_Precision_T1",
         "name": "Tome Precision",
-        "desc": "Raises Hit/Avoid by 60 when using a Tome.",
+        "desc": "Raises Hit/Avoid by 30 when using a Tome.",
         "icon_nid": "skill_icons",
         "icon_index": [
             14,
@@ -57544,15 +57644,15 @@
         "components": [
             [
                 "condition",
-                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark'))"
+                "item_system.weapon_type(unit, item) in ('Dark', 'Anima', 'Light')"
             ],
             [
                 "dynamic_accuracy",
-                "60"
+                "30"
             ],
             [
                 "dynamic_avoid",
-                "60"
+                "30"
             ],
             [
                 "feat",
@@ -59765,7 +59865,7 @@
     {
         "nid": "Lifetaker_T2",
         "name": "Lifetaker",
-        "desc": "Heal 80% of HP on an active kill.",
+        "desc": "Heal 80% of HP on an active kill.\n+1 MAG/SKL for each active kill. \nMax 10 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -61620,7 +61720,7 @@
     {
         "nid": "Bowfaire_T2",
         "name": "Bowfaire",
-        "desc": "When using bows add SKL/2 to Damage given.",
+        "desc": "When using bows add SKL/2 (<red>{e: (unit.get_stat('SKL')//2)}</>) to Damage given.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -62483,7 +62583,7 @@
     {
         "nid": "Royal_Instructor_Aura_T3",
         "name": "Royal Instructor",
-        "desc": "Enemies cannot counter when unit has WTA.\nAdj. allies gain this skill as well.",
+        "desc": "Enemies cannot counter when unit has WTA.\n+2 bonus attacks while unit has WTA.\nAdj. allies gain this skill as well.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -62517,7 +62617,7 @@
     {
         "nid": "Twinblades_T3",
         "name": "Twinblades",
-        "desc": "+1 bonus attack (+2 if unit doubles), but all damage reduced by 25%.",
+        "desc": "+1 bonus attack (+2 if unit doubles) and +1 range.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -62529,8 +62629,8 @@
                 "1"
             ],
             [
-                "damage_multiplier",
-                0.75
+                "modify_maximum_range",
+                1
             ],
             [
                 "feat",
@@ -63175,6 +63275,34 @@
             [
                 "item_override",
                 "Terror_Of_The_Skies"
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                []
+            ]
+        ]
+    },
+    {
+        "nid": "Royal_Force_T3",
+        "name": "Royal Force",
+        "desc": "Galeforce as long unit hasn't moved yet.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.movement_left == unit.get_stat('MOV')"
+            ],
+            [
+                "galeforce",
+                null
             ],
             [
                 "feat",
@@ -72136,7 +72264,7 @@
         "components": [
             [
                 "condition",
-                "(unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark'))"
+                "item_system.weapon_type(unit, item) in ('Dark', 'Anima', 'Light')"
             ],
             [
                 "dynamic_accuracy",

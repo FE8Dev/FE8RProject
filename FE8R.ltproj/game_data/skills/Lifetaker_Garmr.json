@@ -1,8 +1,8 @@
 [
     {
         "nid": "Lifetaker_Garmr",
-        "name": "Lifetaker Garmr",
-        "desc": "Heal to full on kill.",
+        "name": "Lifetaker",
+        "desc": "Heal 80% of HP on an active kill.\n+1 MAG/SKL for each active kill. \nMax 10 stacks. Lost on end of chapter.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -16,6 +16,10 @@
             [
                 "hidden",
                 null
+            ],
+            [
+                "gain_skill_after_active_kill",
+                "Lifetaker_Buff"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Undefeated_Claws",
         "name": "Undefeated Claws",
-        "desc": "The claws of a champion.\n<violet>Inflicts:</>Breach (25), Curse (25)\n<pink>Misc:</>+16/+16 DEF/RES on Equip, +DEF/4, +RES/4 to damage (<red>{e:(unit.get_stat('DEF')//4) + (unit.get_stat('RES')//4)}</>).",
+        "desc": "The claws of a champion.\n<violet>Inflicts:</>Breach (25), Curse (25)\n<pink>Misc:</>STR + DEF/2 + RES/2 (<red>{e:(unit.get_stat('STR') + unit.get_stat('DEF')//2 + unit.get_stat('RES')//2)}</>),+16/+16 DEF/RES on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             3,
@@ -84,10 +84,8 @@
                 ]
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Runeguard_Claws"
-                ]
+                "status_on_equip",
+                "Undefeated_Claws"
             ]
         ]
     }
