@@ -78,11 +78,11 @@ Paladin
 # Franz
 ## *Sword*
 
-Sword that also uses Magic for damage.
+Sword that also uses Magic for damage. It has Fire element(effective against Horses and inflicts Seared).
 
 First stage gives extra WEXP.
 
-Later stages target Res, inflict Seared and are effective against Horses.
+Later stages target Res.
 
 Its fifth form is also effective against Magic and Monster enemies and has the skill Imbue.
 
@@ -133,14 +133,14 @@ Water and Wind axe that uses Speed and Skill instead of Strength for damage. It 
 # Gilliam
 
 ## *Lance*
-A heavy lance that also uses Defense for damage. It has a Provoke effect. From its second version onwards, it inflicts Curse and Shadow on the enemy.
+A Thunder(effective against Armor and Drenched enemies) heavy lance that also uses Defense for damage. It has a Provoke effect. From its second version onwards, it inflicts Curse and Shadow on the enemy.
 
 *If he promotes to Catapult from Siege Knight it will be lost.*
 
 ## *Sword*
-Starts as a normal Blade that also uses Skill for damage and has a Provoke effect.
+A Wind(effective against Fliers and Seared enemies) Blade that also uses Skill for damage and has a Provoke effect.
 
-From its second version onwards, it also inflicts Breach and Rock Punctures and becomes effective against Armor units.
+From its second version onwards, it also inflicts Breach and Rock Punctures.
 
 *If he promotes to Siege Knight it will be lost.*
 
@@ -204,11 +204,11 @@ Wyvern Knight
 ---
 # Ross
 ## *Axe*
-A 1-2 range axe that gets one extra attack. Its fourth version is effective against Shadow enemies and becomes brave.
+A 1-2 range axe that gets one extra attack. Its fourth version becomes brave. Effective against Shadow enemies.
 
 ## Dark
 
-A tome that is also effective against Horses and inflicts Seared. It costs HP to use, with each version costing more HP.
+A tome that is also effective against Horses and inflicts Seared. It costs HP to use, with each version costing more HP. It also lowers Defense while equipped.
 
 ### Earliest access
 Oni Brigand
@@ -246,11 +246,11 @@ On its first form, it gives more Wexp. On later forms, it's a magical breath tha
 
 ## *Axe*
 
-An axe that inflicts seared upon the enemy. After the first version, it gets a blast version and a normal version for attacking. It also uses Constitution for damage.
+A Fire(effective against Horses and inflicts Seared) and Dark(inflicts Shadow) axe. After the first version, it gets a blast version and a normal version for attacking. It also uses Constitution for damage. Its blast version doesn't give wexp.
 
 ## Sword
 
-A heavy weapon that inflicts Curse and Shadow on the enemy. When hit by an enemy, Strength increases by 8 up to 5 times. From its third version onwards, it inflicts Confuse on the enemy. On its last version, it halves Speed, but doubles Defense and Resistance. It also uses HP for damage.
+A Dark(inflicts Shadow) and Earth(inflicts Rock Punctures) blade. From its second version onwards, when hit by an enemy, Strength increases by 8 up to 5 times. From its third version onwards, it inflicts Confuse on the enemy. On its last version, it halves Speed, but doubles Defense and Resistance. It also uses HP for damage.
 
 ### Earliest access
 
@@ -374,7 +374,7 @@ Executioner(from Assassin)
 
 ## *Light*
 
-A tome that is also effective against Pirates and inflicts Frozen status. Its fifth version is also effective against Monsters and inflicts Reduced Vision.
+A tome that is also effective against Pirates and inflicts Frozen status. Its fifth version is also effective against Monsters and inflicts Reduced Vision. It does full damage on Dual Strike.
 
 ## Staff
 
@@ -726,13 +726,13 @@ A 3-4 range axe that is effective against Armor and Drenched enemies.
 
 ### Other access
 * Blademaster(from Chief)
+* Guildmaster(from Chief)
 
 ## Lance
 1-2 range heavy lance that uses both Strength and Constitution for damage. It inflicts Rock Punctures. Gains +3 range in enemy phase. From its second version onwards, it's effective against Flying and Seared enemies.
 
 ### Access
 * Gladiator(from Chief)
-* Spartan(from Chief)
 * Silver Knight(from Ranger)
 * Elephant Rider(from Ranger)
 * Dragonmaster(from Ranger)
@@ -1165,7 +1165,7 @@ The Watcher(T3)
 ---
 # Tarvadour
 ## *Staff*
-A healing staff that uses Magic and Mov for healing. It has a cooldown. It raises target's Mov and gives Canto+. In its last stage, it can target up to 3 units.
+A healing staff that uses Magic and Mov for healing. It has a cooldown. It raises target's Mov and gives Canto+ for 1 turn.
 
 ## Sword
 A blade that also uses Magic for damage. Effective against Flying and Seared enemies. Inflicts Rock Punctures. Unit raises Mov for 2 turns after killing an enemy.
@@ -1174,7 +1174,7 @@ A blade that also uses Magic for damage. Effective against Flying and Seared ene
 Centaur Knight(T2)
 
 ## Anima
-2-4 range tome that is effective against Pirates, Flying and Seared enemies. Inflicts Frozen and shoves the enemy. On its last version, it also inflicts Shadow and Curse.
+2-4 range tome that is effective against Pirates, Flying and Seared enemies. Inflicts Frozen and shoves the enemy. On its last version, it also inflicts Shadow and Curse. Each version shoves the enemy even more.
 
 ### Access
 
@@ -1228,9 +1228,12 @@ High Maelduin(T3)
 Claw attack that inflicts Breach and Curse on the enemy and raises unit's Defense and Resistance. After reaching the second version, it increases damage dealt based on unit's Defense and after reaching the third version, it increases damage based on unit's Defense and Resistance.
 
 ## Dark
+
 A tome that makes enemies in 5 spaces more likely to attack this unit. Also has the following effect:
 
 Reduces enemy's Speed and Mov for 2 turns.
+
+It also uses Constitution for damage.
 
 ### Access
 
@@ -1240,6 +1243,8 @@ Bael Queen(T3)
 A blade that recovers part of damage dealt and inflicts the following effect:
 
 Reduces enemy's Speed and Mov for 2 turns. After reaching the second stage, it also inflicts Bleeding on the enemy.
+
+It uses Mag and Res instead of Strength for damage and targets Res for damage.
 
 ### Access
 
@@ -1257,7 +1262,7 @@ Bael-lista(T3)
 ---
 # Gargoyle
 ## *Lance*
-A reaver lance that is effective against Armor and Infantry enemies, inflicts Rock Punctures and has an AOE cleave effect. It uses Defense and Constitution instead of Strength for damage. Starting from its third stage, if it kills an enemy, it raises Def and Avoid. In its X rank version, it's also effective against Flying enemies and inflicts Curse and Shadow on the enemy.
+A reaver lance that is effective against Armor and Infantry enemies, inflicts Rock Punctures and has an AOE cleave effect. It uses Defense and Constitution instead of Strength for damage. Starting from its third stage, if it kills an enemy, it raises Def and Avoid. In its X rank version, it's also effective against Flying enemies, inflicts Curse and Shadow on the enemy and has a Cleave effect.
 
 ## Sword
 A blade that inflicts Rock Punctures and Bleeding to the enemy. It has a cooldown. It doesn't give wexp.
