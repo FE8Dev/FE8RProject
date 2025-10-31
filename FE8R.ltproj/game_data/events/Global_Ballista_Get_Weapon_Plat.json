@@ -3,7 +3,7 @@
         "name": "Ballista_Get_Weapon_Plat",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "(unit.klass =='T3_Killer_Ballista' and unit.level == 15) or (unit.klass =='T3_Killer_Ballista_Innes' and unit.level == 15) or (unit.klass =='T3_Killer_Ballista_Neimi' and unit.level == 15)",
+        "condition": "unit.level == 15 and unit.klass in ('T3_Killer_Ballista', 'T3_Killer_Ballista_Innes', 'T3_Killer_Ballista_Neimi') and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,

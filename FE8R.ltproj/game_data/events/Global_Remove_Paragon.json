@@ -1,15 +1,15 @@
 [
     {
-        "name": "Remove_Paragon_Esperanza",
+        "name": "Remove_Paragon",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "unit.nid == 'Esperanza' and unit.level == 1",
+        "condition": "unit.level == 1 and unit.nid in ('Amelia', 'Ross', 'Ewan', 'Neimi', 'Natasha', 'Myrrh', 'ProTagonist', 'Esperanza', 'Franz', 'Jack')",
         "commands": [],
         "only_once": false,
         "priority": 20,
         "_source": [
             "remove_skill;{unit};Paragon;no_banner"
         ],
-        "nid": "Global Remove_Paragon_Esperanza"
+        "nid": "Global Remove_Paragon"
     }
 ]
