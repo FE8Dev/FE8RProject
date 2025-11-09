@@ -3,7 +3,7 @@
         "name": "Ballista_Get_Weapon_Long",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "(unit.klass =='T2_Ballista' and unit.level == 10) or (unit.klass =='T2_Ballista_Innes' and unit.level == 10) or (unit.klass =='T2_Ballista_Neimi' and unit.level == 10)",
+        "condition": "unit.level == 10 and unit.klass in ('T2_Ballista', 'T2_Ballista_Innes', 'T2_Ballista_Neimi') and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,

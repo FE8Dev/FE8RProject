@@ -3,7 +3,7 @@
         "name": "Tank_Get_Weapon_Shock",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "(unit.klass =='T3_Tank' and unit.level == 15) or (unit.klass =='T3_Tank_Siege' and unit.level == 15)",
+        "condition": "unit.level == 15 and unit.klass in ('T3_Tank_Siege', 'T3_Tank') and source == 'exp_gain'",
         "commands": [],
         "only_once": false,
         "priority": 20,

@@ -3,7 +3,7 @@
         "name": "Ballista_Get_Weapon_Killer",
         "trigger": "unit_level_up",
         "level_nid": null,
-        "condition": "(unit.klass =='T3_Killer_Ballista' and unit.level == 1) or (unit.klass =='T3_Killer_Ballista_Innes' and unit.level == 1) or (unit.klass =='T3_Killer_Ballista_Neimi' and unit.level == 1)",
+        "condition": "unit.level == 1 and unit.klass in ('T3_Killer_Ballista', 'T3_Killer_Ballista_Innes', 'T3_Killer_Ballista_Neimi') and source == 'promote'",
         "commands": [],
         "only_once": false,
         "priority": 20,
