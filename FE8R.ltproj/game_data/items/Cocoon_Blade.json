@@ -2,7 +2,7 @@
     {
         "nid": "Cocoon_Blade",
         "name": "Cocoon Blade",
-        "desc": "Hardened silk covers this blade.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), HP absorb (25%).",
+        "desc": "Hardened silk covers this blade.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), HP absorb (25%).",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -86,8 +86,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -118,6 +117,10 @@
             [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

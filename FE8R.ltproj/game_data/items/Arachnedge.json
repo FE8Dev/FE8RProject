@@ -2,7 +2,7 @@
     {
         "nid": "Arachnedge",
         "name": "Arachnedge",
-        "desc": "A blade with deadly tempered silk.\n<green>Skills:</>Blade Sweep.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), HP absorb (40%).",
+        "desc": "A blade with deadly tempered silk.\n<violet>Inflicts:</><icon>Bleed</>, Webbed\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), HP absorb (40%).",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -86,8 +86,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -118,6 +117,10 @@
             [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }
