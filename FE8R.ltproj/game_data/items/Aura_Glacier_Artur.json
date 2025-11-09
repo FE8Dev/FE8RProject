@@ -2,7 +2,7 @@
     {
         "nid": "Aura_Glacier_Artur",
         "name": "Aura Glacier",
-        "desc": "Purges all evil with an explosion of holy ice.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>+40 Crit damage, attacks deals full damage in Dual Strike.",
+        "desc": "Purges all evil with an explosion of holy ice.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1) \n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), +40 Crit damage, attacks deals full damage in Dual Strike.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             1,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                17
+                19
             ],
             [
                 "hit",
@@ -108,6 +108,10 @@
                     "Ice",
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_STRONG"
             ]
         ]
     }

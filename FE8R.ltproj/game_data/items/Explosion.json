@@ -2,7 +2,7 @@
     {
         "nid": "Explosion",
         "name": "Explosion",
-        "desc": "Explosive magic that is hard to master.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*1.5))}</>), Splash DMG (30%)",
+        "desc": "Explosive magic that is hard to master.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*1.5)))}</>), Splash DMG (30%)",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             9,

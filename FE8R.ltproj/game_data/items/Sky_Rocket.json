@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Sky_Rocket",
+        "name": "Sky Rocket",
+        "desc": "Fires a fire arrow so fast it whistles as it flies. <green>CD:4</>\n<orange>Element:</><icon>Fire</>\n<red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>Heavy, Siege, STR/2 + SKL/2 + CON*1.5 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            13,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                25
+            ],
+            [
+                "hit",
+                95
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                37
+            ],
+            [
+                "crit",
+                9
+            ],
+            [
+                "min_range",
+                5
+            ],
+            [
+                "max_range",
+                8
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect"
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_MID"
+            ],
+            [
+                "cooldown",
+                4
+            ]
+        ]
+    }
+]

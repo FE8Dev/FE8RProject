@@ -1,0 +1,23 @@
+[
+    {
+        "name": "DeathOrson_Achievement",
+        "trigger": "combat_end",
+        "level_nid": "16B",
+        "condition": "unit.nid == 'Orson_Evil' or unit2.nid == 'Orson_Evil'",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "if;is_dead('Orson_Evil')",
+            "    if;'Monster' in unit.tags or 'Monster' in unit2.tags",
+            "        ",
+            "        complete_achievement;ch16a;true;banner",
+            "        give_item;convoy;Misleading_Light",
+            "    else",
+            "    end",
+            "else",
+            "end"
+        ],
+        "nid": "16B DeathOrson_Achievement"
+    }
+]

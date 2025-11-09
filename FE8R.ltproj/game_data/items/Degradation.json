@@ -2,7 +2,7 @@
     {
         "nid": "Degradation",
         "name": "Degradation",
-        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Blade Sweep, Enrage\n<orange>Element:<icon>Dark</><icon>Earth</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Rock</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy, STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
+        "desc": "This blade chips away at one's mind.\n<green>Skills:</>Enrage\n<orange>Element:<icon>Dark</><icon>Earth</>\n<red>Effective:</><icon>Frozen</>\n<violet>Inflicts:</><icon>Rock</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>Heavy, Cleaves, STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             7,
@@ -91,7 +91,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Enrage_Item"
                 ]
             ],
@@ -114,6 +113,10 @@
             [
                 "alternate_damage_formula",
                 "STR_HP_MID"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

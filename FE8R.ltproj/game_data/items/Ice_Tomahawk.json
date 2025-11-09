@@ -2,7 +2,7 @@
     {
         "nid": "Ice_Tomahawk",
         "name": "Ice Tomahawk",
-        "desc": "Kyle kept his father's blunt ice axe, just in case.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "desc": "Kyle kept his father's blunt ice axe, just in case.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             0,
@@ -111,6 +111,10 @@
             [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_WEAK"
             ]
         ]
     }

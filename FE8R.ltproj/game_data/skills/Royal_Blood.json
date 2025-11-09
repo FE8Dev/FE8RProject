@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Royal_Blood",
+        "name": "Royal Blood",
+        "desc": "Reduce shop prices by a 25%.\n+10 damage for each item in unit's inventory.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "change_buy_price",
+                0.75
+            ],
+            [
+                "dynamic_damage",
+                "10*(len(unit.items))"
+            ]
+        ]
+    }
+]

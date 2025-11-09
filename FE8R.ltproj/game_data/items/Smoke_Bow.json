@@ -2,7 +2,7 @@
     {
         "nid": "Smoke_Bow",
         "name": "Smoke Bow",
-        "desc": "A long range bow that covers the user in smoke.\n<green>Skills:</>Smoke Aura\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>+5 SPD.",
+        "desc": "A long range bow that covers the user in smoke.\n<green>Skills:</>Smoke Aura\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//3))}</>), +5 SPD.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             9,
@@ -93,6 +93,10 @@
                 [
                     "Colm"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_WEAK"
             ]
         ]
     }

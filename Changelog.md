@@ -1,5 +1,20 @@
 
-## 09-20-05
+## 11-09-25
+```
+
+Many bug fixes/adjustments mostly towards Ephraim's route
+4 new DG units, Miria, Nyx, Shiro, and Camilla
+Rock Punctures has been changed to deal 10% non-lethal Max HP recoil damage after combat to prevent accidental player unit kills
+New arsenal weapons for Ephraim, Vanessa, Moulder, Colm, Artur, Joshua, Forde, Gerik, Tethys, Marisa, L'Arachel, Saleh, and Ewan.
+Blade Sweep has been phased out and text boxes have been adjusted to mention the cleave effect. This was to prevent accidental healing with vulneraries/staves while having a blade equipped. Should reduce the amount of skills on the field as well.
+Some small class changes, ex, Marisa's Wolf Knight T2 promotion has been replaced with Brigand Rider.
+
+
+
+
+
+```
+## 09-20-25
 ```
 Adjusted healing EXP for experimentation. Should usually only give 15 EXP healing unless healing over 60ish HP or so.
 Nerfed skills like Tome Precision, and Adapt Eye.
@@ -10,6 +25,7 @@ Royal Knight's 2nd skill has been replaced with Royal Force, along with buff to 
 Lance Lord's 1st skill has been replaced with Warfare Genius.
 Lead Mercenary in chapter 3 gets Scorch Sword.
 Bazba swapped Stone Axe with Fire Axe.
+Saragl's new DG items added.
 
 
 

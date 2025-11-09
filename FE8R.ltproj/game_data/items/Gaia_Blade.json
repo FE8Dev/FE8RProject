@@ -2,7 +2,7 @@
     {
         "nid": "Gaia_Blade",
         "name": "Gaia Blade",
-        "desc": "A blade of heavy stone.\n<green>Skills:</>Blade Sweep, Earth Shield\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "A blade of heavy stone.\n<green>Skills:</>Earth Shield\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             9,
@@ -92,7 +92,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Earth_Shield"
                 ]
             ],
@@ -109,6 +108,10 @@
             [
                 "alternate_damage_formula",
                 "STR_DEF_STRONG"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

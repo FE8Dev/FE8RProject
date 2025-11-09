@@ -2,7 +2,7 @@
     {
         "nid": "Boom_Axe_Garcia",
         "name": "Boom Axe",
-        "desc": "The Charred Axe restored to half its explosive power.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:3)<icon>Shadowblight</>(AOE:2), Curse 5\n<red>Effective:</><icon>Horse</> <pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "The Charred Axe restored to half its explosive power.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:3)<icon>Shadowblight</>(AOE:2), Curse 5\n<red>Effective:</><icon>Horse</> <pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*1.5)))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             3,

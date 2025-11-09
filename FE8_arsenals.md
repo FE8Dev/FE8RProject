@@ -57,7 +57,7 @@ Ignores weapon triangle.
 Its last form, grants Permanent Miracle, inmunity to negative status, but lowers all stats except Mov and Con by 15.
 
 ## Sword
-Shadow Sword that has an HP cost. Each version has a higher cost.
+Shadow Sword that has an HP cost. Each version has a higher cost, but also comes with Ancient Pact.
 
 ### Earliest access
 Gets it in all T2.
@@ -164,7 +164,7 @@ A tome that uses Strength and Luck instead of Magic for damage.
 Gets it in all T2
 
 ## Axe
-An axe that is effective against Shadow, Armor and Drenched enemies.
+An axe that is effective against Shadow, Armor and Drenched enemies. Uses STR and RES for damage.
 
 From its third version onwards, it recovers part of damage dealt.
 
@@ -201,10 +201,16 @@ Wyvern Knight
 ### Other access
 * Sky Guard(from Falcoknight)
 
+## *Staff*
+A staff that heals in a Plus shape. Uses MAG and LCK for healing equation. The size increases with each evolution.
+
+### Earliest access
+Pegasus Medic
+
 ---
 # Ross
 ## *Axe*
-A 1-2 range axe that gets one extra attack. Its fourth version is effective against Shadow enemies and becomes brave.
+A 1-2 range axe with the light element that gets one extra attack. Its third version gains STR and SKL scaling, and the fourth version becomes brave.
 
 ## Dark
 
@@ -234,7 +240,7 @@ Warrior(from Fighter)
 
 ## Monster
 
-On its first form, it gives more Wexp. On later forms, it's a magical breath that is effective against Magic and Monster enemies and Silences enemies. It recovers part of damage dealt.
+On its first form, it gives more Wexp. On later forms, it's a magical breath that is effective against Magic and Monster enemies and Silences enemies. It recovers part of damage dealt and has MAG and SKL scaling.
 
 ### Access
 
@@ -291,7 +297,7 @@ Its last version also becomes effective against Infantry and Dragon units and ge
 
 ## Sword
 
-Magical sword that raises Neimi's DEF and RES. It inflicts Rock Punctures and reduces damage taken on enemy phase.
+Magical sword that raises Neimi's DEF and RES. It inflicts Rock Punctures and reduces damage taken on enemy phase. Scales off of MAG and RES for damage.
 
 ### Earliest access
 
@@ -344,7 +350,7 @@ Miko(from Kyudoka)
 
 ## Bow
 
-A 3-6 range Bow that raises Avoid and Speed. From its second version onwards, it inflicts Shadow and Curse. Its last version has increased range.
+A 3-6 range Bow that raises Avoid and Speed, also scales off of SKL and SPD. From its second version onwards, it inflicts Shadow and Curse. Its last version has increased range.
 
 ### Earliest access
 
@@ -374,11 +380,11 @@ Executioner(from Assassin)
 
 ## *Light*
 
-A tome that is also effective against Pirates and inflicts Frozen status. Its fifth version is also effective against Monsters and inflicts Reduced Vision.
+A tome that is also effective against Pirates and inflicts Frozen status. Deals full damage on dual attacks. It's second version on scales off of MAG and RES. Its fifth version is also effective against Monsters and inflicts Reduced Vision.
 
 ## Staff
 
-A 1-4 range staff that drenches enemies. From its second version onwards, it gains the Wind element and becomes effective against Flying and Seared enemies. Its third version has 1-5 range.
+A 1-4 range staff that drenches enemies and scales off of LCK and SKL. From its second version onwards, it gains the Wind element and becomes effective against Flying and Seared enemies. Its third version has 1-5 range.
 
 ### Access
 
@@ -430,10 +436,10 @@ Mage Knight
 
 ## *Staff*
 Ice affinity staff that is effective against pirates and inflicts Frozen. Can select more than one target.
-After this weapon's first evolution, it also gets an AOE version that has a cooldown.
+After this weapon's first evolution, it also gets an AOE version that has a cooldown and gains MAG and RES scaling on the third+ evolutions for the blast ones.
 
 ## Light
-Tome that reduces damage from monsters and dark magic. In its final form, nullifies damage from monsters and dark magic.
+Tome that reduces damage from monsters and dark magic. Uses LCK for damage. In its final form, nullifies damage from monsters and dark magic.
 
 ### Earliest access
 * Bishop(from Cleric)
@@ -468,7 +474,7 @@ Pegasus Medic(from Cleric and Troubador)
 
 ## Sword
 
-Dagger that uses Skill instead of Strength for damage. It targets Speed. From its second version onwards, it inflicts Anesthesia(reduces Skill and Speed by 4 during 3 turns(up to 10 stacks)). From the third version onwards, it has a skill that after dealing a critical hit increases the damage dealt by critical hits. From its fourth version onwards, it raises Skill. Its fifth version inflicts 3 stacks of Bleeding and Anesthesia, has the Combat Art Mercy and is 1-3 range.
+Dagger that uses Skill instead of Strength for damage until the third evolution where gains SKL and STR scaling. It targets Speed. From its second version onwards, it inflicts Anesthesia(reduces Skill and Speed by 4 during 3 turns(up to 10 stacks)). From the third version onwards, it has a skill that after dealing a critical hit increases the damage dealt by critical hits. From its fourth version onwards, it raises Skill. Its fifth version inflicts 3 stacks of Bleeding and Anesthesia, has the Combat Art Mercy and is 1-3 range.
 
 ### Access
 
@@ -480,7 +486,7 @@ Medic(have Natasha start as a Trainee)
 
 ## *Sword*
 
-1. Sword that is effective against Flying and Seared units and uses Speed instead of Attack for damage. Range increases in later versions.
+1. Sword that is effective against Flying and Seared units and uses Speed instead of Attack for damage until the second+ evolution where gains SPD and RES scaling. Range increases in later versions.
 Its last version is also effective against Monsters and Infantry enemies and gains 2 extra attacks if Joshua's Attack Speed is at least enemy's Attack Speed + 5. It uses Strength, Speed and Resistance and raises both Speed and Resistance.
 Unlocking the last version of this sword gives also access to an Anima tome that can be used regardless of class. This tome uses Magic, Speed and Skill for damage, raises Speed and Magic and is effective against Monster, Flying and Seared enemies.
 
@@ -530,7 +536,7 @@ Royal Knight(from Great Lord)
 
 ## Sword
 
-Sword that is effective against magic units and raises Resistance.
+Sword that is effective against magic units and raises Resistance. Uses STR and RES for damage.
 
 ### Earliest access
 Trooper Lord
@@ -549,14 +555,14 @@ Trooper Lord
 1-2 heavy axe that inflicts Frozen in the enemy. Its last version is also effective against Infantry units, also uses HP for damage and adds Kyle's Strength to Hit.
 
 ## Lance
-Heavy lance that is also effective against Armor and Horse units. Can't be countered at full HP. From its second version onwards, it also inflicts Rock Punctures on the enemy. Its last version is also effective against Shadow enemies.
+Heavy lance that is also effective against Armor and Horse units. Uses STR and CON for damage. Can't be countered at full HP. From its second version onwards, it also inflicts Rock Punctures on the enemy. Its last version is also effective against Shadow enemies.
 
 ### Earliest access
 
 Gets it in all T2.
 
 ## Sword
-A sword that causes the user to backdash and inflicts Rock Punctures on the enemy. Deals extra damage on Crit. Last form inflicts Frozen to the enemy.
+A sword that causes the user to backdash and inflicts Rock Punctures on the enemy. Uses DEF and SKL for damage. Deals extra damage on Crit. Last form inflicts Frozen to the enemy.
 
 *It seems that it lost the backdash effect*
 
@@ -592,7 +598,7 @@ A lance that is effective against Infantry units, has a Cleave effect and also u
 Barrier Knight(from Dark Knight)
 
 ## Dark
-A brave tome that is effective against Fliers and Seared enemies. It has a cooldown.
+A brave tome that is effective against Fliers and Seared enemies. Uses MAG and SPD for damage. It has a cooldown.
 
 ### Earliest access
 Dark Knight
@@ -606,7 +612,7 @@ Dark Knight
 # Tana
 
 ## *Lance*
-A magic lance that drenches the enemy and gives access to Tana's Stash. Its last version is effective against Monsters, uses Magic, Defense and Resistance for damage and raises both Defense and Resistance.
+A magic lance that drenches the enemy and gives access to Tana's Stash. Uses MAG and RES scaling on the second+ evolution. Its last version is effective against Monsters, uses Magic, Defense and Resistance for damage and raises both Defense and Resistance.
 
 ## Bow
 A bow that uses Magic and Skill for damage instead of Strength, inflicts Frozen on the enemy and is also effective against Seared enemies. Last version always hits. Effective against Pirates.
@@ -654,19 +660,15 @@ Knight
 * Sentinel(from Soldier -> Halberdier)
 * Dragonmaster(from Wyvern Rider -> Wyvern Knight)
 
-## Bow
-An Earth bow that can target multiple enemies and inflicts Rock Punctures. With each upgrade, it can target more enemies. It can't do Dual Strikes.
+## Light
+A Light Magic that can target multiple enemies and inflicts Rock Punctures. With each upgrade, it can target more enemies. It can't do Dual Strikes.
 
 ### Earliest access
-* Siege Knight(from Knight)
-* Wyvern Knight(from Wyvern Rider)
+* Purger
 
 ### Other access
-* Elephant Rider(from Knight -> Great Knight)
-* Marshall(from General)
-* Dragonmaster(from Wyvern Lord)
-* Fire Shifter(from Wyvern Shifter)
-* Black Shifter(from Wyvern Shifter)
+* Bulwark Knight
+
 
 ## Monster
 
@@ -680,7 +682,7 @@ Wyvern Shifter(from Wyvern Rider)
 # Innes
 
 ## *Bow*
-A bow with a minimum 6 range. At higher stages becomes brave and never misses. On its last version it uses Strength, Skill and Luck for damage, gains the Light element, does effective damage against Monsters and Shadow units and raises Strength and Luck.
+A bow with a minimum 6 range with the Brave effect. On its last version it uses Strength, Skill and Luck for damage, gains the Light element, does effective damage against Monsters and Shadow units and raises Strength and Luck.
 
 ## Lance
 1-2 range lance that Drenches the enemy and also uses Magic for damage. In its last stage it also inflicts Shadow and Curse.
@@ -693,7 +695,7 @@ Ranger
 * Neotank(from Ballista)
 
 ## Sword
-1-5 range sword that is effective against Pirates and inflicts Frozen on the enemy. Gains extra attacks if Attack Speed is high enough compared to enemy's. Can't double or do Dual Strikes.
+1-5 range sword that is effective against Pirates and inflicts Frozen on the enemy. Uses STR and SPD for damage. Gains extra attacks if Attack Speed is high enough compared to enemy's. Can't double or do Dual Strikes.
 
 ### Earliest access
 Ranger
@@ -718,7 +720,7 @@ Its last form is also effective against Dragons and Monsters and has the followi
 Halves damage taken, heals 20% at the start of the turn and negative status last 1 turn.
 
 ## Axe
-A 3-4 range axe that is effective against Armor and Drenched enemies.
+A 1-2 range axe that is effective against Armor and Drenched enemies. Uses STR and MOV for damage. Targets the weaker of DEF or RES.
 
 ### Earliest access
 * Hero
@@ -742,7 +744,7 @@ A 3-4 range axe that is effective against Armor and Drenched enemies.
 
 ## *Light*
 
-A tome with a cooldown that allows Tethys to perform another action after using it.
+A tome with a cooldown that allows Tethys to perform another action after using it. Uses MAG and LCK for damage.
 
 ## Monster
 
@@ -757,7 +759,7 @@ Magical breath that inflicts Silence on the enemy and is effective against Magic
 
 ## *Sword*
 
-1. Sword that when used to kill an enemy gives a skill that after 9 kills debuffs all enemies and creates a snowstorm effect in the map. Uses Speed for damage instead of Attack, inflicts Frozen and is effective against Pirates.
+1. Sword that when used to kill an enemy gives a skill that after 9 kills debuffs all enemies and creates a snowstorm effect in the map. Uses Speed for damage instead of Attack until the third evo+ which uses SPD and RES, inflicts Frozen and is effective against Pirates.
 2. Poisoned Dagger with 1-3 range.
 3. Unlocked at the highest weapon level. A 1-2 range sword that can select up to 6 enemies, uses Speed for damage instead of Attack. Can't do Dual Strikes Has a cooldown.
 
@@ -790,14 +792,14 @@ A tome that Drenches the enemy and also uses Speed for damage.
 
 Effective against Monsters. It has two versions.
 
-1. Staff that deals Area of Effect damage to the enemy. Has a cooldown.
-2. Regular offensive staff.
+1. Staff that deals Area of Effect damage to the enemy. Has a cooldown. Second evolution+ has MAG and LCK scaling.
+2. Regular offensive staff. Second evolution+ has MAG and LCK scaling.
 
 After reaching X rank, she unlocks a staff with a cooldown that does the following:
 Heals all HP of all allies and raises their Def/Res by 20.
 
 ## Light
-A tome that makes Mounted tome users and Light magic users receive less damage, increase Avoid and get extra attacks(1, later 2).
+A tome that makes Mounted tome users and Light magic users receive less damage, increase Avoid and get extra attacks(1, later 2). Has LCK and MAG scaling.
 
 On its last version it becomes effective against Monsters, inflicts Silence on enemies and makes them unable to act for 2 turns. This version uses Magic, Luck and Defense for damage and raises both Luck and Defense.
 
@@ -813,7 +815,7 @@ On its last version it becomes effective against Monsters, inflicts Silence on e
 
 ## Dark
 
-A tome that is effective against monsters and heals part of damage dealt to enemy. Its third version heals 100% of damage dealt to enemy.
+A tome that is effective against monsters and heals part of damage dealt to enemy. Has MAG and CON scaling. Its third version heals 100% of damage dealt to enemy.
 
 ### Earliest access
 
@@ -826,10 +828,10 @@ Dark Flier(from Pegasus Medic)
 ---
 # Dozla
 ## *Axe*
-A heavy axe that inflicts Stun and Rock Punctures, but can go first. It has an Skill that increases Crit damage and Hit for each ally within 2 spaces.
+A heavy axe that inflicts Stun and Rock Punctures, but can go first. It has an Skill that increases Crit damage and Hit for each ally within 2 spaces. Uses x2 of Dozla's strength for final evolution.
 
 ## Sword
-A sword that Drenches the enemy and is effective against Drenched and Armor units. After killing 9 enemies gains a skill that debuffs all enemies and creates a rain effect in the map. It gives the ability to walk in water.
+A sword that Drenches the enemy and is effective against Drenched and Armor units. Uses STR and MOV for damage, targets weaker of DEF or RES. After killing 9 enemies gains a skill that debuffs all enemies and creates a rain effect in the map. It gives the ability to walk in water.
 
 On its last form, it gives +5 Attack Speed, ignores terrain, makes enemies in a 5 range space Drenched and is also effective against Pirates.
 
@@ -867,7 +869,7 @@ On its first form, it gives more Wexp. Later it becomes a breath that inflicts D
 A tome that sleeps enemies and is effective against Flying and Seared enemies. After its second stage it gains a variant with a cooldown that deals area damage and can't Dual Strike.
 
 ## *Dark*
-1. A tome that is effective against Sleeping enemies. It has the following skill:
+1. A tome that is effective against Sleeping enemies. Uses MAG and CON for damage. It has the following skill:
 
 Gets +10 max HP and +3 Con for each enemy killed with this tome up to 5 stacks. After killing 5 enemies, it makes enemies take more damage.
 
@@ -915,12 +917,12 @@ Shaman
 ---
 # Cormag
 ## *Axe*
-An axe that is effective against Horses and inflicts Seared on the enemy.
+An axe that is effective against Horses and inflicts Seared on the enemy. Uses STR and CON for damage.
 
 From the second version onwards, it also inflicts Drenched on the enemy, attacks become effective against Drenched and Seared enemies and gets the following effect: +15 Crit and -40 avoid in player phase. -15 Crit + 40 avoid in enemy phase.
 
 ## Lance
-1-2 range lance that is effective against Horses and inflicts Seared. In its third form, it uses both Strength and Magic for damage and gains the following effect: when at full HP, gains +25 Hit/Avoid, else becomes Berserked, all attacks become brave and heals half of damage dealt.
+1-2 range lance that is effective against Horses and inflicts Seared. Uses STR and MAG for damage. In its third form, it uses both Strength and Magic for damage and gains the following effect: when at full HP, gains +25 Hit/Avoid, else becomes Berserked, all attacks become brave and heals half of damage dealt.
 
 Its final form uses Strength, Magic and Skill for damage and has the following skills:
 
@@ -957,7 +959,7 @@ Wyvern Shifter
 A dagger that uses Speed instead of Attack for damage and is magical at range. Eclipse effect. It inflicts Shadow, Curse and Bleeding on the enemy. In its last form, it halves enemy's Speed, Defense and Resistance. It has a cooldown.
 
 ## Anima
-A tome that has a Luck% chance of giving money if Rennac kills the enemy. In its last stage, it can't do double attacks, but it deals Area of Effect damage.
+A tome that has a Luck% chance of giving money if Rennac kills the enemy. Is an AOE attack.
 
 ### Access
 * Trickster(from Rogue)
@@ -1005,7 +1007,7 @@ On its final form, it's also effective against Armor units and gains a skill tha
 ---
 # Knoll
 ## *Dark*
-A tome that increases Knoll's Hit, Avoid and Crit avoid based on the difference between the enemy's Luck and his Luck. After killing an enemy with this spell, gains a skill that makes him take no damage in the next combat.
+A tome that increases Knoll's Hit, Avoid and Crit avoid based on the difference between the enemy's Luck and his Luck. After killing an enemy with this spell, gains a skill that makes him take no damage in the next combat. Uses MAG and SKL for damage.
 
 Its last version is also effective against Monster, raises Knoll's Constitution and Skill and uses Magic, Skill and Constitution for damage.
 
@@ -1044,7 +1046,7 @@ A lance that is effective against Armor and Drenched enemies. It also uses Resis
 Effective against Pirates and boosts Flying allies' Movement and Hit.
 
 ## Sword
-1-3 range brave sword that is effective against Armor and Drenched enemies.
+1-3 range brave sword that is effective against Armor and Drenched enemies. Uses STR and MOV for damage, and targets weaker of DEF or RES.
 
 ### Earliest access
 
@@ -1260,13 +1262,13 @@ Bael-lista(T3)
 A reaver lance that is effective against Armor and Infantry enemies, inflicts Rock Punctures and has an AOE cleave effect. It uses Defense and Constitution instead of Strength for damage. Starting from its third stage, if it kills an enemy, it raises Def and Avoid. In its X rank version, it's also effective against Flying enemies and inflicts Curse and Shadow on the enemy.
 
 ## Sword
-A blade that inflicts Rock Punctures and Bleeding to the enemy. It has a cooldown. It doesn't give wexp.
+A blade that inflicts Rock Punctures and Bleeding to the enemy. It has a cooldown.
 
 ### Access
 Icegoyal(T3)
 
 ## Anima
-A tome that is effective against Pirates. It inflicts Frozen and Petrify to the oponent. Has a cooldown. Always hits. Can't double.
+A tome that is effective against Pirates. It inflicts Frozen and Petrify to the oponent. Has a cooldown. Always hits.
 
 ### Access
 Icegoyal(T3)

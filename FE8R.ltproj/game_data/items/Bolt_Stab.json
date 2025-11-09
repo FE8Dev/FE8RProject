@@ -2,7 +2,7 @@
     {
         "nid": "Bolt_Stab",
         "name": "Bolt Stab",
-        "desc": "Eirika's thunder infused rapier stabs enemies with thunderbolts.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>STR + MAG, +1 SPD, Splash DMG (20%).",
+        "desc": "Eirika's thunder infused rapier stabs enemies with thunderbolts.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), +1 SPD, Splash DMG (20%).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             33,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                11
+                8
             ],
             [
                 "hit",
@@ -35,7 +35,7 @@
             ],
             [
                 "crit",
-                17
+                8
             ],
             [
                 "weight",
@@ -98,7 +98,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_MAG_STRONG"
+                "STR_MAG_WEAK"
             ],
             [
                 "weapon_rank",

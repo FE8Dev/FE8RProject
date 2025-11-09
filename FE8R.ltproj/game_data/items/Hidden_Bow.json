@@ -2,7 +2,7 @@
     {
         "nid": "Hidden_Bow",
         "name": "Hidden Bow",
-        "desc": "A bow for those who hide in the dark.\n<green>Skills:</>Smoke Aura\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>+5 SPD.",
+        "desc": "A bow for those who hide in the dark.\n<green>Skills:</>Smoke Aura\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + SPD/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD')//2))}</>), +10 SPD.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             0,
@@ -84,7 +84,7 @@
                 [
                     [
                         "SPD",
-                        5
+                        10
                     ]
                 ]
             ],
@@ -106,6 +106,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "SKL_SPD_MID"
             ]
         ]
     }

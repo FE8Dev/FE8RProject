@@ -2,7 +2,7 @@
     {
         "nid": "Heavens_Tome",
         "name": "Heaven's Tome",
-        "desc": "A tome from the Goddess herself.\n<green>Skills:</>Holy Radiance+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>+50 Crit damage.",
+        "desc": "A tome from the Goddess herself.\n<green>Skills:</>Holy Radiance+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +50 Crit damage.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             13,
@@ -104,6 +104,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_STRONG"
             ]
         ]
     }

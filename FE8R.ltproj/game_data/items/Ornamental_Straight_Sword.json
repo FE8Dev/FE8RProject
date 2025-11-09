@@ -2,7 +2,7 @@
     {
         "nid": "Ornamental_Straight_Sword",
         "name": "Ornamental Straight Sword",
-        "desc": "Slender straight sword patterned after an antique ornament.\n<green>Skills:</>Improved Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can still strike first, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "Slender straight sword patterned after an antique ornament.\n<green>Skills:</>Improved Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can still strike first, Cleaves, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             2,
@@ -56,8 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Improved_Burden_Strike",
-                    "Blade_Sweep"
+                    "Improved_Burden_Strike"
                 ]
             ],
             [
@@ -100,6 +99,14 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

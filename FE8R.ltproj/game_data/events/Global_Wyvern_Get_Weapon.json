@@ -8,7 +8,10 @@
         "only_once": true,
         "priority": 20,
         "_source": [
-            "give_item;{unit};Training_Stone"
+            "if;game.level_vars['Training'] != True",
+            "give_item;{unit};Training_Stone",
+            "else",
+            "end"
         ],
         "nid": "Global Wyvern_Get_Weapon"
     }

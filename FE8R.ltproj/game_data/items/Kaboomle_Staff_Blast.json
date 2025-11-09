@@ -2,7 +2,7 @@
     {
         "nid": "Kaboomle_Staff_Blast",
         "name": "Kaboomle Staff (<icon>Blast</>)",
-        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil. Starts on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>(AOE Blast:4), cannot DS, can't crit, no WEXP gain.",
+        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil. Starts on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), (AOE Blast:4), cannot DS, can't crit, no WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             2,
@@ -120,6 +120,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_MID"
             ]
         ]
     }

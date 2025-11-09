@@ -2,7 +2,7 @@
     {
         "nid": "Evil_Conversion",
         "name": "Evil Conversion",
-        "desc": "Monsters will wish they never met L'Arachel after this spell is cast.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Absorb HP (100%)",
+        "desc": "Monsters will wish they never met L'Arachel after this spell is cast.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5)))}</>), Absorb HP (100%)",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             21,
@@ -113,6 +113,10 @@
                 [
                     "Ancient_Pact_SS"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_STRONG"
             ]
         ]
     }

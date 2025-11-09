@@ -2,7 +2,7 @@
     {
         "nid": "Death_Plague",
         "name": "Death Plague",
-        "desc": "Saleh knows the sign to unleash the plague, but waits until it is wise.\n<green>Skills:</>Dream Siphon(After first kill), Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)",
+        "desc": "Saleh knows the sign to unleash the plague, but waits until it is wise.\n<green>Skills:</>Dream Siphon(After first kill), Ancient Pact (SS) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             8,
@@ -111,6 +111,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_STRONG"
             ]
         ]
     }

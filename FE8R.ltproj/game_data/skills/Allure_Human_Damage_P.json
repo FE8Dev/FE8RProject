@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Allure_Human_Damage_P",
+        "name": "Allure Human",
+        "desc": "x2 damage against non-monster enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Monster' not in unit2.tags"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ]
+        ]
+    }
+]

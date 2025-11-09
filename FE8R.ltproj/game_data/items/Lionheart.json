@@ -2,7 +2,7 @@
     {
         "nid": "Lionheart",
         "name": "Lionheart",
-        "desc": "This sword has changed to match Kyle's affinity.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Rock</>(AOE:2)\n<pink>Misc:</>+10 SPD, +40 Bonus Crit Damage.",
+        "desc": "This sword has changed to match Kyle's affinity.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Rock</>(AOE:2)\n<pink>Misc:</>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>), +10 SPD, +40 Bonus Crit Damage.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -95,6 +95,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_STRONG"
             ]
         ]
     }

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "12B",
+        "condition": "check_pair('Ephraim','Civ1')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;OldMan1;Left",
+            "speak;Ephraim;I heard a young man was staying in this village recently.",
+            "speak;OldMan1;Ah, you must mean that eager lad.|Ewan, I think his name was.|Nice boy, full of energy and determination.|Said he was a pupil of some sort, studying magic.",
+            "speak;Ephraim;Was he traveling alone?",
+            "speak;OldMan1;Aye, he was.|Said he was searching for a girl.|A swordswoman, if I recall correctly.|He seemed quite worried about her.|Left heading north not too long ago.",
+            "speak;Ephraim;I see.|I hope he found who he was looking for.",
+            "speak;OldMan1;As do I, lad.|The roads aren't safe for young folk traveling alone these days.|But that boy had spirit.|I'm sure he'll be alright.",
+            "multi_remove_portrait;Ephraim;OldMan1",
+            "give_bexp;3000"
+        ],
+        "nid": "12B Talk_Civ1"
+    }
+]

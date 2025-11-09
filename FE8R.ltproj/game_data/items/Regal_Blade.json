@@ -2,7 +2,7 @@
     {
         "nid": "Regal_Blade",
         "name": "Regal Blade",
-        "desc": "A blade used by mighty nobles.\n<green>Skills:</>Blade Sweep, Noble Spirit\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A blade used by mighty nobles.\n<green>Skills:</>Noble Spirit\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves.",
         "icon_nid": "{Ereshkigal} Blade 6",
         "icon_index": [
             0,
@@ -95,9 +95,12 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Noble_Spirit"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

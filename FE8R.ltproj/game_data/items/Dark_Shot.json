@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Shot",
         "name": "Dark Shot",
-        "desc": "A long range Dark spell Lute created. <green>CD:3</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</> Curse (8)\n<pink>Misc:</>Siege.",
+        "desc": "A long range Dark spell Lute created. <green>CD:4</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</> Curse (8)\n<pink>Misc:</>Heavy, Siege, MAG/2 + SKL/2 + CON*1.5 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             17,
@@ -67,7 +67,7 @@
             ],
             [
                 "cooldown",
-                3
+                4
             ],
             [
                 "battle_cast_anim",
@@ -95,6 +95,10 @@
                 [
                     "Dark"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_MID"
             ]
         ]
     }

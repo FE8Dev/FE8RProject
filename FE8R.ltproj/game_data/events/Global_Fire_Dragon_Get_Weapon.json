@@ -8,8 +8,11 @@
         "only_once": true,
         "priority": 20,
         "_source": [
+            "if;game.level_vars['Training'] != True",
             "remove_item;{unit};Training_Stone",
-            "give_item;{unit};Fire_Breath"
+            "give_item;{unit};Fire_Breath",
+            "else",
+            "end"
         ],
         "nid": "Global Fire_Dragon_Get_Weapon"
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Hopebringer",
         "name": "Hopebringer",
-        "desc": "The axe of the symbol of hope. \n<green>Skills:</>Hope Herald, Power Chop (X)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Brave.",
+        "desc": "The axe of the symbol of hope. \n<green>Skills:</>Hope Herald, Power Chop (X)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), Brave.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             5,
@@ -31,7 +31,7 @@
             ],
             [
                 "hit",
-                100
+                110
             ],
             [
                 "crit",
@@ -99,6 +99,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

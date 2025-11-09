@@ -2,7 +2,7 @@
     {
         "nid": "Repeat_Repentance",
         "name": "Repeat Repentance",
-        "desc": "1.5x Crit chance on second strike+ with Light magic.\n1.5x damage with Combat Staves on second strike+.",
+        "desc": "x1.5 Crit chance on second strike+ with Light/Anima magic.\nx1.5 damage with Combat Staves on second strike+.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light', 'Anima')"
             ],
             [
                 "pcc_static",

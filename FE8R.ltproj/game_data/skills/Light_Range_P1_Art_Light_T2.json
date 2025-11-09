@@ -1,8 +1,8 @@
 [
     {
         "nid": "Light_Range_P1_Art_Light_T2",
-        "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "name": "Knowledge of Justice",
+        "desc": "+1 range to Light/Anima tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) in ('Light', 'Staff')"
+                "item_system.weapon_type(unit, item) in ('Light', 'Anima')"
             ],
             [
                 "feat",
@@ -19,11 +19,13 @@
             ],
             [
                 "modify_maximum_range",
-                2
+                1
             ],
             [
                 "copysafe",
-                []
+                [
+                    "Light_Range_P1_Staff_Feat_hide"
+                ]
             ]
         ]
     }

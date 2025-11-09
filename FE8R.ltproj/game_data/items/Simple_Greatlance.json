@@ -2,7 +2,7 @@
     {
         "nid": "Simple_Greatlance",
         "name": "Simple Greatlance",
-        "desc": "A simple greatlance Kyle keeps, just in case.\n<green>Skills:</>Prepared, G.L. Mastery, Lance Guard (E)\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy",
+        "desc": "A simple greatlance Kyle keeps, just in case.\n<green>Skills:</>Prepared, G.L. Mastery, Lance Guard (E)\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, STR + CON (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             15,
@@ -97,6 +97,10 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_WEAK"
             ]
         ]
     }

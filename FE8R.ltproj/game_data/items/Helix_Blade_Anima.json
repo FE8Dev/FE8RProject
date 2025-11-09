@@ -2,7 +2,7 @@
     {
         "nid": "Helix_Blade_Anima",
         "name": "Helix Blade (A)",
-        "desc": "A heavy blade twisted with blue and mage fire.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</><red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), heavy, Splash DMG (60).",
+        "desc": "A heavy blade twisted with blue and mage fire.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</><red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), Heavy, Cleaves, Splash DMG (60).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -92,8 +92,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -113,6 +112,10 @@
             [
                 "value",
                 2000
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

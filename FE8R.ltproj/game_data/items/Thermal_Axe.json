@@ -2,7 +2,7 @@
     {
         "nid": "Thermal_Axe",
         "name": "Thermal Axe",
-        "desc": "An axe that balances ones state of mind.\n<green>Skills:</>Steam Flow, Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>",
+        "desc": "An axe that balances ones state of mind.\n<green>Skills:</>Steam Flow, Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Cormag Axes",
         "icon_index": [
             1,
@@ -103,6 +103,10 @@
                     "Fire",
                     "Water"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     }

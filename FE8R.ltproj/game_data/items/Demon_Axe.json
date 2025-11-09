@@ -2,7 +2,7 @@
     {
         "nid": "Demon_Axe",
         "name": "Demon Axe",
-        "desc": "An axe infused with the soul of a demon.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (25)\n<pink>Misc:</>Magical, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "An axe infused with the soul of a demon.\n<green>Skills:</>Power Chop (X)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (25)\n<pink>Misc:</>Magical, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,

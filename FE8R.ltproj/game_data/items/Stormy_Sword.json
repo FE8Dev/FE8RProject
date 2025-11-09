@@ -2,7 +2,7 @@
     {
         "nid": "Stormy_Sword",
         "name": "Stormy Sword",
-        "desc": "Dozla's electric sword that he carries while at sea.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>+1 SPD.",
+        "desc": "Dozla's electric sword that he carries while at sea.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>STR + MOV*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*2))}</>), targets weaker of DEF or RES, +1 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             11,
@@ -99,6 +99,14 @@
                     "Water",
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MOV_WEAK"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
             ]
         ]
     }

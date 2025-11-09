@@ -2,7 +2,7 @@
     {
         "nid": "Gae_Bolg",
         "name": "Gae Bolg(<icon>Dark</>)",
-        "desc": "The trial of the cursed lance.\n<green>Skills:</>Lance Guard (X), Heart Pierce, Eternal Bane\n<orange>Element:</><icon>Fire</><violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</><pink>Misc:</>STR +SKL+ MAG, never Miss",
+        "desc": "The trial of the cursed lance.\n<green>Skills:</>Lance Guard (X), Heart Pierce, Eternal Bane\n<orange>Element:</><icon>Fire</><violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + SKL + MAG (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG') + unit.get_stat('SKL')))}</>), cannot miss.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             9,
@@ -94,6 +94,10 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
             ]
         ]
     }

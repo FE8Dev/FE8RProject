@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "12B",
+        "condition": "check_pair('Ephraim','Civ2')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;Man2;Left",
+            "",
+            "speak;Ephraim;You mentioned a dancer who came through here?",
+            "speak;Man2;Oh yes!|What a performer she was!|Her dances were like magic, I tell you.|After watching her, I felt like I could work twice as hard without getting tired.|It was the strangest thing.|My aches and pains just melted away!",
+            "speak;Ephraim;That does sound remarkable.|Do you remember anything else about her?",
+            "speak;Man2;She had this presence about her, you know?|Graceful, but there was something...mystical about it.|I've never seen anyone dance quite like that before.|I sure hope she passes through again someday.|These old bones could use another one of her performances!",
+            "speak;Ephraim;Perhaps your paths will cross again. Thank you for sharing.",
+            "multi_remove_portrait;Ephraim;Man2",
+            "give_bexp;3000"
+        ],
+        "nid": "12B Talk_Civ2"
+    }
+]

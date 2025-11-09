@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Adrenaline_Heal_Giver_hide",
+        "name": "Adrenaline",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_funcs.num_stacks(unit, \"Adrenaline_Buff\") < 10"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Adrenaline_Heal_hide"
+            ]
+        ]
+    }
+]

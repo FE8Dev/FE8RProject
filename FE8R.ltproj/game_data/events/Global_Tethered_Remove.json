@@ -8,7 +8,6 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "",
             "if;unit.klass == 'Phantom_Azuth'",
             "    remove_skill;Azuth;Tethered;1;no_banner",
             "    elif;unit.klass == 'Sword_Wight_Azuth'",
@@ -17,8 +16,7 @@
             "        remove_skill;Azuth;Tethered;2;no_banner",
             "    elif;unit.klass == 'Lich_Azuth'",
             "        remove_skill;Azuth;Tethered;3;no_banner",
-            "end",
-            ""
+            "end"
         ],
         "nid": "Global Tethered_Remove"
     }

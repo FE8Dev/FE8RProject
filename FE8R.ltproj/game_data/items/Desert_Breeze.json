@@ -1,0 +1,92 @@
+[
+    {
+        "nid": "Desert_Breeze",
+        "name": "Desert Breeze",
+        "desc": "Even the harsh desert can bring relief sometimes.\nRestores HP equal to user's MAG/2 + SPD/4. <green>CD:2</>\n<pink>Misc:</>Give +5 SPD to ally for 1 turn. This is a free action.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_SPD_HEAL_WEAK"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tethys"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Guiding_Breeze"
+            ],
+            [
+                "battle_cast_anim",
+                "Heal"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ]
+        ]
+    }
+]

@@ -2,7 +2,7 @@
     {
         "nid": "L_Eternal_Rest",
         "name": "Eternal Rest",
-        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +20 DEF, +12RES, STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES.",
+        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, Cleaves, +20 DEF, +12RES, STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -87,7 +87,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Aggravator"
                 ]
             ],
@@ -133,6 +132,10 @@
                         12
                     ]
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

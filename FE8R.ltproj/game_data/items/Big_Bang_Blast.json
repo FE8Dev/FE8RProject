@@ -2,7 +2,7 @@
     {
         "nid": "Big_Bang_Blast",
         "name": "Big Bang (<icon>Blast</>)",
-        "desc": "An explosion so powerful, L'arachel might make her own universe with it. Starts on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>(AOE Blast:5), cannot DS, can't crit, no WEXP gain.",
+        "desc": "An explosion so powerful, L'arachel might make her own universe with it. Starts on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), (AOE Blast:5), cannot DS, can't crit, no WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             6,
@@ -120,6 +120,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_STRONG"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Frozen_Tundra",
         "name": "Frozen Tundra",
-        "desc": "Kyle keeps this mythical ice club around, just in case.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "desc": "Kyle keeps this mythical ice club around, just in case.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             1,
@@ -111,6 +111,10 @@
             [
                 "ignore_line_of_sight",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_HP_MID"
             ]
         ]
     }

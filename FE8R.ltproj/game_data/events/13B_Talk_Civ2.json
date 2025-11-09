@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Ephraim','Civ2')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;Woman1;Left",
+            "expression;Woman1;HalfCloseEyes",
+            "expression;Ephraim;HalfCloseEyes",
+            "speak;Ephraim;......;no_talk",
+            "speak;Woman1;You...|I gave your army that staff.|I helped you.",
+            "speak;Ephraim;......;no_talk",
+            "speak;Woman1;And now General Selena is dead.|She's dead because of you!|Because of your army!",
+            "speak;Ephraim;......;no_talk",
+            "speak;Ephraim;I'm sorry.",
+            "speak;Woman1;Sorry?|Sorry?!|She protected this village!|She kept us safe!|And I...I helped the people who killed her.|How can I live with that?",
+            "speak;Ephraim;......;no_talk",
+            "speak;Woman1;Just...just go.|I don't want to see you anymore.|Get out of my sight.",
+            "speak;Ephraim;......;no_talk",
+            "multi_remove_portrait;Ephraim;Woman1",
+            "give_bexp;3000"
+        ],
+        "nid": "13B Talk_Civ2"
+    }
+]

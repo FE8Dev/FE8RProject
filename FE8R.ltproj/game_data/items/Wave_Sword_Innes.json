@@ -2,7 +2,7 @@
     {
         "nid": "Wave_Sword_Innes",
         "name": "Aurora sword",
-        "desc": "A sword like Innes' personality, cool and precise.\n<green>Skills:</>Royal Pride+\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Line attack:5), +3 SPD, cannot DS.",
+        "desc": "A sword like Innes' personality, cool and precise.\n<green>Skills:</>Royal Pride+\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), (Line attack:5), +3 SPD, cannot DS.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             41,
@@ -121,6 +121,10 @@
             [
                 "cannot_be_countered",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
             ]
         ]
     }

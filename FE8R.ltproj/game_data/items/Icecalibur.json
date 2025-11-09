@@ -2,7 +2,7 @@
     {
         "nid": "Icecalibur",
         "name": "Icecalibur",
-        "desc": "An icy sword fit for a king.\n<green>Skills:</>Royal Pride++\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Line attack:5), +10 SPD, cannot DS.",
+        "desc": "An icy sword fit for a king.\n<green>Skills:</>Royal Pride++\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>), (Line attack:5), +10 SPD, cannot DS.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             0,
@@ -121,6 +121,10 @@
             [
                 "cannot_be_countered",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_STRONG"
             ]
         ]
     }

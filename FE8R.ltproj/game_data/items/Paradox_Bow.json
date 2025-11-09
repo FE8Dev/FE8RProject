@@ -1,0 +1,106 @@
+[
+    {
+        "nid": "Paradox_Bow",
+        "name": "Paradox Bow",
+        "desc": "A bow that somehow doesn't disrupt itself.\n<orange>Element:</><icon>Ice</><icon>Fire</>\n<violet>Inflicts:</><icon>Frozen</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Pirate</><icon>Horse</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>).",
+        "icon_nid": "Bows Sheet",
+        "icon_index": [
+            8,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "B"
+            ],
+            [
+                "weight",
+                12
+            ],
+            [
+                "crit",
+                6
+            ],
+            [
+                "min_range",
+                2
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse",
+                        "Pirate"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Bow_and_Light_Range_Penalty"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Forde"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_MID"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Frozen",
+                    "Seared"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Ice",
+                    "Fire"
+                ]
+            ]
+        ]
+    }
+]

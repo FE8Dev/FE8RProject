@@ -2,7 +2,7 @@
     {
         "nid": "Treasure_Hunter_T2",
         "name": "Treasure Hunter",
-        "desc": "+8 SPD, +30 Avoid.\nGain bonus move and Canter (7) when on a Chest.",
+        "desc": "+8 SPD, +30 Avoid.\nGain bonus move and Canter (7) when on a Chest, Forest, or Pillar.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "condition",
-                "game.tilemap.get_terrain(unit.position) in ('36', '0')"
+                "game.tilemap.get_terrain(unit.position) in ('36', '2', '3')"
             ],
             [
                 "stat_change",

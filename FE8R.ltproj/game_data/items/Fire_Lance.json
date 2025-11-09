@@ -2,7 +2,7 @@
     {
         "nid": "Fire_Lance",
         "name": "Fire Lance",
-        "desc": "A lance given to Grado soldiers for destroying Renais calvary.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>",
+        "desc": "A lance given to Grado soldiers for destroying Renais calvary.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -92,6 +92,14 @@
                 [
                     "Fire"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MAG_WEAK"
             ]
         ]
     }

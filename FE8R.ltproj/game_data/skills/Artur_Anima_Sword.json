@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Artur_Anima_Sword",
+        "name": "Artur Anima Sword",
+        "desc": "Makes Arturs's sword Anima type when against Dark or Light weapons.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Dark', 'Light')"
+            ],
+            [
+                "item_override",
+                "Artur_Anima_Sword"
+            ]
+        ]
+    }
+]

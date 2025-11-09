@@ -1,0 +1,88 @@
+[
+    {
+        "nid": "Refreshing_Storm",
+        "name": "Refreshing Storm",
+        "desc": "A storm that relieves others of the scorching sun.\nRestores HP to allies (AOE:2) equal to user's MAG + SPD/2. <green>CD:2</>\n<pink>Misc:</>Give +10 SPD and +1 MOV to adjacent allies for 1 turn, and reduces their damage taken by 25%. This is a free action.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            24
+        ],
+        "components": [
+            [
+                "spell",
+                null
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    96,
+                    144,
+                    232
+                ]
+            ],
+            [
+                "heal_exp",
+                null
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "equation_heal",
+                "MAG_SPD_HEAL_STRONG"
+            ],
+            [
+                "battle_animation_music",
+                "33- Healing Orchestral Cover"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Tethys"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Guiding_Breeze_3"
+            ],
+            [
+                "battle_cast_anim",
+                "Fortify"
+            ],
+            [
+                "cooldown",
+                2
+            ],
+            [
+                "menu_after_combat",
+                null
+            ],
+            [
+                "attack_after_combat",
+                null
+            ],
+            [
+                "ally_blast_aoe",
+                2
+            ],
+            [
+                "target_ally",
+                null
+            ],
+            [
+                "weapon_type",
+                "Staff"
+            ],
+            [
+                "weapon_rank",
+                "SSS"
+            ]
+        ]
+    }
+]

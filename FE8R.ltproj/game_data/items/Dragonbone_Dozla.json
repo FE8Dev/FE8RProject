@@ -2,7 +2,7 @@
     {
         "nid": "Dragonbone_Dozla",
         "name": "Dragonbone",
-        "desc": "Dozla's special hammer, made from dragon bones.\n<green>Skills:</>Hearty Laugh+, War Blow\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first.",
+        "desc": "Dozla's special hammer, made from dragon bones.\n<green>Skills:</>Hearty Laugh+, War Blow\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -107,6 +107,10 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "alternate_damage_formula",
+                "DAMAGE_2X"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "L_Catacomb",
         "name": "Catacomb",
-        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +13 DEF, +5 RES, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "desc": "Where darkness sleeps forever.\n<green>Skills:</>Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, Cleaves, +13 DEF, +5 RES, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
         "icon_nid": "02-26-25",
         "icon_index": [
             0,
@@ -88,7 +88,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Aggravator"
                 ]
             ],
@@ -134,6 +133,10 @@
                         5
                     ]
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

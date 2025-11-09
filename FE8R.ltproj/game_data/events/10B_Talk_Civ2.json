@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "10B",
+        "condition": "check_pair('Ephraim','Civ2')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;Villager Old Woman 1;Left",
+            "speak;Ephraim;Excuse me.|I wanted to thank the lady that was here for your hospitality earlier.",
+            "speak;Villager Old Woman 1;Ah, you just missed her.|That mercenary woman gave me the chills...",
+            "speak;Ephraim;Mercenary woman?",
+            "speak;Villager Old Woman 1;Aye, a swordswoman.|Cold eyes, that one. Barely says a word.|She's been passing through now and again.|Always heading east, toward the mountain pass.|I think she's looking for work...or maybe trouble.|Hard to tell with her type.",
+            "speak;Ephraim;A mercenary heading east...I see.",
+            "speak;Villager Old Woman 1;She's got skill, I'll give her that.|Moves like a shadow, quiet as the grave.|But there's something sad about her, I think.|Like she's searching for something she can't quite find.|You be careful if you cross paths with her, young man.|Mercenaries follow the coin, and coin leads to battlefields.",
+            "speak;Ephraim;I appreciate the warning. I'll keep an eye out.",
+            "multi_remove_portrait;Ephraim;Villager Old Woman 1",
+            "give_bexp;2000"
+        ],
+        "nid": "10B Talk_Civ2"
+    }
+]

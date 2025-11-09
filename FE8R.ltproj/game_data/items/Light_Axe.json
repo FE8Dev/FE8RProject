@@ -2,7 +2,7 @@
     {
         "nid": "Light_Axe",
         "name": "Light Axe",
-        "desc": "An axe charged with holy lightning.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Light</><icon>Thunder</>\n<red>Effective:</><icon>Shadowblight</><icon>Armor</><icon>Drenched</>",
+        "desc": "An axe charged with holy lightning.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Light</><icon>Thunder</>\n<red>Effective:</><icon>Shadowblight</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + RES/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//3))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             8,
@@ -93,6 +93,10 @@
                 [
                     "Power_Chop_E"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_WEAK"
             ]
         ]
     }

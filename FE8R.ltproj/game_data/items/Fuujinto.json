@@ -2,7 +2,7 @@
     {
         "nid": "Fuujinto",
         "name": "Fuujinto",
-        "desc": "Only royalty can master such wind techniques.\n<green>Skills:</>Risky Vantage, Flash Step\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Uses SPD, +10 SPD.",
+        "desc": "Only royalty can master such wind techniques.\n<green>Skills:</>Risky Vantage, Flash Step\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + RES (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('RES')))}</>), +10 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             4,
@@ -94,7 +94,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_RES_STRONG"
             ],
             [
                 "item_tags",

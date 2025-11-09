@@ -1,0 +1,97 @@
+[
+    {
+        "nid": "Heroic_Sword",
+        "name": "Heroic Sword",
+        "desc": "Sword forged to hunt bandits like a hero.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Thief</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), +3 SPD.",
+        "icon_nid": "Miria and Nyx weapons",
+        "icon_index": [
+            3,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                10
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "crit",
+                15
+            ],
+            [
+                "weight",
+                8
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "C"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "status_on_equip",
+                "Flash_Step"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Nyx"
+                ]
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_LCK_WEAK"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Thief"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]

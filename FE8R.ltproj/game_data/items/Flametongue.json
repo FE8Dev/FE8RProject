@@ -1,0 +1,105 @@
+[
+    {
+        "nid": "Flametongue",
+        "name": "Flametongue",
+        "desc": "A sword born through the power of a dragon.\n<green>Skills:</>Flash Step <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), also acts like an Anima weapon.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            9,
+            1
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                16
+            ],
+            [
+                "hit",
+                115
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                17
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Artur_Anima_Sword"
+                ]
+            ],
+            [
+                "status_on_hit",
+                "Seared"
+            ],
+            [
+                "alternate_damage_formula",
+                "SPD_SKL_STRONG"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Horse"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Artur"
+                ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Flamberge"
+            ]
+        ]
+    }
+]

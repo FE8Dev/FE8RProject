@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "13B",
+        "condition": "check_pair('Ephraim','Civ1')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;Villager Girl;Left",
+            "expression;Villager Girl;HalfCloseEyes",
+            "expression;Ephraim;HalfCloseEyes",
+            "speak;Ephraim;......;no_talk",
+            "speak;Villager Girl;She's...she's really gone, isn't she?|General Selena...|I can't believe it.",
+            "speak;Ephraim;......;no_talk",
+            "speak;Ephraim;I'm sorry...",
+            "speak;Villager Girl;But she was so strong!|So brave!|She protected us from bandits...|She always made us feel safe.|Why did she have to fight you?|Why did any of this have to happen?!",
+            "speak;Ephraim;......;no_talk",
+            "speak;Villager Girl;I...I wanted to be just like her....",
+            "expression;Villager Girl;CloseEyes",
+            "bop_portrait;Villager Girl",
+            "speak;Villager Girl;*Sob* Why?!....",
+            "speak;Ephraim;......;no_talk",
+            "multi_remove_portrait;Ephraim;Villager Girl",
+            "give_bexp;3000"
+        ],
+        "nid": "13B Talk_Civ1"
+    }
+]

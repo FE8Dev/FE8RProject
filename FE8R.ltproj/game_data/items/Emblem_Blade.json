@@ -2,7 +2,7 @@
     {
         "nid": "Emblem_Blade",
         "name": "Emblem Blade",
-        "desc": "A legendary blade that seals the power of enemies.\n<green>Skills:</>Blade Sweep\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), heavy.",
+        "desc": "A legendary blade that seals the power of enemies.\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), Heavy, Cleaves.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -76,8 +76,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -110,6 +109,10 @@
             [
                 "alternate_damage_formula",
                 "STR_RES_STRONG"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

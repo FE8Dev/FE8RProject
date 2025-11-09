@@ -2,7 +2,7 @@
     {
         "nid": "Helix_Blade_Dark",
         "name": "Helix Blade (D)",
-        "desc": "A heavy blade corrupted by darkness.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>), Heavy.",
+        "desc": "A heavy blade corrupted by darkness.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>), Heavy, Cleaves.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -91,8 +91,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -109,6 +108,10 @@
             [
                 "value",
                 2000
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

@@ -1,0 +1,36 @@
+[
+    {
+        "nid": "Adrenaline_Heal_hide",
+        "name": "Adrenaline",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stack",
+                10
+            ],
+            [
+                "post_combat_healing",
+                15
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ]
+        ]
+    }
+]

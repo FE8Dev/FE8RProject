@@ -2,7 +2,7 @@
     {
         "nid": "Spell_Bane",
         "name": "Spell Bane",
-        "desc": "A mage's worst nightmare.\n<green>Skills:</>Flash Step\n<red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>+3 SPD, +30 RES.",
+        "desc": "A mage's worst nightmare.\n<green>Skills:</>Flash Step\n<red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>STR + RES/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//2))}</>), +3 SPD, +30 RES.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             24,
@@ -93,6 +93,10 @@
                 [
                     "Ephraim"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_MID"
             ]
         ]
     }

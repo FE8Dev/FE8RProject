@@ -8,7 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{unit};Branch_of_Life"
+            "if;not has_item(unit, 'Branch_of_Life')",
+            "give_item;{unit};Branch_of_Life",
+            "else",
+            "end"
         ],
         "nid": "Global Archdryad_Get_Weapon"
     }

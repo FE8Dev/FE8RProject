@@ -2,7 +2,7 @@
     {
         "nid": "Natasha_Dagger_A",
         "name": "Scalpel",
-        "desc": "Proffesional surgeon's tool, now used for war.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>Uses SKL, targets SPD, +30 Crit damage.",
+        "desc": "Proffesional surgeon's tool, now used for war.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>SKL + STR/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')//2))}</>), targets SPD, +30 Crit damage.",
         "icon_nid": "New Daggers Natasha",
         "icon_index": [
             2,
@@ -97,7 +97,7 @@
             ],
             [
                 "alternate_resist_formula",
-                "ATTACK_SPEED"
+                "SKL_STR_MID"
             ]
         ]
     }

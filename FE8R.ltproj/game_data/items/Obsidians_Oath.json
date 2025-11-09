@@ -2,7 +2,7 @@
     {
         "nid": "Obsidians_Oath",
         "name": "Obsidian's Oath",
-        "desc": "Duessel's own crafted blade.\n<green>Skills:</>Grado's Wall+, Blade Sweep\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "desc": "Duessel's own crafted blade.\n<green>Skills:</>Grado's Wall+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             0,
@@ -99,8 +99,7 @@
                 [
                     "Blade_Vantage_Effect",
                     "Grados_WallP",
-                    "Grados_Wall_GainP",
-                    "Blade_Sweep"
+                    "Grados_Wall_GainP"
                 ]
             ],
             [
@@ -112,6 +111,10 @@
                 [
                     "Rock_Punctures"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

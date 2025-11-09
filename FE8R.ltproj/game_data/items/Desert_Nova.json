@@ -2,7 +2,7 @@
     {
         "nid": "Desert_Nova",
         "name": "Desert Nova",
-        "desc": "A dance symbolizing the beginning of this desert, after a magical war. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Free action, +30 Crit damage.",
+        "desc": "A dance symbolizing the beginning of this desert, after a magical war. <green>CD:2</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), Free action, +30 Crit damage.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             6,
@@ -107,6 +107,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_STRONG"
             ]
         ]
     }

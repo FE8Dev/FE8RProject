@@ -3418,12 +3418,8 @@
         ],
         "components": [
             [
-                "condition",
-                "'Blade' in unit.get_weapon().tags"
-            ],
-            [
-                "item_override",
-                "Wide_Sweep"
+                "Cleave",
+                null
             ]
         ]
     },
@@ -6234,7 +6230,7 @@
             ],
             [
                 "condition",
-                "unit.get_hp() <= unit.get_max_hp() // 2"
+                "unit.get_hp() <= unit.get_max_hp() * 0.75"
             ],
             [
                 "pass",
@@ -6253,26 +6249,18 @@
                 "stat_multiplier",
                 [
                     [
-                        "STR",
-                        0.5
-                    ],
-                    [
-                        "MAG",
-                        0.5
-                    ],
-                    [
-                        "SKL",
-                        0.5
-                    ],
-                    [
                         "DEF",
-                        1.3
+                        2.0
                     ],
                     [
                         "RES",
-                        1.3
+                        2.0
                     ]
                 ]
+            ],
+            [
+                "damage_multiplier",
+                0.5
             ]
         ]
     },
@@ -11534,12 +11522,12 @@
     },
     {
         "nid": "Wet_Throne",
-        "name": "Wet Throne",
+        "name": "Ruined Throne",
         "desc": "-100 Avoid and no longer recieve healing from thrones.",
-        "icon_nid": "skill_icons",
+        "icon_nid": "Skills",
         "icon_index": [
-            13,
-            20
+            9,
+            0
         ],
         "components": [
             [
@@ -12239,7 +12227,7 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, item) == 'Light'"
+                "item_system.weapon_type(unit, item) == 'Light'"
             ],
             [
                 "crit",
@@ -12797,10 +12785,10 @@
     {
         "nid": "Adrenaline",
         "name": "Adrenaline",
-        "desc": "Gain +25 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            7,
             9
         ],
         "components": [
@@ -12811,16 +12799,80 @@
             [
                 "gain_skill_after_take_damage",
                 "Adrenaline_Buff"
+            ],
+            [
+                "multi_skill",
+                [
+                    "Adrenaline_Heal_Giver_hide"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Adrenaline_Heal_Giver_hide",
+        "name": "Adrenaline",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_funcs.num_stacks(unit, \"Adrenaline_Buff\") < 10"
+            ],
+            [
+                "gain_skill_after_take_damage",
+                "Adrenaline_Heal_hide"
+            ]
+        ]
+    },
+    {
+        "nid": "Adrenaline_Heal_hide",
+        "name": "Adrenaline",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "stack",
+                10
+            ],
+            [
+                "post_combat_healing",
+                15
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
             ]
         ]
     },
     {
         "nid": "Adrenaline_Buff",
         "name": "Adrenaline",
-        "desc": "+25 HP for each stack until end of chapter.\nMax 10 stacks.",
+        "desc": "+15 HP for each stack until end of chapter.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            15,
             9
         ],
         "components": [
@@ -12833,7 +12885,7 @@
                 [
                     [
                         "HP",
-                        25
+                        15
                     ]
                 ]
             ],
@@ -12926,7 +12978,7 @@
     {
         "nid": "Live_To_Serve",
         "name": "Live To Serve",
-        "desc": "Restore HP to unit equal to amount the unit heals ally.\n+1 AOE to staffs.",
+        "desc": "Restore HP to unit equal to amount the unit heals ally.\nMust have a Combat Staff equipped in order to work.\n+1 AOE to staffs.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -14928,7 +14980,7 @@
     {
         "nid": "Repeat_Repentance",
         "name": "Repeat Repentance",
-        "desc": "1.5x Crit chance on second strike+ with Light magic.\n1.5x damage with Combat Staves on second strike+.",
+        "desc": "x1.5 Crit chance on second strike+ with Light/Anima magic.\nx1.5 damage with Combat Staves on second strike+.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14941,7 +14993,7 @@
             ],
             [
                 "condition",
-                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light', 'Anima')"
             ],
             [
                 "pcc_static",
@@ -14952,7 +15004,7 @@
     {
         "nid": "Repeat_Repentance_Stave_hide",
         "name": "Repeat Repentance",
-        "desc": "1.5x Crit chance on second strike+ with Light magic.\n1.5x damage with Combat Staves on second strike+.",
+        "desc": "x1.5 Crit chance on second strike+ with Light/Anima magic.\nx1.5 damage with Combat Staves on second strike+.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14975,8 +15027,8 @@
     },
     {
         "nid": "Light_Range_P1_Light",
-        "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "name": "Knowledge of Justice",
+        "desc": "+1 range to Light/Anima tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -14989,7 +15041,7 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Light'"
+                "item_system.weapon_type(unit, item) in ('Anima', 'Light')"
             ],
             [
                 "modify_maximum_range",
@@ -15000,7 +15052,7 @@
     {
         "nid": "Light_Range_P1_Staff_hide",
         "name": "Knowledge of Justice (<icon>Staff</>)",
-        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "desc": "+1 range to Light/Anima tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -15166,7 +15218,7 @@
     {
         "nid": "Sight_P",
         "name": "Sight+",
-        "desc": "Increase Sight in darkness.\n+20 Avoid.\nGrants a bonus attack.",
+        "desc": "Increase Sight in darkness.\n+20 Avoid.\nGrants a bonus attack (+2 if unit doubles).",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -15184,6 +15236,10 @@
             [
                 "dynamic_avoid",
                 "20"
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
             ]
         ]
     },
@@ -15326,7 +15382,7 @@
     {
         "nid": "Treasure_Hunter",
         "name": "Treasure Hunter",
-        "desc": "+8 SPD, +30 Avoid.\nGain bonus move and Canter (7) when on a Chest.",
+        "desc": "+8 SPD, +30 Avoid.\nGain +2 MOV and Canter (7) when on a Chest, Forest, or Pillar.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -15339,7 +15395,7 @@
             ],
             [
                 "condition",
-                "game.tilemap.get_terrain(unit.position) in ('36', '0')"
+                "game.tilemap.get_terrain(unit.position) in ('36', '2', '3')"
             ],
             [
                 "stat_change",
@@ -18351,7 +18407,7 @@
     {
         "nid": "Eclipse_Strike_Skill",
         "name": "Eclipse Strike",
-        "desc": "A special strike that combines Sol and Luna into unit's Attacks.\nPlus an extra bonus attack.",
+        "desc": "<red>CA:</>A special strike that combines Sol and Luna into unit's Attacks.\n+2 bonus attacks. <green>CD:5 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -20429,7 +20485,7 @@
     {
         "nid": "Shield_Dash_Art",
         "name": "Shield Dash",
-        "desc": "<red>CA:</>Add DEF to attacks. then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add DEF to attacks, then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -20461,7 +20517,7 @@
     {
         "nid": "Shield_Dash_Skill",
         "name": "Shield Dash",
-        "desc": "<red>CA:</>Add DEF to attacks. then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add DEF to attacks, then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -20481,7 +20537,7 @@
     {
         "nid": "Shield_Dash_Buff",
         "name": "Shield Dash",
-        "desc": "<red>CA:</>Add DEF to attacks. then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add DEF to attacks, then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -28516,7 +28572,7 @@
     {
         "nid": "Fiendish_Blessing",
         "name": "Fiendish Blessing",
-        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
+        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% STR/MAG until the end of chapter.\nMax 3 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -28544,7 +28600,7 @@
     {
         "nid": "Fiendish_Blessing_Art_hide",
         "name": "Fiendish Blessing",
-        "desc": "<red>CA: </>Staff Range +2. <green>CD:0 Turns</>\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
+        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% STR/MAG until the end of chapter.\nMax 3 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -28568,7 +28624,7 @@
     {
         "nid": "Fiendish_Blessing_Skill",
         "name": "Fiendish Blessing",
-        "desc": "<red>CA: </>Staff Range +2. <green>CD:0 Turns</>\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
+        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% STR/MAG until the end of chapter.\nMax 3 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,
@@ -31099,7 +31155,7 @@
     {
         "nid": "Supportive_Recharge",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
+        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV and combat EXP gain by 75% for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -31127,7 +31183,7 @@
     {
         "nid": "Supportive_Recharge_Debuff",
         "name": "Spent",
-        "desc": "-75% MOV gain for 1 turn.",
+        "desc": "-75% MOV and combat EXP gain for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -32043,9 +32099,9 @@
         "nid": "Reflect",
         "name": "Reflect",
         "desc": "Reflects statuses back at the enemy.",
-        "icon_nid": null,
+        "icon_nid": "Woods Items 10-20-25",
         "icon_index": [
-            0,
+            3,
             0
         ],
         "components": [
@@ -34172,7 +34228,7 @@
     {
         "nid": "Rock_Punctures",
         "name": "Rock Punctures",
-        "desc": "-30 Avoid, reduce DEF and CON by 25% and unit takes 25% of damage dealt for 2 turns or after next combat.",
+        "desc": "-30 Avoid, reduce DEF and CON by 25% and unit takes 10% Max HP as non-lethal damage after combat for 2 turns or after next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -34247,15 +34303,15 @@
                 "-30"
             ],
             [
-                "lifelink",
-                -0.25
+                "recoil_percent",
+                0.1
             ]
         ]
     },
     {
         "nid": "Rock_Breach",
         "name": "Rock Breach",
-        "desc": "-60 Avoid, reduce DEF and CON by an additional 25% and unit takes an additional 25% of damage dealt for 2 turns or after next combat.",
+        "desc": "-60 Avoid, reduce DEF and CON by an additional 25% and unit takes an additional 10% Max HP as non-lethal damage after combat for 2 turns or after next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -34330,8 +34386,8 @@
                 "-30"
             ],
             [
-                "lifelink",
-                -0.25
+                "recoil_percent",
+                0.1
             ]
         ]
     },
@@ -37316,7 +37372,7 @@
     {
         "nid": "Gem_Armor",
         "name": "Gem Armor",
-        "desc": "Boosts Neimi's DEF/RES by 8.\nReduces Damage taken by 50% when defending.",
+        "desc": "+16 DEF/RES.\nReduces Damage taken by 50% when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -37328,11 +37384,11 @@
                 [
                     [
                         "DEF",
-                        8
+                        16
                     ],
                     [
                         "RES",
-                        8
+                        16
                     ]
                 ]
             ]
@@ -37341,7 +37397,7 @@
     {
         "nid": "Gem_Armor_EP",
         "name": "Gem Armor",
-        "desc": "Boosts Neimi's DEF/RES by 8.\nReduces Damage taken by 50% when defending.",
+        "desc": "+16 DEF/RES.\nReduces Damage taken by 50% when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -37365,7 +37421,7 @@
     {
         "nid": "Gem_ArmorP",
         "name": "Gem Armor+",
-        "desc": "Boosts DEF/RES by 16.\nReduces Damage taken by 75% when defending.",
+        "desc": "+32 DEF/RES.\nReduces Damage taken by 75% when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -37377,11 +37433,11 @@
                 [
                     [
                         "DEF",
-                        16
+                        32
                     ],
                     [
                         "RES",
-                        16
+                        32
                     ]
                 ]
             ]
@@ -37390,7 +37446,7 @@
     {
         "nid": "Gem_ArmorEPP",
         "name": "Gem Armor+",
-        "desc": "Boosts DEF/RES by 16.\nReduces Damage taken by 75% when defending.",
+        "desc": "+32 DEF/RES.\nReduces Damage taken by 75% when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -38357,6 +38413,30 @@
         ]
     },
     {
+        "nid": "Artur_Anima_Sword",
+        "name": "Artur Anima Sword",
+        "desc": "Makes Arturs's sword Anima type when against Dark or Light weapons.",
+        "icon_nid": "Affinity",
+        "icon_index": [
+            0,
+            8
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "target.get_weapon() and item_system.weapon_type(target, target.get_weapon()) in ('Dark', 'Light')"
+            ],
+            [
+                "item_override",
+                "Artur_Anima_Sword"
+            ]
+        ]
+    },
+    {
         "nid": "M_Counter_Point_Giver",
         "name": "M. Counter Point",
         "desc": "Multiply damage by 1.2 and +2 MAG/SKL for each stack.",
@@ -38554,6 +38634,54 @@
         ]
     },
     {
+        "nid": "Allure_Monster_Damage_P",
+        "name": "Allure Monster",
+        "desc": "x2 Damage against Monster enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Monster' in unit2.tags"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Allure_Monster_Damage_PP",
+        "name": "Allure Monster",
+        "desc": "x2.5 Damage against Monster enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Monster' in unit2.tags"
+            ],
+            [
+                "damage_multiplier",
+                2.5000000000000004
+            ]
+        ]
+    },
+    {
         "nid": "Allure_Human_Damage",
         "name": "Allure Human",
         "desc": "x1.5 damage against non-monster enemies.",
@@ -38574,6 +38702,54 @@
             [
                 "damage_multiplier",
                 1.5
+            ]
+        ]
+    },
+    {
+        "nid": "Allure_Human_Damage_P",
+        "name": "Allure Human",
+        "desc": "x2 damage against non-monster enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Monster' not in unit2.tags"
+            ],
+            [
+                "damage_multiplier",
+                2.0000000000000004
+            ]
+        ]
+    },
+    {
+        "nid": "Allure_Human_Damage_PP",
+        "name": "Allure Human",
+        "desc": "x2 damage against non-monster enemies.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            24
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "'Monster' not in unit2.tags"
+            ],
+            [
+                "damage_multiplier",
+                2.5000000000000004
             ]
         ]
     },
@@ -39274,7 +39450,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit2.team == 'enemy'"
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "event_before_combat",
@@ -39294,7 +39470,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit2.team == 'enemy'"
+                "unit2.team == 'enemy' or unit2.team == 'enemy2'"
             ],
             [
                 "event_before_combat",
@@ -40894,7 +41070,7 @@
     {
         "nid": "Steam_Flow",
         "name": "Steam Flow",
-        "desc": "Attacks become Effective against Seared and Drenched enemies.\n+15 Crit, -40 Avoid when initiating attacks.\n-15 Crit, +40 Avoid when defending.",
+        "desc": "Attacks become Very Effective against Seared and Drenched enemies.\n+15 Crit, -40 Avoid when initiating attacks.\n-15 Crit, +40 Avoid when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -40922,7 +41098,7 @@
     {
         "nid": "Steam_Flow_EP_hide",
         "name": "Steam Flow",
-        "desc": "Attacks become Effective against Seared and Drenched enemies.\n+15 Crit, -40 Avoid when initiating attacks.\n-15 Crit, +40 Avoid when defending.",
+        "desc": "Attacks become Very Effective against Seared and Drenched enemies.\n+15 Crit, -40 Avoid when initiating attacks.\n-15 Crit, +40 Avoid when defending.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -50090,17 +50266,23 @@
                 null
             ],
             [
+                "combat_condition",
+                "item_system.weapon_type(unit, item) == 'Staff' and unit2.team == 'player'"
+            ],
+            [
                 "give_ally_status_after_combat",
                 "Archbishops_Blessing_Buff"
             ],
             [
-                "combat_condition",
-                "item_system.weapon_type(unit, item) == 'Staff' and unit2.team == 'player'"
+                "multi_skill",
+                [
+                    "Archdryads_Blessing_Skill"
+                ]
             ]
         ]
     },
     {
-        "nid": "Archdryads_Blessing_Art_hide",
+        "nid": "Archdryads_Blessing_Skill",
         "name": "Archdryad's Blessing",
         "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
         "icon_nid": "skill_icons",
@@ -50118,62 +50300,8 @@
                 "item_system.weapon_type(unit, item) == 'Staff'"
             ],
             [
-                "combat_art",
-                "Archdryads_Blessing_Skill"
-            ],
-            [
-                "allowed_weapons",
-                "item_system.is_weapon(unit, item) and item_system.weapon_type(unit, item) == 'Staff'"
-            ]
-        ]
-    },
-    {
-        "nid": "Archdryads_Blessing_EP_hide",
-        "name": "Archdryad's Blessing",
-        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            38
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "combat_condition",
-                "mode == 'defense'"
-            ],
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
-            ]
-        ]
-    },
-    {
-        "nid": "Archdryads_Blessing_Skill",
-        "name": "Archdryad's Blessing",
-        "desc": "+2 staff range and +8 to all stats to an ally that was healed this turn.\nDoes not work with Multiheal staves.\nLasts 2 turns.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            8,
-            38
-        ],
-        "components": [
-            [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
-            ],
-            [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -56000,6 +56128,395 @@
         ]
     },
     {
+        "nid": "Heavy_Slayer",
+        "name": "Heavy Slayer",
+        "desc": "Swords attacks become Effective against Monsters.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword')"
+            ],
+            [
+                "item_override",
+                "Slayer"
+            ]
+        ]
+    },
+    {
+        "nid": "Ghost_Shoes",
+        "name": "Ghost Shoes",
+        "desc": "Ignore Terrain, +5 SPD, but reduce Max HP by 30% and -60% HP growth.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b_1",
+        "icon_index": [
+            8,
+            9
+        ],
+        "components": [
+            [
+                "movement_type",
+                "Fliers"
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "HP",
+                        0.7
+                    ]
+                ]
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "HP",
+                        -60
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Royal_Blood",
+        "name": "Royal Blood",
+        "desc": "Reduce shop prices by a 25%.\n+10 damage for each item in unit's inventory.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            11,
+            34
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "change_buy_price",
+                0.75
+            ],
+            [
+                "dynamic_damage",
+                "10*(len(unit.items))"
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery",
+        "name": "Absolute Mastery",
+        "desc": "For every rank X of magic of the user, obtain the effects: if Anima magic rank = X :gets AOE*(2) in every attack. If Dark magic rank= X the attacks of the user ignore 100% RES. If Staves magic rank = X the attacks of the user increment the range in 2 and if Light magic rank = X user gains +2 extra attacks (+4 if unit doubles). ",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Anima",
+        "name": "Absolute Mastery",
+        "desc": "If unit's Anima magic rank = X rank, unit gains AOE(2) for every attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Anima'] >= 480"
+            ],
+            [
+                "enemy_oversplash",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Dark",
+        "name": " Absolute Mastery",
+        "desc": "If unit's Dark magic rank = X rank, unit ignore 100% of RES in attack.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Dark'] >= 480"
+            ],
+            [
+                "dynamic_damage",
+                "unit2.get_stat('RES')"
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Light",
+        "name": "Absolute Mastery",
+        "desc": "If unit's Light magic rank = X rank, the user gains +2 attacks extra (+4 if unit double).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Light'] >= 480"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Staff",
+        "name": "Absolute Mastery",
+        "desc": "If unit's Staves magic rank = X rank, increment the attack range in 2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Staff'] >= 480"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Boost",
+        "name": "Boost",
+        "desc": "+5 DEF/LCK/RES for 1 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            46
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        5
+                    ],
+                    [
+                        "DEF",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Boost_Plus",
+        "name": "Boost+",
+        "desc": "+8 STR/MAG/SPD/SKL/LCK/DEF/RES for 1 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            46
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "LCK",
+                        8
+                    ],
+                    [
+                        "DEF",
+                        8
+                    ],
+                    [
+                        "RES",
+                        8
+                    ],
+                    [
+                        "STR",
+                        8
+                    ],
+                    [
+                        "SKL",
+                        8
+                    ],
+                    [
+                        "SPD",
+                        8
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Boost_Plus_Plus",
+        "name": "Boost++",
+        "desc": "+12 to all stats except HP and MOV for 1 turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            7,
+            46
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "STR",
+                        12
+                    ],
+                    [
+                        "MAG",
+                        12
+                    ],
+                    [
+                        "SKL",
+                        12
+                    ],
+                    [
+                        "SPD",
+                        12
+                    ],
+                    [
+                        "LCK",
+                        12
+                    ],
+                    [
+                        "DEF",
+                        12
+                    ],
+                    [
+                        "RES",
+                        12
+                    ],
+                    [
+                        "CON",
+                        12
+                    ]
+                ]
+            ],
+            [
+                "time",
+                1
+            ]
+        ]
+    },
+    {
+        "nid": "Aerial_Domination",
+        "name": "Aerial Domination",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "not item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Breached_8",
+                    "range": 3
+                }
+            ]
+        ]
+    },
+    {
+        "nid": "Aerial_Domination_Galeforce_hide",
+        "name": "Aerial Domination",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Breached_8')"
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    },
+    {
         "nid": "Elegant_Form_T1",
         "name": "Elegant Form",
         "desc": "x1.2 damage boost for each attack or attack dodged for 2 turns.\nMax 5 stacks.",
@@ -56547,16 +57064,22 @@
     {
         "nid": "Adrenaline_T1",
         "name": "Adrenaline",
-        "desc": "Gain +25 Temporary HP whenever this unit takes damage\nin combat until end of chapter.\nMax 10 stacks.",
+        "desc": "Gain +15 Temporary HP whenever this unit takes damage\nin combat until end of chapter and heals 15 HP after combat each time this procs.\nMax 10 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
-            4,
+            15,
             9
         ],
         "components": [
             [
                 "gain_skill_after_take_damage",
                 "Adrenaline_Buff"
+            ],
+            [
+                "multi_skill",
+                [
+                    "Adrenaline_Heal_Giver_hide"
+                ]
             ],
             [
                 "feat",
@@ -57479,7 +58002,7 @@
     {
         "nid": "Supportive_Recharge_T1",
         "name": "Supportive Recharge",
-        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV by 75% for 1 turn.",
+        "desc": "When unit uses a support staff (except for AOE or Multi-Target heals), refresh the unit, but reduce unit's MOV and combat EXP gain by 75%  for 1 turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             7,
@@ -57842,7 +58365,7 @@
     {
         "nid": "Live_To_Serve_T1",
         "name": "Live To Serve",
-        "desc": "Restore HP to unit equal to amount the unit heals ally.\n+1 AOE to staffs.",
+        "desc": "Restore HP to unit equal to amount the unit heals ally.\nMust have a Combat Staff equipped in order to work.\n+1 AOE to staffs.",
         "icon_nid": "skill_icons",
         "icon_index": [
             2,
@@ -58576,6 +59099,36 @@
         ]
     },
     {
+        "nid": "Repeat_Repentance_T2",
+        "name": "Repeat Repentance",
+        "desc": "x1.5 Crit chance on second strike+ with Light/Anima magic.\nx1.5 damage with Combat Staves on second strike+.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            15
+        ],
+        "components": [
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light', 'Anima')"
+            ],
+            [
+                "pcc_static",
+                1.5
+            ],
+            [
+                "feat",
+                null
+            ],
+            [
+                "copysafe",
+                [
+                    "Repeat_Repentance_Stave_hide"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Anger_Point_Proc_T2",
         "name": "Anger Point",
         "desc": "<red>CA:</>+25 Crit and add missing HP as Bonus Crit damage. <green>CD:3 Turns</>",
@@ -59063,8 +59616,8 @@
     },
     {
         "nid": "Light_Range_P1_Art_Light_T2",
-        "name": "Knowledge of Justice (<icon>Light</>)",
-        "desc": "+1 range to Light tomes, +2 range to Staves.",
+        "name": "Knowledge of Justice",
+        "desc": "+1 range to Light/Anima tomes, +2 range to Staves.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -59073,7 +59626,7 @@
         "components": [
             [
                 "condition",
-                "item_system.weapon_type(unit, item) in ('Light', 'Staff')"
+                "item_system.weapon_type(unit, item) in ('Light', 'Anima')"
             ],
             [
                 "feat",
@@ -59081,11 +59634,37 @@
             ],
             [
                 "modify_maximum_range",
-                2
+                1
             ],
             [
                 "copysafe",
-                []
+                [
+                    "Light_Range_P1_Staff_Feat_hide"
+                ]
+            ]
+        ]
+    },
+    {
+        "nid": "Light_Range_P1_Staff_Feat_hide",
+        "name": "Knowledge of Justice",
+        "desc": "+1 range to Light/Anima tomes, +2 range to Staves.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            29
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                2
             ]
         ]
     },
@@ -59176,7 +59755,7 @@
     {
         "nid": "Sight_P_T2",
         "name": "Sight+",
-        "desc": "Increase Sight in darkness. +20 Avoid. Grants a bonus attack.",
+        "desc": "Increase Sight in darkness.\n+20 Avoid.\nGrants a bonus attack (+2 if unit doubles).",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -59198,6 +59777,10 @@
             [
                 "copysafe",
                 []
+            ],
+            [
+                "dynamic_multiattacks",
+                "1"
             ]
         ]
     },
@@ -59270,7 +59853,7 @@
     {
         "nid": "Treasure_Hunter_T2",
         "name": "Treasure Hunter",
-        "desc": "+8 SPD, +30 Avoid.\nGain bonus move and Canter (7) when on a Chest.",
+        "desc": "+8 SPD, +30 Avoid.\nGain bonus move and Canter (7) when on a Chest, Forest, or Pillar.",
         "icon_nid": "Skills",
         "icon_index": [
             1,
@@ -59279,7 +59862,7 @@
         "components": [
             [
                 "condition",
-                "game.tilemap.get_terrain(unit.position) in ('36', '0')"
+                "game.tilemap.get_terrain(unit.position) in ('36', '2', '3')"
             ],
             [
                 "stat_change",
@@ -63647,7 +64230,7 @@
     {
         "nid": "Shield_Dash_Art_T3",
         "name": "Shield Dash",
-        "desc": "<red>CA:</>Add DEF to attacks. then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
+        "desc": "<red>CA:</>Add DEF to attacks, then gain Canter (8) for 1 turn. <green>CD:2 Turns</>",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -64452,12 +65035,12 @@
         ],
         "components": [
             [
-                "give_ally_status_after_combat",
-                "Archbishops_Blessing_Buff"
-            ],
-            [
                 "combat_condition",
                 "item_system.weapon_type(unit, item) == 'Staff' and unit2.team == 'player'"
+            ],
+            [
+                "give_ally_status_after_combat",
+                "Archbishops_Blessing_Buff"
             ],
             [
                 "feat",
@@ -68199,7 +68782,7 @@
     {
         "nid": "Fiendish_Blessing_T3",
         "name": "Fiendish Blessing",
-        "desc": "<red>CA: </>Staff Range +2. <green>CD:0 Turns</>\nAllies healed by this unit gain +10% Str/Mag until the end of chapter.\nMax 3 stacks.",
+        "desc": "Staff Range +2.\nAllies healed by this unit gain +10% STR/MAG until the end of chapter.\nMax 3 stacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             5,

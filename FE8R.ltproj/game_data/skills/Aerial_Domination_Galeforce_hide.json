@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Aerial_Domination_Galeforce_hide",
+        "name": "Aerial Domination",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "combat_condition",
+                "has_skill(target, 'Breached_8')"
+            ],
+            [
+                "drain_charge",
+                4
+            ],
+            [
+                "galeforce",
+                null
+            ]
+        ]
+    }
+]

@@ -2,7 +2,7 @@
     {
         "nid": "Captains_Sword",
         "name": "Captain's Sword",
-        "desc": "A sword Dozla got from the captain of the ship he served on.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>+3 SPD.",
+        "desc": "A sword Dozla got from the captain of the ship he served on.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>STR + MOV*3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*3))}</>), targets weaker of DEF or RES, +3 SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             2,
@@ -99,6 +99,14 @@
                     "Water",
                     "Thunder"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MOV_MID"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
             ]
         ]
     }

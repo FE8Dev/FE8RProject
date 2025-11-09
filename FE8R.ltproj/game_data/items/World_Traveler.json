@@ -2,7 +2,7 @@
     {
         "nid": "World_Traveler",
         "name": "World Traveler",
-        "desc": "A sword for one experienced in battles around the world.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>+10 SPD.",
+        "desc": "A sword for one experienced in battles around the world.\n<green>Skills:</>Seawalk, Flash Step, Torrential Rain (on kill) <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</>STR + MOV*5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>), targets weaker of DEF or RES, +10 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             26,
@@ -99,6 +99,18 @@
                     "Water",
                     "Thunder"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_MOV_STRONG"
+            ],
+            [
+                "alternate_resist_formula",
+                "DEF_RES_MIN"
             ]
         ]
     }

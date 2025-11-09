@@ -2,7 +2,7 @@
     {
         "nid": "Kaboomle_Staff",
         "name": "Kaboomle Staff",
-        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
+        "desc": "L'arachel unleashes an even flashier and bigger explosion against evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), Cannot miss, can't crit.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             2,
@@ -96,6 +96,10 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_MID"
             ]
         ]
     }

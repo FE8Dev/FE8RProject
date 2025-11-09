@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Heavy_Slayer",
+        "name": "Heavy Slayer",
+        "desc": "Swords attacks become Effective against Monsters.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            15
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "condition",
+                "unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Sword')"
+            ],
+            [
+                "item_override",
+                "Slayer"
+            ]
+        ]
+    }
+]

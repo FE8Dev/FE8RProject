@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Burst",
         "name": "Dark Burst",
-        "desc": "A dark burst of fire casted from a long range. <green>CD:3</>\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Siege.",
+        "desc": "A dark burst of fire casted from a long range. <green>CD:4</>\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Heavy, Siege, MAG + SKL + CON*2.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             25,
@@ -67,7 +67,7 @@
             ],
             [
                 "cooldown",
-                3
+                4
             ],
             [
                 "battle_cast_anim",
@@ -109,6 +109,10 @@
                     "Dark",
                     "Fire"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
             ]
         ]
     }

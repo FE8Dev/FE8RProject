@@ -10,18 +10,16 @@
         ],
         "components": [
             [
-                "eval_max_range",
-                "2 if item_system.weapon_type(unit, item) == 'Staff' else 0"
+                "hidden",
+                null
             ],
             [
-                "lost_on_end_combat2",
-                {
-                    "lost_on_self": true,
-                    "lost_on_ally": true,
-                    "lost_on_enemy": true,
-                    "lost_on_splash": true,
-                    "only_if_initiated": false
-                }
+                "condition",
+                "item_system.weapon_type(unit, item) == 'Staff'"
+            ],
+            [
+                "modify_maximum_range",
+                2
             ]
         ]
     }

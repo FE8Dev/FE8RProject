@@ -2,7 +2,7 @@
     {
         "nid": "Reliable_One",
         "name": "Reliable One",
-        "desc": "Kyle is a handy man to have around.\n<green>Skills:</>Prepared+, G.L. Mastery, Lance Guard (SS)\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</>Heavy",
+        "desc": "Kyle is a handy man to have around.\n<green>Skills:</>Prepared+, G.L. Mastery, Lance Guard (SS)\n<orange>Element:</><icon>Earth</><icon>Light</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             25,
@@ -111,6 +111,10 @@
                 [
                     "Rock_Punctures"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Hisame",
         "name": "Hisame",
-        "desc": "A katana with a whole storm contained in its blade.\n<green>Skills:</>Crimson Snow (On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Uses SPD, +5 SPD.",
+        "desc": "A katana with a whole storm contained in its blade.\n<green>Skills:</>Crimson Snow (On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>SPD + RES/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('RES')//2))}</>), +5 SPD.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             3,
@@ -88,7 +88,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "ATTACK_SPEED"
+                "SPD_RES_MID"
             ],
             [
                 "effective_damage",

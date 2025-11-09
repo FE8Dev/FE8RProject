@@ -1,0 +1,29 @@
+[
+    {
+        "nid": "Aerial_Domination",
+        "name": "Aerial Domination",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "combat_condition",
+                "not item_funcs.is_magic(unit, unit.get_weapon())"
+            ],
+            [
+                "savage_status",
+                {
+                    "status": "Breached_8",
+                    "range": 3
+                }
+            ]
+        ]
+    }
+]

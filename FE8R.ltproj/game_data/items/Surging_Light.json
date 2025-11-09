@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Surging_Light",
+        "name": "Surging Light",
+        "desc": "A light tome made for starting long term sieges. <green>CD:4</>\n<orange>Element:</><icon>Thunder</><icon>Light</>\n<red>Effective:</><icon>Armor</><icon>Drenched</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, Siege, MAG/2 + SKL/2 + CON*1.5 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            4,
+            4
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "damage",
+                15
+            ],
+            [
+                "hit",
+                90
+            ],
+            [
+                "crit",
+                8
+            ],
+            [
+                "weight",
+                10
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "cooldown",
+                4
+            ],
+            [
+                "battle_cast_anim",
+                "Holy_Bolt"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Saleh"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder",
+                    "Light"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
+            ]
+        ]
+    }
+]

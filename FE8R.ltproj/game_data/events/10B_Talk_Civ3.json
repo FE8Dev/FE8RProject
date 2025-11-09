@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "10B",
+        "condition": "check_pair('Ephraim','Civ3')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;Villager Man;Left",
+            "speak;Ephraim;May I talk to you for a minute, sir.|You mentioned about a strange man looking for a girl with indigo hair.|This strange man you mentioned...what was he like?",
+            "speak;Villager Man;Odd fellow, but polite enough.|Wore robes like some kind of sage or shaman.|Had this calm way about him, like nothing could rattle him.|Spoke with an accent I didn't recognize.|Foreign, maybe from across the sands?",
+            "speak;Ephraim;And he was searching for someone with indigo hair?|Did he mention any other features?",
+            "speak;Villager Man;He only mentioned the hair.|Seemed pretty determined to find her, though.|Wonder if their paths ever crossed.",
+            "speak;Ephraim;I see...Thank you for the information.",
+            "multi_remove_portrait;Ephraim;Villager Man",
+            "give_bexp;2000"
+        ],
+        "nid": "10B Talk_Civ3"
+    }
+]

@@ -8,7 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{unit};Ballista"
+            "if;game.level_vars['Training'] != True",
+            "give_item;{unit};Ballista",
+            "else",
+            "end"
         ],
         "nid": "Global Siege_Knight_Get_Weapon"
     }

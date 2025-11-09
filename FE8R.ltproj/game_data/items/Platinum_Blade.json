@@ -2,7 +2,7 @@
     {
         "nid": "Platinum_Blade",
         "name": "Platinum Blade",
-        "desc": "A powerful heavy blade.\n<green>Skills:</>Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy.",
+        "desc": "A powerful heavy blade.\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             7,
@@ -94,9 +94,12 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Kaboom_Staff",
         "name": "Kaboom Staff",
-        "desc": "L'arachel unleashes a flashier explosion against evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
+        "desc": "L'arachel unleashes a flashier explosion against evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>), Cannot miss, can't crit.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             8,
@@ -96,6 +96,10 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_WEAK"
             ]
         ]
     }

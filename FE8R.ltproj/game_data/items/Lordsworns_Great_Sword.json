@@ -2,7 +2,7 @@
     {
         "nid": "Lordsworns_Great_Sword",
         "name": "Lordsworn's Great Sword",
-        "desc": "A masterfully-crafted straight greatsword, kept in a serviceable condition.\n<green>Skills:</>Improved Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</>\n<pink>Misc:</>Heavy, but still strikes first, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "desc": "A masterfully-crafted straight greatsword, kept in a serviceable condition.\n<green>Skills:</>Improved Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</>\n<pink>Misc:</>Heavy, but still strikes first, Cleaves, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             3,
@@ -56,8 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Improved_Speed_Swing",
-                    "Blade_Sweep"
+                    "Improved_Speed_Swing"
                 ]
             ],
             [
@@ -101,6 +100,14 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

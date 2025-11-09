@@ -8,7 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "give_item;{unit};Fire_Catapult"
+            "if;game.level_vars['Training'] != True",
+            "give_item;{unit};Fire_Catapult",
+            "else",
+            "end"
         ],
         "nid": "Global Catapult_Get_Weapon_Fire"
     }

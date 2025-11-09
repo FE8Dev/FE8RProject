@@ -1,0 +1,114 @@
+[
+    {
+        "nid": "Ashen_Bolt",
+        "name": "Ashen Bolt",
+        "desc": "A bow said to leave only ash as remains. <green>CD:3</>\n<orange>Element:</><icon>Fire</>\n<red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>Heavy, Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            10,
+            3
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "damage",
+                32
+            ],
+            [
+                "hit",
+                105
+            ],
+            [
+                "weapon_type",
+                "Bow"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "weight",
+                43
+            ],
+            [
+                "crit",
+                12
+            ],
+            [
+                "min_range",
+                5
+            ],
+            [
+                "max_range",
+                9
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Flying",
+                        "Horse",
+                        "Frozen"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Blade_Vantage_Effect"
+                ]
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Gerik"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "item_tags",
+                [
+                    "Fire"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
+            ],
+            [
+                "cooldown",
+                3
+            ]
+        ]
+    }
+]

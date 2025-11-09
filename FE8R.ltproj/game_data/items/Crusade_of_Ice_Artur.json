@@ -2,7 +2,7 @@
     {
         "nid": "Crusade_of_Ice_Artur",
         "name": "Crusade of Ice",
-        "desc": "Calls upon ice from the heavens to smite evil.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>+30 Crit damage, attacks deals full damage in Dual Strike.",
+        "desc": "Calls upon ice from the heavens to smite evil.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +30 Crit damage, attacks deals full damage in Dual Strike.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             9,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                10
+                12
             ],
             [
                 "hit",
@@ -108,6 +108,10 @@
                     "Ice",
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_MID"
             ]
         ]
     }

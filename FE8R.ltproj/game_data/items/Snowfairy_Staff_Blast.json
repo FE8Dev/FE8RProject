@@ -2,7 +2,7 @@
     {
         "nid": "Snowfairy_Staff_Blast",
         "name": "Snowfairy Staff (<icon>Blast</>)",
-        "desc": "A hidden snowfairy protects Natasha. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:6), cannot crit, always hits, cannot DS, no WEXP.",
+        "desc": "A hidden snowfairy protects Natasha. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), (AOE:6), cannot crit, always hits, cannot DS, no WEXP.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             3,
@@ -124,6 +124,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_STRONG"
             ]
         ]
     }

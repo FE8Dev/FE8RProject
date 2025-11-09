@@ -8,7 +8,10 @@
         "only_once": true,
         "priority": 20,
         "_source": [
-            "give_item;{unit};Sea_Breath"
+            "if;game.level_vars['Training'] != True",
+            "give_item;{unit};Sea_Breath",
+            "else",
+            "end"
         ],
         "nid": "Global Water_Dragon_Get_Weapon"
     }

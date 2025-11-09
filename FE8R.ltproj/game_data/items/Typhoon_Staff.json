@@ -2,7 +2,7 @@
     {
         "nid": "Typhoon_Staff",
         "name": "Typhoon Staff",
-        "desc": "A staff said to flood entire valleys.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cannot crit, always hits, (Shove:1).",
+        "desc": "A staff said to flood entire valleys.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>LCK + SKL (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>), Cannot crit, always hits, (Shove:1).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -94,6 +94,10 @@
                     "Water",
                     "Wind"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_STRONG"
             ]
         ]
     }

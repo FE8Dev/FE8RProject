@@ -2,7 +2,7 @@
     {
         "nid": "Rock_Punctures",
         "name": "Rock Punctures",
-        "desc": "-30 Avoid, reduce DEF and CON by 25% and unit takes 25% of damage dealt for 2 turns or after next combat.",
+        "desc": "-30 Avoid, reduce DEF and CON by 25% and unit takes 10% Max HP as non-lethal damage after combat for 2 turns or after next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             11,
@@ -77,8 +77,8 @@
                 "-30"
             ],
             [
-                "lifelink",
-                -0.25
+                "recoil_percent",
+                0.1
             ]
         ]
     }

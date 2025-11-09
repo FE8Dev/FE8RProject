@@ -2,7 +2,7 @@
     {
         "nid": "Night_Sky",
         "name": "Night Sky",
-        "desc": "A staff of the evening star. Starts on CD. <green>CD:3</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>Always hits, cannot Crit, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A staff of the evening star. Starts on CD. <green>CD:3</>\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>Always hits, cannot Crit, MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             8,

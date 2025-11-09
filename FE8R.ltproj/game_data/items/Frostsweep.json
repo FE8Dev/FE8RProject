@@ -2,7 +2,7 @@
     {
         "nid": "Frostsweep",
         "name": "Frostsweep",
-        "desc": "A blast of holy ice that sweeps away one's enemies.\n<orange>Element:</><icon>Ice</><icon>Light</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>+20 Crit damage, attacks deals full damage in Dual Strike.",
+        "desc": "A blast of holy ice that sweeps away one's enemies.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +20 Crit damage, attacks deals full damage in Dual Strike.",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             1,
@@ -27,7 +27,7 @@
             ],
             [
                 "damage",
-                6
+                8
             ],
             [
                 "hit",
@@ -108,6 +108,10 @@
                     "Ice",
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_WEAK"
             ]
         ]
     }

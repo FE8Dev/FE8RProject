@@ -2,7 +2,7 @@
     {
         "nid": "Iceflame_Sword",
         "name": "Iceflame Sword",
-        "desc": "Innes' sword can emit a long range wave attack.\n<green>Skills:</>Royal Pride\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Line attack:5), +1 SPD, cannot DS.",
+        "desc": "Innes' sword can emit a long range wave attack.\n<green>Skills:</>Royal Pride\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>), (Line attack:5), +1 SPD, cannot DS.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             13,
@@ -121,6 +121,10 @@
             [
                 "cannot_be_countered",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_WEAK"
             ]
         ]
     }

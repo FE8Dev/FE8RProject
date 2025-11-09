@@ -2,7 +2,7 @@
     {
         "nid": "Rain_Staff",
         "name": "Rain Staff",
-        "desc": "A staff that can summon rain from quite the distance.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Cannot crit, always hits.",
+        "desc": "A staff that can summon rain from quite the distance.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>LCK + SKL/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')//3))}</>), Cannot crit, always hits.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             3,
@@ -76,6 +76,10 @@
                 [
                     "Water"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_WEAK"
             ]
         ]
     }

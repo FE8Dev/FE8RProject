@@ -2,7 +2,7 @@
     {
         "nid": "Boil_Axe",
         "name": "Boil Axe",
-        "desc": "Cormag's rage combined with calm, mysterious water.\n<green>Skills:</>Steam Flow, Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>",
+        "desc": "Cormag's rage combined with calm, mysterious water.\n<green>Skills:</>Steam Flow, Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5)))}</>).",
         "icon_nid": "Cormag Axes",
         "icon_index": [
             0,
@@ -103,6 +103,10 @@
                     "Fire",
                     "Water"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_MID"
             ]
         ]
     }

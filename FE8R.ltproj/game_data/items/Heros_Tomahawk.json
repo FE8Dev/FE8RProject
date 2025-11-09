@@ -2,7 +2,7 @@
     {
         "nid": "Heros_Tomahawk",
         "name": "Hero's Tomahawk",
-        "desc": "The ultimate throwable axe for a hero.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Brave.",
+        "desc": "The ultimate throwable axe for a hero.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), Brave.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -31,7 +31,7 @@
             ],
             [
                 "hit",
-                100
+                110
             ],
             [
                 "crit",
@@ -98,6 +98,10 @@
                 [
                     "Light"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_STRONG"
             ]
         ]
     }

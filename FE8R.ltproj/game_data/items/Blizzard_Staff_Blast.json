@@ -2,7 +2,7 @@
     {
         "nid": "Blizzard_Staff_Blast",
         "name": "Blizzard Staff (<icon>Blast</>)",
-        "desc": "A staff used to create small blizzards. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(AOE:3), cannot crit, always hits, cannot DS, no WEXP gain.",
+        "desc": "A staff used to create small blizzards. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), (AOE:3), cannot crit, always hits, cannot DS, no WEXP gain.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             0,
@@ -124,6 +124,10 @@
                 [
                     "Ice"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_MID"
             ]
         ]
     }

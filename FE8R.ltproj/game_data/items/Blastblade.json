@@ -2,7 +2,7 @@
     {
         "nid": "Blastblade",
         "name": "Blastblade",
-        "desc": "A strange sword Kyle discovered.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>+1 SPD, +10 Bonus Crit Damage.",
+        "desc": "A strange sword Kyle discovered.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>DEF + SKL/3 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//3))}</>), +1 SPD, +10 Bonus Crit Damage.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -94,6 +94,10 @@
                 [
                     "Earth"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "DEF_SKL_WEAK"
             ]
         ]
     }

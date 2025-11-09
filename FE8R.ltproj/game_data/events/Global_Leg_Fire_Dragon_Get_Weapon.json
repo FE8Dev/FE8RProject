@@ -8,8 +8,11 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;game.level_vars['Training'] != True",
             "remove_item;{unit};Dragonstone",
-            "give_item;{unit};Nova_Breath"
+            "give_item;{unit};Nova_Breath",
+            "else",
+            "end"
         ],
         "nid": "Global Leg_Fire_Dragon_Get_Weapon"
     }

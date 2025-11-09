@@ -2,7 +2,7 @@
     {
         "nid": "Natasha_Dagger_X",
         "name": "Mercy",
-        "desc": "The only thing we have left to gift.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>Uses SKL, targets SPD, +20 SKL, +50 Crit Damage.",
+        "desc": "The only thing we have left to gift.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</>x3<icon>skill_icons 7, 41</>x3\n<pink>Misc:</>SKL + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')))}</>), targets SPD, +20 SKL, +50 Crit Damage.",
         "icon_nid": "New Daggers Natasha",
         "icon_index": [
             4,
@@ -111,7 +111,7 @@
             ],
             [
                 "alternate_resist_formula",
-                "ATTACK_SPEED"
+                "STR_SKL_STRONG"
             ]
         ]
     }

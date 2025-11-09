@@ -2,7 +2,7 @@
     {
         "nid": "Steam_Crusher",
         "name": "Steam Crusher",
-        "desc": "Steam can be both relaxing and deadly.\n<green>Skills:</>Steam Flow, Power Chop (SS)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>,Breach (15)\n<red>Effective:</><icon>Horse</>",
+        "desc": "Steam can be both relaxing and deadly.\n<green>Skills:</>Steam Flow, Power Chop (SS)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>,Breach (15)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Cormag Axes",
         "icon_index": [
             2,
@@ -103,6 +103,10 @@
                     "Fire",
                     "Water"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_CON_STRONG"
             ]
         ]
     }

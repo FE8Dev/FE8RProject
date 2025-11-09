@@ -1,0 +1,25 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "10B",
+        "condition": "check_pair('Ephraim','Civ1')",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "add_portrait;Ephraim;Right;no_block",
+            "add_portrait;OldMan1;Left",
+            "speak;Ephraim;Good afternoon mister.|I take you've lived in these parts for a long time, haven't you?",
+            "speak;OldMan1;Aye, that I have.|Been sailing these waters since before you were born, I'd wager.|The fog out here...it's relentless.|Rolls in thick as wool, it does.|Many a sailor has met their end in these cursed mists.",
+            "speak;Ephraim;It must take great skill to navigate in such conditions.",
+            "speak;OldMan1;Skill, aye, and a bit of luck too.|We always kept torches burning, even in the daytime.|Light's your only friend when you can't see past your own bow.|Course, nowadays my sailing days are over.|These old bones need rest more than adventure.",
+            "speak;Ephraim;Your knowledge of these waters is impressive.|Have you noticed anything unusual lately?",
+            "speak;OldMan1;Funny you should ask...|The fog's been stranger than usual.|Thicker, darker... almost like it's got a mind of its own.|I don't like it one bit.|You watch yourself out there, young man.|The sea's not to be trifled with, especially now.",
+            "speak;Ephraim;I'll keep that in mind.|Thank you for the warning.",
+            "multi_remove_portrait;Ephraim;OldMan1",
+            "give_bexp;2000"
+        ],
+        "nid": "10B Talk_Civ1"
+    }
+]

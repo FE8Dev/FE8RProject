@@ -2,7 +2,7 @@
     {
         "nid": "Big_Job",
         "name": "Big Job",
-        "desc": "A blade Gerik brings when the Job needs a little more power.\n<green>Skills:</>Money Blow, Blade Sweep\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy",
+        "desc": "A blade Gerik brings when the Job needs a little more power.\n<green>Skills:</>Money Blow\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             30,
@@ -87,8 +87,7 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Money_Blow",
-                    "Blade_Sweep"
+                    "Money_Blow"
                 ]
             ],
             [
@@ -100,6 +99,10 @@
             [
                 "wexp",
                 3
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

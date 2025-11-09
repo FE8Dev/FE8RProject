@@ -15,7 +15,7 @@
             ],
             [
                 "condition",
-                "unit.get_hp() <= unit.get_max_hp() // 2"
+                "unit.get_hp() <= unit.get_max_hp() * 0.75"
             ],
             [
                 "pass",
@@ -34,26 +34,18 @@
                 "stat_multiplier",
                 [
                     [
-                        "STR",
-                        0.5
-                    ],
-                    [
-                        "MAG",
-                        0.5
-                    ],
-                    [
-                        "SKL",
-                        0.5
-                    ],
-                    [
                         "DEF",
-                        1.3
+                        2.0
                     ],
                     [
                         "RES",
-                        1.3
+                        2.0
                     ]
                 ]
+            ],
+            [
+                "damage_multiplier",
+                0.5
             ]
         ]
     }

@@ -18,6 +18,7 @@
             "change_background;Clearing",
             "choice;NeimiTrainee;Promote Neimi to an Archer, or remain a Trainee?;Promote,Train",
             "if;game.game_vars['NeimiTrainee'] == 'Promote'",
+            "    autolevel_to;Neimi;7",
             "    promote;Neimi;Female_Archer;silent",
             "    remove_skill;Neimi;Paragon;no_banner",
             "    if;game.game_vars['FeatEnabler'] == 'Yes'",

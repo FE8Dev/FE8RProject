@@ -2,7 +2,7 @@
     {
         "nid": "L_Sepulchre",
         "name": "Sepulchre",
-        "desc": "A monument of what was.\n<green>Skills:</>Blade Sweep, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "A monument of what was.\n<green>Skills:</>Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, Cleaves, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -88,7 +88,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Aggravator"
                 ]
             ],
@@ -130,6 +129,10 @@
                         10
                     ]
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

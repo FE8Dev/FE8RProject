@@ -2,7 +2,7 @@
     {
         "nid": "Storm_Staff",
         "name": "Storm Staff",
-        "desc": "A staff that summons a mighty storm.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cannot crit, always hits, (Shove:1).",
+        "desc": "A staff that summons a mighty storm.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>LCK + SKL/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')//2))}</>), Cannot crit, always hits, (Shove:1).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             19,
@@ -94,6 +94,10 @@
                     "Water",
                     "Wind"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "LCK_SKL_MID"
             ]
         ]
     }

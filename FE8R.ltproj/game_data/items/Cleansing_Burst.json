@@ -1,0 +1,113 @@
+[
+    {
+        "nid": "Cleansing_Burst",
+        "name": "Cleansing Burst",
+        "desc": "A powerfully charged light tome given to a mage general. <green>CD:3</>\n<orange>Element:</><icon>Thunder</><icon>Light</>\n<red>Effective:</><icon>Armor</><icon>Drenched</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, Siege, MAG + SKL + CON*2.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            6,
+            4
+        ],
+        "components": [
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                3
+            ],
+            [
+                "max_range",
+                10
+            ],
+            [
+                "damage",
+                28
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "SS"
+            ],
+            [
+                "map_hit_add_blend",
+                [
+                    255,
+                    255,
+                    0
+                ]
+            ],
+            [
+                "siege_weapon",
+                null
+            ],
+            [
+                "cooldown",
+                3
+            ],
+            [
+                "battle_cast_anim",
+                "Aura_Bolt"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Saleh"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder",
+                    "Light"
+                ]
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_SKL_CON_STRONG"
+            ]
+        ]
+    }
+]

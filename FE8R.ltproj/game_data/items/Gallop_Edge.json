@@ -2,7 +2,7 @@
     {
         "nid": "Gallop_Edge",
         "name": "Gallop Edge",
-        "desc": "Sword of Mother Earth.\n<green>Skills:</>Blade Sweep, Traveling Storm\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "Sword of Mother Earth.\n<green>Skills:</>Traveling Storm\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, Cleaves, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             3,
@@ -91,7 +91,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Traveling_Storm"
                 ]
             ],
@@ -114,6 +113,10 @@
             [
                 "alternate_damage_formula",
                 "STR_MAG_MID"
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Armors_Bane",
         "name": "Stone Storm",
-        "desc": "A heavy blade that cleaves boulders.\n<green>Skills:</>Blade Sweep, Provoke\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A heavy blade that cleaves boulders.\n<green>Skills:</>Provoke\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>, Breach(15)\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, Cleaves, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             9,
@@ -73,7 +73,6 @@
                 "multi_status_on_equip",
                 [
                     "Blade_Vantage_Effect",
-                    "Blade_Sweep",
                     "Provoke_Weak",
                     "Counter_Point_Giver"
                 ]
@@ -116,6 +115,10 @@
                     "Wind",
                     "Earth"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

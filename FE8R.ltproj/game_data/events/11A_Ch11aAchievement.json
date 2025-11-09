@@ -3,7 +3,7 @@
         "name": "Ch11aAchievement",
         "trigger": "unit_death",
         "level_nid": "11A",
-        "condition": "game.level_vars['LarachelKill'] == 5",
+        "condition": "game.level_vars['LarachelKill'] == 5 and (unit.nid == 'Larachel' or unit2.nid == 'Larachel')",
         "commands": [],
         "only_once": true,
         "priority": 20,

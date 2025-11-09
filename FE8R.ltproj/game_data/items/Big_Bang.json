@@ -2,7 +2,7 @@
     {
         "nid": "Big_Bang",
         "name": "Big Bang",
-        "desc": "An explosion so powerful, L'arachel might make her own universe with it.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
+        "desc": "An explosion so powerful, L'arachel might make her own universe with it.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')))}</>), Cannot miss, can't crit.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             6,
@@ -96,6 +96,10 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_LCK_STRONG"
             ]
         ]
     }

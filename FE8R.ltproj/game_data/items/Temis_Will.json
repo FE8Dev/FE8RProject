@@ -1,0 +1,109 @@
+[
+    {
+        "nid": "Temis_Will",
+        "name": "Temis Will",
+        "desc": "This sword foretells the fall of those who follow the path of darkness, there is only one end before it.\n<green>Skills:</>Vantage+, Flash Step \n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Thief</><icon>Pirate</><icon>Shadow</>\n<pink>Misc:</>STR + SKL + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL') + (unit.get_stat('LCK'))))}</>), +15 SPD.",
+        "icon_nid": "Miria and Nyx weapons",
+        "icon_index": [
+            2,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                2
+            ],
+            [
+                "damage",
+                28
+            ],
+            [
+                "hit",
+                130
+            ],
+            [
+                "crit",
+                35
+            ],
+            [
+                "weight",
+                20
+            ],
+            [
+                "weapon_type",
+                "Sword"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step",
+                    "Vantage_Plus_Item"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "battle_cast_anim",
+                "Arrow"
+            ],
+            [
+                "prf_unit",
+                [
+                    "Nyx"
+                ]
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_LCK_STRONG"
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Pirate",
+                        "Thief",
+                        "Shadow"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ]
+        ]
+    }
+]
