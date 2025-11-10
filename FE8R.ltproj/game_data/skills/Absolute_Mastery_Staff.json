@@ -2,7 +2,7 @@
     {
         "nid": "Absolute_Mastery_Staff",
         "name": "Absolute Mastery",
-        "desc": "If unit's Staves magic rank = X rank, increment the attack range in 2.",
+        "desc": "If unit's Staves magic rank = X rank, increase max attack range by 2.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10,16 +10,16 @@
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "condition",
                 "u(\"Shiro\").wexp['Staff'] >= 480"
             ],
             [
                 "modify_maximum_range",
                 2
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     }
