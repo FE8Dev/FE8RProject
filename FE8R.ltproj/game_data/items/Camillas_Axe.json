@@ -1,0 +1,112 @@
+[
+    {
+        "nid": "Camillas_Axe",
+        "name": "Camilla's Axe",
+        "desc": "An axe long used by Camilla.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Lightning</>\n<red>Effective:</><icon>Armor</><icon>Drenched</> \n<pink>Misc:</>STR + RES/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//3))}</>), +5 RES.",
+        "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
+        "icon_index": [
+            38,
+            2
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                1
+            ],
+            [
+                "damage",
+                9
+            ],
+            [
+                "hit",
+                75
+            ],
+            [
+                "crit",
+                5
+            ],
+            [
+                "weight",
+                11
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Axe"
+            ],
+            [
+                "weapon_rank",
+                "E"
+            ],
+            [
+                "battle_cast_anim",
+                "ThrowingAxe"
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Breached_2"
+                ]
+            ],
+            [
+                "prf_unit",
+                [
+                    "Camilla"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Power_Chop_E"
+                ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_RES_WEAK"
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ]
+        ]
+    }
+]

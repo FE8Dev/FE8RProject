@@ -724,7 +724,7 @@
         "movement_group": "Mages",
         "promotes_from": "Eirika_Lord",
         "turns_into": [
-            "Eirika_T3_Empress",
+            "Eirika_T3_Queen",
             "Eirika_T3_Phantom_Lord",
             "Eirika_T3_Court_Royal"
         ],
@@ -21765,9 +21765,9 @@
         "fields": []
     },
     {
-        "nid": "Eirika_T3_Empress",
-        "name": "Empress",
-        "desc": "Eirika calls upon mighty dark powers she learned from Lyon's old books. <icon>Armor</><icon>Infantry</><icon>Magic</>",
+        "nid": "Eirika_T3_Queen",
+        "name": "Queen",
+        "desc": "Eirika calls upon mighty magical powers she learned from Lyon's old books. <icon>Armor</><icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Mages",
         "promotes_from": "Eirika_T2MageLord",
@@ -21866,8 +21866,8 @@
                 300
             ],
             "Axe": [
-                true,
-                300,
+                false,
+                0,
                 480
             ],
             "Bow": [
@@ -21911,8 +21911,8 @@
             0,
             0
         ],
-        "map_sprite_nid": "Lord (F) Hector Axe {Shin19}-stand",
-        "combat_anim_nid": "Eirika_T3_Empress",
+        "map_sprite_nid": "Lord (F) Eirika Beta {Ryn}-stand",
+        "combat_anim_nid": "Eirika_Queen",
         "fields": []
     },
     {
@@ -25088,7 +25088,7 @@
     },
     {
         "nid": "Ephraim_T3_General_Lord",
-        "name": "General Lord",
+        "name": "King",
         "desc": "Ephraim wields mighty armor and shield to protect those he cares about. <icon>Infantry</><icon>Armor</>",
         "tier": 3,
         "movement_group": "Armors",
@@ -25317,15 +25317,15 @@
             ],
             [
                 15,
-                "Elemental_Storm_Frozen"
+                "Dark_Typhoon_Frozen"
             ],
             [
                 15,
-                "Elemental_Storm_Burning_hide"
+                "Dark_Typhoon_Burning_hide"
             ],
             [
                 15,
-                "Elemental_Storm_Drenched_hide"
+                "Dark_Typhoon_Drenched_hide"
             ],
             [
                 1,
@@ -99165,7 +99165,7 @@
             ],
             [
                 15,
-                "Magnum_Opus_1"
+                "Magnum_Opus"
             ],
             [
                 1,
@@ -106559,7 +106559,7 @@
             ],
             [
                 15,
-                "Magnum_Opus_1"
+                "Magnum_Opus"
             ],
             [
                 1,
@@ -118220,7 +118220,7 @@
             "MOV": -98
         },
         "max_stats": {
-            "HP": 60,
+            "HP": 240,
             "STR": 30,
             "MAG": 30,
             "SKL": 30,
@@ -118247,6 +118247,14 @@
             [
                 1,
                 "Pirate_Pair_Up_hide"
+            ],
+            [
+                1,
+                "Steal_hide"
+            ],
+            [
+                1,
+                "Locktouch_hide"
             ]
         ],
         "wexp_gain": {
@@ -118307,7 +118315,7 @@
             0
         ],
         "map_sprite_nid": "Pirate (F) Axe {flasuban, Mikey_Seregon}-stand-stand",
-        "combat_anim_nid": "Berserker_Female",
+        "combat_anim_nid": "Pirate_Female",
         "fields": []
     },
     {
@@ -118375,14 +118383,14 @@
             "MOV": -98
         },
         "max_stats": {
-            "HP": 250,
-            "STR": 50,
-            "MAG": 50,
-            "SKL": 50,
-            "SPD": 50,
-            "LCK": 50,
-            "DEF": 50,
-            "RES": 50,
+            "HP": 480,
+            "STR": 68,
+            "MAG": 63,
+            "SKL": 62,
+            "SPD": 61,
+            "LCK": 70,
+            "DEF": 62,
+            "RES": 65,
             "CON": 30,
             "MOV": 15
         },
@@ -118401,7 +118409,7 @@
             ],
             [
                 1,
-                "Crit_P10"
+                "Crit_P10_hide"
             ]
         ],
         "wexp_gain": {
@@ -118519,7 +118527,7 @@
         },
         "promotion": {
             "HP": 7,
-            "STR": 30,
+            "STR": 8,
             "MAG": 20,
             "SKL": 5,
             "SPD": 5,
@@ -118530,14 +118538,14 @@
             "MOV": -98
         },
         "max_stats": {
-            "HP": 500,
-            "STR": 93,
-            "MAG": 74,
-            "SKL": 72,
-            "SPD": 81,
-            "LCK": 80,
-            "DEF": 73,
-            "RES": 75,
+            "HP": 640,
+            "STR": 98,
+            "MAG": 94,
+            "SKL": 92,
+            "SPD": 91,
+            "LCK": 100,
+            "DEF": 93,
+            "RES": 95,
             "CON": 40,
             "MOV": 15
         },
@@ -118568,7 +118576,7 @@
             ],
             [
                 1,
-                "Crit_P20"
+                "Crit_P20_hide"
             ]
         ],
         "wexp_gain": {

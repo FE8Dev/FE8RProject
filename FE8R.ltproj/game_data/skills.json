@@ -18444,7 +18444,7 @@
     },
     {
         "nid": "Shield_Aura_Aura",
-        "name": "Shield Aura",
+        "name": "Queen's Aura",
         "desc": "Reduce the damage of allies taken based on their DEF/3.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -18464,7 +18464,7 @@
     },
     {
         "nid": "Shield_Aura",
-        "name": "Shield Aura",
+        "name": "Queen's Aura",
         "desc": "Allies within 3 spaces have reduced damage taken based on unit's DEF/3.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -23546,9 +23546,9 @@
         ]
     },
     {
-        "nid": "Elemental_Storm_Frozen",
-        "name": "Elemental Storm",
-        "desc": "x2.5 damage when using Anima magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
+        "nid": "Dark_Typhoon_Frozen",
+        "name": "Dark Typhoon",
+        "desc": "x2.5 damage when using Dark magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -23561,7 +23561,7 @@
             ],
             [
                 "condition",
-                "item_system.weapon_type(unit, item) == 'Anima'"
+                "item_system.weapon_type(unit, item) == 'Dark'"
             ],
             [
                 "savage_status",
@@ -23577,9 +23577,9 @@
         ]
     },
     {
-        "nid": "Elemental_Storm_Burning_hide",
-        "name": "Elemental Storm",
-        "desc": "x2.5 damage when using Anima magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
+        "nid": "Dark_Typhoon_Burning_hide",
+        "name": "Dark Typhoon",
+        "desc": "x2.5 damage when using Dark magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -23604,9 +23604,9 @@
         ]
     },
     {
-        "nid": "Elemental_Storm_Drenched_hide",
-        "name": "Elemental Storm",
-        "desc": "x2.5 damage when using Anima magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
+        "nid": "Dark_Typhoon_Drenched_hide",
+        "name": "Dark Typhoon",
+        "desc": "x2.5 damage when using Dark magic, and inflict Frozen, Seared, and Drenched to enemies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -46835,6 +46835,10 @@
                 3
             ],
             [
+                "upkeep_charge_increase",
+                1
+            ],
+            [
                 "ability",
                 "Fiendish_Call_Lindsey"
             ]
@@ -47598,7 +47602,7 @@
     {
         "nid": "Tethered",
         "name": "Tethered",
-        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, or on summon death.",
+        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, in 3 turns, or on summon death.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -47621,6 +47625,10 @@
                         -10
                     ]
                 ]
+            ],
+            [
+                "time",
+                3
             ]
         ]
     },
@@ -56464,7 +56472,7 @@
     {
         "nid": "Aerial_Domination",
         "name": "Aerial Domination",
-        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces after combat when using physical weapons.\nUnit gains Galeforce up to 4 times a turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -56491,7 +56499,7 @@
     {
         "nid": "Aerial_Domination_Galeforce_hide",
         "name": "Aerial Domination",
-        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces when using physical weapons\nUnit gains Galeforce when killing an enemy with the status.\nWorks up to 4 times a turn.",
+        "desc": "Attacks inflict Breached (8) to enemies within 3 spaces after combat when using physical weapons.\nUnit gains Galeforce up to 4 times a turn.",
         "icon_nid": "skill_icons",
         "icon_index": [
             9,
@@ -56505,6 +56513,10 @@
             [
                 "combat_condition",
                 "has_skill(target, 'Breached_8')"
+            ],
+            [
+                "upkeep_charge_increase",
+                4
             ],
             [
                 "drain_charge",
@@ -66014,8 +66026,8 @@
             [
                 "copysafe",
                 [
-                    "Elemental_Storm_Burning_hide",
-                    "Elemental_Storm_Drenched_hide"
+                    "Dark_Typhoon_Burning_hide",
+                    "Dark_Typhoon_Drenched_hide"
                 ]
             ]
         ]

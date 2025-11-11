@@ -2,7 +2,7 @@
     {
         "nid": "Tethered",
         "name": "Tethered",
-        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, or on summon death.",
+        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, in 3 turns, or on summon death.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -25,6 +25,10 @@
                         -10
                     ]
                 ]
+            ],
+            [
+                "time",
+                3
             ]
         ]
     }
