@@ -2,7 +2,7 @@
     {
         "nid": "Absolute_Mastery_Light",
         "name": "Absolute Mastery",
-        "desc": "If unit's Light magic rank = X rank, the user gains +2 attacks extra (+4 if unit double).",
+        "desc": "If unit's Light magic rank = X rank, the user gains +2 extra attacks (+4 if unit doubles).",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -10,16 +10,16 @@
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "condition",
                 "u(\"Shiro\").wexp['Light'] >= 480"
             ],
             [
                 "dynamic_multiattacks",
                 "2"
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     }

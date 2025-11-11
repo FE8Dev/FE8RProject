@@ -2,7 +2,7 @@
     {
         "nid": "Ghost_Shoes",
         "name": "Ghost Shoes",
-        "desc": "Ignore Terrain, +5 SPD, but reduce Max HP by 30% and -60% HP growth.",
+        "desc": "Gain flying movement and +10 SPD, but reduce Max HP by 20%.\n10% chance to avoid any attack(except AOE and unavoidable ones)",
         "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b_1",
         "icon_index": [
             8,
@@ -18,25 +18,28 @@
                 [
                     [
                         "SPD",
-                        5
+                        10.0
                     ]
                 ]
+            ],
+            [
+                "proc_rate",
+                "TEN"
+            ],
+            [
+                "defense_proc",
+                "Ghost_Shoes_Evade"
+            ],
+            [
+                "attack_proc",
+                "Ghost_Shoes_Evade"
             ],
             [
                 "stat_multiplier",
                 [
                     [
                         "HP",
-                        0.7
-                    ]
-                ]
-            ],
-            [
-                "growth_change",
-                [
-                    [
-                        "HP",
-                        -60
+                        0.8
                     ]
                 ]
             ]
