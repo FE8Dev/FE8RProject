@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Blessing",
+        "trigger": null,
+        "level_nid": null,
+        "condition": "True",
+        "commands": [],
+        "only_once": false,
+        "priority": 20,
+        "_source": [
+            "#pyev1",
+            "uni = u(unit)",
+            "mag = uni.stats['MAG']",
+            "# will need modifications in case enemies get feats",
+            "alies = get_allies_within_distance(uni, 1)",
+            "",
+            "for i in range(len(alies)):",
+            "#if is needed so it doesn't heal the user",
+            "    if alies[i].nid != uni.nid:",
+            "        ps = alies[i].get_hp()",
+            "        ps += mag",
+            "        $set_current_hp alies[i] ps"
+        ],
+        "nid": "Global Blessing"
+    }
+]
