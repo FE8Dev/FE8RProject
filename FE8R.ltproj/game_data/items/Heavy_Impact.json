@@ -2,7 +2,7 @@
     {
         "nid": "Heavy_Impact",
         "name": "Heavy Thunderbolt",
-        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</>G.L. Mastery, Provoke, Lance Guard (A) \n<orange>Element:</><icon>Dark</><icon>Thunder</> <red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</> \n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8) <pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "desc": "Even thick armor can feel the impact of this lance.\n<green>Skills:</><icon>skill_icons 9, 28</><icon>skill_icons 0, 34</><icon>skill_icons 1, 29</> (A) \n<orange>Element:</><icon>Dark</><icon>Thunder</> <red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</> \n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8) <pink>Misc:</><icon>skill_icons 7, 35</> STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             7,
@@ -117,6 +117,18 @@
             [
                 "alternate_damage_formula",
                 "STR_DEF_STRONG"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Lance_Guard_A",
+                    "Blade_Vantage_Effect",
+                    "Greatlance_Mastery",
+                    "Provoke_Weak",
+                    "Counter_Point_Giver",
+                    "Shadow_Blight",
+                    "Cursed_8"
+                ]
             ]
         ]
     }
