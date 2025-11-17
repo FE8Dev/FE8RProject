@@ -1,21 +1,27 @@
 [
     {
         "nid": "Luckblade1",
-        "name": "Luckblade1",
-        "desc": "",
-        "icon_nid": null,
+        "name": "Luckblade",
+        "desc": "Inflicts one of the following statuses at random:\nSeared , Drenched, Frozen, Rock Punctures or Shadowblight",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            4,
+            46
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "event_before_combat",
                 "Global Luckblade1"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Seared",
+                    "Drench_Debuff",
+                    "Frozen",
+                    "Rock_Punctures",
+                    "Shadow_Blight"
+                ]
             ]
         ]
     }

@@ -1,21 +1,32 @@
 [
     {
         "nid": "Luckblade3",
-        "name": "Luckblade3",
-        "desc": "",
-        "icon_nid": null,
+        "name": "Luckblade++",
+        "desc": "Inflicts three of the following statuses at random:\nSeared , Drenched, Frozen, Rock Punctures, Shadowblight, Sleep, Venom, Burned, Silenced or Stunned",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            4,
+            46
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "event_before_combat",
                 "Global Luckblade3"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Seared",
+                    "Drench_Debuff",
+                    "Frozen",
+                    "Rock_Punctures",
+                    "Shadow_Blight",
+                    "Sleep",
+                    "Venomous_Effect",
+                    "Burned",
+                    "Silence",
+                    "Stun"
+                ]
             ]
         ]
     }
