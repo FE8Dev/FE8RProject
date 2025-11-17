@@ -895,7 +895,10 @@
             {
                 "action": "Attack",
                 "target": "Enemy",
-                "target_spec": null,
+                "target_spec": [
+                    "Team",
+                    "enemy"
+                ],
                 "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
@@ -903,20 +906,26 @@
                 "condition": ""
             },
             {
-                "action": "None",
-                "target": "None",
-                "target_spec": null,
-                "view_range": 0,
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Team",
+                    "enemy2"
+                ],
+                "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
                 "condition": ""
             },
             {
-                "action": "None",
-                "target": "None",
-                "target_spec": null,
-                "view_range": 0,
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Team",
+                    "player"
+                ],
+                "view_range": -4,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -924,7 +933,7 @@
             }
         ],
         "priority": 10,
-        "offense_bias": 2.0,
+        "offense_bias": 10.0,
         "roam_ai": false
     },
     {

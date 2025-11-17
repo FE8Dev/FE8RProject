@@ -2,7 +2,7 @@
     {
         "nid": "Geyser_Blasts",
         "name": "Geyser Blasts",
-        "desc": "A spell that summons multiple geysers. <green>CD:1</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (50%), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), (Multi-target:4).",
+        "desc": "A spell that summons multiple geysers.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (50%), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), Cleaves.",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             8,
@@ -23,11 +23,11 @@
             ],
             [
                 "max_range",
-                3
+                1
             ],
             [
                 "damage",
-                12
+                17
             ],
             [
                 "hit",
@@ -80,7 +80,6 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Seawalk",
                     "Drench",
                     "Water_AOE_Splash"
                 ]
@@ -90,16 +89,8 @@
                 "AnimaSplash_SS"
             ],
             [
-                "cooldown",
-                1
-            ],
-            [
                 "value",
                 2000
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
             ],
             [
                 "map_hit_sfx",
@@ -110,21 +101,13 @@
                 "MAG_SKL_STRONG"
             ],
             [
-                "multi_target",
-                4
-            ],
-            [
-                "allow_less_than_max_targets",
-                null
-            ],
-            [
                 "item_tags",
                 [
                     "Water"
                 ]
             ],
             [
-                "cannot_be_countered",
+                "enemy_cleave_aoe",
                 null
             ]
         ]

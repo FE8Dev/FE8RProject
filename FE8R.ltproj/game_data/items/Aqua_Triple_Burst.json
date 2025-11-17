@@ -2,7 +2,7 @@
     {
         "nid": "Aqua_Triple_Burst",
         "name": "Triple Burst",
-        "desc": "A triple blast of high speed water. <green>CD:1</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), (Multi-target:3).",
+        "desc": "A triple blast of high speed water.\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (30%), cannot DS, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), Cleaves.",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             4,
@@ -23,11 +23,11 @@
             ],
             [
                 "max_range",
-                3
+                1
             ],
             [
                 "damage",
-                6
+                12
             ],
             [
                 "hit",
@@ -76,7 +76,6 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Seawalk",
                     "Drench",
                     "Water_AOE_Splash"
                 ]
@@ -98,20 +97,8 @@
                 "WaterBlast"
             ],
             [
-                "multi_target",
-                3
-            ],
-            [
-                "allow_less_than_max_targets",
-                null
-            ],
-            [
                 "alternate_damage_formula",
                 "MAG_SKL_MID"
-            ],
-            [
-                "cooldown",
-                1
             ],
             [
                 "item_tags",
@@ -120,11 +107,7 @@
                 ]
             ],
             [
-                "cannot_be_countered",
-                null
-            ],
-            [
-                "exempt_from_dual_strike",
+                "enemy_cleave_aoe",
                 null
             ]
         ]

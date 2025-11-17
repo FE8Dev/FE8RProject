@@ -2,7 +2,7 @@
     {
         "nid": "Judge_and_Punish",
         "name": "Judge and Punish",
-        "desc": "It passes sentence on those who do evil.\n<green>Skills:</>Vantage+, Flash Step \n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Thief</><icon>Pirate</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), +5 SPD.",
+        "desc": "It passes sentence on those who do evil.\n<green>Skills:</>Vantage+, Flash Step \n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Steal</><icon>Pirate</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), +5 SPD.",
         "icon_nid": "Miria and Nyx weapons",
         "icon_index": [
             4,
@@ -91,10 +91,16 @@
                         "Thief"
                     ],
                     "effective_multiplier": 3,
-                    "effective_bonus_damage": 0,
+                    "effective_bonus_damage": 5,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
+            ],
+            [
+                "item_tags",
+                [
+                    "Light"
+                ]
             ]
         ]
     }

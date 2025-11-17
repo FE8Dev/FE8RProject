@@ -1434,12 +1434,12 @@
     },
     {
         "nid": "Flash_Step",
-        "name": "Flash Step",
+        "name": "Flash Step <icon>skill_icons 0, 29</>",
         "desc": "Gives sword users a bonus attack when unit's AS +5 >= enemy's AS.",
-        "icon_nid": "Sword",
+        "icon_nid": "skill_icons",
         "icon_index": [
             0,
-            0
+            29
         ],
         "components": [
             [
@@ -34986,8 +34986,8 @@
     },
     {
         "nid": "Seared",
-        "name": "Seared",
-        "desc": "Reduce SKL and STR by 25% and Wind weapons are now effective against this unit for 2 turns or next combat.",
+        "name": "Seared <icon>Seared</>",
+        "desc": "Reduce SKL and STR by 25% and Wind weapons (<icon>Wind</>) are now effective against this unit for 2 turns or next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
             12,
@@ -37054,7 +37054,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit.get_stat('STR') >= target.get_stat('STR')"
+                "(unit.get_stat('STR') >= target.get_stat('STR') and (unit2.team == 'enemy' or unit2.team == 'enemy2'))"
             ],
             [
                 "dynamic_attacks",
@@ -50377,7 +50377,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit.get_stat('MAG') >= target.get_stat('MAG')"
+                "(unit.get_stat('MAG') >= target.get_stat('MAG') and (unit2.team == 'enemy' or unit2.team == 'enemy2'))"
             ],
             [
                 "dynamic_attacks",
@@ -56162,7 +56162,7 @@
     {
         "nid": "Ghost_Shoes",
         "name": "Ghost Shoes",
-        "desc": "Ignore Terrain, +5 SPD, but reduce Max HP by 30% and -60% HP growth.",
+        "desc": "Gain flying movement and +10 SPD, but reduce Max HP by 20%.\n10% chance to avoid any attack(except AOE and unavoidable ones)",
         "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b_1",
         "icon_index": [
             8,
@@ -56178,27 +56178,68 @@
                 [
                     [
                         "SPD",
-                        5
+                        10.0
                     ]
                 ]
+            ],
+            [
+                "proc_rate",
+                "TEN"
+            ],
+            [
+                "defense_proc",
+                "Ghost_Shoes_Evade"
+            ],
+            [
+                "attack_proc",
+                "Ghost_Shoes_Evade"
             ],
             [
                 "stat_multiplier",
                 [
                     [
                         "HP",
-                        0.7
+                        0.8
                     ]
                 ]
+            ]
+        ]
+    },
+    {
+        "nid": "Ghost_Shoes_Evade",
+        "name": "Ghost Shoes",
+        "desc": "",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
+        "icon_index": [
+            8,
+            9
+        ],
+        "components": [
+            [
+                "hidden",
+                null
             ],
             [
-                "growth_change",
-                [
-                    [
-                        "HP",
-                        -60
-                    ]
-                ]
+                "dynamic_avoid",
+                "999"
+            ],
+            [
+                "lost_on_end_combat2",
+                {
+                    "lost_on_self": true,
+                    "lost_on_ally": true,
+                    "lost_on_enemy": true,
+                    "lost_on_splash": true,
+                    "only_if_initiated": false
+                }
+            ],
+            [
+                "lost_on_take_hit",
+                null
+            ],
+            [
+                "lost_on_strike",
+                null
             ]
         ]
     },
@@ -56229,7 +56270,7 @@
     {
         "nid": "Absolute_Mastery",
         "name": "Absolute Mastery",
-        "desc": "For every rank X of magic of the user, obtain the effects: if Anima magic rank = X :gets AOE*(2) in every attack. If Dark magic rank= X the attacks of the user ignore 100% RES. If Staves magic rank = X the attacks of the user increment the range in 2 and if Light magic rank = X user gains +2 extra attacks (+4 if unit doubles). ",
+        "desc": "For each magic weapon rank X reached, obtain special effects:\nStaves: User attacks gain +2 extra max range.\nLight: User gains +2 extra attacks (+4 if unit doubles). \nAnima: User gains AOE*(2) in every attack.\nDark : User attacks ignore 100% RES. \n",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
@@ -56238,6 +56279,54 @@
         "components": [
             [
                 "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Staff",
+        "name": "Absolute Mastery",
+        "desc": "If unit's Staves magic rank = X rank, increase max attack range by 2.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Staff'] >= 480"
+            ],
+            [
+                "modify_maximum_range",
+                2
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Absolute_Mastery_Light",
+        "name": "Absolute Mastery",
+        "desc": "If unit's Light magic rank = X rank, the user gains +2 extra attacks (+4 if unit doubles).",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "condition",
+                "u(\"Shiro\").wexp['Light'] >= 480"
+            ],
+            [
+                "dynamic_multiattacks",
+                "2"
+            ],
+            [
+                "grey_if_inactive",
                 null
             ]
         ]
@@ -56253,33 +56342,29 @@
         ],
         "components": [
             [
-                "hidden",
-                null
-            ],
-            [
                 "condition",
                 "u(\"Shiro\").wexp['Anima'] >= 480"
             ],
             [
                 "enemy_oversplash",
                 2
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
     {
         "nid": "Absolute_Mastery_Dark",
         "name": " Absolute Mastery",
-        "desc": "If unit's Dark magic rank = X rank, unit ignore 100% of RES in attack.",
+        "desc": "If unit's Dark magic rank = X rank, unit ignores 100% of RES in attacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             10,
             19
         ],
         "components": [
-            [
-                "hidden",
-                null
-            ],
             [
                 "condition",
                 "u(\"Shiro\").wexp['Dark'] >= 480"
@@ -56287,54 +56372,10 @@
             [
                 "dynamic_damage",
                 "unit2.get_stat('RES')"
-            ]
-        ]
-    },
-    {
-        "nid": "Absolute_Mastery_Light",
-        "name": "Absolute Mastery",
-        "desc": "If unit's Light magic rank = X rank, the user gains +2 attacks extra (+4 if unit double).",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            19
-        ],
-        "components": [
+            ],
             [
-                "hidden",
+                "grey_if_inactive",
                 null
-            ],
-            [
-                "condition",
-                "u(\"Shiro\").wexp['Light'] >= 480"
-            ],
-            [
-                "dynamic_multiattacks",
-                "2"
-            ]
-        ]
-    },
-    {
-        "nid": "Absolute_Mastery_Staff",
-        "name": "Absolute Mastery",
-        "desc": "If unit's Staves magic rank = X rank, increment the attack range in 2.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            19
-        ],
-        "components": [
-            [
-                "hidden",
-                null
-            ],
-            [
-                "condition",
-                "u(\"Shiro\").wexp['Staff'] >= 480"
-            ],
-            [
-                "modify_maximum_range",
-                2
             ]
         ]
     },
@@ -58358,7 +58399,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit.get_stat('MAG') >= target.get_stat('MAG')"
+                "(unit.get_stat('MAG') >= target.get_stat('MAG') and (unit2.team == 'enemy' or unit2.team == 'enemy2'))"
             ],
             [
                 "dynamic_attacks",

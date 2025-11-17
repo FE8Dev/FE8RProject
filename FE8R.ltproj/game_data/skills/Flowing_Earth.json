@@ -11,7 +11,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit.get_stat('MAG') >= target.get_stat('MAG')"
+                "(unit.get_stat('MAG') >= target.get_stat('MAG') and (unit2.team == 'enemy' or unit2.team == 'enemy2'))"
             ],
             [
                 "dynamic_attacks",

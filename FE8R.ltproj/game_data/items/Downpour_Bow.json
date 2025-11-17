@@ -2,7 +2,7 @@
     {
         "nid": "Downpour_Bow",
         "name": "Downpour Bow",
-        "desc": "A bow that can create a massive downpour. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')))}</>).",
+        "desc": "A bow that can create a massive downpour. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             6,
@@ -68,8 +68,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Bow_and_Light_Range_Penalty",
-                    "Seawalk"
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ],
             [
