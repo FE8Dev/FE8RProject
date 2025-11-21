@@ -1,5 +1,7 @@
 import json
+import re
 from pathlib import Path
+from typing import Any
 
 import FreeSimpleGUI as sg
 
@@ -22,6 +24,34 @@ def save_config(config: dict):
             json.dump(config, f, indent=4)
     except Exception as e:
         sg.popup_error(f"Failed to save configuration file: {e}")
+
+
+def load_item_nids(file_path: Path) -> set[str]:
+    item_nids = set()
+    if not file_path.exists():
+        return item_nids
+
+    try:
+        with file_path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+            if isinstance(data, list):
+                for item in data:
+                    if isinstance(item, dict) and "nid" in item:
+                        item_nids.add(item["nid"])
+            sg.popup_quick_message(
+                f"Successfully loaded {len(item_nids)} item nids for validation."
+            )
+    except Exception as e:
+        sg.popup_error(f"Failed to load item nids from {file_path.name}:\n{e}")
+        return set()
+
+    return item_nids
+
+
+def natural_sort_key(s):
+    return [
+        int(text) if text.isdigit() else text.lower() for text in re.split(r"(\d+)", s)
+    ]
 
 
 def load_chapter_data(levels_dir: Path) -> dict[str, list]:
@@ -60,8 +90,11 @@ def get_unit_info(chapter_data: list, unit_nids: list[str]) -> dict:
             for item_list in unit_data.get("starting_items", []):
                 item_nid = item_list[0]
                 is_droppable = item_list[1]
-                status = "Droppable" if is_droppable else "Not Droppable"
-                items.append(f"{item_nid} ({status})")
+
+                display_string = item_nid
+                if is_droppable:
+                    display_string += " (Droppable)"
+                items.append(display_string)
 
             unit_infos[nid] = {
                 "items": items,
@@ -84,7 +117,7 @@ def get_all_unit_nids(chapter_data: list) -> list[str]:
     return sorted(unit_list)
 
 
-def update_chapter_file(file_path: Path, chapter_data: list):
+def update_chapter_file(file_path: Path, chapter_data: list) -> bool:
     try:
         with file_path.open("w", encoding="utf-8") as f:
             json.dump(chapter_data, f, indent=4)
@@ -94,17 +127,29 @@ def update_chapter_file(file_path: Path, chapter_data: list):
         return False
 
 
-def create_layout(initial_ltproj_dir: str):
+def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list[Any]:
     left_column = [
         [sg.Text("LT Project Directory:")],
         [
             sg.Input(
                 key="-LTPROJ_DIR-",
                 enable_events=True,
-                size=(35, 1),
+                size=35,
                 default_text=initial_ltproj_dir,
             ),
             sg.FolderBrowse(target="-LTPROJ_DIR-"),
+        ],
+        [sg.Text("items.json File Path (for validation):")],
+        [
+            sg.Input(
+                key="-ITEMS_FILE_PATH-",
+                enable_events=True,
+                size=35,
+                default_text=initial_items_file_path,
+            ),
+            sg.FileBrowse(
+                target="-ITEMS_FILE_PATH-", file_types=(("JSON Files", "*.json"),)
+            ),
         ],
         [sg.Text("Select Chapter File:")],
         [
@@ -112,7 +157,7 @@ def create_layout(initial_ltproj_dir: str):
                 values=[],
                 key="-CHAPTER_FILE-",
                 enable_events=True,
-                size=(35, 1),
+                size=35,
                 readonly=True,
             )
         ],
@@ -121,7 +166,7 @@ def create_layout(initial_ltproj_dir: str):
             sg.Listbox(
                 values=[],
                 key="-UNIT_LIST-",
-                size=(35, 15),
+                size=(35, 10),
                 select_mode=sg.SELECT_MODE_EXTENDED,
                 enable_events=True,
             )
@@ -136,18 +181,36 @@ def create_layout(initial_ltproj_dir: str):
                 key="-ITEM_LIST-",
                 size=(45, 10),
                 select_mode=sg.SELECT_MODE_SINGLE,
+                enable_events=True,
             )
         ],
+        [sg.Button("Copy Item nid to Input", key="-COPY_ITEM_NID-", disabled=True)],
         [sg.Text("Item nid to Add/Delete:")],
         [
-            sg.Input(key="-ITEM_NID-", size=(20, 1), default_text="Item_nid"),
+            sg.Input(key="-ITEM_NID-", size=(20, 1), default_text=""),
             sg.Checkbox("Droppable", key="-Droppable-", default=False),
         ],
         [
             sg.Button("Add Item", key="-ADD_ITEM-", disabled=True),
-            sg.Button("Delete Item", key="-DELETE_ITEM-", disabled=True),
+            sg.Checkbox(
+                "Validate nid",
+                key="-VALIDATE_NID-",
+                default=True,
+            ),
         ],
-        [sg.Button("Save Changes", key="-SAVE_CHANGES-", disabled=True)],
+        [
+            sg.Button(
+                "Delete Item", key="-DELETE_ITEM-", disabled=True, button_color="red"
+            )
+        ],
+        [
+            sg.Button(
+                "Save Changes",
+                key="-SAVE_CHANGES-",
+                disabled=True,
+                button_color="green",
+            )
+        ],
     ]
 
     layout = [
@@ -158,33 +221,56 @@ def create_layout(initial_ltproj_dir: str):
     return layout
 
 
-def main_loop():
+def main():
     config = load_config()
     initial_ltproj_dir = config.get("ltproj_dir", "")
+    initial_items_file_path = config.get("items_file_path", "")
 
     window = sg.Window(
-        "Chapter Unit Editor", create_layout(initial_ltproj_dir), finalize=True
+        "Chapter Unit Item Batch Editor",
+        create_layout(initial_ltproj_dir, initial_items_file_path),
+        finalize=True,
     )
 
     current_ltproj_dir = initial_ltproj_dir
     current_chapter_file = ""
     chapter_data_map = {}
     current_unit_info = {}
+    current_items_file_path = initial_items_file_path
+    current_items_nids = set()
 
     if current_ltproj_dir:
         levels_dir = Path(current_ltproj_dir) / "game_data" / "levels"
         if levels_dir.exists():
             chapter_data_map = load_chapter_data(levels_dir)
-            chapter_files = sorted(chapter_data_map.keys())
+            chapter_files = sorted(chapter_data_map.keys(), key=natural_sort_key)
             window["-CHAPTER_FILE-"].update(values=chapter_files)
+
+    if current_items_file_path and Path(current_items_file_path).exists():
+        current_items_nids = load_item_nids(Path(current_items_file_path))
 
     while True:
         event, values = window.read()
 
-        if event == sg.WIN_CLOSED or event == "Exit":
+        if event in (sg.WIN_CLOSED, "Exit"):
             break
 
-        if event == "-LTPROJ_DIR-":
+        if event == "-ITEMS_FILE_PATH-":
+            new_items_file_path = values["-ITEMS_FILE_PATH-"]
+            current_items_file_path = new_items_file_path
+
+            if new_items_file_path:
+                config["items_file_path"] = new_items_file_path
+                save_config(config)
+
+            path = Path(current_items_file_path)
+            if path.exists():
+                current_items_nids = load_item_nids(path)
+            else:
+                current_items_nids = set()
+                sg.popup_quick_message("Items file not found or path is invalid.")
+
+        elif event == "-LTPROJ_DIR-":
             new_ltproj_dir = values["-LTPROJ_DIR-"]
 
             if new_ltproj_dir:
@@ -200,6 +286,7 @@ def main_loop():
             window["-ADD_ITEM-"].update(disabled=True)
             window["-DELETE_ITEM-"].update(disabled=True)
             window["-SAVE_CHANGES-"].update(disabled=True)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
             current_chapter_file = ""
             current_unit_info = {}
 
@@ -224,6 +311,7 @@ def main_loop():
             window["-ADD_ITEM-"].update(disabled=True)
             window["-DELETE_ITEM-"].update(disabled=True)
             window["-SAVE_CHANGES-"].update(disabled=True)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
             current_unit_info = {}
 
             current_chapter_data = chapter_data_map.get(current_chapter_file)
@@ -249,19 +337,56 @@ def main_loop():
             window["-ADD_ITEM-"].update(disabled=False)
             window["-DELETE_ITEM-"].update(disabled=False)
             window["-SAVE_CHANGES-"].update(disabled=False)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
+
+        elif event == "-ITEM_LIST-" and values["-ITEM_LIST-"]:
+            window["-COPY_ITEM_NID-"].update(disabled=False)
+
+        elif event == "-COPY_ITEM_NID-":
+            selected_items = values["-ITEM_LIST-"]
+            if selected_items:
+                item_string = selected_items[0]
+                item_nid = item_string.split(" ")[0]
+
+                window["-ITEM_NID-"].update(value=item_nid)
+                sg.popup_quick_message(f"Copied item nid: '{item_nid}'")
+            else:
+                sg.popup_quick_message("Please select an item to copy its nid.")
 
         elif event == "-ADD_ITEM-":
             new_item_nid = values["-ITEM_NID-"].strip()
             is_droppable = values["-Droppable-"]
             selected_unit_strings = values["-UNIT_LIST-"]
 
-            if not new_item_nid or new_item_nid == "Item_nid":
-                sg.popup_warning("Please enter a valid Item nid.")
+            if not new_item_nid:
+                sg.popup_quick_message("Please enter a valid item nid.")
                 continue
 
             if not selected_unit_strings:
-                sg.popup_warning("Please select at least one unit to add the item to.")
+                sg.popup_quick_message(
+                    "Please select at least one unit to add the item to."
+                )
                 continue
+
+            validate_nid = values["-VALIDATE_NID-"]
+            if validate_nid:
+                if not current_items_nids:
+                    if (
+                        sg.popup_yes_no(
+                            "items.json not loaded. Add item without validation?"
+                        )
+                        == "No"
+                    ):
+                        continue
+
+                elif new_item_nid not in current_items_nids:
+                    if (
+                        sg.popup_yes_no(
+                            f"Item nid '{new_item_nid}' not found in the loaded items.json file. Add item anyway?"
+                        )
+                        == "No"
+                    ):
+                        continue
 
             selected_unit_nids = [
                 unit_str.split(" ")[0] for unit_str in selected_unit_strings
@@ -279,6 +404,7 @@ def main_loop():
             first_unit_nid = selected_unit_nids[0]
             display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
             window["-ITEM_LIST-"].update(values=display_items)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
 
             sg.popup_quick_message(
                 f"Added {new_item_nid} to {len(selected_unit_nids)} unit(s).",
@@ -289,12 +415,12 @@ def main_loop():
             is_droppable_filter = values["-Droppable-"]
             selected_unit_strings = values["-UNIT_LIST-"]
 
-            if not item_nid_to_delete or item_nid_to_delete == "Item_nid":
-                sg.popup_warning("Please enter the Item nid you wish to delete.")
+            if not item_nid_to_delete:
+                sg.popup_quick_message("Please enter the item nid you wish to delete.")
                 continue
 
             if not selected_unit_strings:
-                sg.popup_warning("Please select at least one unit.")
+                sg.popup_quick_message("Please select at least one unit.")
                 continue
 
             selected_unit_nids = [
@@ -326,6 +452,7 @@ def main_loop():
             first_unit_nid = selected_unit_nids[0]
             display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
             window["-ITEM_LIST-"].update(values=display_items)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
 
             if units_modified_count > 0:
                 sg.popup_quick_message(
@@ -338,7 +465,7 @@ def main_loop():
 
         elif event == "-SAVE_CHANGES-":
             if not current_chapter_file:
-                sg.popup_warning("No chapter selected to save.")
+                sg.popup_quick_message("No chapter selected to save.")
                 continue
 
             file_path = (
@@ -367,4 +494,4 @@ def main_loop():
 
 
 if __name__ == "__main__":
-    main_loop()
+    main()
