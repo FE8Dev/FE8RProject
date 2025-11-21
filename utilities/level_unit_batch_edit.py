@@ -166,9 +166,16 @@ def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list
             sg.Listbox(
                 values=[],
                 key="-UNIT_LIST-",
-                size=(35, 10),
+                size=(35, 20),
                 select_mode=sg.SELECT_MODE_EXTENDED,
                 enable_events=True,
+            )
+        ],
+        [
+            sg.Button(
+                "Select Units by Same Class",
+                key="-SELECT_BY_CLASS-",
+                disabled=True,
             )
         ],
     ]
@@ -185,24 +192,46 @@ def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list
             )
         ],
         [sg.Button("Copy Item nid to Input", key="-COPY_ITEM_NID-", disabled=True)],
+        [
+            sg.Checkbox(
+                "Validate new item nid",
+                key="-VALIDATE_NID-",
+                default=True,
+            )
+        ],
+        [sg.HorizontalSeparator()],
         [sg.Text("Item nid to Add/Delete:")],
         [
-            sg.Input(key="-ITEM_NID-", size=(20, 1), default_text=""),
+            sg.Input(key="-ITEM_NID-", size=20, default_text=""),
             sg.Checkbox("Droppable", key="-Droppable-", default=False),
         ],
         [
             sg.Button("Add Item", key="-ADD_ITEM-", disabled=True),
-            sg.Checkbox(
-                "Validate nid",
-                key="-VALIDATE_NID-",
-                default=True,
-            ),
         ],
         [
             sg.Button(
                 "Delete Item", key="-DELETE_ITEM-", disabled=True, button_color="red"
             )
         ],
+        [sg.HorizontalSeparator()],
+        [sg.Text("Item nid to replace:")],
+        [
+            sg.Input(key="-OLD_ITEM_NID-", size=20, default_text=""),
+        ],
+        [sg.Text("New item nid:")],
+        [
+            sg.Input(key="-NEW_ITEM_NID-", size=20, default_text=""),
+            sg.Checkbox("Droppable", key="-NEW_Droppable-", default=False),
+        ],
+        [
+            sg.Button(
+                "Replace Item",
+                key="-REPLACE_ITEM-",
+                disabled=True,
+                button_color="orange",
+            )
+        ],
+        [sg.HorizontalSeparator()],
         [
             sg.Button(
                 "Save Changes",
@@ -287,6 +316,8 @@ def main():
             window["-DELETE_ITEM-"].update(disabled=True)
             window["-SAVE_CHANGES-"].update(disabled=True)
             window["-COPY_ITEM_NID-"].update(disabled=True)
+            window["-SELECT_BY_CLASS-"].update(disabled=True)
+            window["-REPLACE_ITEM-"].update(disabled=True)
             current_chapter_file = ""
             current_unit_info = {}
 
@@ -312,6 +343,8 @@ def main():
             window["-DELETE_ITEM-"].update(disabled=True)
             window["-SAVE_CHANGES-"].update(disabled=True)
             window["-COPY_ITEM_NID-"].update(disabled=True)
+            window["-SELECT_BY_CLASS-"].update(disabled=True)
+            window["-REPLACE_ITEM-"].update(disabled=True)
             current_unit_info = {}
 
             current_chapter_data = chapter_data_map.get(current_chapter_file)
@@ -337,7 +370,57 @@ def main():
             window["-ADD_ITEM-"].update(disabled=False)
             window["-DELETE_ITEM-"].update(disabled=False)
             window["-SAVE_CHANGES-"].update(disabled=False)
-            window["-COPY_ITEM_NID-"].update(disabled=True)
+            window["-COPY_ITEM_NID-"].update(disabled=False)
+            window["-SELECT_BY_CLASS-"].update(disabled=False)
+            window["-REPLACE_ITEM-"].update(disabled=False)
+
+            if not values["-ITEM_LIST-"]:
+                window["-COPY_ITEM_NID-"].update(disabled=True)
+
+        elif event == "-SELECT_BY_CLASS-":
+            selected_unit_strings = values["-UNIT_LIST-"]
+
+            if not selected_unit_strings:
+                sg.popup_quick_message(
+                    "Please select at least one unit to use as a class filter."
+                )
+                continue
+
+            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            if not current_chapter_data:
+                sg.popup_quick_message("No chapter data loaded.")
+                continue
+
+            target_classes = set()
+            for unit_str in selected_unit_strings:
+
+                match = re.search(r"\((.*?)\)$", unit_str)
+                if match:
+                    target_classes.add(match.group(1))
+
+            if not target_classes:
+                sg.popup_quick_message(
+                    "Could not determine class(es) from selected units."
+                )
+                continue
+
+            all_unit_strings = window["-UNIT_LIST-"].get_list_values()
+            indices_to_select = []
+
+            for i, unit_str in enumerate(all_unit_strings):
+                match = re.search(r"\((.*?)\)$", unit_str)
+                if match and match.group(1) in target_classes:
+                    indices_to_select.append(i)
+
+            if indices_to_select:
+                window["-UNIT_LIST-"].update(set_to_index=indices_to_select)
+
+                window.write_event_value("-UNIT_LIST-", window["-UNIT_LIST-"].get())
+                sg.popup_quick_message(
+                    f"Selected {len(indices_to_select)} unit(s) with class(es): {', '.join(target_classes)}"
+                )
+            else:
+                sg.popup_quick_message("No units found with the same class(es).")
 
         elif event == "-ITEM_LIST-" and values["-ITEM_LIST-"]:
             window["-COPY_ITEM_NID-"].update(disabled=False)
@@ -349,6 +432,8 @@ def main():
                 item_nid = item_string.split(" ")[0]
 
                 window["-ITEM_NID-"].update(value=item_nid)
+                window["-OLD_ITEM_NID-"].update(value=item_nid)
+                window["-NEW_ITEM_NID-"].update(value="")
                 sg.popup_quick_message(f"Copied item nid: '{item_nid}'")
             else:
                 sg.popup_quick_message("Please select an item to copy its nid.")
@@ -461,6 +546,89 @@ def main():
             else:
                 sg.popup_quick_message(
                     f"Item {item_nid_to_delete} not found on selected units.",
+                )
+
+        elif event == "-REPLACE_ITEM-":
+
+            item_nid_to_find = values["-OLD_ITEM_NID-"].strip()
+
+            new_item_nid = values["-NEW_ITEM_NID-"].strip()
+            is_droppable_new = values["-NEW_Droppable-"]
+
+            selected_unit_strings = values["-UNIT_LIST-"]
+
+            if not item_nid_to_find:
+                sg.popup_quick_message("Please enter the 'Item nid to replace'.")
+                continue
+            if not new_item_nid:
+                sg.popup_quick_message("Please enter the 'New item nid'.")
+                continue
+            if not selected_unit_strings:
+                sg.popup_quick_message("Please select at least one unit.")
+                continue
+
+            if item_nid_to_find == new_item_nid:
+                sg.popup_quick_message(
+                    "The old and new item nids are identical. No action taken."
+                )
+                continue
+
+            validate_nid = values["-VALIDATE_NID-"]
+            if validate_nid:
+                if not current_items_nids:
+                    if (
+                        sg.popup_yes_no(
+                            "items.json not loaded. Continue with replacement?"
+                        )
+                        == "No"
+                    ):
+                        continue
+                elif new_item_nid not in current_items_nids:
+                    if (
+                        sg.popup_yes_no(
+                            f"Replacement item nid '{new_item_nid}' not found in the loaded items.json file. Replace anyway?"
+                        )
+                        == "No"
+                    ):
+                        continue
+
+            selected_unit_nids = [
+                unit_str.split(" ")[0] for unit_str in selected_unit_strings
+            ]
+
+            replacement_item_raw = [new_item_nid, is_droppable_new]
+
+            units_modified_count = 0
+
+            for nid in selected_unit_nids:
+                unit_data = current_unit_info[nid]
+                raw_items = unit_data["raw_items"]
+                modified = False
+
+                for i, raw_item in enumerate(raw_items):
+                    item = raw_item
+
+                    if item[0] == item_nid_to_find:
+                        raw_items[i] = replacement_item_raw
+                        modified = True
+
+                if modified:
+                    units_modified_count += 1
+
+            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            current_unit_info = get_unit_info(current_chapter_data, selected_unit_nids)
+            first_unit_nid = selected_unit_nids[0]
+            display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
+            window["-ITEM_LIST-"].update(values=display_items)
+            window["-COPY_ITEM_NID-"].update(disabled=True)
+
+            if units_modified_count > 0:
+                sg.popup_quick_message(
+                    f"Replaced all instances of '{item_nid_to_find}' with '{new_item_nid}' (Droppable: {is_droppable_new}) in {units_modified_count} unit(s).",
+                )
+            else:
+                sg.popup_quick_message(
+                    f"Item '{item_nid_to_find}' not found on selected units for replacement.",
                 )
 
         elif event == "-SAVE_CHANGES-":
