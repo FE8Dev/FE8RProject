@@ -13,6 +13,8 @@ Pairup
 How arsenals work
 promotions and master seal, including trainees
 boss healthbars
+consumable items having 2 modes of use.
+cooldowns?
 
 
 ```
