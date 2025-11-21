@@ -9,18 +9,31 @@ Component: TypeAlias = list[Any]
 ComponentsList: TypeAlias = list[Component]
 
 
-# TODO make this load from a JSON config file
-def load_config() -> dict[str, str]:
-    """
-    Loads configuration paths, replacing hardcoded values.
+CONFIG_FILE = Path("add_multi_desc_config.json")
 
-    :returns: A dictionary mapping configuration names to their file system paths.
-    :rtype: dict[str, str]
-    """
+
+def load_config() -> dict:
+    if CONFIG_FILE.exists():
+        try:
+            with CONFIG_FILE.open("r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {
+                "LTPROJ_FOLDER": "../FE8R.ltproj",
+                "RESULTS_FOLDER": "Results",
+            }
     return {
-        "LTPROJ_FOLDER": "FE8R.ltproj",
+        "LTPROJ_FOLDER": "../FE8R.ltproj",
         "RESULTS_FOLDER": "Results",
     }
+
+
+def save_config(config: dict):
+    try:
+        with CONFIG_FILE.open("w", encoding="utf-8") as f:
+            json.dump(config, f, indent=4)
+    except Exception as e:
+        print(f"Failed to save configuration file: {e}")
 
 
 CONFIG = load_config()
@@ -125,45 +138,42 @@ def add_multi_desc() -> None:
     new_items_folder.mkdir(exist_ok=True)
     items_data_path: Path = ltproj_path / "game_data" / "items"
 
-    for item_json in items_data_path.iterdir():
-        if item_json.suffix == ".json":
-            with item_json.open("r", encoding="utf-8") as fp:
-                try:
-                    data_entries: list[DataEntry] = json.load(fp)
-                except json.JSONDecodeError as e:
-                    print(f"Error decoding JSON in {item_json.name}: {e}")
-                    continue
+    for item_json in items_data_path.glob("*.json"):
+        with item_json.open("r", encoding="utf-8") as fp:
+            try:
+                data_entries: list[DataEntry] = json.load(fp)
+            except json.JSONDecodeError as e:
+                print(f"Error decoding JSON in {item_json.name}: {e}")
+                continue
 
-            for data_entry in data_entries:
-                print(f"Adding to {data_entry["nid"]} ...")
-                extracted_stats: list[str] = get_status(data_entry)
+        for data_entry in data_entries:
+            print(f"Adding to {data_entry.get("nid")} ...")
+            extracted_stats: list[str] = get_status(data_entry)
 
-                if extracted_stats:
-                    existing_value = get_component(data_entry, "multi_desc_skill", list)
+            if extracted_stats:
+                existing_value = get_component(data_entry, "multi_desc_skill", list)
 
-                    new_value: list[str]
-                    if isinstance(existing_value, list):
-                        new_value = list(
-                            dict.fromkeys(existing_value + extracted_stats)
-                        )
-                    else:
-                        new_value = extracted_stats
+                new_value: list[str]
+                if isinstance(existing_value, list):
+                    new_value = list(dict.fromkeys(existing_value + extracted_stats))
+                else:
+                    new_value = extracted_stats
 
-                    # Update or add the 'multi_desc_skill' component
-                    new_components: ComponentsList = [
-                        x
-                        for x in data_entry.get("components", [])
-                        if x[0] != "multi_desc_skill"
-                    ]
-                    new_components.append(["multi_desc_skill", new_value])
-                    data_entry["components"] = new_components
+                # Update or add the 'multi_desc_skill' component
+                new_components: ComponentsList = [
+                    x
+                    for x in data_entry.get("components", [])
+                    if x[0] != "multi_desc_skill"
+                ]
+                new_components.append(["multi_desc_skill", new_value])
+                data_entry["components"] = new_components
 
-                    # Save the updated entry
-                    new_item = [data_entry]
-                    with (new_items_folder / item_json.name).open(
-                        "w", encoding="utf-8"
-                    ) as fp:
-                        json.dump(new_item, fp, indent=4)
+                # Save the updated entry
+                new_item = [data_entry]
+                with (new_items_folder / item_json.name).open(
+                    "w", encoding="utf-8"
+                ) as fp:
+                    json.dump(new_item, fp, indent=4)
     print("Done.")
 
 
