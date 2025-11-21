@@ -1,0 +1,107 @@
+elif;unit.nid == 'Moze'
+    
+    ###### Lance Line (Lances) ######
+    
+    if;u("Moze").wexp['Lance'] >= 120 and u("Moze").wexp['Lance'] < 240 and not get_subitem('Moze', 'Mozes_Arsenal', 'Mystic_Lance')
+    
+        sound;StageClear
+        alert;Moze's Lance evolved!;Mystic_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        equip_item;Moze;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        
+    elif;u("Moze").wexp['Lance'] >= 240 and u("Moze").wexp['Lance'] < 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Arcane_Lance')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Arcane_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        equip_item;Moze;Arcane_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        
+    elif;u("Moze").wexp['Lance'] >= 420 and u("Moze").wexp['Lance'] < 460 and not get_subitem('Moze', 'Mozes_Arsenal', 'Dragon_Lance')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Dragon_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Dragon_Lance
+        equip_item;Moze;Dragon_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        
+     elif;u("Moze").wexp['Lance'] >= 460 and not get_subitem('Moze', 'Mozes_Arsenal', 'Tiamats_Wrath')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Tiamats_Wrath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Tiamats_Wrath
+        equip_item;Moze;Tiamats_Wrath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dragon_Lance   
+		
+###### Dark Line (Dark Magic) ######
+    
+    elif;u("Moze").wexp['Dark'] >= 1 and u("Moze").wexp['Dark'] < 180 and not get_subitem('Moze', 'Mozes_Arsenal', 'Dark_Frostbite')
+    
+        sound;StageClear
+        alert;Moze gained access to prf Dark magic!;Dark_Frostbite
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        equip_item;Moze;Dark_Frostbite
+        
+    elif;u("Moze").wexp['Dark'] >= 180 and u("Moze").wexp['Dark'] < 360 and not get_subitem('Moze', 'Mozes_Arsenal', 'Winter_Eclipse')
+        
+        sound;StageClear
+        alert;Moze's dark magic evolved!;Winter_Eclipse
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Winter_Eclipse
+        equip_item;Moze;Winter_Eclipse
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        
+    elif;u("Moze").wexp['Dark'] >= 360 and not get_subitem('Moze', 'Mozes_Arsenal', 'Corrupted_Fimbulvetr')
+        
+        sound;StageClear
+        alert;Moze's dark magic evolved!;Corrupted_Fimbulvetr
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Corrupted_Fimbulvetr
+        equip_item;Moze;Corrupted_Fimbulvetr
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Winter_Eclipse
+        
+        
+        ###### Breath Line (Monster) ######
+        
+    elif;u("Moze").wexp['Monster'] >= 1 and u("Moze").wexp['Monster'] < 300 and not get_subitem('Moze', 'Mozes_Arsenal', 'Training_Stone_Moze')
+    
+        sound;StageClear
+        alert;Moze gained access to prf Monster!;Training_Stone_Moze
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        equip_item;Moze;Training_Stone_Moze
+        
+        
+    elif;u("Moze").wexp['Monster'] >= 300 and u("Moze").wexp['Monster'] < 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Mana_Breath')
+        
+        sound;StageClear
+        alert;Moze's Monster evolved!;Mana_Breath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Mana_Breath
+        equip_item;Moze;Mana_Breath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        
+     elif;u("Moze").wexp['Monster'] >= 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Sage_Breath')
+        
+        sound;StageClear
+        alert;Moze's Monster evolved!;Sage_Breath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Sage_Breath
+        equip_item;Moze;Sage_Breath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mana_Breath        
+         
+    else
+        
+        
+    end
+   
