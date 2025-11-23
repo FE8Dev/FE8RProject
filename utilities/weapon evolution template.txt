@@ -46,7 +46,7 @@ elif;unit.nid == 'UNITID'
     elif;u("UNITID").wexp['SUBWEAPONTYPE'] >= 1 and u("UNITID").wexp['SUBWEAPONTYPE'] < 180 and not get_subitem('UNITID', 'UNITARSENAL', 'DRANKSUBWEAPON')
     
         sound;StageClear
-        alert;UNITID gained access to prf SUBWEAPONTYPE magic!;DRANKSUBWEAPON
+        alert;UNITID gained access to prf SUBWEAPONTYPE!;DRANKSUBWEAPON
         
         add_item_to_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON
         equip_item;UNITID;DRANKSUBWEAPON
@@ -54,7 +54,7 @@ elif;unit.nid == 'UNITID'
     elif;u("UNITID").wexp['SUBWEAPONTYPE'] >= 180 and u("UNITID").wexp['SUBWEAPONTYPE'] < 300 and not get_subitem('UNITID', 'UNITARSENAL', 'BRANKSUBWEAPON')
         
         sound;StageClear
-        alert;UNITID's SUBWEAPONTYPE magic evolved!;BRANKSUBWEAPON
+        alert;UNITID's SUBWEAPONTYPE evolved!;BRANKSUBWEAPON
         
         add_item_to_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON
         equip_item;UNITID;BRANKSUBWEAPON
@@ -63,7 +63,7 @@ elif;unit.nid == 'UNITID'
     elif;u("UNITID").wexp['SUBWEAPONTYPE'] >= 300 and u("UNITID").wexp['SUBWEAPONTYPE'] <= 420 and not get_subitem('UNITID', 'UNITARSENAL', 'SRANKSUBWEAPON')
         
         sound;StageClear
-        alert;UNITID's SUBWEAPONTYPE magic evolved!;SRANKSUBWEAPON
+        alert;UNITID's SUBWEAPONTYPE evolved!;SRANKSUBWEAPON
         
         add_item_to_multiitem;UNITID;UNITARSENAL;SRANKSUBWEAPON
         equip_item;UNITID;SRANKSUBWEAPON
@@ -71,16 +71,58 @@ elif;unit.nid == 'UNITID'
         remove_item_from_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON
 		
 		
-    elif;u("UNITID").wexp['SUBWEAPONTYPE'] >= 300 and not get_subitem('UNITID', 'UNITARSENAL', 'SSSRANKSUBWEAPON')
+    elif;u("UNITID").wexp['SUBWEAPONTYPE'] >= 420 and not get_subitem('UNITID', 'UNITARSENAL', 'SSSRANKSUBWEAPON')
         
         sound;StageClear
-        alert;UNITID's SUBWEAPONTYPE magic evolved!;SSSRANKSUBWEAPON
+        alert;UNITID's SUBWEAPONTYPE weapon evolved!;SSSRANKSUBWEAPON
         
         add_item_to_multiitem;UNITID;UNITARSENAL;SSSRANKSUBWEAPON
         equip_item;UNITID;SSSRANKSUBWEAPON
         remove_item_from_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON
         remove_item_from_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON
         remove_item_from_multiitem;UNITID;UNITARSENAL;SRANKSUBWEAPON           
+
+		
+###### SUBWEAPONTYPE2 Line (second weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("UNITID").wexp['SUBWEAPONTYPE2'] >= 1 and u("UNITID").wexp['SUBWEAPONTYPE2'] < 180 and not get_subitem('UNITID', 'UNITARSENAL', 'DRANKSUBWEAPON2')
+    
+        sound;StageClear
+        alert;UNITID gained access to a prf SUBWEAPONTYPE2!;DRANKSUBWEAPON2
+        
+        add_item_to_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON2
+        equip_item;UNITID;DRANKSUBWEAPON
+        
+    elif;u("UNITID").wexp['SUBWEAPONTYPE2'] >= 180 and u("UNITID").wexp['SUBWEAPONTYPE2'] < 300 and not get_subitem('UNITID', 'UNITARSENAL', 'BRANKSUBWEAPON2')
+        
+        sound;StageClear
+        alert;UNITID's SUBWEAPONTYPE2 evolved!;BRANKSUBWEAPON2
+        
+        add_item_to_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON2
+        equip_item;UNITID;BRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON2
+        
+    elif;u("UNITID").wexp['SUBWEAPONTYPE2'] >= 300 and u("UNITID").wexp['SUBWEAPONTYPE2'] <= 420 and not get_subitem('UNITID', 'UNITARSENAL', 'SRANKSUBWEAPON2')
+        
+        sound;StageClear
+        alert;UNITID's SUBWEAPONTYPE2 evolved!;SRANKSUBWEAPON2
+        
+        add_item_to_multiitem;UNITID;UNITARSENAL;SRANKSUBWEAPON2
+        equip_item;UNITID;SRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON2
+		
+		
+    elif;u("UNITID").wexp['SUBWEAPONTYPE2'] >= 420 and not get_subitem('UNITID', 'UNITARSENAL', 'SSSRANKSUBWEAPON2')
+        
+        sound;StageClear
+        alert;UNITID's SUBWEAPONTYPE2 evolved!;SSSRANKSUBWEAPON2
+        
+        add_item_to_multiitem;UNITID;UNITARSENAL;SSSRANKSUBWEAPON2
+        equip_item;UNITID;SSSRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;DRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;BRANKSUBWEAPON2
+        remove_item_from_multiitem;UNITID;UNITARSENAL;SRANKSUBWEAPON2      
 
     else
         

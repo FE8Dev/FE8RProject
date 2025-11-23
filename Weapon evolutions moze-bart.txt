@@ -1,0 +1,425 @@
+elif;unit.nid == 'Moze'
+    
+    ###### Lance Line (Lances) ######
+    
+    if;u("Moze").wexp['Lance'] >= 120 and u("Moze").wexp['Lance'] < 240 and not get_subitem('Moze', 'Mozes_Arsenal', 'Mystic_Lance')
+    
+        sound;StageClear
+        alert;Moze's Lance evolved!;Mystic_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        equip_item;Moze;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        
+    elif;u("Moze").wexp['Lance'] >= 240 and u("Moze").wexp['Lance'] < 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Arcane_Lance')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Arcane_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        equip_item;Moze;Arcane_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        
+    elif;u("Moze").wexp['Lance'] >= 420 and u("Moze").wexp['Lance'] < 480 and not get_subitem('Moze', 'Mozes_Arsenal', 'Dragon_Lance')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Dragon_Lance
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Dragon_Lance
+        equip_item;Moze;Dragon_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        
+     elif;u("Moze").wexp['Lance'] >= 480 and not get_subitem('Moze', 'Mozes_Arsenal', 'Tiamats_Wrath')
+        sound;StageClear
+        alert;Moze's Lance evolved!;Tiamats_Wrath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Tiamats_Wrath
+        equip_item;Moze;Tiamats_Wrath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dulled_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mystic_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Arcane_Lance
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dragon_Lance   
+		
+###### Dark Line (Dark Magic) ######
+    
+    elif;u("Moze").wexp['Dark'] >= 1 and u("Moze").wexp['Dark'] < 180 and not get_subitem('Moze', 'Mozes_Arsenal', 'Dark_Frostbite')
+    
+        sound;StageClear
+        alert;Moze gained access to prf Dark magic!;Dark_Frostbite
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        equip_item;Moze;Dark_Frostbite
+        
+    elif;u("Moze").wexp['Dark'] >= 180 and u("Moze").wexp['Dark'] < 360 and not get_subitem('Moze', 'Mozes_Arsenal', 'Winter_Eclipse')
+        
+        sound;StageClear
+        alert;Moze's dark magic evolved!;Winter_Eclipse
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Winter_Eclipse
+        equip_item;Moze;Winter_Eclipse
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        
+    elif;u("Moze").wexp['Dark'] >= 360 and not get_subitem('Moze', 'Mozes_Arsenal', 'Corrupted_Fimbulvetr')
+        
+        sound;StageClear
+        alert;Moze's dark magic evolved!;Corrupted_Fimbulvetr
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Corrupted_Fimbulvetr
+        equip_item;Moze;Corrupted_Fimbulvetr
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Dark_Frostbite
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Winter_Eclipse
+        
+        
+        ###### Breath Line (Monster) ######
+        
+    elif;u("Moze").wexp['Monster'] >= 1 and u("Moze").wexp['Monster'] < 300 and not get_subitem('Moze', 'Mozes_Arsenal', 'Training_Stone_Moze')
+    
+        sound;StageClear
+        alert;Moze gained access to prf Monster!;Training_Stone_Moze
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        equip_item;Moze;Training_Stone_Moze
+        
+        
+    elif;u("Moze").wexp['Monster'] >= 300 and u("Moze").wexp['Monster'] < 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Mana_Breath')
+        
+        sound;StageClear
+        alert;Moze's Monster evolved!;Mana_Breath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Mana_Breath
+        equip_item;Moze;Mana_Breath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        
+     elif;u("Moze").wexp['Monster'] >= 420 and not get_subitem('Moze', 'Mozes_Arsenal', 'Sage_Breath')
+        
+        sound;StageClear
+        alert;Moze's Monster evolved!;Sage_Breath
+        
+        add_item_to_multiitem;Moze;Mozes_Arsenal;Sage_Breath
+        equip_item;Moze;Sage_Breath
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Training_Stone_Moze
+        remove_item_from_multiitem;Moze;Mozes_Arsenal;Mana_Breath        
+         
+    else
+        
+        
+    end
+   
+
+
+elif;unit.nid == 'Cucara'
+    
+###### Axe Line (weapon that the unit starts with, evolves at E C A SS and X) ######
+    
+    if;u("Cucara").wexp['Axe'] >= 120 and u("Cucara").wexp['Axe'] < 240 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Nest_Bird')
+    
+        sound;StageClear
+        alert;Cucara's Axe evolved!;Nest_Bird
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Nest_Bird
+        equip_item;Cucara;Nest_Bird
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;New_Bounty
+        
+    elif;u("Cucara").wexp['Axe'] >= 240 and u("Cucara").wexp['Axe'] < 420 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Novel_Bloom')
+        sound;StageClear
+        alert;Cucara's Axe evolved!;Novel_Bloom
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Novel_Bloom
+        equip_item;Cucara;Novel_Bloom
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;New_Bounty
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Nest_Bird
+        
+    elif;u("Cucara").wexp['Axe'] >= 420 and u("Cucara").wexp['Axe'] < 480 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Novel_Bloom')
+        sound;StageClear
+        alert;Cucara's Axe evolved!;Novel_Bloom
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Novel_Bloom
+        equip_item;Cucara;Novel_Bloom
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;New_Bounty
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Nest_Bird
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Novel_Bloom
+        
+     elif;u("Cucara").wexp['Axe'] >= 480 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'National_Benevolence')
+        sound;StageClear
+        alert;Cucara's Axe evolved!;National_Benevolence
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;National_Benevolence
+        equip_item;Cucara;National_Benevolence
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;New_Bounty
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Nest_Bird
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Novel_Bloom
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Novel_Bloom   
+		
+###### Sword Line (weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Cucara").wexp['Sword'] >= 1 and u("Cucara").wexp['Sword'] < 120 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Junior_Rabbit')
+    
+        sound;StageClear
+        alert;Cucara gained access to prf Sword;Junior_Rabbit
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Junior_Rabbit
+        equip_item;Cucara;Junior_Rabbit
+        
+    elif;u("Cucara").wexp['Sword'] >= 120 and u("Cucara").wexp['Sword'] < 360 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Joy_Receiver')
+        
+        sound;StageClear
+        alert;Cucara's Sword evolved!;Joy_Receiver
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Joy_Receiver
+        equip_item;Cucara;Joy_Receiver
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Junior_Rabbit
+        
+    elif;u("Cucara").wexp['Sword'] >= 360 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Judgement_Roar')
+        
+        sound;StageClear
+        alert;Cucara's Sword evolved!;Judgement_Roar
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Judgement_Roar
+        equip_item;Cucara;Judgement_Roar
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Junior_Rabbit
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Joy_Receiver
+		
+
+		
+###### Bow Line (weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Cucara").wexp['Bow'] >= 1 and u("Cucara").wexp['Bow'] < 180 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Key_Labor')
+    
+        sound;StageClear
+        alert;Cucara gained access to prf Bow!;Key_Labor
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Key_Labor
+        equip_item;Cucara;Key_Labor
+        
+    elif;u("Cucara").wexp['Bow'] >= 180 and u("Cucara").wexp['Bow'] < 360 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Knowledge_Learner')
+        
+        sound;StageClear
+        alert;Cucara's Bow evolved!;Knowledge_Learner
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Knowledge_Learner
+        equip_item;Cucara;Knowledge_Learner
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Key_Labor
+        
+    elif;u("Cucara").wexp['Bow'] >= 360 and not get_subitem('Cucara', 'Cucaras_Arsenal', 'Kindness_Lover')
+        
+        sound;StageClear
+        alert;Cucara's Bow evolved!;Kindness_Lover
+        
+        add_item_to_multiitem;Cucara;Cucaras_Arsenal;Kindness_Lover
+        equip_item;Cucara;Kindness_Lover
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Key_Labor
+        remove_item_from_multiitem;Cucara;Cucaras_Arsenal;Knowledge_Learner
+		
+
+
+    else
+        
+        
+    end
+   
+
+
+
+elif;unit.nid == 'Scintilla'
+    
+###### Monster Line (weapon that the unit starts with, evolves at E C A SS and X) ######
+    
+    if;u("Scintilla").wexp['Monster'] >= 120 and u("Scintilla").wexp['Monster'] < 240 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Carbide_Claws')
+    
+        sound;StageClear
+        alert;Scintilla's Monster evolved!;Carbide_Claws
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Carbide_Claws
+        equip_item;Scintilla;Carbide_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Ironclad_Claws
+        
+    elif;u("Scintilla").wexp['Monster'] >= 240 and u("Scintilla").wexp['Monster'] < 480 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Runecarbide_Claws')
+        sound;StageClear
+        alert;Scintilla's Monster evolved!;Runecarbide_Claws
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Runecarbide_Claws
+        equip_item;Scintilla;Runecarbide_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Ironclad_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Carbide_Claws
+        
+
+     elif;u("Scintilla").wexp['Monster'] >= 480 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Royal_Claws')
+        sound;StageClear
+        alert;Scintilla's Monster evolved!;Royal_Claws
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Royal_Claws
+        equip_item;Scintilla;Royal_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Ironclad_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Carbide_Claws
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Runecarbide_Claws
+    
+		
+###### Staff Line (weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Scintilla").wexp['Staff'] >= 1 and u("Scintilla").wexp['Staff'] < 180 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Venom_Staff_Harpy')
+    
+        sound;StageClear
+        alert;Scintilla gained access to prf Staff!;Venom_Staff_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Venom_Staff_Harpy
+        equip_item;Scintilla;Venom_Staff_Harpy
+        
+    elif;u("Scintilla").wexp['Staff'] >= 180 and u("Scintilla").wexp['Staff'] < 360 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Plague_Staff_Blast_Harpy')
+        
+        sound;StageClear
+        alert;Scintilla's Staff evolved!;Plague_Staff_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Plague_Staff_Blast_Harpy
+		add_item_to_multiitem;Scintilla;Harpy_Arsenal;Plague_Staff_Harpy
+        equip_item;Scintilla;Plague_Staff_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Venom_Staff_Harpy
+        
+
+    elif;u("Scintilla").wexp['Staff'] >= 360 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Venom_Thorn_Harpy')
+        
+        sound;StageClear
+        alert;Scintilla's Staff weapon evolved!;Venom_Thorn_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Venom_Thorn_Harpy
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Venom_Thorn_Harpy_Blast
+        equip_item;Scintilla;Venom_Thorn_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Venom_Staff_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Plague_Staff_Blast_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Plague_Staff_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Venom_Staff_Blast_Harpy        
+
+		
+###### Axe Line (second weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Scintilla").wexp['Axe'] >= 1 and u("Scintilla").wexp['Axe'] < 360 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Iron_Club_Harpy')
+    
+        sound;StageClear
+        alert;Scintilla gained access to a prf Axe!;Iron_Club_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Iron_Club_Harpy
+        equip_item;Scintilla;Venom_Staff_Harpy
+        
+    elif;u("Scintilla").wexp['Axe'] >= 360 and u("Scintilla").wexp['Axe'] < 420 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Steel_Club_Harpy')
+        
+        sound;StageClear
+        alert;Scintilla's Axe evolved!;Steel_Club_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Steel_Club_Harpy
+        equip_item;Scintilla;Steel_Club_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Iron_Club_Harpy
+        
+    elif;u("Scintilla").wexp['Axe'] >= 420 and not get_subitem('Scintilla', 'Harpy_Arsenal', 'Silver_Club_Harpy')
+        
+        sound;StageClear
+        alert;Scintilla's Axe evolved!;Silver_Club_Harpy
+        
+        add_item_to_multiitem;Scintilla;Harpy_Arsenal;Silver_Club_Harpy
+        equip_item;Scintilla;Silver_Club_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Iron_Club_Harpy
+        remove_item_from_multiitem;Scintilla;Harpy_Arsenal;Steel_Club_Harpy
+		
+
+    else
+        
+        
+    end
+   
+
+
+elif;unit.nid == 'Bart'
+    
+###### Anima Line (weapon that the unit starts with, evolves at E C A SS and X) ######
+    
+    if;u("Bart").wexp['Anima'] >= 120 and u("Bart").wexp['Anima'] < 240 and not get_subitem('Bart', 'Bart_Arsenal', 'Bart_Anima_C')
+    
+        sound;StageClear
+        alert;Bart's Anima evolved!;Bart_Anima_C
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Bart_Anima_C
+        equip_item;Bart;Bart_Anima_C
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_E
+        
+    elif;u("Bart").wexp['Anima'] >= 240 and u("Bart").wexp['Anima'] < 420 and not get_subitem('Bart', 'Bart_Arsenal', 'Bart_Anima_A')
+        sound;StageClear
+        alert;Bart's Anima evolved!;Bart_Anima_A
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Bart_Anima_A
+        equip_item;Bart;Bart_Anima_A
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_E
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_C
+        
+    elif;u("Bart").wexp['Anima'] >= 420 and not get_subitem('Bart', 'Bart_Arsenal', 'Bart_Anima_SSS')
+        sound;StageClear
+        alert;Bart's Anima evolved!;Bart_Anima_SSS
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Bart_Anima_SSS
+        equip_item;Bart;Bart_Anima_SSS
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_E
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_C
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Bart_Anima_A
+	
+###### Monster Line (weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Bart").wexp['Monster'] >= 1 and u("Bart").wexp['Monster'] < 360 and not get_subitem('Bart', 'Bart_Arsenal', 'Sand_Snaketail')
+    
+        sound;StageClear
+        alert;Bart gained access to prf Monster!;Sand_Snaketail
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Sand_Snaketail
+        equip_item;Bart;Sand_Snaketail
+        
+    elif;u("Bart").wexp['Monster'] >= 360 and u("Bart").wexp['Monster'] < 420 and not get_subitem('Bart', 'Bart_Arsenal', 'Tail_Crush')
+        
+        sound;StageClear
+        alert;Bart's Monster evolved!;Tail_Crush
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Tail_Crush
+        equip_item;Bart;Tail_Crush
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Sand_Snaketail
+        
+    elif;u("Bart").wexp['Monster'] >= 300 and not get_subitem('Bart', 'Bart_Arsenal', 'Royal_Constriction')
+        
+        sound;StageClear
+        alert;Bart's Monster evolved!;Royal_Constriction
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Royal_Constriction
+        equip_item;Bart;Royal_Constriction
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Sand_Snaketail
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Tail_Crush
+
+		
+###### Staff Line (second weapons they gain upon promotion, they normally evolve at D B S and SSS) ######
+    
+    elif;u("Bart").wexp['Staff'] >= 1 and u("Bart").wexp['Staff'] < 120 and not get_subitem('Bart', 'Bart_Arsenal', 'Snake_Staff')
+    
+        sound;StageClear
+        alert;Bart gained access to a prf Staff!;Snake_Staff
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Snake_Staff
+        equip_item;Bart;Sand_Snaketail
+        
+    elif;u("Bart").wexp['Staff'] >= 120 and u("Bart").wexp['Staff'] < 360 and not get_subitem('Bart', 'Bart_Arsenal', 'Firesnake_Staff')
+        
+        sound;StageClear
+        alert;Bart's Staff evolved!;Firesnake_Staff
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Firesnake_Staff
+        equip_item;Bart;Firesnake_Staff
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Snake_Staff
+        
+    elif;u("Bart").wexp['Staff'] >= 360 and not get_subitem('Bart', 'Bart_Arsenal', 'Orochi_Staff')
+        
+        sound;StageClear
+        alert;Bart's Staff evolved!;Orochi_Staff
+        
+        add_item_to_multiitem;Bart;Bart_Arsenal;Orochi_Staff
+        equip_item;Bart;Orochi_Staff
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Snake_Staff
+        remove_item_from_multiitem;Bart;Bart_Arsenal;Firesnake_Staff
+		
+
+    else
+        
+        
+    end
+   
