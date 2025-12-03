@@ -335,6 +335,11 @@ def main() -> None:
                     window["-LTPROJ_DIR-"].update(current_ltproj_dir)
                     continue
 
+                if original_chapter_data:
+                    chapter_data_map[current_chapter_file] = json.loads(
+                        json.dumps(original_chapter_data)
+                    )
+
             if new_ltproj_dir:
                 config["ltproj_dir"] = new_ltproj_dir
                 save_config(config)
@@ -380,6 +385,11 @@ def main() -> None:
                 if response != "Yes":
                     window["-CHAPTER_FILE-"].update(value=current_chapter_file)
                     continue
+
+                if original_chapter_data:
+                    chapter_data_map[current_chapter_file] = json.loads(
+                        json.dumps(original_chapter_data)
+                    )
 
             current_chapter_file = new_chapter_file
 
