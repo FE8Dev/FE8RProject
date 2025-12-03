@@ -1,7 +1,6 @@
 import json
 import re
 from pathlib import Path
-from typing import Any
 
 import FreeSimpleGUI as sg
 
@@ -18,7 +17,7 @@ def load_config() -> dict:
     return {}
 
 
-def save_config(config: dict):
+def save_config(config: dict) -> None:
     try:
         with CONFIG_FILE.open("w", encoding="utf-8") as f:
             json.dump(config, f, indent=4)
@@ -26,8 +25,8 @@ def save_config(config: dict):
         sg.popup_error(f"Failed to save configuration file: {e}")
 
 
-def load_item_nids(file_path: Path) -> set[str]:
-    item_nids = set()
+def load_item_nids(file_path: Path) -> set:
+    item_nids: set = set()
     if not file_path.exists():
         return item_nids
 
@@ -48,14 +47,14 @@ def load_item_nids(file_path: Path) -> set[str]:
     return item_nids
 
 
-def natural_sort_key(s):
+def natural_sort_key(s: str) -> list:
     return [
         int(text) if text.isdigit() else text.lower() for text in re.split(r"(\d+)", s)
     ]
 
 
-def load_chapter_data(levels_dir: Path) -> dict[str, list]:
-    chapter_data = {}
+def load_chapter_data(levels_dir: Path) -> dict:
+    chapter_data: dict = {}
     if not levels_dir.exists():
         return {}
 
@@ -70,24 +69,27 @@ def load_chapter_data(levels_dir: Path) -> dict[str, list]:
                     and "units" in data[0]
                     and data[0].get("units")
                 ):
-                    chapter_data[file_path.name] = data
+                    chapter_data[file_path.name] = json.loads(json.dumps(data))
         except Exception:
             continue
     return chapter_data
 
 
-def get_unit_info(chapter_data: list, unit_nids: list[str]) -> dict:
+def get_unit_info(chapter_data: list, unit_nids: list) -> dict:
     if not chapter_data or not unit_nids:
         return {}
 
-    unit_infos = {}
+    unit_infos: dict = {}
     chapter = chapter_data[0]
 
     for unit_data in chapter.get("units", []):
         nid = unit_data.get("nid")
         if nid in unit_nids:
-            items = []
-            for item_list in unit_data.get("starting_items", []):
+            items: list = []
+            raw_items_copy: list = [
+                list(item) for item in unit_data.get("starting_items", [])
+            ]
+            for item_list in raw_items_copy:
                 item_nid = item_list[0]
                 is_droppable = item_list[1]
 
@@ -98,13 +100,13 @@ def get_unit_info(chapter_data: list, unit_nids: list[str]) -> dict:
 
             unit_infos[nid] = {
                 "items": items,
-                "raw_items": unit_data.get("starting_items", []),
+                "raw_items": raw_items_copy,
             }
 
     return unit_infos
 
 
-def get_all_unit_nids(chapter_data: list) -> list[str]:
+def get_all_unit_nids(chapter_data: list) -> list:
     if not chapter_data:
         return []
 
@@ -127,7 +129,7 @@ def update_chapter_file(file_path: Path, chapter_data: list) -> bool:
         return False
 
 
-def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list[Any]:
+def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list:
     left_column = [
         [sg.Text("LT Project Directory:")],
         [
@@ -238,7 +240,8 @@ def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list
                 key="-SAVE_CHANGES-",
                 disabled=True,
                 button_color="green",
-            )
+            ),
+            sg.Button("Reset", key="-RESET-", disabled=True, button_color="red"),
         ],
     ]
 
@@ -250,10 +253,10 @@ def create_layout(initial_ltproj_dir: str, initial_items_file_path: str) -> list
     return layout
 
 
-def main():
+def main() -> None:
     config = load_config()
-    initial_ltproj_dir = config.get("ltproj_dir", "")
-    initial_items_file_path = config.get("items_file_path", "")
+    initial_ltproj_dir: str = config.get("ltproj_dir", "")
+    initial_items_file_path: str = config.get("items_file_path", "")
 
     window = sg.Window(
         "Chapter Unit Item Batch Editor",
@@ -261,12 +264,26 @@ def main():
         finalize=True,
     )
 
-    current_ltproj_dir = initial_ltproj_dir
-    current_chapter_file = ""
-    chapter_data_map = {}
-    current_unit_info = {}
-    current_items_file_path = initial_items_file_path
-    current_items_nids = set()
+    current_ltproj_dir: str = initial_ltproj_dir
+    current_chapter_file: str = ""
+    chapter_data_map: dict = {}
+    current_unit_info: dict = {}
+    current_items_file_path: str = initial_items_file_path
+    current_items_nids: set = set()
+
+    original_chapter_data: list = []
+
+    def has_unsaved_changes() -> bool:
+        if not current_chapter_file or not original_chapter_data:
+            return False
+
+        current_data = chapter_data_map.get(current_chapter_file)
+        if not current_data:
+            return False
+
+        return json.dumps(current_data, sort_keys=True) != json.dumps(
+            original_chapter_data, sort_keys=True
+        )
 
     if current_ltproj_dir:
         levels_dir = Path(current_ltproj_dir) / "game_data" / "levels"
@@ -275,17 +292,25 @@ def main():
             chapter_files = sorted(chapter_data_map.keys(), key=natural_sort_key)
             window["-CHAPTER_FILE-"].update(values=chapter_files)
 
-    if current_items_file_path and Path(current_items_file_path).exists():
-        current_items_nids = load_item_nids(Path(current_items_file_path))
+    if current_items_file_path:
+        path = Path(current_items_file_path)
+        if path.exists():
+            current_items_nids = load_item_nids(path)
 
     while True:
         event, values = window.read()
 
         if event in (sg.WIN_CLOSED, "Exit"):
+            if current_chapter_file and has_unsaved_changes():
+                response = sg.popup_yes_no(
+                    f"You have unsaved changes in {current_chapter_file}. Exit and discard changes?"
+                )
+                if response != "Yes":
+                    continue
             break
 
         if event == "-ITEMS_FILE_PATH-":
-            new_items_file_path = values["-ITEMS_FILE_PATH-"]
+            new_items_file_path: str = values["-ITEMS_FILE_PATH-"]
             current_items_file_path = new_items_file_path
 
             if new_items_file_path:
@@ -300,7 +325,15 @@ def main():
                 sg.popup_quick_message("Items file not found or path is invalid.")
 
         elif event == "-LTPROJ_DIR-":
-            new_ltproj_dir = values["-LTPROJ_DIR-"]
+            new_ltproj_dir: str = values["-LTPROJ_DIR-"]
+
+            if current_chapter_file and has_unsaved_changes():
+                response = sg.popup_yes_no(
+                    f"You have unsaved changes in {current_chapter_file}. Discard and change directory?"
+                )
+                if response != "Yes":
+                    window["-LTPROJ_DIR-"].update(current_ltproj_dir)
+                    continue
 
             if new_ltproj_dir:
                 config["ltproj_dir"] = new_ltproj_dir
@@ -318,12 +351,15 @@ def main():
             window["-COPY_ITEM_NID-"].update(disabled=True)
             window["-SELECT_BY_CLASS-"].update(disabled=True)
             window["-REPLACE_ITEM-"].update(disabled=True)
+            window["-RESET-"].update(disabled=True)
+
             current_chapter_file = ""
             current_unit_info = {}
+            original_chapter_data = []
 
             if levels_dir.exists():
                 chapter_data_map = load_chapter_data(levels_dir)
-                chapter_files = sorted(chapter_data_map.keys())
+                chapter_files = sorted(chapter_data_map.keys(), key=natural_sort_key)
                 window["-CHAPTER_FILE-"].update(values=chapter_files)
                 if chapter_files:
                     sg.popup_quick_message(
@@ -335,7 +371,17 @@ def main():
                 )
 
         elif event == "-CHAPTER_FILE-" and values["-CHAPTER_FILE-"]:
-            current_chapter_file = values["-CHAPTER_FILE-"]
+            new_chapter_file: str = values["-CHAPTER_FILE-"]
+
+            if current_chapter_file and has_unsaved_changes():
+                response = sg.popup_yes_no(
+                    f"You have unsaved changes in {current_chapter_file}. Discard and load {new_chapter_file}?"
+                )
+                if response != "Yes":
+                    window["-CHAPTER_FILE-"].update(value=current_chapter_file)
+                    continue
+
+            current_chapter_file = new_chapter_file
 
             window["-UNIT_LIST-"].update(values=[], set_to_index=[])
             window["-ITEM_LIST-"].update(values=[])
@@ -345,15 +391,21 @@ def main():
             window["-COPY_ITEM_NID-"].update(disabled=True)
             window["-SELECT_BY_CLASS-"].update(disabled=True)
             window["-REPLACE_ITEM-"].update(disabled=True)
+            window["-RESET-"].update(disabled=True)
+
             current_unit_info = {}
+            original_chapter_data = []
 
             current_chapter_data = chapter_data_map.get(current_chapter_file)
             if current_chapter_data:
+                original_chapter_data = json.loads(json.dumps(current_chapter_data))
+                window["-RESET-"].update(disabled=False)
+
                 all_unit_nids_and_klass = get_all_unit_nids(current_chapter_data)
                 window["-UNIT_LIST-"].update(values=all_unit_nids_and_klass)
 
         elif event == "-UNIT_LIST-" and values["-UNIT_LIST-"]:
-            selected_unit_strings = values["-UNIT_LIST-"]
+            selected_unit_strings: list = values["-UNIT_LIST-"]
 
             selected_unit_nids = [
                 unit_str.split(" ")[0] for unit_str in selected_unit_strings
@@ -378,7 +430,7 @@ def main():
                 window["-COPY_ITEM_NID-"].update(disabled=True)
 
         elif event == "-SELECT_BY_CLASS-":
-            selected_unit_strings = values["-UNIT_LIST-"]
+            selected_unit_strings: list = values["-UNIT_LIST-"]
 
             if not selected_unit_strings:
                 sg.popup_quick_message(
@@ -391,9 +443,8 @@ def main():
                 sg.popup_quick_message("No chapter data loaded.")
                 continue
 
-            target_classes = set()
+            target_classes: set = set()
             for unit_str in selected_unit_strings:
-
                 match = re.search(r"\((.*?)\)$", unit_str)
                 if match:
                     target_classes.add(match.group(1))
@@ -404,8 +455,8 @@ def main():
                 )
                 continue
 
-            all_unit_strings = window["-UNIT_LIST-"].get_list_values()
-            indices_to_select = []
+            all_unit_strings: list = window["-UNIT_LIST-"].get_list_values()
+            indices_to_select: list = []
 
             for i, unit_str in enumerate(all_unit_strings):
                 match = re.search(r"\((.*?)\)$", unit_str)
@@ -426,7 +477,7 @@ def main():
             window["-COPY_ITEM_NID-"].update(disabled=False)
 
         elif event == "-COPY_ITEM_NID-":
-            selected_items = values["-ITEM_LIST-"]
+            selected_items: list = values["-ITEM_LIST-"]
             if selected_items:
                 item_string = selected_items[0]
                 item_nid = item_string.split(" ")[0]
@@ -439,9 +490,9 @@ def main():
                 sg.popup_quick_message("Please select an item to copy its nid.")
 
         elif event == "-ADD_ITEM-":
-            new_item_nid = values["-ITEM_NID-"].strip()
-            is_droppable = values["-Droppable-"]
-            selected_unit_strings = values["-UNIT_LIST-"]
+            new_item_nid: str = values["-ITEM_NID-"].strip()
+            is_droppable: bool = values["-Droppable-"]
+            selected_unit_strings: list = values["-UNIT_LIST-"]
 
             if not new_item_nid:
                 sg.popup_quick_message("Please enter a valid item nid.")
@@ -453,7 +504,7 @@ def main():
                 )
                 continue
 
-            validate_nid = values["-VALIDATE_NID-"]
+            validate_nid: bool = values["-VALIDATE_NID-"]
             if validate_nid:
                 if not current_items_nids:
                     if (
@@ -473,18 +524,28 @@ def main():
                     ):
                         continue
 
+            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            if not current_chapter_data:
+                sg.popup_quick_message("Chapter data not loaded. Cannot add item.")
+                continue
+
             selected_unit_nids = [
                 unit_str.split(" ")[0] for unit_str in selected_unit_strings
             ]
 
-            new_item_raw = [new_item_nid, is_droppable]
+            new_item_raw: list = [new_item_nid, is_droppable]
 
             for nid in selected_unit_nids:
                 unit_data = current_unit_info[nid]
                 if new_item_raw not in unit_data["raw_items"]:
                     unit_data["raw_items"].append(new_item_raw)
 
-            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            chapter_object = current_chapter_data[0]
+            for unit in chapter_object["units"]:
+                nid = unit.get("nid")
+                if nid in current_unit_info:
+                    unit["starting_items"] = current_unit_info[nid]["raw_items"]
+
             current_unit_info = get_unit_info(current_chapter_data, selected_unit_nids)
             first_unit_nid = selected_unit_nids[0]
             display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
@@ -496,9 +557,9 @@ def main():
             )
 
         elif event == "-DELETE_ITEM-":
-            item_nid_to_delete = values["-ITEM_NID-"].strip()
-            is_droppable_filter = values["-Droppable-"]
-            selected_unit_strings = values["-UNIT_LIST-"]
+            item_nid_to_delete: str = values["-ITEM_NID-"].strip()
+            is_droppable_filter: bool = values["-Droppable-"]
+            selected_unit_strings: list = values["-UNIT_LIST-"]
 
             if not item_nid_to_delete:
                 sg.popup_quick_message("Please enter the item nid you wish to delete.")
@@ -508,11 +569,16 @@ def main():
                 sg.popup_quick_message("Please select at least one unit.")
                 continue
 
+            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            if not current_chapter_data:
+                sg.popup_quick_message("Chapter data not loaded. Cannot delete item.")
+                continue
+
             selected_unit_nids = [
                 unit_str.split(" ")[0] for unit_str in selected_unit_strings
             ]
 
-            units_modified_count = 0
+            units_modified_count: int = 0
 
             for nid in selected_unit_nids:
                 unit_data = current_unit_info[nid]
@@ -520,7 +586,7 @@ def main():
                 initial_count = len(raw_items)
 
                 if is_droppable_filter:
-                    item_to_delete = [item_nid_to_delete, is_droppable_filter]
+                    item_to_delete: list = [item_nid_to_delete, is_droppable_filter]
                     raw_items[:] = [
                         item for item in raw_items if item != item_to_delete
                     ]
@@ -532,7 +598,12 @@ def main():
                 if len(raw_items) < initial_count:
                     units_modified_count += 1
 
-            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            chapter_object = current_chapter_data[0]
+            for unit in chapter_object["units"]:
+                nid = unit.get("nid")
+                if nid in current_unit_info:
+                    unit["starting_items"] = current_unit_info[nid]["raw_items"]
+
             current_unit_info = get_unit_info(current_chapter_data, selected_unit_nids)
             first_unit_nid = selected_unit_nids[0]
             display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
@@ -549,13 +620,12 @@ def main():
                 )
 
         elif event == "-REPLACE_ITEM-":
+            item_nid_to_find: str = values["-OLD_ITEM_NID-"].strip()
 
-            item_nid_to_find = values["-OLD_ITEM_NID-"].strip()
+            new_item_nid: str = values["-NEW_ITEM_NID-"].strip()
+            is_droppable_new: bool = values["-NEW_Droppable-"]
 
-            new_item_nid = values["-NEW_ITEM_NID-"].strip()
-            is_droppable_new = values["-NEW_Droppable-"]
-
-            selected_unit_strings = values["-UNIT_LIST-"]
+            selected_unit_strings: list = values["-UNIT_LIST-"]
 
             if not item_nid_to_find:
                 sg.popup_quick_message("Please enter the 'Item nid to replace'.")
@@ -573,7 +643,7 @@ def main():
                 )
                 continue
 
-            validate_nid = values["-VALIDATE_NID-"]
+            validate_nid: bool = values["-VALIDATE_NID-"]
             if validate_nid:
                 if not current_items_nids:
                     if (
@@ -592,18 +662,23 @@ def main():
                     ):
                         continue
 
+            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            if not current_chapter_data:
+                sg.popup_quick_message("Chapter data not loaded. Cannot replace item.")
+                continue
+
             selected_unit_nids = [
                 unit_str.split(" ")[0] for unit_str in selected_unit_strings
             ]
 
-            replacement_item_raw = [new_item_nid, is_droppable_new]
+            replacement_item_raw: list = [new_item_nid, is_droppable_new]
 
-            units_modified_count = 0
+            units_modified_count: int = 0
 
             for nid in selected_unit_nids:
                 unit_data = current_unit_info[nid]
                 raw_items = unit_data["raw_items"]
-                modified = False
+                modified: bool = False
 
                 for i, raw_item in enumerate(raw_items):
                     item = raw_item
@@ -615,7 +690,12 @@ def main():
                 if modified:
                     units_modified_count += 1
 
-            current_chapter_data = chapter_data_map.get(current_chapter_file)
+            chapter_object = current_chapter_data[0]
+            for unit in chapter_object["units"]:
+                nid = unit.get("nid")
+                if nid in current_unit_info:
+                    unit["starting_items"] = current_unit_info[nid]["raw_items"]
+
             current_unit_info = get_unit_info(current_chapter_data, selected_unit_nids)
             first_unit_nid = selected_unit_nids[0]
             display_items = current_unit_info.get(first_unit_nid, {}).get("items", [])
@@ -630,6 +710,40 @@ def main():
                 sg.popup_quick_message(
                     f"Item '{item_nid_to_find}' not found on selected units for replacement.",
                 )
+
+        elif event == "-RESET-":
+            if not original_chapter_data:
+                sg.popup_quick_message("No original chapter data available to reset.")
+                continue
+
+            if (
+                sg.popup_yes_no(
+                    "Are you sure you want to revert ALL unsaved changes for this chapter to the original loaded state?"
+                )
+                == "Yes"
+            ):
+                current_chapter_data_reset: list = json.loads(
+                    json.dumps(original_chapter_data)
+                )
+                chapter_data_map[current_chapter_file] = current_chapter_data_reset
+
+                selected_unit_strings: list = values["-UNIT_LIST-"]
+                selected_unit_nids = [
+                    unit_str.split(" ")[0] for unit_str in selected_unit_strings
+                ]
+                current_unit_info = get_unit_info(
+                    current_chapter_data_reset, selected_unit_nids
+                )
+
+                first_unit_nid = selected_unit_nids[0] if selected_unit_nids else None
+                display_items = (
+                    current_unit_info.get(first_unit_nid, {}).get("items", [])
+                    if first_unit_nid
+                    else []
+                )
+                window["-ITEM_LIST-"].update(values=display_items)
+
+                sg.popup_quick_message("Chapter data reset to original loaded state.")
 
         elif event == "-SAVE_CHANGES-":
             if not current_chapter_file:
@@ -653,8 +767,14 @@ def main():
 
             if update_chapter_file(file_path, chapter_data):
                 sg.popup_ok(f"Successfully saved changes to {current_chapter_file}!")
+
                 levels_dir = Path(current_ltproj_dir) / "game_data" / "levels"
                 chapter_data_map = load_chapter_data(levels_dir)
+                current_chapter_data = chapter_data_map.get(current_chapter_file)
+
+                if current_chapter_data:
+                    original_chapter_data = json.loads(json.dumps(current_chapter_data))
+
             else:
                 sg.popup_error(f"Failed to save changes to {current_chapter_file}.")
 
