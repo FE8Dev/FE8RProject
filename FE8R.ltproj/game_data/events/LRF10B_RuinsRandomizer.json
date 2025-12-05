@@ -18,9 +18,7 @@
             "for i in range(101,123):",
             "    $change_team str(i) \"enemy2\"",
             "    $change_faction str(i) \"Ruin_Guardian\"",
-            "    if random.random() < pnone:",
-            "        $give_item str(i) random.choice([None])",
-            "    else: ",
+            "    if random.random() >= pnone:",
             "        $give_item str(i) random.choice(drops),droppable no_banner",
             ""
         ],
