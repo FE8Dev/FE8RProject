@@ -2,7 +2,7 @@
     {
         "nid": "WaterB",
         "name": "Exceptional Focus",
-        "desc": "You cannot be beaten on your enemy's terms.\n+20 to Hit and Avoid when defending.",
+        "desc": "You cannot be beaten on your enemy's terms.\n+20 to Hit and Avoid when defending. Unit always attacks first.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -20,6 +20,10 @@
             [
                 "dynamic_avoid",
                 "20 if (mode == 'defense') else 0"
+            ],
+            [
+                "vantage",
+                null
             ]
         ]
     }

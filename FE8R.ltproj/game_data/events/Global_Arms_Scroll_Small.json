@@ -8,28 +8,10 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;item_system.weapon_type(unit, unit.get_weapon()) == 'Axe'",
-            "give_wexp;{unit};Axe;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Sword'",
-            "give_wexp;{unit};Sword;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Lance'",
-            "give_wexp;{unit};Lance;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Bow'",
-            "give_wexp;{unit};Bow;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Anima'",
-            "give_wexp;{unit};Anima;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Light'",
-            "give_wexp;{unit};Light;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Dark'",
-            "give_wexp;{unit};Dark;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Staff'",
-            "give_wexp;{unit};Staff;60",
-            "elif;item_system.weapon_type(unit, unit.get_weapon()) == 'Monster'",
-            "give_wexp;{unit};Monster;60",
-            "else",
-            "sound;ItemBreak",
-            "alert;The Arms Scroll failed...",
-            "end"
+            "#pyev1",
+            "uni = u(unit)",
+            "wiponTaip = item_system.weapon_type(uni, uni.get_weapon())",
+            "$give_wexp uni.nid wiponTaip 60"
         ],
         "nid": "Global Arms_Scroll_Small"
     }

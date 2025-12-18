@@ -203,9 +203,7 @@
             "            $give_item str(i+200) random.choice(drops),droppable no_banner",
             "       ",
             "#Assign random drops",
-            "    if random.random() < pnone:",
-            "        $give_item str(i) random.choice([None])",
-            "    else: ",
+            "    if random.random() >= pnone:",
             "        $give_item str(i) random.choice(drops),droppable no_banner",
             "#Clean up original units                  ",
             "    $remove_unit enemyunits[i].nid \"immediate\""
