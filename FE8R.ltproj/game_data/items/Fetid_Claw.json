@@ -2,7 +2,7 @@
     {
         "nid": "Fetid_Claw",
         "name": "Fetid Claw",
-        "desc": "Powerful claws.\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>STR + HP/5. (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
+        "desc": "Powerful claws.\n<violet>Inflicts:</><icon>Bleed</>\n<pink>Misc:</>STR + HP/5. (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -68,8 +68,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -79,8 +78,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ]
         ]

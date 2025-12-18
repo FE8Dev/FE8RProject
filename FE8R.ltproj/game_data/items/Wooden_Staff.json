@@ -2,7 +2,7 @@
     {
         "nid": "Wooden_Staff",
         "name": "Wooden Staff",
-        "desc": "An old staff that can deal damage in a pinch for Moulder.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</>STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), cannot Crit, always hits.",
+        "desc": "An old staff that can deal damage in a pinch for Moulder.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</><icon>Homing</> STR + DEF/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             4,
@@ -82,7 +82,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Homing_Attack"
                 ]
             ]
         ]

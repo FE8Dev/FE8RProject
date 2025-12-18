@@ -2,7 +2,7 @@
     {
         "nid": "Sacred_Naginata",
         "name": "Sacred Naginata",
-        "desc": "The spirit within this naginata grows.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Light</><icon>Wind</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "The spirit within this naginata grows.\n<green>Skills:</><icon>LGC</> <orange>Element:</><icon>Light</><icon>Wind</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Cleave</><icon>skill_icons 10, 50</> (<blue>1</>) LCK + SPD/2 (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             1,
@@ -113,7 +113,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Lance_Guard_C"
+                    "Lance_Guard_C",
+                    "Cleaves",
+                    "Shove_Description"
                 ]
             ]
         ]

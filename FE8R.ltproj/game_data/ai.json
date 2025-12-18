@@ -376,7 +376,7 @@
                     "Tag",
                     "AIProvoke"
                 ],
-                "view_range": 3,
+                "view_range": 2,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -389,7 +389,7 @@
                     "Team",
                     "enemy2"
                 ],
-                "view_range": 3,
+                "view_range": 2,
                 "invert_targeting": true,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -471,7 +471,7 @@
                     "Tag",
                     "AIProvoke"
                 ],
-                "view_range": 3,
+                "view_range": 2,
                 "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -481,7 +481,7 @@
                 "action": "Attack",
                 "target": "Enemy",
                 "target_spec": null,
-                "view_range": 3,
+                "view_range": 2,
                 "invert_targeting": true,
                 "roam_speed": 100,
                 "desired_proximity": 0,
@@ -1731,10 +1731,23 @@
                 "target": "Enemy",
                 "target_spec": [
                     "Team",
-                    "player"
+                    "enemy"
                 ],
                 "view_range": -4,
-                "invert_targeting": true,
+                "invert_targeting": false,
+                "roam_speed": 100,
+                "desired_proximity": 0,
+                "condition": ""
+            },
+            {
+                "action": "Attack",
+                "target": "Enemy",
+                "target_spec": [
+                    "Team",
+                    "enemy2"
+                ],
+                "view_range": -4,
+                "invert_targeting": false,
                 "roam_speed": 100,
                 "desired_proximity": 0,
                 "condition": ""

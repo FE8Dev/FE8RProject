@@ -2,7 +2,7 @@
     {
         "nid": "Mastered_Fang",
         "name": "Mastered Fang",
-        "desc": "Fangs used by the wisest of beasts.\n<green>Skills:</>Injured Fury+, Canto+, Cornered Beast+\n<violet>Inflicts:</><icon>Bleed</>X4, Breach (8)\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "desc": "Fangs used by the wisest of beasts.\n<green>Skills:</><icon>skill_icons 7, 28</>(+)<icon>skill_icons 3, 37</>(+)<icon>skill_icons 1, 32</> <violet>Inflicts:</><icon>Bleed</>X4<icon>Skills 6, 4</>(-8)\n<pink>Misc:</>STR + SPD (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             3,
@@ -90,8 +90,8 @@
                 "multi_desc_skill",
                 [
                     "Injured_Fury_P",
-                    "Injured_Fury_P_Recoil",
                     "Cornered_Beast_P",
+                    "CantoP_hide",
                     "Bleeding",
                     "Breached_8"
                 ]

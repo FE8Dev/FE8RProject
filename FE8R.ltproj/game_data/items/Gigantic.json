@@ -2,7 +2,7 @@
     {
         "nid": "Gigantic",
         "name": "Gigantic",
-        "desc": "A big club used for practice by cyclops. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2.",
+        "desc": "A big club used for practice by cyclops. <green>CD:1</>\n<green>Skills:</><icon>War Blow</><icon>skill_icons 6, 39</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</><icon>Skills 6, 4</>(-8) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>skill_icons 13, 51</> STR + STR (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -123,10 +123,11 @@
                 [
                     "War_Blow",
                     "Circle_Swing",
-                    "Circle_Swing_Debuffer",
                     "Stun",
                     "Breached_8",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Well_Designed"
                 ]
             ]
         ]

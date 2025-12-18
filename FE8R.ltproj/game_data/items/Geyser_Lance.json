@@ -2,7 +2,7 @@
     {
         "nid": "Geyser_Lance",
         "name": "Geyser Lance",
-        "desc": "Launches a geyser of water. <green>CD:1</>\n<green>Skills:</>Lance Guard (A) <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3) <pink>Misc:</>(Line attack:5), SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>), cannot double, cannot DS.",
+        "desc": "Launches a geyser of water. <green>CD:2</>\n<green>Skills:</><icon>LGA</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>Line</> (<blue>5</>) SKL + MAG/2 (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             2,
@@ -78,10 +78,6 @@
                 "Water_AOE_Splash"
             ],
             [
-                "no_double",
-                null
-            ],
-            [
                 "enemy_line_aoe",
                 null
             ],
@@ -99,7 +95,7 @@
             ],
             [
                 "cooldown",
-                1
+                2
             ],
             [
                 "item_tags",
@@ -111,8 +107,17 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_A",
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Line_Attack_Description"
                 ]
+            ],
+            [
+                "cannot_be_countered",
+                null
+            ],
+            [
+                "no_double",
+                null
             ]
         ]
     }

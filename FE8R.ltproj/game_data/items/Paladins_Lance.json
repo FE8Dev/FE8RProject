@@ -2,7 +2,7 @@
     {
         "nid": "Paladins_Lance",
         "name": "Paladin's Lance",
-        "desc": "A lance filled with holy fire, made for Franz.\n<green>Skills:</>Lance Guard (E) <orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), Splash DMG (30%).",
+        "desc": "A lance filled with holy fire, made for Franz.\n<green>Skills:</><icon>LGC</> <orange>Element:</><icon>Light</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</><icon>ASC</> STR + LCK/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -109,7 +109,8 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_C",
-                    "Seared"
+                    "Seared",
+                    "AnimaSplash_C"
                 ]
             ]
         ]

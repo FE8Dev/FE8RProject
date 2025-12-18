@@ -2,7 +2,7 @@
     {
         "nid": "Inferno_Dagger",
         "name": "Inferno Dagger",
-        "desc": "A knife infused with a powerful fire spirit.\n<green>Skills:</>Quick Knife<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Bleed</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>Uses SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>), +40 Crit damage,<icon>Steal</>.",
+        "desc": "A knife infused with a powerful fire spirit.\n<green>Skills:</><icon>skill_icons 6, 29</> <orange>Element:</><icon>Fire</> \n<violet>Inflicts:</><icon>Bleed</><icon>Seared</>(AOE:2) <red>Effective:</><icon>Horse</> \n<pink>Misc:</><icon>skill_icons 5, 13</> SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             5,
@@ -58,10 +58,6 @@
                 "SS"
             ],
             [
-                "status_on_equip",
-                "Quick_Knife"
-            ],
-            [
                 "battle_cast_anim",
                 "Bakuretsu"
             ],
@@ -101,7 +97,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_40_hide"
+                    "Crit_Damage_Bonus_50_hide",
+                    "Quick_Knife"
                 ]
             ],
             [
@@ -119,7 +116,8 @@
                 [
                     "Quick_Knife",
                     "Bleeding",
-                    "Seared"
+                    "Seared",
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ]
         ]

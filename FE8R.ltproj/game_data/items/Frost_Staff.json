@@ -2,7 +2,7 @@
     {
         "nid": "Frost_Staff",
         "name": "Frost Staff",
-        "desc": "An icy staff that can hit two enemies.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>(Multi-Target:2), cannot crit, always hits, cannot DS.",
+        "desc": "An icy staff that can hit two enemies.\n<orange>Element:</><icon>Ice</> <violet>Inflicts:</><icon>Frozen</>\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</><icon>Homing</><icon>Target</> (<blue>2</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -104,8 +104,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Frozen"
+                    "Frozen",
+                    "Homing_Attack",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

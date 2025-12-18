@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ2",
+        "trigger": "on_talk",
+        "level_nid": "15B",
+        "condition": "check_pair('Ephraim', 'Civ2')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ephraim;Right;Man1;Left",
+            "speak;Man1;The fighting is finally over...|Tell me boy...|Did you find anything...|Interesting, in the sand?",
+            "speak;Ephraim;Interesting?",
+            "speak;Man1;Yes!|If you find anything, let me know!|I'm looking for something rare...|Oh very rare indeed...|Oh, if I found it...|Oh....",
+            "speak;Ephraim;I...See...",
+            "multi_remove_portrait;Ephraim;Man1",
+            "give_bexp;5000",
+            "remove_talk;Ephraim;Civ2"
+        ],
+        "nid": "15B Talk_Civ2"
+    }
+]

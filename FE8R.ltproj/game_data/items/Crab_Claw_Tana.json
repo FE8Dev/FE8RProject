@@ -2,7 +2,7 @@
     {
         "nid": "Crab_Claw_Tana",
         "name": "Crab Claw",
-        "desc": "A magical lance with a giant crab claw as the tip.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>Magical, grants Crab Leg item.",
+        "desc": "A magical lance with a giant crab claw as the tip.\n<green>Skills:</><icon>LGE</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>\n<pink>Misc:</>Grants Crab Leg item access, Magical weapon.",
         "icon_nid": "{Batima} Beastkiller",
         "icon_index": [
             0,
@@ -56,8 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Lance_Guard_E",
-                    "Drench"
+                    "Lance_Guard_E"
                 ]
             ],
             [
@@ -88,8 +87,12 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_E",
-                    "Drench"
+                    "Drench_Debuff"
                 ]
+            ],
+            [
+                "status_on_hit",
+                "Drench_Debuff"
             ]
         ]
     }

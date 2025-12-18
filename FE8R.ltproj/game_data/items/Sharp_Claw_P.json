@@ -2,7 +2,7 @@
     {
         "nid": "Sharp_Claw_P",
         "name": "Sharp Claw+",
-        "desc": "Sharp claws.\n<violet>Inflicts:</><icon>Venom</><icon>Bleed</>\n<pink>Misc:</>STR + HP/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
+        "desc": "Sharp claws.\n<violet>Inflicts:</><icon>Venom</><icon>Bleed</>\n<pink>Misc:</>STR + HP/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//3))}</>).",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -69,9 +69,7 @@
                 "statuses_on_hit",
                 [
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -82,9 +80,7 @@
                 "multi_desc_skill",
                 [
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ]
         ]

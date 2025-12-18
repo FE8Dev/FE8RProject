@@ -2,7 +2,7 @@
     {
         "nid": "Skyscraper",
         "name": "Skyscraper",
-        "desc": "A blade blessed by rising winds.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>), targets SPD instead of DEF.",
+        "desc": "A blade blessed by rising winds.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> SPD + SKL (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>), targets SPD.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             5,
@@ -113,7 +113,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect"
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

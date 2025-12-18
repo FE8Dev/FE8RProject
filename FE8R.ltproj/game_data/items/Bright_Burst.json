@@ -2,7 +2,7 @@
     {
         "nid": "Bright_Burst",
         "name": "Bright Burst",
-        "desc": "A bright burst of light that aids allies and hurts enemies.\n<green>Skills:</>Gentle Light (Mid)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>SPD + LCK (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')))}</>), +20 Crit damage.",
+        "desc": "A bright burst of light that aids allies and hurts enemies.\n<green>Skills:</><icon>skill_icons 6, 5</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 3, 13</> SPD + LCK (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             1,
@@ -104,7 +104,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Gentle_Light_Mid"
+                    "Gentle_Light_Mid",
+                    "Crit_Damage_Bonus_20_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

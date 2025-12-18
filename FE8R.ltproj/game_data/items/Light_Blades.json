@@ -2,7 +2,7 @@
     {
         "nid": "Light_Blades",
         "name": "Light Blades",
-        "desc": "Rare blade magic for a warrior of light.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), +10 Crit damage.",
+        "desc": "Rare blade magic for a warrior of light.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 1, 13</> STR + LCK/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             3,
@@ -99,6 +99,13 @@
             [
                 "alternate_damage_formula",
                 "STR_LCK_WEAK"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Crit_Damage_Bonus_10_hide",
+                    "Bow_and_Light_Range_Penalty"
+                ]
             ]
         ]
     }

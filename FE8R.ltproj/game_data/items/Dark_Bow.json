@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Bow",
         "name": "Dark Bow",
-        "desc": "A bow imbued with a dark gem.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + CON (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')))}</>).",
+        "desc": "A bow imbued with a dark gem.\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>(AOE:2) <icon>Curse</>(-2)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + CON (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             4,
@@ -108,7 +108,8 @@
                 "multi_desc_skill",
                 [
                     "Shadow_Blight",
-                    "Cursed_2"
+                    "Cursed_2",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

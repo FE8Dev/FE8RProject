@@ -2,7 +2,7 @@
     {
         "nid": "Peacemaker",
         "name": "Peacemaker",
-        "desc": "Bring justice and peace to the world.\n<green>Skills:</>Reconcile+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</><icon>Magic</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
+        "desc": "Bring justice and peace to the world.\n<green>Skills:</><icon>skill_icons 12, 37</>(+) <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Flying</><icon>Shadowblight</><icon>Magic</> <violet>Inflicts:</><icon>skill_icons 6, 33</>\n<pink>Misc:</>STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -104,7 +104,8 @@
                 "multi_desc_skill",
                 [
                     "Reconcile_P",
-                    "Reduced_Vision"
+                    "Reduced_Vision",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

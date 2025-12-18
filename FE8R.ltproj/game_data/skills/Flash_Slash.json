@@ -1,17 +1,17 @@
 [
     {
         "nid": "Flash_Slash",
-        "name": "Flash Slash",
-        "desc": "Gives sword users +2 bonus attacks when unit's AS +5 >= enemy's AS.",
-        "icon_nid": "Sword",
+        "name": "Flash Slash <icon>skill_icons 8, 28</>",
+        "desc": "Gives sword users +2 bonus attacks when unit can double.",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            0,
-            0
+            8,
+            28
         ],
         "components": [
             [
                 "combat_condition",
-                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item) + 5))"
+                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item)))"
             ],
             [
                 "condition",

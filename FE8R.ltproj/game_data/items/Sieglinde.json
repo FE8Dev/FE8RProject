@@ -2,7 +2,7 @@
     {
         "nid": "Sieglinde",
         "name": "Sieglinde",
-        "desc": "The Sacred Twin thunder blade wielded by Eirika.\n<green>Skills:</>Vantage++, Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Very effective:</><icon>Drenched</><icon>Horse</><icon>Armor</><icon>Monster</> <pink>Misc:</>Targets weaker of DEF or RES, STR + MAG + MOV*3 (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG') + unit.get_stat('MOV')*3)}</>), +5 STR/MAG, +10 SPD.",
+        "desc": "The Sacred Twin thunder blade wielded by Eirika.\n<green>Skills:</><icon>FSSS</><icon>VantageP</> <orange>Element:</><icon>Thunder</>\n<red>Very effective:</><icon>Drenched</><icon>Horse</><icon>Armor</><icon>Monster</>\n<pink>Misc:</><icon>skill_icons 6, 47</> STR + MAG + MOV*3 (Total Power:<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG') + unit.get_stat('MOV')*3)}</>), +5 STR/MAG, +10 SPD.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -79,7 +79,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Vantage_Plus_Plus_item"
                 ]
             ],
@@ -131,8 +131,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Vantage_Plus_Plus_item"
+                    "Flash_Step_SS",
+                    "Vantage_Plus_Plus_item",
+                    "Optimal_Eirika"
                 ]
             ]
         ]

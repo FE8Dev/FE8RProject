@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Death",
         "name": "Dark Death",
-        "desc": "A dark axe that cannot be seen once swung by Joshua.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>x5<icon>Shadowblight</>(AOE:2), Curse (15)\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A dark axe that cannot be seen once swung by Joshua.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>x5<icon>Shadowblight</>(AOE:2)<icon>Curse</>(-15) \n<pink>Misc:</>STR + SPD (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             8,
@@ -106,9 +106,9 @@
                 [
                     "Power_Chop_SS",
                     "Breached_15",
-                    "Cursed_15",
+                    "Bleeding",
                     "Shadow_Blight",
-                    "Bleeding"
+                    "Cursed_15"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Water_Burst",
         "name": "Water Burst",
-        "desc": "Shoots out streams of water. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "Shoots out streams of water. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>Homing</> MAG + SKL/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             0,
@@ -96,7 +96,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Homing_Attack"
                 ]
             ]
         ]

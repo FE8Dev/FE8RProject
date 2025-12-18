@@ -2,7 +2,7 @@
     {
         "nid": "True_Ivaldi",
         "name": "True Ivaldi",
-        "desc": "The pure light of Ivaldi, and beacon of Rausten.\n<green>Skills:</>Valkyrie Queen+, Dark Seal.\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>LCK + MAG + DEF (<red>{e:(unit.get_stat('LCK') + unit.get_stat('MAG') + unit.get_stat('DEF'))}</>), +20 LCK, +20 DEF, +50 Crit damage.",
+        "desc": "The pure light of Ivaldi, and beacon of Rausten.\n<green>Skills:</><icon>skill_icons 0, 52</>(+)<icon>skill_icons 6, 45</> <orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</><icon>skill_icons 6, 13</> LCK + MAG + DEF (Total Power:<red>{e:(unit.get_stat('LCK') + unit.get_stat('MAG') + unit.get_stat('DEF'))}</>), +20 LCK, +20 DEF.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             31,
@@ -73,7 +73,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_50_hide",
+                    "Crit_Damage_Bonus_100_hide",
                     "Dark_Seal",
                     "Valkyrie_QueenP"
                 ]
@@ -127,8 +127,10 @@
             [
                 "multi_desc_skill",
                 [
+                    "Valkyrie_QueenP",
                     "Dark_Seal",
-                    "Valkyrie_QueenP"
+                    "Crit_Damage_Bonus_100_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

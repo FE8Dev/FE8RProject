@@ -2,7 +2,7 @@
     {
         "nid": "Altarshot",
         "name": "Altarshot",
-        "desc": "This bow consumes whole altars to use.\n<orange>Element:</><icon>Earth</>\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>Heavy, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
+        "desc": "This bow consumes whole altars to use.\n<orange>Element:</><icon>Earth</> <red>Effective:</><icon>Flying</><icon>Armor</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</><icon>Heavy</> STR + MAG/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -122,8 +122,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

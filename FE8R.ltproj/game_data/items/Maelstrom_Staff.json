@@ -2,7 +2,7 @@
     {
         "nid": "Maelstrom_Staff",
         "name": "Maelstrom Staff",
-        "desc": "A staff that summons water from the vast ocean. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A staff that summons water from the vast ocean. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>Homing</> MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             1,
@@ -96,7 +96,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Homing_Attack"
                 ]
             ]
         ]

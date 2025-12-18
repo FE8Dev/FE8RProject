@@ -2,7 +2,7 @@
     {
         "nid": "Dark_Greatlance",
         "name": "Dark G.L.",
-        "desc": "Dark gem imbued.\n<green>Skills:</>Lance Guard (E), G.L. Mastery<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (2) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + CON (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')))}</>).",
+        "desc": "Dark gem imbued.\n<green>Skills:</><icon>LGE</><icon>GLM</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2) <icon>Curse</> (-2) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> DEF + CON (Total Power:<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             9,
@@ -119,10 +119,10 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_E",
-                    "Blade_Vantage_Effect",
                     "Greatlance_Mastery",
                     "Shadow_Blight",
-                    "Cursed_2"
+                    "Cursed_2",
+                    "Heavy"
                 ]
             ]
         ]

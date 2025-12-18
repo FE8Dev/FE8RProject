@@ -2,7 +2,7 @@
     {
         "nid": "Kakeruken",
         "name": "Kakeruken",
-        "desc": "The sword Joshua keeps when betting against mages, just in case.\n<green>Skills:</>Risky Vantage, Flash Step, Gamble\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>LCK + STR/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('STR')//3))}</>), +1 SPD.",
+        "desc": "The sword Joshua keeps when betting against mages, just in case.\n<green>Skills:</><icon>FSE</><icon>Vantage</><icon>skill_icons 5, 45</> <red>Effective:</><icon>Magic</>\n<pink>Misc:</>LCK + STR/3 (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('STR')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             22,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_E",
                     "Risky_Vantage",
                     "Gamble_Event"
                 ]
@@ -66,7 +66,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ]
                 ]
             ],
@@ -99,7 +99,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_E",
                     "Risky_Vantage",
                     "Gamble_Event"
                 ]

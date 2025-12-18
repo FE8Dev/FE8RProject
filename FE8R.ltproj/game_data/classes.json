@@ -3213,7 +3213,7 @@
         "turns_into": [
             "Assassin_Male",
             "Rogue",
-            "T2_Brigand_Rider"
+            "T2_Brigand_Rider_Dozla"
         ],
         "tags": [
             "AutoPromote",
@@ -6888,7 +6888,7 @@
         "promotes_from": "Cavalier",
         "turns_into": [
             "T3_Gold_Knight",
-            "T3_Magic_Tank_Forde",
+            "T3_Magic_Tank_Gilliam",
             "T3_Elephant_Rider"
         ],
         "tags": [
@@ -21806,10 +21806,10 @@
         },
         "growth_bonus": {
             "HP": 230,
-            "STR": 110,
-            "MAG": 80,
-            "SKL": 40,
-            "SPD": 40,
+            "STR": 120,
+            "MAG": 100,
+            "SKL": 90,
+            "SPD": 90,
             "LCK": 55,
             "DEF": 130,
             "RES": 130,
@@ -28325,7 +28325,7 @@
             0
         ],
         "map_sprite_nid": "Ephraim_T3_Lance_Lord",
-        "combat_anim_nid": "Silver_Knight_Female",
+        "combat_anim_nid": "T3_Silver_Knight",
         "fields": []
     },
     {
@@ -31747,12 +31747,12 @@
             ],
             "Lance": [
                 true,
-                60,
+                300,
                 480
             ],
             "Axe": [
                 true,
-                60,
+                300,
                 480
             ],
             "Bow": [
@@ -31777,7 +31777,7 @@
             ],
             "Dark": [
                 true,
-                300,
+                60,
                 480
             ],
             "Default": [
@@ -35981,6 +35981,159 @@
     },
     {
         "nid": "T3_Berserker_Rider",
+        "name": "Berserker Rider",
+        "desc": "Beserkers who ride viscious beasts. A deadly combo. <icon>Horse</><icon>Pirate</>",
+        "tier": 3,
+        "movement_group": "Pirates",
+        "promotes_from": "T2_Wolf_Knight",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Pirate"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 6,
+            "MAG": 0,
+            "SKL": 6,
+            "SPD": 7,
+            "LCK": 4,
+            "DEF": 5,
+            "RES": 4,
+            "CON": 13,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -46,
+            "MAG": 0,
+            "SKL": -25,
+            "SPD": -53,
+            "LCK": -14,
+            "DEF": -21,
+            "RES": -14,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 200,
+            "STR": 130,
+            "MAG": 70,
+            "SKL": 70,
+            "SPD": 150,
+            "LCK": 40,
+            "DEF": 60,
+            "RES": 40,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 3,
+            "MAG": 0,
+            "SKL": 1,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 1,
+            "RES": 1,
+            "CON": 4,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 97,
+            "MAG": 90,
+            "SKL": 94,
+            "SPD": 95,
+            "LCK": 100,
+            "DEF": 92,
+            "RES": 90,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Hungry_For_Blood"
+            ],
+            [
+                15,
+                "Tri_Fang_Art"
+            ],
+            [
+                1,
+                "Pirate_Pair_Up_T3_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                true,
+                60,
+                480
+            ],
+            "Axe": [
+                true,
+                60,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                false,
+                0,
+                300
+            ],
+            "Dark": [
+                false,
+                0,
+                300
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Berserker (M) Wolf Rider {Zoramine}",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Beserker_Rider",
+        "combat_anim_nid": "T3_Berserker_Rider",
+        "fields": []
+    },
+    {
+        "nid": "T3_Berserker_Rider_Brigand",
         "name": "Berserker Rider",
         "desc": "Beserkers who ride viscious beasts. A deadly combo. <icon>Horse</><icon>Pirate</>",
         "tier": 3,
@@ -51221,7 +51374,7 @@
         "promotes_from": "Brigand",
         "turns_into": [
             "T3_Elephant_Rider",
-            "T3_Berserker_Rider",
+            "T3_Berserker_Rider_Brigand",
             "T3_Wyvern_Master"
         ],
         "tags": [
@@ -51328,7 +51481,7 @@
         "wexp_gain": {
             "Sword": [
                 true,
-                120,
+                60,
                 360
             ],
             "Lance": [
@@ -51338,7 +51491,7 @@
             ],
             "Axe": [
                 true,
-                60,
+                120,
                 360
             ],
             "Bow": [
@@ -53043,7 +53196,7 @@
     {
         "nid": "T3_Trickster",
         "name": "Trickster",
-        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Rogue",
@@ -53205,7 +53358,7 @@
     {
         "nid": "T3_Trickster_Rennac",
         "name": "Trickster",
-        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Rogue",
@@ -53367,7 +53520,7 @@
     {
         "nid": "T3_Trickster_Natasha",
         "name": "Trickster",
-        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Rogue",
@@ -54726,7 +54879,7 @@
             ],
             "Axe": [
                 true,
-                300,
+                60,
                 480
             ],
             "Bow": [
@@ -63147,7 +63300,7 @@
         "promotes_from": "Soldier",
         "turns_into": [
             "T3_Crusader_Amelia_Purger",
-            "T3_Seraph_Knight_Purger",
+            "T3_Marshall_Purger",
             "Bulwark_Knight_Amelia"
         ],
         "tags": [
@@ -63601,7 +63754,7 @@
     {
         "nid": "Guildmaster",
         "name": "Guildmaster",
-        "desc": "Master mercenaries that are built for explosive attacks.. <icon>Infantry</>",
+        "desc": "Master mercenaries that are built for explosive attacks. <icon>Infantry</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Chief",
@@ -66814,7 +66967,7 @@
     {
         "nid": "Beholder",
         "name": "Beholder",
-        "desc": "A rare Mogal who has lived for centuries. <icon>Monster</><icon>Flying</><icon>Magic</>",
+        "desc": "A rare Mogall who has lived for centuries. <icon>Monster</><icon>Flying</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Fliers",
         "promotes_from": "Arch_Mogall",
@@ -68217,7 +68370,7 @@
     {
         "nid": "Bloodhound",
         "name": "Bloodhound",
-        "desc": "A Gwyllgi that has become corrupted by blood and seeks for it's next victim. <icon>Monster</><icon>Flying</><icon>Magic</><icon>Horse</>",
+        "desc": "A Gwyllgi that has become corrupted by blood and seeks for its next victim. <icon>Monster</><icon>Flying</><icon>Magic</><icon>Horse</>",
         "tier": 3,
         "movement_group": "Fliers",
         "promotes_from": "Gwyllgi",
@@ -74141,7 +74294,7 @@
             ],
             "Anima": [
                 true,
-                60,
+                120,
                 360
             ],
             "Dark": [
@@ -85101,7 +85254,7 @@
         "desc": "After a deal is struck with the universe, a small percentage of their magic started to seep trough<icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Sage_Male",
+        "promotes_from": "Mage_Male",
         "turns_into": [
             "Pro_T3"
         ],
@@ -86685,6 +86838,7 @@
             "Harpy_Lady"
         ],
         "tags": [
+            "Flying",
             "Monster",
             "Support",
             "Thief",
@@ -94225,7 +94379,7 @@
     {
         "nid": "Diana_T2_Hunter",
         "name": "Hunter",
-        "desc": "Deadly warriors that focus on killing enemies in one blow from afar. <icon>Infantry</><icon>Magic</><icon>Steal</><icon>Support</>",
+        "desc": "Deadly warriors that focus on killing enemies in one blow from afar. <icon>Infantry</><icon>Magic</><icon>Steal</><icon>Staff</>",
         "tier": 2,
         "movement_group": "Light Foot",
         "promotes_from": "Diana_T1_Outlaw",
@@ -94390,7 +94544,7 @@
     {
         "nid": "Diana_T3_Adventurer",
         "name": "Adventurer",
-        "desc": "Explorers that seek loot in places no one else dares to reach. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Explorers that seek loot in places no one else dares to reach. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Diana_T2_Hunter",
@@ -115342,7 +115496,7 @@
     {
         "nid": "T3_Trickster_Esperanza",
         "name": "Trickster",
-        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Support</>",
+        "desc": "Expert thieves that fly across the battlefield, looking for spoils. <icon>Infantry</><icon>Steal</><icon>Magic</><icon>Staff</>",
         "tier": 3,
         "movement_group": "Light Foot",
         "promotes_from": "Rogue_Esperanza",

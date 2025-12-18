@@ -2,7 +2,7 @@
     {
         "nid": "Royal_Nova",
         "name": "Royal Nova",
-        "desc": "Eirika's most powerful royal light spell.\n<green>Skills:</>Gentle Light (High)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>SPD + LCK (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')))}</>), +40 Crit damage.",
+        "desc": "Eirika's most powerful royal light spell.\n<green>Skills:</><icon>skill_icons 6, 5</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</> SPD + LCK (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             2,
@@ -70,7 +70,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Gentle_Light_High",
-                    "Crit_Damage_Bonus_40_hide"
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ],
             [
@@ -104,7 +104,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Gentle_Light_High"
+                    "Gentle_Light_High",
+                    "Crit_Damage_Bonus_50_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

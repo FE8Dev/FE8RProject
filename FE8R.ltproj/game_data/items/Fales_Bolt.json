@@ -2,7 +2,7 @@
     {
         "nid": "Fales_Bolt",
         "name": "Fale's Bolt",
-        "desc": "Fale brings Syrene a bolt she can use to eviscerate foes.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MOV*5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>), targets weaker of DEF or RES, Brave, +10 SPD.",
+        "desc": "Fale brings Syrene a bolt she can use to eviscerate foes.\n<green>Skills:</><icon>FSSS</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> STR + MOV*5 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>), Brave.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             8,
@@ -64,7 +64,7 @@
             ],
             [
                 "status_on_equip",
-                "Flash_Step"
+                "Flash_Step_SS"
             ],
             [
                 "battle_cast_anim",
@@ -114,7 +114,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step"
+                    "Flash_Step_SS",
+                    "Kaminari"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Lethal_Talon_P",
         "name": "Lethal Talon+",
-        "desc": "Claws that spread plagues.\n<violet>Inflicts:</><icon>Venom</>x4<icon>Bleed</>\n<pink>Misc:</>STR + HP/5.",
+        "desc": "Claws that spread plagues.\n<violet>Inflicts:</><icon>Venom</>x4<icon>Bleed</>\n<pink>Misc:</>STR + HP/5. (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -72,12 +72,7 @@
                     "Venomous_Effect",
                     "Venomous_Effect",
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Venomous_Effect_Boss",
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ],
             [
@@ -88,9 +83,7 @@
                 "multi_desc_skill",
                 [
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss",
-                    "Bleeding",
-                    "Bleeding_Boss"
+                    "Bleeding"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Stone_Halberd",
         "name": "Stone Halberd",
-        "desc": "An unorthodox Gargoyle lance.\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (2)\n<red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Reaver, cleave AOE attack, DEF + CON*1.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "An unorthodox Gargoyle lance.\n<green>Skills:</><icon>LGE</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</>(-2) <red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</><icon>skill_icons 14, 33</><icon>Cleave</> DEF + CON*1.5 (Total Power:<red>{e:(unit.get_stat('DEF') + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -112,7 +112,9 @@
                 [
                     "Lance_Guard_E",
                     "Rock_Punctures",
-                    "Breached_2"
+                    "Breached_2",
+                    "Reaver_Description",
+                    "Cleaves"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Necro_Fang",
         "name": "Necro Fang",
-        "desc": "A dagger that swaps enemy through an venomous portal.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</>Uses SPD, +20 SPD, Swap, +50 Crit Damage.",
+        "desc": "A dagger that swaps enemy through an venomous portal.\n<green>Skills:</><icon>skill_icons 6, 29</> <violet>Inflicts:</><icon>Bleed</>x3<icon>Venom</>x3\n<pink>Misc:</><icon>skill_icons 6, 13</> Uses SPD for damage, +20 SPD, Swap places with target after combat.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             9,
@@ -102,7 +102,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_50_hide"
+                    "Crit_Damage_Bonus_100_hide"
                 ]
             ],
             [
@@ -110,7 +110,8 @@
                 [
                     "Quick_Knife",
                     "Bleeding",
-                    "Venomous_Effect"
+                    "Venomous_Effect",
+                    "Crit_Damage_Bonus_100_hide"
                 ]
             ]
         ]

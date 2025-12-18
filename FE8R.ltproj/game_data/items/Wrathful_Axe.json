@@ -2,7 +2,7 @@
     {
         "nid": "Wrathful_Axe",
         "name": "Wrathful Axe",
-        "desc": "An axe that grants prodigious strength at a cost.\n<green>Skills:</>Risky Desperation, Power Chop (X) <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Very effective:</><icon>Monster</><icon>Horse</>\n<pink>Misc:</>-30 HP, -15 DEF, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*2.5)))}</>).",
+        "desc": "An axe that grants prodigious strength at a cost.\n<green>Skills:</><icon>PCX</><icon>Desperation</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Very effective:</><icon>Monster</><icon>Horse</>\n<pink>Misc:</><red>-30 HP, -15 DEF</>, STR + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*2.5)))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -121,8 +121,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Risky_Desperation",
                     "Power_Chop_X",
+                    "Risky_Desperation",
                     "Breached_25",
                     "Seared"
                 ]

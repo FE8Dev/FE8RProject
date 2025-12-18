@@ -2,7 +2,7 @@
     {
         "nid": "Stoic_Guard",
         "name": "Thundercloud",
-        "desc": "A lance with the symbolizes a coming storm.\n<green>Skills:</><icon>skill_icons 9, 28</><icon>skill_icons 0, 34</><icon>skill_icons 1, 29</> (C) <orange>Element:</><icon>Dark</><icon>Thunder</> \n<red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (5) \n<pink>Misc:</><icon>skill_icons 7, 35</> STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "A lance with the symbolizes a coming storm.\n<green>Skills:</><icon>LGC</><icon>GLM</><icon>skill_icons 0, 34</> <orange>Element:</><icon>Dark</><icon>Thunder</> \n<red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</> (-5) \n<pink>Misc:</><icon>Heavy</> STR + DEF/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             8,
@@ -122,12 +122,12 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_C",
-                    "Blade_Vantage_Effect",
                     "Greatlance_Mastery",
                     "Provoke_Weak",
                     "Counter_Point_Giver",
                     "Shadow_Blight",
-                    "Cursed_5"
+                    "Cursed_5",
+                    "Heavy"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Sword_of_Fog",
         "name": "Sword of Fog",
-        "desc": "A sword made of thick fog. <green>CD:1</>\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Magical, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>), +50 Avoid/Dodge, +10 SPD.",
+        "desc": "A sword made of thick fog. <green>CD:1</>\n<green>Skills:</>Flash Step <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 5, 11</> MAG + SPD (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "{GabrielKnight} (Icon Blitz 3) Sword",
         "icon_index": [
             0,
@@ -60,7 +60,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Fog_Sword_Effect_Strong"
                 ]
             ],
@@ -115,7 +115,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Fog_Sword_Effect_Strong"
                 ]
             ]

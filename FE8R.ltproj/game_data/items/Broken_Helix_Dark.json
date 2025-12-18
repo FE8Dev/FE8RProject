@@ -2,7 +2,7 @@
     {
         "nid": "Broken_Helix_Dark",
         "name": "Broken Helix (D)",
-        "desc": "An incomplete blade of darkness.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*1.5))}</>), Heavy, Cleaves.",
+        "desc": "An incomplete blade of darkness.\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</> (-5)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + CON*1.5 (Total Power:<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5)))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             7,
@@ -116,7 +116,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
+                    "Heavy",
+                    "Cleaves",
                     "Shadow_Blight",
                     "Cursed_5"
                 ]

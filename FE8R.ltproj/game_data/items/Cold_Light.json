@@ -2,7 +2,7 @@
     {
         "nid": "Cold_Light",
         "name": "Cold Light",
-        "desc": "A pillar of ice that destroys evil.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1), Reduced Vision\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), (AOE:1), +50 Crit damage, attacks deals full damage in Dual Strike.",
+        "desc": "A pillar of ice that destroys evil.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1) <icon>skill_icons 6, 33</>\n<red>Effective:</><icon>Pirate</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</><icon>skill_icons 6, 13</><icon>skill_icons 1, 38</><icon>Blast</> (<blue>1</>) MAG + RES (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             8,
@@ -65,7 +65,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_50_hide",
+                    "Crit_Damage_Bonus_100_hide",
                     "Cold_Lights_Assistance"
                 ]
             ],
@@ -138,9 +138,12 @@
             [
                 "multi_desc_skill",
                 [
-                    "Cold_Lights_Assistance",
                     "Frozen",
-                    "Reduced_Vision"
+                    "Reduced_Vision",
+                    "Crit_Damage_Bonus_100_hide",
+                    "Cold_Lights_Assistance",
+                    "AOE_Blast_Description",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

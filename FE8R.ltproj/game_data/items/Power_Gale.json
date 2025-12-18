@@ -2,7 +2,7 @@
     {
         "nid": "Power_Gale",
         "name": "Power Gale",
-        "desc": "A harsh wind that never lets up. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD'))}</>), Brave, Splash DMG (40%), +5 SPD, +5 MAG.",
+        "desc": "A harsh wind that never lets up. <green>CD:2</>\n<orange>Element:</><icon>Wind</> <red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>ASA</> MAG + SPD (Total Power:<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD'))}</>), Brave, +5 SPD, +5 MAG.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             33,
@@ -118,6 +118,12 @@
             [
                 "cooldown",
                 2
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "AnimaSplash_A"
+                ]
             ]
         ]
     }

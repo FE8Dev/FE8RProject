@@ -2,7 +2,7 @@
     {
         "nid": "Armor_Ripper",
         "name": "Render",
-        "desc": "A unique heavy blade that render away one's defenses.\n<green>Skills:</>Provoke \n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>, Breach(5)\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</> <pink>Misc:</>Heavy, Cleaves, STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A unique heavy blade that render away one's defenses.\n<green>Skills:</><icon>skill_icons 0, 34</> <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</> (-5) <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + SKL/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -123,11 +123,12 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Provoke_Weak",
                     "Counter_Point_Giver",
                     "Breached_5",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

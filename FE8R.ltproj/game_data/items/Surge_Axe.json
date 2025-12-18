@@ -2,7 +2,7 @@
     {
         "nid": "Surge_Axe",
         "name": "Surge Axe",
-        "desc": "The ultimate thunder throwing axe that moves at blistering speeds.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MOV*5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>), targets weaker of DEF or RES.",
+        "desc": "The ultimate thunder throwing axe that moves at blistering speeds.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> STR + MOV*5 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             40,
@@ -108,7 +108,8 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Breached_15"
+                    "Breached_15",
+                    "Kaminari"
                 ]
             ]
         ]

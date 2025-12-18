@@ -2,7 +2,7 @@
     {
         "nid": "Rage_Storm",
         "name": "Rage Storm",
-        "desc": "A heavy blade sullied by blood.\n<green>Skills:</>Heavy Force, Enrage\n<orange>Element:<icon>Dark</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Confuse</><icon>Shadowblight</>, Curse (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
+        "desc": "A heavy blade sullied by blood.\n<green>Skills:</><icon>Flinch</><icon>skill_icons 5, 34</> <orange>Element:</><icon>Dark</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Confuse</><icon>Shadowblight</><icon>Curse</>(-25) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + HP/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             6,
@@ -119,13 +119,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Heavy_Force",
                     "Enrage",
                     "Confuse",
                     "Shadow_Blight",
                     "Cursed_25",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

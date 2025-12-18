@@ -2,7 +2,7 @@
     {
         "nid": "Eternal_Rest",
         "name": "Eternal Rest",
-        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (25), Crippled+\n<pink>Misc:</>STR + MAG*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets RES, +20 DEF, +12 RES, +15 SPD.",
+        "desc": "The rest that comes from crossing this blade.\n<green>Skills:</><icon>FSX</><icon>skill_icons 7, 24</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25)<icon>Heavy</>(+)\n<pink>Misc:</>STR + MAG*2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')*2))}</>), targets enemy's RES, +20 DEF, +12 RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             9,
@@ -66,7 +66,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Aggravator"
                 ]
             ],
@@ -112,7 +112,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Aggravator",
                     "Shadow_Blight",
                     "Cursed_25",

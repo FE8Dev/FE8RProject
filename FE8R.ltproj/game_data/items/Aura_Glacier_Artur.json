@@ -2,7 +2,7 @@
     {
         "nid": "Aura_Glacier_Artur",
         "name": "Aura Glacier",
-        "desc": "Purges all evil with an explosion of holy ice.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1) \n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</>MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), +40 Crit damage, attacks deals full damage in Dual Strike.",
+        "desc": "Purges all evil with an explosion of holy ice.\n<orange>Element:</><icon>Ice</><icon>Light</> <violet>Inflicts:</><icon>Frozen</>(AOE:1) \n<red>Effective:</><icon>Pirate</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</><icon>skill_icons 1, 38</> MAG + RES (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             1,
@@ -69,7 +69,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_40_hide",
+                    "Crit_Damage_Bonus_50_hide",
                     "Cold_Lights_Assistance"
                 ]
             ],
@@ -116,8 +116,10 @@
             [
                 "multi_desc_skill",
                 [
+                    "Frozen",
+                    "Crit_Damage_Bonus_50_hide",
                     "Cold_Lights_Assistance",
-                    "Frozen"
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Natasha_Dagger_SSS",
         "name": "Peaceful rest",
-        "desc": "Small and thin blade coated in a numbing poison.\n<green>Skills:</>Quick Knife, Bloodletting\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</>SKL + STR (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')))}</>), targets SPD, +15 SKL, +40 Crit damage.",
+        "desc": "Small and thin blade coated in a numbing poison.\n<green>Skills:</><icon>skill_icons 6, 29</><icon>skill_icons 14, 14</>\n<violet>Inflicts:</><icon>Bleed</> <icon>skill_icons 7, 41</>\n<pink>Misc:</><icon>skill_icons 5, 13</> SKL + STR (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')))}</>), targets enemy's SPD, +15 SKL.",
         "icon_nid": "New Daggers Natasha",
         "icon_index": [
             3,
@@ -94,7 +94,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_40_hide",
+                    "Crit_Damage_Bonus_50_hide",
                     "Bloodletting"
                 ]
             ],
@@ -114,7 +114,8 @@
                     "Quick_Knife",
                     "Bloodletting",
                     "Bleeding",
-                    "Anesthesia"
+                    "Anesthesia",
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ]
         ]

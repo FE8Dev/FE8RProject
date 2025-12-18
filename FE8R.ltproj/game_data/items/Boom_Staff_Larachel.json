@@ -2,7 +2,7 @@
     {
         "nid": "Boom_Staff_Larachel",
         "name": "Boom Staff",
-        "desc": "L'arachel unleashes an explosion.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>Cannot miss, can't crit.",
+        "desc": "L'arachel unleashes an explosion.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</><icon>Homing</>",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             9,
@@ -79,7 +79,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster"
+                        "Monster",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -96,6 +97,12 @@
             [
                 "level_exp",
                 null
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Homing_Attack"
+                ]
             ]
         ]
     }

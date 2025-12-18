@@ -2,7 +2,7 @@
     {
         "nid": "Times_Sight",
         "name": "Time's Sight",
-        "desc": "Knoll looks through time with the dark arts.\n<green>Skills:</>Ancient Pact (E)\n<green>Skills:</>Turn Fate\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</>MAG + SKL/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
+        "desc": "Knoll looks through time with the dark arts.\n<green>Skills:</><icon>APE</><icon>skill_icons 14, 19</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2)\n<pink>Misc:</>MAG + SKL/3 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             7,
@@ -107,11 +107,11 @@
             [
                 "multi_desc_skill",
                 [
+                    "Ancient_Pact_E",
                     "Turn_Fate",
                     "Foresight_Knoll",
-                    "Ancient_Pact_E",
-                    "Cursed_2",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_2"
                 ]
             ]
         ]

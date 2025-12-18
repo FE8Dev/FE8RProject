@@ -2,7 +2,7 @@
     {
         "nid": "Guards_Greatlance",
         "name": "Guard's G.L.",
-        "desc": "A thunder Greatlance that draws enemies to oneself.\n<green>Skills:</><icon>skill_icons 9, 28</><icon>skill_icons 0, 34</><icon>skill_icons 1, 29</> (E) <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</><icon>skill_icons 7, 35</> STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
+        "desc": "A thunder Greatlance that draws enemies to oneself.\n<green>Skills:</><icon>LGE</><icon>GLM</><icon>skill_icons 0, 34</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Frozen</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</><icon>Heavy</> STR + DEF/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             9,
@@ -117,6 +117,7 @@
                     "Greatlance_Mastery",
                     "Provoke_Weak",
                     "Counter_Point_Giver",
+                    "Heavy",
                     "Heavy"
                 ]
             ]

@@ -2,7 +2,7 @@
     {
         "nid": "Boulder_Halberd",
         "name": "Boulder Halberd",
-        "desc": "A heavy lance for strong Gargoyles.\n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (5)\n<red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Reaver, cleave AOE attack, DEF + CON*1.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*1.5))}</>).",
+        "desc": "A heavy lance for strong Gargoyles.\n<green>Skills:</><icon>LGC</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</>(-5) <red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</><icon>skill_icons 14, 33</><icon>Cleave</> DEF + CON*1.5 (Total Power:<red>{e:(unit.get_stat('DEF') + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -112,7 +112,9 @@
                 [
                     "Lance_Guard_C",
                     "Rock_Punctures",
-                    "Breached_5"
+                    "Breached_5",
+                    "Reaver_Description",
+                    "Cleaves"
                 ]
             ]
         ]

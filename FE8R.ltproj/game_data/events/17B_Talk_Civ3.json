@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Talk_Civ3",
+        "trigger": "on_talk",
+        "level_nid": "17B",
+        "condition": "check_pair('Ephraim', '127')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ephraim;Right;Villager Girl;Left",
+            "speak;Villager Girl;Thank you for saving me, handsome man!",
+            "speak;Ephraim;You're welcome, I'm just glad you are safe.",
+            "speak;Villager Girl;I hope my husband will be as handsome and strong as you someday!",
+            "multi_remove_portrait;Ephraim;Villager Girl",
+            "give_bexp;5000",
+            "remove_talk;Ephraim;127"
+        ],
+        "nid": "17B Talk_Civ3"
+    }
+]

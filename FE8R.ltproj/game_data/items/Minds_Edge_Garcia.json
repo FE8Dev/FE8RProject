@@ -2,7 +2,7 @@
     {
         "nid": "Minds_Edge_Garcia",
         "name": "Mind's Edge",
-        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<orange>Element:<icon>Dark</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Shadowblight</>, Curse (2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + HP/5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
+        "desc": "A deadly, heavy blade found by Garcia on the battlefield.\n<orange>Element:</><icon>Dark</><icon>Earth</> <violet>Inflicts:</><icon>Rock</><icon>Shadowblight</><icon>Curse</>(-2)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + HP/5 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//5))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             7,
@@ -120,10 +120,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Shadow_Blight",
                     "Cursed_2",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Blastblade",
         "name": "Blastblade",
-        "desc": "A strange sword Kyle discovered.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>DEF + SKL/3 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//3))}</>), +1 SPD, +10 Bonus Crit Damage.",
+        "desc": "A strange sword Kyle discovered.\n<green>Skills:</><icon>FSE</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</><icon>skill_icons 1, 13</> DEF + SKL/3 (Total Power:<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_E",
                     "Crit_Damage_Bonus_10_hide"
                 ]
             ],
@@ -65,7 +65,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ]
                 ]
             ],
@@ -102,8 +102,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Rock_Punctures"
+                    "Flash_Step_E",
+                    "Rock_Punctures",
+                    "Crit_Damage_Bonus_10_hide"
                 ]
             ]
         ]

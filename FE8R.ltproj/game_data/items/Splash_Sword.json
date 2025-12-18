@@ -2,7 +2,7 @@
     {
         "nid": "Splash_Sword",
         "name": "Splash Sword",
-        "desc": "A sword for a man of the sea. Starts on CD. <green>CD:2</>\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>+1 SPD, STR + SKL/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), (AOE Blast:2).",
+        "desc": "A sword for a man of the sea. Starts on CD. <green>CD:2</>\n<green>Skills:</><icon>FSE</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>Blast</> (<blue>2</>) STR + SKL/3  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             12,
@@ -60,7 +60,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_E"
                 ]
             ],
             [
@@ -68,7 +68,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ]
                 ]
             ],
@@ -111,8 +111,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Drench_Debuff"
+                    "Flash_Step_E",
+                    "Drench_Debuff",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

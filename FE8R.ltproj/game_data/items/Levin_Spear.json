@@ -2,7 +2,7 @@
     {
         "nid": "Levin_Spear",
         "name": "Levin Spear",
-        "desc": "A lance charged with thunder. <green>CD:1</>\n<green>Skills:</>Lance Guard (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>SPD + MOV*2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*2))}</>),targets weaker of DEF or RES.",
+        "desc": "A lance charged with thunder. <green>CD:1</>\n<green>Skills:</><icon>LGE</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> SPD + MOV*2 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             16,
@@ -105,7 +105,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Lance_Guard_E"
+                    "Lance_Guard_E",
+                    "Kaminari"
                 ]
             ]
         ]

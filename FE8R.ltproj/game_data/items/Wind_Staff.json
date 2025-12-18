@@ -2,7 +2,7 @@
     {
         "nid": "Wind_Staff",
         "name": "Wind Staff",
-        "desc": "A staff that unleashes a gust of wind. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Always hits, cannot crit, MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>).",
+        "desc": "A staff that unleashes a gust of wind. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Wind</> <red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Homing</> MAG + SPD/3 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             6,
@@ -94,6 +94,12 @@
                 "item_tags",
                 [
                     "Wind"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Homing_Attack"
                 ]
             ]
         ]

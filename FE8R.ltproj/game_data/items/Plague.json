@@ -2,7 +2,7 @@
     {
         "nid": "Plague",
         "name": "Plague",
-        "desc": "Summons a disaster from the heavens to get rid of corrupt cities. <green>CD:4</>\n<orange>Element:</><icon>Light</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>x4\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(Multi-target:5), cannot DS, +40 Crit damage, this is a free action.",
+        "desc": "Summons a disaster from the heavens to get rid of corrupt cities. <green>CD:4</>\n<orange>Element:</><icon>Light</><icon>Earth</> <violet>Inflicts:</><icon>Rock</><icon>Venom</>x4\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</><icon>Target</> (<blue>5</>), this is a free action.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             38,
@@ -77,7 +77,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_40_hide"
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ],
             [
@@ -157,8 +157,14 @@
                 "multi_desc_skill",
                 [
                     "Venomous_Effect",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Crit_Damage_Bonus_50_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

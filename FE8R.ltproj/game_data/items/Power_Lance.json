@@ -2,7 +2,7 @@
     {
         "nid": "Power_Lance",
         "name": "Power Lance",
-        "desc": "A lance that creates gusts of wind with each swing.\n<green>Skills:</>World's Strongest, Lance Guard (A) <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*1.5))}</>)",
+        "desc": "A lance that creates gusts of wind with each swing.\n<green>Skills:</><icon>LGA</><icon>skill_icons 0, 50</> <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</> STR + CON*1.5 (Total Power:<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*1.5))}</>)",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             1,
@@ -127,9 +127,9 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_A",
-                    "Blade_Vantage_Effect",
                     "Worlds_Strongest",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy"
                 ]
             ]
         ]

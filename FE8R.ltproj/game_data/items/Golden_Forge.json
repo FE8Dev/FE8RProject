@@ -2,7 +2,7 @@
     {
         "nid": "Golden_Forge",
         "name": "Golden Forge",
-        "desc": "A special magic tome that can transmute corpses into gold.\n<green>Skills:</>Gold Finger\n<pink>Misc:</>(AOE Blast:2), Splash DMG (20%).",
+        "desc": "A special magic tome that can transmute corpses into gold.\n<green>Skills:</><icon>skill_icons 3, 45</>\n<pink>Misc:</><icon>ASE</><icon>Blast</> (<blue>2</>)",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             6,
@@ -94,10 +94,6 @@
                 2
             ],
             [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
                 "map_cast_anim",
                 "AOE_Reinforce"
             ],
@@ -108,7 +104,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Gold_Finger"
+                    "Gold_Finger",
+                    "AnimaSplash_E",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

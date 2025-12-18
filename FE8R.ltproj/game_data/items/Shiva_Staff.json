@@ -2,7 +2,7 @@
     {
         "nid": "Shiva_Staff",
         "name": "Shiva Staff",
-        "desc": "A staff that has been touched by a forgotten legend.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Always hits, cannot crit, cannot be countered, MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>), cannot be countered.",
+        "desc": "A staff that has been touched by a forgotten legend.\n<orange>Element:</><icon>Ice</> <violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</><icon>Homing</><icon>skill_icons 13, 39</> MAG + RES (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             6,
@@ -104,7 +104,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Frozen"
+                    "Frozen",
+                    "Homing_Attack",
+                    "Flash_Freeze"
                 ]
             ]
         ]

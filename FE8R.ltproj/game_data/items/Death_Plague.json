@@ -2,7 +2,7 @@
     {
         "nid": "Death_Plague",
         "name": "Death Plague",
-        "desc": "Saleh knows the sign to unleash the plague, but waits until it is wise.\n<green>Skills:</>Dream Siphon(After first kill), Ancient Pact (SS) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (15)\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5)))}</>).",
+        "desc": "Saleh knows the sign to unleash the plague, but waits until it is wise.\n<green>Skills:</><icon>APSS</><icon>skill_icons 7, 21</> <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-15)\n<pink>Misc:</>MAG + CON*2.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             8,
@@ -119,11 +119,11 @@
             [
                 "multi_desc_skill",
                 [
+                    "Ancient_Pact_SS",
                     "Dream_Siphon_Giver",
                     "Dream_Siphon_Giver_Buff",
-                    "Ancient_Pact_SS",
-                    "Cursed_15",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_15"
                 ]
             ]
         ]

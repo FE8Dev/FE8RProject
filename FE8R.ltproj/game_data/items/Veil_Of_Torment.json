@@ -2,7 +2,7 @@
     {
         "nid": "Veil_Of_Torment",
         "name": "Veil Of Torment",
-        "desc": "A Dark spell that siphons one's dreams. Said to cause an evil plague...\n<green>Skills:</>Dream Siphon(After first kill), Ancient Pact (E) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (2)\n<pink>Misc:</>MAG + CON (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')))}</>).",
+        "desc": "A Dark spell that siphons one's dreams. Said to cause an evil plague...\n<green>Skills:</><icon>APE</><icon>skill_icons 7, 21</> <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2)\n<pink>Misc:</>MAG + CON (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('CON')))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             7,
@@ -119,11 +119,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Dream_Siphon_Giver",
-                    "Dream_Siphon_Giver_Buff",
                     "Ancient_Pact_E",
-                    "Cursed_2",
-                    "Shadow_Blight"
+                    "Dream_Siphon_Giver",
+                    "Shadow_Blight",
+                    "Cursed_2"
                 ]
             ]
         ]

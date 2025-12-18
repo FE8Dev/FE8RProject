@@ -2,7 +2,7 @@
     {
         "nid": "Caliburn",
         "name": "Caliburn",
-        "desc": "The ultimate heavy blade made from angelic material.\n<green>Skills:</>Blade Sweep\n<orange>Element:</><icon>Light</>\n<red>Very effective:</><icon>Frozen</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</>Heavy, but can attack first, STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
+        "desc": "The ultimate heavy blade made from angelic material.\n<orange>Element:</><icon>Light</> <red>Very effective:</><icon>Frozen</><icon>Shadowblight</><icon>Monster</><icon>Dragon</>\n<pink>Misc:</><icon>Heavy</><icon>skill_icons 13, 51</><icon>Cleave</> STR + LCK (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             2,
@@ -102,7 +102,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Sweep"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -112,8 +112,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Sweep"
+                    "Heavy",
+                    "Well_Designed",
+                    "Cleaves"
                 ]
+            ],
+            [
+                "enemy_cleave_aoe",
+                null
             ]
         ]
     }

@@ -2,17 +2,13 @@
     {
         "nid": "Steal_hide",
         "name": "Steal",
-        "desc": "Can steal items and weapons from enemies with lower SPD.",
+        "desc": "Can steal items and weapons from enemies with lower SPD.\nAlso increases <red>Sight</> in <red>Fog of War</>.",
         "icon_nid": "Skills",
         "icon_index": [
             7,
             10
         ],
         "components": [
-            [
-                "condition",
-                "not has_skill(unit, \"Blade_Vantage_Effect\")"
-            ],
             [
                 "ability",
                 "Steal"

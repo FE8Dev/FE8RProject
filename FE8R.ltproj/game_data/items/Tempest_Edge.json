@@ -2,7 +2,7 @@
     {
         "nid": "Tempest_Edge",
         "name": "Tempest Edge",
-        "desc": "The results of a lot of testing. The result is Lute likes swords now.\n<green>Skills:</>Flash Step <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), +10 SPD, (Shove:2).",
+        "desc": "The results of a lot of testing. The result is Lute likes swords now.\n<green>Skills:</><icon>FSSS</> <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 10, 50</> (<blue>2</>) STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             1,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_SS"
                 ]
             ],
             [
@@ -116,7 +116,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step"
+                    "Flash_Step_SS",
+                    "Shove_Description"
                 ]
             ]
         ]

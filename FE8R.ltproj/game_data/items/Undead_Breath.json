@@ -2,7 +2,7 @@
     {
         "nid": "Undead_Breath",
         "name": "Undead Breath",
-        "desc": "The breath of the undead.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Venom</>, Curse (15)\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "desc": "The breath of the undead.\n<green>Skills:</><icon>APSS</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Venom</><icon>Curse</>(-15) \n<pink>Misc:</>MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -67,7 +67,7 @@
                     "Cursed_15",
                     "Shadow_Blight",
                     "Venomous_Effect",
-                    "Venomous_Effect_Boss"
+                    "Delete_Please"
                 ]
             ],
             [
@@ -112,10 +112,9 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_SS",
-                    "Cursed_15",
                     "Shadow_Blight",
-                    "Venomous_Effect",
-                    "Venomous_Effect_Boss"
+                    "Cursed_15",
+                    "Venomous_Effect"
                 ]
             ]
         ]

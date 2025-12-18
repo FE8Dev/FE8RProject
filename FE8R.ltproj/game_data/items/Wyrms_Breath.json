@@ -2,7 +2,7 @@
     {
         "nid": "Wyrms_Breath",
         "name": "Wyrm's Breath",
-        "desc": "The fiery spell that cleanse all impurities.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</> <pink>Misc:</>MAG + SKL/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), Uncounterable, Splash DMG (30%).",
+        "desc": "The fiery spell that cleanse all impurities.\n<orange>Element:</><icon>Fire</><icon>Light</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</><icon>Shadowblight</>\n<pink>Misc:</><icon>ASC</> MAG + SKL/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')//2))}</>), Uncounterable.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -120,7 +120,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Seared"
+                    "Seared",
+                    "AnimaSplash_C"
                 ]
             ]
         ]

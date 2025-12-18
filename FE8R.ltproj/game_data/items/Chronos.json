@@ -2,7 +2,7 @@
     {
         "nid": "Chronos",
         "name": "Chronos",
-        "desc": "A club of an ancient Deity. <green>CD:1</>\n<green>Skills:</>War Blow, Circle Swing+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>, Breach (25)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, but can attack first, uses STR x2 + MAG (<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG'))}</>).",
+        "desc": "A club of an ancient Deity. <green>CD:1</>\n<green>Skills:</><icon>War Blow</><icon>skill_icons 6, 39</>(+) <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</><icon>Skills 6, 4</>(-25)  <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>skill_icons 13, 51</> STR x2 + MAG (Total Power:<red>{e:(unit.get_stat('STR')*2) + (unit.get_stat('MAG'))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -124,10 +124,10 @@
                 [
                     "War_Blow",
                     "Circle_Swing_P",
-                    "Circle_Swing_P_Buffer",
-                    "Circle_Swing_P_Debuffer",
                     "Stun",
-                    "Breached_25"
+                    "Breached_25",
+                    "Heavy",
+                    "Well_Designed"
                 ]
             ]
         ]

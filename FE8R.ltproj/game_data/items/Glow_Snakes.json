@@ -2,7 +2,7 @@
     {
         "nid": "Glow_Snakes",
         "name": "Glow Snakes",
-        "desc": "Summons the snakes of a Goddess to attack. <green>CD:4</>\n<orange>Element:</><icon>Light</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Venom</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>(Multi-target:5), cannot DS, +10 Crit damage, this is a free action.",
+        "desc": "Summons the snakes of a Goddess to attack. <green>CD:4</>\n<orange>Element:</><icon>Light</><icon>Earth</> <violet>Inflicts:</><icon>Rock</><icon>Venom</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 1, 13</><icon>Target</> (<blue>5</>), this is a free action.",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             7,
@@ -154,8 +154,14 @@
                 "multi_desc_skill",
                 [
                     "Venomous_Effect",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Crit_Damage_Bonus_10_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

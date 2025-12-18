@@ -2,7 +2,7 @@
     {
         "nid": "Valkyries_Light",
         "name": "Valkyrie's Light",
-        "desc": "Light magic for the leader of the Valkyries.\n<green>Skills:</>Valkyrie Queen\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/3 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//3))}</>), +10 Crit damage.",
+        "desc": "Light magic for the leader of the Valkyries.\n<green>Skills:</><icon>skill_icons 0, 52</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 1, 13</> LCK + MAG/3 (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//3))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             4,
@@ -112,7 +112,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Valkyrie_Queen"
+                    "Valkyrie_Queen",
+                    "Crit_Damage_Bonus_10_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

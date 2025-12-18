@@ -2,7 +2,7 @@
     {
         "nid": "Jolt_Axe",
         "name": "Jolt Axe",
-        "desc": "A throwing axe imbued with a small thunder gem.\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MOV*2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*2))}</>), targets weaker of DEF or RES.",
+        "desc": "A throwing axe imbued with a small thunder gem.\n<green>Skills:</><icon>PCE</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> STR + MOV*2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             4,
@@ -108,7 +108,8 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_E",
-                    "Breached_2"
+                    "Breached_2",
+                    "Kaminari"
                 ]
             ]
         ]

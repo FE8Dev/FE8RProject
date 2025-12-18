@@ -2,7 +2,7 @@
     {
         "nid": "Mountain_Range",
         "name": "Mountain Range",
-        "desc": "A long halberd with many jagged edges.\n<green>Skills:</>Lance Guard (A), Edification\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (8)\n<red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</>Reaver, cleave AOE attack, DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A long halberd with many jagged edges.\n<green>Skills:</><icon>LGA</><icon>skill_icons 2, 42</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</>(-8) <red>Effective:</><icon>Armor</><icon>Infantry</>\n<pink>Misc:</><icon>skill_icons 14, 33</><icon>Cleave</> DEF + CON*2.5 (Total Power:<red>{e:(unit.get_stat('DEF') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -114,7 +114,9 @@
                     "Lance_Guard_A",
                     "Edification",
                     "Rock_Punctures",
-                    "Breached_8"
+                    "Breached_8",
+                    "Reaver_Description",
+                    "Cleaves"
                 ]
             ]
         ]

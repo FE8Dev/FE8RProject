@@ -2,7 +2,7 @@
     {
         "nid": "God_Slayer",
         "name": "God Slayer",
-        "desc": "A bow to take down fallen gods.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</>Breach (25)\n<red>Effective:</><icon>Monster</><icon>Flying</><icon>Dragon</><icon>Armor</>\n<pink>Misc:</>Heavy, add unit's STR*2 to damage (<red>{e:(unit.get_stat('STR')*2)}</>).",
+        "desc": "A bow to take down fallen gods.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</>(-25)\n<red>Effective:</><icon>Monster</><icon>Flying</><icon>Dragon</><icon>Armor</>\n<pink>Misc:</><icon>Heavy</> Add unit's STR*2 to damage (Total Power:<red>{e:(unit.get_stat('STR')*2)}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             10,
@@ -123,10 +123,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Foe_Breaker",
+                    "Rock_Punctures",
                     "Breached_25",
-                    "Rock_Punctures"
+                    "Heavy"
                 ]
             ]
         ]

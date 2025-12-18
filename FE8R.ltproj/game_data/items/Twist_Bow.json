@@ -2,7 +2,7 @@
     {
         "nid": "Twist_Bow",
         "name": "Twist Bow",
-        "desc": "A bow imbued with a fire gem and magefire gem.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), targets RES.",
+        "desc": "A bow imbued with a fire gem and magefire gem.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SKL/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), targets RES.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             1,
@@ -115,7 +115,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Seared"
+                    "Seared",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

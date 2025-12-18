@@ -2,7 +2,7 @@
     {
         "nid": "Masters_Staff",
         "name": "Master's Staff",
-        "desc": "Staff for masters of their mind.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<green>Skills:</>Rolling Stone\n<pink>Misc:</>STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), cannot Crit, always hits, +10 DEF.",
+        "desc": "Staff for masters of their mind.\n<green>Skills:</><icon>skill_icons 0, 50</> <orange>Element:</><icon>Earth</> \n<violet>Inflicts:</><icon>Rock</>\n<pink>Misc:</><icon>Homing</> STR + DEF (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +10 DEF.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             4,
@@ -96,7 +96,8 @@
                 "multi_desc_skill",
                 [
                     "Rolling_Stone",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Homing_Attack"
                 ]
             ]
         ]

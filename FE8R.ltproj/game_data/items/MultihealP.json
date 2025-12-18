@@ -2,7 +2,7 @@
     {
         "nid": "MultihealP",
         "name": "Multiheal+",
-        "desc": "Restores (User's MAG + LCK/2) HP.\n<pink>Misc:</>(Multi-target:3), support class only.",
+        "desc": "Restores (User's MAG + LCK/2) HP.\n<pink>Misc:</><icon>Target</> (<blue>3</>) Support class only.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             7,
@@ -98,6 +98,12 @@
             [
                 "equation_heal",
                 "MAG_LCK_MID"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Multi_Target_Description"
+                ]
             ]
         ]
     }

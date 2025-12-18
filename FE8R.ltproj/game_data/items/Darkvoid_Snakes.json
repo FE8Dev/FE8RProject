@@ -2,7 +2,7 @@
     {
         "nid": "Darkvoid_Snakes",
         "name": "Darkvoid Snakes",
-        "desc": "Deadly snakes that feed upon the dregs of the abyss.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>Cannot be countered, (Multi-target:6).",
+        "desc": "Deadly snakes that feed upon the dregs of the abyss.\n<green>Skills:</><icon>APSS</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</><icon>Target</> (<blue>6</>)",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             6,
@@ -76,7 +76,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Cursed_5",
+                    "Cursed_15",
                     "Shadow_Blight",
                     "Venomous_Effect"
                 ]
@@ -115,10 +115,15 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_SS",
-                    "Cursed_5",
                     "Shadow_Blight",
-                    "Venomous_Effect"
+                    "Cursed_15",
+                    "Venomous_Effect",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

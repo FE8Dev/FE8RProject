@@ -2,7 +2,7 @@
     {
         "nid": "Iron_Stampede",
         "name": "Iron Stampede",
-        "desc": "A tale of steel, hooves, and victory.\n<green>Skills:</>Traveling Storm+\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, Cleaves, STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
+        "desc": "A tale of steel, hooves, and victory.\n<green>Skills:</><icon>skill_icons 5, 26</>(+) <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</> <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             5,
@@ -121,9 +121,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Traveling_Storm_P",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Amaterasu",
         "name": "Amaterasu",
-        "desc": "A holy deity that burns with fire.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</>Cleave, Shove (1), LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
+        "desc": "A holy deity that burns with fire.\n<green>Skills:</><icon>LGSS</> <orange>Element:</><icon>Light</><icon>Wind</><icon>Fire</>\n<red>Effective:</><icon>Shadowblight</><icon>Flying</><icon>Horse</><icon>Seared</>\n<pink>Misc:</><icon>Cleave</><icon>skill_icons 10, 50</> (<blue>1</>) LCK + SPD (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             2,
@@ -115,7 +115,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Lance_Guard_SS"
+                    "Lance_Guard_SS",
+                    "Cleaves",
+                    "Shove_Description"
                 ]
             ]
         ]

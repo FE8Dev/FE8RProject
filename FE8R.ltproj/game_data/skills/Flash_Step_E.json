@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Flash_Step_E",
+        "name": "Flash Step 1 <icon>FSE</>",
+        "desc": "Gives sword users a bonus attack when unit Doubles.\n+2 SPD and +10 Avoid.",
+        "icon_nid": "Scaling Weapon icons",
+        "icon_index": [
+            6,
+            0
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "(combat_calcs.attack_speed(unit, item) > (combat_calcs.attack_speed(target, item) + 4))"
+            ],
+            [
+                "dynamic_attacks",
+                "1"
+            ],
+            [
+                "dynamic_avoid",
+                "10"
+            ]
+        ]
+    }
+]

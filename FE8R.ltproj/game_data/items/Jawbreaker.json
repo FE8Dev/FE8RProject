@@ -2,7 +2,7 @@
     {
         "nid": "Jawbreaker",
         "name": "Jawbreaker",
-        "desc": "Ultra heavy warhammer of giants.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "Ultra heavy warhammer of giants.\n<green>Skills:</><icon>War Blow</> <orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + DEF/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             8,
@@ -106,9 +106,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
                     "War_Blow",
-                    "Earth_Shield"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -118,10 +117,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "War_Blow",
-                    "Earth_Shield",
                     "Stun",
+                    "Flinch",
                     "Rock_Punctures"
                 ]
             ]

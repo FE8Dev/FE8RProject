@@ -2,7 +2,7 @@
     {
         "nid": "Emblem_Blade",
         "name": "Emblem Blade",
-        "desc": "A legendary blade that seals the power of enemies.\n<violet>Inflicts:</>Emblem Seal\n<red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), Heavy, Cleaves.",
+        "desc": "A legendary blade that seals the power of enemies.\n<violet>Inflicts:</><icon>skill_icons 1, 15</> <red>Very effective:</><icon>Frozen</><icon>Dragon</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + RES (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -117,8 +117,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Emblem_Seal"
+                    "Emblem_Seal",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

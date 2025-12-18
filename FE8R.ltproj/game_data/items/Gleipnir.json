@@ -2,7 +2,7 @@
     {
         "nid": "Gleipnir",
         "name": "Gleipnir",
-        "desc": "Legendary dark magic of Grado.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (8)\n<red>Very effective:</><icon>Monster</>\n<pink>Misc:</>MAG//2 + CON*1.5 + SKL//2 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + unit.get_stat('CON')*1.5)}</>), +5 SKL, +5 CON.",
+        "desc": "Legendary dark magic of Grado.\n<green>Skills:</><icon>APA</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2)<icon>Curse</>(-8) <red>Very effective:</><icon>Monster</>\n<pink>Misc:</>MAG//2 + CON*1.5 + SKL//2 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>), +5 SKL, +5 CON.",
         "icon_nid": "Dark",
         "icon_index": [
             0,
@@ -129,8 +129,8 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_A",
-                    "Cursed_8",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_8"
                 ]
             ]
         ]

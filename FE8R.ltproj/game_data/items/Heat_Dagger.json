@@ -2,7 +2,7 @@
     {
         "nid": "Heat_Dagger",
         "name": "Heat Dagger",
-        "desc": "A burning hot dagger.\n<green>Skills:</>Quick Knife<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Bleed</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Horse</> <pink>Misc:</>Uses SPD + STR/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>), +10 Crit damage,<icon>Steal</>.",
+        "desc": "A burning hot dagger.\n<green>Skills:</><icon>skill_icons 6, 29</> <orange>Element:</><icon>Fire</> \n<violet>Inflicts:</><icon>Bleed</><icon>Seared</>(AOE:2) <red>Effective:</><icon>Horse</> \n<pink>Misc:</><icon>skill_icons 1, 13</> SPD + STR/3 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             0,
@@ -58,10 +58,6 @@
                 "D"
             ],
             [
-                "status_on_equip",
-                "Quick_Knife"
-            ],
-            [
                 "battle_cast_anim",
                 "Fire"
             ],
@@ -101,7 +97,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_10_hide"
+                    "Crit_Damage_Bonus_10_hide",
+                    "Quick_Knife"
                 ]
             ],
             [
@@ -119,7 +116,8 @@
                 [
                     "Quick_Knife",
                     "Bleeding",
-                    "Seared"
+                    "Seared",
+                    "Crit_Damage_Bonus_10_hide"
                 ]
             ]
         ]

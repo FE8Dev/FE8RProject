@@ -2,7 +2,7 @@
     {
         "nid": "Beastbreaker",
         "name": "Beastbreaker",
-        "desc": "A greatbow designed to hunt horses.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>, Breach (5)\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</>Heavy, add unit's STR/3 to damage (<red>{e:(unit.get_stat('STR')//3)}</>).",
+        "desc": "A greatbow designed to hunt horses.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</><icon>Skills 6, 4</>(-5)\n<red>Effective:</><icon>Horse</><icon>Flying</>\n<pink>Misc:</><icon>Heavy</> Add unit's STR/3 to damage (Total Power:<red>{e:(unit.get_stat('STR')//3)}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             1,
@@ -116,10 +116,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Beastbreaker",
-                    "Blade_Vantage_Effect",
+                    "Rock_Punctures",
                     "Breached_5",
-                    "Rock_Punctures"
+                    "Heavy",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

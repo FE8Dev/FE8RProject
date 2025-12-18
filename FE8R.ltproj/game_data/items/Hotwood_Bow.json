@@ -2,7 +2,7 @@
     {
         "nid": "Hotwood_Bow",
         "name": "Hotwood Bow",
-        "desc": "A bow that feels hot to the touch.\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>, Lighten Up\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>Half damage inflicted on miss.",
+        "desc": "A bow that feels hot to the touch.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</><icon>skill_icons 1, 34</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + SPD/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), increased FOW sight, half damage inflicted on miss.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             9,
@@ -104,9 +104,14 @@
                 "multi_desc_skill",
                 [
                     "Improve_Fog_Sight",
+                    "Seared",
                     "Torchshot_Art_Effect",
-                    "Seared"
+                    "Bow_and_Light_Range_Penalty"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SPD_MID"
             ]
         ]
     }

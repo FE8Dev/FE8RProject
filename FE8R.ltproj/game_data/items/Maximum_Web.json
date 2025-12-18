@@ -2,7 +2,7 @@
     {
         "nid": "Maximum_Web",
         "name": "Maximum Web",
-        "desc": "Special webbing that spreads out on launch. <green>CD:2</>\n<violet>Inflicts:</>Webbed\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>(AOE:2)",
+        "desc": "Special webbing that spreads out on launch. <green>CD:2</>\n<violet>Inflicts:</><icon>War Blow</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</><icon>Siege</><icon>Blast</> (<blue>2</>) STR + SKL + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -97,8 +97,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Webbed"
+                    "Webbed",
+                    "Siege_Weapon_Description",
+                    "AOE_Blast_Description"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_SKL_CON_STRONG"
             ]
         ]
     }

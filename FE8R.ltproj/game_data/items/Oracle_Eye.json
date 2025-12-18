@@ -2,7 +2,7 @@
     {
         "nid": "Oracle_Eye",
         "name": "Oracle Eye",
-        "desc": "Eyes of a demi-god of wisdom. Seeing all fates.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (25), Spotted\n<pink>Misc:</>(Multi-target:5), HP absorb (75%), cannot miss.",
+        "desc": "Eyes of a demi-god of wisdom. Seeing all fates.\n<green>Skills:</><icon>APX</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25)<icon>skill_icons 9, 38</>\n<pink>Misc:</><icon>Target</> (<blue>5</>), HP absorb (75%), cannot miss.",
         "icon_nid": "Neutral",
         "icon_index": [
             0,
@@ -108,10 +108,16 @@
             [
                 "multi_desc_skill",
                 [
-                    "Cursed_25",
+                    "Ancient_Pact_X",
                     "Shadow_Blight",
-                    "Spotted"
+                    "Cursed_25",
+                    "Spotted",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_X"
             ]
         ]
     }

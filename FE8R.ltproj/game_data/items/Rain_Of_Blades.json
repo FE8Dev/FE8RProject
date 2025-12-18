@@ -2,7 +2,7 @@
     {
         "nid": "Rain_Of_Blades",
         "name": "Rain Of Blades",
-        "desc": "Executes enemies with a swarm of Holy Swords.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR*2 + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>), +40 Crit damage.",
+        "desc": "Executes enemies with a swarm of Holy Swords.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</> STR*2 + LCK (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             5,
@@ -65,7 +65,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_40_hide"
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ],
             [
@@ -99,6 +99,13 @@
             [
                 "alternate_damage_formula",
                 "STR_DOUBLE_LCK_STRONG"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Crit_Damage_Bonus_50_hide",
+                    "Bow_and_Light_Range_Penalty"
+                ]
             ]
         ]
     }

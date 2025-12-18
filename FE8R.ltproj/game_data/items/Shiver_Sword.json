@@ -2,7 +2,7 @@
     {
         "nid": "Shiver_Sword",
         "name": "Shiver Sword",
-        "desc": "A sword crafted with reinforced ice.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</>\n<pink>Misc:</>Magical, cannot be countered,  MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3 SPD.",
+        "desc": "A sword crafted with reinforced ice.\n<green>Skills:</><icon>FSC</> <orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1) <red>Effective:</><icon>Pirate</>\n<pink>Misc:</><icon>skill_icons 13, 39</> MAG + RES/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             9,
@@ -80,7 +80,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_C"
                 ]
             ],
             [
@@ -123,8 +123,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Frozen"
+                    "Flash_Step_C",
+                    "Frozen",
+                    "Flash_Freeze"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Nidhogg",
         "name": "Nidhogg",
-        "desc": "Legendary bow of Frelia.\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Flying</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SKL/2 + LCK/2 (<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SKL')//2 + unit.get_stat('LCK')//2)}</>), +5 STR, +5 LCK.",
+        "desc": "Legendary bow of Frelia.\n<orange>Element:</><icon>Light</> <red>Very Effective:</><icon>Flying</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>STR/2 + SKL/2 + LCK/2 (Total Power:<red>{e:(unit.get_stat('STR')//2 + unit.get_stat('SKL')//2 + unit.get_stat('LCK')//2)}</>), +5 STR, +5 LCK.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -102,6 +102,12 @@
                 "item_tags",
                 [
                     "Light"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

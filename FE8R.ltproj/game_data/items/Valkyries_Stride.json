@@ -2,7 +2,7 @@
     {
         "nid": "Valkyries_Stride",
         "name": "Valkyrie's Stride",
-        "desc": "L'Arachel takes deep strides to be a perfect example.\n<green>Skills:</>Valkyrie Queen\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>), +20 Crit damage.",
+        "desc": "L'Arachel takes deep strides to be a perfect example.\n<green>Skills:</><icon>skill_icons 0, 52</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 3, 13</> LCK + MAG/2 (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             6,
@@ -112,7 +112,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Valkyrie_Queen"
+                    "Valkyrie_Queen",
+                    "Crit_Damage_Bonus_20_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Long_Cannon",
         "name": "Long Cannon",
-        "desc": "A powerful long-range siege weapon. <green>CD:2</>\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<pink>Misc:</>Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*2.5)}</>).",
+        "desc": "A powerful long-range siege weapon. <green>CD:2</>\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<pink>Misc:</><icon>Siege</> STR + SKL + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>), Unstealable.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             1,
@@ -92,6 +92,12 @@
             [
                 "alternate_damage_formula",
                 "STR_SKL_CON_STRONG"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Siege_Weapon_Description"
+                ]
             ]
         ]
     }

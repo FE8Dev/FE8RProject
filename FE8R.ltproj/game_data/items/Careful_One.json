@@ -2,7 +2,7 @@
     {
         "nid": "Careful_One",
         "name": "Careful One",
-        "desc": "A bigger greatlance Kyle keeps, just in case.\n<green>Skills:</>Prepared, G.L. Mastery, Lance Guard (C)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</>Heavy, STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5)))}</>).",
+        "desc": "A bigger greatlance Kyle keeps, just in case.\n<green>Skills:</><icon>LGC</><icon>GLM</><icon>skill_icons 14, 52</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</> <red>Effective:</><icon>Frozen</><icon>Armor</><icon>Horse</>\n<pink>Misc:</><icon>Heavy</> STR + CON*1.5 (Total Power:<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             18,
@@ -119,10 +119,10 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_C",
-                    "Blade_Vantage_Effect",
                     "Greatlance_Mastery",
                     "Prepared",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy"
                 ]
             ]
         ]

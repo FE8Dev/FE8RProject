@@ -2,7 +2,7 @@
     {
         "nid": "Bolt_Hail",
         "name": "Bolt Hail",
-        "desc": "A hailstorm with bolts of wrath infused with water and ice. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>(AOE:3)<icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>(AOE Blast:4), Splash Damage(50%), cannot DS, no WEXP gain, always hits.",
+        "desc": "A hailstorm with bolts of wrath infused with water and ice. Starts on CD. <green>CD:2</>\n<orange>Element:</><icon>Ice</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>(AOE:3)<icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Pirate</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>ASE</><icon>skill_icons 9, 33</><icon>Blast</> (<blue>4</>), always hits.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -113,10 +113,6 @@
                 "AOE_Reinforce"
             ],
             [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
                 "cooldown",
                 2
             ],
@@ -147,7 +143,10 @@
                 "multi_desc_skill",
                 [
                     "Frozen",
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "AnimaSplash_SS",
+                    "No_WEXP",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

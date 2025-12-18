@@ -2,7 +2,7 @@
     {
         "nid": "Fog_Bow",
         "name": "Fog Bow",
-        "desc": "A Bow that shrounds the wielder in fog.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + MOV*5 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*5))}</>), +50 Avoid/Dodge.",
+        "desc": "A Bow that shrounds the wielder in fog.\n<orange>Element:</><icon>Wind</> <red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 5, 11</>SPD + MOV*5 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*5))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             2,
@@ -98,7 +98,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Fog_Sword_Effect_Strong"
+                    "Fog_Sword_Effect_Strong",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

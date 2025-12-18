@@ -2,7 +2,7 @@
     {
         "nid": "Gaia_Axe",
         "name": "Gaia Axe",
-        "desc": "An axe found in the deepest recesses of a subterranean cave.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>DEF + CON*2.5 (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('CON')*2.5))}</>).",
+        "desc": "An axe found in the deepest recesses of a subterranean cave.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>DEF + CON*2.5 (Total Power:<red>{e:(unit.get_stat('DEF') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             1,
@@ -96,8 +96,8 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Rock_Punctures",
-                    "Breached_15"
+                    "Breached_15",
+                    "Rock_Punctures"
                 ]
             ]
         ]

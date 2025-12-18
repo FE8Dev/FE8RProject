@@ -2,7 +2,7 @@
     {
         "nid": "Typhoon_Staff",
         "name": "Typhoon Staff",
-        "desc": "A staff said to flood entire valleys.\n<orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>LCK + SKL (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>), Cannot crit, always hits, (Shove:1).",
+        "desc": "A staff said to flood entire valleys.\n<orange>Element:</><icon>Water</><icon>Wind</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Homing</><icon>skill_icons 10, 50</> (<blue>1</>) LCK + SKL (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             5,
@@ -102,7 +102,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Homing_Attack",
+                    "Shove_Description"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Shining_Blades_Moulder",
         "name": "Shining Blades",
-        "desc": "Holy blades that pierce evil.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>), +20 Crit damage.",
+        "desc": "Holy blades that pierce evil.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 3, 13</> STR + LCK/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             8,
@@ -99,6 +99,13 @@
             [
                 "alternate_damage_formula",
                 "STR_LCK_MID"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Crit_Damage_Bonus_20_hide",
+                    "Bow_and_Light_Range_Penalty"
+                ]
             ]
         ]
     }

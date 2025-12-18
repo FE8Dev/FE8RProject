@@ -2,7 +2,7 @@
     {
         "nid": "Glacier_Bow",
         "name": "Glacier Bow",
-        "desc": "A bow crafted by the most beautiful ice.\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</>Cannot be countered, RES + SPD/2 (<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A bow crafted by the most beautiful ice.\n<orange>Element:</><icon>Ice</> <violet>Inflicts:</><icon>Frozen</>(AOE:1)\n<red>Effective:</><icon>Flying</><icon>Pirate</>\n<pink>Misc:</><icon>skill_icons 13, 39</> RES + SPD/2 (Total Power:<red>{e:(unit.get_stat('RES') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             9,
@@ -107,7 +107,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Frozen"
+                    "Frozen",
+                    "Flash_Freeze",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Painting_Sword",
         "name": "Painting Sword",
-        "desc": "A painting sword that changes one's soul.\n<green>Skills:</>Destiny Painter/Ender, Flash Step.\n<pink>Misc:</>SKL + STR/3 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')//3))}</>), +3 SPD.",
+        "desc": "A painting sword that changes one's soul.\n<green>Skills:</><icon>FSE</><icon>skill_icons 9, 40</><icon>skill_icons 14, 38</>\n<pink>Misc:</>SKL + STR/3 (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')//3))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             6,
@@ -52,7 +52,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_E",
                     "Destiny_Painter_Combat_Art",
                     "Destiny_Painter_Display",
                     "Destiny_Ender"
@@ -63,7 +63,7 @@
                 [
                     [
                         "SPD",
-                        3
+                        2
                     ]
                 ]
             ],
@@ -88,8 +88,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Destiny_Painter_Combat_Art",
+                    "Flash_Step_E",
                     "Destiny_Painter_Display",
                     "Destiny_Ender"
                 ]

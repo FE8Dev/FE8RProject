@@ -1,21 +1,17 @@
 [
     {
         "nid": "Ancient_Pact_A",
-        "name": "Ancient Pact (A)",
-        "desc": "Add unit's missing HP/3 to attacks.\nAttacks also inflict Shadowblight (AOE:2) and reduce enemy's RES by 8.",
-        "icon_nid": "skill_icons",
+        "name": "Ancient Pact 3 <icon>APA</>",
+        "desc": "Add unit's missing HP/3 (Total:<red>{e: ((unit.get_hp() - unit.get_max_hp()) // -3)}</>) to attacks.",
+        "icon_nid": "Ancient Pact Skills",
         "icon_index": [
-            11,
-            45
+            2,
+            0
         ],
         "components": [
             [
                 "dynamic_damage",
                 "((unit.get_hp() - unit.get_max_hp()) // -3)"
-            ],
-            [
-                "gain_on_strike",
-                "Shadowblight_AOE_Splash"
             ]
         ]
     }

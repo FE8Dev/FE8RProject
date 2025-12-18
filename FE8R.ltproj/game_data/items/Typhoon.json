@@ -2,7 +2,7 @@
     {
         "nid": "Typhoon",
         "name": "Typhoon",
-        "desc": "Drench the battlefield with blood and water.\n<green>Skills:</>Power Chop (SS) <orange>Element:</><icon>Water</><icon>Wind</>\n <violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</>Cleave, Shove (1), SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>).",
+        "desc": "Drench the battlefield with blood and water.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Water</><icon>Wind</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Cleave</><icon>skill_icons 10, 50</> (<blue>1</>) SKL + SPD (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>).",
         "icon_nid": "Neimi and others new weapons",
         "icon_index": [
             5,
@@ -116,7 +116,9 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Cleaves",
+                    "Shove_Description"
                 ]
             ]
         ]

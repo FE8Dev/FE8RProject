@@ -2,7 +2,7 @@
     {
         "nid": "Vertebrae",
         "name": "Vertebrae",
-        "desc": "The long spine of a skeleton that makes a weird scythe, but also protects.\n<green>Skills:</>Lance Guard (E), Spook <orange>Element:</><icon>Dark</> \n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2) <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "The long spine of a skeleton that makes a weird scythe, but also protects.\n<green>Skills:</><icon>LGE</><icon>skill_icons 10, 34</> <orange>Element:</><icon>Dark</> \n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2) <red>Effective:</><icon>Infantry</>\n<pink>Misc:</><icon>Cleave</> STR + MAG/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets enemy's RES.",
         "icon_nid": "Untitled",
         "icon_index": [
             0,
@@ -110,10 +110,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Spook",
                     "Lance_Guard_E",
+                    "Spook",
                     "Shadow_Blight",
-                    "Cursed_2"
+                    "Cursed_2",
+                    "Cleaves"
                 ]
             ]
         ]

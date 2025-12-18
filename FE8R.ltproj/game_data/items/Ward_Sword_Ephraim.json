@@ -2,7 +2,7 @@
     {
         "nid": "Ward_Sword_Ephraim",
         "name": "Ward Sword",
-        "desc": "A sword that counters mages.\n<green>Skills:</>Flash Step\n<red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>STR + RES/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//3))}</>), +1 SPD, +20 RES.",
+        "desc": "A sword that counters mages.\n<green>Skills:</><icon>FSE</> <red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>STR + RES/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//3))}</>), +20 RES.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_E"
                 ]
             ],
             [
@@ -64,7 +64,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ],
                     [
                         "RES",
@@ -101,7 +101,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step"
+                    "Flash_Step_E"
                 ]
             ]
         ]

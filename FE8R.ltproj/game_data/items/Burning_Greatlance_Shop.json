@@ -2,7 +2,7 @@
     {
         "nid": "Burning_Greatlance_Shop",
         "name": "Bulwark G.L.",
-        "desc": "A lance for those who protect till the end.\n<green>Skills:</>Lance Guard (SS), G.L. Mastery, Arcane Barrier  <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, DEF + RES (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
+        "desc": "A lance for those who protect till the end.\n<green>Skills:</><icon>LGSS</><icon>GLM</><icon>skill_icons 13, 36</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> DEF + RES (Total Power:<red>{e:(unit.get_stat('DEF') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -110,9 +110,18 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_SS",
-                    "Blade_Vantage_Effect",
                     "Greatlance_Mastery",
-                    "Arcane_Barrier_Item"
+                    "Arcane_Barrier_Item",
+                    "Rock_Punctures",
+                    "Stun",
+                    "Heavy"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Rock_Punctures",
+                    "Stun"
                 ]
             ]
         ]

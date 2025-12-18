@@ -2,7 +2,7 @@
     {
         "nid": "Mourning_Sword",
         "name": "Mourning Sword",
-        "desc": "A blade of darkness and regret.\n<green>Skills:</>Flash Step.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES, +1 SPD.",
+        "desc": "A blade of darkness and regret.\n<green>Skills:</><icon>FSE</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2)<icon>Heavy</>\n<pink>Misc:</>STR + MAG/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets enemy's RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -66,7 +66,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_E"
                 ]
             ],
             [
@@ -96,14 +96,14 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ]
                 ]
             ],
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_E",
                     "Shadow_Blight",
                     "Cursed_2",
                     "Crippled"

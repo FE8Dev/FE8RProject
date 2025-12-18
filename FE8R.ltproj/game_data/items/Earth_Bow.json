@@ -2,7 +2,7 @@
     {
         "nid": "Earth_Bow",
         "name": "Earth Bow",
-        "desc": "A greatbow imbued with an earth gem.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Heavy, STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
+        "desc": "A greatbow imbued with an earth gem.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Heavy</> STR + DEF/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             1,
@@ -112,8 +112,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

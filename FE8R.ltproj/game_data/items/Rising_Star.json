@@ -2,7 +2,7 @@
     {
         "nid": "Rising_Star",
         "name": "Rising Star",
-        "desc": "Amelia was awarded this staff for her growth.\n<green>Skills:</>Lance Guard (C)\n<pink>Misc:</>(Multi-target:3), cannot DS.",
+        "desc": "Amelia was awarded this staff for her growth.\n<green>Skills:</><icon>LGC</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>Target</> (<blue>3</>).",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             2,
@@ -96,8 +96,28 @@
             [
                 "multi_desc_skill",
                 [
-                    "Lance_Guard_C"
+                    "Lance_Guard_C",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "item_tags",
+                [
+                    "Thunder"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Armor",
+                        "Drenched"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 5,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
             ]
         ]
     }

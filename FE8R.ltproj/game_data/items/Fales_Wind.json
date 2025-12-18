@@ -2,7 +2,7 @@
     {
         "nid": "Fales_Wind",
         "name": "Fale's Wind",
-        "desc": "The guardian Fale has blessed this sword with a sheltering wind.\n<green>Skills:</>Fale's Ward, Flash Step\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
+        "desc": "The guardian Fale has blessed this sword with a sheltering wind.\n<green>Skills:</><icon>FSE</><icon>skill_icons 11, 18</> <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SKL/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             2,
@@ -96,7 +96,7 @@
                 "multi_status_on_equip",
                 [
                     "Fales_Ward",
-                    "Flash_Step"
+                    "Flash_Step_E"
                 ]
             ],
             [
@@ -108,8 +108,17 @@
             [
                 "multi_desc_skill",
                 [
-                    "Fales_Ward",
-                    "Flash_Step"
+                    "Flash_Step_E",
+                    "Fales_Ward"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
                 ]
             ]
         ]

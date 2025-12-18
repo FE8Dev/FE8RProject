@@ -2,7 +2,7 @@
     {
         "nid": "Demon_Bow",
         "name": "Demon Bow",
-        "desc": "A bow infused with the soul of a demon.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2), Curse (15)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + CON*2.5 (<red>{e:(unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5)))}</>).",
+        "desc": "A bow infused with the soul of a demon.\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>(AOE:2) <icon>Curse</>(-15)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>SKL + CON*2.5 (Total Power:<red>{e:(unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             0,
@@ -108,7 +108,8 @@
                 "multi_desc_skill",
                 [
                     "Shadow_Blight",
-                    "Cursed_15"
+                    "Cursed_15",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

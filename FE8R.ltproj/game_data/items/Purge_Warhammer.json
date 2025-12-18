@@ -2,7 +2,7 @@
     {
         "nid": "Purge_Warhammer",
         "name": "Purge W.H.",
-        "desc": "A warhammer made to purge evil.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
+        "desc": "A warhammer made to purge evil.\n<green>Skills:</><icon>War Blow</> <orange>Element:</><icon>Light</>\n<violet>Inflicts:</><icon>Stun</> <red>Effective:</><icon>Frozen</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</><icon>Heavy</> STR + LCK (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,
@@ -91,7 +91,8 @@
                 {
                     "effective_tags": [
                         "Frozen",
-                        "Shadow"
+                        "Shadow",
+                        "Monster"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -113,9 +114,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "War_Blow",
-                    "Stun"
+                    "Stun",
+                    "Flinch"
                 ]
             ]
         ]

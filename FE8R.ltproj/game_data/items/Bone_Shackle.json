@@ -2,7 +2,7 @@
     {
         "nid": "Bone_Shackle",
         "name": "Bone Shackle",
-        "desc": "A scythe that ties one's soul to this realm.\n<green>Skills:</>Lance Guard (C), Spook <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets RES.",
+        "desc": "A scythe that ties one's soul to this realm.\n<green>Skills:</><icon>LGC</><icon>skill_icons 10, 34</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</><icon>Cleave</> STR + MAG/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets enemy's RES.",
         "icon_nid": "Untitled",
         "icon_index": [
             1,
@@ -110,10 +110,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Spook",
                     "Lance_Guard_C",
+                    "Spook",
                     "Shadow_Blight",
-                    "Cursed_5"
+                    "Cursed_5",
+                    "Cleaves"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Forblaze",
         "name": "Forblaze",
-        "desc": "A legendary tome used by a powerful Archsage.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Very effective:</><icon>Horse</><icon>Dragon</> <pink>Misc:</>Cannot counter, but cannot be countered, Brave, MAG + STR (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>), Splash DMG (60%).",
+        "desc": "A legendary tome used by a powerful Archsage.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>(AOE:2)\n<red>Very effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</><icon>skill_icons 12, 35</><icon>ASX</> Brave, MAG + STR (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             1,
@@ -139,7 +139,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Seared"
+                    "Seared",
+                    "Impass",
+                    "AnimaSplash_X"
                 ]
             ]
         ]

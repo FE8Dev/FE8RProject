@@ -2,7 +2,7 @@
     {
         "nid": "Hurricane_Axe",
         "name": "Hurricane Axe",
-        "desc": "An axe charged with the power of a mighty storm. <green>CD:2</>\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), +40 Avoid/Dodge.",
+        "desc": "An axe charged with the power of a mighty storm. <green>CD:2</>\n<green>Skills:</><icon>PCC</> <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 4, 11</> STR + SPD/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), +40 Avoid/Dodge.",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             6,
@@ -110,9 +110,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Fog_Sword_Effect_Mid",
                     "Power_Chop_A",
-                    "Breached_8"
+                    "Breached_8",
+                    "Fog_Sword_Effect_Mid"
                 ]
             ]
         ]

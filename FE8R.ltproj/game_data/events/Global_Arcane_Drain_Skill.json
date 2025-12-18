@@ -8,8 +8,8 @@
         "only_once": false,
         "priority": 20,
         "_source": [
-            "if;game.get_random(0, 100) <= unit.get_stat('LCK')",
-            "reset;Tethys",
+            "if;game.get_random(0, 100) <= (unit.get_stat('LCK') // 3)",
+            "reset;{unit}",
             "else",
             "end"
         ],

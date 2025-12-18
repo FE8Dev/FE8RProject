@@ -2,7 +2,7 @@
     {
         "nid": "Naga",
         "name": "Naga",
-        "desc": "<nconvo>A legendary light tome used to slay the Dark Dragon.\n<orange>Element:</><icon>Light</><violet> Inflicts:</>Reduced Vision\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</><icon>Dark</> <pink>Misc:</>+20 MAG/SKL/SPD/LCK/DEF/RES, LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +50 Crit damage.",
+        "desc": "<nconvo>A legendary light tome used to slay the Dark Dragon.\n<orange>Element:</><icon>Light</><violet> Inflicts:</><icon>skill_icons 6, 33</>\n<red>Very effective:</><icon>Shadowblight</><icon>Monster</><icon>Dragon</><icon>Dark</>\n<pink>Misc:</><icon>skill_icons 6, 13</> +20 MAG/SKL/SPD/LCK/DEF/RES, LCK + MAG (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "New Holy Weapons 03-30-25",
         "icon_index": [
             9,
@@ -77,7 +77,7 @@
                 "multi_status_on_equip",
                 [
                     "Bow_and_Light_Range_Penalty",
-                    "Crit_Damage_Bonus_50_hide"
+                    "Crit_Damage_Bonus_100_hide"
                 ]
             ],
             [

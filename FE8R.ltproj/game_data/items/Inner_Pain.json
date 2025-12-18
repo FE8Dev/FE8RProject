@@ -2,7 +2,7 @@
     {
         "nid": "Inner_Pain",
         "name": "Inner Pain",
-        "desc": "The pain of loss grows...\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Seared</>, Curse (5)\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Ross -8 DEF, costs 10 HP to use per cast.",
+        "desc": "The pain of loss grows...\n<green>Skills:</><icon>APC</> <orange>Element:</><icon>Fire</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5)<icon>Seared</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</>MAG + CON*1.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round((unit.get_stat('CON')*1.5))}</>), -8 DEF, costs 10 HP to use per cast.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             24,
@@ -124,10 +124,14 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_C",
-                    "Cursed_5",
                     "Shadow_Blight",
+                    "Cursed_5",
                     "Seared"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_CON_MID"
             ]
         ]
     }

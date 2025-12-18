@@ -2,7 +2,7 @@
     {
         "nid": "Life_Extinction",
         "name": "Life Extinction",
-        "desc": "The taboo spell of great destruction. <green>1 use per chapter. Starts on CD, CD:6.</>\n<orange>Element:</><icon>Dark</><violet>Inflicts:</>Curse (25)\n<pink>Misc:</>Global, cannot DS, cannot Crit, cannot Double, cannot Sleep, no WEXP.",
+        "desc": "The taboo spell of great destruction. <green>1 use per chapter. Starts on CD, CD:6.</>\n<green>Skills:</><icon>APX</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25)\n<pink>Misc:</><icon>skill_icons 9, 33</> Global, cannot DS, cannot Crit, cannot Double, cannot Sleep.",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             8,
@@ -68,7 +68,8 @@
                 "statuses_on_hit",
                 [
                     "Cursed_25",
-                    "Another_Sleep_Immunity"
+                    "Another_Sleep_Immunity",
+                    "Shadow_Blight"
                 ]
             ],
             [
@@ -118,9 +119,15 @@
             [
                 "multi_desc_skill",
                 [
+                    "Ancient_Pact_X",
+                    "Shadow_Blight",
                     "Cursed_25",
-                    "Another_Sleep_Immunity"
+                    "No_WEXP"
                 ]
+            ],
+            [
+                "status_on_equip",
+                "Ancient_Pact_X"
             ]
         ]
     }

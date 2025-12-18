@@ -2,7 +2,7 @@
     {
         "nid": "Yukiryuu_No_Ken",
         "name": "Yukiryuu No Ken",
-        "desc": "The dragon of ice and snow resided in this sword.\n<green>Skills:</>Crimson Snow (On kill), Risky Vantage, Flash Step\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><red>Effective:</><icon>Pirate</>\n<pink>Misc:</>SPD + RES (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('RES')))}</>), +10 SPD.",
+        "desc": "The dragon of ice and snow resided in this sword.\n<green>Skills:</><icon>FSSS</><icon>Vantage</><icon>Frozen</> <orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</> <red>Effective:</><icon>Pirate</>\n<pink>Misc:</>SPD + RES (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('RES')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             4,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Risky_Vantage",
                     "Crimson_Snow_Giver"
                 ]
@@ -111,7 +111,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Risky_Vantage",
                     "Crimson_Snow_Giver",
                     "Frozen"

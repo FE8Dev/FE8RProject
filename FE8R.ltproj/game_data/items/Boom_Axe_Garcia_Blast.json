@@ -2,7 +2,7 @@
     {
         "nid": "Boom_Axe_Garcia_Blast",
         "name": "Boom Axe (<icon>Blast</>)",
-        "desc": "The Charred Axe restored to half its explosive power. Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:3)<icon>Shadowblight</>(AOE:2), Curse 5\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(AOE Blast:3), cannot DS, no WEXP gain, STR + CON*1.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5)))}</>).",
+        "desc": "The Charred Axe restored to half its explosive power. Starts on CD. <green>CD:2</>\n<green>Skills:</><icon>PCC</> <orange>Element:</><icon>Fire</><icon>Dark</> \n<violet>Inflicts:</><icon>Seared</>(AOE:3) <icon>Shadowblight</>(AOE:2) <icon>Curse</>(-5) <red>Effective:</><icon>Horse</> \n<pink>Misc:</><icon>skill_icons 9, 33</><icon>Blast</> (<blue>3</>) STR + CON*1.5 (Total Power:<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             3,
@@ -149,12 +149,13 @@
             [
                 "multi_desc_skill",
                 [
-                    "Sear_Explosion",
                     "Power_Chop_C",
                     "Breached_5",
                     "Seared",
+                    "Shadow_Blight",
                     "Cursed_5",
-                    "Shadow_Blight"
+                    "No_WEXP",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

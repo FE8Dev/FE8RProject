@@ -2,7 +2,7 @@
     {
         "nid": "Gale_Blade",
         "name": "Gale Blade",
-        "desc": "A heavy blade that hits enemies with a strong wind.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, SPD + SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//3))}</>), targets SPD instead of DEF.",
+        "desc": "A heavy blade that hits enemies with a strong wind.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> SPD + SKL/3 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//3))}</>), targets SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -119,7 +119,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect"
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

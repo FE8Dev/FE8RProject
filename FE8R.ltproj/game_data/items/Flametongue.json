@@ -2,7 +2,7 @@
     {
         "nid": "Flametongue",
         "name": "Flametongue",
-        "desc": "A sword born through the power of a dragon.\n<green>Skills:</>Flash Step <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), also acts like an Anima weapon.",
+        "desc": "A sword born through the power of a dragon.\n<green>Skills:</><icon>FSSS</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Dragon</>\n<pink>Misc:</>SPD + SKL (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), also acts like an Anima weapon.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             9,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Artur_Anima_Sword"
                 ]
             ],
@@ -103,9 +103,17 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Artur_Anima_Sword",
+                    "Flash_Step_SS",
                     "Seared"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

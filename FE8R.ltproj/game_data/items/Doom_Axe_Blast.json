@@ -2,7 +2,7 @@
     {
         "nid": "Doom_Axe_Blast",
         "name": "Doom Axe (<icon>Blast</>)",
-        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Fire</><icon>Dark</> <violet>Inflicts:</><icon>Seared</>(AOE:5)<icon>Shadowblight</>(AOE:2), Curse 15\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>(AOE Blast:5), cannot DS, no WEXP gain, STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*2.5)))}</>).",
+        "desc": "The feared Axe of the mighty general Garcia. <green>CD:2</>\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Fire</><icon>Dark</> \n<violet>Inflicts:</><icon>Seared</>(AOE:3) <icon>Shadowblight</>(AOE:2) <icon>Curse</>(-15) <red>Effective:</><icon>Horse</> \n<pink>Misc:</><icon>skill_icons 9, 33</><icon>Blast</> (<blue>5</>) STR + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             9,
@@ -149,12 +149,13 @@
             [
                 "multi_desc_skill",
                 [
-                    "Sear_ExplosionP",
                     "Power_Chop_SS",
                     "Breached_15",
                     "Seared",
+                    "Shadow_Blight",
                     "Cursed_15",
-                    "Shadow_Blight"
+                    "No_WEXP",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

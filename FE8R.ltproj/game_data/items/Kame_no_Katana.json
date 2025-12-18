@@ -2,7 +2,7 @@
     {
         "nid": "Kame_no_Katana",
         "name": "Kame no Katana",
-        "desc": "A sword of myth in Jehanna about a turtle deity. Starts on CD. <green>CD:2</>\n<green>Skills:</>Flash Step, Risky Vantage\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>+10 SPD, +8 DEF/RES, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), (AOE Blast:3).",
+        "desc": "A sword of myth in Jehanna about a turtle deity. Starts on CD. <green>CD:2</>\n<green>Skills:</><icon>FSSS</><icon>Vantage</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>Blast</> (<blue>3</>) STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>), +8 DEF/RES.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             4,
@@ -60,7 +60,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Risky_Vantage"
                 ]
             ],
@@ -124,9 +124,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Risky_Vantage",
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

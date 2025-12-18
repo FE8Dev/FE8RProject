@@ -2,7 +2,7 @@
     {
         "nid": "Gale",
         "name": "Gale",
-        "desc": "A mysterious spell said to originate from a certain place. <green>CD:2</>\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + SPD/3 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD')//3)}</>), Brave, Splash DMG (20%), +1 SPD, +1 MAG.",
+        "desc": "A mysterious spell said to originate from a certain place. <green>CD:2</>\n<orange>Element:</><icon>Wind</> <red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>ASE</> MAG + SPD/3 (Total Power:<red>{e:(unit.get_stat('MAG') + unit.get_stat('SPD')//3)}</>), Brave, +1 SPD, +1 MAG.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             32,
@@ -118,6 +118,12 @@
             [
                 "cooldown",
                 2
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "AnimaSplash_E"
+                ]
             ]
         ]
     }

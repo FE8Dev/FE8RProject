@@ -2,7 +2,7 @@
     {
         "nid": "Templeshot",
         "name": "Templeshot",
-        "desc": "A bow that can bring down temples.\n<orange>Element:</><icon>Earth</><icon>Dark</>\n<red>Effective:</><icon>Flying</><icon>Armor</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)<icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>Heavy, STR*2 + MAG(<red>{e:(unit.get_stat('STR')*2 + (unit.get_stat('MAG')))}</>).",
+        "desc": "A bow that can bring down temples.\n<orange>Element:</><icon>Earth</><icon>Dark</> <red>Effective:</><icon>Flying</><icon>Armor</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)<icon>Shadowblight</><icon>Curse</>(-25)\n<pink>Misc:</><icon>Heavy</> STR*2 + MAG(Total Power:<red>{e:(unit.get_stat('STR')*2 + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "02-26-25",
         "icon_index": [
             2,
@@ -127,10 +127,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Rock_Punctures",
                     "Shadow_Blight",
-                    "Cursed_25"
+                    "Cursed_25",
+                    "Heavy",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Life_Burst",
         "name": "Life Burst",
-        "desc": "Burst one's inner life energy to drain foes.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>MAG + LCK/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), HP Absorb (30%), +30 Crit damage.",
+        "desc": "Burst one's inner life energy to drain foes.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 4, 13</> MAG + LCK/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//2))}</>), HP Absorb (30%).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             0,
@@ -104,6 +104,13 @@
                 "item_tags",
                 [
                     "Light"
+                ]
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Crit_Damage_Bonus_30_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

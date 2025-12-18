@@ -2,7 +2,7 @@
     {
         "nid": "Blood_Luna",
         "name": "Blood Luna",
-        "desc": "A very dangerous enchanted Luna tome. <green>CD:2</>\n<green>Skills:</>Ancient Pact (X)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Venom</>x4<icon>Bleed</>x4\n<pink>Misc:</>(Multi-target:4), MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), cannot DS, ignores RES.",
+        "desc": "A very dangerous enchanted Luna tome. <green>CD:2</>\n<green>Skills:</><icon>APX</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25)<icon>Venom</>x4 <icon>Bleed</>x4\n<pink>Misc:</><icon>Target</> (<blue>4</>) MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), ignores RES.",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             5,
@@ -144,11 +144,16 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_X",
-                    "Cursed_25",
                     "Shadow_Blight",
+                    "Cursed_25",
                     "Venomous_Effect",
-                    "Bleeding"
+                    "Bleeding",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

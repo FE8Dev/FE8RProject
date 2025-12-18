@@ -2,7 +2,7 @@
     {
         "nid": "Swift_Death",
         "name": "Swift Death",
-        "desc": "An unusually accurate axe which brings swift death.\n<green>Skills:</>Power Chop (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Shadowblight</>(AOE:2), Curse (5)\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "An unusually accurate axe which brings swift death.\n<green>Skills:</><icon>PCC</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Bleed</>x3<icon>Shadowblight</>(AOE:2)<icon>Curse</>(-5) \n<pink>Misc:</>STR + SPD/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -103,8 +103,8 @@
                     "Power_Chop_C",
                     "Breached_5",
                     "Bleeding",
-                    "Cursed_5",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_5"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Holy_Sword_Shop",
         "name": "Holy Sword",
-        "desc": "A golden sword infused with Holy light.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), targets LCK, +5 SPD.",
+        "desc": "A golden sword infused with Holy light.\n<green>Skills:</><icon>FSA</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + LCK/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>), targets LCK.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             5,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_A"
                 ]
             ],
             [
@@ -106,7 +106,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step"
+                    "Flash_Step_A"
                 ]
             ]
         ]

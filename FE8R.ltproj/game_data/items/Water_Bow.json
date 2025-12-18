@@ -2,7 +2,7 @@
     {
         "nid": "Water_Bow",
         "name": "Water Bow",
-        "desc": "A bow infused with water magic. <green>CD:2</>\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>Magical, SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>), (AOE Blast:2).",
+        "desc": "A bow infused with water magic. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Blast</> (<blue>2</>) SKL + MAG/2 (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             4,
@@ -84,10 +84,6 @@
                 }
             ],
             [
-                "magic",
-                null
-            ],
-            [
                 "battle_cast_anim",
                 "Aqua"
             ],
@@ -122,7 +118,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "AOE_Blast_Description",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

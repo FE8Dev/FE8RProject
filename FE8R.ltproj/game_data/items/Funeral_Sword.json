@@ -2,7 +2,7 @@
     {
         "nid": "Funeral_Sword",
         "name": "Funeral Sword",
-        "desc": "A funeral that brings out the worst of people.\n<green>Skills:</>Flash Step, Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (5), Crippled\n<pink>Misc:</>STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES, +3 SPD.",
+        "desc": "A funeral that brings out the worst of people.\n<green>Skills:</><icon>FSC</><icon>skill_icons 7, 24</> <orange>Element:</><icon>Dark</> \n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5)<icon>Heavy</>\n<pink>Misc:</>STR + MAG/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets enemy's RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             7,
@@ -66,7 +66,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_C",
                     "Aggravator"
                 ]
             ],
@@ -104,7 +104,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_C",
                     "Aggravator",
                     "Shadow_Blight",
                     "Cursed_5",

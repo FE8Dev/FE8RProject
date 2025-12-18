@@ -2,7 +2,7 @@
     {
         "nid": "Solaris",
         "name": "Solaris",
-        "desc": "Unleashes the breath of a Divine dragon that blinds all.\n<orange>Element:</><icon>Light</>\n<violet>Inflicts:</>Reduced Vision\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + SPD/2 (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//2))}</>), +20 Crit damage.",
+        "desc": "Unleashes the breath of a Divine dragon that blinds all.\n<orange>Element:</><icon>Light</> <violet>Inflicts:</><icon>skill_icons 6, 33</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 3, 13</> LCK + SPD/2 (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "Light Tomes Sheet",
         "icon_index": [
             6,
@@ -119,7 +119,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Reduced_Vision"
+                    "Reduced_Vision",
+                    "Crit_Damage_Bonus_20_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Branded_Sword",
         "name": "Branded Sword",
-        "desc": "A sword that has grown through the power of a brand.\n<green>Skills:</>Flash Step <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), also acts like an Anima weapon.",
+        "desc": "A sword that has grown through the power of a brand.\n<green>Skills:</><icon>FSC</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</>SPD + SKL/2 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), also acts like an Anima weapon.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             28,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_C",
                     "Artur_Anima_Sword"
                 ]
             ],
@@ -103,9 +103,17 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Artur_Anima_Sword",
+                    "Flash_Step_C",
                     "Seared"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
                 ]
             ]
         ]

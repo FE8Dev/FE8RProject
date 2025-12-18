@@ -2,7 +2,7 @@
     {
         "nid": "Admiral_Pride",
         "name": "Admiral Pride",
-        "desc": "The sword of the Almirant, ruler of the seas and the herald of Storm.\n<green>Skills:</>Flash Step, Storm Herald, Torrential Rain (on kill).\n<orange>Element:</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Pirate</>\n<pink>Misc:</>STR + MOV*5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>), targets weaker of DEF or RES, +15 SPD.",
+        "desc": "The sword of the ruler of the seas and the herald of Storm.\n<green>Skills:</><icon>FSX</><icon>Drenched</><icon>skill_icons 9, 37</>\n<orange>Element:</><icon>Water</><icon>Thunder</><violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Pirate</>\n<pink>Misc:</><icon>skill_icons 10, 39</> STR + MOV*5 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MOV')*5))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             7,
@@ -52,7 +52,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Storm_Herald",
                     "Torrential_Rain_Giver"
                 ]
@@ -118,10 +118,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Storm_Herald",
+                    "Flash_Step_X",
                     "Torrential_Rain_Giver",
-                    "Drench_Debuff"
+                    "Storm_Herald",
+                    "Drench_Debuff",
+                    "Kaminari"
                 ]
             ]
         ]

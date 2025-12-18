@@ -2,7 +2,7 @@
     {
         "nid": "Emperor_Blade",
         "name": "Emperor Blade",
-        "desc": "A blade from an ancient Grado Emperor.\n<green>Skills:</>Grado's Pride, Grado's Wall+\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</>Heavy, Cleaves, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "desc": "A blade from an ancient Grado Emperor.\n<green>Skills:</><icon>skill_icons 15, 36</>(+)<icon>skill_icons 8, 36</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</> <red>Effective:</><icon>Frozen</><icon>Armor</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + DEF (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             3,
@@ -117,10 +117,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Grados_Pride",
-                    "Blade_Vantage_Effect",
                     "Grados_WallP",
-                    "Rock_Punctures"
+                    "Grados_Pride",
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

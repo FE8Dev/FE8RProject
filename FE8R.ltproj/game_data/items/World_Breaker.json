@@ -2,7 +2,7 @@
     {
         "nid": "World_Breaker",
         "name": "World Breaker",
-        "desc": "The heaviest lance, only for the strongest.\n<green>Skills:</>World's Strongest, Lance Guard (SS) <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, , STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('CON')*2.5))}</>)",
+        "desc": "The heaviest lance, only for the strongest.\n<green>Skills:</><icon>LGSS</><icon>skill_icons 0, 50</> <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2) <red>Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</> STR + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*2.5))}</>)",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             2,
@@ -123,9 +123,9 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_SS",
-                    "Blade_Vantage_Effect",
                     "Worlds_Strongest",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy"
                 ]
             ]
         ]

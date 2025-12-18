@@ -2,7 +2,7 @@
     {
         "nid": "Watercross_Axe",
         "name": "Watercross Axe",
-        "desc": "An axe that terminates magic with a deluge.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>, Silence\n<red>Effective:</><icon>Magic</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets STR.",
+        "desc": "An axe that terminates magic with a deluge.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</><icon>Silence</> <red>Effective:</><icon>Magic</>\n<pink>Misc:</>STR + SKL (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), targets STR.",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             7,
@@ -109,8 +109,8 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Drench_Debuff",
                     "Breached_15",
+                    "Drench_Debuff",
                     "Silence"
                 ]
             ]

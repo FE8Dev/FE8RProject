@@ -2,7 +2,7 @@
     {
         "nid": "Diamond_Sword",
         "name": "Diamond Sword",
-        "desc": "A magical sword made of rare tearlike diamonds.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<green>Skills:</>Flash Step, Gem Armor\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3 SPD.",
+        "desc": "A magical sword made of rare tearlike diamonds.\n<green>Skills:</><icon>FSC</><icon>skill_icons 12, 22</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:2)\n<pink>Misc:</>MAG + RES/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             9,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_C",
                     "Gem_Armor",
                     "Gem_Armor_EP"
                 ]
@@ -101,9 +101,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_C",
                     "Gem_Armor",
-                    "Gem_Armor_EP",
                     "Rock_Punctures"
                 ]
             ]

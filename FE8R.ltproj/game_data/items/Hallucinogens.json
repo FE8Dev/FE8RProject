@@ -2,7 +2,7 @@
     {
         "nid": "Hallucinogens",
         "name": "Hallucinogens",
-        "desc": "Emits a fiery burst that drives people to death.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + round((unit.get_stat('CON')*1.5)))}</>), Cleave.",
+        "desc": "Emits a fiery burst that drives people to death.\n<green>Skills:</><icon>APA</> <orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2) <icon>Curse</>(-8) <icon>Seared</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</><icon>Cleave</> MAG + CON*1.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             2,
@@ -132,7 +132,8 @@
                     "Ancient_Pact_A",
                     "Cursed_8",
                     "Shadow_Blight",
-                    "Seared"
+                    "Seared",
+                    "Cleaves"
                 ]
             ]
         ]

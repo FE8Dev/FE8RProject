@@ -2,7 +2,7 @@
     {
         "nid": "Ashen_Bolt",
         "name": "Ashen Bolt",
-        "desc": "A bow said to leave only ash as remains. <green>CD:3</>\n<orange>Element:</><icon>Fire</>\n<red>Effective:</><icon>Frozen</><icon>Horse</>\n<pink>Misc:</>Heavy, Siege, STR + SKL + CON*2.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
+        "desc": "A bow said to leave only ash as remains. <green>CD:3</>\n<orange>Element:</><icon>Fire</> <red>Effective:</><icon>Frozen</><icon>Horse</>\n<violet>Inflicts:</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</><icon>Siege</> STR + SKL + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             10,
@@ -112,8 +112,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect"
+                    "Seared",
+                    "Heavy",
+                    "Siege_Weapon_Description"
                 ]
+            ],
+            [
+                "status_on_hit",
+                "Seared"
             ]
         ]
     }

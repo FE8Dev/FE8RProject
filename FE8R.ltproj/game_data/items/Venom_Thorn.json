@@ -2,7 +2,7 @@
     {
         "nid": "Venom_Thorn",
         "name": "Venom Thorn",
-        "desc": "A beautiful flower said to grow on corpses. <green>CD:3</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Venom</>x2<icon>Rock</>\n<pink>Misc:</>(Multi-target:8), Brave, this is a free action, always hits, no WEXP gain, cannot DS.",
+        "desc": "A beautiful flower said to grow on corpses. <green>CD:3</>\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Venom</>x2<icon>Rock</>\n<pink>Misc:</><icon>Homing</><icon>Target</> (<blue>8</>)<icon>skill_icons 9, 33</> Brave, this is a free action.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             9,
@@ -129,8 +129,15 @@
                 "multi_desc_skill",
                 [
                     "Venomous_Effect",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Homing_Attack",
+                    "Multi_Target_Description",
+                    "No_WEXP"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

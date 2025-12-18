@@ -2,7 +2,7 @@
     {
         "nid": "Arts_Death",
         "name": "Art's Death",
-        "desc": "A sword that paints a tragic end.\n<green>Skills:</>Destiny Painter+/Ender, Flash Step <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>STR +SKL+MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG') + (unit.get_stat('SKL'))))}</>), +15 SPD.",
+        "desc": "A sword that paints a tragic end.\n<green>Skills:</><icon>FSX</><icon>skill_icons 9, 40</>(+)<icon>skill_icons 14, 38</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25) \n<pink>Misc:</>SKL + STR (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "New X rank stuff",
         "icon_index": [
             1,
@@ -55,7 +55,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Destiny_Painter_DisplayP",
                     "Destiny_Painter_Combat_ArtP",
                     "Destiny_Ender"
@@ -86,7 +86,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MAG_STRONG"
+                "STR_SKL_STRONG"
             ],
             [
                 "level_exp",
@@ -101,9 +101,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Destiny_Painter_DisplayP",
-                    "Destiny_Painter_Combat_ArtP",
                     "Destiny_Ender",
                     "Shadow_Blight",
                     "Cursed_25"

@@ -2,7 +2,7 @@
     {
         "nid": "Gentle_Light",
         "name": "Gentle Light",
-        "desc": "Special light magic Eirika uses to support others and smite enemies.\n<green>Skills:</>Gentle Light (Low)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>SPD + LCK/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')//2))}</>), +10 Crit damage.",
+        "desc": "Special light magic Eirika uses to support others and smite enemies.\n<green>Skills:</><icon>skill_icons 6, 5</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 1, 13</> SPD + LCK/2 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('LCK')//2))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             0,
@@ -104,7 +104,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Gentle_Light_Low"
+                    "Gentle_Light_Low",
+                    "Crit_Damage_Bonus_10_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

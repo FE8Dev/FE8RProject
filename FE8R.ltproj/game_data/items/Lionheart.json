@@ -2,7 +2,7 @@
     {
         "nid": "Lionheart",
         "name": "Lionheart",
-        "desc": "This sword has changed to match Kyle's affinity.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Rock</>(AOE:2)\n<pink>Misc:</>DEF + SKL (<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>), +10 SPD, +40 Bonus Crit Damage.",
+        "desc": "This sword has changed to match Kyle's affinity.\n<green>Skills:</><icon>FSSS</> <orange>Element:</><icon>Earth</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Rock</>(AOE:2)\n<pink>Misc:</><icon>skill_icons 5, 13</> DEF + SKL (Total Power:<red>{e:(unit.get_stat('DEF') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -56,8 +56,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
-                    "Crit_Damage_Bonus_40_hide"
+                    "Flash_Step_SS",
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ],
             [
@@ -103,9 +103,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
+                    "Flash_Step_SS",
                     "Rock_Punctures",
-                    "Frozen"
+                    "Frozen",
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ]
         ]

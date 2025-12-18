@@ -2,7 +2,7 @@
     {
         "nid": "Angel_Axe",
         "name": "Angel Axe",
-        "desc": "A barbaric axe that has an angel's blessing.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + SPD (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>), HP Absorb (50%).",
+        "desc": "A barbaric axe that has an angel's blessing.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>LCK + SPD (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('SPD')))}</>), HP Absorb (50%).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             7,
@@ -69,7 +69,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Shadow"
+                        "Shadow",
+                        "Monster"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,

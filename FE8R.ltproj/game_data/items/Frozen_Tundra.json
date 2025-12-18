@@ -2,7 +2,7 @@
     {
         "nid": "Frozen_Tundra",
         "name": "Frozen Tundra",
-        "desc": "Kyle keeps this mythical ice club around, just in case.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + HP/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
+        "desc": "Kyle keeps this mythical ice club around, just in case.\n<green>Skills:</><icon>War Blow</> <orange>Element:</><icon>Ice</>\n<violet>Inflicts:</><icon>Frozen</><icon>Stun</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + HP/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('HP')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             1,
@@ -120,9 +120,9 @@
                 "multi_desc_skill",
                 [
                     "War_Blow",
-                    "Blade_Vantage_Effect",
+                    "Frozen",
                     "Stun",
-                    "Frozen"
+                    "Heavy"
                 ]
             ]
         ]

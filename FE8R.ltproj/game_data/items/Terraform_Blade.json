@@ -2,7 +2,7 @@
     {
         "nid": "Terraform_Blade",
         "name": "Terraform Blade",
-        "desc": "A blade that can change landscapes.\n<green>Skills:</>Earth Shield\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
+        "desc": "A blade that can change landscapes.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</>\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + DEF (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             4,
@@ -91,8 +91,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Blade_Vantage_Effect",
-                    "Earth_Shield"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -116,9 +115,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Earth_Shield",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

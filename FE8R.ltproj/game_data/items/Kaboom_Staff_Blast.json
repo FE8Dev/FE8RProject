@@ -2,7 +2,7 @@
     {
         "nid": "Kaboom_Staff_Blast",
         "name": "Kaboom Staff (<icon>Blast</>)",
-        "desc": "L'arachel unleashes a flashier explosion against evil. Start on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + LCK/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>), (AOE Blast:3), cannot DS, can't crit, no WEXP gain.",
+        "desc": "L'arachel unleashes a flashier explosion against evil. Start on CD. <green>CD:4</>\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</><icon>Homing</><icon>Blast</> (<blue>3</>) <icon>skill_icons 9, 33</> MAG + LCK/3 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('LCK')//3))}</>).",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             8,
@@ -16,10 +16,6 @@
             [
                 "target_enemy",
                 null
-            ],
-            [
-                "hit",
-                90
             ],
             [
                 "weapon_type",
@@ -107,7 +103,8 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Monster"
+                        "Monster",
+                        "Shadow"
                     ],
                     "effective_multiplier": 3,
                     "effective_bonus_damage": 5,
@@ -124,6 +121,14 @@
             [
                 "alternate_damage_formula",
                 "MAG_LCK_WEAK"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Homing_Attack",
+                    "AOE_Blast_Description",
+                    "No_WEXP"
+                ]
             ]
         ]
     }

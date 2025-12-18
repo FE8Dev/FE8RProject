@@ -2,7 +2,7 @@
     {
         "nid": "Valkyries_Grace",
         "name": "Valkyrie's Grace",
-        "desc": "After all is said and done, the Goddess loves L'Arachel and her virtues.\n<green>Skills:</>Valkyrie Queen+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>LCK + MAG (<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>), +40 Crit damage.",
+        "desc": "After all is said and done, the Goddess loves L'Arachel and her virtues.\n<green>Skills:</><icon>skill_icons 0, 52</>(+) <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</> LCK + MAG (Total Power:<red>{e:(unit.get_stat('LCK') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             11,
@@ -78,7 +78,7 @@
                 [
                     "Bow_and_Light_Range_Penalty",
                     "Valkyrie_QueenP",
-                    "Crit_Damage_Bonus_40_hide"
+                    "Crit_Damage_Bonus_50_hide"
                 ]
             ],
             [
@@ -112,7 +112,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Valkyrie_QueenP"
+                    "Valkyrie_QueenP",
+                    "Crit_Damage_Bonus_50_hide",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

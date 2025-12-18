@@ -2,7 +2,7 @@
     {
         "nid": "Blitz_Stride",
         "name": "Blitz Stride",
-        "desc": "A stride that comes to victors.\n<green>Skills:</>Traveling Storm+\n<orange>Element:</><icon>Earth</><icon>Wind</> <violet>Inflicts:</><icon>Rock</>\n<red>Very Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Heavy, Cleaves, STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
+        "desc": "A stride that comes to victors.\n<green>Skills:</><icon>skill_icons 5, 26</>(+) <orange>Element:</><icon>Earth</><icon>Wind</>\n<violet>Inflicts:</><icon>Rock</> <red>Very Effective:</><icon>Frozen</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             1,
@@ -121,9 +121,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "Traveling_Storm_P",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]

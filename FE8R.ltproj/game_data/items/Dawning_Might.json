@@ -2,7 +2,7 @@
     {
         "nid": "Dawning_Might",
         "name": "Dawning Might",
-        "desc": "The power of dawn manifest.\n<green>Skills:</>Wild Might\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, STR + LCK/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>).",
+        "desc": "The power of dawn manifest.\n<green>Skills:</><icon>skill_icons 0, 34</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</><icon>Heavy</> STR + LCK/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK')//2))}</>).",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -115,8 +115,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
-                    "Wild_Might"
+                    "Wild_Might",
+                    "Heavy"
                 ]
             ]
         ]

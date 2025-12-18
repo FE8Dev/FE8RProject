@@ -2,7 +2,7 @@
     {
         "nid": "Purified_Whip",
         "name": "Purified Whip",
-        "desc": "A holy whip that monsters fear.\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>), (Line attack:5), Brave.",
+        "desc": "A holy whip that monsters fear.\n<orange>Element:</><icon>Light</> <red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</><icon>Line</> (<blue>5</>) STR + SPD/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             8,
@@ -78,10 +78,6 @@
             [
                 "alternate_damage_formula",
                 "STR_SPD_MID"
-            ],
-            [
-                "brave",
-                null
             ],
             [
                 "effective_damage",

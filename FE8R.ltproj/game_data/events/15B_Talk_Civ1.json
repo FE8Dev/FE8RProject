@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Talk_Civ1",
+        "trigger": "on_talk",
+        "level_nid": "15B",
+        "condition": "check_pair('Ephraim', 'Civ1')",
+        "commands": [],
+        "only_once": true,
+        "priority": 20,
+        "_source": [
+            "multi_add_portrait;Ephraim;Right;Villager Old Woman 1;Left",
+            "speak;Villager Old Woman 1;So, it's finally over...|What will become of Jehanna?...",
+            "speak;Ephraim;The army of Renais will not let Jehanna collapse.|We will help with rebuilding.",
+            "speak;Villager Old Woman 1;Oh, praise the heavens...|We may not be doomed after all...|",
+            "speak;Ephraim;It will be ok, Jehanna will be restored.",
+            "multi_remove_portrait;Ephraim;Villager Old Woman 1",
+            "give_bexp;5000",
+            "remove_talk;Ephraim;Civ1"
+        ],
+        "nid": "15B Talk_Civ1"
+    }
+]

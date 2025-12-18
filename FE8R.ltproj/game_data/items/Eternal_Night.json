@@ -2,7 +2,7 @@
     {
         "nid": "Eternal_Night",
         "name": "Eternal Night",
-        "desc": "If one loses their life to this spell, they are cast into eternal darkness.\n<green>Skills:</>Dream Siphon(After first kill), Ancient Pact (C) <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<pink>Misc:</>MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + round((unit.get_stat('CON')*1.5)))}</>).",
+        "desc": "If one loses their life to this spell, they are cast into eternal darkness.\n<green>Skills:</><icon>APC</><icon>skill_icons 7, 21</> <orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Sleep</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5)\n<pink>Misc:</>MAG + CON*1.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             6,
@@ -119,11 +119,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Dream_Siphon_Giver",
-                    "Dream_Siphon_Giver_Buff",
                     "Ancient_Pact_C",
-                    "Cursed_5",
-                    "Shadow_Blight"
+                    "Dream_Siphon_Giver",
+                    "Shadow_Blight",
+                    "Cursed_5"
                 ]
             ]
         ]

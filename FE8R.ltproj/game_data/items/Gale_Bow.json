@@ -2,7 +2,7 @@
     {
         "nid": "Gale_Bow",
         "name": "Gale Bow",
-        "desc": "A bow that is the bane of all fliers.\n<orange>Element:</><icon>Wind</>\n<red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>SPD + MOV*3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*3))}</>), +40 Avoid/Dodge.",
+        "desc": "A bow that is the bane of all fliers.\n<orange>Element:</><icon>Wind</> <red>Very effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 4, 11</> SPD + MOV*3 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('MOV')*3))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             1,
@@ -98,7 +98,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Fog_Sword_Effect_Mid"
+                    "Fog_Sword_Effect_Mid",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

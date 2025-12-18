@@ -2,7 +2,7 @@
     {
         "nid": "Thermal_Axe",
         "name": "Thermal Axe",
-        "desc": "An axe that balances ones state of mind.\n<green>Skills:</>Steam Flow, Power Chop (A)\n<orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + CON*2.5 (<red>{e:(unit.get_stat('STR') + round((unit.get_stat('CON')*2.5)))}</>).",
+        "desc": "An axe that balances ones state of mind.\n<green>Skills:</><icon>PCA</><icon>skill_icons 15, 27</> <orange>Element:</><icon>Fire</><icon>Water</>\n<violet>Inflicts:</><icon>Seared</><icon>Drenched</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</>STR + CON*2.5 (Total Power:<red>{e:(unit.get_stat('STR') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Cormag Axes",
         "icon_index": [
             1,
@@ -111,8 +111,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Steam_Flow",
                     "Power_Chop_A",
+                    "Steam_Flow",
                     "Breached_8",
                     "Seared",
                     "Drench_Debuff"

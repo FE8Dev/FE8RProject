@@ -2,7 +2,7 @@
     {
         "nid": "Spell_Cutter",
         "name": "Spell Cutter",
-        "desc": "A deadly counter for those magically attuned.\n<green>Skills:</>Flash Step\n<red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>STR + RES (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), +10 SPD, +40 RES.",
+        "desc": "A deadly counter for those magically attuned.\n<green>Skills:</><icon>FSSS</> <red>Very Effective:</><icon>Magic</>\n<pink>Misc:</>STR + RES (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')))}</>), +40 RES.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             25,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step"
+                    "Flash_Step_SS"
                 ]
             ],
             [
@@ -101,7 +101,7 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step"
+                    "Flash_Step_SS"
                 ]
             ]
         ]

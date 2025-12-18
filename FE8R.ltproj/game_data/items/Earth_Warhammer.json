@@ -2,7 +2,7 @@
     {
         "nid": "Earth_Warhammer",
         "name": "Earth W.H.",
-        "desc": "A warhammer imbued with an earth gem.\n<green>Skills:</>War Blow, Earth Shield\n<orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
+        "desc": "A warhammer imbued with an earth gem.\n<green>Skills:</><icon>War Blow</> <orange>Element:</><icon>Rock</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:3) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + DEF/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -103,8 +103,7 @@
                 "multi_status_on_equip",
                 [
                     "War_Blow",
-                    "Blade_Vantage_Effect",
-                    "Earth_Shield"
+                    "Blade_Vantage_Effect"
                 ]
             ],
             [
@@ -119,9 +118,8 @@
                 "multi_desc_skill",
                 [
                     "War_Blow",
-                    "Blade_Vantage_Effect",
-                    "Earth_Shield",
                     "Stun",
+                    "Flinch",
                     "Rock_Punctures"
                 ]
             ]

@@ -2,7 +2,7 @@
     {
         "nid": "Crimson_Flash",
         "name": "Crimson Flash",
-        "desc": "A majestic sword that solidified Marisa's nickname. <green>CD:2</>\n<green>Skills:</>Risky Vantage, Flash Step\n<pink>Misc:</>Uses SPD, +15 SPD, (multi-target:6), cannot DS.",
+        "desc": "A majestic sword that solidified Marisa's nickname. <green>CD:2</>\n<green>Skills:</><icon>FSX</><icon>Vantage</>\n<pink>Misc:</><icon>Target</> (<blue>6</>) Uses SPD for damage.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             4,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step",
+                    "Flash_Step_X",
                     "Risky_Vantage"
                 ]
             ],
@@ -110,9 +110,14 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step",
-                    "Risky_Vantage"
+                    "Flash_Step_X",
+                    "Risky_Vantage",
+                    "Multi_Target_Description"
                 ]
+            ],
+            [
+                "allow_same_target",
+                null
             ]
         ]
     }

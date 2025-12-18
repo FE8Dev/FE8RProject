@@ -2,7 +2,7 @@
     {
         "nid": "Heatrock_Bow",
         "name": "Heatrock Bow",
-        "desc": "A rare bow made from a heated rock with strange properties.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//2))}</>).",
+        "desc": "A rare bow made from a heated rock with strange properties.\n<orange>Element:</><icon>Earth</><icon>Fire</> <violet>Inflicts:</><icon>Rock</><icon>Seared</>(AOE:2)\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + RES/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('RES')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             9,
@@ -108,7 +108,8 @@
                 "multi_desc_skill",
                 [
                     "Seared",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

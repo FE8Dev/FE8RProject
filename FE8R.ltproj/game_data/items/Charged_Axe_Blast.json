@@ -2,7 +2,7 @@
     {
         "nid": "Charged_Axe_Blast",
         "name": "Charged Axe (<icon>Blast</>)",
-        "desc": "Amelia has charged this Axe with more Thunder power. Starts on CD. <green>CD:2</>\n<green>Skills:</>Power Chop (E)\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), no WEXP gain, cannot DS, (AOE Blast:3)",
+        "desc": "Amelia has charged this Axe with more Thunder power. Starts on CD. <green>CD:2</>\n<green>Skills:</><icon>PCC</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>Blast</> (<blue>3</>) <icon>skill_icons 9, 33</> STR + MAG/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             2,
@@ -131,7 +131,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Power_Chop_E"
+                    "Power_Chop_C"
                 ]
             ],
             [
@@ -141,8 +141,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Power_Chop_E",
-                    "Breached_5"
+                    "Power_Chop_C",
+                    "Breached_5",
+                    "AOE_Blast_Description"
                 ]
             ]
         ]

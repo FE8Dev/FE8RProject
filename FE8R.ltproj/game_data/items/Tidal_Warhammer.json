@@ -2,7 +2,7 @@
     {
         "nid": "Tidal_Warhammer",
         "name": "Tidal W.H.",
-        "desc": "A massive hammer that summons waves with each strike.\n<green>Skills:</>War Blow\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Stun</><icon>Drenched</>(AOE:3)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A massive hammer that summons waves with each strike.\n<green>Skills:</><icon>War Blow</> <orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Stun</><icon>Drenched</>(AOE:3) <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + SKL (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Axes Sheet",
         "icon_index": [
             5,
@@ -121,10 +121,11 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
                     "War_Blow",
                     "Stun",
-                    "Drench_Debuff"
+                    "Flinch",
+                    "Drench_Debuff",
+                    "Heavy"
                 ]
             ]
         ]

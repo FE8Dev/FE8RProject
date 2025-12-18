@@ -2,7 +2,7 @@
     {
         "nid": "Thunderclap",
         "name": "Thunderclap",
-        "desc": "A bow that shoots giant claps of lightning.\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>SKL + MOV*5 (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MOV')*5))}</>), targets weaker of DEF or RES.",
+        "desc": "A bow that shoots giant claps of lightning.\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Flying</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> SKL + MOV*5 (Total Power:<red>{e:(unit.get_stat('SKL') + (unit.get_stat('MOV')*5))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             7,
@@ -102,6 +102,13 @@
             [
                 "alternate_resist_formula",
                 "DEF_RES_MIN"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Bow_and_Light_Range_Penalty",
+                    "Kaminari"
+                ]
             ]
         ]
     }

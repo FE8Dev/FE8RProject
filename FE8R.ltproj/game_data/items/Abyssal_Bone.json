@@ -2,7 +2,7 @@
     {
         "nid": "Abyssal_Bone",
         "name": "Abyssal Bone",
-        "desc": "A horrific scythe of bones from the abyss.\n<green>Skills:</>Lance Guard (SS), Spook <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (15)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets RES.",
+        "desc": "A horrific scythe of bones from the abyss.\n<green>Skills:</><icon>LGSS</><icon>skill_icons 10, 34</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-15)  <red>Effective:</><icon>Infantry</>\n<pink>Misc:</><icon>Cleave</> STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets enemy's RES.",
         "icon_nid": "Lances Sheet",
         "icon_index": [
             3,
@@ -117,7 +117,8 @@
                     "Lance_Guard_SS",
                     "Spook",
                     "Shadow_Blight",
-                    "Cursed_15"
+                    "Cursed_15",
+                    "Cleaves"
                 ]
             ]
         ]

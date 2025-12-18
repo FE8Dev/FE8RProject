@@ -2,7 +2,7 @@
     {
         "nid": "Bolting_Light",
         "name": "Bolting Light",
-        "desc": "Walls fall down quickly to this magic. <green>CD:4</>\n<orange>Element:</><icon>Thunder</><icon>Light</>\n<red>Effective:</><icon>Armor</><icon>Drenched</><icon>Shadowblight</>\n<pink>Misc:</>Heavy, Siege, MAG/2 + SKL/2 + CON*1.5 (<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>).",
+        "desc": "Walls fall down quickly to this magic. <green>CD:4</>\n<orange>Element:</><icon>Thunder</><icon>Light</> <red>Effective:</><icon>Armor</><icon>Drenched</><icon>Shadowblight</>\n<pink>Misc:</><icon>Heavy</><icon>Siege</> MAG/2 + SKL/2 + CON*1.5 (Total Power:<red>{e:(unit.get_stat('MAG')//2 + unit.get_stat('SKL')//2 + round(unit.get_stat('CON')*1.5))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             5,
@@ -107,6 +107,13 @@
             [
                 "alternate_damage_formula",
                 "MAG_SKL_CON_MID"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Heavy",
+                    "Siege_Weapon_Description"
+                ]
             ]
         ]
     }

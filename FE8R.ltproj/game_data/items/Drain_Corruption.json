@@ -2,7 +2,7 @@
     {
         "nid": "Drain_Corruption",
         "name": "Drain Corruption",
-        "desc": "L'Arachel drains the corruption from monsters.\n<green>Skills:</>Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + CON*1.5 (<red>{e:(unit.get_stat('MAG') + round((unit.get_stat('CON')*1.5)))}</>), Absorb HP (50%).",
+        "desc": "L'Arachel drains the corruption from monsters.\n<green>Skills:</><icon>APC</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5)  <red>Effective:</><icon>Monster</>\n<pink>Misc:</>MAG + CON*1.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round((unit.get_stat('CON')*1.5))}</>), Absorb HP (50%).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             7,
@@ -122,8 +122,8 @@
                 "multi_desc_skill",
                 [
                     "Ancient_Pact_C",
-                    "Cursed_5",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_5"
                 ]
             ]
         ]

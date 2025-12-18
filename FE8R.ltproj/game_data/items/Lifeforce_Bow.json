@@ -2,7 +2,7 @@
     {
         "nid": "Lifeforce_Bow",
         "name": "Lifeforce Bow",
-        "desc": "A special bow that restores life to the wielder. Said to have a twin.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>HP Absorb (Half), MAG + SPD/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')/2))}</>).",
+        "desc": "A special bow that restores life to the wielder. Said to have a twin.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</>HP Absorb (Half), MAG + SPD/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')/2))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             3,
@@ -90,6 +90,12 @@
             [
                 "alternate_damage_formula",
                 "MAG_SPD_MID"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Bow_and_Light_Range_Penalty"
+                ]
             ]
         ]
     }

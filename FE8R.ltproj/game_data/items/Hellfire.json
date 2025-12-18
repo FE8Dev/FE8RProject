@@ -2,7 +2,7 @@
     {
         "nid": "Hellfire",
         "name": "Hellfire",
-        "desc": "A infernal tome that has burned many corpses.\n<green>Skills:</>Ancient Pact (SS)\n<orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>MAG + CON*2.5 (<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5)))}</>), Cleave.",
+        "desc": "A infernal tome that has burned many corpses.\n<green>Skills:</><icon>APSS</> <orange>Element:</><icon>Dark</><icon>Fire</>\n<violet>Inflicts:</><icon>Shadowblight</>(AOE:2) <icon>Curse</>(-15) <icon>Seared</> <red>Effective:</><icon>Horse</>\n<pink>Misc:</><icon>Cleave</> MAG + CON*2.5 (Total Power:<red>{e:(unit.get_stat('MAG') + round(unit.get_stat('CON')*2.5))}</>).",
         "icon_nid": "Dark Tomes Sheet",
         "icon_index": [
             2,
@@ -132,7 +132,8 @@
                     "Ancient_Pact_SS",
                     "Cursed_15",
                     "Shadow_Blight",
-                    "Seared"
+                    "Seared",
+                    "Cleaves"
                 ]
             ]
         ]

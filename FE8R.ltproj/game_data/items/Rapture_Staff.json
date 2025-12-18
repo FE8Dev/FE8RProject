@@ -2,7 +2,7 @@
     {
         "nid": "Rapture_Staff",
         "name": "Rapture Staff",
-        "desc": "A staff that carves the earth to attack.\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>Always hits, cannot crit, MAG + DEF/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//2))}</>).",
+        "desc": "A staff that carves the earth to attack.\n<orange>Element:</><icon>Earth</> <violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</><icon>Homing</> MAG + DEF/2 (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('DEF')//2))}</>).",
         "icon_nid": "New Generic Weapons 01-17-25",
         "icon_index": [
             8,
@@ -88,7 +88,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Homing_Attack"
                 ]
             ]
         ]

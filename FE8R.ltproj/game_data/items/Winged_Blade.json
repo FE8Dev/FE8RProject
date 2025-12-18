@@ -2,7 +2,7 @@
     {
         "nid": "Winged_Blade",
         "name": "Winged Blade",
-        "desc": "An unorthodox blade used by swift warriors.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, uses SPD + SKL/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD instead of DEF.",
+        "desc": "An unorthodox blade used by swift warriors.\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> SPD + SKL/2 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')//2))}</>), targets SPD.",
         "icon_nid": "Swords Sheet",
         "icon_index": [
             8,
@@ -113,7 +113,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect"
+                    "Heavy",
+                    "Cleaves"
                 ]
             ]
         ]
