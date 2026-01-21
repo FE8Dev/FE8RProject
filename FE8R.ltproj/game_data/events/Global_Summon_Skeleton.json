@@ -9,8 +9,6 @@
         "priority": 20,
         "_source": [
             "",
-            "level_var;Summoner;unit.wexp['Dark']",
-            "",
             "level_var;SummonCount;{e:unit.get_stat('MAG')}",
             "",
             "",
@@ -23,7 +21,7 @@
             "    if;unit.get_internal_level() >= 41",
             "        make_generic;Skeleton_{v:SummonCount}{e:unit.nid};Legion_Azuth;{e:unit.level};player",
             "    else",
-            "         make_generic;Skeleton_{v:SummonCount}{e:unit.nid};Sword_Wight_Azuth;{e:unit.level};player",
+            "        make_generic;Skeleton_{v:SummonCount}{e:unit.nid};Sword_Wight_Azuth;{e:unit.level};player",
             "    end",
             "end",
             "",
