@@ -15,7 +15,7 @@
             "",
             "if;game.check_dead(\"phantom_{v:SummonCount}{e:unit.nid}\")",
             "    resurrect;phantom_{v:SummonCount}{e:unit.nid}",
-            "    for;item;u('phantom_' + 'v('SummonCount')' + 'unit.nid').items;",
+            "    for;item;u('phantom_' + v('SummonCount') + unit.nid).items;",
             "        remove_item;phantom_{v:SummonCount}{e:unit.nid};{item};no_banner",
             "    endf",
             "else",
