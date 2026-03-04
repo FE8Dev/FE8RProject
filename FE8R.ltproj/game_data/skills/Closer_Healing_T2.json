@@ -15,7 +15,7 @@
             ],
             [
                 "eval_empower_heal",
-                "target.get_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
+                "target.get_max_hp() // 3 if get_support_rank(unit, target) == 'A' else target.get_max_hp() // 4 if get_support_rank(unit, target) == 'B' else target.get_max_hp() // 5 if get_support_rank(unit, target) == 'C' else 0"
             ],
             [
                 "feat",

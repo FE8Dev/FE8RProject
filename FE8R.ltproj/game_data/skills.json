@@ -5587,7 +5587,7 @@
     },
     {
         "nid": "Distant_Counter",
-        "name": "Distant Counter",
+        "name": "Distant Counter <icon>skill_icons 5, 22</>",
         "desc": "Allows this unit to counterattack at any range.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -8735,10 +8735,26 @@
     {
         "nid": "Power_Chop_C",
         "name": "Power Chop 2 <icon>PCC</>",
-        "desc": "Attacks add 20% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-5) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 15% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-5) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             2,
+            1
+        ],
+        "components": [
+            [
+                "dynamic_damage",
+                "target.get_hp() * 0.15"
+            ]
+        ]
+    },
+    {
+        "nid": "Power_Chop_A",
+        "name": "Power Chop A <icon>PCA</>",
+        "desc": "Attacks add 20% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-8) (<icon>Skills 6, 4</>).",
+        "icon_nid": "Scaling Weapon icons",
+        "icon_index": [
+            3,
             1
         ],
         "components": [
@@ -8749,25 +8765,9 @@
         ]
     },
     {
-        "nid": "Power_Chop_A",
-        "name": "Power Chop A <icon>PCA</>",
-        "desc": "Attacks add 30% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-8) (<icon>Skills 6, 4</>).",
-        "icon_nid": "Scaling Weapon icons",
-        "icon_index": [
-            3,
-            1
-        ],
-        "components": [
-            [
-                "dynamic_damage",
-                "target.get_hp() * 0.3"
-            ]
-        ]
-    },
-    {
         "nid": "Power_Chop_SS",
         "name": "Power Chop 4 <icon>PCSS</>",
-        "desc": "Attacks add 40% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-15) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 25% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-15) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             4,
@@ -8776,14 +8776,14 @@
         "components": [
             [
                 "dynamic_damage",
-                "target.get_hp() * 0.4"
+                "target.get_hp() * 0.25"
             ]
         ]
     },
     {
         "nid": "Power_Chop_X",
         "name": "Power Chop 5 <icon>PCX</>",
-        "desc": "Attacks add 50% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-25) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 30% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-25) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             5,
@@ -8792,7 +8792,7 @@
         "components": [
             [
                 "dynamic_damage",
-                "target.get_hp() * 0.5"
+                "target.get_hp() * 0.3"
             ]
         ]
     },
@@ -8947,30 +8947,6 @@
             [
                 "damage_multiplier",
                 1.5
-            ]
-        ]
-    },
-    {
-        "nid": "Pair_Up_Affinity_Generic_Proc",
-        "name": "Affinity Strike (Random)",
-        "desc": "50% chance to gain a bonus attack, and inflicts a random Affinity Support debuff after combat. Debuff won't proc if unit cannot attack enemy.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            11,
-            52
-        ],
-        "components": [
-            [
-                "display_skill_icon_in_combat",
-                null
-            ],
-            [
-                "event_after_combat",
-                "Global Elemental_Support_Enemy"
-            ],
-            [
-                "dynamic_attacks",
-                "1"
             ]
         ]
     },
@@ -13118,10 +13094,10 @@
         "nid": "SMLRevival_Stone",
         "name": "Revival Stone S",
         "desc": "If a unit with this skill would die, they are revived to Max HP instead.",
-        "icon_nid": "Boosters",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
-            0,
-            6
+            12,
+            0
         ],
         "components": [
             [
@@ -13138,10 +13114,10 @@
         "nid": "Revival_Stone",
         "name": "Revival Stone",
         "desc": "If a unit with this skill would die, they are revived to Max HP instead.\nHas 2 charges.",
-        "icon_nid": "Boosters",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
-            0,
-            6
+            1,
+            1
         ],
         "components": [
             [
@@ -13158,10 +13134,10 @@
         "nid": "Big_Revival_Stone",
         "name": "Revival Stone L",
         "desc": "If a unit with this skill would die, they are revived to Max HP instead.\nHas 3 charges.",
-        "icon_nid": "Boosters",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
-            0,
-            6
+            15,
+            0
         ],
         "components": [
             [
@@ -13177,11 +13153,11 @@
     {
         "nid": "Demon_Revival_Stone",
         "name": "Demon Stone",
-        "desc": "If a unit with this skill would die, they are revived to Max HP instead.\nHas 5 charges.",
-        "icon_nid": "Boosters",
+        "desc": "If a unit with this skill would die, they are revived to Max HP instead.\nHas 20 charges.",
+        "icon_nid": "{Tactics Ogre LUCT, EldritchAbo, serebii01} Item Icon Sheet 2b",
         "icon_index": [
-            0,
-            6
+            10,
+            0
         ],
         "components": [
             [
@@ -13190,7 +13166,7 @@
             ],
             [
                 "drain_charge",
-                5
+                20
             ]
         ]
     },
@@ -13623,6 +13599,30 @@
             [
                 "dynamic_avoid",
                 "-100"
+            ]
+        ]
+    },
+    {
+        "nid": "Demonic_Karma",
+        "name": "Demonic Karma",
+        "desc": "Negative Statuses inflicted on this unit are reflected to enemy unit.\nNegative Statuses only last 1 turn for this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "resist_status",
+                null
+            ],
+            [
+                "reflect_status",
+                null
             ]
         ]
     },
@@ -16015,10 +16015,6 @@
             [
                 "dynamic_damage_multiplier",
                 "1+(utils.calculate_distance(unit.position, unit.previous_position))/10"
-            ],
-            [
-                "xcom_movement",
-                6
             ]
         ]
     },
@@ -16877,7 +16873,7 @@
         "components": [
             [
                 "condition",
-                "'Mounted' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))"
+                "'Horse' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))"
             ],
             [
                 "stack",
@@ -22148,10 +22144,6 @@
                 null
             ],
             [
-                "xcom_movement",
-                8
-            ],
-            [
                 "multi_skill",
                 [
                     "Warfare_Genius_DMG_hide"
@@ -25571,7 +25563,7 @@
             ],
             [
                 "combat_condition",
-                "unit2 and item_funcs.is_magic(unit2, unit2.get_weapon() and utils.calculate_distance(unit2.position, unit.position)) and mode == 'defense'"
+                "unit2 and item_funcs.is_magic(unit2, unit2.get_weapon() and (utils.calculate_distance(unit.position, target.position) <= 5) and mode == 'defense'"
             ],
             [
                 "display_skill_icon_in_combat",
@@ -28167,7 +28159,7 @@
     {
         "nid": "Traveling_Arena",
         "name": "Traveling Arena",
-        "desc": "Give both unit and enemies within 3 spaces gain\nBrave effect and double damage.\nIf unit lives and initiated combat, get 100 Gold.",
+        "desc": "Both unit and enemies within 3 spaces gain Brave effect and double damage.\nIf unit lives and initiated combat, get 100 Gold.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,
@@ -33248,7 +33240,7 @@
             ],
             [
                 "combat_condition",
-                "unit2.team == 'player' or unit2.team == 'other'"
+                "(unit2.team == 'player' or unit2.team == 'other') and (mode == 'attack')"
             ],
             [
                 "event_after_combat",
@@ -34174,7 +34166,7 @@
     {
         "nid": "Reflect",
         "name": "Reflect",
-        "desc": "Reflects statuses back at the enemy.",
+        "desc": "Reflects statuses back at the enemy (unit still gains statuses).",
         "icon_nid": "Woods Items 10-20-25",
         "icon_index": [
             3,
@@ -35634,12 +35626,12 @@
         ],
         "components": [
             [
-                "class_skill",
-                null
-            ],
-            [
                 "crit",
                 30
+            ],
+            [
+                "hidden",
+                null
             ]
         ]
     },
@@ -36956,7 +36948,7 @@
         "components": [
             [
                 "gain_skill_after_active_kill",
-                "Hawkeye"
+                "Hawkeye_Buff"
             ]
         ]
     },
@@ -38512,7 +38504,7 @@
     },
     {
         "nid": "Anesthesia",
-        "name": "Anesthesia",
+        "name": "Anesthesia <icon>skill_icons 7, 41</>",
         "desc": "-4 SKL and SPD per stack, up to 10 stacks. lasts 3 rounds",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -40111,7 +40103,7 @@
     {
         "nid": "Valkyrie_Queen",
         "name": "Valkyrie Queen <icon>skill_icons 0, 52</>",
-        "desc": "Mounted Tome wielding and Light tome wielding allies within 5 spaces gain -4 Damage taken, +15 Avoid, and +1 bonus attack.",
+        "desc": "This unit, tome wielding Horse allies and Light tome wielding allies within 5 spaces gain -4 Damage taken, +15 Avoid, and +1 bonus attack.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -40143,7 +40135,7 @@
     {
         "nid": "Valkyrie_QueenP",
         "name": "Valkyrie Queen+ <icon>skill_icons 0, 52</>",
-        "desc": "Mounted Tome wielding and Light tome wielding allies within 5 spaces gain -8 Damage taken, +30 Avoid, and +2 bonus attacks.",
+        "desc": "This unit, tome wielding Horse allies, and Light tome wielding allies within 5 spaces gain -8 Damage taken, +30 Avoid, and +2 bonus attacks.",
         "icon_nid": "skill_icons",
         "icon_index": [
             0,
@@ -40188,7 +40180,7 @@
         "components": [
             [
                 "condition",
-                "('Mounted' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))) or (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light'))"
+                "('Horse' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))) or (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light'))"
             ],
             [
                 "hidden_if_inactive",
@@ -40220,7 +40212,7 @@
         "components": [
             [
                 "condition",
-                "('Mounted' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))) or (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light')"
+                "('Horse' in unit.tags and (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Anima', 'Light', 'Dark', 'Staff'))) or (unit.get_weapon() and item_system.weapon_type(unit, unit.get_weapon()) in ('Light'))"
             ],
             [
                 "hidden_if_inactive",
@@ -45294,46 +45286,6 @@
         ]
     },
     {
-        "nid": "FireA",
-        "name": "Always Ready",
-        "desc": "They cannot act before you if you were expecting them.\nUnit gains always attacks first.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            1,
-            7
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "vantage",
-                null
-            ]
-        ]
-    },
-    {
-        "nid": "WaterA",
-        "name": "Healing Arts",
-        "desc": "An ancient blessings keeps you in top shape.\nUnit restores 10% Max HP at the beginning of each turn.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            1,
-            2
-        ],
-        "components": [
-            [
-                "regeneration",
-                0.1
-            ],
-            [
-                "class_skill",
-                null
-            ]
-        ]
-    },
-    {
         "nid": "EarthA",
         "name": "High Momentum",
         "desc": "Using short gravity pulls allows the user to keep moving after attacking.\nUnit gains Canto+.",
@@ -45376,7 +45328,7 @@
     {
         "nid": "WaterB",
         "name": "Exceptional Focus",
-        "desc": "You cannot be beaten on your enemy's terms.\n+20 to Hit and Avoid when defending.",
+        "desc": "You cannot be beaten on your enemy's terms.\n+20 to Hit and Avoid when defending. Unit always attacks first.",
         "icon_nid": "Skills",
         "icon_index": [
             10,
@@ -45394,6 +45346,10 @@
             [
                 "dynamic_avoid",
                 "20 if (mode == 'defense') else 0"
+            ],
+            [
+                "vantage",
+                null
             ]
         ]
     },
@@ -45418,29 +45374,17 @@
             [
                 "defense_proc",
                 "Pavise"
-            ]
-        ]
-    },
-    {
-        "nid": "SupremeMasteryofCombat",
-        "name": "SupremeMastery of Combat",
-        "desc": "Your superior reflexes allows you to mantain the upper hand in combat.\nUnit cannot be doubled.",
-        "icon_nid": "Skills",
-        "icon_index": [
-            8,
-            0
-        ],
-        "components": [
+            ],
             [
-                "dynamic_defense_speed",
-                "9999"
+                "class_skill",
+                null
             ]
         ]
     },
     {
         "nid": "SupremeMasteryofMagic",
         "name": "Supreme Mastery of Magic",
-        "desc": "Your control over the elements lets you overpower mundane magical users.\nUnit gains effective damage against Magic enemies.",
+        "desc": "Your control over the elements lets you overpower mundane magical users.\nUnit gains effective damage against Magic enemies and cannot be doubled.",
         "icon_nid": "Skills",
         "icon_index": [
             4,
@@ -45450,6 +45394,14 @@
             [
                 "item_override",
                 "StrongVSMagic"
+            ],
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "defense_speed",
+                9999
             ]
         ]
     },
@@ -46206,7 +46158,7 @@
     },
     {
         "nid": "Speed_Swing",
-        "name": "Speed Swing",
+        "name": "Speed Swing <icon>skill_icons 6, 39</>",
         "desc": "If unit's STR >= to enemy's STR, unit gains +1 Bonus attacks (+2 if doubling).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46226,7 +46178,7 @@
     },
     {
         "nid": "Improved_Speed_Swing",
-        "name": "Improved Speed Swing",
+        "name": "Improved Speed Swing <icon>skill_icons 6, 39</>",
         "desc": "If unit's STR >= to enemy's STR, unit gains +2 Bonus attacks (+4 if doubling).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46246,7 +46198,7 @@
     },
     {
         "nid": "Superior_Speed_Swing",
-        "name": "Superior Speed Swing",
+        "name": "Superior Speed Swing <icon>skill_icons 6, 39</>",
         "desc": "If unit's STR >= to enemy's STR, unit gains +3 Bonus attacks (+6 if doubling).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46294,7 +46246,7 @@
     },
     {
         "nid": "Constricted",
-        "name": "Constricted",
+        "name": "Constricted <icon>ASA</>",
         "desc": "-30 Avoid, reduce SPD and SKL by 25% and unit takes 25% of damage dealt for 2 turns or after next combat.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46405,7 +46357,7 @@
     },
     {
         "nid": "Cthonic_Hunger_Buff",
-        "name": "Cthonic Hunger",
+        "name": "Cthonic Hunger <icon>skill_icons 2, 51</>",
         "desc": "Attacks restore HP = 20% of damage dealt.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46421,7 +46373,7 @@
     },
     {
         "nid": "Cyclonic_Downdraft",
-        "name": "Cyclonic Downdraft",
+        "name": "Cyclonic Downdraft <icon>skill_icons 15, 48</>",
         "desc": "+10 SPD and +45 Hit/Avoid/Dodge to all allies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46445,7 +46397,7 @@
     },
     {
         "nid": "Cyclonic_Downdraft_Buff",
-        "name": "Cyclonic Downdraft",
+        "name": "Cyclonic Downdraft <icon>skill_icons 15, 48</>",
         "desc": "+10 SPD and +45 Hit/Avoid/Dodge.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46478,7 +46430,7 @@
     },
     {
         "nid": "Downdraft",
-        "name": "Downdraft",
+        "name": "Downdraft <icon>skill_icons 15, 48</>",
         "desc": "+5 SPD and +30 Avoid/Dodge to all allies within 3 spaces.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46502,7 +46454,7 @@
     },
     {
         "nid": "Downdraft_Buff",
-        "name": "Downdraft",
+        "name": "Downdraft <icon>skill_icons 15, 48</>",
         "desc": "+5 Spd and +30 Avoid/Dodge.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -46690,12 +46642,12 @@
     },
     {
         "nid": "Avo_Ddg_77",
-        "name": "Avo/Ddg+77",
-        "desc": "Give the Avoid/Dodge buff for the weapon.",
-        "icon_nid": "Swords Sheet",
+        "name": "+100 Avoid/Dodge <icon>skill_icons 6, 11</>",
+        "desc": "",
+        "icon_nid": "skill_icons",
         "icon_index": [
-            2,
-            5
+            6,
+            11
         ],
         "components": [
             [
@@ -47828,7 +47780,7 @@
     },
     {
         "nid": "Prey_Wounded",
-        "name": "Wounded Prey",
+        "name": "Wounded Prey <icon>skill_icons 2, 43</>",
         "desc": "Attacks inflict Wounded to enemies on hit (+20% damage taken, -20% damage given, and -20 Crit Avoid, lasts 2 turns).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -47844,7 +47796,7 @@
     },
     {
         "nid": "Prey_Wounded_Debuff",
-        "name": "Wounded",
+        "name": "Wounded <icon>skill_icons 2, 43</>",
         "desc": "+20% damage taken, -20% damage given, and -20 Crit Avoid, lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -47872,7 +47824,7 @@
     },
     {
         "nid": "Prey_Wounded_Plus",
-        "name": "Wounded Prey+",
+        "name": "Wounded Prey+ <icon>skill_icons 2, 43</>",
         "desc": "Attacks inflict Wounded+ to enemies on hit (+25% damage taken, -25% damage given, and -25 Crit Avoid, lasts 2 turns).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -47888,7 +47840,7 @@
     },
     {
         "nid": "Prey_Wounded_Debuff_Plus",
-        "name": "Wounded+",
+        "name": "Wounded+ <icon>skill_icons 2, 43</>",
         "desc": "+25% damage taken, -25% damage given, and -25 Crit Avoid, lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -47916,7 +47868,7 @@
     },
     {
         "nid": "Prey_Wounded_Plus_Plus",
-        "name": "Wounded Prey++",
+        "name": "Wounded Prey++ <icon>skill_icons 1, 43</>",
         "desc": "Attacks inflict Wounded+ to enemies on hit (+30% damage taken, -30% damage given, and -30 Crit Avoid, lasts 2 turns).",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -47932,7 +47884,7 @@
     },
     {
         "nid": "Prey_Wounded_Debuff_Plus_Plus",
-        "name": "Wounded++",
+        "name": "Wounded++ <icon>skill_icons 1, 43</>",
         "desc": "+30% damage taken, -30% damage given, and -30 Crit Avoid, lasts 2 turns.",
         "icon_nid": "skill_icons",
         "icon_index": [
@@ -56539,6 +56491,569 @@
         ]
     },
     {
+        "nid": "Bosskiller",
+        "name": "Bosskiller <icon>Target</>",
+        "desc": "Deals 50% more Damage to Bosses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "combat_condition",
+                "'Boss' in unit.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Bosskiller_Plus",
+        "name": "Bosskiller+ <icon>Target</>",
+        "desc": "Deals 100% more Damage to Bosses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                2.0
+            ],
+            [
+                "combat_condition",
+                "'Boss' in unit.tags"
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Eclipso",
+        "name": "Cursed <icon>skill_icons 6, 27</>",
+        "desc": "Unit has -100% LCK. Lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            27
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        0.0
+                    ]
+                ]
+            ],
+            [
+                "end_time",
+                2
+            ]
+        ]
+    },
+    {
+        "nid": "Cursed_Plus_Eclipso",
+        "name": "Cursed+ <icon>skill_icons 6, 27</>",
+        "desc": "Unit has -100% LCK. Unit takes 20% more damage. Lasts 2 turns.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            6,
+            27
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "LCK",
+                        0.0
+                    ]
+                ]
+            ],
+            [
+                "end_time",
+                2
+            ],
+            [
+                "dynamic_resist_multiplier",
+                "1.2"
+            ]
+        ]
+    },
+    {
+        "nid": "Magical_Leadership",
+        "name": "Magical Leadership",
+        "desc": "Allies with the Magic Tag within 3 Spaces gain +30% MAG. Allies without the Magic Tag gain +15 RES instead.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "aura",
+                "Magical_Leadership_MAG_RES"
+            ],
+            [
+                "aura_range",
+                3
+            ],
+            [
+                "aura_target",
+                "ally"
+            ]
+        ]
+    },
+    {
+        "nid": "Magical_Leadership_MAG",
+        "name": "Magical Leadership",
+        "desc": "This unit gains +30% MAG.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "stat_multiplier",
+                [
+                    [
+                        "MAG",
+                        1.3
+                    ]
+                ]
+            ],
+            [
+                "condition",
+                "'Magic' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Magical_Leadership_MAG_RES",
+        "name": "Magical Leadership",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "multi_skill",
+                [
+                    "Magical_Leadership_MAG",
+                    "Magical_Leadership_RES"
+                ]
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Magical_Leadership_RES",
+        "name": "Magical Leadership",
+        "desc": "This unit gains +15 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "condition",
+                "not 'Magic' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Barrage_Art",
+        "name": "Magic Barrage",
+        "desc": "Tome CA: Gain +2 follow up attacks and AoE 1. CD:3",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            32
+        ],
+        "components": [
+            [
+                "combat_art",
+                "Magic_Barrage_Skill"
+            ],
+            [
+                "allowed_weapons",
+                "item_system.weapon_type(unit, item) in ('Dark', 'Anima', 'Light')"
+            ],
+            [
+                "build_charge",
+                3
+            ],
+            [
+                "Endstep_charge_increase",
+                1
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Magic_Barrage_Skill",
+        "name": "Magic Barrage",
+        "desc": "Tome CA: Gain +2 follow up attacks and AoE 1. CD:3",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            32
+        ],
+        "components": [
+            [
+                "dynamic_multiattacks",
+                "2"
+            ],
+            [
+                "item_override",
+                "Magic_Barrage_Override"
+            ]
+        ]
+    },
+    {
+        "nid": "Magus_Protection",
+        "name": "Magus's Protection",
+        "desc": "Grants Alllies the Small Barrier Skill after using a support staff on them.\nSmall Barrier reduces damage taken by MAG/2 when attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            12,
+            52
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "item_override",
+                "Small_Barrier_Override"
+            ]
+        ]
+    },
+    {
+        "nid": "MAG_RES_Boost",
+        "name": "MAG/RES Boost",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            2
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        3
+                    ],
+                    [
+                        "RES",
+                        3
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "MAG_RES_Boost_Plus",
+        "name": "MAG/RES Boost+",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                2
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "MAG_RES_Boost_Plus_Stacking",
+        "name": "MAG/RES Boost+",
+        "desc": "",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            4,
+            2
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "MAG",
+                        5
+                    ],
+                    [
+                        "RES",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "time",
+                3
+            ],
+            [
+                "stack",
+                999
+            ],
+            [
+                "hidden",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Small_Barrier",
+        "name": "Small Barrier",
+        "desc": "Reduce damage this unit takes by MAG2 (<red>{e:(unit.get_stat('MAG')//2)}</>)",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "unit.get_stat('MAG')//2"
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "condition",
+                "unit.team == 'player'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Superior_Barrier",
+        "name": "Superior Barrier",
+        "desc": "Reduce damage this unit takes by MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>) when being attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode =='defense'"
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('MAG')+ (unit.get_stat('RES')//2)"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Supportive_Momentum",
+        "name": "Supportive Momentum",
+        "desc": "This unit gains Flying Movement. Once per turn when using a support staff, refresh this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            37
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "movement_type",
+                "Fliers"
+            ]
+        ]
+    },
+    {
+        "nid": "Supportive_Momentum_Refresh",
+        "name": "Supportive Momentum",
+        "desc": "This unit gains Flying Movement. Once per turn when using a support staff, refresh this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "charges_per_turn",
+                1
+            ],
+            [
+                "eval_galeforce",
+                "unit2.team == 'player' or unit2.team == 'other'"
+            ]
+        ]
+    },
+    {
+        "nid": "Ultimate_Blessing",
+        "name": "Ultimate Blessing",
+        "desc": "Judge the soul of an Ally to grant them MAG(<red>{e:(unit.get_stat('MAG'))}</>) to most stats and MAG/10 (<red>{e:(unit.get_stat('MAG')//10)}</>) to CON and MOV for 1 Turn. 1 use per combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "ability",
+                "Ultimate_Blessing"
+            ]
+        ]
+    },
+    {
+        "nid": "Ultimate_Blessing_Buff",
+        "name": "Ultimate Blessing",
+        "desc": "This unit gains boost equal to Eclipso's MAG added to most stats. MAG/10 for CON and MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "MAG",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "SKL",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "SPD",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "LCK",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "DEF",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "RES",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "CON",
+                        "game.get_unit('Eclipso').get_stat('MAG')//10"
+                    ],
+                    [
+                        "MOV",
+                        "game.get_unit('Eclipso').get_stat('MAG')//10"
+                    ]
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Elegant_Form_T1",
         "name": "Elegant Form",
         "desc": "x1.2 damage boost for each attack or attack dodged for 2 turns.\nMax 5 stacks.",
@@ -58033,7 +58548,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit2.team == 'player' or unit2.team == 'other'"
+                "(unit2.team == 'player' or unit2.team == 'other') and (mode == 'attack')"
             ],
             [
                 "event_after_combat",
@@ -58785,10 +59300,6 @@
             [
                 "dynamic_damage_multiplier",
                 "1+(utils.calculate_distance(unit.position, unit.previous_position))/10"
-            ],
-            [
-                "xcom_movement",
-                6
             ],
             [
                 "feat",
@@ -65639,7 +66150,7 @@
     {
         "nid": "Wishing_Warp_T3",
         "name": "Wishing Warp",
-        "desc": "Warp an ally to another location.\nThis is a free action.",
+        "desc": "Warp an ally to another location. <green>CD:6 Turns</>\nThis is a free action.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -65988,7 +66499,7 @@
         "components": [
             [
                 "combat_condition",
-                "unit2 and item_funcs.is_magic(unit2, unit2.get_weapon() and utils.calculate_distance(unit2.position, unit.position)) and mode == 'defense'"
+                "unit2 and item_funcs.is_magic(unit2, unit2.get_weapon() and (utils.calculate_distance(unit.position, target.position) <= 5) and mode == 'defense'"
             ],
             [
                 "display_skill_icon_in_combat",
@@ -67624,7 +68135,7 @@
     {
         "nid": "Traveling_Arena_T3",
         "name": "Traveling Arena",
-        "desc": "Give both unit and enemies within 3 spaces gain\nBrave effect and double damage.\nIf unit lives and initiated combat, get 100 Gold.",
+        "desc": "Both unit and enemies within 3 spaces gain Brave effect and double damage.\nIf unit lives and initiated combat, get 100 Gold.",
         "icon_nid": "skill_icons",
         "icon_index": [
             4,

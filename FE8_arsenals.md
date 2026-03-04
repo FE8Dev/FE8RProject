@@ -295,7 +295,7 @@ Warrior
 
 ## *Bow*
 
-A bow that uses Magic and Skill for damage instead of Strength and after the first upgrade gains effectiveness against Horses and inflicts Seared.
+A bow that uses Strength and Magic for damage instead of Strength and after the first upgrade gains effectiveness against Horses and inflicts Seared.
 
 Its fourth version has a skill that makes attack always hit if an enemy was killed by initiating combat with this weapon.
 

@@ -31279,6 +31279,180 @@
         "fields": []
     },
     {
+        "nid": "T3_Magic_Tank_Knoll_DK",
+        "name": "Barrier Knight",
+        "desc": "Mounted knights that strive for the ultimate magic defense. <icon>Horse</><icon>Armor</><icon>Magic</>",
+        "tier": 3,
+        "movement_group": "Heavy Cav",
+        "promotes_from": "Great_Knight",
+        "turns_into": [],
+        "tags": [
+            "Horse",
+            "Mounted",
+            "Armor",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 30,
+            "STR": 5,
+            "MAG": 6,
+            "SKL": 7,
+            "SPD": 5,
+            "LCK": 6,
+            "DEF": 7,
+            "RES": 8,
+            "CON": 12,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 0,
+            "STR": -28,
+            "MAG": -56,
+            "SKL": -25,
+            "SPD": -28,
+            "LCK": -21,
+            "DEF": -35,
+            "RES": -53,
+            "CON": 0,
+            "MOV": 0
+        },
+        "growth_bonus": {
+            "HP": 180,
+            "STR": 80,
+            "MAG": 160,
+            "SKL": 70,
+            "SPD": 80,
+            "LCK": 60,
+            "DEF": 100,
+            "RES": 150,
+            "CON": 0,
+            "MOV": 0
+        },
+        "promotion": {
+            "HP": 3,
+            "STR": 2,
+            "MAG": 4,
+            "SKL": 2,
+            "SPD": 2,
+            "LCK": 1,
+            "DEF": 2,
+            "RES": 5,
+            "CON": 3,
+            "MOV": -97
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 94,
+            "MAG": 98,
+            "SKL": 91,
+            "SPD": 90,
+            "LCK": 100,
+            "DEF": 91,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Canto_hide"
+            ],
+            [
+                5,
+                "Magic_Wall_Aura"
+            ],
+            [
+                15,
+                "Magical_Ignition_Seared"
+            ],
+            [
+                1,
+                "Knight_Pair_Up_T3_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Drench_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Stun_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Frozen_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Shadowblight_hide"
+            ],
+            [
+                15,
+                "Magical_Ignition_Rock_hide"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                true,
+                60,
+                480
+            ],
+            "Lance": [
+                false,
+                0,
+                300
+            ],
+            "Axe": [
+                true,
+                300,
+                480
+            ],
+            "Bow": [
+                false,
+                0,
+                300
+            ],
+            "Staff": [
+                false,
+                0,
+                300
+            ],
+            "Light": [
+                false,
+                0,
+                300
+            ],
+            "Anima": [
+                true,
+                300,
+                480
+            ],
+            "Dark": [
+                true,
+                60,
+                480
+            ],
+            "Default": [
+                false,
+                0,
+                300
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Dark Knight (M) Sword {Pikmin, Jj09} 1",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Magic_Tank",
+        "combat_anim_nid": "Barrier_Knight_V3",
+        "fields": []
+    },
+    {
         "nid": "T3_Magic_Tank_Seth",
         "name": "Barrier Knight",
         "desc": "Mounted knights that strive for the ultimate magic defense. <icon>Horse</><icon>Armor</><icon>Magic</>",
@@ -60976,7 +61150,7 @@
         "movement_group": "Light Cav",
         "promotes_from": "Shaman",
         "turns_into": [
-            "T3_Magic_Tank",
+            "T3_Magic_Tank_Knoll_DK",
             "T3_Evil_Knight_Knoll",
             "T3_Farseer_Forde"
         ],
@@ -73752,7 +73926,7 @@
             "DEF": 35,
             "RES": 35,
             "CON": 35,
-            "MOV": 2
+            "MOV": 5
         },
         "growths": {
             "HP": 200,
@@ -73837,7 +74011,7 @@
             ],
             [
                 1,
-                "Death_Blow"
+                "Demonic_Karma"
             ],
             [
                 1,
@@ -84931,7 +85105,7 @@
     {
         "nid": "Pro_T0",
         "name": "Sealed One",
-        "desc": "Prohibited to use their full power by the laws of the world, able to use just basic elemental manipulation<icon>Infantry</><icon>Magic</>",
+        "desc": "leftover from first edition Pro\n<icon>Infantry</><icon>Magic</>",
         "tier": 0,
         "movement_group": "Light Foot",
         "promotes_from": null,
@@ -85019,11 +85193,11 @@
             ],
             [
                 4,
-                "WaterA"
+                "Poisoned"
             ],
             [
                 8,
-                "FireA"
+                "Poisoned"
             ]
         ],
         "wexp_gain": {
@@ -85094,8 +85268,8 @@
     },
     {
         "nid": "Pro_T1",
-        "name": "Awakened One",
-        "desc": "With their power starting to leak out, they are able to do feats of great mastery and skill<icon>Infantry</><icon>Magic</>",
+        "name": "Sealed One",
+        "desc": "Prohibited to use their full power by the laws of the world, able to use just basic elemental manipulation<icon>Infantry</><icon>Magic</>",
         "tier": 1,
         "movement_group": "Light Foot",
         "promotes_from": null,
@@ -85175,7 +85349,7 @@
             ],
             [
                 15,
-                "WaterB"
+                "AirB"
             ],
             [
                 1,
@@ -85250,11 +85424,11 @@
     },
     {
         "nid": "Pro_T2",
-        "name": "Unleashed One",
-        "desc": "After a deal is struck with the universe, a small percentage of their magic started to seep trough<icon>Infantry</><icon>Magic</>",
+        "name": "Awakened One",
+        "desc": "With their power starting to leak out, they are able to do feats of great mastery and skill. <icon>Infantry</><icon>Magic</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Mage_Male",
+        "promotes_from": "Pro_T1",
         "turns_into": [
             "Pro_T3"
         ],
@@ -85331,7 +85505,7 @@
             ],
             [
                 15,
-                "AirB"
+                "WaterB"
             ],
             [
                 1,
@@ -85406,7 +85580,7 @@
     },
     {
         "nid": "Pro_T3",
-        "name": "Unchained One",
+        "name": "Unleashed One",
         "desc": "Completely unburdened by common sense, they can use 0.2% of their full might, anything more and the universe will collapse<icon>Infantry</><icon>Magic</>",
         "tier": 3,
         "movement_group": "Light Foot",
@@ -85488,10 +85662,6 @@
             ],
             [
                 15,
-                "SupremeMasteryofCombat"
-            ],
-            [
-                25,
                 "SupremeMasteryofMagic"
             ]
         ],
@@ -85817,7 +85987,7 @@
             "Sword": [
                 true,
                 120,
-                null
+                360
             ],
             "Lance": [
                 false,
@@ -85827,7 +85997,7 @@
             "Axe": [
                 true,
                 60,
-                null
+                360
             ],
             "Bow": [
                 false,
@@ -102694,7 +102864,7 @@
             "Sword": [
                 true,
                 0,
-                300
+                360
             ],
             "Lance": [
                 false,
@@ -107916,7 +108086,7 @@
         "desc": "Brave brawler with major weapons is his body. <icon>Monster</><icon>Infantry</>",
         "tier": 2,
         "movement_group": "Regular",
-        "promotes_from": "Dummy_T1",
+        "promotes_from": "Fighter",
         "turns_into": [
             "Myth_Forger"
         ],
@@ -108229,7 +108399,7 @@
         "desc": "Soldier who fights on the front line in the future millennium using firearms. <icon>Infantry</>",
         "tier": 2,
         "movement_group": "Light Foot",
-        "promotes_from": "Dummy_T1",
+        "promotes_from": "Archer",
         "turns_into": [
             "Arbitres"
         ],
@@ -117615,7 +117785,7 @@
             ],
             [
                 15,
-                "Astra"
+                "Astra_Art"
             ],
             [
                 1,
@@ -118792,6 +118962,423 @@
         ],
         "map_sprite_nid": "Malig Knight (M) Axe {Pikmin}-stand",
         "combat_anim_nid": "T3_Malig_Healer",
+        "fields": []
+    },
+    {
+        "nid": "Blighted_Magus",
+        "name": "Blighted Magus",
+        "desc": "An experienced mage that was weakened by a curse.\n<icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "tier": 1,
+        "movement_group": "Mages",
+        "promotes_from": null,
+        "turns_into": [
+            "Twilight_Sage"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 40,
+            "STR": 6,
+            "MAG": 16,
+            "SKL": 14,
+            "SPD": 12,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 14,
+            "CON": 7,
+            "MOV": 5
+        },
+        "growths": {
+            "HP": 100,
+            "STR": 5,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 55,
+            "DEF": 35,
+            "RES": 90
+        },
+        "growth_bonus": {},
+        "promotion": {},
+        "max_stats": {
+            "HP": 240,
+            "STR": 40,
+            "MAG": 40,
+            "SKL": 40,
+            "SPD": 40,
+            "LCK": 0,
+            "DEF": 40,
+            "RES": 40,
+            "CON": 40,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Cleric_Pair_Up_hide"
+            ],
+            [
+                5,
+                "Superior_Barrier"
+            ],
+            [
+                15,
+                "Magus_Protection"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                1,
+                240
+            ],
+            "Light": [
+                true,
+                1,
+                240
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Cleric",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Cleric",
+        "combat_anim_nid": "Bishop_V2",
+        "fields": []
+    },
+    {
+        "nid": "Twilight_Sage",
+        "name": "Twilight Sage",
+        "desc": "Eclipso has learned to use the darkness of his curse to improve his magic to a new level. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "tier": 2,
+        "movement_group": "Mages",
+        "promotes_from": "Blighted_Magus",
+        "turns_into": [
+            "Arbiter_of_Twilight"
+        ],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 20,
+        "bases": {
+            "HP": 40,
+            "STR": 6,
+            "MAG": 16,
+            "SKL": 14,
+            "SPD": 12,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 14,
+            "CON": 7,
+            "MOV": 6
+        },
+        "growths": {
+            "HP": 100,
+            "STR": 5,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 55,
+            "DEF": 35,
+            "RES": 90
+        },
+        "growth_bonus": {
+            "HP": 30,
+            "MAG": 30,
+            "SKL": 10,
+            "SPD": 5,
+            "DEF": 10,
+            "RES": 20
+        },
+        "promotion": {
+            "HP": 7,
+            "MAG": 5,
+            "SKL": 3,
+            "SPD": 1,
+            "DEF": 2,
+            "RES": 3,
+            "CON": 4
+        },
+        "max_stats": {
+            "HP": 480,
+            "STR": 60,
+            "MAG": 75,
+            "SKL": 70,
+            "SPD": 66,
+            "LCK": 0,
+            "DEF": 63,
+            "RES": 75,
+            "CON": 50,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Monk_Pair_Up_T2_hide"
+            ],
+            [
+                5,
+                "Magical_Leadership"
+            ],
+            [
+                15,
+                "Supportive_Momentum"
+            ],
+            [
+                15,
+                "Supportive_Momentum_Refresh"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                60,
+                360
+            ],
+            "Light": [
+                true,
+                60,
+                360
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sage",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "Sage",
+        "combat_anim_nid": "Sage_Saleh",
+        "fields": []
+    },
+    {
+        "nid": "Arbiter_of_Twilight",
+        "name": "Arbiter of Twilight",
+        "desc": "Eclipso has achieved true balance of Light and Dark. <icon>Infantry</><icon>Magic</><icon>Staff</>",
+        "tier": 3,
+        "movement_group": "Mages",
+        "promotes_from": "Twilight_Sage",
+        "turns_into": [],
+        "tags": [
+            "AutoPromote",
+            "Support",
+            "Infantry",
+            "Magic"
+        ],
+        "max_level": 30,
+        "bases": {
+            "HP": 40,
+            "STR": 6,
+            "MAG": 16,
+            "SKL": 14,
+            "SPD": 12,
+            "LCK": 0,
+            "DEF": 6,
+            "RES": 14,
+            "CON": 7,
+            "MOV": 8
+        },
+        "growths": {
+            "HP": 100,
+            "STR": 5,
+            "MAG": 60,
+            "SKL": 70,
+            "SPD": 55,
+            "DEF": 35,
+            "RES": 90
+        },
+        "growth_bonus": {
+            "HP": 130,
+            "MAG": 140,
+            "SKL": 100,
+            "SPD": 60,
+            "DEF": 60,
+            "RES": 200,
+            "LCK": 100,
+            "STR": 20
+        },
+        "promotion": {
+            "HP": 14,
+            "MAG": 7,
+            "SKL": 5,
+            "SPD": 4,
+            "DEF": 3,
+            "RES": 5,
+            "CON": 5,
+            "STR": 2,
+            "LCK": 40
+        },
+        "max_stats": {
+            "HP": 640,
+            "STR": 80,
+            "MAG": 100,
+            "SKL": 100,
+            "SPD": 90,
+            "LCK": 80,
+            "DEF": 90,
+            "RES": 100,
+            "CON": 60,
+            "MOV": 15
+        },
+        "learned_skills": [
+            [
+                1,
+                "Monk_Pair_Up_T3_hide"
+            ],
+            [
+                5,
+                "Magic_Barrage_Art"
+            ],
+            [
+                15,
+                "Ultimate_Blessing"
+            ]
+        ],
+        "wexp_gain": {
+            "Sword": [
+                false,
+                0,
+                null
+            ],
+            "Lance": [
+                false,
+                0,
+                null
+            ],
+            "Axe": [
+                false,
+                0,
+                null
+            ],
+            "Bow": [
+                false,
+                0,
+                null
+            ],
+            "Staff": [
+                true,
+                60,
+                480
+            ],
+            "Light": [
+                true,
+                60,
+                480
+            ],
+            "Anima": [
+                false,
+                0,
+                null
+            ],
+            "Dark": [
+                false,
+                0,
+                null
+            ],
+            "Default": [
+                false,
+                0,
+                null
+            ],
+            "Monster": [
+                false,
+                0,
+                null
+            ]
+        },
+        "icon_nid": "Generic_Portrait_Sage",
+        "icon_index": [
+            0,
+            0
+        ],
+        "map_sprite_nid": "T3_Male_Hi_Magus",
+        "combat_anim_nid": "T3_Male_Hi_Magus",
         "fields": []
     }
 ]
