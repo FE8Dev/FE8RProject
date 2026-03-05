@@ -2,7 +2,7 @@
     {
         "nid": "Mani_Katti",
         "name": "Mani Katti",
-        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</>Flash Step, Triangle Expert, Mani Katti.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), ignores half of enemy's defense, also acts like a Dark weapon.",
+        "desc": "Divine sword weilded by Lyn, brother of Sol Katti.\n<green>Skills:</><icon>FSX/> Triangle Expert, Mani Katti. <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>), ignores half of enemy's defense, also acts like a Dark weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -54,17 +54,13 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Lyn\").wexp['Sword'] >= 480"
-            ],
-            [
                 "double_triangle",
                 null
             ],
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step_E",
+                    "Flash_Step_X",
                     "Mani_Skill",
                     "Luna_Lyn",
                     "Lyn_Dark_Sword",
@@ -87,12 +83,19 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E",
-                    "Mani_Skill",
-                    "Luna_Lyn",
-                    "Lyn_Dark_Sword",
+                    "Flash_Step_X",
                     "Triangle_Expert_Item",
+                    "Mani_Skill",
                     "Shadow_Blight"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
                 ]
             ]
         ]

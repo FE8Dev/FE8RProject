@@ -2,7 +2,7 @@
     {
         "nid": "Short_Sword",
         "name": "Short Sword",
-        "desc": "Light and accurated sword.\n<green>Skills:</>Flash Step\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
+        "desc": "Light and accurated sword.\n<green>Skills:</><icon>FSE/>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>).",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             0,
@@ -54,10 +54,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Lyn\").wexp['Sword'] < 120"
-            ],
-            [
                 "status_on_equip",
                 "Flash_Step_E"
             ],
@@ -69,6 +65,15 @@
                 "multi_desc_skill",
                 [
                     "Flash_Step_E"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
                 ]
             ]
         ]

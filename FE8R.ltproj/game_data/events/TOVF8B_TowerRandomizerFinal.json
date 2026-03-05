@@ -73,6 +73,7 @@
             "        $give_item str(i) random.choice(swords),no_banner",
             "    elif selected_item1==\"Demon_Surge\":",
             "        if random.randint(1,10)<2:",
+            "            $give_wexp str(i) \"Dark\" 240,no_banner",
             "            $give_item str(i) \"Shadowshot\",no_banner",
             "        ",
             "    if i == bossunit:",

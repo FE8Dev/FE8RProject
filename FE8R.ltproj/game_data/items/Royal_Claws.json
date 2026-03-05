@@ -2,7 +2,7 @@
     {
         "nid": "Royal_Claws",
         "name": "Royal Claws",
-        "desc": "The claws of a champion.\n<violet>Inflicts:</>Breach (25), Curse (25)\n<pink>Misc:</>+16/+16 DEF/RES on Equip, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
+        "desc": "The claws of a champion.\n<violet>Inflicts:</><icon>Skills 6, 4</>(-25)<icon>Curse</>(-25)\n<pink>Misc:</> MAG + SPD (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +16 DEF/RES on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             3,
@@ -62,10 +62,6 @@
                 [
                     "Scintilla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Scintilla\").wexp['Monster'] >= 480"
             ],
             [
                 "statuses_on_hit",

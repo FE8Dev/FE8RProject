@@ -1,0 +1,22 @@
+[
+    {
+        "nid": "Bosskiller",
+        "name": "Bosskiller <icon>Target</>",
+        "desc": "Deals 50% more Damage to Bosses.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            14
+        ],
+        "components": [
+            [
+                "damage_multiplier",
+                1.5
+            ],
+            [
+                "combat_condition",
+                "'Boss' in unit.tags"
+            ]
+        ]
+    }
+]

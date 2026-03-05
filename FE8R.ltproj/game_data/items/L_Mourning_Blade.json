@@ -2,7 +2,7 @@
     {
         "nid": "L_Mourning_Blade",
         "name": "Mourning Blade",
-        "desc": "A blade of darkness and regret.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2), Crippled\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, Cleaves, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "A blade of darkness and regret.\n<green>Skills:</><icon>skill_icons 7, 24</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2)<icon>Heavy</>\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + MAG/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets enemy's RES.",
         "icon_nid": "New Monsters",
         "icon_index": [
             6,
@@ -97,10 +97,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lindsey\").wexp['Sword'] < 120"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -127,7 +123,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
+                    "Heavy",
+                    "Cleaves",
                     "Shadow_Blight",
                     "Cursed_2",
                     "Crippled"

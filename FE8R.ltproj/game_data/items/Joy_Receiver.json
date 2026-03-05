@@ -2,7 +2,7 @@
     {
         "nid": "Joy_Receiver",
         "name": "Joy Receiver",
-        "desc": "A relatively lightweight sword that gleefully sings while swung, with a thrum of lightning in its blade.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</> SPD + STR/2 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
+        "desc": "A relatively lightweight sword that gleefully sings while swung, with a thrum of lightning in its blade.\n<green>Skills:</><icon>FSC</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</>\n<pink>Misc:</> SPD + STR/2 (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')//2))}</>)",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             8,
@@ -56,12 +56,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_C"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cucara\").wexp['Sword'] >= 120 and u(\"Cucara\").wexp['Sword'] < 360"
             ],
             [
                 "wexp",
@@ -99,7 +95,16 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_C"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
                 ]
             ]
         ]

@@ -2,7 +2,7 @@
     {
         "nid": "Pitch_Black_Embrace",
         "name": "Pitch Black Embrace",
-        "desc": "An ebony breath that feels like a beautiful night.\n<green>Skills:</>Renewal+\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (25)\n<pink>Misc:</>RES + DEF (<red>{e:(unit.get_stat('RES') + (unit.get_stat('DEF')))}</>), Brave.",
+        "desc": "An ebony breath that feels like a beautiful night.\n<green>Skills:</>Renewal+ <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-25)\n<pink>Misc:</>RES + DEF (<red>{e:(unit.get_stat('RES') + (unit.get_stat('DEF')))}</>), Brave.",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             1,
@@ -85,10 +85,6 @@
                 [
                     "Tareon"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tareon\").wexp['Monster'] >= 480"
             ],
             [
                 "item_tags",

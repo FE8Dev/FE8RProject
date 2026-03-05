@@ -2,7 +2,7 @@
     {
         "nid": "Sage_Breath",
         "name": "Sage Breath",
-        "desc": "The breath of one who found one's true self.\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "desc": "The breath of one who found one's true self.\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-15)\n<pink>Misc:</>MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Moze Weapons",
         "icon_index": [
             8,
@@ -61,7 +61,7 @@
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Cursed_8"
+                    "Cursed_15"
                 ]
             ],
             [
@@ -83,10 +83,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moze\").wexp['Monster'] >= 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Dark"
@@ -100,7 +96,7 @@
                 "multi_desc_skill",
                 [
                     "Shadow_Blight",
-                    "Cursed_8"
+                    "Cursed_15"
                 ]
             ]
         ]

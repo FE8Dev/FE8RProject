@@ -2,7 +2,7 @@
     {
         "nid": "Power_Chop_A",
         "name": "Power Chop A <icon>PCA</>",
-        "desc": "Attacks add 30% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-8) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 20% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-8) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             3,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "dynamic_damage",
-                "target.get_hp() * 0.3"
+                "target.get_hp() * 0.2"
             ]
         ]
     }

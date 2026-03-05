@@ -3,7 +3,7 @@
         "name": "Tethered_Remove",
         "trigger": "unit_death",
         "level_nid": null,
-        "condition": "'Summon' in unit.tags",
+        "condition": "has_skill(unit, 'Dark_Wisdom_Minion')",
         "commands": [],
         "only_once": false,
         "priority": 20,

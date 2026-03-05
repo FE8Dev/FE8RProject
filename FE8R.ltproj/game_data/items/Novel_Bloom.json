@@ -2,7 +2,7 @@
     {
         "nid": "Novel_Bloom",
         "name": "Novel Bloom",
-        "desc": "A simple village axe that has experienced struggle and gotten sharper.\n<green>Skills:</>Power Chop (A), Improved Speed Swing\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
+        "desc": "A simple village axe that has experienced struggle and gotten sharper.\n<green>Skills:</><icon>skill_icons 6, 39</>(+)<icon>PCA</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//2))}</>).",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             2,
@@ -59,10 +59,6 @@
                     "Improved_Speed_Swing",
                     "Power_Chop_A"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cucara\").wexp['Axe'] >= 240 and u(\"Cucara\").wexp['Axe'] < 420"
             ],
             [
                 "wexp",

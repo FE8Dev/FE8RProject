@@ -2,7 +2,7 @@
     {
         "nid": "Dragon_Head",
         "name": "Dragon Head",
-        "desc": "An axe forged with the skull of a legendary devil dragon.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Rock Punture</>\n<red>Effective:</><icon>Armor</><icon>Magic</>\n<pink>Misc:</>STR x2  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR')))}</>).",
+        "desc": "An axe forged with the skull of a legendary devil dragon.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Earth</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-15) <icon>Rock Punture</> <red>Effective:</><icon>Armor</><icon>Magic</>\n<pink>Misc:</>STR x2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('STR')))}</>).",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             3,
@@ -62,10 +62,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Atlas\").wexp['Sword'] >= 360"
-            ],
-            [
                 "weapon_type_exempt",
                 "Axe"
             ],
@@ -86,7 +82,8 @@
                 "statuses_on_hit",
                 [
                     "Shadow_Blight",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Cursed_15"
                 ]
             ],
             [
@@ -110,6 +107,7 @@
                     "Power_Chop_SS",
                     "Breached_25",
                     "Shadow_Blight",
+                    "Cursed_15",
                     "Rock_Punctures"
                 ]
             ]

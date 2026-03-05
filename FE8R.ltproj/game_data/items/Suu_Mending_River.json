@@ -2,7 +2,7 @@
     {
         "nid": "Suu_Mending_River",
         "name": "Mending River",
-        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>Boosts def of ally for 1 turn.",
+        "desc": "Restores HP equal user's MAG + MOV.\n<pink>Misc:</>Boosts DEF of ally for 1 turn.",
         "icon_nid": "New Monsters",
         "icon_index": [
             0,
@@ -66,10 +66,6 @@
                 [
                     "Suu"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Suu\").wexp['Staff'] >= 120 and u(\"Suu\").wexp['Staff'] < 240"
             ],
             [
                 "status_on_hit",

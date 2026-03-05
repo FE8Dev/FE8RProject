@@ -2,7 +2,7 @@
     {
         "nid": "Anointed_Daggers",
         "name": "Anointed Daggers",
-        "desc": "Ritual razors consecrated between blood and rust, for eternity.\n<green>Skills:</>Quick Knife\n<violet>Inflicts:</><icon>Venom</>x1\n<pink>Misc:</>SPD+ SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//3}</>), HP Absorb (10%),+20 Crit damage.",
+        "desc": "Ritual razors consecrated between blood and rust, for eternity.\n<green>Skills:</><icon>skill_icons 6, 29</>\n<violet>Inflicts:</><icon>Venom</>x1\n<pink>Misc:</><icon>skill_icons 3, 13</> SPD+ SKL/3 (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))//3}</>), HP Absorb (10%).",
         "icon_nid": "{SacredStones} Item 006 Spy s Dagger",
         "icon_index": [
             0,
@@ -64,8 +64,7 @@
             [
                 "statuses_on_hit",
                 [
-                    "Venomous_Effect",
-                    "Delete_Please"
+                    "Venomous_Effect"
                 ]
             ],
             [
@@ -97,15 +96,11 @@
                 0.1
             ],
             [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 180 and u(\"Jaffar\").wexp['Sword'] < 300"
-            ],
-            [
                 "multi_desc_skill",
                 [
                     "Quick_Knife",
                     "Venomous_Effect",
-                    "Delete_Please"
+                    "Crit_Damage_Bonus_20_hide"
                 ]
             ]
         ]

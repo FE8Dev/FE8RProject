@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Bow_SS",
         "name": "Remodeled Bow",
-        "desc": "Scraping off most gold results in a stronger weapon, even if it looks this bad.\n<green>Skills:</>Mug\n<red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</>SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>), targets the weaker of foe's DEF or RES, Brave, +1 Bonus attack.",
+        "desc": "Scraping off most gold results in a stronger weapon, even if it looks this bad.\n<green>Skills:</>Rob <red>Effective:</><icon>Flying</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</>(AOE:3)\n<pink>Misc:</><icon>skill_icons 10, 39</> SKL + SPD (<red>{e:(unit.get_stat('SKL') + (unit.get_stat('SPD'))}</>), Brave, +1 Bonus attack.",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             9,
@@ -94,10 +94,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Diana\").wexp['Bow'] >= 360 and u(\"Diana\").wexp['Bow'] < 480"
-            ],
-            [
                 "prf_unit",
                 [
                     "Diana"
@@ -130,7 +126,9 @@
                 [
                     "Poaching",
                     "Rob",
-                    "Rock_Punctures"
+                    "Rock_Punctures",
+                    "Kaminari",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

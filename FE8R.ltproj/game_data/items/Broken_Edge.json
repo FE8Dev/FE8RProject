@@ -2,7 +2,7 @@
     {
         "nid": "Broken_Edge",
         "name": "Broken Edge",
-        "desc": "An edge of a broken sword when failing a mission.\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), triple WEXP gain.",
+        "desc": "An edge of a broken sword when failing a mission.\n<green>Skills:</><icon>FSE/>\n<pink>Misc:</>STR + SKL/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>), triple WEXP gain.",
         "icon_nid": "{Batima} Broken Sword",
         "icon_index": [
             0,
@@ -72,8 +72,23 @@
                 3
             ],
             [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] < 120"
+                "status_on_equip",
+                "Flash_Step_E"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Flash_Step_E"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
+                ]
             ]
         ]
     }

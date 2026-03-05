@@ -2,7 +2,7 @@
     {
         "nid": "Ballista",
         "name": "Ballista",
-        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Siege</> STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>), Unstealable.",
+        "desc": "A long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Siege</> STR + SKL + CON*1.5 (<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + round(unit.get_stat('CON')*1.5))}</>), Unstealable.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -69,6 +69,7 @@
                     "T2_Armored_Blaster",
                     "T3_Expert_Blaster",
                     "T3_Tank",
+                    "Bael_lista",
                     "T3_Catapult",
                     "T2_Ballista_Innes",
                     "T2_Ballista_Neimi",

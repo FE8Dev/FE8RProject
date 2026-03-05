@@ -2,7 +2,7 @@
     {
         "nid": "Wind_Spear",
         "name": "Wind Spear",
-        "desc": "A spear made for reach and agility. Arno says the scarf tied to it makes it more aerodynamic. \n<green>Skills:</>Lance Guard (C)\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Uses SPD, targets RES, +25 Avoid/Dodge.",
+        "desc": "A spear made for reach and agility. Arno says the scarf tied to it makes it more aerodynamic. \n<green>Skills:</><icon>LGC</> <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 4, 11</> Uses SPD for damage, targets RES.",
         "icon_nid": "Lance",
         "icon_index": [
             0,
@@ -57,7 +57,7 @@
                 "multi_status_on_equip",
                 [
                     "Lance_Guard_C",
-                    "Avo_Ddg_15"
+                    "Fog_Sword_Effect_Mid"
                 ]
             ],
             [
@@ -79,10 +79,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Arno\").wexp['Lance'] >= 120 and u(\"Arno\").wexp['Lance'] < 240"
-            ],
-            [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
             ],
@@ -90,7 +86,7 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_C",
-                    "Avo_Ddg_15"
+                    "Fog_Sword_Effect_Mid"
                 ]
             ]
         ]

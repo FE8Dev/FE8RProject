@@ -2,7 +2,7 @@
     {
         "nid": "Azrael_Sword",
         "name": "Azrael Sword",
-        "desc": "Divine sword of the angel of the death, it can kill with a single scratch.\n<green>Skills:</>Maker's End\n<violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</>Uses SPD + SKL + STR (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>), +50 Crit damage.",
+        "desc": "Divine sword of the angel of the death, it can kill with a single scratch.\n<green>Skills:</><icon>FSX</> Consecutive Impact <violet>Inflicts:</><icon>Poison</>x5\n<pink>Misc:</><icon>skill_icons 6, 13</> SPD + SKL + STR (<red>{e:(unit.get_stat('STR') + unit.get_stat('SPD') + unit.get_stat('SKL'))}</>).",
         "icon_nid": "{Batima} Sublime Sword of the Creator",
         "icon_index": [
             0,
@@ -75,13 +75,9 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_100_hide",
-                    "Maker_End",
-                    "Consecutive_Impact"
+                    "Consecutive_Impact",
+                    "Flash_Step_X"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 480"
             ],
             [
                 "statuses_on_hit",
@@ -96,9 +92,19 @@
             [
                 "multi_desc_skill",
                 [
-                    "Maker_End",
+                    "Flash_Step_X",
                     "Consecutive_Impact",
-                    "Venomous_Effect"
+                    "Venomous_Effect",
+                    "Crit_Damage_Bonus_100_hide"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        15
+                    ]
                 ]
             ]
         ]

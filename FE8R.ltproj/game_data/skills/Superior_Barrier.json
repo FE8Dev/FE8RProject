@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Superior_Barrier",
+        "name": "Superior Barrier",
+        "desc": "Reduce damage this unit takes by MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>) when being attacked.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            36
+        ],
+        "components": [
+            [
+                "combat_condition",
+                "mode =='defense'"
+            ],
+            [
+                "dynamic_resist",
+                "unit.get_stat('MAG')+ (unit.get_stat('RES')//2)"
+            ],
+            [
+                "class_skill",
+                null
+            ]
+        ]
+    }
+]

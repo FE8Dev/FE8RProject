@@ -2,7 +2,7 @@
     {
         "nid": "Runecarbide_Claws",
         "name": "Rune Carbide Claws",
-        "desc": "Claws enchanted with protection magic.\n<violet>Inflicts:</>Breach (8), Curse (8)\n<pink>Misc:</>+9/+9 DEF/RES on Equip, MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>).",
+        "desc": "Claws enchanted with protection magic.\n<violet>Inflicts:</><icon>Skills 6, 4</>(-8)<icon>Curse</>(-8)\n<pink>Misc:</> MAG + SPD (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +9 DEF/RES on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -62,10 +62,6 @@
                 [
                     "Scintilla"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Scintilla\").wexp['Monster'] >= 240 and u(\"Scintilla\").wexp['Monster'] < 480"
             ],
             [
                 "statuses_on_hit",

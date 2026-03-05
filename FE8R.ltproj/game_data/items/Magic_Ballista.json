@@ -2,7 +2,7 @@
     {
         "nid": "Magic_Ballista",
         "name": "Magic Ballista",
-        "desc": "A magical long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Siege</> MAG + SKL + CON*1.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + unit.get_stat('CON')*1.5)}</>), Unstealable.",
+        "desc": "A magical long-range siege weapon.\n<red>Effective:</><icon>Flying</>\n<pink>Misc:</><icon>Siege</> MAG + SKL + CON*1.5 (<red>{e:(unit.get_stat('MAG') + unit.get_stat('SKL') + round(unit.get_stat('CON')*1.5))}</>), Unstealable.",
         "icon_nid": "Bow",
         "icon_index": [
             0,
@@ -70,6 +70,7 @@
                     "T3_Expert_Blaster",
                     "T3_Tank",
                     "T3_Catapult",
+                    "Bael_lista",
                     "T2_Ballista_Innes",
                     "T2_Ballista_Neimi",
                     "T3_Killer_Ballista_Innes",

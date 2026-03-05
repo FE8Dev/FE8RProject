@@ -2,7 +2,7 @@
     {
         "nid": "Nest_Bird",
         "name": "Nest Bird",
-        "desc": "A sharpened woodcutter\u2019s axe given purpose for war.\n<green>Skills:</>Power Chop (C), Speed Swing\n<pink>Misc:</>STR + SPD/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>).",
+        "desc": "A sharpened woodcutter's axe given purpose for war.\n<green>Skills:</><icon>skill_icons 6, 39</><icon>PCC</>\n<pink>Misc:</>STR + SPD/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')//3))}</>).",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             1,
@@ -59,10 +59,6 @@
                     "Speed_Swing",
                     "Power_Chop_C"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cucara\").wexp['Axe'] >= 120 and u(\"Cucara\").wexp['Axe'] < 240"
             ],
             [
                 "wexp",

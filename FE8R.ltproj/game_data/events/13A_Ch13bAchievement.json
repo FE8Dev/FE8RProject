@@ -3,7 +3,7 @@
         "name": "Ch13bAchievement",
         "trigger": "unit_wait",
         "level_nid": "13A",
-        "condition": "region.nid == 'TopNWFort'",
+        "condition": "region.nid == 'TopNWFort' and unit.team == 'player'",
         "commands": [],
         "only_once": true,
         "priority": 20,

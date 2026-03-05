@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Sword_B",
         "name": "Polished Estoc",
-        "desc": "Thin and long sword made for fencing, polished to perfection.\n<green>Skills:</>Flash Step, Luckblade\n<pink>Misc:</>Uses LCK instead of STR, targets LCK, +3 SPD, attacks inflict a random debuff onto enemy.",
+        "desc": "Thin and long sword made for fencing, polished to perfection.\n<green>Skills:</><icon>FSC</> Luckblade\n<pink>Misc:</>Uses LCK instead of STR, targets LCK.",
         "icon_nid": "Sword",
         "icon_index": [
             0,
@@ -85,10 +85,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Diana\").wexp['Sword'] >= 180 and u(\"Diana\").wexp['Sword'] < 300"
-            ],
-            [
                 "alternate_damage_formula",
                 "LUCK_PROC"
             ],
@@ -109,8 +105,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Luckblade1",
-                    "Flash_Step_E"
+                    "Flash_Step_C",
+                    "Luckblade1"
                 ]
             ]
         ]

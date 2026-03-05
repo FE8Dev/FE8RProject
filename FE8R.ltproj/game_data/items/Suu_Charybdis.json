@@ -1,8 +1,8 @@
 [
     {
         "nid": "Suu_Charybdis",
-        "name": "Charybdis",
-        "desc": "A spell that invokes the whirlpools of the mythical sea monster. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (60%), cannot DS, MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), (Multi-target:6).",
+        "name": "Slime Charybdis",
+        "desc": "A spell that invokes the whirlpools of the mythical sea slime. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>ASX</><icon>Target</> (<blue>6</>) MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             8,
@@ -130,14 +130,11 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Suu\").wexp['Anima'] >= 480"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Seawalk",
-                    "Drench"
+                    "Drench",
+                    "AnimaSplash_X",
+                    "Multi_Target_Description"
                 ]
             ]
         ]

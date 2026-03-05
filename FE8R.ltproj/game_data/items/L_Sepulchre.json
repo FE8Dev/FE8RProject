@@ -2,7 +2,7 @@
     {
         "nid": "L_Sepulchre",
         "name": "Sepulchre",
-        "desc": "A monument of what was.\n<green>Skills:</>Aggravator\n<orange>Element:</><icon>Dark</> <violet>Inflicts:</><icon>Shadowblight</>, Curse (8), Crippled+\n<red>Effective:</><icon>Frozen</> <pink>Misc:</>Heavy, Cleaves, +10 DEF, STR + MAG/3 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//3))}</>), targets RES.",
+        "desc": "A monument of what was.\n<green>Skills:</><icon>skill_icons 7, 24</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-8)<icon>Heavy</>(+)\n<pink>Misc:</><icon>Heavy</><icon>Cleave</> STR + MAG/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')//2))}</>), targets enemy's RES, +10 DEF.",
         "icon_nid": "New Monsters",
         "icon_index": [
             8,
@@ -98,10 +98,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lindsey\").wexp['Sword'] >= 240 and u(\"Lindsey\").wexp['Sword']  < 420"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -137,7 +133,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Blade_Vantage_Effect",
+                    "Heavy",
+                    "Cleaves",
                     "Aggravator",
                     "Shadow_Blight",
                     "Cursed_8",

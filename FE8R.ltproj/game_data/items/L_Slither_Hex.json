@@ -2,7 +2,7 @@
     {
         "nid": "L_Slither_Hex",
         "name": "Slither Hex",
-        "desc": "A spell that helps one hide.\n<green>Skills:</>Slither, Ancient Pact (E)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (2)",
+        "desc": "A spell that helps one hide.\n<green>Skills:</><icon>APE</><icon>skill_icons 10, 44</> <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2)",
         "icon_nid": "New Monsters",
         "icon_index": [
             2,
@@ -64,10 +64,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lindsey\").wexp['Dark'] < 120"
-            ],
-            [
                 "wexp",
                 1
             ],
@@ -100,8 +96,8 @@
                 [
                     "Slither",
                     "Ancient_Pact_E",
-                    "Cursed_2",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_2"
                 ]
             ]
         ]

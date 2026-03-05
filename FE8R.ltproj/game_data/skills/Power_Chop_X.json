@@ -2,7 +2,7 @@
     {
         "nid": "Power_Chop_X",
         "name": "Power Chop 5 <icon>PCX</>",
-        "desc": "Attacks add 50% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-25) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 30% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-25) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             5,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "dynamic_damage",
-                "target.get_hp() * 0.5"
+                "target.get_hp() * 0.3"
             ]
         ]
     }

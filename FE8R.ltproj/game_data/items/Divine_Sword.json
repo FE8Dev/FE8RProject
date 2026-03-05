@@ -2,7 +2,7 @@
     {
         "nid": "Divine_Sword",
         "name": "Divine Sword",
-        "desc": "A divine sword made to purge devil forces.\n<green>Skills:</>Flash Step, Slayer\n<orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</>MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), +40 Crit damage, also acts like Light weapon.",
+        "desc": "A divine sword made to purge devil forces.\n<green>Skills:</><icon>FSSS/> Slayer <orange>Element:</><icon>Light</>\n<red>Very Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</> MAG + SPD (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SPD')))}</>), Acts like Light weapon.",
         "icon_nid": "lyn_weapons",
         "icon_index": [
             1,
@@ -54,10 +54,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Lyn\").wexp['Sword'] >= 360 and u(\"Lyn\").wexp['Sword'] < 480"
-            ],
-            [
                 "item_tags",
                 [
                     "Light"
@@ -75,12 +71,11 @@
                 "effective_damage",
                 {
                     "effective_tags": [
-                        "Dark",
                         "Shadow",
                         "Monster"
                     ],
                     "effective_multiplier": 3,
-                    "effective_bonus_damage": 5,
+                    "effective_bonus_damage": 32,
                     "show_effectiveness_flash": true,
                     "weapon_effectiveness_multiplied": true
                 }
@@ -89,7 +84,7 @@
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_50_hide",
-                    "Flash_Step_E",
+                    "Flash_Step_SS",
                     "Lyn_Light_Sword"
                 ]
             ],
@@ -104,8 +99,18 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E",
-                    "Lyn_Light_Sword"
+                    "Flash_Step_SS",
+                    "Slayer",
+                    "Crit_Damage_Bonus_50_hide"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

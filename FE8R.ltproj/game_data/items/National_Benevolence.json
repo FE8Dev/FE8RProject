@@ -2,7 +2,7 @@
     {
         "nid": "National_Benevolence",
         "name": "National Benevolence",
-        "desc": "An axe that transcends its mundane origins, wielding a melody granted by friends met in adolescence.\n<green>Skills:</>Power Chop (X), Superior Speed Swing\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
+        "desc": "An axe that transcends its mundane origins, wielding a melody granted by friends met in adolescence.\n<green>Skills:</><icon>skill_icons 6, 39</>(++)<icon>PCX</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>STR + SPD (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SPD')))}</>).",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             4,
@@ -59,10 +59,6 @@
                     "Superior_Speed_Swing",
                     "Power_Chop_X"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Cucara\").wexp['Axe'] >= 480"
             ],
             [
                 "wexp",

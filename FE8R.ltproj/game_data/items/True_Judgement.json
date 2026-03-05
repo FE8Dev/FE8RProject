@@ -1,0 +1,147 @@
+[
+    {
+        "nid": "True_Judgement",
+        "name": "True Judgement",
+        "desc": "Light and Dark in true balance.\n<green>Skills:</><icon>APX</><icon>Target</>\n<orange>Element:</><icon>Light</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Stun</>\n<red>Effective:</><icon>Frozen</><icon>Monster</><icon>Shadowblight</><icon>Dragon</>\n<pink>Misc:</><icon>Heavy</><icon>skill_icons 13, 51</> MAG + RES (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')))}</>).",
+        "icon_nid": "Eclipso Icons",
+        "icon_index": [
+            9,
+            0
+        ],
+        "components": [
+            [
+                "weapon",
+                null
+            ],
+            [
+                "target_enemy",
+                null
+            ],
+            [
+                "min_range",
+                1
+            ],
+            [
+                "max_range",
+                3
+            ],
+            [
+                "damage",
+                50
+            ],
+            [
+                "hit",
+                120
+            ],
+            [
+                "crit",
+                20
+            ],
+            [
+                "weight",
+                14
+            ],
+            [
+                "level_exp",
+                null
+            ],
+            [
+                "weapon_type",
+                "Light"
+            ],
+            [
+                "weapon_rank",
+                "X"
+            ],
+            [
+                "magic",
+                null
+            ],
+            [
+                "item_tags",
+                [
+                    "Light",
+                    "Dark"
+                ]
+            ],
+            [
+                "unstealable",
+                null
+            ],
+            [
+                "battle_cast_anim",
+                "Aureola"
+            ],
+            [
+                "ignore_line_of_sight",
+                null
+            ],
+            [
+                "prf_unit",
+                [
+                    "Eclipso"
+                ]
+            ],
+            [
+                "effective_damage",
+                {
+                    "effective_tags": [
+                        "Monster",
+                        "Shadow",
+                        "Frozen",
+                        "Dragon"
+                    ],
+                    "effective_multiplier": 3,
+                    "effective_bonus_damage": 0,
+                    "show_effectiveness_flash": true,
+                    "weapon_effectiveness_multiplied": true
+                }
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Ancient_Pact_X",
+                    "Bosskiller_Plus"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Stun",
+                    "Shadow_Blight"
+                ]
+            ],
+            [
+                "wexp",
+                3
+            ],
+            [
+                "alternate_damage_formula",
+                "MAG_RES_STRONG"
+            ],
+            [
+                "multi_desc_skill",
+                [
+                    "Ancient_Pact_X",
+                    "Shadow_Blight",
+                    "Stun",
+                    "Heavy",
+                    "Well_Designed",
+                    "Bosskiller_Plus"
+                ]
+            ],
+            [
+                "shove",
+                1
+            ],
+            [
+                "no_double",
+                null
+            ],
+            [
+                "pre_combat_effect",
+                "Legend"
+            ]
+        ]
+    }
+]

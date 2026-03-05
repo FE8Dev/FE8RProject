@@ -2,7 +2,7 @@
     {
         "nid": "Storm_Wall",
         "name": "Storm Wall",
-        "desc": "A naginata made of Arno's very own wind magic. It shimmers with her resolve.\n<green>Skills:</>Lance Guard (SSS), Cyclonic Downdraft\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Uses SPD, targets lower of SPD or RES, grants +5 SPD, and +50 Avoid/Dodge.",
+        "desc": "A naginata made of Arno's very own wind magic. It shimmers with her resolve.\n<green>Skills:</><icon>LGSS</><icon>skill_icons 15, 48</>(+) <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 5, 11</> Uses SPD for damage, targets lower of SPD or RES, +5 SPD.",
         "icon_nid": "Topazlight_Swordcatcher",
         "icon_index": [
             0,
@@ -84,10 +84,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Arno\").wexp['Lance'] >= 420 and u(\"Arno\").wexp['Lance'] < 480"
-            ],
-            [
                 "alternate_resist_formula",
                 "RES_SPD_MIN"
             ],
@@ -103,9 +99,9 @@
             [
                 "multi_desc_skill",
                 [
-                    "Fog_Sword_Effect_Strong",
                     "Lance_Guard_SS",
-                    "Cyclonic_Downdraft"
+                    "Cyclonic_Downdraft",
+                    "Fog_Sword_Effect_Strong"
                 ]
             ]
         ]

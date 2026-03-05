@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Supportive_Momentum_Refresh",
+        "name": "Supportive Momentum",
+        "desc": "This unit gains Flying Movement. Once per turn when using a support staff, refresh this unit.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            5,
+            37
+        ],
+        "components": [
+            [
+                "hidden",
+                null
+            ],
+            [
+                "charges_per_turn",
+                1
+            ],
+            [
+                "eval_galeforce",
+                "unit2.team == 'player' or unit2.team == 'other'"
+            ]
+        ]
+    }
+]

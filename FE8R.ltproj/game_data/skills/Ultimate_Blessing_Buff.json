@@ -1,0 +1,59 @@
+[
+    {
+        "nid": "Ultimate_Blessing_Buff",
+        "name": "Ultimate Blessing",
+        "desc": "This unit gains boost equal to Eclipso's MAG added to most stats. MAG/10 for CON and MOV.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "time",
+                1
+            ],
+            [
+                "stat_change_expression",
+                [
+                    [
+                        "STR",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "MAG",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "SKL",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "SPD",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "LCK",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "DEF",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "RES",
+                        "game.get_unit('Eclipso').get_stat('MAG')"
+                    ],
+                    [
+                        "CON",
+                        "game.get_unit('Eclipso').get_stat('MAG')//10"
+                    ],
+                    [
+                        "MOV",
+                        "game.get_unit('Eclipso').get_stat('MAG')//10"
+                    ]
+                ]
+            ]
+        ]
+    }
+]

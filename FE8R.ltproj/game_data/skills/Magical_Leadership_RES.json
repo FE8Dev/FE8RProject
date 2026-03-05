@@ -1,0 +1,35 @@
+[
+    {
+        "nid": "Magical_Leadership_RES",
+        "name": "Magical Leadership",
+        "desc": "This unit gains +15 RES.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            14,
+            51
+        ],
+        "components": [
+            [
+                "stat_change",
+                [
+                    [
+                        "RES",
+                        15
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "condition",
+                "not 'Magic' in unit.tags"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    }
+]

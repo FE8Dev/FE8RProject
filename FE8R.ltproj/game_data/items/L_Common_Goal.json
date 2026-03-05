@@ -2,7 +2,7 @@
     {
         "nid": "L_Common_Goal",
         "name": "Common Goal",
-        "desc": "Restores HP equal to half of user's Max HP.\n<pink>Misc:</>(Multi-target:2), +5 STR/MAG to ally after heal.",
+        "desc": "Restores HP equal to half of user's Max HP.\n<pink>Misc:</><icon>Target</> (<blue>2</>), +5 STR/MAG to ally after heal.",
         "icon_nid": "New Monsters",
         "icon_index": [
             4,
@@ -68,10 +68,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lindsey\").wexp['Staff'] >= 360 and u(\"Lindsey\").wexp['Staff'] < 420"
-            ],
-            [
                 "status_on_hit",
                 "Common_Goal"
             ],
@@ -102,7 +98,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Common_Goal"
+                    "Common_Goal",
+                    "Multi_Target_Description"
                 ]
             ]
         ]

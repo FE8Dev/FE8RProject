@@ -2,7 +2,7 @@
     {
         "nid": "Judgement_Roar",
         "name": "Judgement Roar",
-        "desc": "A thunderous blade that roars, granted the familiarity of allies met in childhood.\n<green>Skills:</>Flash Slash\n<orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</><icon>Flying</>\n<pink>Misc:</> SPD + STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>)",
+        "desc": "A thunderous blade that roars, granted the familiarity of allies met in childhood.\n<green>Skills:</><icon>skill_icons 8, 28</> <orange>Element:</><icon>Thunder</>\n<red>Effective:</><icon>Drenched</><icon>Armor</><icon>Horse</><icon>Flying</>\n<pink>Misc:</> SPD + STR (Total Power:<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))}</>)",
         "icon_nid": "Cacura Weapons_1",
         "icon_index": [
             9,
@@ -60,10 +60,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cucara\").wexp['Sword'] >= 360"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -102,6 +98,15 @@
                 "multi_desc_skill",
                 [
                     "Flash_Slash"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

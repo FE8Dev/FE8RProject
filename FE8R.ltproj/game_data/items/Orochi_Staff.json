@@ -2,7 +2,7 @@
     {
         "nid": "Orochi_Staff",
         "name": "Orochi Staff",
-        "desc": "Staff for the master of snakes.\n<orange>Element:</><icon>Earth</><icon>Fire</>\n<violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</>Cannot Crit, always hits, +10 RES.",
+        "desc": "Staff for the master of snakes.\n<orange>Element:</><icon>Earth</><icon>Fire</> <violet>Inflicts:</><icon>Rock</><icon>Seared</>\n<red>Effective:</><icon>Horse</>\n<pink>Misc:</><icon>Homing</>, +10 RES.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             4,
@@ -60,10 +60,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Bart\").wexp['Staff'] >= 360"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -102,7 +98,8 @@
                 "multi_desc_skill",
                 [
                     "Rock_Punctures",
-                    "Seared"
+                    "Seared",
+                    "Homing_Attack"
                 ]
             ]
         ]

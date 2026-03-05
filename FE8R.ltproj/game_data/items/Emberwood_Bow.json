@@ -2,7 +2,7 @@
     {
         "nid": "Emberwood_Bow",
         "name": "Emberwood Bow",
-        "desc": "Neimi's special bow that flares to life with magic.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "desc": "Neimi's special bow that flares to life with magic.\n<orange>Element:</><icon>Fire</> <violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             3,
@@ -84,7 +84,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_SKL_STRONG"
+                "STR_MAG_STRONG"
             ],
             [
                 "statuses_on_hit",

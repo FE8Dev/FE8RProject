@@ -2,7 +2,7 @@
     {
         "nid": "Zethlas_Legacy",
         "name": "Zethla's Legacy",
-        "desc": "The power of Zethla's teachings bursts through wood and string.\n<green>Skills:</><icon>skill_icons 4, 51</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
+        "desc": "The power of Zethla's teachings bursts through wood and string.\n<green>Skills:</><icon>skill_icons 4, 51</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Flying</><icon>Horse</>\n<pink>Misc:</>STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "Bows Sheet",
         "icon_index": [
             2,
@@ -85,7 +85,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "MAG_SKL_STRONG"
+                "STR_MAG_STRONG"
             ],
             [
                 "statuses_on_hit",

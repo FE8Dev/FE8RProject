@@ -2,7 +2,7 @@
     {
         "nid": "Gentle_Darkness",
         "name": "Gentle Darkness",
-        "desc": "A gentle darkness that feels safe.\n<green>Skills:</>Renewal\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (8)\n<pink>Misc:</>RES + DEF (<red>{e:(unit.get_stat('RES') + (unit.get_stat('DEF')))}</>).",
+        "desc": "A gentle darkness that feels safe.\n<green>Skills:</>Renewal <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-8)\n<pink>Misc:</>RES + DEF (<red>{e:(unit.get_stat('RES') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "Monster-Dragon",
         "icon_index": [
             4,
@@ -85,10 +85,6 @@
                 [
                     "Tareon"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tareon\").wexp['Monster'] >= 300 and u(\"Tareon\").wexp['Monster'] < 480"
             ],
             [
                 "item_tags",

@@ -8,11 +8,14 @@
         "only_once": false,
         "priority": 20,
         "_source": [
+            "if;skill_system.check_ally(unit, unit2) and item_system.weapon_type(unit, item) == 'Staff'",
             "if;game.level_vars['Supportive_Recharge'] != True",
             "reset;{unit}",
             "give_skill;{unit};Supportive_Recharge_Debuff;no_banner",
             "level_var;Supportive_Recharge;True",
             "else",
+            "else",
+            "end",
             "end"
         ],
         "nid": "Global Supportive Recharge"

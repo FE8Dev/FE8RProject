@@ -1,0 +1,30 @@
+[
+    {
+        "nid": "Small_Barrier",
+        "name": "Small Barrier",
+        "desc": "Reduce damage this unit takes by MAG2 (<red>{e:(unit.get_stat('MAG')//2)}</>)",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            15,
+            36
+        ],
+        "components": [
+            [
+                "dynamic_resist",
+                "unit.get_stat('MAG')//2"
+            ],
+            [
+                "time",
+                1
+            ],
+            [
+                "condition",
+                "unit.team == 'player'"
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    }
+]

@@ -15,7 +15,7 @@
             ],
             [
                 "combat_condition",
-                "unit2.team == 'player' or unit2.team == 'other'"
+                "(unit2.team == 'player' or unit2.team == 'other') and (mode == 'attack')"
             ],
             [
                 "event_after_combat",

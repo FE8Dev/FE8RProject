@@ -2,7 +2,7 @@
     {
         "nid": "Throwing_Axe",
         "name": "Throwing Axe",
-        "desc": "A bigger throwing axe for stronger warriors.\n<green>Skills:</><icon>PCA</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>),+1 Bonus attack.",
+        "desc": "A bigger throwing axe for stronger warriors.\n<green>Skills:</><icon>PCA</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<pink>Misc:</>STR + SKL/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//3))}</>),+1 Bonus attack.",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             36,
@@ -35,11 +35,11 @@
             ],
             [
                 "crit",
-                15
+                5
             ],
             [
                 "weight",
-                7
+                18
             ],
             [
                 "level_exp",
@@ -101,7 +101,7 @@
             ],
             [
                 "alternate_damage_formula",
-                "STR_SKL_MID"
+                "STR_SKL_WEAK"
             ],
             [
                 "multi_desc_skill",

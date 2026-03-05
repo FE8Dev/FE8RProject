@@ -2,7 +2,7 @@
     {
         "nid": "Weltbrecher",
         "name": "Weltbrecher",
-        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<violet>Inflicts:</>Wounded Prey++\n<red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL+CON",
+        "desc": "A weapon forged by Alexander from his first crossbow, it embodies the destructive ferocity of nature.\n<violet>Inflicts:</><icon>skill_icons 1, 43</>(++)\n<red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL + CON (Total Power:<red>{e:(unit.get_stat('STR') + unit.get_stat('SKL') + (unit.get_stat('CON')))}</>)",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             7,
@@ -86,13 +86,10 @@
                 "STR_SKL_CON_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Alexander\").wexp['Bow'] >= 240 and u(\"Alexander\").wexp['Bow'] < 420"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Prey_Wounded_Plus_Plus"
+                    "Prey_Wounded_Plus_Plus",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

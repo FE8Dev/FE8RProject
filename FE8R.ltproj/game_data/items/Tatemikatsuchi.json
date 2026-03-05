@@ -2,7 +2,7 @@
     {
         "nid": "Tatemikatsuchi",
         "name": "Tatemikatsuchi",
-        "desc": "Unfinished sword, forged to kill gods. Represents the ferocity of the user.\n<green>Skills:</>Lethal Edge, Flash Step\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +10 SPD.",
+        "desc": "Unfinished sword, forged to kill gods. Represents the ferocity of the user.\n<green>Skills:</><icon>FSSS/> Lethal Edge\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Atlus Weapons",
         "icon_index": [
             0,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step_E",
+                    "Flash_Step_SS",
                     "Lethal_Edge"
                 ]
             ],
@@ -84,13 +84,9 @@
                 "SPD_SKL_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Atlas\").wexp['Sword'] >= 360"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E",
+                    "Flash_Step_SS",
                     "Lethal_Edge"
                 ]
             ]

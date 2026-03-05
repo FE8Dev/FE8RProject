@@ -2,7 +2,7 @@
     {
         "nid": "Cutting_Response",
         "name": "Cutting Response",
-        "desc": "An axe that starts to show one's true colors.\n<green>Skills:</>Power Chop (A)\n<orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</>\n<red>Effective:</><icon>Horse</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), ignores Weapon Triangle, +15 DEF, RES.",
+        "desc": "An axe that starts to show one's true colors.\n<green>Skills:</><icon>PCA</> <orange>Element:</><icon>Fire</>\n<violet>Inflicts:</><icon>Seared</> <red>Effective:</><icon>Horse</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + DEF (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), ignores Weapon Triangle, +15 DEF, RES.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
             2,
@@ -92,10 +92,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Tareon\").wexp['Axe'] >= 300 and u(\"Tareon\").wexp['Axe'] < 480"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -144,7 +140,7 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_A",
-                    "Blade_Vantage_Effect",
+                    "Heavy",
                     "Seared"
                 ]
             ]

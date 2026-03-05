@@ -2,7 +2,7 @@
     {
         "nid": "Dragon_Lance",
         "name": "Dragon Lance",
-        "desc": "Moze's lance, unleashed to the world.\n<green>Skills:</>Lance Guard (SS)\n<orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</>\n<red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>), targets weaker of DEF or RES.",
+        "desc": "Moze's lance, unleashed to the world.\n<green>Skills:</><icon>LGSS</> <orange>Element:</><icon>Water</><icon>Thunder</>\n<violet>Inflicts:</><icon>Drenched</> <red>Effective:</><icon>Armor</><icon>Drenched</>\n<pink>Misc:</><icon>skill_icons 10, 39</> STR + MAG (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('MAG')))}</>).",
         "icon_nid": "Moze Weapons",
         "icon_index": [
             2,
@@ -83,10 +83,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Moze\").wexp['Lance'] >= 420 and u(\"Moze\").wexp['Lance'] < 460"
-            ],
-            [
                 "alternate_damage_formula",
                 "STR_MAG_STRONG"
             ],
@@ -111,7 +107,8 @@
                 "multi_desc_skill",
                 [
                     "Lance_Guard_SS",
-                    "Drench_Debuff"
+                    "Drench_Debuff",
+                    "Kaminari"
                 ]
             ]
         ]

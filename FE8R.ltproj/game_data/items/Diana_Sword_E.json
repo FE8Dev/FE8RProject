@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Sword_E",
         "name": "Estoc",
-        "desc": "Thin and long sword made for fencing.\n<green>Skills:</>Flash Step, Luckblade\n<pink>Misc:</>Uses LCK instead of STR, targets LCK, +1 SPD, attacks inflict a random debuff onto enemy.",
+        "desc": "Thin and long sword made for fencing.\n<green>Skills:</><icon>FSE</> Luckblade\n<pink>Misc:</>Uses LCK instead of STR, targets LCK.",
         "icon_nid": "{Batima} Quick Sword",
         "icon_index": [
             0,
@@ -62,7 +62,7 @@
                 [
                     [
                         "SPD",
-                        1
+                        2
                     ]
                 ]
             ],
@@ -85,10 +85,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Diana\").wexp['Sword'] < 180"
-            ],
-            [
                 "alternate_damage_formula",
                 "LUCK_PROC"
             ],
@@ -103,8 +99,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Luckblade1",
-                    "Flash_Step_E"
+                    "Flash_Step_E",
+                    "Luckblade1"
                 ]
             ]
         ]

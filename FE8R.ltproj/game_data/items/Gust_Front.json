@@ -2,7 +2,7 @@
     {
         "nid": "Gust_Front",
         "name": "Gust Front",
-        "desc": "A polearm attuned with Arno's innate wind magic, making her and those around her more nimble.\n<green>Skills:</>Lance Guard (A), Downdraft\n<orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>Uses SPD, targets RES, grants +5 SPD, and +35 Avoid/Dodge.",
+        "desc": "A polearm attuned with Arno's innate wind magic, making her and those around her more nimble.\n<green>Skills:</><icon>LGA</><icon>skill_icons 15, 48</> <orange>Element:</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</><icon>skill_icons 4, 11</>Uses SPD for damage, targets RES, +5 SPD.",
         "icon_nid": "02-26-25",
         "icon_index": [
             3,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Avo_Ddg_35",
+                    "Fog_Sword_Effect_Mid",
                     "Lance_Guard_A",
                     "Downdraft"
                 ]
@@ -80,10 +80,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Arno\").wexp['Lance'] >= 240 and u(\"Arno\").wexp['Lance'] < 420"
-            ],
-            [
                 "alternate_resist_formula",
                 "MAGIC_DEFENSE"
             ],
@@ -99,8 +95,8 @@
             [
                 "multi_desc_skill",
                 [
-                    "Avo_Ddg_35",
                     "Lance_Guard_A",
+                    "Fog_Sword_Effect_Mid",
                     "Downdraft"
                 ]
             ]

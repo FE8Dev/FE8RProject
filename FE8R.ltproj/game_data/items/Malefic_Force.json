@@ -2,7 +2,7 @@
     {
         "nid": "Malefic_Force",
         "name": "Malefic Force",
-        "desc": "A wind that whithers out the weak.\n<green>Skills:</>Ancient Pact (A)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
+        "desc": "A wind that whithers out the weak.\n<green>Skills:</><icon>APA</> <orange>Element:</><icon>Dark</><icon>Wind</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-8) <red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/2 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//2))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
             5,
@@ -74,10 +74,6 @@
                 [
                     "Tareon"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tareon\").wexp['Dark'] >= 240 and u(\"Tareon\").wexp['Dark'] < 420"
             ],
             [
                 "min_range",

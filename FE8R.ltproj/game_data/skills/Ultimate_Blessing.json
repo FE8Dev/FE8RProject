@@ -1,0 +1,26 @@
+[
+    {
+        "nid": "Ultimate_Blessing",
+        "name": "Ultimate Blessing",
+        "desc": "Judge the soul of an Ally to grant them MAG(<red>{e:(unit.get_stat('MAG'))}</>) to most stats and MAG/10 (<red>{e:(unit.get_stat('MAG')//10)}</>) to CON and MOV for 1 Turn. 1 use per combat.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            2,
+            38
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "drain_charge",
+                1
+            ],
+            [
+                "ability",
+                "Ultimate_Blessing"
+            ]
+        ]
+    }
+]

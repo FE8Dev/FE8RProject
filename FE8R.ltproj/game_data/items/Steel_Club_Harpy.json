@@ -2,7 +2,7 @@
     {
         "nid": "Steel_Club_Harpy",
         "name": "Studded Club",
-        "desc": "A reinforced club that can give a nasty blunt-force trauma.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (5)\n<pink>Misc:</>STR + SKL/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
+        "desc": "A reinforced club that can give a nasty blunt-force trauma.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2)\n<pink>Misc:</>STR + SKL/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             3,
@@ -64,13 +64,9 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Scintilla\").wexp['Axe'] >= 360 and u(\"Scintilla\").wexp['Axe'] < 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
-                    "Breached_5",
+                    "Breached_15",
                     "Rock_Punctures",
                     "Stun"
                 ]
@@ -99,9 +95,9 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Breached_5",
-                    "Rock_Punctures",
-                    "Stun"
+                    "Breached_15",
+                    "Stun",
+                    "Rock_Punctures"
                 ]
             ]
         ]

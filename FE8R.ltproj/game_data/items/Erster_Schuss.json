@@ -2,7 +2,7 @@
     {
         "nid": "Erster_Schuss",
         "name": "Erster Schuss",
-        "desc": "A crossbow created by Alexander at the beginning of his hunt.\n<violet>Inflicts:</>Wounded Prey\n<red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL/2",
+        "desc": "A crossbow created by Alexander at the beginning of his hunt.\n<violet>Inflicts:</><icon>skill_icons 2, 43</> <red>Effective:</><icon>Armor</><icon>Flying</><icon>Monster</>\n<pink>Misc:</>STR + SKL/2 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')//2))}</>).",
         "icon_nid": "Alexander Weapons",
         "icon_index": [
             1,
@@ -90,13 +90,10 @@
                 "SKL_STR_MID"
             ],
             [
-                "eval_available",
-                "u(\"Alexander\").wexp['Bow'] < 120"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Prey_Wounded"
+                    "Prey_Wounded",
+                    "Bow_and_Light_Range_Penalty"
                 ]
             ]
         ]

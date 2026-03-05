@@ -2,7 +2,7 @@
     {
         "nid": "L_Snake_Curse",
         "name": "Snake Curse",
-        "desc": "A spell passed down to all Gorgons.\n<green>Skills:</>Slither+, Ancient Pact (C)\n<orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>, Curse (5)\n<red>Effective:</><icon>Magic</>",
+        "desc": "A spell passed down to all Gorgons.\n<green>Skills:</><icon>APC</><icon>skill_icons 10, 44</>(+) <orange>Element:</><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-5) <red>Effective:</><icon>Magic</>",
         "icon_nid": "New Monsters",
         "icon_index": [
             3,
@@ -64,10 +64,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Lindsey\").wexp['Dark'] >= 120 and u(\"Lindsey\").wexp['Dark'] < 240"
-            ],
-            [
                 "wexp",
                 1
             ],
@@ -112,8 +108,8 @@
                 [
                     "Slither_P",
                     "Ancient_Pact_C",
-                    "Cursed_5",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_5"
                 ]
             ]
         ]

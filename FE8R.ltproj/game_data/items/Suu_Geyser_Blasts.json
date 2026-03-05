@@ -1,8 +1,8 @@
 [
     {
         "nid": "Suu_Geyser_Blasts",
-        "name": "Geyser Blasts",
-        "desc": "A spell that summons multiple geysers. <green>CD:2</>\n<green>Skills:</>Seawalk\n<orange>Element:</><icon>Water</>\n<violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</>Splash DMG (50%), cannot DS, MAG + SKL (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>), (Multi-target:4).",
+        "name": "Slime Geyser Blasts",
+        "desc": "A spell that summons multiple slime geysers. <green>CD:2</>\n<orange>Element:</><icon>Water</> <violet>Inflicts:</><icon>Drenched</>(AOE:3)\n<pink>Misc:</><icon>ASSS</><icon>Target</> (<blue>4</>) MAG + SKL (Total Power:<red>{e:(unit.get_stat('MAG') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Anima Tomes Sheet.",
         "icon_index": [
             8,
@@ -80,7 +80,6 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Seawalk",
                     "Drench",
                     "Water_AOE_Splash"
                 ]
@@ -130,14 +129,11 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Suu\").wexp['Anima'] >= 360"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Seawalk",
-                    "Drench"
+                    "Drench",
+                    "AnimaSplash_SS",
+                    "Multi_Target_Description"
                 ]
             ]
         ]

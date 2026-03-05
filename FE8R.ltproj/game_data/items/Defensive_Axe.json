@@ -2,7 +2,7 @@
     {
         "nid": "Defensive_Axe",
         "name": "Defensive Axe",
-        "desc": "An axe used for more defensive uses.\n<green>Skills:</>Power Chop (C)\n<red>Effective:</><icon>Frozen</>\n<pink>Misc:</>Heavy, STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), ignores Weapon Triangle, +10 DEF, RES.",
+        "desc": "An axe used for more defensive uses.\n<green>Skills:</><icon>PCC</> <red>Effective:</><icon>Frozen</>\n<pink>Misc:</><icon>Heavy</> STR + DEF/2 (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//2))}</>), ignores Weapon Triangle, +10 DEF, RES.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
             1,
@@ -91,10 +91,6 @@
                 1
             ],
             [
-                "eval_available",
-                "u(\"Tareon\").wexp['Axe'] >= 120 and u(\"Tareon\").wexp['Axe'] < 300"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -127,7 +123,7 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_C",
-                    "Blade_Vantage_Effect"
+                    "Heavy"
                 ]
             ]
         ]

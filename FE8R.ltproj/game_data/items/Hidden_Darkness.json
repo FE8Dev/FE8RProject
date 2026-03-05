@@ -2,7 +2,7 @@
     {
         "nid": "Hidden_Darkness",
         "name": "Hidden Darkness",
-        "desc": "A sickening wave of energy that weakens one's enemies.\n<green>Skills:</>Ancient Pact (E)\n<orange>Element:</><icon>Dark</><icon>Wind</>\n<red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
+        "desc": "A sickening wave of energy that weakens one's enemies.\n<green>Skills:</><icon>APE</> <orange>Element:</><icon>Dark</><icon>Wind</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-2) <red>Effective:</><icon>Flying</><icon>Seared</>\n<pink>Misc:</>MAG + RES/3 (<red>{e:(unit.get_stat('MAG') + (unit.get_stat('RES')//3))}</>), +3/-3 stats given to Tareon/taken from enemy on hit.",
         "icon_nid": "Tareon New Weapons",
         "icon_index": [
             4,
@@ -74,10 +74,6 @@
                 [
                     "Tareon"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Tareon\").wexp['Dark'] < 240"
             ],
             [
                 "min_range",

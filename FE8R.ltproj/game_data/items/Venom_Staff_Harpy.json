@@ -2,7 +2,7 @@
     {
         "nid": "Venom_Staff_Harpy",
         "name": "Venom Staff",
-        "desc": "A staff that spreads a lot of venom. <green>CD:2</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</>(Multi-target:3), this is a free action, always hits, no WEXP gain, cannot DS.",
+        "desc": "A staff that spreads a lot of venom. <green>CD:2</>\n<violet>Inflicts:</><icon>Venom</>\n<pink>Misc:</><icon>Homing</><icon>Target</> (<blue>6</>)<icon>skill_icons 9, 33</> This is a free action.",
         "icon_nid": "Staffs Sheet",
         "icon_index": [
             2,
@@ -86,10 +86,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Scintilla\").wexp['Staff'] < 180"
-            ],
-            [
                 "exempt_from_dual_strike",
                 null
             ],
@@ -100,7 +96,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Venomous_Effect"
+                    "Venomous_Effect",
+                    "Homing_Attack",
+                    "Multi_Target_Description",
+                    "No_WEXP"
                 ]
             ]
         ]

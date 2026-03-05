@@ -2,7 +2,7 @@
     {
         "nid": "Silver_Club_Harpy",
         "name": "Great Club",
-        "desc": "The ultimate club for those most blunt.\n<green>Skills:</>Power Chop (SS)\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2), Breach (15)\n<pink>Misc:</>STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "desc": "The ultimate club for those most blunt.\n<green>Skills:</><icon>PCSS</> <orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Stun</><icon>Rock</>(AOE:2)\n<pink>Misc:</>STR + SKL (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             4,
@@ -64,13 +64,9 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Scintilla\").wexp['Axe'] >= 420"
-            ],
-            [
                 "statuses_on_hit",
                 [
-                    "Breached_5",
+                    "Breached_15",
                     "Rock_Punctures",
                     "Stun"
                 ]
@@ -99,9 +95,9 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_SS",
-                    "Breached_5",
-                    "Rock_Punctures",
-                    "Stun"
+                    "Breached_15",
+                    "Stun",
+                    "Rock_Punctures"
                 ]
             ]
         ]

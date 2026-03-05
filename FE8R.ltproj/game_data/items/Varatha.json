@@ -2,7 +2,7 @@
     {
         "nid": "Varatha",
         "name": "Varatha",
-        "desc": "An otherworldly lance of darkness. Arno swears she's wielded it before.\n<green>Skills:</>Lance Guard (X), Cyclonic Downdraft, Cthonic Hunger\n<orange>Element:</><icon>Wind</> </><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</>\n<red>Very Effective:</><icon>Flying</><icon>Seared</><icon></><icon>Monster</>\n<pink>Misc:</>Uses Speed*1.5 (<red>{e:(unit.get_stat('SPD')*1.5)}</>), targets lower of RES or SPD, grants +10 SPD, and +77 Avoid/Dodge.",
+        "desc": "An otherworldly lance of darkness. Arno swears she's wielded it before.\n<green>Skills:</><icon>LGX</><icon>skill_icons 15, 48</>(+)<icon>skill_icons 2, 51</> <orange>Element:</><icon>Wind</> </><icon>Dark</>\n<violet>Inflicts:</><icon>Shadowblight</><icon>Curse</>(-15) <red>Very Effective:</><icon>Flying</><icon>Seared</><icon></><icon>Monster</>\n<pink>Misc:</><icon>skill_icons 6, 11</> Uses Speed*1.5 (Total Power:<red>{e:(unit.get_stat('SPD')*1.5)}</>), targets lower of RES or SPD, +10 SPD.",
         "icon_nid": "Varatha_1",
         "icon_index": [
             0,
@@ -82,10 +82,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Arno\").wexp['Lance'] >= 480"
-            ],
-            [
                 "alternate_resist_formula",
                 "RES_SPD_MIN"
             ],
@@ -104,10 +100,6 @@
                 }
             ],
             [
-                "status_on_hit",
-                "Shadow_Blight"
-            ],
-            [
                 "stat_change",
                 [
                     [
@@ -119,11 +111,20 @@
             [
                 "multi_desc_skill",
                 [
-                    "Avo_Ddg_77",
                     "Lance_Guard_X",
+                    "Cyclonic_Downdraft",
                     "Cthonic_Hunger",
                     "Cyclonic_Downdraft",
-                    "Shadow_Blight"
+                    "Shadow_Blight",
+                    "Cursed_15",
+                    "Avo_Ddg_77"
+                ]
+            ],
+            [
+                "statuses_on_hit",
+                [
+                    "Shadow_Blight",
+                    "Cursed_15"
                 ]
             ]
         ]

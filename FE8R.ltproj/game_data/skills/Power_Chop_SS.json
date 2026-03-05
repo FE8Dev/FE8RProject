@@ -2,7 +2,7 @@
     {
         "nid": "Power_Chop_SS",
         "name": "Power Chop 4 <icon>PCSS</>",
-        "desc": "Attacks add 40% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-15) (<icon>Skills 6, 4</>).",
+        "desc": "Attacks add 25% of enemy's current HP to damage dealt.\nAttacks also inflict <red>Breached</> (-15) (<icon>Skills 6, 4</>).",
         "icon_nid": "Scaling Weapon icons",
         "icon_index": [
             4,
@@ -11,7 +11,7 @@
         "components": [
             [
                 "dynamic_damage",
-                "target.get_hp() * 0.4"
+                "target.get_hp() * 0.25"
             ]
         ]
     }

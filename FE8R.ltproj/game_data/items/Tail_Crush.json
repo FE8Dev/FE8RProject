@@ -2,7 +2,7 @@
     {
         "nid": "Tail_Crush",
         "name": "Tail Crush",
-        "desc": "A sand tail so strong that can crush one's innards. <green>CD:6</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</>, Restrained\n<pink>Misc:</>Warps enemy (not bosses), Splash Damage (30%), this is a free action.",
+        "desc": "A sand tail so strong that can crush one's innards. <green>CD:6</>\n<orange>Element:</><icon>Earth</>\n<violet>Inflicts:</><icon>Rock</><icon>Stun</><icon>Skills 10, 0</>\n<pink>Misc:</><icon>ASSS</>Warps enemy (not bosses), this is a free action.",
         "icon_nid": "New Prof Weapons Sheets",
         "icon_index": [
             3,
@@ -88,7 +88,7 @@
             ],
             [
                 "self_status_on_hit",
-                "AnimaSplash_C"
+                "AnimaSplash_SS"
             ],
             [
                 "siege_weapon",
@@ -118,10 +118,6 @@
                 "AOE_Sandblast"
             ],
             [
-                "eval_available",
-                "u(\"Bart\").wexp['Monster'] >= 360 and u(\"Bart\").wexp['Monster'] < 420"
-            ],
-            [
                 "item_tags",
                 [
                     "Wind"
@@ -144,7 +140,8 @@
                 [
                     "Stun",
                     "Rock_Punctures",
-                    "Restrained"
+                    "Restrained",
+                    "AnimaSplash_SS"
                 ]
             ]
         ]

@@ -14,7 +14,7 @@
             "        remove_item;phantom_{e:unit.nid};{item};no_banner",
             "    endf",
             "else",
-            "    make_generic;phantom_{e:unit.nid};Phantom_Knoll;{e:unit.level};player",
+            "    make_generic;phantom_{e:unit.nid};Phantom_Knoll;{e:unit.level};player;None;Ally",
             "    give_wexp;phantom_{e:unit.nid};Axe;{e:181 - u('phantom_' + unit.nid).wexp.get('Axe')};no_banner",
             "end",
             "give_item;phantom_{e:unit.nid};Killer_Axe_P;no_banner",

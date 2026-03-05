@@ -2,7 +2,7 @@
     {
         "nid": "Merhunes_Razor",
         "name": "Merhunes Razor",
-        "desc": "Representative sword of a demon prince, it is said that death is still the bearer of this weapon.\n<green>Skills:</>Consecutive Impact\n<pink>Misc:</>SPD+ STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))//}</>).",
+        "desc": "Representative sword of a demon prince, it is said that death is still the bearer of this weapon.\n<green>Skills:</><icon>FSSS</> Consecutive Impact\n<pink>Misc:</>SPD+ STR (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('STR')))//}</>).",
         "icon_nid": "{Ereshkigal} Extra 6",
         "icon_index": [
             0,
@@ -66,10 +66,6 @@
                 "Arrow"
             ],
             [
-                "status_on_equip",
-                "Consecutive_Impact"
-            ],
-            [
                 "prf_unit",
                 [
                     "Jaffar"
@@ -80,13 +76,26 @@
                 2
             ],
             [
-                "eval_available",
-                "u(\"Jaffar\").wexp['Sword'] >= 360 and u(\"Jaffar\").wexp['Sword'] < 480"
-            ],
-            [
                 "multi_desc_skill",
                 [
+                    "Flash_Step_SS",
                     "Consecutive_Impact"
+                ]
+            ],
+            [
+                "multi_status_on_equip",
+                [
+                    "Flash_Step_SS",
+                    "Consecutive_Impact"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        7
+                    ]
                 ]
             ]
         ]

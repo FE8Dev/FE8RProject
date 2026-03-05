@@ -2,7 +2,7 @@
     {
         "nid": "Junior_Rabbit",
         "name": "Junior Rabbit",
-        "desc": "A simple practice sword crafted with wood from a tree.\n<green>Skills:</>Flash Step\n<pink>Misc:</>Uses SPD.",
+        "desc": "A simple practice sword crafted with wood from a tree.\n<green>Skills:</><icon>FSE</>\n<pink>Misc:</>Uses SPD for damage.",
         "icon_nid": "Cacura Weapons",
         "icon_index": [
             7,
@@ -60,10 +60,6 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Cucara\").wexp['Sword'] < 120"
-            ],
-            [
                 "wexp",
                 3
             ],
@@ -75,6 +71,15 @@
                 "multi_desc_skill",
                 [
                     "Flash_Step_E"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        2
+                    ]
                 ]
             ]
         ]

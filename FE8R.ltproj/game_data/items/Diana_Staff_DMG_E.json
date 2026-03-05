@@ -2,7 +2,7 @@
     {
         "nid": "Diana_Staff_DMG_E",
         "name": "Malediction Staff",
-        "desc": "ignores RES\n<violet>Inflicts:</><icon>Breached</><icon>Cursed</>\n<pink>Misc:</>Cannot crit, always hits, cannot DS.",
+        "desc": "A tricky staff that bypasses detection.\n<violet>Inflicts:</><icon>Breached</><icon>Cursed</>\n<pink>Misc:</><icon>Homing</>, ignores RES.",
         "icon_nid": "Staff",
         "icon_index": [
             0,
@@ -56,14 +56,6 @@
             [
                 "ignore_line_of_sight",
                 null
-            ],
-            [
-                "exempt_from_dual_strike",
-                null
-            ],
-            [
-                "eval_available",
-                "u(\"Diana\").wexp['Staff'] < 240"
             ],
             [
                 "prf_unit",

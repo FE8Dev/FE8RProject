@@ -2,7 +2,7 @@
     {
         "nid": "Adamantium_Sword",
         "name": "Adamantium Sword",
-        "desc": "A sword refined by an even stronger material.\n<green>Skills:</>Protector Force\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>), +5 SPD.",
+        "desc": "A sword refined by an even stronger material.\n<green>Skills:</><icon>FSA/> Protector Force\n<pink>Misc:</>STR + DEF  (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))}</>).",
         "icon_nid": "{LordGlenn} {ArchaneaIconProject} 2019",
         "icon_index": [
             17,
@@ -56,7 +56,8 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Protector_Force"
+                    "Protector_Force",
+                    "Flash_Step_A"
                 ]
             ],
             [
@@ -83,12 +84,9 @@
                 "STR_DEF_STRONG"
             ],
             [
-                "eval_available",
-                "u(\"Atlas\").wexp['Sword'] >= 240 and u(\"Atlas\").wexp['Sword'] < 420"
-            ],
-            [
                 "multi_desc_skill",
                 [
+                    "Flash_Step_A",
                     "Protector_Force"
                 ]
             ]
