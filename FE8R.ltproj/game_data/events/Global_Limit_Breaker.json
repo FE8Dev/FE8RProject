@@ -1,11 +1,11 @@
 [
     {
         "name": "Limit Breaker",
-        "trigger": "unit_select",
+        "trigger": "level_start",
         "level_nid": null,
         "condition": "'Limit_Breaker' in unit.tags and not has_skill(unit, 'Limit_Broken')",
         "commands": [],
-        "only_once": true,
+        "only_once": false,
         "priority": 20,
         "_source": [
             "set_stat_cap_modifiers;{unit};STR,100,MAG,100,SKL,100,SPD,100,LCK,100,DEF,100,RES,100",
