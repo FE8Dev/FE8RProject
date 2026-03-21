@@ -1,0 +1,33 @@
+[
+    {
+        "nid": "Boosted_Gear",
+        "name": "Boosted Gear",
+        "desc": "The user gain the tags of Dragon and Monster.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Dragon",
+                    "Monster"
+                ]
+            ],
+            [
+                "upkeep_skill_gain",
+                "Boosted"
+            ],
+            [
+                "condition",
+                "unit.get_max_hp() >= 10"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    }
+]
