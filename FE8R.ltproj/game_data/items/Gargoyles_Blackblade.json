@@ -2,7 +2,7 @@
     {
         "nid": "Gargoyles_Blackblade",
         "name": "Gargoyle's Blackblade",
-        "desc": "Bronze greatsword wielded by the Valiant Gargoyles, forged with blackened corpse wax.\n<green>Skills:</>Superior Burden Strike\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</><icon>Infantry</>\n<pink>Misc:</>Heavy, but still strikes first, Cleaves, STR + DEF + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))(unit.get_stat('SKL')))}</>).",
+        "desc": "Bronze greatsword wielded by the Valiant Gargoyles, forged with blackened corpse wax.\n<green>Skills:</>Superior Burden Strike <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</><icon>Frozen</><icon>Infantry</>\n<pink>Misc:</><icon>Heavy</><icon>skill_icons 13, 51</><icon>Cleave</> STR + DEF + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')))(unit.get_stat('SKL')))}</>).",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             4,
@@ -109,7 +109,10 @@
             [
                 "multi_desc_skill",
                 [
-                    "Superior_Burden_Strike"
+                    "Superior_Burden_Strike",
+                    "Heavy",
+                    "Well_Designed",
+                    "Cleaves"
                 ]
             ]
         ]

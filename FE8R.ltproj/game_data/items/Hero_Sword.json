@@ -2,7 +2,7 @@
     {
         "nid": "Hero_Sword",
         "name": "Hero's Sword",
-        "desc": "A sword that defeats all evil.\n<green>Skills:</>Flash Step\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>30% HP Absorb, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>)",
+        "desc": "A sword that defeats all evil.\n<green>Skills:</><icon>FSSS</> <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</><icon>Monster</>\n<pink>Misc:</>30% HP Absorb, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>)",
         "icon_nid": "Jack Icons",
         "icon_index": [
             5,
@@ -65,7 +65,7 @@
             ],
             [
                 "status_on_equip",
-                "Flash_Step_E"
+                "Flash_Step_SS"
             ],
             [
                 "item_tags",
@@ -97,7 +97,16 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_SS"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

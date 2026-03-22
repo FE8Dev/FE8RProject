@@ -2,7 +2,7 @@
     {
         "nid": "Plated_Grasp",
         "name": "Plated Grasp",
-        "desc": "Hands that have hardened over time.\n<violet>Inflicts:</>Breach (5), Curse (5)\n<pink>Misc:</>+6/+6 DEF/RES on Equip, Add DEF/4 to damage (<red>{e:(unit.get_stat('DEF')//4)}</>).",
+        "desc": "Hands that have hardened over time.\n<violet>Inflicts:</><icon>Skills 6, 4</>(-5)<icon>Curse</>(-5)\n<pink>Misc:</>STR + DEF/3 (Total Power:<red>{e:(unit.get_stat('STR') + (unit.get_stat('DEF')//3))}</>), +6 DEF/RES on Equip.",
         "icon_nid": "New Monsters",
         "icon_index": [
             1,
@@ -84,18 +84,15 @@
                 ]
             ],
             [
-                "multi_status_on_equip",
-                [
-                    "Plated_Claws"
-                ]
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Plated_Claws",
                     "Breached_5",
                     "Cursed_5"
                 ]
+            ],
+            [
+                "alternate_damage_formula",
+                "STR_DEF_WEAK"
             ]
         ]
     }

@@ -2,7 +2,7 @@
     {
         "nid": "Windsweep_S",
         "name": "Windsweep (<icon>Blast</>)",
-        "desc": "A swift combat art that prevents counters and grants 20 avoid for 1 turn. <green>CD:2</>\n<green>Skills:</>Flash Step\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +20 crit damage",
+        "desc": "A swift combat art that prevents counters and grants 20 Avoid for 1 turn. <green>CD:2</>\n<green>Skills:</><icon>FSA</>\n<pink>Misc:</><icon>skill_icons 3, 13</> SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             6,
@@ -64,14 +64,10 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Claude\").wexp['Sword'] >= 300 and u(\"Claude\").wexp['Sword'] < 420"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Crit_Damage_Bonus_20_hide",
-                    "Flash_Step_E"
+                    "Flash_Step_A"
                 ]
             ],
             [
@@ -101,7 +97,17 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_A",
+                    "Crit_Damage_Bonus_20_hide"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        5
+                    ]
                 ]
             ]
         ]

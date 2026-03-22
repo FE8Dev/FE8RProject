@@ -2,7 +2,7 @@
     {
         "nid": "Diamond_Axe_S",
         "name": "Diamond Axe (<icon>Blast</>)",
-        "desc": "A strong combat art that trades accuracy for a single devastating strike. <green>CD:3</>\n<green>Skills:</>Power Chop (A)\n<pink>Misc:</>Cleave AOE attack, cannot double, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A strong combat art that trades accuracy for a single devastating strike. <green>CD:3</>\n<green>Skills:</><icon>PCA</>\n<pink>Misc:</><icon>Cleave</>, cannot double, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             10,
@@ -64,10 +64,6 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Claude\").wexp['Axe'] >= 300 and u(\"Claude\").wexp['Axe'] < 420"
-            ],
-            [
                 "multi_status_on_equip",
                 [
                     "Power_Chop_A"
@@ -105,7 +101,8 @@
                 "multi_desc_skill",
                 [
                     "Power_Chop_A",
-                    "Breached_8"
+                    "Breached_8",
+                    "Cleaves"
                 ]
             ]
         ]

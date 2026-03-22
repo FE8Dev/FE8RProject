@@ -2,7 +2,7 @@
     {
         "nid": "Flame_Sling",
         "name": "Flame Sling",
-        "desc": "Incantiation originating from a sinister prophecy\n<orange>Element:</><icon>Fire</><icon>Light</>\n<red>Effective:</><icon>Shadowblight</>\n<violet>Inflicts:</><icon>Seared</>",
+        "desc": "Incantiation originating from a sinister prophecy\n<orange>Element:</><icon>Fire</><icon>Light</> <red>Effective:</><icon>Shadowblight</>\n<violet>Inflicts:</><icon>Seared</>\n<pink>Misc:</><icon>ASE</>",
         "icon_nid": "Eterna Weapons",
         "icon_index": [
             5,
@@ -103,8 +103,13 @@
             [
                 "multi_desc_skill",
                 [
-                    "Seared"
+                    "Seared",
+                    "AnimaSplash_E"
                 ]
+            ],
+            [
+                "self_status_on_hit",
+                "AnimaSplash_E"
             ]
         ]
     }

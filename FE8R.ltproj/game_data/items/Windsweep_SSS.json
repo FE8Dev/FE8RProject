@@ -2,7 +2,7 @@
     {
         "nid": "Windsweep_SSS",
         "name": "WIndsweep (<icon>Blast</>)",
-        "desc": "A swift combat art that prevents counters and grants 30 avoid for 1 turn. <green>CD:2</>\n<green>Skills:</>Flash Step, Sacred Protection, Sacred Healing\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</>\n<pink>Misc:</>SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>), +30 crit damage",
+        "desc": "A swift combat art that prevents counters and grants 30 Avoid for 1 turn. <green>CD:2</>\n<green>Skills:</><icon>FSSS</>, Sacred Protection, Sacred Healing <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Monster</><icon>Shadowblight</>\n<pink>Misc:</><icon>skill_icons 5, 13</> SPD + SKL (<red>{e:(unit.get_stat('SPD') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             5,
@@ -64,14 +64,10 @@
                 null
             ],
             [
-                "eval_available",
-                "u(\"Claude\").wexp['Sword'] >= 420"
-            ],
-            [
                 "multi_status_on_equip",
                 [
-                    "Crit_Damage_Bonus_30_hide",
-                    "Flash_Step_E",
+                    "Crit_Damage_Bonus_50_hide",
+                    "Flash_Step_SS",
                     "Sacred_Protection",
                     "Sacred_Healing"
                 ]
@@ -125,9 +121,19 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E",
+                    "Flash_Step_SS",
                     "Sacred_Protection",
-                    "Sacred_Healing"
+                    "Sacred_Healing",
+                    "Crit_Damage_Bonus_50_hide"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

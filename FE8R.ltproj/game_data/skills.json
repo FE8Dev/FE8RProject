@@ -47498,7 +47498,7 @@
     {
         "nid": "Tethered",
         "name": "Tethered",
-        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, in 3 turns, or on summon death.",
+        "desc": "Unit's soul is linked to a summon, can only have as many tethers as MAG/10.\nCauses -10 MAG per stack. Resets on chapter end, in 5 turns, or on summon death.",
         "icon_nid": "skill_icons",
         "icon_index": [
             15,
@@ -47524,7 +47524,7 @@
             ],
             [
                 "time",
-                3
+                5
             ]
         ]
     },
@@ -47712,10 +47712,6 @@
             35
         ],
         "components": [
-            [
-                "cannot_double",
-                null
-            ],
             [
                 "dynamic_defense_speed",
                 "999"
@@ -48561,7 +48557,7 @@
     {
         "nid": "Astra",
         "name": "Astra",
-        "desc": "Speed% chance to attack 5 times.",
+        "desc": "Speed% chance to attack 5 times at halved damage",
         "icon_nid": "lyn_skills",
         "icon_index": [
             1,
@@ -48579,6 +48575,10 @@
             [
                 "proc_rate",
                 "STEAL_ATK"
+            ],
+            [
+                "defense_proc",
+                "Astra_Proc"
             ]
         ]
     },
@@ -48597,12 +48597,12 @@
                 null
             ],
             [
-                "astra_proc",
-                {
-                    "extra_attacks": 5,
-                    "damage_percent": 0.5000000000000001,
-                    "show_proc_effects": true
-                }
+                "dynamic_multiattacks",
+                "4"
+            ],
+            [
+                "damage_multiplier",
+                0.5
             ]
         ]
     },
@@ -50307,6 +50307,34 @@
         ]
     },
     {
+        "nid": "Trinity_Blessing",
+        "name": "Trinity Blessing",
+        "desc": "Remove effective Horse/Armor damage. Unit is immune to negative status.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            10,
+            19
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "immune_status",
+                null
+            ],
+            [
+                "negate_tags",
+                [
+                    "Horse",
+                    "Mounted",
+                    "Armor"
+                ]
+            ]
+        ]
+    },
+    {
         "nid": "Axe_Advantage",
         "name": "Axe Advantage",
         "desc": "Gain advantage against lances.",
@@ -50375,34 +50403,6 @@
             [
                 "item_override",
                 "Lance_Advantage"
-            ]
-        ]
-    },
-    {
-        "nid": "Trinity_Blessing",
-        "name": "Trinity Blessing",
-        "desc": "Remove effective Horse/Armor damage. Unit is immune to negative status.",
-        "icon_nid": "skill_icons",
-        "icon_index": [
-            10,
-            19
-        ],
-        "components": [
-            [
-                "class_skill",
-                null
-            ],
-            [
-                "immune_status",
-                null
-            ],
-            [
-                "negate_tags",
-                [
-                    "Horse",
-                    "Mounted",
-                    "Armor"
-                ]
             ]
         ]
     },
@@ -55808,11 +55808,15 @@
             [
                 "combat_condition",
                 "has_skill(target, 'Seared')"
+            ],
+            [
+                "grey_if_inactive",
+                null
             ]
         ]
     },
     {
-        "nid": "Hellborn_Warp",
+        "nid": "Hellborn_Warp_hide",
         "name": "Hellborn",
         "desc": "Gain 60% HP Absorb and 20% Damage given against seared enemies.\nUnit can teleport next to any seared unit.",
         "icon_nid": "skill_icons",
@@ -74520,5 +74524,151 @@
             48
         ],
         "components": []
+    },
+    {
+        "nid": "Boosted",
+        "name": "Boosted",
+        "desc": "+2 to all stats, -2 max HP. stacks infinitely. lasts until chapter end.",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            3,
+            50
+        ],
+        "components": [
+            [
+                "stack",
+                999
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "HP",
+                        -2
+                    ],
+                    [
+                        "STR",
+                        2
+                    ],
+                    [
+                        "MAG",
+                        2
+                    ],
+                    [
+                        "SKL",
+                        2
+                    ],
+                    [
+                        "SPD",
+                        2
+                    ],
+                    [
+                        "LCK",
+                        2
+                    ],
+                    [
+                        "DEF",
+                        2
+                    ],
+                    [
+                        "RES",
+                        2
+                    ],
+                    [
+                        "CON",
+                        2
+                    ]
+                ]
+            ],
+            [
+                "lost_on_end_chapter",
+                null
+            ],
+            [
+                "hidden_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Boosted_Gear",
+        "name": "Boosted Gear",
+        "desc": "The user gain the tags of Dragon and Monster.\n",
+        "icon_nid": "skill_icons",
+        "icon_index": [
+            9,
+            15
+        ],
+        "components": [
+            [
+                "has_tags",
+                [
+                    "Dragon",
+                    "Monster"
+                ]
+            ],
+            [
+                "upkeep_skill_gain",
+                "Boosted"
+            ],
+            [
+                "condition",
+                "unit.get_max_hp() >= 10"
+            ],
+            [
+                "grey_if_inactive",
+                null
+            ]
+        ]
+    },
+    {
+        "nid": "Dance_of_Devastation",
+        "name": "Dance of Devastation: Quake\u2019s Hegemony",
+        "desc": "asdsaadsadas",
+        "icon_nid": "Skills",
+        "icon_index": [
+            10,
+            1
+        ],
+        "components": []
+    },
+    {
+        "nid": "Limit_Breaker_T1",
+        "name": "Limit Breaker",
+        "desc": "\"Remove the limits of the mortal body\"\n+100 to all stat caps except HP, MOV and CON.\nGain +10 CON growth and +5 MOV growth",
+        "icon_nid": "SkillIcons",
+        "icon_index": [
+            2,
+            1
+        ],
+        "components": [
+            [
+                "class_skill",
+                null
+            ],
+            [
+                "growth_change",
+                [
+                    [
+                        "CON",
+                        10
+                    ],
+                    [
+                        "MOV",
+                        5
+                    ]
+                ]
+            ],
+            [
+                "has_tags",
+                [
+                    "Limit_Breaker"
+                ]
+            ],
+            [
+                "feat",
+                null
+            ]
+        ]
     }
 ]

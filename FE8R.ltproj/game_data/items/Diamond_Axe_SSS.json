@@ -2,7 +2,7 @@
     {
         "nid": "Diamond_Axe_SSS",
         "name": "Diamond Axe (<icon>Blast</>)",
-        "desc": "A strong combat art that trades accuracy for a single devastating strike. <green>CD:3</>\n<green>Skills:</>Power Chop (SS), Pride of Almyra\n<red>Effective:</><icon>Infantry</>\n<pink>Misc:</>Cleave AOE attack, cannot double, +10 DEF/RES, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
+        "desc": "A strong combat art that trades accuracy for a single devastating strike. <green>CD:3</>\n<green>Skills:</><icon>PCSS</>, Pride of Almyra <red>Effective:</><icon>Infantry</>\n<pink>Misc:</><icon>Cleave</>, cannot double, +10 DEF/RES, STR + SKL (<red>{e:(unit.get_stat('STR') + (unit.get_stat('SKL')))}</>).",
         "icon_nid": "Claude Icons",
         "icon_index": [
             11,
@@ -62,10 +62,6 @@
             [
                 "unstealable",
                 null
-            ],
-            [
-                "eval_available",
-                "u(\"Claude\").wexp['Axe'] >= 420"
             ],
             [
                 "multi_status_on_equip",
@@ -132,7 +128,8 @@
                 [
                     "Power_Chop_SS",
                     "Pride_of_Almyra",
-                    "Breached_15"
+                    "Breached_15",
+                    "Cleaves"
                 ]
             ]
         ]
