@@ -2,7 +2,7 @@
     {
         "nid": "Draco_Subjugator",
         "name": "Draco Subjugator",
-        "desc": "This weapon has been bathed in so much divine blood that dragons kneel before it.\n<green>Skills:</>Power Chop (SS),Growing mastery+<red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG'))}</>).",
+        "desc": "This weapon has been bathed in so much divine blood that dragons kneel before it.\n<green>Skills:</><icon>PCSS</>, Growing mastery+ <red>Effective:</><icon>Dragon</>\n<pink>Misc:</>STR + MAG (<red>{e:(unit.get_stat('STR') + unit.get_stat('MAG'))}</>).",
         "icon_nid": "{Beansy} Garm",
         "icon_index": [
             0,
@@ -81,10 +81,6 @@
                     "Power_Chop_SS",
                     "Growing_Mastery_Plus"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Davius\").wexp['Axe'] >= 360 and u(\"Davius\").wexp['Axe'] <480"
             ],
             [
                 "multi_desc_skill",

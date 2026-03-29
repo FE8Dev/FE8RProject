@@ -2,7 +2,7 @@
     {
         "nid": "Hollow_Axe",
         "name": "Hollow Axe",
-        "desc": "Axe wielded by a hollow soldier, not very remarkable.\n<green>Skills:</>Power Chop (C)",
+        "desc": "Axe wielded by a hollow soldier, not very remarkable.\n<green>Skills:</><icon>PCE</>",
         "icon_nid": "{Celice} Axe 20",
         "icon_index": [
             0,
@@ -55,7 +55,7 @@
             ],
             [
                 "status_on_hit",
-                "Breached_8"
+                "Breached_2"
             ],
             [
                 "prf_unit",
@@ -66,18 +66,14 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Power_Chop_C"
+                    "Power_Chop_E"
                 ]
-            ],
-            [
-                "eval_available",
-                "u(\"Davius\").wexp['Axe'] >= 1 and u(\"Davius\").wexp['Axe'] < 240"
             ],
             [
                 "multi_desc_skill",
                 [
-                    "Power_Chop_C",
-                    "Breached_8"
+                    "Power_Chop_E",
+                    "Breached_2"
                 ]
             ]
         ]

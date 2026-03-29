@@ -2,7 +2,7 @@
     {
         "nid": "Dike_Mandate",
         "name": "Dike's mandate",
-        "desc": "Path predefined by Dike, seeks the defeat of any mortal evil.\n<green>Skills:</>Flash Step, Vantage+\n<orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Steal</><icon>Pirate</><icon>Shadow</>\n<pink>Misc:</> STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK'))))}</>)",
+        "desc": "Path predefined by Dike, seeks the defeat of any mortal evil.\n<green>Skills:</><icon>FSX</>, Vantage+ <orange>Element:</><icon>Light</>\n<red>Effective:</><icon>Steal</><icon>Pirate</><icon>Shadow</>\n<pink>Misc:</> STR + LCK (<red>{e:(unit.get_stat('STR') + (unit.get_stat('LCK'))))}</>)",
         "icon_nid": "Miria and Nyx weapons",
         "icon_index": [
             1,
@@ -56,7 +56,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Slash",
+                    "Flash_Step_SS",
                     "Vantage_Plus_Item"
                 ]
             ],
@@ -97,8 +97,17 @@
             [
                 "multi_desc_skill",
                 [
-                    "Flash_Slash",
+                    "Flash_Step_SS",
                     "Vantage_Plus_Item"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        10
+                    ]
                 ]
             ]
         ]

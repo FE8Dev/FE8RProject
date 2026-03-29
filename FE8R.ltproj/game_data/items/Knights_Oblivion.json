@@ -2,7 +2,7 @@
     {
         "nid": "Knights_Oblivion",
         "name": "Knight's Oblivion",
-        "desc": "The nightmare of the midless hollow knights .\n<green>Skills:</>Flash Step<red>Effective:</><icon>Armor</>\n<pink>Misc:</>SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//2)}</>).",
+        "desc": "The nightmare of the midless hollow knights .\n<green>Skills:</><icon>FSC</> <red>Effective:</><icon>Armor</>\n<pink>Misc:</>SKL + MAG/2 (<red>{e:(unit.get_stat('SKL') + unit.get_stat('MAG')//2)}</>).",
         "icon_nid": "Davius Weapons",
         "icon_index": [
             1,
@@ -68,7 +68,7 @@
             [
                 "multi_status_on_equip",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_C"
                 ]
             ],
             [
@@ -82,13 +82,18 @@
                 ]
             ],
             [
-                "eval_available",
-                "u(\"Davius\").wexp['Sword'] >= 120 and u(\"Davius\").wexp['Sword'] < 240"
-            ],
-            [
                 "multi_desc_skill",
                 [
-                    "Flash_Step_E"
+                    "Flash_Step_C"
+                ]
+            ],
+            [
+                "stat_change",
+                [
+                    [
+                        "SPD",
+                        3
+                    ]
                 ]
             ]
         ]

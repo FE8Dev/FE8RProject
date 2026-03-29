@@ -31918,7 +31918,7 @@
                 [
                     [
                         "MOV",
-                        2
+                        3
                     ]
                 ]
             ]
@@ -73911,7 +73911,7 @@
                 [
                     [
                         "MOV",
-                        2
+                        -6
                     ]
                 ]
             ],
@@ -73920,7 +73920,7 @@
                 [
                     [
                         "MOV",
-                        -6
+                        2
                     ]
                 ]
             ]
@@ -74356,12 +74356,12 @@
                 null
             ],
             [
-                "damage_multiplier",
-                1.5
-            ],
-            [
                 "combat_condition",
                 "has_skill(target, 'Stun')"
+            ],
+            [
+                "damage_multiplier",
+                1.5
             ]
         ]
     },
@@ -74382,6 +74382,10 @@
             [
                 "item_override",
                 "Prevent_Counterattack"
+            ],
+            [
+                "give_status_after_hit",
+                "Stun"
             ]
         ]
     },
