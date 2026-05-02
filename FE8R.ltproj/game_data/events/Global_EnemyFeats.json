@@ -49,7 +49,7 @@
             "",
             "",
             "#not has_skill(unit, 'MyUnit_T1_1st')",
-            "",
+            "# and 'Feats_Disabler' not in [x.nid for x in unit.skills]",
             "# and not has_skills(unit, 'Feats_Disabler')",
             "#v('_ENEMYFEATS')",
             "#game.turncount == 1"
